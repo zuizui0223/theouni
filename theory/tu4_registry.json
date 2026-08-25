@@ -1,0 +1,52 @@
+{
+  "schema_version": "theouni-tu4.v1",
+  "status": "finite_exact_warning_firewall",
+  "title": "Warning evaluation state and portability",
+  "owners": {
+    "loss_state_source": "repo:eco-genetic-warning-extensions",
+    "required_state_source": "repo:crest",
+    "warning_state_firewall": "repo:theouni"
+  },
+  "objects": [
+    {"id": "tu4:LossSignature", "symbol": "lambda", "meaning": "Declared loss-process response signature."},
+    {"id": "tu4:WarningSignature", "symbol": "gamma", "meaning": "Declared warning response, timing, ordering, or joint-law signature."},
+    {"id": "tu4:LossGeneratingState", "symbol": "Q_L", "meaning": "Quotient by equality of loss signatures."},
+    {"id": "tu4:WarningEvaluationState", "symbol": "Q_W", "meaning": "Quotient by equality of joint loss and warning signatures."},
+    {"id": "tu4:PortabilityMap", "symbol": "h", "meaning": "Declared correspondence between calibrated loss-state spaces."}
+  ],
+  "results": [
+    {
+      "id": "TU-4A",
+      "status": "proved_elementary",
+      "claim": "WarningEvaluationState always refines LossGeneratingState and equals it iff warning response factors through the loss-state quotient."
+    },
+    {
+      "id": "TU-4B",
+      "status": "proved_counterexample",
+      "claim": "Two worlds can have identical loss state and opposite warning lead/lag validity."
+    },
+    {
+      "id": "TU-4C",
+      "status": "proved_elementary",
+      "claim": "When warning factors through loss state in both domains, warning transports across a loss-state bijection iff the induced warning signatures commute with that bijection."
+    },
+    {
+      "id": "TU-4D",
+      "status": "proved_boundary",
+      "claim": "If warning does not factor through loss state, portability must be defined on a finer WarningEvaluationState rather than the loss quotient alone."
+    }
+  ],
+  "claim_ceiling": [
+    "Finite exact signature/partition theorem only.",
+    "Does not claim that a calibrated loss state is minimal or natural in field systems.",
+    "Does not convert within-state replication into portability.",
+    "Does not establish a universal numerical warning threshold.",
+    "Does not claim generic factorization novelty."
+  ],
+  "open_extensions": [
+    "Stochastic warning/loss joint-law portability.",
+    "Tolerance-qualified portability under approximate state correspondence.",
+    "Censoring- and evidence-aware portability through a CED observation contract.",
+    "Empirical tests of warning homogeneity within candidate loss-state classes."
+  ]
+}
