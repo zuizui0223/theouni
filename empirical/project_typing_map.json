@@ -1,0 +1,131 @@
+{
+  "schema_version": "theouni-project-typing-map.v0.1",
+  "status": "typing_only_no_projection_success_claim",
+  "source_of_repository_roles": "universe/ARCHITECTURE.md and universe/registry.json",
+  "rule": "Primary/secondary CR typing describes what a repository contributes to an empirical projection contract. It does not grant EmpiricalPartialState status or transfer scientific ownership.",
+  "typed_projects": [
+    {
+      "repository": "island",
+      "primary_type": "CR-1",
+      "secondary_types": ["CR-4"],
+      "role": "global comparative island phenomenon and floral/reproductive pattern analysis with spatial/environmental support layers",
+      "projection_status": "not_instantiated_here",
+      "forbidden_upgrade": "island label or environmental compatibility -> pollination service, historical loss, or ecological state"
+    },
+    {
+      "repository": "izu-core",
+      "primary_type": "CR-1",
+      "secondary_types": ["CR-3"],
+      "role": "island-context ecological response programme linking functional starting position, service, assurance, and response",
+      "projection_status": "not_instantiated_here",
+      "forbidden_upgrade": "visitor identity/rate or unsigned matching -> effective service or signed functional state"
+    },
+    {
+      "repository": "hotarubukuro",
+      "primary_type": "CR-3",
+      "secondary_types": ["CR-1"],
+      "role": "within-species floral-colour phenotype construction and spatial/environmental pattern analysis",
+      "projection_status": "not_instantiated_here",
+      "forbidden_upgrade": "phenotype latent score or spatial association -> complete ecological state or mechanism"
+    },
+    {
+      "repository": "fcp",
+      "primary_type": "CR-1",
+      "secondary_types": ["CR-3"],
+      "role": "comparative multi-species floral spatial-organization pattern evidence",
+      "projection_status": "not_instantiated_here",
+      "forbidden_upgrade": "comparative pattern -> unique moisture or causal mechanism"
+    },
+    {
+      "repository": "azami",
+      "primary_type": "CR-3",
+      "secondary_types": ["CR-2"],
+      "role": "present-day continuous thistle phenotype discovery and environmental/spatial structure",
+      "projection_status": "not_instantiated_here",
+      "forbidden_upgrade": "present phenotype structure -> evolutionary mechanism or historical transition"
+    },
+    {
+      "repository": "EAzami",
+      "primary_type": "CR-2",
+      "secondary_types": ["CR-3"],
+      "role": "functional evolutionary history and competing transition/mechanism programmes",
+      "projection_status": "not_instantiated_here",
+      "forbidden_upgrade": "dated trait reconstruction or preferred model -> directly observed history or established adaptive mechanism"
+    },
+    {
+      "repository": "chun",
+      "primary_type": "CR-2",
+      "secondary_types": ["CR-3"],
+      "role": "molecular and semantic history of pigment states separating visible phenotype from retained biochemical pathway state",
+      "projection_status": "not_instantiated_here",
+      "forbidden_upgrade": "visible colour -> pigment reactivation history"
+    },
+    {
+      "repository": "shimahotarubukuro",
+      "primary_type": "CR-3",
+      "secondary_types": ["CR-1"],
+      "role": "focal within-lineage morphometric and population-differentiation measurement in an island context",
+      "projection_status": "not_instantiated_here",
+      "forbidden_upgrade": "Pst or morphology difference -> Qst, selection, or causal island mechanism"
+    },
+    {
+      "repository": "eog",
+      "primary_type": "CR-4",
+      "secondary_types": [],
+      "role": "finite world-set reconstruction, possible/robust/unresolved forecast projections, and support topology",
+      "projection_status": "not_instantiated_here",
+      "forbidden_upgrade": "latent-world identity -> true history or best predictive state"
+    },
+    {
+      "repository": "sdmr",
+      "primary_type": "CR-4",
+      "secondary_types": [],
+      "role": "leakage-free environmental candidate-universe learning and frozen support-field construction",
+      "projection_status": "not_instantiated_here",
+      "forbidden_upgrade": "relative environmental support -> universal niche-process core, occupancy, or truth"
+    },
+    {
+      "repository": "acsp",
+      "primary_type": "CR-4",
+      "secondary_types": [],
+      "role": "survey candidate generation from robust support patches",
+      "projection_status": "not_instantiated_here",
+      "forbidden_upgrade": "candidate patch -> occupancy probability or confirmed presence"
+    },
+    {
+      "repository": "pollipi",
+      "primary_type": "CR-5",
+      "secondary_types": [],
+      "role": "primary field capture, timelapse effort metadata, and sensor trace generation",
+      "projection_status": "not_instantiated_here",
+      "forbidden_upgrade": "mesh/classifier decision -> confirmed flower visit or biological interaction state"
+    },
+    {
+      "repository": "insepi",
+      "primary_type": "CR-5",
+      "secondary_types": [],
+      "role": "observation-process noise, false/missed/attribution risk, and observability-state representation",
+      "projection_status": "not_instantiated_here",
+      "forbidden_upgrade": "ObservabilityState -> biological interaction state"
+    }
+  ],
+  "excluded_from_cr_v0_1": [
+    {
+      "repositories": ["crest", "ccoc", "mltr", "mrm", "ced", "microdonta", "eco-genetic-criticality", "eco-genetic-warning-extensions"],
+      "reason": "theory-core or inference owners; concrete empirical typing would mix source-theory ownership with application typing"
+    },
+    {
+      "repositories": ["bita"],
+      "reason": "mechanism-architecture connector; not yet admitted as a concrete empirical programme under the five archetypes"
+    },
+    {
+      "repositories": ["odsp"],
+      "reason": "provenance tombstone / superseded repository"
+    },
+    {
+      "repositories": ["theouni"],
+      "reason": "meta theory/type/bridge owner, not an empirical programme"
+    }
+  ],
+  "next_required_step": "Instantiate project_manifest.template.json for each typed repository using source-owned definitions and then run the Empirical Projection Gate."
+}
