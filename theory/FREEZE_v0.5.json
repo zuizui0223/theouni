@@ -1,0 +1,51 @@
+{
+  "schema_version": "theouni-theory-freeze.v0.5",
+  "frozen_on": "2026-08-25",
+  "status": "semantic_core_frozen",
+  "purpose": "Freeze the Theory Universe v0.5 semantic core before empirical-system projection work begins. Prose READMEs and portfolio-registry artifacts may continue to change without revising the core theory version.",
+  "versioning_rule": "Any change to constitutional axioms A0-A12, canonical type identities, theorem-module statements/claim ceilings, theorem dependency direction, or TU-1 through TU-4 finite result semantics requires a theory version increment beyond v0.5.",
+  "frozen_scientific_sentence": "Ecological reality is represented by temporally extended model worlds. Scientific states are contract-relative quotients that erase only distinctions irrelevant to a declared future, history, mechanism, evidence, and target responsibility. Evidence determines which required distinctions are identified and what may be reported; causal uncertainty remains set-valued when evidence does not discriminate it. Compression may become unrevisable when later contracts require forgotten distinctions. Learning about causes and licensing a target are distinct utilities. Raw simulator detail is not state complexity: target-relevant states are invariant only under response-faithful representation changes. Warning must be evaluated on a joint warning/loss state, and within-state reproducibility does not imply cross-state portability.",
+  "semantic_core_files": [
+    {"path": "theory/CONSTITUTION.md", "git_blob_sha": "f9ae30ee5378d7614580e2731e40200004387638", "role": "normative_axioms_definitions_claim_ceiling"},
+    {"path": "theory/core_universe.json", "git_blob_sha": "3e788d77d4c27e90c70ea783ad31f987e4c144e9", "role": "machine_readable_type_operator_theorem_registry"},
+    {"path": "theory/theorem_graph.json", "git_blob_sha": "af2756efae45fb7f736c2aa1ff48a8526fb0b569", "role": "frozen_dependency_dag"},
+
+    {"path": "theory/TU1_CONTRACT_REVISION.md", "git_blob_sha": "6b0825f399944a78d1d802e59a58c506dfdba25f", "role": "TU-1 theorem statement"},
+    {"path": "theory/tu1_registry.json", "git_blob_sha": "e952b0a09ba087ed564fd85f80a698e1e8e4de8c", "role": "TU-1 claim ceiling"},
+    {"path": "theory/contract_revision.py", "git_blob_sha": "d5adf3c170ffbfbc288b9b57b391cb609849c1cc", "role": "TU-1 finite implementation"},
+    {"path": "theory/verify_tu1.py", "git_blob_sha": "b71a5d02ec9d6f925833e65070d0b06bcfca1434", "role": "TU-1 verification surface"},
+
+    {"path": "theory/TU2_LEARNING_LICENSING.md", "git_blob_sha": "7c63172ca6a893a680c258d0b1504f65ec3a4c60", "role": "TU-2 theorem statement"},
+    {"path": "theory/tu2_registry.json", "git_blob_sha": "65ac5078420fec72f58de435b982496aac9157b2", "role": "TU-2 claim ceiling"},
+    {"path": "theory/learning_licensing.py", "git_blob_sha": "02413333fac12c019da5c62cf4780ac3e13cc597", "role": "TU-2 finite implementation"},
+    {"path": "theory/verify_tu2.py", "git_blob_sha": "ba3fc234a4295fd165a3bdcf9047bda024dc9dfc", "role": "TU-2 verification surface"},
+
+    {"path": "theory/TU3_LOSS_STATE_INVARIANCE.md", "git_blob_sha": "1536786ba32cb69a57814da5e970fb89a1b37431", "role": "TU-3 theorem statement"},
+    {"path": "theory/tu3_registry.json", "git_blob_sha": "15e80b281f8919e1d7e7a7c89c15e90f5a503ce7", "role": "TU-3 claim ceiling"},
+    {"path": "theory/loss_state_invariance.py", "git_blob_sha": "0c2c1c4fa44074b0e3bcc66a34a2a333516d3591", "role": "TU-3 finite implementation"},
+    {"path": "theory/verify_tu3.py", "git_blob_sha": "9b546fe3cd5c508ed3c8c4d979ff7b0f2af4483d", "role": "TU-3 verification surface"},
+
+    {"path": "theory/TU4_WARNING_STATE_PORTABILITY.md", "git_blob_sha": "d59147268cc72703ed7b3e78833924bf22493878", "role": "TU-4 theorem statement"},
+    {"path": "theory/tu4_registry.json", "git_blob_sha": "56eb274e1d447200d4908047d3ad57427a081f9c", "role": "TU-4 claim ceiling"},
+    {"path": "theory/warning_state_portability.py", "git_blob_sha": "f8a0d07e40815c8537512ca5227ec71373610776", "role": "TU-4 finite implementation"},
+    {"path": "theory/verify_tu4.py", "git_blob_sha": "2c41e3b226d14ae8cb28065531e25ba18950dced", "role": "TU-4 verification surface"},
+
+    {"path": "theory/validate_core.py", "git_blob_sha": "e227c2d3664926fd19a7fa5200eb544729194b03", "role": "type_and_module_validator"},
+    {"path": "theory/validate_theory_graph.py", "git_blob_sha": "0569e6a89aba1a5808f04000e2a181b06e2d8644", "role": "dependency_graph_validator"}
+  ],
+  "theorem_modules": [
+    {"id": "TU-1", "status": "frozen_finite_exact_same_carrier", "publication_novelty": "not_asserted"},
+    {"id": "TU-2", "status": "frozen_finite_exact_bridge_firewall", "publication_novelty": "not_asserted"},
+    {"id": "TU-3", "status": "frozen_finite_exact_representation_firewall", "publication_novelty": "not_asserted"},
+    {"id": "TU-4", "status": "frozen_finite_exact_warning_firewall", "publication_novelty": "not_asserted"}
+  ],
+  "explicitly_open_after_freeze": [
+    "Reality-to-model empirical adequacy",
+    "stochastic/continuous/approximate/delayed-observation extensions",
+    "carrier-changing revision and lift-invariant revision cost",
+    "reliability-aware learning/licensing coincidence conditions",
+    "out-of-sample empirical-state factorization",
+    "empirical identification of warning-evaluation state and defensible cross-domain portability"
+  ],
+  "empirical_projection_policy": "Empirical work may instantiate or falsify the v0.5 core but must not silently redefine its types. A conflict discovered during empirical projection is either a failed projection, a missing bridge, or a versioned theory revision."
+}
