@@ -1,0 +1,53 @@
+name: Theory Universe Validation
+
+on:
+  push:
+    paths:
+      - 'theory/**'
+      - 'README.md'
+      - '.github/workflows/theory-universe-validation.yml'
+  pull_request:
+    paths:
+      - 'theory/**'
+      - 'README.md'
+      - '.github/workflows/theory-universe-validation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-theory-universe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Compile theory modules
+        run: python -m compileall -q theory
+
+      - name: Validate type system
+        run: python theory/validate_core.py
+
+      - name: Validate theorem dependency graph
+        run: python theory/validate_theory_graph.py
+
+      - name: Verify TU-1 contract revision
+        run: python theory/verify_tu1.py
+
+      - name: Verify TU-2 learning versus licensing
+        run: python theory/verify_tu2.py
+
+      - name: Verify TU-3 loss-state invariance
+        run: python theory/verify_tu3.py
+
+      - name: Verify TU-4 warning state and portability
+        run: python theory/verify_tu4.py
+
+      - name: Verify frozen v0.5 semantic core
+        run: python theory/validate_freeze.py
