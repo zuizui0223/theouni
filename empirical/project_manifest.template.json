@@ -1,0 +1,76 @@
+{
+  "schema_version": "theouni-concrete-project-manifest.v0.1",
+  "project_id": "project:REPLACE_ME",
+  "source_repository": "zuizui0223/REPLACE_ME",
+  "source_snapshot_sha": "REPLACE_WITH_PINNED_SHA",
+  "programme_typing": {
+    "primary_type": "CR-1",
+    "secondary_types": [],
+    "typing_rationale": "Explain why this is the primary scientific role rather than merely a method used inside the project."
+  },
+  "empirical_projection_contract": {
+    "U": {
+      "definition": "empirical unit",
+      "value": "REPLACE_ME"
+    },
+    "tau": {
+      "definition": "time/cohort alignment",
+      "value": "REPLACE_ME"
+    },
+    "Z": {
+      "definition": "candidate measured state coordinates",
+      "coordinates": [],
+      "measurement_status": []
+    },
+    "H": {
+      "definition": "upstream context/origin/history tested after Z",
+      "coordinates": []
+    },
+    "A": {
+      "definition": "declared action/intervention/comparison family",
+      "values": []
+    },
+    "Y": {
+      "definition": "declared target endpoint/horizon",
+      "target": "REPLACE_ME",
+      "horizon": "REPLACE_ME"
+    },
+    "O": {
+      "definition": "observation/reliability/calibration contract",
+      "direct_measurements": [],
+      "calibrated_proxies": [],
+      "uncalibrated_proxies": [],
+      "known_failure_domains": []
+    },
+    "V": {
+      "definition": "leakage-free validation unit/split",
+      "holdout_unit": "REPLACE_ME"
+    },
+    "Delta": {
+      "definition": "minimum predeclared candidate-state predictive gain",
+      "value": null
+    },
+    "epsilon": {
+      "definition": "maximum residual-context gain compatible with redundancy",
+      "value": null
+    }
+  },
+  "projection_gate_status": {
+    "G0_provenance_synchronization": "unassessed",
+    "G1_candidate_predictive_adequacy": "unassessed",
+    "G2_residual_context_redundancy": "unassessed",
+    "G3_ecological_unit_validation": "unassessed",
+    "G4_observation_reliability": "unassessed",
+    "G5_target_action_stress": "unassessed",
+    "decision": "unassessed"
+  },
+  "allowed_claims": [],
+  "explicit_non_claims": [
+    "The programme type is not an ecological state.",
+    "A predictor or proxy is not an EmpiricalPartialState unless the projection gate earns that status.",
+    "Repository proximity or Graphify edges are not evidence."
+  ],
+  "theory_handoffs": [],
+  "source_paths": [],
+  "notes": "This template is outside the frozen Theory Universe v0.5 core."
+}
