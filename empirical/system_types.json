@@ -1,0 +1,123 @@
+{
+  "schema_version": "theouni-concrete-research-universe.v0.1",
+  "status": "typed_outer_layer_outside_frozen_theory_core",
+  "depends_on": {
+    "theory_core": "theouni-theory-core.v0.5",
+    "projection_gate": "theouni-empirical-projection-gate.v0.1"
+  },
+  "programme_types": [
+    {
+      "id": "CR-1",
+      "name": "ComparativePhenomenonProgram",
+      "layer": "biological_comparative",
+      "primary_projection_fields": ["U", "H", "Z", "Y", "V"],
+      "allowed_outputs": ["ContextDescriptor", "ComparativePattern", "EmpiricalPartialStateDecision"],
+      "forbidden_upgrades": [
+        "PhenomenonLabel->RequiredState",
+        "OriginLabel->Mechanism",
+        "ComparativeAssociation->CausalLaw"
+      ],
+      "theory_handoffs": ["CREST", "CED", "RACH"]
+    },
+    {
+      "id": "CR-2",
+      "name": "LineageTraitEvolutionProgram",
+      "layer": "biological_historical",
+      "primary_projection_fields": ["tau", "H", "Z", "A", "Y"],
+      "allowed_outputs": ["HistoryDescriptor", "CandidateMechanismSet", "TraitTransitionHypothesis", "EmpiricalPartialStateDecision"],
+      "forbidden_upgrades": [
+        "Phylogeny->TrueHistory",
+        "VisiblePhenotype->BiochemicalState",
+        "AncestralReconstruction->ObservedPastWorld"
+      ],
+      "theory_handoffs": ["MLTR", "MRM", "RACH", "CREST"]
+    },
+    {
+      "id": "CR-3",
+      "name": "PhenotypePolymorphismTraitConstructionProgram",
+      "layer": "biological_measurement_representation",
+      "primary_projection_fields": ["Z", "U", "Y", "H", "V"],
+      "allowed_outputs": ["CandidateCoordinateSet", "TraitRepresentation", "SpatialPhenotypePattern", "EmpiricalPartialStateDecision"],
+      "forbidden_upgrades": [
+        "LatentTraitScore->NaturalState",
+        "TraitCorrelation->Mechanism",
+        "SpatialPattern->CausalProcess"
+      ],
+      "theory_handoffs": ["CREST", "CED", "RACH"]
+    },
+    {
+      "id": "CR-4",
+      "name": "SpatialWorldConstructionForecastProgram",
+      "layer": "method_world_construction",
+      "primary_projection_fields": ["Omega", "U", "A", "Y", "V"],
+      "allowed_outputs": ["ModelWorldUniverse", "SupportField", "ReachabilitySet", "CandidatePatchSet"],
+      "forbidden_upgrades": [
+        "Suitability->Occupancy",
+        "CandidatePatch->Presence",
+        "LatentWorldIdentity->TrueHistory",
+        "SupportField->RequiredState"
+      ],
+      "theory_handoffs": ["CREST", "EOG-like world construction", "CED"]
+    },
+    {
+      "id": "CR-5",
+      "name": "SensingObservabilityProgram",
+      "layer": "method_observation",
+      "primary_projection_fields": ["O", "U", "tau", "V"],
+      "allowed_outputs": ["ObservationRecord", "EffortRecord", "ObservabilityContract", "CalibrationRecord", "EvidenceClassInput"],
+      "forbidden_upgrades": [
+        "ClassifierDetection->ConfirmedBiologicalEvent",
+        "RawEffort->RateWithoutDenominator",
+        "ObservabilityState->BiologicalInteractionState"
+      ],
+      "theory_handoffs": ["CED", "RACH", "EmpiricalProjectionGate"]
+    }
+  ],
+  "composition_edges": [
+    {
+      "source": "CR-4",
+      "target": "CR-5",
+      "relation": "candidate_worlds_to_observation_design",
+      "meaning": "Spatial world construction may propose where/what to observe; it does not establish presence."
+    },
+    {
+      "source": "CR-5",
+      "target": "CR-1",
+      "relation": "reliability_qualified_records_to_comparative_test",
+      "meaning": "Sensor records may supply evidence for a comparative phenomenon only after observation reliability is declared."
+    },
+    {
+      "source": "CR-5",
+      "target": "CR-3",
+      "relation": "records_to_trait_measurement",
+      "meaning": "Sensor/image records may construct candidate traits but do not make the trait a state."
+    },
+    {
+      "source": "CR-2",
+      "target": "CR-3",
+      "relation": "history_to_trait_interpretation",
+      "meaning": "Lineage/history may constrain phenotype interpretation without proving mechanism."
+    },
+    {
+      "source": "CR-2",
+      "target": "CR-1",
+      "relation": "history_to_comparative_context",
+      "meaning": "Lineage history may enter as upstream context H after the process-state candidate is evaluated."
+    },
+    {
+      "source": "CR-3",
+      "target": "CR-1",
+      "relation": "candidate_traits_to_phenomenon_state_test",
+      "meaning": "Trait coordinates may instantiate Z in a comparative residual-context test."
+    }
+  ],
+  "global_firewalls": [
+    "ProgrammeType!=RequiredState",
+    "MethodType!=BiologicalState",
+    "ContextLabel!=StateByDefault",
+    "Predictor!=EmpiricalPartialState",
+    "ObservationRecord!=BiologicalEventWithoutReliabilityBridge",
+    "WorldSupport!=OccupancyOrTruth"
+  ],
+  "admission_rule": "Every named project must declare exactly one primary programme type and may declare secondary supporting types. All state language must pass theory/EMPIRICAL_PROJECTION_GATE.md."
+}
