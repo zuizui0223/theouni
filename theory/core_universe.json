@@ -1,14 +1,15 @@
 {
-  "schema_version": "theouni-theory-core.v0.1",
-  "status": "theory_first_core",
-  "programme_question": "What may science safely forget, and for which declared purpose?",
+  "schema_version": "theouni-theory-core.v0.2",
+  "status": "theory_first_core_with_contract_revision",
+  "programme_question": "What may science safely forget, and what must be retained so that later scientific responsibilities remain revisable?",
   "constitutional_commitments": [
     "Nature is not a state.",
     "Scientific model worlds are not identical to reality.",
     "Required state is a contract-relative quotient of model worlds.",
     "Evidence constrains identification and reportability but does not create ontic distinctions.",
     "Causal uncertainty remains set-valued until discriminating evidence exists.",
-    "Warning validity is conditional on a loss-generating state."
+    "Warning validity is conditional on a loss-generating state.",
+    "Scientific forgetting can be irreversible relative to a later contract when the retained state no longer factors the revised required state."
   ],
   "types": [
     {"id": "type:Reality", "layer": "ontic", "definition": "Temporally extended ecological reality outside the finite theorem domain."},
@@ -18,6 +19,8 @@
     {"id": "type:ScientificContext", "layer": "scientific", "definition": "Observation and intervention context V controlling scientific access."},
     {"id": "type:ScientificContract", "layer": "scientific", "definition": "C=(Gamma,H,Theta,D;T)."},
     {"id": "type:RequiredState", "layer": "representational", "definition": "Equivalence class in Omega/~_C; least-information adequate state when a coarsest adequate quotient exists."},
+    {"id": "type:StoredStateRepresentation", "layer": "representational_memory", "definition": "A previously retained state partition/label used as input to a later contract revision."},
+    {"id": "type:RevisionSideInformation", "layer": "representational_memory", "definition": "Auxiliary finite label that, together with an old state label, can recover a revised required state."},
     {"id": "type:EcologicalLaw", "layer": "effective_law", "definition": "Well-defined effective law on an adequate quotient."},
     {"id": "type:ObservationRecord", "layer": "epistemic", "definition": "Record produced under an observation contract."},
     {"id": "type:EvidenceClass", "layer": "epistemic", "definition": "Worlds compatible with an observation record under D."},
@@ -34,6 +37,7 @@
     {"id": "op:RealityProjection", "signature": "Reality x ScientificContext -> P(ModelWorldUniverse)", "status": "conceptual_open"},
     {"id": "op:Observation", "signature": "World x ScientificContext -> ObservationRecord", "status": "declared_contract"},
     {"id": "op:ContractQuotient", "signature": "ModelWorldUniverse x ScientificContract -> RequiredState partition", "status": "finite_exact_core"},
+    {"id": "op:ContractRevision", "signature": "StoredStateRepresentation x revised RequiredState -> state-only recoding OR exact minimum RevisionSideInformation", "status": "finite_exact_tu1"},
     {"id": "op:EvidenceCompatibility", "signature": "ObservationRecord x ScientificContract -> EvidenceClass", "status": "finite_exact_core"},
     {"id": "op:TargetReport", "signature": "EvidenceClass x target T -> Report", "status": "finite_exact_core"},
     {"id": "op:CausalAdmissibility", "signature": "EvidenceClass x {CausalProgramme} -> AdmissibleCausalSet", "status": "declared_model_family"},
@@ -46,7 +50,8 @@
     {"id": "obstruction:Future", "contract_component": "Gamma", "owner": "repo:ccoc", "meaning": "Newly legal future interactions/interventions can split an old world merge."},
     {"id": "obstruction:History", "contract_component": "H", "owner": "repo:mltr", "meaning": "Replacement/turnover can invalidate inherited macro-state meaning and require repair/history augmentation."},
     {"id": "obstruction:Mechanism", "contract_component": "Theta", "owner": "repo:mrm", "meaning": "Retained mechanisms can disagree on required responses and force state refinement."},
-    {"id": "obstruction:Evidence", "contract_component": "D,T", "owner": "repo:ced", "meaning": "Required distinctions can remain unidentified under the available experiment and failure architecture."}
+    {"id": "obstruction:Evidence", "contract_component": "D,T", "owner": "repo:ced", "meaning": "Required distinctions can remain unidentified under the available experiment and failure architecture."},
+    {"id": "obstruction:Revision", "contract_component": "contract change after compression", "owner": "repo:theouni", "meaning": "A revised required state may fail to factor through a previously stored state representation."}
   ],
   "ownership": [
     {"layer": "WorldContractRequiredState", "owner": "repo:crest"},
@@ -57,7 +62,20 @@
     {"layer": "CausalAdmissibilityLearning", "owner": "repo:microdonta"},
     {"layer": "EcoGeneticDynamicsSimulatorBoundary", "owner": "repo:eco-genetic-criticality"},
     {"layer": "LossStateConditionalWarning", "owner": "repo:eco-genetic-warning-extensions"},
-    {"layer": "CrossRepositoryTypeSystem", "owner": "repo:theouni"}
+    {"layer": "CrossRepositoryTypeSystem", "owner": "repo:theouni"},
+    {"layer": "ContractRevisionAfterCompression", "owner": "repo:theouni"}
+  ],
+  "theorem_modules": [
+    {
+      "id": "TU-1",
+      "title": "Contract revision, irreversible forgetting, and revision debt",
+      "status": "finite_exact_same_carrier",
+      "source": "theory/TU1_CONTRACT_REVISION.md",
+      "registry": "theory/tu1_registry.json",
+      "verification": "theory/verify_tu1.py",
+      "results": ["TU-1A", "TU-1B", "TU-1C", "TU-1D", "TU-1E"],
+      "claim_ceiling": "Finite same-carrier representational revision; not physical irreversibility, Shannon rate, empirical sampling cost, or a standalone information-theory novelty claim."
+    }
   ],
   "forbidden_collapses": [
     {"left": "type:Reality", "right": "type:World", "unless": "explicit empirical/model projection with stated adequacy and claim ceiling"},
@@ -68,7 +86,9 @@
     {"left": "type:CausalProgramme", "right": "type:RequiredState", "unless": "response-relevant equivalence under the declared contract is proved"},
     {"left": "type:Report", "right": "type:RequiredState", "unless": "the report is explicitly the fully identified required-state label"},
     {"left": "type:WarningStatistic", "right": "type:LossGeneratingState", "unless": "never; these are distinct type categories"},
-    {"left": "type:AdmissibleCausalSet", "right": "type:CausalProgramme", "unless": "the admissible set is a proved singleton under the declared evidence contract"}
+    {"left": "type:AdmissibleCausalSet", "right": "type:CausalProgramme", "unless": "the admissible set is a proved singleton under the declared evidence contract"},
+    {"left": "type:StoredStateRepresentation", "right": "type:RequiredState", "unless": "the stored representation is the required state for the current contract; later contracts still require a TU-1 revisability test"},
+    {"left": "type:RevisionSideInformation", "right": "type:EvidenceClass", "unless": "an explicit observation/reliability contract shows that the side information is empirically obtainable as that evidence object"}
   ],
   "invariants": [
     "RequiredState is defined from scientific interchangeability of worlds, not from measurement convenience.",
@@ -76,12 +96,14 @@
     "A target may be reportable even when RequiredState is unresolved.",
     "Adding future/history/mechanism responsibilities may refine RequiredState without any change in the present Snapshot.",
     "A CompleteSimulatorState may be sufficient without being minimal, natural, or empirically identifiable.",
-    "Warning portability across distinct LossGeneratingStates is not assumed."
+    "Warning portability across distinct LossGeneratingStates is not assumed.",
+    "A distinction removed by a stored state label cannot be recovered from that label alone when a revised contract later requires the distinction.",
+    "Worst-case local revision debt can be arbitrarily larger than global average partition-refinement debt."
   ],
   "open_obligations": [
     "Reality-to-model empirical adequacy theorem/contract.",
     "Stochastic/continuous/approximate extension of finite exact state construction.",
-    "Composition and commutation theory for Gamma/H/Theta/D refinement operators.",
+    "Carrier-changing contract revision and lift-invariance of revision debt.",
     "Formal divergence or coincidence conditions between RACH information gain and CED licensed-resolution gain.",
     "Representation-invariant definition of LossGeneratingState.",
     "Cross-state warning portability without universal-threshold assumptions.",
