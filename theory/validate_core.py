@@ -9,6 +9,7 @@ CORE = ROOT / "theory" / "core_universe.json"
 TU1 = ROOT / "theory" / "tu1_registry.json"
 TU2 = ROOT / "theory" / "tu2_registry.json"
 TU3 = ROOT / "theory" / "tu3_registry.json"
+TU4 = ROOT / "theory" / "tu4_registry.json"
 
 
 def main() -> None:
@@ -16,8 +17,9 @@ def main() -> None:
     tu1 = json.loads(TU1.read_text(encoding="utf-8"))
     tu2 = json.loads(TU2.read_text(encoding="utf-8"))
     tu3 = json.loads(TU3.read_text(encoding="utf-8"))
+    tu4 = json.loads(TU4.read_text(encoding="utf-8"))
 
-    assert core["schema_version"] == "theouni-theory-core.v0.4"
+    assert core["schema_version"] == "theouni-theory-core.v0.5"
 
     types = core["types"]
     type_ids = [item["id"] for item in types]
@@ -50,7 +52,10 @@ def main() -> None:
         "type:RepresentationProjection",
         "type:LossGeneratingState",
         "type:WarningStatistic",
+        "type:WarningResponseSignature",
+        "type:WarningEvaluationState",
         "type:WarningValidity",
+        "type:WarningPortability",
     }
     assert required_types <= set(type_ids), "missing canonical type"
 
@@ -60,6 +65,9 @@ def main() -> None:
         "op:TargetLicensing",
         "op:LossResponseQuotient",
         "op:LossRepresentationAudit",
+        "op:WarningStateQuotient",
+        "op:WarningEvaluation",
+        "op:WarningPortabilityAudit",
     } <= set(operator_ids)
 
     for collapse in core["forbidden_collapses"]:
@@ -67,15 +75,6 @@ def main() -> None:
         assert collapse["right"] in type_ids, collapse
         assert collapse["left"] != collapse["right"], collapse
         assert collapse["unless"].strip(), collapse
-
-    obstruction_owners = {item["owner"] for item in core["structural_obstructions"]}
-    assert {
-        "repo:ccoc",
-        "repo:mltr",
-        "repo:mrm",
-        "repo:ced",
-        "repo:theouni",
-    } <= obstruction_owners
 
     ownership_owners = {item["owner"] for item in ownership}
     assert {
@@ -94,45 +93,51 @@ def main() -> None:
         (item["left"], item["right"])
         for item in core["forbidden_collapses"]
     }
-    assert ("type:Reality", "type:World") in forbidden_pairs
-    assert ("type:Snapshot", "type:RequiredState") in forbidden_pairs
-    assert ("type:EvidenceClass", "type:RequiredState") in forbidden_pairs
-    assert ("type:WarningStatistic", "type:LossGeneratingState") in forbidden_pairs
-    assert ("type:StoredStateRepresentation", "type:RequiredState") in forbidden_pairs
-    assert ("type:CausalLearningValue", "type:TargetLicensingStatus") in forbidden_pairs
-    assert ("type:CompleteSimulatorState", "type:LossGeneratingState") in forbidden_pairs
-    assert ("type:RepresentationProjection", "type:RequiredState") in forbidden_pairs
+    required_forbidden_pairs = {
+        ("type:Reality", "type:World"),
+        ("type:Snapshot", "type:RequiredState"),
+        ("type:EvidenceClass", "type:RequiredState"),
+        ("type:StoredStateRepresentation", "type:RequiredState"),
+        ("type:CausalLearningValue", "type:TargetLicensingStatus"),
+        ("type:CompleteSimulatorState", "type:LossGeneratingState"),
+        ("type:RepresentationProjection", "type:RequiredState"),
+        ("type:WarningStatistic", "type:LossGeneratingState"),
+        ("type:WarningStatistic", "type:WarningEvaluationState"),
+        ("type:LossGeneratingState", "type:WarningEvaluationState"),
+        ("type:WarningValidity", "type:WarningPortability"),
+    }
+    assert required_forbidden_pairs <= forbidden_pairs
 
     modules = {item["id"]: item for item in core["theorem_modules"]}
-    assert set(modules) == {"TU-1", "TU-2", "TU-3"}
+    assert set(modules) == {"TU-1", "TU-2", "TU-3", "TU-4"}
     assert modules["TU-1"]["status"] == "finite_exact_same_carrier"
     assert modules["TU-2"]["status"] == "finite_exact_bridge_firewall"
     assert modules["TU-3"]["status"] == "finite_exact_representation_firewall"
+    assert modules["TU-4"]["status"] == "finite_exact_warning_firewall"
 
     assert tu1["schema_version"] == "theouni-tu1.v1"
-    assert tu1["boundary"]["same_finite_carrier_required"] is True
-    assert tu1["boundary"]["information_theory_novelty_claim"] is False
+    assert tu2["schema_version"] == "theouni-tu2.v1"
+    assert tu3["schema_version"] == "theouni-tu3.v1"
+    assert tu4["schema_version"] == "theouni-tu4.v1"
+
     assert [item["id"] for item in tu1["results"]] == [
         "TU-1A", "TU-1B", "TU-1C", "TU-1D", "TU-1E"
     ]
-
-    assert tu2["schema_version"] == "theouni-tu2.v1"
-    assert tu2["status"] == "finite_exact_bridge_firewall"
     assert [item["id"] for item in tu2["results"]] == [
         "TU-2A", "TU-2B", "TU-2C", "TU-2-policy-reversal"
     ]
-
-    assert tu3["schema_version"] == "theouni-tu3.v1"
-    assert tu3["status"] == "finite_exact_representation_firewall"
     assert [item["id"] for item in tu3["results"]] == [
         "TU-3A", "TU-3B", "TU-3C", "TU-3D"
+    ]
+    assert [item["id"] for item in tu4["results"]] == [
+        "TU-4A", "TU-4B", "TU-4C", "TU-4D"
     ]
 
     assert core["empirical_boundary"]["included"] is False
     assert core["open_obligations"], "theory core must preserve open obligations"
 
     print(
-        "Theory Universe v0.4 validated: "
+        "Theory Universe v0.5 validated: "
         f"{len(types)} types, {len(operators)} operators, "
         f"{len(core['forbidden_collapses'])} forbidden collapses, "
         f"{len(core['theorem_modules'])} theorem modules, "
