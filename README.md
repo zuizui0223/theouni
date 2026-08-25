@@ -2,31 +2,34 @@
 
 `theouni` has two deliberately separate layers.
 
-1. **Theory Universe** — the theory-first ontology and mathematics of worlds, states, evidence, learning, revision, dynamics, and warning.
+1. **Theory Universe v0.5** — the theory-first ontology and mathematics of worlds, states, evidence, learning, revision, target-specific dynamics, and warning.
 2. **Portfolio Registry** — the provenance-preserving map of the wider repository ecosystem and its typed bridges.
 
-The theory layer comes first. Concrete species, island syndromes, SDMs, sensors, and empirical workflows do not define the core theory; they are projected into it later through explicit contracts.
+The theory layer comes first. Species, island syndromes, floral polymorphisms, SDMs, sensors, and field workflows do not define the abstract core; they are projected into it later through explicit empirical contracts.
 
 ## Central programme
 
-> **What may science safely forget, what must remain revisable, and what exactly is science trying to learn or license?**
+> **What may science safely forget, what must remain revisable, and which distinctions are required by the scientific question actually being asked?**
 
-The current worldview is:
+The v0.5 worldview is:
 
 - ecological reality is temporally extended and is not itself a `State`;
 - mathematics acts on declared `ModelWorld`s rather than directly on reality;
 - a `RequiredState` is a contract-relative quotient of model worlds;
 - ecological laws are effective laws on adequate quotients;
-- `EvidenceClass` is epistemic and is not the same object as `RequiredState`;
+- evidence identifies or licenses but does not create structural distinctions;
 - causal uncertainty remains set-valued until discriminating evidence exists;
-- warning validity is conditional on a declared loss-generating state;
-- a state adequate for one contract can become unrevisable after later responsibilities require distinctions previously forgotten;
-- causal-learning value and target-licensing value are distinct scientific utilities.
+- scientific compression can become unrevisable after a contract changes;
+- causal-learning value and target-licensing value are different scientific utilities;
+- raw simulator-state complexity is not target-relevant state complexity;
+- a `LossGeneratingState` need not be sufficient for warning evaluation;
+- within-state warning reproducibility and cross-state warning portability are separate claims.
 
 ```mermaid
 flowchart TD
     R[Ecological reality] -->|model / measurement bridge| W[Model-world universe]
     W --> C[Scientific contract]
+
     C --> G[Future / Gamma]
     C --> H[History / H]
     C --> M[Mechanism / Theta]
@@ -36,67 +39,78 @@ flowchart TD
     G --> CCOC[CCOC]
     H --> MLTR[MLTR]
     M --> MRM[MRM]
-    CCOC --> J[Required state]
+    CCOC --> J[RequiredState]
     MLTR --> J
     MRM --> J
 
-    J --> CED[CED evidence licensing]
+    J --> CED[CED evidence / reportability]
     D --> CED
     T --> CED
+    CED --> E[EvidenceClass]
+    E --> LIC[TargetLicensingStatus]
+    E --> RACH[RACH admissible causal set]
+    RACH --> LEARN[CausalLearningValue]
+    LEARN --> TU2[TU-2 learning != licensing]
+    LIC --> TU2
 
-    CED --> RACH[RACH causal admissibility / next observation]
-    RACH --> LV[Causal learning value]
-    CED --> TL[Target licensing status]
+    J --> STORE[StoredStateRepresentation]
+    STORE --> TU1[TU-1 contract revision]
 
-    W --> DYN[Eco-genetic dynamics]
-    DYN --> LS[Loss-generating state]
-    LS --> WARN[Conditional warning]
-
-    J --> OLD[Stored state under old contract]
-    OLD --> REV[TU-1 contract revision]
-    REV --> NEW[Revised required state]
-
-    LV --> SEP[TU-2 learning/licensing firewall]
-    TL --> SEP
+    W --> DYN[Declared dynamics]
+    DYN --> LR[Loss response]
+    LR --> TU3[TU-3 representation-faithful loss state]
+    TU3 --> LS[LossGeneratingState]
+    LS --> TU4[TU-4 warning-state refinement]
+    TU4 --> WS[WarningEvaluationState]
+    WS --> WV[WarningValidity / portability]
 ```
 
 ## Start here
 
-### 1. Theory Universe
+### Theory Universe
 
-- [`theory/README.md`](theory/README.md) — canonical theory-world statement.
-- [`theory/core_universe.json`](theory/core_universe.json) — machine-readable type system.
-- [`theory/CONSISTENCY_AUDIT.md`](theory/CONSISTENCY_AUDIT.md) — ownership and anti-collapse audit.
-- [`theory/TU1_CONTRACT_REVISION.md`](theory/TU1_CONTRACT_REVISION.md) — TU-1: revision after compression.
-- [`theory/tu1_registry.json`](theory/tu1_registry.json) — TU-1 claim ceiling.
-- [`theory/contract_revision.py`](theory/contract_revision.py) and [`theory/verify_tu1.py`](theory/verify_tu1.py) — executable TU-1 construction.
+- [`theory/CONSTITUTION.md`](theory/CONSTITUTION.md) — normative v0.5 axioms, definitions, claim ceilings, and frozen scientific sentence.
+- [`theory/README.md`](theory/README.md) — readable theory-world exposition.
+- [`theory/core_universe.json`](theory/core_universe.json) — machine-readable type/operator/theorem registry.
+- [`theory/theorem_graph.json`](theory/theorem_graph.json) — frozen prerequisite-to-dependent theorem DAG.
+- [`theory/CONSISTENCY_AUDIT.md`](theory/CONSISTENCY_AUDIT.md) — cross-repository ownership and anti-collapse audit.
+
+The four current `theouni` theorem/firewall modules are:
+
+- [`theory/TU1_CONTRACT_REVISION.md`](theory/TU1_CONTRACT_REVISION.md) — TU-1: contract revision after compression.
 - [`theory/TU2_LEARNING_LICENSING.md`](theory/TU2_LEARNING_LICENSING.md) — TU-2: causal learning versus target licensing.
-- [`theory/tu2_registry.json`](theory/tu2_registry.json) — TU-2 claim ceiling.
-- [`theory/learning_licensing.py`](theory/learning_licensing.py) and [`theory/verify_tu2.py`](theory/verify_tu2.py) — executable TU-2 construction.
+- [`theory/TU3_LOSS_STATE_INVARIANCE.md`](theory/TU3_LOSS_STATE_INVARIANCE.md) — TU-3: loss-state representation invariance.
+- [`theory/TU4_WARNING_STATE_PORTABILITY.md`](theory/TU4_WARNING_STATE_PORTABILITY.md) — TU-4: warning evaluation state and portability.
 
-### 2. Portfolio Registry
+Each module has a machine-readable registry, finite implementation, and verification script in `theory/`.
 
-- [`universe/ARCHITECTURE.md`](universe/ARCHITECTURE.md) — wider repository architecture.
+### Portfolio Registry
+
+- [`universe/ARCHITECTURE.md`](universe/ARCHITECTURE.md) — wider research-repository architecture.
 - [`universe/registry.json`](universe/registry.json) — machine-readable repository/claim registry.
 - [`graphify-out/graph.html`](graphify-out/graph.html) — interactive Graphify map.
 - [`universe/bridges/eco_genetic_crest_bridge_registry.json`](universe/bridges/eco_genetic_crest_bridge_registry.json) — bounded EcoGenetic -> CREST bridge.
-- [`universe/PROVENANCE.json`](universe/PROVENANCE.json) — provenance manifest.
+- [`universe/PROVENANCE.json`](universe/PROVENANCE.json) — wider registry provenance manifest.
 
 ## Core theoretical ownership
 
 | Layer | Primary owner |
 |---|---|
-| World / contract / least adequate state | `crest` |
-| Future obstruction | `ccoc` |
-| Historical-semantic transport / repair | `mltr` |
-| Mechanism-robust state / law | `mrm` |
-| Evidence / reportability | `ced` |
-| Causal admissibility / next observation | `microdonta` / RACH |
-| Eco-genetic dynamics / simulator-state boundary | `eco-genetic-criticality` |
-| Loss-state recovery / conditional warning | `eco-genetic-warning-extensions` |
-| Cross-repository type system | `theouni` |
-| Contract revision after compression | `theouni` / TU-1 |
-| Learning/licensing bridge firewall | `theouni` / TU-2 |
+| world / contract / least adequate state | `crest` |
+| future obstruction | `ccoc` |
+| historical-semantic transport / repair | `mltr` |
+| mechanism-robust state / law | `mrm` |
+| evidence / reportability | `ced` |
+| causal admissibility / next observation | `microdonta` / RACH |
+| eco-genetic dynamics / simulator-state boundary | `eco-genetic-criticality` |
+| warning-blind loss conditioning and empirical warning results | `eco-genetic-warning-extensions` |
+| cross-repository type system | `theouni` |
+| contract revision after compression | `theouni` / TU-1 |
+| learning/licensing bridge firewall | `theouni` / TU-2 |
+| loss-state representation firewall | `theouni` / TU-3 |
+| warning-state/portability firewall | `theouni` / TU-4 |
+
+`theouni` does not acquire ownership of source theorems or empirical evidence merely by connecting their typed outputs.
 
 ## Canonical distinctions
 
@@ -113,21 +127,22 @@ Reality
 and
 
 ```text
-CompleteSimulatorState != Minimal/Natural RequiredState
-WarningStatistic != LossGeneratingState
+CompleteSimulatorState != LossGeneratingState
+LossGeneratingState <= WarningEvaluationState
 StoredStateRepresentation != RevisedRequiredState
 CausalLearningValue != TargetLicensingStatus
+WarningValidity != WarningPortability
 ```
 
-unless an explicit theorem or typed bridge establishes the needed factorization.
+unless an explicit theorem or bridge establishes the required factorization/equality.
 
-The long-standing central distinction remains:
+The foundational epistemic distinction remains:
 
 ```text
 required state != identified state != reportable target
 ```
 
-TU-1 adds a temporal distinction:
+TU-1 adds:
 
 ```text
 state adequate for contract C0
@@ -135,7 +150,7 @@ state adequate for contract C0
 state revisable for later contract C1
 ```
 
-TU-2 adds an objective distinction:
+TU-2 adds:
 
 ```text
 more causal learning
@@ -143,73 +158,85 @@ more causal learning
 more target licensing
 ```
 
-and the converse also fails.
-
-## TU-1 — contract revision after compression
-
-TU-1 deliberately does **not** re-claim CREST-J1's common-lift closure result. CREST already proves that noncommuting refinement audits converge under fair iteration to one least joint state on a declared finite common carrier.
-
-TU-1 starts after an old state has already been stored.
-
-For old partition `P` and revised required partition `Q`:
-
-- state-only revision succeeds iff every `P` block lies inside one `Q` block;
-- otherwise the exact minimum auxiliary alphabet is the maximum number of `Q` blocks hidden inside any single `P` block;
-- worst-case local revision debt can be arbitrarily large while global average partition-refinement debt is arbitrarily small.
-
-The finite coding/factorization substrate is elementary and overlaps classical zero-error side-information ideas. No standalone information-theory novelty claim is made without further prior-art audit.
-
-## TU-2 — causal learning versus target licensing
-
-TU-2 embeds a RACH causal state `S` and a CED report target `T` in one finite product-world universe.
-
-For experiments `Q_{k,b}` that reveal `k` causal bits and optionally reveal `T`:
+TU-3 adds:
 
 ```text
-I(S; Q_{k,0}) = I(S; Q_{k,1}) = k
+more simulator detail
+    does not imply
+more target-relevant state
 ```
 
-while target licensing is opposite:
+TU-4 adds:
 
 ```text
-L_T(Q_{k,0}) = 0
-L_T(Q_{k,1}) = 1
+same loss state
+    does not imply
+same warning-evaluation state
 ```
 
-Hence the same causal-learning value can correspond to either no target license or complete target license. In the sharp endpoints, normalized RACH-style causal NOV can be maximal with zero target licensing, or zero with complete target licensing.
+## Theory Universe v0.5 status
 
-TU-2 is a bridge firewall, not a replacement for RACH or CED. Its noiseless construction does not inherit CED's failure/calibration/risk guarantees.
+The universe is now internally typed through four finite cross-layer modules.
+
+### TU-1 — revision
+
+For old stored partition `P` and revised required partition `Q`, state-only revision succeeds exactly when `Q` factors through `P`. Otherwise TU-1 gives the exact minimum idealized auxiliary alphabet needed to recover the revised state and a worst-case revision-debt measure. Local debt can be arbitrarily large while average refinement debt is arbitrarily small.
+
+### TU-2 — scientific utility
+
+A finite product-world construction gives observations with maximal normalized causal-learning value but zero target licensing, and observations with zero causal-learning value but complete target licensing. RACH-style learning and CED-style reporting objectives can therefore rank equal-cost observations in opposite order.
+
+### TU-3 — representation
+
+A raw representation is loss-faithful exactly when its declared loss-response signature factors through the representation projection. Arbitrarily many nuisance coordinates can inflate simulator state without changing the loss quotient; one hidden target-relevant coordinate is enough to break the projection.
+
+### TU-4 — warning
+
+The warning-evaluation quotient preserves both loss and warning responses and therefore refines the loss-only quotient. Equality holds only when warning response is constant within loss-state classes. Warning portability across domains requires a further explicit cross-state commutation condition.
+
+These modules currently function mainly as **type-safe composition results**. Their elementary finite substrates overlap established mathematics; `theouni` does not yet claim that TU-1–4 are standalone mathematical novelties independent of prior art.
 
 ## Boundary to empirical ecology
 
-Species, islands, floral polymorphisms, SDM methods, visit cameras, and other concrete research programmes enter only through typed projections such as
+A concrete empirical object does not become a state coordinate because it is plausible, proximal, or fashionable.
+
+Empirical projects enter only through a typed projection of the form
 
 ```text
 empirical system
-    -> model-world universe
+    -> empirical unit / time / cohort
+    -> model-world or candidate-world universe
     -> scientific contract
-    -> observation/reliability map
+    -> observation / reliability model
     -> target
+    -> external or held-out adequacy test
+    -> claim ceiling
 ```
 
-with explicit claim ceilings. Their role is to instantiate, test, falsify, or expose missing coordinates in the theory universe.
+This later layer is where thistles, island syndromes, flower-colour polymorphism, trait construction, SDM-derived sampling methods, visit cameras, and other concrete programmes will be connected.
 
 ## Current mathematical frontier
 
-The next theory results should strengthen cross-layer composition rather than add more relabelings.
+The next development should not simply add TU-5 because a label is available. It should close one of the genuinely open bridges:
 
-1. **TU-1F — carrier-changing revision:** revision through replacement relations/common lifts and lift-invariance of revision debt.
-2. **TU-2D — learning/licensing coincidence:** necessary and sufficient conditions under which RACH ranking and CED reliability-qualified target ranking agree.
-3. **Representation-invariant loss state:** when different simulator representations induce the same loss-generating quotient.
-4. **Warning portability:** when warning ordering transports across different loss-state spaces without assuming one universal numerical threshold.
-5. **Empirical-state factorization:** when measured coordinates close a held-out future target rather than merely correlate with it.
+1. **Reality -> Model adequacy** — what warrants treating a mathematical world set as an adequate empirical representation?
+2. **Beyond finite exact state** — stochastic, continuous, approximate, tolerance-qualified and delayed-observation extensions.
+3. **Carrier-changing revision** — extend TU-1 through replacement relations/common lifts and identify invariant revision cost.
+4. **Learning/licensing coincidence** — characterize when causal-learning and risk-limited target objectives actually agree.
+5. **Empirical-state factorization** — when do measured coordinates make upstream origin/history/mechanism redundant for held-out future targets?
+6. **Empirical warning-state identification** — when do measurable natural coordinates identify enough of the warning-evaluation state for defensible portability claims?
+
+The most important next bridge for connecting this worldview to the concrete research universe is **empirical-state factorization**, but it remains outside the frozen v0.5 theorem claims.
 
 ## Validation
 
 ```text
 python theory/validate_core.py
+python theory/validate_theory_graph.py
 python theory/verify_tu1.py
 python theory/verify_tu2.py
+python theory/verify_tu3.py
+python theory/verify_tu4.py
 
 python scripts/build_curated_graph.py
 python scripts/build_graph.py
@@ -217,4 +244,4 @@ python scripts/write_provenance_manifest.py
 python scripts/validate_universe.py
 ```
 
-The theory validators check the theory-first type firewall and finite theorem modules. The universe validators check the broader provenance-preserving repository registry and generated graph.
+The theory validators check type consistency and finite theorem-module contracts. The wider universe validators check the provenance-preserving repository registry and generated Graphify view.
