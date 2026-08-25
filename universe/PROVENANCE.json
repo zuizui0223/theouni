@@ -1,6 +1,6 @@
 {
   "schema_version": "theouni-provenance.v1",
-  "generated_at": "2026-08-25T08:12:00+00:00",
+  "generated_at": "2026-08-25T08:20:00+00:00",
   "repository_role": "theory-first core plus meta-registry; no transfer of source scientific ownership",
   "registry_version": "zuizui0223-research-universe/1.2",
   "repository_count": 24,
@@ -38,8 +38,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6396,
-      "sha256": "cc8ea60b87bc30b2d42c88d143ce7749d23a607d3ecfd72c1d3e5573d639c70f"
+      "bytes": 8850,
+      "sha256": "b6b108afa63f4d4c2440c07788a83bd1e1deedb300fe0bb2d894938ca267cd4f"
     },
     {
       "path": "universe/ARCHITECTURE.md",
