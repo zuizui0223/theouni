@@ -1,0 +1,85 @@
+{
+  "schema_version": "theouni-theorem-graph.v0.5",
+  "status": "frozen_dependency_graph",
+  "orientation": "prerequisite_to_dependent",
+  "nodes": [
+    {"id": "axiom:A0-A3", "type": "constitutional_axiom_group", "label": "Reality / World / Contract / Safe forgetting", "owner": "repo:theouni", "status": "normative"},
+    {"id": "axiom:A4-A6", "type": "constitutional_axiom_group", "label": "Evidence / Report / Set-valued causality", "owner": "repo:theouni", "status": "normative"},
+    {"id": "axiom:A7-A8", "type": "constitutional_axiom_group", "label": "Revision and typed scientific utility", "owner": "repo:theouni", "status": "normative"},
+    {"id": "axiom:A9-A12", "type": "constitutional_axiom_group", "label": "Representation / Warning / Empirical admission", "owner": "repo:theouni", "status": "normative"},
+
+    {"id": "source:crest", "type": "source_theorem_program", "label": "CREST required-state substrate", "owner": "repo:crest", "status": "source_owned"},
+    {"id": "source:ccoc", "type": "source_theorem_program", "label": "CCOC future obstruction", "owner": "repo:ccoc", "status": "source_owned"},
+    {"id": "source:mltr", "type": "source_theorem_program", "label": "MLTR history transport / repair", "owner": "repo:mltr", "status": "source_owned"},
+    {"id": "source:mrm", "type": "source_theorem_program", "label": "MRM mechanism-robust state/law", "owner": "repo:mrm", "status": "source_owned"},
+    {"id": "source:ced", "type": "source_theorem_program", "label": "CED evidence / reportability", "owner": "repo:ced", "status": "source_owned"},
+    {"id": "source:rach", "type": "source_theorem_program", "label": "RACH causal admissibility / NOV", "owner": "repo:microdonta", "status": "source_owned"},
+    {"id": "source:egc", "type": "source_theorem_program", "label": "Eco-genetic dynamics / simulator-state boundary", "owner": "repo:eco-genetic-criticality", "status": "source_owned"},
+    {"id": "source:egw", "type": "source_theorem_program", "label": "Conditional warning / empirical partial-state programme", "owner": "repo:eco-genetic-warning-extensions", "status": "source_owned"},
+
+    {"id": "concept:RequiredState", "type": "canonical_type", "label": "RequiredState", "owner": "repo:crest", "status": "core"},
+    {"id": "concept:EvidenceClass", "type": "canonical_type", "label": "EvidenceClass", "owner": "repo:ced", "status": "core"},
+    {"id": "concept:AdmissibleCausalSet", "type": "canonical_type", "label": "AdmissibleCausalSet", "owner": "repo:microdonta", "status": "core"},
+    {"id": "concept:StoredState", "type": "canonical_type", "label": "StoredStateRepresentation", "owner": "repo:theouni", "status": "core"},
+    {"id": "concept:LossGeneratingState", "type": "canonical_type", "label": "LossGeneratingState", "owner": "repo:theouni", "status": "core"},
+    {"id": "concept:WarningEvaluationState", "type": "canonical_type", "label": "WarningEvaluationState", "owner": "repo:theouni", "status": "core"},
+
+    {"id": "theorem:TU-1", "type": "theouni_theorem_module", "label": "Contract revision after compression", "owner": "repo:theouni", "status": "finite_exact_same_carrier"},
+    {"id": "theorem:TU-2", "type": "theouni_theorem_module", "label": "Learning versus licensing", "owner": "repo:theouni", "status": "finite_exact_bridge_firewall"},
+    {"id": "theorem:TU-3", "type": "theouni_theorem_module", "label": "Loss-state representation invariance", "owner": "repo:theouni", "status": "finite_exact_representation_firewall"},
+    {"id": "theorem:TU-4", "type": "theouni_theorem_module", "label": "Warning evaluation state and portability", "owner": "repo:theouni", "status": "finite_exact_warning_firewall"},
+
+    {"id": "open:RealityModelAdequacy", "type": "open_problem", "label": "Reality-to-model adequacy", "owner": "repo:theouni", "status": "open"},
+    {"id": "open:BeyondFiniteExact", "type": "open_problem", "label": "Stochastic / continuous / approximate state theory", "owner": "repo:theouni", "status": "open"},
+    {"id": "open:CarrierChangingRevision", "type": "open_problem", "label": "Carrier-changing revision", "owner": "repo:theouni", "status": "open"},
+    {"id": "open:LearningLicensingCoincidence", "type": "open_problem", "label": "Learning/licensing coincidence theorem", "owner": "repo:theouni", "status": "open"},
+    {"id": "open:EmpiricalStateDiscovery", "type": "open_problem", "label": "Out-of-sample empirical-state factorization", "owner": "repo:theouni", "status": "open"}
+  ],
+  "edges": [
+    {"source": "axiom:A0-A3", "target": "source:crest", "relation": "frames"},
+    {"source": "source:crest", "target": "concept:RequiredState", "relation": "constructs"},
+    {"source": "source:ccoc", "target": "concept:RequiredState", "relation": "future_obstruction_input"},
+    {"source": "source:mltr", "target": "concept:RequiredState", "relation": "history_obstruction_input"},
+    {"source": "source:mrm", "target": "concept:RequiredState", "relation": "mechanism_obstruction_input"},
+
+    {"source": "axiom:A4-A6", "target": "source:ced", "relation": "frames"},
+    {"source": "source:ced", "target": "concept:EvidenceClass", "relation": "constructs"},
+    {"source": "axiom:A4-A6", "target": "source:rach", "relation": "frames"},
+    {"source": "source:rach", "target": "concept:AdmissibleCausalSet", "relation": "constructs"},
+
+    {"source": "concept:RequiredState", "target": "concept:StoredState", "relation": "may_be_stored_as"},
+    {"source": "axiom:A7-A8", "target": "theorem:TU-1", "relation": "frames"},
+    {"source": "concept:StoredState", "target": "theorem:TU-1", "relation": "input"},
+    {"source": "concept:RequiredState", "target": "theorem:TU-1", "relation": "revised_target_input"},
+
+    {"source": "axiom:A7-A8", "target": "theorem:TU-2", "relation": "frames"},
+    {"source": "concept:EvidenceClass", "target": "theorem:TU-2", "relation": "licensing_input"},
+    {"source": "concept:AdmissibleCausalSet", "target": "theorem:TU-2", "relation": "learning_input"},
+    {"source": "source:ced", "target": "theorem:TU-2", "relation": "source_semantics"},
+    {"source": "source:rach", "target": "theorem:TU-2", "relation": "source_semantics"},
+
+    {"source": "axiom:A9-A12", "target": "source:egc", "relation": "frames"},
+    {"source": "source:egc", "target": "theorem:TU-3", "relation": "motivating_representation_boundary"},
+    {"source": "concept:RequiredState", "target": "theorem:TU-3", "relation": "quotient_discipline"},
+    {"source": "theorem:TU-3", "target": "concept:LossGeneratingState", "relation": "formalizes"},
+
+    {"source": "axiom:A9-A12", "target": "source:egw", "relation": "frames"},
+    {"source": "source:egw", "target": "theorem:TU-4", "relation": "motivating_warning_boundary"},
+    {"source": "concept:LossGeneratingState", "target": "theorem:TU-4", "relation": "conditioning_input"},
+    {"source": "theorem:TU-3", "target": "theorem:TU-4", "relation": "target_response_quotient_discipline"},
+    {"source": "theorem:TU-4", "target": "concept:WarningEvaluationState", "relation": "formalizes"},
+
+    {"source": "axiom:A0-A3", "target": "open:RealityModelAdequacy", "relation": "leaves_open"},
+    {"source": "source:crest", "target": "open:BeyondFiniteExact", "relation": "leaves_open"},
+    {"source": "theorem:TU-1", "target": "open:CarrierChangingRevision", "relation": "leaves_open"},
+    {"source": "theorem:TU-2", "target": "open:LearningLicensingCoincidence", "relation": "leaves_open"},
+    {"source": "axiom:A9-A12", "target": "open:EmpiricalStateDiscovery", "relation": "requires_future_bridge"}
+  ],
+  "forbidden_inferences": [
+    "source theorem ownership does not transfer to theouni through graph edges",
+    "graph reachability does not establish a scientific theorem",
+    "a motivating source result is not a proof of a theouni theorem",
+    "an open-problem node must not be rendered as established",
+    "TU-1 through TU-4 do not establish empirical adequacy of any natural state"
+  ]
+}
