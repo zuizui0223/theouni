@@ -1,106 +1,165 @@
 # Theoretical Universe / 理論宇宙
 
-`theouni` は、`zuizui0223` の研究群を一つの理論宇宙として読むための
-**meta-registry** です。各リポジトリの理論・コード・データ・証拠をここへ
-移管するのではなく、それぞれの所有境界を保ったまま、ontology、contract、
-claim、evidence、non-claim と bridge を横断的に索引します。
+`theouni` has two deliberately separate layers.
 
-中心命題は次です。
+1. **Theory Universe** — the theory-first ontology and mathematics of worlds, states, evidence, learning, revision, dynamics, and warning.
+2. **Portfolio Registry** — the provenance-preserving map of the wider repository ecosystem and its typed bridges.
 
-> 生態学的 state とは自然の瞬間像そのものではない。時間的に厚い生態学的
-> world から、未来・履歴・機構・証拠・学習・意思決定に必要な差異だけを残す、
-> 科学的に許された圧縮である。
+The theory layer comes first. Concrete species, island syndromes, SDMs, sensors, and empirical workflows do not define the core theory; they are projected into it later through explicit contracts.
+
+## Central programme
+
+> **What may science safely forget, and what must be retained so that later scientific responsibilities remain revisable?**
+
+The current worldview is:
+
+- ecological reality is temporally extended and is not itself a `State`;
+- mathematics acts on declared `ModelWorld`s rather than directly on reality;
+- a `RequiredState` is a contract-relative quotient of model worlds;
+- ecological laws are effective laws on adequate quotients;
+- `EvidenceClass` is epistemic and is not the same object as `RequiredState`;
+- causal uncertainty remains set-valued until discriminating evidence exists;
+- warning validity is conditional on a declared loss-generating state;
+- a state that was adequate for one contract can become unrevisable after later responsibilities require distinctions that were previously forgotten.
 
 ```mermaid
 flowchart TD
-    W[Temporally extended ecological worlds] --> C[Scientific contract]
+    R[Ecological reality] -->|model / measurement bridge| W[Model-world universe]
+    W --> C[Scientific contract]
     C --> G[Future / Gamma]
     C --> H[History / H]
     C --> M[Mechanism / Theta]
-    C --> E[Evidence / D]
+    C --> D[Evidence / D]
     C --> T[Target / T]
 
     G --> CCOC[CCOC]
     H --> MLTR[MLTR]
     M --> MRM[MRM]
-    CCOC --> J[Least-information adequate state J]
+    CCOC --> J[Required state]
     MLTR --> J
     MRM --> J
     J --> CED[CED evidence licensing]
-    E --> CED
+    D --> CED
     T --> CED
 
-    OBS[Observed pattern] --> RACH[microdonta / RACH]
-    RACH --> NOV[Next-observation learning]
-    NOV --> E
-
-    DYN[Eco-genetic dynamics] --> LS[Loss-generating state]
+    CED --> RACH[RACH causal admissibility / next observation]
+    W --> DYN[Eco-genetic dynamics]
+    DYN --> LS[Loss-generating state]
     LS --> WARN[Conditional warning]
-    LS --> EMP[Empirical partial-state search]
-    EMP --> E
+
+    J --> OLD[Stored state under old contract]
+    OLD --> REV[TU-1 contract revision]
+    REV --> NEW[Revised required state]
 ```
 
-## まず見るもの
+## Start here
 
-- [理論宇宙の俯瞰文書](universe/ARCHITECTURE.md)
-- [machine-readable registry](universe/registry.json)
-- [interactive Graphify map](graphify-out/graph.html)
-- [Graphify audit report](graphify-out/GRAPH_REPORT.md)
-- [EcoGeneticState → CREST bounded bridge](universe/bridges/eco_genetic_crest_bridge_registry.json)
-- [provenance manifest](universe/PROVENANCE.json)
+### 1. Theory Universe
 
-## 宇宙の層
+- [`theory/README.md`](theory/README.md) — canonical theory-world statement.
+- [`theory/core_universe.json`](theory/core_universe.json) — machine-readable type system.
+- [`theory/CONSISTENCY_AUDIT.md`](theory/CONSISTENCY_AUDIT.md) — ownership and anti-collapse audit.
+- [`theory/TU1_CONTRACT_REVISION.md`](theory/TU1_CONTRACT_REVISION.md) — first `theouni` theorem module: revision after compression.
+- [`theory/tu1_registry.json`](theory/tu1_registry.json) — TU-1 claim/evidence ceiling.
+- [`theory/contract_revision.py`](theory/contract_revision.py) and [`theory/verify_tu1.py`](theory/verify_tu1.py) — executable finite construction.
 
-| 層 | 中心問い | 主な所有リポジトリ |
-|---|---|---|
-| World / State | 何を同じ state と呼んでよいか | `crest` |
-| Future | 将来を開くと現在の圧縮は壊れるか | `ccoc` |
-| History | 置換後も意味や法則を運べるか | `mltr` |
-| Mechanism | 候補機構を残して同じ law を言えるか | `mrm` |
-| Evidence | 必要な区別を証拠が識別・報告できるか | `ced` |
-| Learning | 原因候補をどう残し、次に何を測るか | `microdonta` / RACH |
-| Dynamics | state と機能・遺伝・分断がどう変化するか | `eco-genetic-criticality` |
-| Warning | どの loss-generating state 内で warning が再現するか | `eco-genetic-warning-extensions` |
-| Forecast / Observation | world set、候補地、観測過程をどう接続するか | `eog`, `sdmr`, `acsp`, `pollipi`, `insepi` |
-| Empirical systems | 理論 contract をどこで測定・反証するか | `island`, `izu-core`, `azami`, `EAzami`, `chun` ほか |
+### 2. Portfolio Registry
 
-## 最重要の区別
+- [`universe/ARCHITECTURE.md`](universe/ARCHITECTURE.md) — 24-repository architecture.
+- [`universe/registry.json`](universe/registry.json) — machine-readable repository/claim registry.
+- [`graphify-out/graph.html`](graphify-out/graph.html) — interactive Graphify map.
+- [`universe/bridges/eco_genetic_crest_bridge_registry.json`](universe/bridges/eco_genetic_crest_bridge_registry.json) — bounded EcoGenetic -> CREST bridge.
+- [`universe/PROVENANCE.json`](universe/PROVENANCE.json) — provenance manifest.
+
+## Core theoretical ownership
+
+| Layer | Primary owner |
+|---|---|
+| World / contract / least adequate state | `crest` |
+| Future obstruction | `ccoc` |
+| Historical-semantic transport / repair | `mltr` |
+| Mechanism-robust state / law | `mrm` |
+| Evidence / reportability | `ced` |
+| Causal admissibility / next observation | `microdonta` / RACH |
+| Eco-genetic dynamics / simulator-state boundary | `eco-genetic-criticality` |
+| Loss-state recovery / conditional warning | `eco-genetic-warning-extensions` |
+| Cross-repository type system | `theouni` |
+| Contract revision after compression | `theouni` / TU-1 |
+
+## Canonical distinctions
 
 ```text
-required state  !=  identified state  !=  reportable target
+Reality
+!= ModelWorld
+!= Snapshot
+!= RequiredState
+!= EvidenceClass
+!= AdmissibleCausalSet
+!= Report
 ```
 
-- `CompleteSimulatorState` は、宣言された simulator closure で十分でも、
-  最小または自然な state とは限りません。
-- `EmpiricalPartialState` は、有望な測定変数の集合だけでは state になりません。
-  held-out future endpoint に対する情報を獲得して初めて候補になります。
-- `ObservabilityState`、`EOG LatentWorldState`、`CREST RequiredState` は別の型です。
-- Graphify の edge は探索経路であり、科学的主張の独立した証明ではありません。
-
-## 現在の bridge 状態
-
-最初の実装済み bridge は `EcoGeneticState → CREST Contract` です。aligned と
-anti-aligned の二世界 carrier では、粗い marginal summary が一致しても exact
-next-interaction response が異なるため、CREST quotient は二つの required-state
-block に分かれます。これは bounded counterexample であり、全 simulator または
-warning domain の最小 quotient を確定するものではありません。
-
-その他の RACH→MRM→CED、PolliPi/InsePi→CED、SDMR→EOG→ACSP、
-EAzami/chun→MLTR bridge は、registry に未実装または schema-missing として残します。
-
-## 所有と更新の原則
-
-1. 各科学的 claim と evidence の正本は元リポジトリに残す。
-2. `theouni` は snapshot SHA、source path、claim ceiling、explicit non-claim を記録する。
-3. 未実装 bridge を実装済みに見せない。
-4. frozen / no-peek validation を再調整、再ラベル、開発データ化しない。
-5. graph centrality を theorem、empirical identification、publication evidence の代用にしない。
-
-俯瞰図の再生成と検証は次で行えます。
+and
 
 ```text
+CompleteSimulatorState != Minimal/Natural RequiredState
+WarningStatistic != LossGeneratingState
+StoredStateRepresentation != RevisedRequiredState
+```
+
+unless an explicit theorem or typed bridge establishes the needed factorization.
+
+The long-standing central distinction remains:
+
+```text
+required state != identified state != reportable target
+```
+
+TU-1 adds a temporal distinction:
+
+```text
+state adequate for contract C0
+    does not imply
+state revisable for later contract C1
+```
+
+## TU-1 status
+
+TU-1 deliberately does **not** re-claim CREST-J1's common-lift closure result. CREST already proves that noncommuting refinement audits converge under fair iteration to one least joint state on a declared finite common carrier.
+
+TU-1 instead asks what happens after an old state has already been stored.
+
+For old partition `P` and revised required partition `Q`:
+
+- state-only revision succeeds iff every `P` block lies inside one `Q` block;
+- otherwise the exact minimum auxiliary alphabet is the maximum number of `Q` blocks hidden inside any single `P` block;
+- worst-case local revision debt can be arbitrarily large while global average partition-refinement debt is arbitrarily small.
+
+The finite coding/factorization substrate is elementary and overlaps classical zero-error side-information ideas. No standalone information-theory novelty claim is made without further prior-art audit.
+
+## Boundary to empirical ecology
+
+Species, islands, floral polymorphisms, SDM methods, visit cameras, and other concrete research programmes enter only through typed projections such as
+
+```text
+empirical system
+    -> model-world universe
+    -> scientific contract
+    -> observation/reliability map
+    -> target
+```
+
+with explicit claim ceilings. Their role is to instantiate, test, falsify, or expose missing coordinates in the theory universe.
+
+## Validation
+
+```text
+python theory/validate_core.py
+python theory/verify_tu1.py
+
 python scripts/build_curated_graph.py
 python scripts/build_graph.py
 python scripts/write_provenance_manifest.py
 python scripts/validate_universe.py
 ```
+
+The theory validators check the theory-first type firewall. The universe validators check the broader provenance-preserving repository registry and generated graph.
