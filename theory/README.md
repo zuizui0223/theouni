@@ -1,65 +1,48 @@
-# Theory Universe v0.3 — worlds, states, evidence, learning, revision, and warning
+# Theory Universe v0.5 — a contract-relative ecology of worlds, states, evidence, learning, revision, loss, and warning
 
-This directory is the **theory-first core** of `theouni`. Species systems, island syndromes, floral traits, SDMs, camera systems, and field protocols are deliberately excluded until the abstract universe is internally coherent.
+This directory is the **theory-first core** of `theouni`.
 
-The programme question is now:
+Concrete species, island syndromes, floral polymorphisms, SDMs, cameras, sensors, and field protocols are deliberately excluded from the core. They enter later only through typed empirical projection contracts.
 
-> **What may science safely forget, what must remain revisable, and what exactly is the scientific object being learned or licensed?**
+The canonical governing document is [`CONSTITUTION.md`](CONSTITUTION.md).
 
-## 1. Constitutional commitments
+The programme question is:
 
-1. **Nature is not a state.** Ecological reality is temporally extended.
-2. **A model world is not reality.** Mathematics operates on an admissible world universe, not directly on nature.
-3. **A state is a contract-relative quotient of worlds.** State identity is defined by what may safely be forgotten for a declared scientific responsibility.
-4. **Evidence does not create ontic distinctions.** It determines which required distinctions are identified and which reports are licensed.
-5. **Causal uncertainty remains set-valued until discriminating evidence exists.**
-6. **Warning is conditional on a loss-generating state.**
-7. **Scientific forgetting can be revision-irreversible.** A distinction removed by an old stored state cannot be recreated from that state label alone when a later contract requires it.
-8. **Learning value is typed.** Information gained about causal explanation is not the same scientific quantity as evidence that licenses a requested target.
+> **What may science safely forget, what must remain revisable, and which distinctions are required by the scientific question actually being asked?**
 
-## 2. Reality, worlds, and snapshots
+---
 
-Let ecological reality be
+## 1. One universe, five layers
 
-\[
-\mathfrak R.
-\]
+Theory Universe v0.5 separates:
 
-Scientific mathematics acts on a model-world universe
+1. **Reality** — temporally extended ecological reality \(\mathfrak R\).
+2. **Model worlds** — a declared mathematical universe \(\Omega\).
+3. **Representation** — contract-relative quotients such as `RequiredState`, `LossGeneratingState`, and `WarningEvaluationState`.
+4. **Epistemology** — `EvidenceClass`, reportability, `AdmissibleCausalSet`, and learning.
+5. **Cross-time / cross-representation operations** — revision after compression, representation change, and warning portability.
+
+The first firewall is
 
 \[
-\Omega,
+\boxed{
+\text{Reality}\neq\text{ModelWorld}\neq\text{Snapshot}\neq\text{RequiredState}.
+}
 \]
 
-with an explicit modelling/measurement bridge
+A theorem on a model-world universe is not automatically a theorem about nature.
 
-\[
-\Pi_V:\mathfrak R\dashrightarrow\mathcal P(\Omega).
-\]
+---
 
-Thus
+## 2. World before state
 
-\[
-\boxed{\mathfrak R\neq\Omega.}
-\]
-
-A model world can be written schematically as
+A temporally extended model world can be written schematically as
 
 \[
 \omega_t=(h_{\le t},x_t,\theta_t,K_t),
 \]
 
-where history, present configuration, retained mechanism, and future-response structure may all matter.
-
-The foundational firewall is
-
-\[
-\boxed{\text{Snapshot}\neq\text{World}\neq\text{RequiredState}.}
-\]
-
-Snapshot sufficiency is a theorem/question, never an assumption.
-
-## 3. Scientific contract and required state
+where history, present configuration, retained mechanism, and future-response structure may matter.
 
 A scientific contract is
 
@@ -67,387 +50,460 @@ A scientific contract is
 \mathcal C=(\Gamma,\mathcal H,\Theta,\mathcal D;T),
 \]
 
-where:
+with future, historical, mechanism, evidence, and target responsibilities.
 
-- \(\Gamma\): future/intervention obligations;
-- \(\mathcal H\): inherited meaning and history that must remain coherent;
-- \(\Theta\): retained mechanism alternatives;
-- \(\mathcal D\): observation, experiment, reliability, and calibration obligations;
-- \(T\): requested report, forecast, decision, or endpoint.
-
-Two worlds are equivalent when they are scientifically interchangeable for the declared contract:
+Two worlds may be merged only when they are scientifically interchangeable for the declared contract. The required state is therefore
 
 \[
-\omega\sim_{\mathcal C}\omega'.
+\boxed{
+S_{\mathcal C}=\Omega/\sim_{\mathcal C}.
+}
 \]
 
-The required state space is
+The state is the **maximal lawful forgetting** compatible with that contract.
 
-\[
-\boxed{S_{\mathcal C}=\Omega/\sim_{\mathcal C}.}
-\]
+On a declared finite common carrier, CREST owns the least-information adequate-state construction. `theouni` does not re-own that theorem.
 
-On one declared finite common carrier, CREST supplies the unique least-information adequate partition via the common fixed point of the declared refinement closures.
+---
 
-The state is therefore the maximal **lawful forgetting** compatible with the contract.
+## 3. Why a present merge can fail
 
-## 4. Three structural reasons a present merge can fail
+Three source theorem programmes provide distinct structural obstructions.
 
-### Future — CCOC
+| Contract responsibility | Source | Failure mode |
+|---|---|---|
+| future / intervention \(\Gamma\) | `ccoc` | a newly legal future exposes a distinction erased by an old merge |
+| history / inherited meaning \(\mathcal H\) | `mltr` | replacement or turnover makes an inherited state label non-transportable without repair/history |
+| retained mechanisms \(\Theta\) | `mrm` | hidden mechanism differences produce different required responses |
 
-Opening or changing \(\Gamma\) can expose future-response differences hidden by an old present-state merge.
+These are not rival definitions of ecological state. They are three ways that forgetting can become scientifically unsafe.
 
-### History — MLTR
+---
 
-Replacement, turnover, extinction, recolonisation, or rewiring can invalidate inherited state meaning. Exact transport may fail and require repair or history augmentation.
+## 4. Ecological laws are quotient laws
 
-### Mechanism — MRM
+A coarse ecological law is an effective response law on an adequate quotient.
 
-Worlds with the same visible present configuration may retain response mechanisms that disagree under a required intervention. Only response-relevant mechanism differences must survive the quotient.
-
-These are not rival definitions of state. They are three ways an attempted forgetting can become scientifically unsafe.
-
-## 5. Ecological laws as quotient laws
-
-An ecological law is an effective law on an adequate quotient. For actions \(A\),
+For actions \(A\),
 
 \[
 L:S_{\mathcal C}\times A\to S_{\mathcal C}
 \]
 
-is well-defined only when all worlds merged by the state agree on the contract-relevant response.
+is well-defined only if all worlds merged into one state agree on the contract-relevant response.
 
-A law can therefore cease to transport after the contract or ecological structure changes without having been false in its original domain: the old quotient may simply cease to be adequate.
+A law may therefore stop transporting after a contract or ecological structure changes because the old quotient ceases to be adequate, even though the law was valid in its original domain.
 
-## 6. Evidence, identification, and reporting — CED
+---
 
-An observation record \(y\) defines an evidence-compatible set
+## 5. Evidence is not state — CED layer
 
-\[
-E(y)=\{\omega\in\Omega:\omega\text{ is compatible with }y\text{ under }\mathcal D\}.
-\]
-
-This is epistemic, not ontic:
+An observation record \(y\) determines a reliability-qualified compatible-world class
 
 \[
-\boxed{\text{EvidenceClass}\neq\text{RequiredState}.}
+E(y)=\{\omega\in\Omega:\omega\text{ remains compatible with }y\}.
 \]
 
-Hence
+This is an epistemic object:
 
 \[
-\boxed{\text{required state}\neq\text{identified state}\neq\text{reportable target}.}
+\boxed{
+\text{EvidenceClass}\neq\text{RequiredState}.
+}
 \]
 
-For target \(T\),
+The canonical separation is
 
 \[
-R_T(y)=\{T(\omega):\omega\in E(y)\}.
+\boxed{
+\text{required state}\neq\text{identified state}\neq\text{reportable target}.
+}
 \]
 
-A deterministic target can be licensed even when the full required state remains unresolved.
+A target can be deterministic on an evidence class even when the full required state remains unresolved. CED owns the finite evidence, failure, calibration, risk, and reportability layer.
 
-## 7. Causal admissibility and learning — RACH
+---
 
-Let a declared causal programme \(m\) support model worlds \(\Omega_m\). The admissible causal set is
+## 6. Causal uncertainty is set-valued — RACH layer
+
+For declared causal programmes \(m\) supporting world subsets \(\Omega_m\), define
 
 \[
 A(y)=\{m:\Omega_m\cap E(y)\neq\varnothing\}.
 \]
 
-It is not a best-model winner. RACH keeps all compatible programmes and designs observations expected to reduce unresolved causal equivalence.
+This is the `AdmissibleCausalSet`, not a best-model winner.
 
-For verified candidate outcome partitions, the current RACH publication quantity is schematically
-
-\[
-\operatorname{NOV}(Q)=\frac{I(S;Q\mid A_\epsilon)}{K},
-\]
-
-where `S` is the retained causal/switch state and `K` is its declared normalization/cost factor.
-
-Learning is therefore
+RACH keeps compatible causal programmes and designs next observations that reduce unresolved causal ambiguity. For verified candidate outcome partitions, its publication-facing information quantity is schematically
 
 \[
-(E_t,A_t)\xrightarrow{\text{new observation}}(E_{t+1},A_{t+1}),
+\operatorname{NOV}(Q)=\frac{I(S;Q\mid A_\epsilon)}{K}.
 \]
 
-not compulsory collapse to one explanation.
+The fact that an observation is valuable for causal learning does not by itself say whether a requested ecological target becomes reportable; TU-2 formalizes that firewall.
 
-## 8. Dynamics, simulator state, and loss state
+---
 
-Model worlds evolve under a declared transition law
+## 7. Dynamics, simulator state, and target-specific state
+
+Model worlds evolve under a declared dynamics law
 
 \[
 \omega_{t+1}\sim K(\cdot\mid\omega_t,a_t).
 \]
 
-A complete simulator state can be sufficient under one explicit Markov closure without being proved minimal, natural, or empirically measurable.
+A `CompleteSimulatorState` can be future-sufficient under one explicit simulator closure without being minimal, natural, or empirically observable.
 
-For a declared future loss endpoint \(L\), construct a loss contract \(\mathcal C_L\). Its required quotient
+For a declared target-response signature \(r\), worlds are target-equivalent when they have the same required response. Raw representation complexity is therefore separate from target-relevant state complexity.
 
-\[
-S_L=S_{\mathcal C_L}
-\]
+This separation is the basis of TU-3.
 
-is a **LossGeneratingState** when it is sufficient for the declared loss process in the domain under study.
+---
 
-Warning is then a conditional property such as
+# 8. `theouni` theorem modules
 
-\[
-\tau_G<\tau_L
-\]
+## TU-1 — Contract revision after compression
 
-within a frozen loss-generating state. A warning statistic is not itself the state.
+CREST asks what state is adequate while the full common carrier is still available. TU-1 asks what happens **after a previous state has already been stored**.
 
-## 9. TU-1 — contract revision after scientific forgetting
+Let \(P\) be the old stored-state partition and \(Q\) the revised required partition.
 
-CREST-J1 answers:
-
-> If all relevant world distinctions are still available on one common lift, what is the least state satisfying the joint contract?
-
-TU-1 asks a later question:
-
-> If an old contract has already been compressed to a stored state, can a revised required state be recovered from that stored label alone?
-
-Let \(P\) be the old stored partition and \(Q\) the revised required partition.
-
-### State-only revision
-
-There exists a recoding
+State-only revision exists iff
 
 \[
-q_Q=f\circ q_P
+q_Q=f\circ q_P.
 \]
 
-iff every old-state block lies inside one revised-state block.
+Equivalently, every old `P` block must lie inside one revised `Q` block.
 
-Thus a distinction already forgotten by \(P\) cannot be regenerated from the old state label alone when \(Q\) later requires it.
-
-### Exact revision side information
-
-For each old block \(B\), define
+If not, define
 
 \[
 r_B(P,Q)=|\{C\in Q:B\cap C\neq\varnothing\}|.
 \]
 
-Then the exact minimum auxiliary alphabet required for revision is
+The exact minimum idealized auxiliary alphabet is
 
 \[
-\boxed{K_{\rm rev}(P\to Q)=\max_B r_B(P,Q).}
+\boxed{
+K_{\rm rev}(P\to Q)=\max_B r_B(P,Q),
+}
 \]
 
-The idealized worst-case revision debt is
+with worst-case revision debt
 
 \[
 D_{\rm rev}=\log_2 K_{\rm rev}.
 \]
 
-The global average refinement debt satisfies
+A finite construction shows that worst-case local debt can be arbitrarily large while average refinement debt is arbitrarily small.
 
-\[
-D_{\rm avg}\le D_{\rm rev},
-\]
+**Interpretation:** scientific compression can be adequate today but unrevisable for a later scientific responsibility.
 
-and for every \(m\ge1\) and \(\varepsilon>0\) there are finite partitions with
+Source: [`TU1_CONTRACT_REVISION.md`](TU1_CONTRACT_REVISION.md).
 
-\[
-D_{\rm rev}=m,
-\qquad
-D_{\rm avg}<\varepsilon.
-\]
+---
 
-So a globally tiny update burden can hide an arbitrarily large local revisability problem in one rare old state.
+## TU-2 — Causal learning is not target licensing
 
-Full source: `TU1_CONTRACT_REVISION.md`.
+RACH and CED assign value to different scientific objects.
 
-## 10. TU-2 — causal learning is not target licensing
-
-RACH and CED can both recommend observations, but they value different objects.
-
-TU-2 embeds both into one finite product world
+In a finite product universe
 
 \[
 \Omega=\{0,1\}^m\times\{0,1\},
 \]
 
-with causal state \(S\in\{0,1\}^m\) and independent report target \(T\in\{0,1\}\).
+let \(S\) be causal state and \(T\) an independent report target.
 
-Define experiment
+Experiments can be constructed with
 
 \[
-Q_{k,b}=
-\begin{cases}
-(S_1,\ldots,S_k), & b=0,\\
-(S_1,\ldots,S_k,T), & b=1.
-\end{cases}
+\operatorname{NOV}=1,\quad L_T=0,
 \]
 
-Then for every \(k\),
+and conversely
 
 \[
-I(S;Q_{k,0})=I(S;Q_{k,1})=k,
+\operatorname{NOV}=0,\quad L_T=1.
 \]
 
-but target licensing is opposite:
+Thus
 
 \[
-L_T(Q_{k,0})=0,
+\boxed{
+\text{CausalLearningValue}\neq\text{TargetLicensingStatus}.
+}
+\]
+
+Equal-cost experiments can be ranked in opposite order by causal-learning and target-report objectives.
+
+Source: [`TU2_LEARNING_LICENSING.md`](TU2_LEARNING_LICENSING.md).
+
+---
+
+## TU-3 — Loss-state representation invariance
+
+Let \(r_L\) be the declared loss-response signature. The loss-generating quotient is
+
+\[
+Q_L=\Omega/\!\sim_L,
 \qquad
-L_T(Q_{k,1})=1.
+\omega\sim_L\omega'\iff r_L(\omega)=r_L(\omega').
 \]
 
-Therefore the same causal-learning score can correspond to either no target resolution or complete target resolution.
-
-Two sharp endpoints are:
+For a representation projection \(\pi:X\to Z\), the coarse representation is loss-faithful iff
 
 \[
-Q_{m,0}:\quad \operatorname{NOV}=1,\ L_T=0,
+r_L=\bar r_L\circ\pi.
 \]
 
-and
+If this factorization holds, nuisance coordinates can make a simulator arbitrarily more detailed without increasing the loss-state quotient. If it fails, even one hidden coordinate can make the projection transition/loss-insufficient.
+
+Therefore
 
 \[
-Q_{0,1}:\quad \operatorname{NOV}=0,\ L_T=1.
+\boxed{
+\text{raw simulator-state complexity}\neq\text{loss-state complexity}.
+}
 \]
 
-Thus causal-learning and target-licensing objectives can rank equal-cost experiments in opposite order.
+Source: [`TU3_LOSS_STATE_INVARIANCE.md`](TU3_LOSS_STATE_INVARIANCE.md).
 
-This yields a new type firewall:
+---
+
+## TU-4 — Warning evaluation state and portability
+
+A loss-generating state need not determine warning behaviour.
+
+Let \(r_L\) be the loss response and \(r_G\) the warning response. Define the warning-evaluation quotient by equality of the joint signature
 
 \[
-\boxed{\text{CausalLearningValue}\neq\text{TargetLicensingStatus}.}
+(r_L,r_G).
 \]
 
-The construction is deliberately noiseless. CED's failure/calibration/risk architecture adds a further gate between nominal target separation and licensed reporting.
+Then
 
-Full source: `TU2_LEARNING_LICENSING.md`.
+\[
+\boxed{
+Q_{\rm loss}\preceq Q_{\rm warn}.
+}
+\]
 
-## 11. Canonical worldline
+Equality holds iff warning response factors through the loss state:
 
-### Ontic / dynamical
+\[
+r_G=\bar r_G\circ q_L.
+\]
+
+Thus two worlds can have the same loss future but different lead/tie/lag warning ordering and must then occupy different warning-evaluation states.
+
+Warning portability across domains is an additional commutation condition on a declared cross-state correspondence; within-state reproducibility does not imply portability.
+
+Source: [`TU4_WARNING_STATE_PORTABILITY.md`](TU4_WARNING_STATE_PORTABILITY.md).
+
+---
+
+## 9. Canonical state hierarchy
+
+The word `state` is qualified throughout cross-repository work.
 
 ```text
-Reality R
+ModelWorld
+   |
+   +--> RequiredState(C)
+   |
+   +--> CompleteSimulatorState       [model-specific sufficient representation]
+   |
+   +--> LossGeneratingState          [quotient for loss response]
+   |       |
+   |       `--> WarningEvaluationState [joint loss + warning response]
+   |
+   `--> EvidenceClass                [NOT an ontic state; epistemic compatible set]
+```
+
+In particular,
+
+\[
+\boxed{
+\text{CompleteSimulatorState}
+\neq
+\text{LossGeneratingState}
+\preceq
+\text{WarningEvaluationState}
+}
+\]
+
+unless explicit factorization/minimality conditions establish equality.
+
+---
+
+## 10. Canonical worldline
+
+### Ontic / representational
+
+```text
+Reality
   |
-  | model/measurement bridge
+  | model / measurement bridge
   v
-ModelWorldUniverse Omega
+ModelWorldUniverse
   |
-  v
-World omega_t ---- dynamics ----> World omega_t+1
+  +--> dynamics through time
   |
-  | ScientificContract C
-  v
-RequiredState q_C(omega_t)
+  `--> ScientificContract
+          |
+          v
+       RequiredState
 ```
 
 ### Epistemic / learning
 
 ```text
 World
-  |
-  v
-ObservationRecord
-  |
-  v
-EvidenceClass
-  |\
-  | +--> licensed Report / TargetLicensingStatus
-  v
-AdmissibleCausalSet
-  |
-  | candidate observation
-  v
-CausalLearningValue
-  |
-  v
-new record -> refined evidence / causal set
+  -> ObservationRecord
+  -> EvidenceClass
+       |\
+       | `--> TargetLicensingStatus / Report
+       `----> AdmissibleCausalSet
+                  |
+                  `--> CausalLearningValue / next observation
 ```
 
-### Scientific revision
+### Revision
 
 ```text
-full worlds
-  -> old contract C0
-  -> stored state P
-  -> contract changes
-  -> full-world revised state Q
-  -> TU-1 revisability test
-       |-- state-only recoding
-       `-- auxiliary revision information / reopen world description
+RequiredState under C0
+  -> StoredStateRepresentation
+  -> contract changes to C1
+  -> TU-1 factorization / revision-debt audit
 ```
 
-## 12. Type firewall
+### Loss and warning
 
-The following collapses are forbidden without an explicit bridge/theorem:
+```text
+World dynamics
+  -> declared LossResponseSignature
+  -> TU-3 LossGeneratingState
+       |
+       + declared WarningResponseSignature
+       v
+     TU-4 WarningEvaluationState
+       |
+       +--> within-state WarningValidity
+       `--> cross-state WarningPortability audit
+```
+
+---
+
+## 11. Type firewall
+
+Without an explicit bridge/theorem, the following collapses are forbidden:
 
 | Forbidden collapse | Why |
 |---|---|
-| `Reality = ModelWorld` | mathematical validity is not empirical truth |
+| `Reality = ModelWorld` | model theorem is not empirical truth |
 | `Snapshot = RequiredState` | sufficiency must be demonstrated |
-| `CompleteSimulatorState = RequiredState` | sufficiency does not imply minimality/naturality |
-| `EvidenceClass = RequiredState` | evidence resolution and structural adequacy differ |
-| `Mechanism = RequiredState` | only response-relevant mechanism differences matter |
-| `Proxy = StateCoordinate` | calibration or predictive adequacy is required |
-| `Target = RequiredState` | target-only reporting may be possible |
-| `AdmissibleCausalSet = CausalWinner` | unresolved multiplicity must remain |
-| `WarningStatistic = LossGeneratingState` | warning is a conditional relation |
-| `StoredState = RevisedRequiredState` | every contract change requires a TU-1 factorization check |
-| `RevisionSideInformation = EvidenceClass` | observability/reliability requires an evidence bridge |
-| `CausalLearningValue = TargetLicensingStatus` | TU-2 proves exact orthogonality in a finite witness family |
+| `CompleteSimulatorState = RequiredState` | sufficiency does not prove minimality/naturality |
+| `CompleteSimulatorState = LossGeneratingState` | target-relative quotient may be much coarser |
+| `EvidenceClass = RequiredState` | epistemic resolution differs from structural adequacy |
+| `AdmissibleCausalSet = CausalWinner` | unresolved causal multiplicity must remain |
+| `CausalLearningValue = TargetLicensingStatus` | TU-2 separates them exactly |
+| `StoredState = RevisedRequiredState` | TU-1 factorization is required after contract change |
+| `WarningStatistic = LossGeneratingState` | statistic is an observable coordinate, not a quotient |
+| `LossGeneratingState = WarningEvaluationState` | equality requires warning-response factorization |
+| `within-state warning replication = portability` | cross-state transport is an additional claim |
+| `biologically plausible proxy = StateCoordinate` | empirical adequacy must be earned |
 
-## 13. Current ownership
+---
 
-| Layer | Owner |
+## 12. Ownership
+
+| Layer | Primary owner |
 |---|---|
-| World / contract / required state | `crest` |
-| Future obstruction | `ccoc` |
-| History transport / repair | `mltr` |
-| Mechanism-robust state / law | `mrm` |
-| Evidence / reportability | `ced` |
-| Causal admissibility / next observation | `microdonta` / RACH |
-| Eco-genetic dynamics / simulator-state boundary | `eco-genetic-criticality` |
-| Loss-state recovery / conditional warning | `eco-genetic-warning-extensions` |
-| Cross-repository type system | `theouni` |
-| Contract revision after compression | `theouni` / TU-1 |
-| RACH/CED learning-licensing bridge firewall | `theouni` / TU-2 |
+| world / contract / required state | `crest` |
+| future obstruction | `ccoc` |
+| history transport / repair | `mltr` |
+| mechanism-robust state / law | `mrm` |
+| evidence / reportability | `ced` |
+| causal admissibility / NOV | `microdonta` / RACH |
+| eco-genetic dynamics / simulator-state boundary | `eco-genetic-criticality` |
+| warning-blind loss conditioning and empirical warning results | `eco-genetic-warning-extensions` |
+| cross-repository type system | `theouni` |
+| revision after compression | `theouni` / TU-1 |
+| learning/licensing firewall | `theouni` / TU-2 |
+| loss-state representation firewall | `theouni` / TU-3 |
+| warning-state/portability firewall | `theouni` / TU-4 |
 
-## 14. Theorem modules
+Source theorem/evidence ownership is never transferred merely because the objects appear in the same theory graph.
 
-| Module | Closed finite result | Main open extension |
+---
+
+## 13. Frozen dependency graph
+
+The machine-readable dependency DAG is [`theorem_graph.json`](theorem_graph.json).
+
+The normative constitution is [`CONSTITUTION.md`](CONSTITUTION.md).
+
+The dependency graph is intentionally directed from prerequisite to dependent and preserves open problems as explicit open nodes. Graph reachability is not itself scientific proof.
+
+---
+
+## 14. Current theorem modules and claim ceilings
+
+| Module | Closed finite result | Major non-claim / open extension |
 |---|---|---|
-| TU-1 | same-carrier revision criterion + exact revision debt + average/worst divergence | carrier-changing revision and lift invariance |
-| TU-2 | causal-learning/target-licensing orthogonality + policy reversal | coincidence theorem under target relevance + failure architecture |
+| TU-1 | same-carrier revision criterion + exact idealized revision debt + local/global divergence | carrier-changing revision; physical irreversibility; empirical measurement cost |
+| TU-2 | causal-learning/target-licensing orthogonality and policy reversal | reliability-aware coincidence theorem; generic active-learning novelty |
+| TU-3 | target-response factorization + representation-faithful loss quotient + nuisance inflation | recursive stochastic quotient dynamics; empirical natural-state minimality |
+| TU-4 | warning-state refinement/equality criterion + finite portability commutation | universal thresholds; natural cross-domain portability |
 
-Both modules use elementary finite substrates. Their immediate purpose is to make the theory universe logically typed; publication novelty requires separate prior-art audit.
+These modules currently serve primarily as **cross-layer type firewalls**. Their elementary finite mathematical substrates overlap established areas, so standalone mathematical novelty is not assumed.
 
-## 15. Remaining mathematical frontier
+---
 
-1. **Reality -> model adequacy:** when does a model-world projection earn empirical adequacy rather than compatibility only?
-2. **Beyond finite exact state:** stochastic, continuous, approximate, and delayed-observation versions.
-3. **Carrier-changing revision:** extend TU-1 through replacement relations/common lifts and test lift-invariance of revision debt.
-4. **Learning/licensing coincidence:** necessary and sufficient conditions under which RACH ranking and CED risk-limited target ranking agree.
-5. **Representation-invariant loss state:** when do different simulators induce the same loss-generating quotient?
-6. **Warning portability:** when can warning ordering transport across different loss-state spaces without a universal threshold?
-7. **Empirical state discovery:** formulate held-out state adequacy as a factorization problem rather than proxy accumulation.
+## 15. Remaining frontier
 
-## 16. Boundary to the empirical universe
+The next theory development should target gaps that genuinely connect layers rather than add more labels.
 
-No species, island syndrome, floral polymorphism, SDM method, visit camera, or field protocol defines the core types.
+1. **Reality -> model adequacy** — when does a model-world projection earn empirical adequacy rather than compatibility only?
+2. **Beyond finite exact** — stochastic, continuous, approximate, delayed-observation, and tolerance-qualified state construction.
+3. **Carrier-changing revision** — extend TU-1 through replacement relations/lifts and identify invariant revision cost.
+4. **Learning/licensing coincidence** — necessary and sufficient conditions under which causal-learning and risk-limited target objectives agree.
+5. **Empirical-state factorization** — define when measured coordinates genuinely make origin/history/mechanism residual information redundant out of sample.
+6. **Warning-state empirical identification** — distinguish a mathematically sufficient warning state from coordinates that can actually be measured and validated in nature.
 
-Empirical projects enter later only through an explicit projection
+These remain open. They are not current theorem claims.
+
+---
+
+## 16. Boundary to empirical ecology
+
+No empirical object enters the core merely by biological plausibility.
+
+A concrete system must be projected as
 
 \[
-\text{empirical system}\to(\Omega,\mathcal C,O_{\mathcal D},T)
+\text{empirical system}
+\to
+(\Omega,\mathcal C,O_{\mathcal D},T)
 \]
 
-with a claim ceiling. Their role is to instantiate, test, falsify, or expose missing coordinates in the theory universe.
+with explicit empirical unit, time/cohort, measured and missing coordinates, reliability/calibration, validation design, and claim ceiling.
+
+This is where thistles, island syndromes, flower-colour polymorphism, SDM-derived field design, visit cameras, and other concrete programmes will enter later.
+
+---
 
 ## 17. Validation
 
 ```text
 python theory/validate_core.py
+python theory/validate_theory_graph.py
 python theory/verify_tu1.py
 python theory/verify_tu2.py
+python theory/verify_tu3.py
+python theory/verify_tu4.py
 ```
+
+The theory validators enforce the type firewall and dependency graph. They do not convert finite witnesses into empirical ecological evidence.
