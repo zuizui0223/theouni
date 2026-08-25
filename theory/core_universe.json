@@ -1,0 +1,94 @@
+{
+  "schema_version": "theouni-theory-core.v0.1",
+  "status": "theory_first_core",
+  "programme_question": "What may science safely forget, and for which declared purpose?",
+  "constitutional_commitments": [
+    "Nature is not a state.",
+    "Scientific model worlds are not identical to reality.",
+    "Required state is a contract-relative quotient of model worlds.",
+    "Evidence constrains identification and reportability but does not create ontic distinctions.",
+    "Causal uncertainty remains set-valued until discriminating evidence exists.",
+    "Warning validity is conditional on a loss-generating state."
+  ],
+  "types": [
+    {"id": "type:Reality", "layer": "ontic", "definition": "Temporally extended ecological reality outside the finite theorem domain."},
+    {"id": "type:ModelWorldUniverse", "layer": "representational", "definition": "Admissible model-world universe Omega on which mathematical claims are stated."},
+    {"id": "type:World", "layer": "ontic_model", "definition": "Temporally extended model world, schematically history + present + retained mechanism + future-response law."},
+    {"id": "type:Snapshot", "layer": "observation_projection", "definition": "Present-time projection of a World; not assumed state-sufficient."},
+    {"id": "type:ScientificContext", "layer": "scientific", "definition": "Observation and intervention context V controlling scientific access."},
+    {"id": "type:ScientificContract", "layer": "scientific", "definition": "C=(Gamma,H,Theta,D;T)."},
+    {"id": "type:RequiredState", "layer": "representational", "definition": "Equivalence class in Omega/~_C; least-information adequate state when a coarsest adequate quotient exists."},
+    {"id": "type:EcologicalLaw", "layer": "effective_law", "definition": "Well-defined effective law on an adequate quotient."},
+    {"id": "type:ObservationRecord", "layer": "epistemic", "definition": "Record produced under an observation contract."},
+    {"id": "type:EvidenceClass", "layer": "epistemic", "definition": "Worlds compatible with an observation record under D."},
+    {"id": "type:Report", "layer": "epistemic_output", "definition": "Deterministic, typed, set-valued, or target-only output licensed by evidence."},
+    {"id": "type:CausalProgramme", "layer": "causal_model", "definition": "Declared causal mechanism/program family element supporting a subset of model worlds."},
+    {"id": "type:AdmissibleCausalSet", "layer": "epistemic_causal", "definition": "Causal programmes whose supported worlds intersect the current EvidenceClass."},
+    {"id": "type:NextObservation", "layer": "learning", "definition": "Feasible observation selected to refine EvidenceClass or AdmissibleCausalSet."},
+    {"id": "type:CompleteSimulatorState", "layer": "model_specific", "definition": "Explicit state sufficient under a declared simulator closure; not thereby minimal or natural."},
+    {"id": "type:LossGeneratingState", "layer": "representational", "definition": "Required state sufficient for a declared downstream loss process under a loss contract."},
+    {"id": "type:WarningStatistic", "layer": "measurement", "definition": "Statistic whose temporal ordering relative to loss may be evaluated conditionally within a LossGeneratingState."},
+    {"id": "type:WarningValidity", "layer": "conditional_property", "definition": "State-conditional property describing reproducible warning-before-loss ordering under a frozen contract."}
+  ],
+  "operators": [
+    {"id": "op:RealityProjection", "signature": "Reality x ScientificContext -> P(ModelWorldUniverse)", "status": "conceptual_open"},
+    {"id": "op:Observation", "signature": "World x ScientificContext -> ObservationRecord", "status": "declared_contract"},
+    {"id": "op:ContractQuotient", "signature": "ModelWorldUniverse x ScientificContract -> RequiredState partition", "status": "finite_exact_core"},
+    {"id": "op:EvidenceCompatibility", "signature": "ObservationRecord x ScientificContract -> EvidenceClass", "status": "finite_exact_core"},
+    {"id": "op:TargetReport", "signature": "EvidenceClass x target T -> Report", "status": "finite_exact_core"},
+    {"id": "op:CausalAdmissibility", "signature": "EvidenceClass x {CausalProgramme} -> AdmissibleCausalSet", "status": "declared_model_family"},
+    {"id": "op:ObservationUpdate", "signature": "EvidenceClass x AdmissibleCausalSet x NextObservation -> refined EvidenceClass x refined AdmissibleCausalSet", "status": "learning_core"},
+    {"id": "op:Dynamics", "signature": "World x action -> distribution(World)", "status": "model_specific"},
+    {"id": "op:LossContract", "signature": "target loss L -> ScientificContract", "status": "declared_contract"},
+    {"id": "op:WarningEvaluation", "signature": "LossGeneratingState x WarningStatistic x loss endpoint -> WarningValidity", "status": "conditional"}
+  ],
+  "structural_obstructions": [
+    {"id": "obstruction:Future", "contract_component": "Gamma", "owner": "repo:ccoc", "meaning": "Newly legal future interactions/interventions can split an old world merge."},
+    {"id": "obstruction:History", "contract_component": "H", "owner": "repo:mltr", "meaning": "Replacement/turnover can invalidate inherited macro-state meaning and require repair/history augmentation."},
+    {"id": "obstruction:Mechanism", "contract_component": "Theta", "owner": "repo:mrm", "meaning": "Retained mechanisms can disagree on required responses and force state refinement."},
+    {"id": "obstruction:Evidence", "contract_component": "D,T", "owner": "repo:ced", "meaning": "Required distinctions can remain unidentified under the available experiment and failure architecture."}
+  ],
+  "ownership": [
+    {"layer": "WorldContractRequiredState", "owner": "repo:crest"},
+    {"layer": "FutureObstruction", "owner": "repo:ccoc"},
+    {"layer": "HistoryTransportRepair", "owner": "repo:mltr"},
+    {"layer": "MechanismRobustStateLaw", "owner": "repo:mrm"},
+    {"layer": "EvidenceReportability", "owner": "repo:ced"},
+    {"layer": "CausalAdmissibilityLearning", "owner": "repo:microdonta"},
+    {"layer": "EcoGeneticDynamicsSimulatorBoundary", "owner": "repo:eco-genetic-criticality"},
+    {"layer": "LossStateConditionalWarning", "owner": "repo:eco-genetic-warning-extensions"},
+    {"layer": "CrossRepositoryTypeSystem", "owner": "repo:theouni"}
+  ],
+  "forbidden_collapses": [
+    {"left": "type:Reality", "right": "type:World", "unless": "explicit empirical/model projection with stated adequacy and claim ceiling"},
+    {"left": "type:Snapshot", "right": "type:World", "unless": "world definition is explicitly snapshot-only"},
+    {"left": "type:Snapshot", "right": "type:RequiredState", "unless": "snapshot sufficiency factorization is proved for the declared contract"},
+    {"left": "type:CompleteSimulatorState", "right": "type:RequiredState", "unless": "minimality/quotient equivalence is independently established"},
+    {"left": "type:EvidenceClass", "right": "type:RequiredState", "unless": "the evidence partition exactly identifies the required-state partition for the declared carrier"},
+    {"left": "type:CausalProgramme", "right": "type:RequiredState", "unless": "response-relevant equivalence under the declared contract is proved"},
+    {"left": "type:Report", "right": "type:RequiredState", "unless": "the report is explicitly the fully identified required-state label"},
+    {"left": "type:WarningStatistic", "right": "type:LossGeneratingState", "unless": "never; these are distinct type categories"},
+    {"left": "type:AdmissibleCausalSet", "right": "type:CausalProgramme", "unless": "the admissible set is a proved singleton under the declared evidence contract"}
+  ],
+  "invariants": [
+    "RequiredState is defined from scientific interchangeability of worlds, not from measurement convenience.",
+    "Evidence refinement can identify pre-required distinctions but cannot manufacture a structural distinction absent from the contract.",
+    "A target may be reportable even when RequiredState is unresolved.",
+    "Adding future/history/mechanism responsibilities may refine RequiredState without any change in the present Snapshot.",
+    "A CompleteSimulatorState may be sufficient without being minimal, natural, or empirically identifiable.",
+    "Warning portability across distinct LossGeneratingStates is not assumed."
+  ],
+  "open_obligations": [
+    "Reality-to-model empirical adequacy theorem/contract.",
+    "Stochastic/continuous/approximate extension of finite exact state construction.",
+    "Composition and commutation theory for Gamma/H/Theta/D refinement operators.",
+    "Formal divergence or coincidence conditions between RACH information gain and CED licensed-resolution gain.",
+    "Representation-invariant definition of LossGeneratingState.",
+    "Cross-state warning portability without universal-threshold assumptions.",
+    "Out-of-sample empirical-state discovery as a factorization problem."
+  ],
+  "empirical_boundary": {
+    "included": false,
+    "rule": "Species, islands, floral traits, SDM workflows, sensors, and field protocols enter only through explicit typed projections into (Omega,C,O_D,T) with a stated claim ceiling."
+  }
+}
