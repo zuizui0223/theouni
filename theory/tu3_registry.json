@@ -1,0 +1,52 @@
+{
+  "schema_version": "theouni-tu3.v1",
+  "status": "finite_exact_representation_firewall",
+  "title": "Loss-state representation invariance and nuisance inflation",
+  "owners": {
+    "required_state_source": "repo:crest",
+    "simulator_state_source": "repo:eco-genetic-criticality",
+    "loss_state_source": "repo:eco-genetic-warning-extensions",
+    "cross_representation_firewall": "repo:theouni"
+  },
+  "objects": [
+    {"id": "tu3:LossResponseSignature", "symbol": "sigma_L", "meaning": "Declared future loss response that a loss state must preserve."},
+    {"id": "tu3:RepresentationProjection", "symbol": "pi", "meaning": "Surjective map from a richer raw representation to a base representation."},
+    {"id": "tu3:LossPartition", "symbol": "Q_L", "meaning": "Partition by equality of the declared loss-response signature."},
+    {"id": "tu3:LossFaithfulness", "symbol": "sigma_B=sigma_A o pi", "meaning": "Extra raw coordinates do not alter the declared loss response."}
+  ],
+  "results": [
+    {
+      "id": "TU-3A",
+      "status": "proved_elementary",
+      "claim": "A surjective loss-faithful representation map induces a canonical bijection between the two loss-response quotient state spaces."
+    },
+    {
+      "id": "TU-3B",
+      "status": "proved_elementary",
+      "claim": "A richer loss signature factors through a surjective projection iff every projection fiber is loss-response homogeneous."
+    },
+    {
+      "id": "TU-3C",
+      "status": "proved_construction",
+      "claim": "Raw simulator-state space can be inflated by an arbitrary 2^m nuisance factor while required loss-state complexity remains unchanged."
+    },
+    {
+      "id": "TU-3D",
+      "status": "proved_counterexample",
+      "claim": "One hidden coordinate that changes the declared loss response breaks the proposed coarse projection by violating fiber homogeneity."
+    }
+  ],
+  "claim_ceiling": [
+    "Finite exact target-response signatures.",
+    "No recursive quotient-dynamics claim unless a separate lumpability/bisimulation closure is supplied.",
+    "No warning-portability claim.",
+    "No natural-system identification claim.",
+    "No standalone novelty claim over sufficient-statistic, predictive-state, bisimulation, or lumpability theory."
+  ],
+  "open_extensions": [
+    "Stochastic/approximate loss-response signatures.",
+    "Action-conditioned quotient dynamics under explicit lumpability/bisimulation conditions.",
+    "Cross-representation warning portability for joint warning/loss timing.",
+    "Empirical tests of whether measured state coordinates factor held-out loss endpoints."
+  ]
+}
