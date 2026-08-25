@@ -1,11 +1,26 @@
 # Theoretical Universe / 理論宇宙
 
-`theouni` has two deliberately separate layers.
+`theouni` is organized as four deliberately separate layers.
 
-1. **Theory Universe v0.5** — the theory-first ontology and mathematics of worlds, states, evidence, learning, revision, target-specific dynamics, and warning.
-2. **Portfolio Registry** — the provenance-preserving map of the wider repository ecosystem and its typed bridges.
+1. **Theory Universe v0.5 — frozen semantic core**  
+   Worlds, scientific contracts, required states, evidence, learning, revision, loss states, and warning states.
+2. **Empirical Projection Gate v0.1 — Reality -> Theory admission**  
+   The claim-discipline protocol that decides when measured coordinates may earn target-relative partial-state status.
+3. **Concrete Research Universe v0.1 — typed real-research programmes**  
+   Five programme archetypes describing what a concrete ecological project contributes to the theory without turning the project itself into a state.
+4. **Portfolio Registry — provenance and repository graph**  
+   The wider repository ecosystem, typed bridges, source ownership, Graphify view, and provenance.
 
-The theory layer comes first. Species, island syndromes, floral polymorphisms, SDMs, sensors, and field workflows do not define the abstract core; they are projected into it later through explicit empirical contracts.
+The direction is intentional:
+
+```text
+Theory first
+    -> admission rules
+    -> concrete research programmes
+    -> named repositories / evidence
+```
+
+Concrete species, island syndromes, floral polymorphisms, SDMs, sensors, and field workflows do not define the abstract core. They enter only through explicit typed contracts.
 
 ## Central programme
 
@@ -25,9 +40,12 @@ The v0.5 worldview is:
 - a `LossGeneratingState` need not be sufficient for warning evaluation;
 - within-state warning reproducibility and cross-state warning portability are separate claims.
 
+## One worldline, four layers
+
 ```mermaid
 flowchart TD
-    R[Ecological reality] -->|model / measurement bridge| W[Model-world universe]
+    R[Ecological reality] --> GATE[Empirical Projection Gate]
+    GATE --> W[Admissible model-world universe]
     W --> C[Scientific contract]
 
     C --> G[Future / Gamma]
@@ -47,68 +65,109 @@ flowchart TD
     D --> CED
     T --> CED
     CED --> E[EvidenceClass]
-    E --> LIC[TargetLicensingStatus]
     E --> RACH[RACH admissible causal set]
-    RACH --> LEARN[CausalLearningValue]
-    LEARN --> TU2[TU-2 learning != licensing]
-    LIC --> TU2
 
-    J --> STORE[StoredStateRepresentation]
-    STORE --> TU1[TU-1 contract revision]
+    J --> TU1[TU-1 revision after compression]
+    RACH --> TU2[TU-2 learning != licensing]
 
     W --> DYN[Declared dynamics]
-    DYN --> LR[Loss response]
-    LR --> TU3[TU-3 representation-faithful loss state]
+    DYN --> TU3[TU-3 loss-state representation]
     TU3 --> LS[LossGeneratingState]
     LS --> TU4[TU-4 warning-state refinement]
     TU4 --> WS[WarningEvaluationState]
-    WS --> WV[WarningValidity / portability]
+
+    CR[Concrete Research Universe] --> GATE
+    PORT[Named project / repository] --> CR
 ```
 
-## Start here
+## 1. Theory Universe v0.5
 
-### Theory Universe
+Start with:
 
-- [`theory/CONSTITUTION.md`](theory/CONSTITUTION.md) — normative v0.5 axioms, definitions, claim ceilings, and frozen scientific sentence.
+- [`theory/CONSTITUTION.md`](theory/CONSTITUTION.md) — normative axioms, definitions, claim ceilings, and frozen scientific sentence.
 - [`theory/README.md`](theory/README.md) — readable theory-world exposition.
 - [`theory/core_universe.json`](theory/core_universe.json) — machine-readable type/operator/theorem registry.
-- [`theory/theorem_graph.json`](theory/theorem_graph.json) — frozen prerequisite-to-dependent theorem DAG.
+- [`theory/theorem_graph.json`](theory/theorem_graph.json) — prerequisite-to-dependent theorem DAG.
+- [`theory/FREEZE_v0.5.json`](theory/FREEZE_v0.5.json) — semantic-core freeze manifest.
 - [`theory/CONSISTENCY_AUDIT.md`](theory/CONSISTENCY_AUDIT.md) — cross-repository ownership and anti-collapse audit.
 
-The four current `theouni` theorem/firewall modules are:
+Current `theouni` theorem/firewall modules:
 
-- [`theory/TU1_CONTRACT_REVISION.md`](theory/TU1_CONTRACT_REVISION.md) — TU-1: contract revision after compression.
-- [`theory/TU2_LEARNING_LICENSING.md`](theory/TU2_LEARNING_LICENSING.md) — TU-2: causal learning versus target licensing.
-- [`theory/TU3_LOSS_STATE_INVARIANCE.md`](theory/TU3_LOSS_STATE_INVARIANCE.md) — TU-3: loss-state representation invariance.
-- [`theory/TU4_WARNING_STATE_PORTABILITY.md`](theory/TU4_WARNING_STATE_PORTABILITY.md) — TU-4: warning evaluation state and portability.
+- [`theory/TU1_CONTRACT_REVISION.md`](theory/TU1_CONTRACT_REVISION.md) — revision after scientific compression.
+- [`theory/TU2_LEARNING_LICENSING.md`](theory/TU2_LEARNING_LICENSING.md) — causal learning versus target licensing.
+- [`theory/TU3_LOSS_STATE_INVARIANCE.md`](theory/TU3_LOSS_STATE_INVARIANCE.md) — loss-state representation invariance.
+- [`theory/TU4_WARNING_STATE_PORTABILITY.md`](theory/TU4_WARNING_STATE_PORTABILITY.md) — warning-evaluation state and portability.
 
-Each module has a machine-readable registry, finite implementation, and verification script in `theory/`.
+The semantic core is frozen at v0.5. Changes to its axioms, canonical type identities, theorem semantics, claim ceilings, or dependency directions require a version increment.
 
-### Portfolio Registry
+## 2. Empirical Projection Gate v0.1
 
-- [`universe/ARCHITECTURE.md`](universe/ARCHITECTURE.md) — wider research-repository architecture.
+[`theory/EMPIRICAL_PROJECTION_GATE.md`](theory/EMPIRICAL_PROJECTION_GATE.md) defines the only admissible route from real measurements toward empirical state language.
+
+The empirical contract is
+
+\[
+\mathcal P_{emp}=(U,\tau,Z,H,A,Y,\mathcal O,\mathcal V,\Delta,\epsilon).
+\]
+
+The key distinction is:
+
+```text
+biologically plausible coordinates
+    != predictive coordinates
+    != empirically supported partial state
+```
+
+A candidate coordinate set `Z` must first carry held-out information for the declared future target. Only then is residual upstream context/history `H` tested. Passing the gate supports a bounded, target-relative `EmpiricalPartialState` claim; it never proves a complete natural ontology.
+
+Machine-readable schema/template and validator:
+
+- [`theory/empirical_projection.schema.json`](theory/empirical_projection.schema.json)
+- [`theory/empirical_projection.template.json`](theory/empirical_projection.template.json)
+- [`theory/validate_empirical_projection.py`](theory/validate_empirical_projection.py)
+
+## 3. Concrete Research Universe v0.1
+
+[`empirical/README.md`](empirical/README.md) classifies concrete research by **what it contributes to the scientific contract**, not by taxon or software.
+
+Five primary archetypes are currently allowed:
+
+| ID | Programme type | Main scientific role |
+|---|---|---|
+| **CR-1** | Comparative phenomenon | phenomenon/context `H` versus measured process state `Z` |
+| **CR-2** | Lineage and trait evolution | history `H`, mechanisms `Theta`, transitions and evolutionary targets |
+| **CR-3** | Phenotype / polymorphism / trait construction | construct and test candidate measured coordinates `Z` |
+| **CR-4** | Spatial world construction / forecast | construct `Omega`, support, reachability and candidate observation locations |
+| **CR-5** | Sensing / observability | construct `ObservationRecord`, effort, calibration and failure architecture |
+
+The main firewall is:
+
+```text
+ProgrammeType != RequiredState
+MethodType != BiologicalState
+ContextLabel != StateByDefault
+Predictor != EmpiricalPartialState
+WorldSupport != OccupancyOrTruth
+ObservationRecord != BiologicalEventWithoutReliabilityBridge
+```
+
+Machine-readable definitions and reusable project manifest:
+
+- [`empirical/system_types.json`](empirical/system_types.json)
+- [`empirical/project_manifest.template.json`](empirical/project_manifest.template.json)
+- [`empirical/validate_empirical_universe.py`](empirical/validate_empirical_universe.py)
+
+A named project must declare exactly one primary CR type, may declare secondary supporting types, and cannot use cross-repository state language until the Empirical Projection Gate earns it.
+
+## 4. Portfolio Registry
+
+The wider research ecosystem remains a separate provenance layer:
+
+- [`universe/ARCHITECTURE.md`](universe/ARCHITECTURE.md) — research-repository architecture.
 - [`universe/registry.json`](universe/registry.json) — machine-readable repository/claim registry.
 - [`graphify-out/graph.html`](graphify-out/graph.html) — interactive Graphify map.
 - [`universe/bridges/eco_genetic_crest_bridge_registry.json`](universe/bridges/eco_genetic_crest_bridge_registry.json) — bounded EcoGenetic -> CREST bridge.
 - [`universe/PROVENANCE.json`](universe/PROVENANCE.json) — wider registry provenance manifest.
-
-## Core theoretical ownership
-
-| Layer | Primary owner |
-|---|---|
-| world / contract / least adequate state | `crest` |
-| future obstruction | `ccoc` |
-| historical-semantic transport / repair | `mltr` |
-| mechanism-robust state / law | `mrm` |
-| evidence / reportability | `ced` |
-| causal admissibility / next observation | `microdonta` / RACH |
-| eco-genetic dynamics / simulator-state boundary | `eco-genetic-criticality` |
-| warning-blind loss conditioning and empirical warning results | `eco-genetic-warning-extensions` |
-| cross-repository type system | `theouni` |
-| contract revision after compression | `theouni` / TU-1 |
-| learning/licensing bridge firewall | `theouni` / TU-2 |
-| loss-state representation firewall | `theouni` / TU-3 |
-| warning-state/portability firewall | `theouni` / TU-4 |
 
 `theouni` does not acquire ownership of source theorems or empirical evidence merely by connecting their typed outputs.
 
@@ -132,6 +191,7 @@ LossGeneratingState <= WarningEvaluationState
 StoredStateRepresentation != RevisedRequiredState
 CausalLearningValue != TargetLicensingStatus
 WarningValidity != WarningPortability
+ProgrammeType != RequiredState
 ```
 
 unless an explicit theorem or bridge establishes the required factorization/equality.
@@ -174,59 +234,24 @@ same loss state
 same warning-evaluation state
 ```
 
-## Theory Universe v0.5 status
-
-The universe is now internally typed through four finite cross-layer modules.
-
-### TU-1 — revision
-
-For old stored partition `P` and revised required partition `Q`, state-only revision succeeds exactly when `Q` factors through `P`. Otherwise TU-1 gives the exact minimum idealized auxiliary alphabet needed to recover the revised state and a worst-case revision-debt measure. Local debt can be arbitrarily large while average refinement debt is arbitrarily small.
-
-### TU-2 — scientific utility
-
-A finite product-world construction gives observations with maximal normalized causal-learning value but zero target licensing, and observations with zero causal-learning value but complete target licensing. RACH-style learning and CED-style reporting objectives can therefore rank equal-cost observations in opposite order.
-
-### TU-3 — representation
-
-A raw representation is loss-faithful exactly when its declared loss-response signature factors through the representation projection. Arbitrarily many nuisance coordinates can inflate simulator state without changing the loss quotient; one hidden target-relevant coordinate is enough to break the projection.
-
-### TU-4 — warning
-
-The warning-evaluation quotient preserves both loss and warning responses and therefore refines the loss-only quotient. Equality holds only when warning response is constant within loss-state classes. Warning portability across domains requires a further explicit cross-state commutation condition.
-
-These modules currently function mainly as **type-safe composition results**. Their elementary finite substrates overlap established mathematics; `theouni` does not yet claim that TU-1–4 are standalone mathematical novelties independent of prior art.
-
-## Boundary to empirical ecology
-
-A concrete empirical object does not become a state coordinate because it is plausible, proximal, or fashionable.
-
-Empirical projects enter only through a typed projection of the form
+The empirical layers add:
 
 ```text
-empirical system
-    -> empirical unit / time / cohort
-    -> model-world or candidate-world universe
-    -> scientific contract
-    -> observation / reliability model
-    -> target
-    -> external or held-out adequacy test
-    -> claim ceiling
+real-system label or method output
+    does not imply
+empirical state
 ```
 
-This later layer is where thistles, island syndromes, flower-colour polymorphism, trait construction, SDM-derived sampling methods, visit cameras, and other concrete programmes will be connected.
+## Current frontier
 
-## Current mathematical frontier
+The frozen core should not be expanded simply by numbering another TU module. Development now belongs mainly outside the core:
 
-The next development should not simply add TU-5 because a label is available. It should close one of the genuinely open bridges:
-
-1. **Reality -> Model adequacy** — what warrants treating a mathematical world set as an adequate empirical representation?
-2. **Beyond finite exact state** — stochastic, continuous, approximate, tolerance-qualified and delayed-observation extensions.
-3. **Carrier-changing revision** — extend TU-1 through replacement relations/common lifts and identify invariant revision cost.
-4. **Learning/licensing coincidence** — characterize when causal-learning and risk-limited target objectives actually agree.
-5. **Empirical-state factorization** — when do measured coordinates make upstream origin/history/mechanism redundant for held-out future targets?
-6. **Empirical warning-state identification** — when do measurable natural coordinates identify enough of the warning-evaluation state for defensible portability claims?
-
-The most important next bridge for connecting this worldview to the concrete research universe is **empirical-state factorization**, but it remains outside the frozen v0.5 theorem claims.
+1. **Named-project typing** — assign real repositories to CR-1–CR-5 without granting state claims.
+2. **Projection manifests** — instantiate `(U,tau,Z,H,A,Y,O,V,Delta,epsilon)` for each concrete programme.
+3. **Empirical-state factorization** — evaluate candidate `Z` first, residual context/history second, using whole ecological units held out.
+4. **Observation licensing** — connect sensing/calibration to CED before sensor records become biological evidence.
+5. **Spatial-world semantics** — preserve the distinction among suitability, support, reachability, occupancy and observation candidates.
+6. **Cross-system portability** — require target and observation semantics to commute before comparing empirical partial states across systems.
 
 ## Validation
 
@@ -237,11 +262,9 @@ python theory/verify_tu1.py
 python theory/verify_tu2.py
 python theory/verify_tu3.py
 python theory/verify_tu4.py
-
-python scripts/build_curated_graph.py
-python scripts/build_graph.py
-python scripts/write_provenance_manifest.py
-python scripts/validate_universe.py
+python theory/validate_freeze.py
+python theory/validate_empirical_projection.py
+python empirical/validate_empirical_universe.py
 ```
 
-The theory validators check type consistency and finite theorem-module contracts. The wider universe validators check the provenance-preserving repository registry and generated Graphify view.
+GitHub Actions runs these checks whenever `theory/**`, `empirical/**`, the root README, or the validation workflow changes. The wider portfolio/Graphify validation remains a separate provenance task.
