@@ -39,7 +39,7 @@ def main() -> None:
     payload = {
         "schema_version": "theouni-provenance.v1",
         "generated_at": datetime.now(timezone.utc).isoformat(),
-        "repository_role": "meta-registry; no transfer of scientific ownership",
+        "repository_role": "theory-first core plus meta-registry; no transfer of source scientific ownership",
         "registry_version": registry["schema_version"],
         "repository_count": registry["scope"]["repository_count"],
         "source_snapshots": {
