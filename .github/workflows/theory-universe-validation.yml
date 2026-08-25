@@ -4,11 +4,13 @@ on:
   push:
     paths:
       - 'theory/**'
+      - 'empirical/**'
       - 'README.md'
       - '.github/workflows/theory-universe-validation.yml'
   pull_request:
     paths:
       - 'theory/**'
+      - 'empirical/**'
       - 'README.md'
       - '.github/workflows/theory-universe-validation.yml'
   workflow_dispatch:
@@ -28,8 +30,8 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Compile theory modules
-        run: python -m compileall -q theory
+      - name: Compile theory and empirical modules
+        run: python -m compileall -q theory empirical
 
       - name: Validate type system
         run: python theory/validate_core.py
@@ -54,3 +56,6 @@ jobs:
 
       - name: Validate empirical projection admission gate
         run: python theory/validate_empirical_projection.py
+
+      - name: Validate Concrete Research Universe
+        run: python empirical/validate_empirical_universe.py
