@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+
+# Graphify's tracked public view is limited to graph.json, graph.html, and
+# GRAPH_REPORT.md. Session caches and query memory stay local.
+graphify-out/.*
+graphify-out/cache/
+graphify-out/cost.json
+graphify-out/memory/
+graphify-out/reflections/
+graphify-out/.curated_extraction.json

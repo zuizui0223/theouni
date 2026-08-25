@@ -1,0 +1,100 @@
+{
+  "schema_version": "theouni-provenance.v1",
+  "generated_at": "2026-08-25T06:31:49.572265+00:00",
+  "repository_role": "meta-registry; no transfer of scientific ownership",
+  "registry_version": "zuizui0223-research-universe/1.2",
+  "repository_count": 24,
+  "source_snapshots": {
+    "crest": "b552d01ad3be88501edce52262e19f263e0d8211",
+    "ccoc": "968acf91aa7ea0b1595131322e67607828f3aaa8",
+    "mltr": "8dca7e9619d5e43495191f8e1bb6648d2ae8b5ae",
+    "mrm": "12b4fc375d96a18b9b18cb625861aa028e77a73e",
+    "ced": "85aad0092e743a35d5c41ff0665b954a5cfd77c0",
+    "microdonta": "af589f4138660a3b71580bf0fb4da9829ac5bea1",
+    "eco-genetic-criticality": "78fc101a809ebdc5d4f2295b9c92757510e71a75",
+    "eco-genetic-warning-extensions": "ffe2a1e3318a6c9971400abffa4c56156ac920b4",
+    "bita": "f0d0c59cf7f33835e4f8fe2bd76acef3108cf1be",
+    "izu-core": "9121bcc2bf2ff4b639245779aaf08e310539c301",
+    "eog": "45f45b30d19f043db1383fb4893fa53b92b4ebee",
+    "sdmr": "9ae02bd3b531f9bdb5dee9caab02c8d727818d4b",
+    "acsp": "25d9c6d93a667a4cc1cf64d08bb153d7f7fba058",
+    "pollipi": "f3609a6d3d031320cfd795e030b2ec26d5545c38",
+    "insepi": "b07646f0c1569b8aaa6f5aa09aff333a5b75ad9a",
+    "island": "581b824304f024944f612381ca5dfd309e1edb32",
+    "hotarubukuro": "661321107ed47468a48e3be32a3461ebb5ca99a5",
+    "fcp": "02dc652ee36fdaceb163db199e7668e9075685cb",
+    "azami": "4e6f66675004207d331fd620d6bcd894287f316a",
+    "EAzami": "1002af5aa0af6fd7add5a23e13665b785895c2a5",
+    "chun": "9c14e99efacea450f0911f75ac99a2a6f1e9e565",
+    "shimahotarubukuro": "bffd258da22fd967435ab9c20c721e60894308be",
+    "odsp": "9145cf90653b9bd6a4482e60f2b04396dc01dda8",
+    "theouni": "ab313b0788599bf9ff5b240d5f87e8ab28044933"
+  },
+  "managed_files": [
+    {
+      "path": ".gitignore",
+      "bytes": 306,
+      "sha256": "92c4a9ef9e0cff3f5d1918bfabe89f349d7e98b4720bc1a6e77b8ca9792ad75b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4799,
+      "sha256": "6f200b4fc87789bfca6f13f9294e8829d81f61b236889083d01b5b0c8c428c08"
+    },
+    {
+      "path": "universe/ARCHITECTURE.md",
+      "bytes": 27493,
+      "sha256": "3782c6114497984dc732222933b2deb12cf6a83483af0d18c7e21b0db0229856"
+    },
+    {
+      "path": "universe/registry.json",
+      "bytes": 65243,
+      "sha256": "bacd043c8c2703692aa7dbd3afa8885568da2f9ef25386ff91f5b8381e872b4e"
+    },
+    {
+      "path": "universe/bridges/eco_genetic_crest_bridge_registry.json",
+      "bytes": 14707,
+      "sha256": "59afd254fd03f083f66f21d3961c687f8a4ce102a56370e35b3e8a51504ec878"
+    },
+    {
+      "path": "universe/schemas/eco_genetic_crest_bridge.schema.json",
+      "bytes": 3053,
+      "sha256": "c9a851e6267ee5efe3bee734e4ada2cdc73a87a39202c86db20f206b084ede58"
+    },
+    {
+      "path": "graphify-out/graph.json",
+      "bytes": 429812,
+      "sha256": "ddf526dafb77ef89999bbebbeb07140ebf29872e7cdd688abccadc2b78a9c18a"
+    },
+    {
+      "path": "graphify-out/graph.html",
+      "bytes": 343620,
+      "sha256": "ab5a2ac441ec08f2a5e09ce2bfa36f0e3d29e95d8ad9440958d958ab3fa711fa"
+    },
+    {
+      "path": "graphify-out/GRAPH_REPORT.md",
+      "bytes": 12052,
+      "sha256": "9bc9b1d6d3b802166bc9acb465563e30faeb158418ade1a947e409591a16abed"
+    },
+    {
+      "path": "scripts/build_curated_graph.py",
+      "bytes": 10300,
+      "sha256": "ffc67bd34563439e8faf2b0d1826acdd5a4b8e7f7afb858e3f863cef53f5a319"
+    },
+    {
+      "path": "scripts/build_graph.py",
+      "bytes": 4690,
+      "sha256": "6b496c5c01d76097afbddbcbae1dc81129b89602586008e9d4e391194c327cfe"
+    },
+    {
+      "path": "scripts/write_provenance_manifest.py",
+      "bytes": 1789,
+      "sha256": "ca3c8069a1c019ebabde2c2d18864d936c659cf786df0d6f1b1acb0da44c0252"
+    },
+    {
+      "path": "scripts/validate_universe.py",
+      "bytes": 3439,
+      "sha256": "4cb1c8dc30193898a370af01e70667d2b7ede61b3963041ad0276d82a80fedbb"
+    }
+  ]
+}

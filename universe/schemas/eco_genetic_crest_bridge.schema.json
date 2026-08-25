@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:zuizui0223:eco-genetic-crest-bridge-registry:v1",
+  "title": "Eco-genetic CREST bridge registry v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "status",
+    "ownership",
+    "source_verification",
+    "implementation",
+    "audits",
+    "claim_ceiling",
+    "graph"
+  ],
+  "properties": {
+    "schema_version": {"const": "eco-genetic-crest-bridge-registry.v1"},
+    "status": {"enum": ["implemented_local_uncommitted", "committed", "published"]},
+    "ownership": {
+      "type": "object",
+      "required": ["adapter_owner", "source_record_owner", "warning_program_owner", "physical_merge"],
+      "properties": {
+        "adapter_owner": {"type": "string", "minLength": 1},
+        "source_record_owner": {"type": "string", "minLength": 1},
+        "warning_program_owner": {"type": "string", "minLength": 1},
+        "physical_merge": {"const": false}
+      },
+      "additionalProperties": false
+    },
+    "source_verification": {
+      "type": "object",
+      "required": ["artifact_path", "expected_sha256", "actual_sha256", "verified"],
+      "properties": {
+        "artifact_path": {"type": "string", "minLength": 1},
+        "expected_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "actual_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "verified": {"const": true}
+      },
+      "additionalProperties": false
+    },
+    "implementation": {"type": "object"},
+    "audits": {
+      "type": "object",
+      "required": ["coarse_evidence", "joint_patch_alignment_evidence"],
+      "properties": {
+        "coarse_evidence": {"$ref": "#/$defs/audit"},
+        "joint_patch_alignment_evidence": {"$ref": "#/$defs/audit"}
+      },
+      "additionalProperties": false
+    },
+    "claim_ceiling": {"type": "object"},
+    "graph": {
+      "type": "object",
+      "required": ["directed", "nodes", "links"],
+      "properties": {
+        "directed": {"const": true},
+        "nodes": {"type": "array", "items": {"type": "object", "required": ["id", "label", "type"]}},
+        "links": {"type": "array", "items": {"type": "object", "required": ["source", "target", "relation", "confidence"]}}
+      }
+    }
+  },
+  "$defs": {
+    "audit": {
+      "type": "object",
+      "required": ["schema_version", "contract_id", "provenance", "contract", "guards", "carrier", "result", "explicit_non_claims"],
+      "properties": {
+        "schema_version": {"const": "eco-genetic-crest-bridge.v1"},
+        "guards": {
+          "type": "object",
+          "required": ["carrier_complete_for_declared_domain", "warning_blind_state_selection", "warning_outcome_used_for_selection"],
+          "properties": {
+            "carrier_complete_for_declared_domain": {"type": "boolean"},
+            "warning_blind_state_selection": {"const": true},
+            "warning_outcome_used_for_selection": {"const": false}
+          }
+        },
+        "carrier": {"type": "object"},
+        "result": {"type": "object"}
+      }
+    }
+  }
+}

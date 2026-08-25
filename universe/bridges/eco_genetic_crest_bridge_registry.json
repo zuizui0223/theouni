@@ -1,0 +1,393 @@
+{
+  "schema_version": "eco-genetic-crest-bridge-registry.v1",
+  "generated_on": "2026-08-25",
+  "status": "implemented_local_uncommitted",
+  "ownership": {
+    "adapter_owner": "zuizui0223/crest",
+    "source_record_owner": "zuizui0223/eco-genetic-criticality",
+    "warning_program_owner": "zuizui0223/eco-genetic-warning-extensions",
+    "physical_merge": false
+  },
+  "source_verification": {
+    "artifact_path": "tests/test_state_sufficiency_regime_audit.py",
+    "expected_sha256": "818ec47a44873d7a30c16b6500c64043a4e86e861f3f5339d32cb02769e542fb",
+    "actual_sha256": "818ec47a44873d7a30c16b6500c64043a4e86e861f3f5339d32cb02769e542fb",
+    "verified": true
+  },
+  "implementation": {
+    "base_snapshot_sha": "b552d01ad3be88501edce52262e19f263e0d8211",
+    "publication_state": "local_uncommitted",
+    "files": [
+      {
+        "path": "crest/eco_genetic_bridge.py",
+        "sha256": "613f58eacc989f7d9bf3d658b21c806439698453d84ae8c7091d3d9605a7f64f"
+      },
+      {
+        "path": "tests/test_crest_eco_genetic_bridge.py",
+        "sha256": "9885ab6c7d5dff121d730bb7cbccf41eafefbdbf483201adad10af0c109ff7fc"
+      },
+      {
+        "path": "examples/eco_genetic_alignment_crest_bridge.py",
+        "sha256": "83f8825d915bf6b0f89d40133ff7788d4dfea075e4a1212d9cd8192d5f890271"
+      },
+      {
+        "path": "docs/eco_genetic_crest_bridge.md",
+        "sha256": "b8ea8511fa14b25e7cd6cf4e87a9412751128933978944628368227a4057894f"
+      }
+    ],
+    "test_result": "12 passed in the targeted bridge plus joint-state suite; 141 passed in the full CREST suite with UTF-8 mode"
+  },
+  "audits": {
+    "coarse_evidence": {
+      "schema_version": "eco-genetic-crest-bridge.v1",
+      "contract_id": "eco-genetic-alignment-witness-v1",
+      "provenance": {
+        "source_repository": "zuizui0223/eco-genetic-criticality",
+        "source_commit": "78fc101a809ebdc5d4f2295b9c92757510e71a75",
+        "source_artifact": "tests/test_state_sufficiency_regime_audit.py",
+        "source_artifact_sha256": "818ec47a44873d7a30c16b6500c64043a4e86e861f3f5339d32cb02769e542fb"
+      },
+      "contract": {
+        "gamma": "one declared simulator transition under identical forcing and RNG seed",
+        "history": "history ignored after exact present state under the declared Markov closure",
+        "theta": "retain the declared patchwise interaction-genetic coupling",
+        "evidence": "coarse marginals alone",
+        "target": "exact next interaction field"
+      },
+      "guards": {
+        "carrier_complete_for_declared_domain": false,
+        "warning_blind_state_selection": true,
+        "warning_outcome_used_for_selection": false
+      },
+      "carrier": {
+        "scope": "bounded_witness_carrier",
+        "future_law_fingerprint": "dynamics-parameters-plus-seed-20260824",
+        "worlds": [
+          {
+            "world_id": "aligned",
+            "present_state_fingerprint": "q:(0.8,0.2)|p:(0.8,0.2)",
+            "coarse_summary_fingerprint": "coarse-marginals-v1",
+            "future_response_signature": "next-q:(0.35434369377420455,0.08317269649392234)",
+            "history_signature": "history-not-retained",
+            "mechanism_signature": "declared-multipatch-operator",
+            "evidence_signature": "coarse-marginals-v1",
+            "target_signature": "next-q:(0.35434369377420455,0.08317269649392234)"
+          },
+          {
+            "world_id": "anti_aligned",
+            "present_state_fingerprint": "q:(0.8,0.2)|p:(0.2,0.8)",
+            "coarse_summary_fingerprint": "coarse-marginals-v1",
+            "future_response_signature": "next-q:(0.21081829347774714,0.15709546888545275)",
+            "history_signature": "history-not-retained",
+            "mechanism_signature": "declared-multipatch-operator",
+            "evidence_signature": "coarse-marginals-v1",
+            "target_signature": "next-q:(0.21081829347774714,0.15709546888545275)"
+          }
+        ]
+      },
+      "result": {
+        "claim_status": "bounded_counterexample_and_local_quotient_only",
+        "world_count": 2,
+        "required_state_count": 2,
+        "required_state_blocks": [
+          [
+            "aligned"
+          ],
+          [
+            "anti_aligned"
+          ]
+        ],
+        "candidate_present_state_sufficient": true,
+        "coarse_summary_sufficient": false,
+        "full_state_licensed": false,
+        "target_report_licensed": false,
+        "monitoring_debt_bits": 1.0,
+        "sharp_state_report": [
+          [
+            0,
+            1
+          ]
+        ],
+        "sharp_target_report": [
+          [
+            "next-q:(0.35434369377420455,0.08317269649392234)",
+            "next-q:(0.21081829347774714,0.15709546888545275)"
+          ]
+        ],
+        "coarse_summary_witnesses": [
+          {
+            "left_world": "aligned",
+            "right_world": "anti_aligned",
+            "shared_signature": "coarse-marginals-v1",
+            "left_required_class": 0,
+            "right_required_class": 1
+          }
+        ],
+        "present_state_witnesses": []
+      },
+      "explicit_non_claims": [
+        "The declared carrier is not the full simulator state space unless carrier completeness is independently established.",
+        "A complete simulator state is not asserted to be minimal or natural.",
+        "No warning threshold, warning portability, or direction-only warning effect is inferred.",
+        "Evidence licensing does not create distinctions absent from the declared world contract."
+      ]
+    },
+    "joint_patch_alignment_evidence": {
+      "schema_version": "eco-genetic-crest-bridge.v1",
+      "contract_id": "eco-genetic-alignment-witness-v1",
+      "provenance": {
+        "source_repository": "zuizui0223/eco-genetic-criticality",
+        "source_commit": "78fc101a809ebdc5d4f2295b9c92757510e71a75",
+        "source_artifact": "tests/test_state_sufficiency_regime_audit.py",
+        "source_artifact_sha256": "818ec47a44873d7a30c16b6500c64043a4e86e861f3f5339d32cb02769e542fb"
+      },
+      "contract": {
+        "gamma": "one declared simulator transition under identical forcing and RNG seed",
+        "history": "history ignored after exact present state under the declared Markov closure",
+        "theta": "retain the declared patchwise interaction-genetic coupling",
+        "evidence": "joint patch alignment observed",
+        "target": "exact next interaction field"
+      },
+      "guards": {
+        "carrier_complete_for_declared_domain": false,
+        "warning_blind_state_selection": true,
+        "warning_outcome_used_for_selection": false
+      },
+      "carrier": {
+        "scope": "bounded_witness_carrier",
+        "future_law_fingerprint": "dynamics-parameters-plus-seed-20260824",
+        "worlds": [
+          {
+            "world_id": "aligned",
+            "present_state_fingerprint": "q:(0.8,0.2)|p:(0.8,0.2)",
+            "coarse_summary_fingerprint": "coarse-marginals-v1",
+            "future_response_signature": "next-q:(0.35434369377420455,0.08317269649392234)",
+            "history_signature": "history-not-retained",
+            "mechanism_signature": "declared-multipatch-operator",
+            "evidence_signature": "q:(0.8,0.2)|p:(0.8,0.2)",
+            "target_signature": "next-q:(0.35434369377420455,0.08317269649392234)"
+          },
+          {
+            "world_id": "anti_aligned",
+            "present_state_fingerprint": "q:(0.8,0.2)|p:(0.2,0.8)",
+            "coarse_summary_fingerprint": "coarse-marginals-v1",
+            "future_response_signature": "next-q:(0.21081829347774714,0.15709546888545275)",
+            "history_signature": "history-not-retained",
+            "mechanism_signature": "declared-multipatch-operator",
+            "evidence_signature": "q:(0.8,0.2)|p:(0.2,0.8)",
+            "target_signature": "next-q:(0.21081829347774714,0.15709546888545275)"
+          }
+        ]
+      },
+      "result": {
+        "claim_status": "bounded_counterexample_and_local_quotient_only",
+        "world_count": 2,
+        "required_state_count": 2,
+        "required_state_blocks": [
+          [
+            "aligned"
+          ],
+          [
+            "anti_aligned"
+          ]
+        ],
+        "candidate_present_state_sufficient": true,
+        "coarse_summary_sufficient": false,
+        "full_state_licensed": true,
+        "target_report_licensed": true,
+        "monitoring_debt_bits": 0.0,
+        "sharp_state_report": [
+          [
+            0
+          ],
+          [
+            1
+          ]
+        ],
+        "sharp_target_report": [
+          [
+            "next-q:(0.35434369377420455,0.08317269649392234)"
+          ],
+          [
+            "next-q:(0.21081829347774714,0.15709546888545275)"
+          ]
+        ],
+        "coarse_summary_witnesses": [
+          {
+            "left_world": "aligned",
+            "right_world": "anti_aligned",
+            "shared_signature": "coarse-marginals-v1",
+            "left_required_class": 0,
+            "right_required_class": 1
+          }
+        ],
+        "present_state_witnesses": []
+      },
+      "explicit_non_claims": [
+        "The declared carrier is not the full simulator state space unless carrier completeness is independently established.",
+        "A complete simulator state is not asserted to be minimal or natural.",
+        "No warning threshold, warning portability, or direction-only warning effect is inferred.",
+        "Evidence licensing does not create distinctions absent from the declared world contract."
+      ]
+    }
+  },
+  "claim_ceiling": {
+    "established": [
+      "The exact local quotient on the declared two-world carrier has two blocks.",
+      "The shared coarse-marginal state is insufficient for the exact next-interaction target.",
+      "Coarse-only evidence leaves one bit of finite monitoring debt.",
+      "Joint patch-alignment evidence licenses the local required state and exact target."
+    ],
+    "not_established": [
+      "Full simulator-state-space carrier coverage.",
+      "The least adequate quotient for a frozen warning or management domain.",
+      "A minimal or natural complete simulator state.",
+      "A universal warning threshold, warning portability, or direction-only warning effect."
+    ]
+  },
+  "graph": {
+    "directed": true,
+    "nodes": [
+      {
+        "id": "repo:eco-genetic-criticality",
+        "label": "eco-genetic-criticality",
+        "type": "repository"
+      },
+      {
+        "id": "repo:crest",
+        "label": "crest",
+        "type": "repository"
+      },
+      {
+        "id": "bridge:eco-genetic-crest-v1",
+        "label": "EcoGeneticState to CREST Contract v1",
+        "type": "adapter"
+      },
+      {
+        "id": "world:aligned",
+        "label": "aligned world",
+        "type": "latent_world"
+      },
+      {
+        "id": "world:anti-aligned",
+        "label": "anti-aligned world",
+        "type": "latent_world"
+      },
+      {
+        "id": "state:coarse-marginals-v1",
+        "label": "shared coarse marginals",
+        "type": "candidate_state"
+      },
+      {
+        "id": "state:required-aligned",
+        "label": "required state block: aligned",
+        "type": "required_state"
+      },
+      {
+        "id": "state:required-anti-aligned",
+        "label": "required state block: anti-aligned",
+        "type": "required_state"
+      },
+      {
+        "id": "evidence:coarse-marginals",
+        "label": "coarse-marginal evidence",
+        "type": "evidence_class"
+      },
+      {
+        "id": "evidence:joint-patch-alignment",
+        "label": "joint patch-alignment evidence",
+        "type": "evidence_class"
+      },
+      {
+        "id": "target:exact-next-interaction",
+        "label": "exact next interaction field",
+        "type": "target"
+      },
+      {
+        "id": "claim:bounded-local-quotient",
+        "label": "bounded counterexample and local quotient only",
+        "type": "claim_ceiling"
+      }
+    ],
+    "links": [
+      {
+        "source": "repo:eco-genetic-criticality",
+        "target": "bridge:eco-genetic-crest-v1",
+        "relation": "provides_source_records",
+        "confidence": "EXTRACTED"
+      },
+      {
+        "source": "repo:crest",
+        "target": "bridge:eco-genetic-crest-v1",
+        "relation": "owns_adapter",
+        "confidence": "EXTRACTED"
+      },
+      {
+        "source": "bridge:eco-genetic-crest-v1",
+        "target": "world:aligned",
+        "relation": "declares_world",
+        "confidence": "EXTRACTED"
+      },
+      {
+        "source": "bridge:eco-genetic-crest-v1",
+        "target": "world:anti-aligned",
+        "relation": "declares_world",
+        "confidence": "EXTRACTED"
+      },
+      {
+        "source": "world:aligned",
+        "target": "state:coarse-marginals-v1",
+        "relation": "shares_candidate_state",
+        "confidence": "EXTRACTED"
+      },
+      {
+        "source": "world:anti-aligned",
+        "target": "state:coarse-marginals-v1",
+        "relation": "shares_candidate_state",
+        "confidence": "EXTRACTED"
+      },
+      {
+        "source": "world:aligned",
+        "target": "state:required-aligned",
+        "relation": "maps_to_required_state",
+        "confidence": "EXTRACTED"
+      },
+      {
+        "source": "world:anti-aligned",
+        "target": "state:required-anti-aligned",
+        "relation": "maps_to_required_state",
+        "confidence": "EXTRACTED"
+      },
+      {
+        "source": "evidence:coarse-marginals",
+        "target": "state:coarse-marginals-v1",
+        "relation": "identifies_only",
+        "confidence": "EXTRACTED"
+      },
+      {
+        "source": "evidence:joint-patch-alignment",
+        "target": "state:required-aligned",
+        "relation": "licenses",
+        "confidence": "EXTRACTED"
+      },
+      {
+        "source": "evidence:joint-patch-alignment",
+        "target": "state:required-anti-aligned",
+        "relation": "licenses",
+        "confidence": "EXTRACTED"
+      },
+      {
+        "source": "bridge:eco-genetic-crest-v1",
+        "target": "target:exact-next-interaction",
+        "relation": "declares_target",
+        "confidence": "EXTRACTED"
+      },
+      {
+        "source": "bridge:eco-genetic-crest-v1",
+        "target": "claim:bounded-local-quotient",
+        "relation": "limited_by",
+        "confidence": "EXTRACTED"
+      }
+    ]
+  }
+}
