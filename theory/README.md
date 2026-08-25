@@ -1,12 +1,10 @@
-# Theory Universe v0.2 — worlds, states, evidence, learning, revision, and warning
+# Theory Universe v0.3 — worlds, states, evidence, learning, revision, and warning
 
 This directory is the **theory-first core** of `theouni`. Species systems, island syndromes, floral traits, SDMs, camera systems, and field protocols are deliberately excluded until the abstract universe is internally coherent.
 
 The programme question is now:
 
-> **What may science safely forget, and what must be retained so that later scientific responsibilities remain revisable?**
-
-The second clause is new in v0.2. CREST defines contract-relative adequate state; TU-1 asks what happens **after that state has already been used as a compression** and the scientific contract later changes.
+> **What may science safely forget, what must remain revisable, and what exactly is the scientific object being learned or licensed?**
 
 ## 1. Constitutional commitments
 
@@ -17,6 +15,7 @@ The second clause is new in v0.2. CREST defines contract-relative adequate state
 5. **Causal uncertainty remains set-valued until discriminating evidence exists.**
 6. **Warning is conditional on a loss-generating state.**
 7. **Scientific forgetting can be revision-irreversible.** A distinction removed by an old stored state cannot be recreated from that state label alone when a later contract requires it.
+8. **Learning value is typed.** Information gained about causal explanation is not the same scientific quantity as evidence that licenses a requested target.
 
 ## 2. Reality, worlds, and snapshots
 
@@ -94,8 +93,6 @@ The state is therefore the maximal **lawful forgetting** compatible with the con
 
 ## 4. Three structural reasons a present merge can fail
 
-These are separate theorem families inside one state universe.
-
 ### Future — CCOC
 
 Opening or changing \(\Gamma\) can expose future-response differences hidden by an old present-state merge.
@@ -160,6 +157,14 @@ A(y)=\{m:\Omega_m\cap E(y)\neq\varnothing\}.
 
 It is not a best-model winner. RACH keeps all compatible programmes and designs observations expected to reduce unresolved causal equivalence.
 
+For verified candidate outcome partitions, the current RACH publication quantity is schematically
+
+\[
+\operatorname{NOV}(Q)=\frac{I(S;Q\mid A_\epsilon)}{K},
+\]
+
+where `S` is the retained causal/switch state and `K` is its declared normalization/cost factor.
+
 Learning is therefore
 
 \[
@@ -167,8 +172,6 @@ Learning is therefore
 \]
 
 not compulsory collapse to one explanation.
-
-CED and RACH remain distinct: predicted ambiguity reduction is not the same object as reliability-qualified licensed resolution.
 
 ## 8. Dynamics, simulator state, and loss state
 
@@ -208,7 +211,7 @@ TU-1 asks a later question:
 
 Let \(P\) be the old stored partition and \(Q\) the revised required partition.
 
-### TU-1A — state-only revision
+### State-only revision
 
 There exists a recoding
 
@@ -220,7 +223,7 @@ iff every old-state block lies inside one revised-state block.
 
 Thus a distinction already forgotten by \(P\) cannot be regenerated from the old state label alone when \(Q\) later requires it.
 
-### TU-1B — exact revision side information
+### Exact revision side information
 
 For each old block \(B\), define
 
@@ -240,44 +243,89 @@ The idealized worst-case revision debt is
 D_{\rm rev}=\log_2 K_{\rm rev}.
 \]
 
-### TU-1D/E — average versus worst-case debt
-
-The global average refinement debt is
+The global average refinement debt satisfies
 
 \[
-D_{\rm avg}
-=
-\log_2|P\vee Q|-\log_2|P|
-=
-\log_2\left(\frac{1}{|P|}\sum_Br_B\right).
+D_{\rm avg}\le D_{\rm rev},
 \]
 
-TU-1 proves
+and for every \(m\ge1\) and \(\varepsilon>0\) there are finite partitions with
 
 \[
-0\le D_{\rm avg}\le D_{\rm rev}.
-\]
-
-More strongly, for every \(m\ge1\) and \(\varepsilon>0\), finite partitions exist with
-
-\[
-\boxed{D_{\rm rev}=m\quad\text{and}\quad D_{\rm avg}<\varepsilon.}
+D_{\rm rev}=m,
+\qquad
+D_{\rm avg}<\varepsilon.
 \]
 
 So a globally tiny update burden can hide an arbitrarily large local revisability problem in one rare old state.
 
-Full statements, proofs, claim ceilings, and the executable construction are in:
+Full source: `TU1_CONTRACT_REVISION.md`.
 
-- `TU1_CONTRACT_REVISION.md`
-- `tu1_registry.json`
-- `contract_revision.py`
-- `verify_tu1.py`
+## 10. TU-2 — causal learning is not target licensing
 
-The factorization/coding substrate is elementary and related to zero-error side-information problems. No standalone information-theory novelty claim is made at this stage.
+RACH and CED can both recommend observations, but they value different objects.
 
-## 10. Canonical worldline
+TU-2 embeds both into one finite product world
 
-The ontic/dynamical side is
+\[
+\Omega=\{0,1\}^m\times\{0,1\},
+\]
+
+with causal state \(S\in\{0,1\}^m\) and independent report target \(T\in\{0,1\}\).
+
+Define experiment
+
+\[
+Q_{k,b}=
+\begin{cases}
+(S_1,\ldots,S_k), & b=0,\\
+(S_1,\ldots,S_k,T), & b=1.
+\end{cases}
+\]
+
+Then for every \(k\),
+
+\[
+I(S;Q_{k,0})=I(S;Q_{k,1})=k,
+\]
+
+but target licensing is opposite:
+
+\[
+L_T(Q_{k,0})=0,
+\qquad
+L_T(Q_{k,1})=1.
+\]
+
+Therefore the same causal-learning score can correspond to either no target resolution or complete target resolution.
+
+Two sharp endpoints are:
+
+\[
+Q_{m,0}:\quad \operatorname{NOV}=1,\ L_T=0,
+\]
+
+and
+
+\[
+Q_{0,1}:\quad \operatorname{NOV}=0,\ L_T=1.
+\]
+
+Thus causal-learning and target-licensing objectives can rank equal-cost experiments in opposite order.
+
+This yields a new type firewall:
+
+\[
+\boxed{\text{CausalLearningValue}\neq\text{TargetLicensingStatus}.}
+\]
+
+The construction is deliberately noiseless. CED's failure/calibration/risk architecture adds a further gate between nominal target separation and licensed reporting.
+
+Full source: `TU2_LEARNING_LICENSING.md`.
+
+## 11. Canonical worldline
+
+### Ontic / dynamical
 
 ```text
 Reality R
@@ -294,7 +342,7 @@ World omega_t ---- dynamics ----> World omega_t+1
 RequiredState q_C(omega_t)
 ```
 
-The epistemic/learning side is
+### Epistemic / learning
 
 ```text
 World
@@ -305,15 +353,19 @@ ObservationRecord
   v
 EvidenceClass
   |\
-  | +--> licensed Report
+  | +--> licensed Report / TargetLicensingStatus
   v
 AdmissibleCausalSet
   |
+  | candidate observation
   v
-NextObservation -> refined evidence/causal set
+CausalLearningValue
+  |
+  v
+new record -> refined evidence / causal set
 ```
 
-A temporal scientific-programme side is now explicit as well:
+### Scientific revision
 
 ```text
 full worlds
@@ -326,7 +378,7 @@ full worlds
        `-- auxiliary revision information / reopen world description
 ```
 
-## 11. Type firewall
+## 12. Type firewall
 
 The following collapses are forbidden without an explicit bridge/theorem:
 
@@ -342,9 +394,10 @@ The following collapses are forbidden without an explicit bridge/theorem:
 | `AdmissibleCausalSet = CausalWinner` | unresolved multiplicity must remain |
 | `WarningStatistic = LossGeneratingState` | warning is a conditional relation |
 | `StoredState = RevisedRequiredState` | every contract change requires a TU-1 factorization check |
-| `RevisionSideInformation = EvidenceClass` | empirical observability/reliability requires a CED-style bridge |
+| `RevisionSideInformation = EvidenceClass` | observability/reliability requires an evidence bridge |
+| `CausalLearningValue = TargetLicensingStatus` | TU-2 proves exact orthogonality in a finite witness family |
 
-## 12. Current ownership
+## 13. Current ownership
 
 | Layer | Owner |
 |---|---|
@@ -358,20 +411,28 @@ The following collapses are forbidden without an explicit bridge/theorem:
 | Loss-state recovery / conditional warning | `eco-genetic-warning-extensions` |
 | Cross-repository type system | `theouni` |
 | Contract revision after compression | `theouni` / TU-1 |
+| RACH/CED learning-licensing bridge firewall | `theouni` / TU-2 |
 
-## 13. Remaining mathematical frontier
+## 14. Theorem modules
 
-Theory Universe v0.2 leaves these as genuine open obligations:
+| Module | Closed finite result | Main open extension |
+|---|---|---|
+| TU-1 | same-carrier revision criterion + exact revision debt + average/worst divergence | carrier-changing revision and lift invariance |
+| TU-2 | causal-learning/target-licensing orthogonality + policy reversal | coincidence theorem under target relevance + failure architecture |
+
+Both modules use elementary finite substrates. Their immediate purpose is to make the theory universe logically typed; publication novelty requires separate prior-art audit.
+
+## 15. Remaining mathematical frontier
 
 1. **Reality -> model adequacy:** when does a model-world projection earn empirical adequacy rather than compatibility only?
 2. **Beyond finite exact state:** stochastic, continuous, approximate, and delayed-observation versions.
 3. **Carrier-changing revision:** extend TU-1 through replacement relations/common lifts and test lift-invariance of revision debt.
-4. **Learning vs licensing:** characterize when RACH information gain and CED licensed-resolution gain coincide or diverge.
+4. **Learning/licensing coincidence:** necessary and sufficient conditions under which RACH ranking and CED risk-limited target ranking agree.
 5. **Representation-invariant loss state:** when do different simulators induce the same loss-generating quotient?
 6. **Warning portability:** when can warning ordering transport across different loss-state spaces without a universal threshold?
 7. **Empirical state discovery:** formulate held-out state adequacy as a factorization problem rather than proxy accumulation.
 
-## 14. Boundary to the empirical universe
+## 16. Boundary to the empirical universe
 
 No species, island syndrome, floral polymorphism, SDM method, visit camera, or field protocol defines the core types.
 
@@ -382,3 +443,11 @@ Empirical projects enter later only through an explicit projection
 \]
 
 with a claim ceiling. Their role is to instantiate, test, falsify, or expose missing coordinates in the theory universe.
+
+## 17. Validation
+
+```text
+python theory/validate_core.py
+python theory/verify_tu1.py
+python theory/verify_tu2.py
+```
