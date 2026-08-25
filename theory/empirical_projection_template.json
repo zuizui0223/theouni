@@ -1,0 +1,75 @@
+{
+  "schema_version": "theouni-empirical-projection.v0.1",
+  "contract_id": "replace-with-stable-contract-id",
+  "empirical_unit": {
+    "unit": "population/site x observation window x relevant cohort",
+    "independence_or_grouping_unit": "whole ecological unit held out together",
+    "spatial_scale": null,
+    "notes": null
+  },
+  "time_alignment": {
+    "candidate_state_time": "t",
+    "target_time_or_horizon": "t+h",
+    "cohort_rule": "candidate and target cohort correspondence must be explicit",
+    "future_leakage_forbidden": true
+  },
+  "candidate_state": [
+    {
+      "id": "Z1",
+      "measurement_kind": "direct_measurement",
+      "calibration_status": "not_applicable",
+      "selected_before_target_inspection": true,
+      "units": null,
+      "notes": "replace with the first preregistered candidate-state coordinate"
+    }
+  ],
+  "upstream_context": [
+    "H_origin_or_history"
+  ],
+  "actions_or_comparisons": [],
+  "target": {
+    "id": "Y_future_endpoint",
+    "endpoint_definition": "replace with one declared future/process endpoint",
+    "direction_of_better_score": "lower",
+    "target_family": null
+  },
+  "observation_reliability": {
+    "source_provenance_fixed": true,
+    "schema_repair_after_outcome_forbidden": true,
+    "known_failure_modes": [],
+    "calibration_reference": null
+  },
+  "validation": {
+    "held_out_unit": "whole ecological unit",
+    "split_fixed_before_outcome_inspection": true,
+    "baseline_model": "design-required baseline covariates only",
+    "candidate_model": "baseline + preregistered Z",
+    "context_model": "baseline + Z + preregistered upstream H",
+    "score": "held-out predictive risk",
+    "uncertainty_method": null
+  },
+  "decision_rules": {
+    "minimum_candidate_gain_delta": 0.0,
+    "maximum_residual_context_gain_epsilon": 0.0,
+    "decision_order": [
+      "G0_provenance_sync",
+      "G1_candidate_predictive_adequacy",
+      "G2_residual_context_redundancy",
+      "G3_unit_holdout",
+      "G4_reliability",
+      "G5_target_action_stress"
+    ]
+  },
+  "decision": "not_yet_evaluated",
+  "claim_ceiling": {
+    "allowed": [
+      "target-relative empirical partial-state support may be claimed only after the preregistered gates pass within the declared validation scope"
+    ],
+    "forbidden": [
+      "complete natural state identified",
+      "upstream context biologically irrelevant",
+      "causal mechanism identified from predictive adequacy alone",
+      "portability outside the held-out/external domain without an additional test"
+    ]
+  }
+}
