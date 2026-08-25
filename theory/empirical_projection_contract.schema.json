@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/zuizui0223/theouni/theory/empirical_projection_contract.schema.json",
+  "title": "Theory Universe empirical projection contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "contract_id",
+    "empirical_unit",
+    "time_alignment",
+    "candidate_state",
+    "upstream_context",
+    "target",
+    "observation_reliability",
+    "validation",
+    "decision_rules",
+    "claim_ceiling"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "theouni-empirical-projection.v0.1"
+    },
+    "contract_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "empirical_unit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["unit", "independence_or_grouping_unit"],
+      "properties": {
+        "unit": {"type": "string", "minLength": 1},
+        "independence_or_grouping_unit": {"type": "string", "minLength": 1},
+        "spatial_scale": {"type": ["string", "null"]},
+        "notes": {"type": ["string", "null"]}
+      }
+    },
+    "time_alignment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["candidate_state_time", "target_time_or_horizon", "cohort_rule", "future_leakage_forbidden"],
+      "properties": {
+        "candidate_state_time": {"type": "string", "minLength": 1},
+        "target_time_or_horizon": {"type": "string", "minLength": 1},
+        "cohort_rule": {"type": "string", "minLength": 1},
+        "future_leakage_forbidden": {"const": true}
+      }
+    },
+    "candidate_state": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "measurement_kind", "calibration_status", "selected_before_target_inspection"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "measurement_kind": {
+            "enum": [
+              "direct_measurement",
+              "calibrated_proxy",
+              "uncalibrated_proxy",
+              "latent_model_estimate",
+              "sensor_derived_event",
+              "aggregate_availability_measure"
+            ]
+          },
+          "calibration_status": {
+            "enum": ["exact", "externally_calibrated", "internally_calibrated", "uncalibrated", "not_applicable"]
+          },
+          "selected_before_target_inspection": {"const": true},
+          "units": {"type": ["string", "null"]},
+          "notes": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "upstream_context": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    },
+    "actions_or_comparisons": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true,
+      "default": []
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "endpoint_definition", "direction_of_better_score"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "endpoint_definition": {"type": "string", "minLength": 1},
+        "direction_of_better_score": {"enum": ["lower", "higher"]},
+        "target_family": {"type": ["string", "null"]}
+      }
+    },
+    "observation_reliability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_provenance_fixed", "schema_repair_after_outcome_forbidden", "known_failure_modes"],
+      "properties": {
+        "source_provenance_fixed": {"const": true},
+        "schema_repair_after_outcome_forbidden": {"const": true},
+        "known_failure_modes": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "calibration_reference": {"type": ["string", "null"]}
+      }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["held_out_unit", "split_fixed_before_outcome_inspection", "baseline_model", "candidate_model", "context_model", "score"],
+      "properties": {
+        "held_out_unit": {"type": "string", "minLength": 1},
+        "split_fixed_before_outcome_inspection": {"const": true},
+        "baseline_model": {"type": "string", "minLength": 1},
+        "candidate_model": {"type": "string", "minLength": 1},
+        "context_model": {"type": "string", "minLength": 1},
+        "score": {"type": "string", "minLength": 1},
+        "uncertainty_method": {"type": ["string", "null"]}
+      }
+    },
+    "decision_rules": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["minimum_candidate_gain_delta", "maximum_residual_context_gain_epsilon", "decision_order"],
+      "properties": {
+        "minimum_candidate_gain_delta": {"type": "number", "minimum": 0},
+        "maximum_residual_context_gain_epsilon": {"type": "number", "minimum": 0},
+        "decision_order": {
+          "const": ["G0_provenance_sync", "G1_candidate_predictive_adequacy", "G2_residual_context_redundancy", "G3_unit_holdout", "G4_reliability", "G5_target_action_stress"]
+        }
+      }
+    },
+    "decision": {
+      "enum": [
+        "not_identifiable",
+        "candidate_state_not_predictively_supported",
+        "predictive_candidate_context_open",
+        "empirical_partial_state_supported",
+        "portable_empirical_partial_state_supported",
+        "not_yet_evaluated"
+      ],
+      "default": "not_yet_evaluated"
+    },
+    "claim_ceiling": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["allowed", "forbidden"],
+      "properties": {
+        "allowed": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "forbidden": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}
