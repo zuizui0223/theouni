@@ -8,14 +8,16 @@ ROOT = Path(__file__).resolve().parents[1]
 CORE = ROOT / "theory" / "core_universe.json"
 TU1 = ROOT / "theory" / "tu1_registry.json"
 TU2 = ROOT / "theory" / "tu2_registry.json"
+TU3 = ROOT / "theory" / "tu3_registry.json"
 
 
 def main() -> None:
     core = json.loads(CORE.read_text(encoding="utf-8"))
     tu1 = json.loads(TU1.read_text(encoding="utf-8"))
     tu2 = json.loads(TU2.read_text(encoding="utf-8"))
+    tu3 = json.loads(TU3.read_text(encoding="utf-8"))
 
-    assert core["schema_version"] == "theouni-theory-core.v0.3"
+    assert core["schema_version"] == "theouni-theory-core.v0.4"
 
     types = core["types"]
     type_ids = [item["id"] for item in types]
@@ -43,6 +45,9 @@ def main() -> None:
         "type:AdmissibleCausalSet",
         "type:CausalLearningValue",
         "type:TargetLicensingStatus",
+        "type:CompleteSimulatorState",
+        "type:LossResponseSignature",
+        "type:RepresentationProjection",
         "type:LossGeneratingState",
         "type:WarningStatistic",
         "type:WarningValidity",
@@ -53,6 +58,8 @@ def main() -> None:
         "op:ContractRevision",
         "op:CausalLearningScore",
         "op:TargetLicensing",
+        "op:LossResponseQuotient",
+        "op:LossRepresentationAudit",
     } <= set(operator_ids)
 
     for collapse in core["forbidden_collapses"]:
@@ -93,11 +100,14 @@ def main() -> None:
     assert ("type:WarningStatistic", "type:LossGeneratingState") in forbidden_pairs
     assert ("type:StoredStateRepresentation", "type:RequiredState") in forbidden_pairs
     assert ("type:CausalLearningValue", "type:TargetLicensingStatus") in forbidden_pairs
+    assert ("type:CompleteSimulatorState", "type:LossGeneratingState") in forbidden_pairs
+    assert ("type:RepresentationProjection", "type:RequiredState") in forbidden_pairs
 
     modules = {item["id"]: item for item in core["theorem_modules"]}
-    assert set(modules) == {"TU-1", "TU-2"}
+    assert set(modules) == {"TU-1", "TU-2", "TU-3"}
     assert modules["TU-1"]["status"] == "finite_exact_same_carrier"
     assert modules["TU-2"]["status"] == "finite_exact_bridge_firewall"
+    assert modules["TU-3"]["status"] == "finite_exact_representation_firewall"
 
     assert tu1["schema_version"] == "theouni-tu1.v1"
     assert tu1["boundary"]["same_finite_carrier_required"] is True
@@ -112,11 +122,17 @@ def main() -> None:
         "TU-2A", "TU-2B", "TU-2C", "TU-2-policy-reversal"
     ]
 
+    assert tu3["schema_version"] == "theouni-tu3.v1"
+    assert tu3["status"] == "finite_exact_representation_firewall"
+    assert [item["id"] for item in tu3["results"]] == [
+        "TU-3A", "TU-3B", "TU-3C", "TU-3D"
+    ]
+
     assert core["empirical_boundary"]["included"] is False
     assert core["open_obligations"], "theory core must preserve open obligations"
 
     print(
-        "Theory Universe v0.3 validated: "
+        "Theory Universe v0.4 validated: "
         f"{len(types)} types, {len(operators)} operators, "
         f"{len(core['forbidden_collapses'])} forbidden collapses, "
         f"{len(core['theorem_modules'])} theorem modules, "
