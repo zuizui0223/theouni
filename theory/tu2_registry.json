@@ -1,0 +1,48 @@
+{
+  "schema_version": "theouni-tu2.v1",
+  "status": "finite_exact_bridge_firewall",
+  "title": "Causal learning and target licensing are orthogonal",
+  "owners": {
+    "causal_learning_source": "repo:microdonta",
+    "target_licensing_source": "repo:ced",
+    "cross_typed_bridge_theorem": "repo:theouni"
+  },
+  "objects": [
+    {"id": "tu2:CausalState", "symbol": "S", "meaning": "RACH causal/switch programme state."},
+    {"id": "tu2:Target", "symbol": "T", "meaning": "CED report target."},
+    {"id": "tu2:Experiment", "symbol": "Q", "meaning": "Finite exact observation record."},
+    {"id": "tu2:CausalInformation", "symbol": "I(S;Q)", "meaning": "Raw causal-programme information gain."},
+    {"id": "tu2:NormalizedNOV", "symbol": "I(S;Q)/m", "meaning": "RACH-style normalized causal learning score in the witness family."},
+    {"id": "tu2:TargetLicensing", "symbol": "L_T(Q)", "meaning": "Whether every resulting evidence class is target-constant in the exact witness."}
+  ],
+  "results": [
+    {
+      "id": "TU-2A",
+      "status": "proved_elementary",
+      "claim": "For every causal information level k, two experiments can have the same I(S;Q)=k while one never licenses the target and the other always licenses it."
+    },
+    {
+      "id": "TU-2B",
+      "status": "proved_construction",
+      "claim": "Maximal normalized RACH-style causal learning can coexist with zero deterministic target licensing."
+    },
+    {
+      "id": "TU-2C",
+      "status": "proved_construction",
+      "claim": "Zero RACH-style causal learning can coexist with complete deterministic target licensing."
+    },
+    {
+      "id": "TU-2-policy-reversal",
+      "status": "proved_construction",
+      "claim": "Equal-cost causal-information and target-licensing objectives can rank the same pair of experiments in opposite order."
+    }
+  ],
+  "claim_ceiling": [
+    "Finite uniform product-world construction.",
+    "Noiseless deterministic evidence classes only in TU-2A-C.",
+    "Does not replace CED failure/risk theory.",
+    "Does not claim general active-learning or information-theory novelty.",
+    "Does not equate mutual information with empirical scientific value."
+  ],
+  "open_extension": "Characterize necessary/sufficient conditions under which RACH causal-learning ranking and CED reliability-qualified target-resolution ranking coincide."
+}
