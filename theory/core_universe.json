@@ -1,7 +1,7 @@
 {
-  "schema_version": "theouni-theory-core.v0.3",
-  "status": "theory_first_core_with_revision_and_learning_licensing",
-  "programme_question": "What may science safely forget, what must remain revisable, and what exactly is the scientific object being learned or licensed?",
+  "schema_version": "theouni-theory-core.v0.4",
+  "status": "theory_first_core_with_revision_learning_licensing_and_loss_invariance",
+  "programme_question": "What may science safely forget, what must remain revisable, what exactly is being learned or licensed, and which required states survive a change of representation?",
   "constitutional_commitments": [
     "Nature is not a state.",
     "Scientific model worlds are not identical to reality.",
@@ -10,7 +10,8 @@
     "Causal uncertainty remains set-valued until discriminating evidence exists.",
     "Warning validity is conditional on a loss-generating state.",
     "Scientific forgetting can be irreversible relative to a later contract when the retained state no longer factors the revised required state.",
-    "Causal-learning value and target-licensing value are distinct scientific utilities and neither determines the other in general."
+    "Causal-learning value and target-licensing value are distinct scientific utilities and neither determines the other in general.",
+    "Raw model representation complexity and loss-generating state complexity are distinct; representation changes preserve loss state only when declared loss responses factor through the representation map."
   ],
   "types": [
     {"id": "type:Reality", "layer": "ontic", "definition": "Temporally extended ecological reality outside the finite theorem domain."},
@@ -32,6 +33,8 @@
     {"id": "type:CausalLearningValue", "layer": "learning_utility", "definition": "Value of an observation for reducing uncertainty about a declared causal-programme object, e.g. RACH NOV."},
     {"id": "type:TargetLicensingStatus", "layer": "epistemic_output", "definition": "Whether an evidence class/reliability contract licenses a requested deterministic target report."},
     {"id": "type:CompleteSimulatorState", "layer": "model_specific", "definition": "Explicit state sufficient under a declared simulator closure; not thereby minimal or natural."},
+    {"id": "type:LossResponseSignature", "layer": "target_response", "definition": "Declared future loss-response object that a loss state is required to preserve."},
+    {"id": "type:RepresentationProjection", "layer": "representation_bridge", "definition": "Declared map between raw model representations; faithfulness must be target-qualified rather than assumed."},
     {"id": "type:LossGeneratingState", "layer": "representational", "definition": "Required state sufficient for a declared downstream loss process under a loss contract."},
     {"id": "type:WarningStatistic", "layer": "measurement", "definition": "Statistic whose temporal ordering relative to loss may be evaluated conditionally within a LossGeneratingState."},
     {"id": "type:WarningValidity", "layer": "conditional_property", "definition": "State-conditional property describing reproducible warning-before-loss ordering under a frozen contract."}
@@ -49,6 +52,8 @@
     {"id": "op:ObservationUpdate", "signature": "EvidenceClass x AdmissibleCausalSet x NextObservation -> refined EvidenceClass x refined AdmissibleCausalSet", "status": "learning_core"},
     {"id": "op:Dynamics", "signature": "World x action -> distribution(World)", "status": "model_specific"},
     {"id": "op:LossContract", "signature": "target loss L -> ScientificContract", "status": "declared_contract"},
+    {"id": "op:LossResponseQuotient", "signature": "ModelWorldUniverse x LossResponseSignature -> LossGeneratingState partition", "status": "finite_exact_tu3_target_response"},
+    {"id": "op:LossRepresentationAudit", "signature": "RepresentationProjection x richer LossResponseSignature x base LossResponseSignature -> faithful OR projection failure", "status": "finite_exact_tu3"},
     {"id": "op:WarningEvaluation", "signature": "LossGeneratingState x WarningStatistic x loss endpoint -> WarningValidity", "status": "conditional"}
   ],
   "structural_obstructions": [
@@ -57,7 +62,8 @@
     {"id": "obstruction:Mechanism", "contract_component": "Theta", "owner": "repo:mrm", "meaning": "Retained mechanisms can disagree on required responses and force state refinement."},
     {"id": "obstruction:Evidence", "contract_component": "D,T", "owner": "repo:ced", "meaning": "Required distinctions can remain unidentified under the available experiment and failure architecture."},
     {"id": "obstruction:Revision", "contract_component": "contract change after compression", "owner": "repo:theouni", "meaning": "A revised required state may fail to factor through a previously stored state representation."},
-    {"id": "obstruction:UtilityCollapse", "contract_component": "learning/report objective", "owner": "repo:theouni", "meaning": "Causal uncertainty reduction does not generally determine target report licensing, or conversely."}
+    {"id": "obstruction:UtilityCollapse", "contract_component": "learning/report objective", "owner": "repo:theouni", "meaning": "Causal uncertainty reduction does not generally determine target report licensing, or conversely."},
+    {"id": "obstruction:RepresentationCollapse", "contract_component": "model representation", "owner": "repo:theouni", "meaning": "A coarse representation fails when one of its fibers contains worlds with different declared loss-response signatures."}
   ],
   "ownership": [
     {"layer": "WorldContractRequiredState", "owner": "repo:crest"},
@@ -70,7 +76,8 @@
     {"layer": "LossStateConditionalWarning", "owner": "repo:eco-genetic-warning-extensions"},
     {"layer": "CrossRepositoryTypeSystem", "owner": "repo:theouni"},
     {"layer": "ContractRevisionAfterCompression", "owner": "repo:theouni"},
-    {"layer": "LearningLicensingBridgeFirewall", "owner": "repo:theouni"}
+    {"layer": "LearningLicensingBridgeFirewall", "owner": "repo:theouni"},
+    {"layer": "LossStateRepresentationFirewall", "owner": "repo:theouni"}
   ],
   "theorem_modules": [
     {
@@ -92,6 +99,16 @@
       "verification": "theory/verify_tu2.py",
       "results": ["TU-2A", "TU-2B", "TU-2C", "TU-2-policy-reversal"],
       "claim_ceiling": "Finite noiseless product-world bridge; does not replace RACH or CED and does not claim generic active-learning novelty."
+    },
+    {
+      "id": "TU-3",
+      "title": "Loss-state representation invariance and nuisance inflation",
+      "status": "finite_exact_representation_firewall",
+      "source": "theory/TU3_LOSS_STATE_INVARIANCE.md",
+      "registry": "theory/tu3_registry.json",
+      "verification": "theory/verify_tu3.py",
+      "results": ["TU-3A", "TU-3B", "TU-3C", "TU-3D"],
+      "claim_ceiling": "Finite exact loss-response factorization; no recursive quotient-dynamics, warning-portability, empirical-natural-state, or standalone abstraction-theory novelty claim."
     }
   ],
   "forbidden_collapses": [
@@ -99,6 +116,7 @@
     {"left": "type:Snapshot", "right": "type:World", "unless": "world definition is explicitly snapshot-only"},
     {"left": "type:Snapshot", "right": "type:RequiredState", "unless": "snapshot sufficiency factorization is proved for the declared contract"},
     {"left": "type:CompleteSimulatorState", "right": "type:RequiredState", "unless": "minimality/quotient equivalence is independently established"},
+    {"left": "type:CompleteSimulatorState", "right": "type:LossGeneratingState", "unless": "the complete simulator state is independently shown to equal the minimal loss-response quotient for the declared contract"},
     {"left": "type:EvidenceClass", "right": "type:RequiredState", "unless": "the evidence partition exactly identifies the required-state partition for the declared carrier"},
     {"left": "type:CausalProgramme", "right": "type:RequiredState", "unless": "response-relevant equivalence under the declared contract is proved"},
     {"left": "type:Report", "right": "type:RequiredState", "unless": "the report is explicitly the fully identified required-state label"},
@@ -106,7 +124,8 @@
     {"left": "type:AdmissibleCausalSet", "right": "type:CausalProgramme", "unless": "the admissible set is a proved singleton under the declared evidence contract"},
     {"left": "type:StoredStateRepresentation", "right": "type:RequiredState", "unless": "the stored representation is the required state for the current contract; later contracts still require a TU-1 revisability test"},
     {"left": "type:RevisionSideInformation", "right": "type:EvidenceClass", "unless": "an explicit observation/reliability contract shows that the side information is empirically obtainable as that evidence object"},
-    {"left": "type:CausalLearningValue", "right": "type:TargetLicensingStatus", "unless": "an explicit restricted bridge theorem proves equivalence for the declared world/target/failure architecture"}
+    {"left": "type:CausalLearningValue", "right": "type:TargetLicensingStatus", "unless": "an explicit restricted bridge theorem proves equivalence for the declared world/target/failure architecture"},
+    {"left": "type:RepresentationProjection", "right": "type:RequiredState", "unless": "the projection fibers are homogeneous for every response responsibility in the declared contract"}
   ],
   "invariants": [
     "RequiredState is defined from scientific interchangeability of worlds, not from measurement convenience.",
@@ -117,15 +136,17 @@
     "Warning portability across distinct LossGeneratingStates is not assumed.",
     "A distinction removed by a stored state label cannot be recovered from that label alone when a revised contract later requires the distinction.",
     "Worst-case local revision debt can be arbitrarily larger than global average partition-refinement debt.",
-    "Causal learning can be maximal while target licensing is absent, and target licensing can be complete while causal learning is zero."
+    "Causal learning can be maximal while target licensing is absent, and target licensing can be complete while causal learning is zero.",
+    "Raw representation detail can increase arbitrarily while loss-state complexity stays fixed when all added coordinates are loss-response nuisance.",
+    "A representation projection is invalid for a loss contract as soon as one projection fiber contains different required loss-response signatures."
   ],
   "open_obligations": [
     "Reality-to-model empirical adequacy theorem/contract.",
     "Stochastic/continuous/approximate extension of finite exact state construction.",
     "Carrier-changing contract revision and lift-invariance of revision debt.",
     "Necessary and sufficient coincidence conditions between RACH causal-learning ranking and CED reliability-qualified target-resolution ranking.",
-    "Representation-invariant definition of LossGeneratingState.",
-    "Cross-state warning portability without universal-threshold assumptions.",
+    "Action-conditioned stochastic loss-state invariance under explicit lumpability/bisimulation conditions.",
+    "Cross-representation and cross-state warning portability without universal-threshold assumptions.",
     "Out-of-sample empirical-state discovery as a factorization problem."
   ],
   "empirical_boundary": {
