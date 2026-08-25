@@ -1,0 +1,89 @@
+{
+  "schema_version": "theouni-reality-theory-bridge-graph.v0.1",
+  "directed": true,
+  "status": "architectural_firewall_outside_frozen_theory_core",
+  "nodes": [
+    {"id": "Reality", "type": "ontic"},
+    {"id": "NamedProject", "type": "project"},
+    {"id": "CR-1", "type": "programme"},
+    {"id": "CR-2", "type": "programme"},
+    {"id": "CR-3", "type": "programme"},
+    {"id": "CR-4", "type": "programme"},
+    {"id": "CR-5", "type": "programme"},
+    {"id": "EmpiricalProjectionGate", "type": "admission_gate"},
+    {"id": "ReliabilityQualification", "type": "evidence_gate"},
+    {"id": "ModelWorldUniverse", "type": "theory_type"},
+    {"id": "ScientificContract", "type": "theory_type"},
+    {"id": "RequiredState", "type": "theory_type"},
+    {"id": "EvidenceClass", "type": "theory_type"},
+    {"id": "EmpiricalPartialStateDecision", "type": "bounded_empirical_claim"},
+    {"id": "ObservationRecord", "type": "epistemic_input"},
+    {"id": "BiologicalEventRecord", "type": "reliability_qualified_record"},
+    {"id": "CandidateWorldSupport", "type": "world_construction_output"},
+    {"id": "CandidateCoordinateSet", "type": "measurement_output"},
+    {"id": "ContextDescriptor", "type": "context_output"},
+    {"id": "HistoryMechanismCandidateSet", "type": "causal_historical_output"}
+  ],
+  "edges": [
+    {"source": "Reality", "target": "NamedProject", "relation": "studied_through"},
+    {"source": "NamedProject", "target": "CR-1", "relation": "typed_as_when_primary"},
+    {"source": "NamedProject", "target": "CR-2", "relation": "typed_as_when_primary"},
+    {"source": "NamedProject", "target": "CR-3", "relation": "typed_as_when_primary"},
+    {"source": "NamedProject", "target": "CR-4", "relation": "typed_as_when_primary"},
+    {"source": "NamedProject", "target": "CR-5", "relation": "typed_as_when_primary"},
+
+    {"source": "CR-1", "target": "ContextDescriptor", "relation": "constructs"},
+    {"source": "CR-2", "target": "HistoryMechanismCandidateSet", "relation": "constructs"},
+    {"source": "CR-3", "target": "CandidateCoordinateSet", "relation": "constructs"},
+    {"source": "CR-4", "target": "CandidateWorldSupport", "relation": "constructs"},
+    {"source": "CR-5", "target": "ObservationRecord", "relation": "constructs"},
+
+    {"source": "ContextDescriptor", "target": "EmpiricalProjectionGate", "relation": "supplies_H"},
+    {"source": "HistoryMechanismCandidateSet", "target": "EmpiricalProjectionGate", "relation": "supplies_H_Theta_candidates"},
+    {"source": "CandidateCoordinateSet", "target": "EmpiricalProjectionGate", "relation": "supplies_Z"},
+    {"source": "CandidateWorldSupport", "target": "EmpiricalProjectionGate", "relation": "constrains_Omega_or_sampling_frame"},
+    {"source": "ObservationRecord", "target": "ReliabilityQualification", "relation": "requires_calibration_failure_contract"},
+    {"source": "ReliabilityQualification", "target": "BiologicalEventRecord", "relation": "licenses_record_semantics"},
+    {"source": "BiologicalEventRecord", "target": "EmpiricalProjectionGate", "relation": "supplies_reliability_qualified_O"},
+
+    {"source": "EmpiricalProjectionGate", "target": "ModelWorldUniverse", "relation": "admits_bounded_world_projection"},
+    {"source": "EmpiricalProjectionGate", "target": "ScientificContract", "relation": "instantiates_contract"},
+    {"source": "EmpiricalProjectionGate", "target": "EmpiricalPartialStateDecision", "relation": "returns_E0_to_E4"},
+    {"source": "ModelWorldUniverse", "target": "RequiredState", "relation": "contract_quotient_input"},
+    {"source": "ScientificContract", "target": "RequiredState", "relation": "defines_required_distinctions"},
+    {"source": "ReliabilityQualification", "target": "EvidenceClass", "relation": "supports_evidence_partition"}
+  ],
+  "path_invariants": [
+    {
+      "id": "PF-1",
+      "source_set": ["CR-1", "CR-2", "CR-3", "CR-4", "CR-5"],
+      "target": "RequiredState",
+      "must_include": "EmpiricalProjectionGate",
+      "meaning": "No concrete programme may directly create a RequiredState."
+    },
+    {
+      "id": "PF-2",
+      "source_set": ["NamedProject"],
+      "target": "RequiredState",
+      "must_include": "EmpiricalProjectionGate",
+      "meaning": "Every named-project route to state language passes the empirical admission gate."
+    },
+    {
+      "id": "PF-3",
+      "source_set": ["CR-5"],
+      "target": "BiologicalEventRecord",
+      "must_include": "ReliabilityQualification",
+      "meaning": "Sensor output cannot become a biological-event record without reliability qualification."
+    }
+  ],
+  "forbidden_direct_edges": [
+    ["CR-1", "RequiredState"],
+    ["CR-2", "RequiredState"],
+    ["CR-3", "RequiredState"],
+    ["CR-4", "RequiredState"],
+    ["CR-5", "RequiredState"],
+    ["NamedProject", "RequiredState"],
+    ["ObservationRecord", "BiologicalEventRecord"],
+    ["CandidateWorldSupport", "RequiredState"]
+  ]
+}
