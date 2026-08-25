@@ -1,40 +1,68 @@
-# Theory Universe v0.3 — consistency and ownership audit
+# Theory Universe v0.5 — consistency and ownership audit
 
-This audit covers only the theoretical core. Empirical species systems, island syndromes, SDM workflows, and sensor platforms remain outside the core until explicit typed projection bridges are defined.
+This audit covers only the theoretical core. Empirical species systems, island syndromes, SDM workflows, sensors, and field platforms remain outside the core until explicit typed projection contracts are defined.
 
-The theory universe now distinguishes four questions:
+The v0.5 core distinguishes eight questions:
 
-1. **What state is required by a scientific contract?**
-2. **Can available evidence identify/report it?**
-3. **If the contract changes later, can the revised state be recovered from what science previously retained?**
-4. **What object is a proposed next observation valuable for learning or licensing?**
+1. **What model world is being represented?**
+2. **What state is required by the scientific contract?**
+3. **Can available evidence identify that state or at least license the requested target?**
+4. **Which causal programmes remain admissible and what observation is valuable for causal learning?**
+5. **If the contract changes later, can the revised state be recovered from what science previously retained?**
+6. **Does a change in raw simulator representation preserve the target-relevant loss state?**
+7. **Is the loss state sufficient for warning evaluation?**
+8. **Does within-state warning behaviour transport across different states/domains?**
 
-## 1. Canonical projection
+---
+
+## 1. Canonical projection table
 
 | Repository/module | Main input | Owned question | Main output | Forbidden upgrade |
 |---|---|---|---|---|
-| `crest` | model worlds + full scientific contract | what is the least adequate state on a declared common carrier? | `RequiredState`, carrier/evidence gates | intrinsic natural state |
+| `crest` | model worlds + scientific contract | what is the least adequate state on a declared common carrier? | `RequiredState`, carrier/evidence gates | intrinsic natural state |
 | `ccoc` | changed future grammar `Gamma` | can new futures expose a distinction hidden by an old merge? | future obstruction / interface lower bound | history theorem |
 | `mltr` | source/target systems + replacement/history | can inherited macro meaning transport; if not, what repair/history is needed? | transported/repaired partition | empirically inferred history from declaration alone |
 | `mrm` | candidate mechanisms `Theta` + actions | which mechanism differences alter required responses? | candidate-safe state / typed or set-valued law | mechanism truth |
 | `ced` | experiment/failure contract `D` + target `T` | what distinctions/reports are evidentially licensed? | `EvidenceClass`, licensed `Report` | structural state adequacy |
 | `microdonta` / RACH | causal programmes + observations | which causal programmes remain and what should be measured next for causal learning? | `AdmissibleCausalSet`, `NextObservation`, NOV | best-model winner or target license |
 | `eco-genetic-criticality` | explicit simulator closure | what dynamics and complete-state sufficiency hold in the declared simulator? | `CompleteSimulatorState`, dynamic evidence | minimal/natural state |
-| `eco-genetic-warning-extensions` | frozen loss process + endpoint | when does warning reproduce within a loss-generating state and where does portability fail? | `WarningValidity`, candidate empirical state tests | universal threshold |
-| `theouni` / TU-1 | old stored state + revised required state | is revision possible after compression, and what exact auxiliary information is minimally required? | revisability criterion, revision debt | physical irreversibility or Shannon/sampling cost |
-| `theouni` / TU-2 | RACH causal state + CED target + candidate experiment | does causal-learning value imply target-licensing value, or conversely? | exact orthogonality / policy-reversal witnesses | universal experiment ranking |
+| `eco-genetic-warning-extensions` | warning-blind frozen loss domain + endpoints | when does warning reproduce within a domain and where does portability fail empirically? | `WarningValidity`, partial-state tests, portability bounds | universal threshold or complete natural state |
+| `theouni` / TU-1 | stored old state + revised required state | can a revised state be recovered after compression? | revisability criterion, idealized revision debt | physical irreversibility / empirical cost |
+| `theouni` / TU-2 | causal state + target + candidate experiment | does causal-learning value imply target licensing? | exact orthogonality and policy-reversal witnesses | universal experiment ranking |
+| `theouni` / TU-3 | representation projection + loss-response signature | does a representation preserve the loss-relevant quotient? | loss-faithful factorization / representation failure | natural-state minimality |
+| `theouni` / TU-4 | loss response + warning response + cross-state correspondence | is loss state enough for warning, and does warning transport? | `WarningEvaluationState`, portability criterion | universal warning threshold / empirical portability |
+
+---
 
 ## 2. State-type firewall
 
+The following objects are not interchangeable:
+
 ```text
 CREST RequiredState
-!= eco-genetic CompleteSimulatorState
+!= CompleteSimulatorState
 != EvidenceClass
 != AdmissibleCausalSet
 != WarningStatistic
 ```
 
-`LossGeneratingState` is a specialization of `RequiredState` only after a loss contract and adequate quotient have been declared.
+Target-specific state hierarchy:
+
+```text
+RequiredState(C)
+   |
+   +--> LossGeneratingState       [C specialized to loss response]
+            |
+            `--> WarningEvaluationState [joint loss + warning response]
+```
+
+with
+
+```text
+LossGeneratingState <= WarningEvaluationState
+```
+
+in the partition-refinement order. Equality requires warning response to factor through the loss-state quotient.
 
 Likewise:
 
@@ -44,106 +72,41 @@ StoredStateRepresentation != RevisedRequiredState
 
 unless TU-1 factorization passes.
 
+---
+
 ## 3. CREST-J1 versus TU-1
 
-CREST-J1 begins while world-level distinctions remain available on a common lift. It constructs the least partition satisfying the joint Future / History / Mechanism / Evidence-Target obligations. Noncommuting audits still converge under fair iteration.
+CREST-J1 begins while world-level distinctions remain available on a common lift and constructs the least partition satisfying the joint contract. Noncommuting audits can still converge under fair iteration.
 
-TU-1 begins **after an earlier compression has already been stored**.
+TU-1 begins **after a previous compression has already been stored**.
 
-For old partition `P` and revised required partition `Q`, exact state-only revision exists iff
-
-\[
-q_Q=f\circ q_P,
-\]
-
-or equivalently every `P` block lies inside one `Q` block.
-
-If that fails, the exact minimum auxiliary alphabet is
+For old partition `P` and revised required partition `Q`, state-only revision exists iff
 
 \[
-K_{rev}(P\to Q)=\max_{B\in P}|\{C\in Q:B\cap C\neq\varnothing\}|.
+q_Q=f\circ q_P.
 \]
 
-Thus TU-1 is not another closure-commutation theorem. It is a theorem about **revision after forgetting**.
+When this fails, TU-1 gives the exact minimum finite auxiliary label needed in its same-carrier setting. TU-1 is therefore a revision-after-forgetting result, not another closure-commutation result.
 
-## 4. Present compression versus future revisability
+---
 
-The old statement
+## 4. RACH versus CED versus TU-2
 
-> state = what science may safely forget for the current contract
+RACH values reduction of uncertainty about a declared causal-programme object. CED values defensible target reporting under a reliability/failure/risk contract.
 
-is now qualified by
+TU-2 shows that these utilities are not interchangeable even before observation failure is introduced.
 
-> an old scientifically safe forgetting can create a later revision obligation when the contract changes.
-
-This does not imply that maximal detail should always be retained. It exposes a tradeoff between present compression and future revisability.
-
-TU-1 further separates:
-
-\[
-D_{avg}
-=
-\log_2\left(\frac{1}{|P|}\sum_Br_B\right)
-\]
-
-from
-
-\[
-D_{rev}=\log_2\max_Br_B.
-\]
-
-The first is a global average split burden; the second is a worst-case local revision burden. TU-1 proves `D_avg <= D_rev` and an arbitrary divergence family.
-
-## 5. RACH versus CED versus TU-2
-
-RACH's validated observation score is causal-programme information reduction. CED's terminal criterion is whether evidence licenses the requested target under the declared experiment/reliability contract.
-
-These are different estimands.
-
-TU-2 makes the difference exact on one world universe
-
-\[
-\Omega=\{0,1\}^m\times\{0,1\},
-\]
-
-with causal state `S` and independent target `T`.
-
-For
-
-\[
-Q_{k,b}=\text{first k causal bits, optionally plus T},
-\]
-
-both `b=0` and `b=1` give
-
-\[
-I(S;Q)=k,
-\]
-
-but target licensing is respectively 0 and 1.
-
-Therefore:
+On one finite product universe, equal-cost observations can have
 
 ```text
-same causal-learning value
-    can imply
-no target license OR complete target license
+maximal normalized causal-learning value + zero target license
 ```
 
-and the sharp endpoints are
+or
 
 ```text
-maximal causal NOV + zero target license
-zero causal NOV + complete target license
+zero causal-learning value + complete target license.
 ```
-
-for equal-cost witness experiments.
-
-## 6. TU-2 does not replace CED failure theory
-
-TU-2 uses noiseless exact records to isolate semantic orthogonality.
-
-CED adds another independent requirement: a nominal target split must be trustworthy under detection, calibration, dependence, reset, risk, and cost assumptions.
 
 The correct chain is therefore
 
@@ -153,105 +116,192 @@ causal-learning value
     != reliability-qualified target licensing
 ```
 
-A future coincidence theorem must state conditions for all three to align; they are not aligned by default.
+A future coincidence theorem must state conditions under which these align; alignment is not the default.
 
-## 7. MRM / RACH / CED remain different
+---
 
-- **MRM:** given candidate mechanisms, determine response-relevant mechanism equivalence and a mechanism-safe law/report.
-- **RACH:** given data/model family, retain admissible causal programmes and value observations for reducing causal ambiguity.
-- **CED:** given evidence/failure/target contract, determine what reports are licensed and which experiment meets a risk/cost objective.
+## 5. Complete simulator state versus TU-3 loss state
 
-A candidate bridge can use
+A complete simulator state may be future-sufficient under its declared Markov closure. That says nothing by itself about minimality for a particular loss endpoint.
+
+TU-3 defines a representation projection `pi` as loss-faithful exactly when the declared loss response factors through it:
+
+\[
+r_L=\bar r_L\circ\pi.
+\]
+
+Consequences:
+
+- arbitrary nuisance coordinates can inflate raw simulator state without increasing the loss quotient;
+- one hidden loss-relevant coordinate is sufficient to make a coarse projection invalid;
+- representation equivalence is always target-qualified.
+
+Thus
 
 ```text
-RACH -> MRM -> CED
+more model detail != more loss-relevant ecological state
 ```
 
-but the bridge must not identify the three estimands.
+and
 
-## 8. Required state versus evidence versus report
+```text
+CompleteSimulatorState != LossGeneratingState
+```
+
+unless an independent minimality/equality result is proved.
+
+---
+
+## 6. Loss state versus TU-4 warning state
+
+The previous phrase
+
+> warning is conditional on a loss-generating state
+
+is retained only as an **ordering/conditioning rule**: the loss domain must be fixed warning-blind before warning performance is evaluated.
+
+It is not an assertion that loss state automatically determines warning behaviour.
+
+TU-4 defines warning-evaluation state from the joint response
+
+\[
+(r_L,r_G).
+\]
+
+Hence
+
+\[
+Q_{loss}\preceq Q_{warn}.
+\]
+
+Two worlds can share the same loss future while having different warning lead/tie/lag response. They then belong to the same loss state but different warning-evaluation states.
+
+This protects the empirical warning programme from over-generalization: strict warning replication inside one frozen domain is compatible with bounded or failed portability across other domains.
+
+---
+
+## 7. Within-state reproducibility versus portability
+
+`eco-genetic-warning-extensions` empirically separates:
+
+```text
+C2: loss process fixed warning-blind
+ -> C3: warning tested within frozen domain
+ -> C4: portability tested across separately calibrated domains
+```
+
+Theory Universe v0.5 mirrors this as:
+
+```text
+LossGeneratingState
+ -> WarningEvaluationState
+ -> within-state WarningValidity
+ -> cross-state WarningPortability audit
+```
+
+Therefore:
+
+```text
+within-state replication != universal threshold != cross-state portability
+```
+
+No graph or theorem bridge may collapse these claims.
+
+---
+
+## 8. Evidence versus required state versus report
 
 Let `J` be a required-state partition and `E` an evidence partition.
 
 1. `E` resolves `J`: full state report licensed.
-2. `E` does not resolve `J`, but target is constant within each evidence class: target-only report licensed.
-3. target varies within an evidence class: ambiguity must be retained.
+2. `E` does not resolve `J`, but target is constant on every relevant evidence class: target-only report licensed.
+3. target varies inside an evidence class: ambiguity must be retained.
 
-Evidence cannot create a structural distinction that the contract did not require.
+Evidence cannot manufacture a structural distinction absent from the contract.
 
-TU-1 adds a time-indexed issue: even if old evidence once licensed old state `P`, a later required `Q` may not factor through the stored representation.
+TU-1 adds a time-indexed issue: old evidence may have licensed old state `P`, yet a later required state `Q` may not factor through the stored state representation.
 
 TU-2 adds an objective-indexed issue: an observation can improve causal identification without improving the requested report, or vice versa.
 
-## 9. Simulator sufficiency and loss state
+---
 
-`eco-genetic-criticality` may prove one explicit simulator state future-sufficient under its Markov closure. CREST may seek a coarser required quotient for a declared target. These are compatible because sufficient does not imply minimal.
+## 9. Reality-to-model firewall
 
-For warning, the order remains:
+All current theorem modules operate on declared mathematical/model worlds.
 
-```text
-loss endpoint L
-   -> loss contract C_L
-   -> RequiredState / LossGeneratingState S_L
-   -> within-state warning test
-   -> portability test across separately calibrated states
-```
-
-A warning statistic cannot be upgraded to a universal state.
-
-## 10. Reality-to-model firewall
-
-All finite theory modules operate on declared model worlds. Every empirical application must specify at least:
+Every empirical application must specify at least:
 
 - empirical unit and time/cohort;
 - observed and unobserved coordinates;
-- model-world universe/carrier;
+- candidate model-world universe/carrier;
 - scientific contract and target;
 - observation/reliability model;
+- external/held-out adequacy criterion if state status is claimed;
 - claim ceiling and known non-identifiabilities.
 
-Without this bridge, a theorem can motivate an empirical question but does not establish an empirical ecological state.
+Without this bridge, theory may motivate an empirical question but does not establish an empirical ecological state.
 
-## 11. Current non-contradiction result
+---
 
-The theory core remains logically coherent if qualified types are respected.
+## 10. Current non-contradiction result
 
-The main apparent conflicts are type collisions rather than theorem contradictions:
+The theory core is logically coherent if qualified types are respected.
+
+The principal apparent conflicts are type collisions, not theorem contradictions:
 
 - complete simulator state versus least adequate state;
 - required state versus evidence class;
 - mechanism-safe law versus admissible causal set;
 - causal-learning value versus target-licensing status;
-- warning statistic versus loss-generating state;
-- old stored state versus revised required state.
+- stored state versus revised required state;
+- raw representation complexity versus loss-state complexity;
+- loss-generating state versus warning-evaluation state;
+- within-state warning validity versus cross-state portability.
 
-The last two cross-program collisions are now formal theorem modules rather than prose warnings.
+TU-1 through TU-4 turn the last four collisions into explicit finite firewalls rather than prose cautions.
 
-## 12. Theorem frontier
+---
 
-### Closed finite modules
+## 11. Closed finite modules
 
-- CREST-J1: common-lift least state;
-- CCOC: future obstruction;
-- MLTR: history transport/repair;
-- MRM: mechanism-safe state/law;
-- CED: evidence/reportability;
-- RACH: causal admissibility/NOV;
-- TU-1A–E: same-carrier revision after compression;
-- TU-2A–C: causal-learning/target-licensing orthogonality and policy reversal.
+Current closed finite modules/inputs include:
 
-### Next targets
+- CREST common-carrier least-state substrate;
+- CCOC future obstruction;
+- MLTR history transport/repair;
+- MRM mechanism-safe state/law;
+- CED evidence/reportability;
+- RACH causal admissibility/NOV;
+- TU-1A–E revision after compression;
+- TU-2A–C plus policy reversal;
+- TU-3A–D representation-faithful loss state;
+- TU-4A–D warning-state refinement and finite portability criterion.
 
-1. **TU-1F:** carrier-changing revision through replacement relations/common lifts; test lift-invariance of revision debt.
-2. **TU-2D:** necessary/sufficient coincidence conditions for RACH ranking and CED reliability-qualified target ranking.
-3. **Loss-state representation theorem:** when different simulator representations induce the same loss-generating quotient.
-4. **Warning portability theorem:** weakest map that transports warning ordering without a universal threshold.
-5. **Empirical-state factorization:** out-of-sample criterion for when measured coordinates actually close a future target.
+`theouni` does not transfer ownership of the source theorem programmes.
+
+---
+
+## 12. Remaining frontier
+
+The next theoretical work should close cross-layer gaps rather than add another named module by default.
+
+Priority open problems:
+
+1. **Reality -> model adequacy** — formal conditions for empirical rather than merely mathematical adequacy.
+2. **Beyond finite exact** — stochastic, continuous, approximate and delayed-observation extensions.
+3. **Carrier-changing revision** — revision through replacement relations/common lifts and invariant revision cost.
+4. **Learning/licensing coincidence** — necessary and sufficient conditions for causal-learning and risk-limited target rankings to agree.
+5. **Empirical-state factorization** — when measured coordinates close a held-out future target and make origin/history/mechanism residual information redundant.
+6. **Empirical warning-state identification** — when measurable natural coordinates identify enough of the warning-evaluation state to support portability claims.
+
+The most direct bridge to the concrete biological portfolio is now **empirical-state factorization**.
+
+---
 
 ## 13. Novelty firewall
 
-TU-1 factorization/side-information and TU-2 product-information constructions use elementary mathematical substrates and overlap broad prior art in quotient theory, zero-error side-information coding, information theory, decision-relevant experiment design, and active learning.
+TU-1 through TU-4 use finite factorization, quotient, coding, information, and response-equivalence constructions with substantial classical mathematical relatives.
 
-Their current status is therefore **theory-universe infrastructure**, not automatically publication-level mathematical novelty.
+Their present role is **Theory Universe infrastructure and cross-layer logical discipline**. Standalone mathematical novelty is not assumed.
 
-A future `theouni` primary theory paper should require a stronger cross-layer result such as TU-1F, TU-2D, representation-invariant loss state, or warning portability rather than relying on elementary bridge firewalls alone.
+A future primary `theouni` paper should require a stronger result that couples layers in a way not reducible to the existing source theories or elementary quotient/factorization machinery—most plausibly empirical-state factorization with a nontrivial generalization theorem, a carrier-changing revision result, or a reliability-aware learning/licensing coincidence theorem.
