@@ -1,7 +1,7 @@
 {
-  "schema_version": "theouni-theory-core.v0.2",
-  "status": "theory_first_core_with_contract_revision",
-  "programme_question": "What may science safely forget, and what must be retained so that later scientific responsibilities remain revisable?",
+  "schema_version": "theouni-theory-core.v0.3",
+  "status": "theory_first_core_with_revision_and_learning_licensing",
+  "programme_question": "What may science safely forget, what must remain revisable, and what exactly is the scientific object being learned or licensed?",
   "constitutional_commitments": [
     "Nature is not a state.",
     "Scientific model worlds are not identical to reality.",
@@ -9,7 +9,8 @@
     "Evidence constrains identification and reportability but does not create ontic distinctions.",
     "Causal uncertainty remains set-valued until discriminating evidence exists.",
     "Warning validity is conditional on a loss-generating state.",
-    "Scientific forgetting can be irreversible relative to a later contract when the retained state no longer factors the revised required state."
+    "Scientific forgetting can be irreversible relative to a later contract when the retained state no longer factors the revised required state.",
+    "Causal-learning value and target-licensing value are distinct scientific utilities and neither determines the other in general."
   ],
   "types": [
     {"id": "type:Reality", "layer": "ontic", "definition": "Temporally extended ecological reality outside the finite theorem domain."},
@@ -28,6 +29,8 @@
     {"id": "type:CausalProgramme", "layer": "causal_model", "definition": "Declared causal mechanism/program family element supporting a subset of model worlds."},
     {"id": "type:AdmissibleCausalSet", "layer": "epistemic_causal", "definition": "Causal programmes whose supported worlds intersect the current EvidenceClass."},
     {"id": "type:NextObservation", "layer": "learning", "definition": "Feasible observation selected to refine EvidenceClass or AdmissibleCausalSet."},
+    {"id": "type:CausalLearningValue", "layer": "learning_utility", "definition": "Value of an observation for reducing uncertainty about a declared causal-programme object, e.g. RACH NOV."},
+    {"id": "type:TargetLicensingStatus", "layer": "epistemic_output", "definition": "Whether an evidence class/reliability contract licenses a requested deterministic target report."},
     {"id": "type:CompleteSimulatorState", "layer": "model_specific", "definition": "Explicit state sufficient under a declared simulator closure; not thereby minimal or natural."},
     {"id": "type:LossGeneratingState", "layer": "representational", "definition": "Required state sufficient for a declared downstream loss process under a loss contract."},
     {"id": "type:WarningStatistic", "layer": "measurement", "definition": "Statistic whose temporal ordering relative to loss may be evaluated conditionally within a LossGeneratingState."},
@@ -41,6 +44,8 @@
     {"id": "op:EvidenceCompatibility", "signature": "ObservationRecord x ScientificContract -> EvidenceClass", "status": "finite_exact_core"},
     {"id": "op:TargetReport", "signature": "EvidenceClass x target T -> Report", "status": "finite_exact_core"},
     {"id": "op:CausalAdmissibility", "signature": "EvidenceClass x {CausalProgramme} -> AdmissibleCausalSet", "status": "declared_model_family"},
+    {"id": "op:CausalLearningScore", "signature": "AdmissibleCausalSet x NextObservation -> CausalLearningValue", "status": "source_owned_by_rach"},
+    {"id": "op:TargetLicensing", "signature": "EvidenceClass x target T x reliability contract -> TargetLicensingStatus", "status": "source_owned_by_ced"},
     {"id": "op:ObservationUpdate", "signature": "EvidenceClass x AdmissibleCausalSet x NextObservation -> refined EvidenceClass x refined AdmissibleCausalSet", "status": "learning_core"},
     {"id": "op:Dynamics", "signature": "World x action -> distribution(World)", "status": "model_specific"},
     {"id": "op:LossContract", "signature": "target loss L -> ScientificContract", "status": "declared_contract"},
@@ -51,7 +56,8 @@
     {"id": "obstruction:History", "contract_component": "H", "owner": "repo:mltr", "meaning": "Replacement/turnover can invalidate inherited macro-state meaning and require repair/history augmentation."},
     {"id": "obstruction:Mechanism", "contract_component": "Theta", "owner": "repo:mrm", "meaning": "Retained mechanisms can disagree on required responses and force state refinement."},
     {"id": "obstruction:Evidence", "contract_component": "D,T", "owner": "repo:ced", "meaning": "Required distinctions can remain unidentified under the available experiment and failure architecture."},
-    {"id": "obstruction:Revision", "contract_component": "contract change after compression", "owner": "repo:theouni", "meaning": "A revised required state may fail to factor through a previously stored state representation."}
+    {"id": "obstruction:Revision", "contract_component": "contract change after compression", "owner": "repo:theouni", "meaning": "A revised required state may fail to factor through a previously stored state representation."},
+    {"id": "obstruction:UtilityCollapse", "contract_component": "learning/report objective", "owner": "repo:theouni", "meaning": "Causal uncertainty reduction does not generally determine target report licensing, or conversely."}
   ],
   "ownership": [
     {"layer": "WorldContractRequiredState", "owner": "repo:crest"},
@@ -63,7 +69,8 @@
     {"layer": "EcoGeneticDynamicsSimulatorBoundary", "owner": "repo:eco-genetic-criticality"},
     {"layer": "LossStateConditionalWarning", "owner": "repo:eco-genetic-warning-extensions"},
     {"layer": "CrossRepositoryTypeSystem", "owner": "repo:theouni"},
-    {"layer": "ContractRevisionAfterCompression", "owner": "repo:theouni"}
+    {"layer": "ContractRevisionAfterCompression", "owner": "repo:theouni"},
+    {"layer": "LearningLicensingBridgeFirewall", "owner": "repo:theouni"}
   ],
   "theorem_modules": [
     {
@@ -75,6 +82,16 @@
       "verification": "theory/verify_tu1.py",
       "results": ["TU-1A", "TU-1B", "TU-1C", "TU-1D", "TU-1E"],
       "claim_ceiling": "Finite same-carrier representational revision; not physical irreversibility, Shannon rate, empirical sampling cost, or a standalone information-theory novelty claim."
+    },
+    {
+      "id": "TU-2",
+      "title": "Causal learning and target licensing are orthogonal",
+      "status": "finite_exact_bridge_firewall",
+      "source": "theory/TU2_LEARNING_LICENSING.md",
+      "registry": "theory/tu2_registry.json",
+      "verification": "theory/verify_tu2.py",
+      "results": ["TU-2A", "TU-2B", "TU-2C", "TU-2-policy-reversal"],
+      "claim_ceiling": "Finite noiseless product-world bridge; does not replace RACH or CED and does not claim generic active-learning novelty."
     }
   ],
   "forbidden_collapses": [
@@ -88,7 +105,8 @@
     {"left": "type:WarningStatistic", "right": "type:LossGeneratingState", "unless": "never; these are distinct type categories"},
     {"left": "type:AdmissibleCausalSet", "right": "type:CausalProgramme", "unless": "the admissible set is a proved singleton under the declared evidence contract"},
     {"left": "type:StoredStateRepresentation", "right": "type:RequiredState", "unless": "the stored representation is the required state for the current contract; later contracts still require a TU-1 revisability test"},
-    {"left": "type:RevisionSideInformation", "right": "type:EvidenceClass", "unless": "an explicit observation/reliability contract shows that the side information is empirically obtainable as that evidence object"}
+    {"left": "type:RevisionSideInformation", "right": "type:EvidenceClass", "unless": "an explicit observation/reliability contract shows that the side information is empirically obtainable as that evidence object"},
+    {"left": "type:CausalLearningValue", "right": "type:TargetLicensingStatus", "unless": "an explicit restricted bridge theorem proves equivalence for the declared world/target/failure architecture"}
   ],
   "invariants": [
     "RequiredState is defined from scientific interchangeability of worlds, not from measurement convenience.",
@@ -98,13 +116,14 @@
     "A CompleteSimulatorState may be sufficient without being minimal, natural, or empirically identifiable.",
     "Warning portability across distinct LossGeneratingStates is not assumed.",
     "A distinction removed by a stored state label cannot be recovered from that label alone when a revised contract later requires the distinction.",
-    "Worst-case local revision debt can be arbitrarily larger than global average partition-refinement debt."
+    "Worst-case local revision debt can be arbitrarily larger than global average partition-refinement debt.",
+    "Causal learning can be maximal while target licensing is absent, and target licensing can be complete while causal learning is zero."
   ],
   "open_obligations": [
     "Reality-to-model empirical adequacy theorem/contract.",
     "Stochastic/continuous/approximate extension of finite exact state construction.",
     "Carrier-changing contract revision and lift-invariance of revision debt.",
-    "Formal divergence or coincidence conditions between RACH information gain and CED licensed-resolution gain.",
+    "Necessary and sufficient coincidence conditions between RACH causal-learning ranking and CED reliability-qualified target-resolution ranking.",
     "Representation-invariant definition of LossGeneratingState.",
     "Cross-state warning portability without universal-threshold assumptions.",
     "Out-of-sample empirical-state discovery as a factorization problem."
