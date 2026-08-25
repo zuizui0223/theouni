@@ -1,7 +1,7 @@
 {
   "schema_version": "theouni-provenance.v1",
-  "generated_at": "2026-08-25T06:31:49.572265+00:00",
-  "repository_role": "meta-registry; no transfer of scientific ownership",
+  "generated_at": "2026-08-25T08:12:00+00:00",
+  "repository_role": "theory-first core plus meta-registry; no transfer of source scientific ownership",
   "registry_version": "zuizui0223-research-universe/1.2",
   "repository_count": 24,
   "source_snapshots": {
@@ -38,8 +38,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4799,
-      "sha256": "6f200b4fc87789bfca6f13f9294e8829d81f61b236889083d01b5b0c8c428c08"
+      "bytes": 6396,
+      "sha256": "cc8ea60b87bc30b2d42c88d143ce7749d23a607d3ecfd72c1d3e5573d639c70f"
     },
     {
       "path": "universe/ARCHITECTURE.md",
@@ -88,8 +88,8 @@
     },
     {
       "path": "scripts/write_provenance_manifest.py",
-      "bytes": 1789,
-      "sha256": "ca3c8069a1c019ebabde2c2d18864d936c659cf786df0d6f1b1acb0da44c0252"
+      "bytes": 1819,
+      "sha256": "5287bb6082f11757f9fd13adacf520acb9c1cb587c01136a76ff2d0a5113bf02"
     },
     {
       "path": "scripts/validate_universe.py",
