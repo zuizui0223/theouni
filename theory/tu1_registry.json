@@ -1,0 +1,96 @@
+{
+  "schema_version": "theouni-tu1.v1",
+  "status": "finite_exact_same_carrier",
+  "title": "Contract revision, irreversible forgetting, and revision debt",
+  "question": "After a scientific contract has compressed model worlds into a state, can a later required state be recovered from that stored state alone, and if not, what is the minimum exact auxiliary information required?",
+  "boundary": {
+    "same_finite_carrier_required": true,
+    "world_level_joint_state_owned_by": "repo:crest",
+    "revision_after_compression_owned_by": "repo:theouni",
+    "carrier_changing_revision": "open",
+    "empirical_claim": false,
+    "information_theory_novelty_claim": false
+  },
+  "objects": [
+    {
+      "id": "tu1:OldStatePartition",
+      "symbol": "P",
+      "meaning": "Partition stored under an earlier scientific contract."
+    },
+    {
+      "id": "tu1:RevisedRequiredPartition",
+      "symbol": "Q",
+      "meaning": "World-level required partition under a later or joint contract."
+    },
+    {
+      "id": "tu1:SplitMultiplicity",
+      "symbol": "r_B(P,Q)",
+      "meaning": "Number of revised-state blocks intersecting old block B."
+    },
+    {
+      "id": "tu1:RevisionAlphabet",
+      "symbol": "K_rev(P->Q)",
+      "meaning": "Maximum split multiplicity and exact minimum auxiliary alphabet size."
+    },
+    {
+      "id": "tu1:RevisionDebt",
+      "symbol": "D_rev(P->Q)",
+      "meaning": "log2 K_rev; idealized worst-case local revision burden."
+    },
+    {
+      "id": "tu1:AverageRefinementDebt",
+      "symbol": "D_avg(P,Q)",
+      "meaning": "log2(|P join Q|/|P|); global average split burden."
+    }
+  ],
+  "results": [
+    {
+      "id": "TU-1A",
+      "status": "proved_elementary",
+      "claim": "The revised state factors through the old state label iff every old-state block lies inside one revised-state block.",
+      "claim_ceiling": "Finite deterministic factorization on one common carrier."
+    },
+    {
+      "id": "TU-1B",
+      "status": "proved_elementary",
+      "claim": "The exact minimum auxiliary alphabet size for revision is max_B r_B(P,Q).",
+      "claim_ceiling": "Zero-error finite auxiliary labels; not Shannon rate or empirical sampling cost."
+    },
+    {
+      "id": "TU-1C",
+      "status": "proved_elementary",
+      "claim": "Revision debt is monotone upward under refinement of the revised required partition and monotone downward under refinement of the retained old partition.",
+      "claim_ceiling": "Partition-order statement only."
+    },
+    {
+      "id": "TU-1D",
+      "status": "proved_elementary",
+      "claim": "Global average refinement debt is bounded above by worst-case revision debt.",
+      "claim_ceiling": "Finite partition-count comparison."
+    },
+    {
+      "id": "TU-1E",
+      "status": "proved_construction",
+      "claim": "For every m>=1 and epsilon>0, finite partitions exist with m bits of worst-case revision debt and average refinement debt below epsilon.",
+      "claim_ceiling": "Existence construction; no claim about empirical frequency."
+    }
+  ],
+  "composition": {
+    "world_level_stage": "Compute Q for the revised/joint contract using the CREST common-lift construction.",
+    "revision_stage": "Apply TU-1 to test whether Q factors through stored P and, if not, quantify exact auxiliary revision requirements.",
+    "prohibited_shortcut": "Do not assume an old scientifically adequate state remains revisable after the contract changes."
+  },
+  "prior_art_firewall": [
+    "Closure-operator joint-state existence/order independence remains CREST-J1 and classical fixed-point substrate.",
+    "TU-1A is elementary quotient factorization.",
+    "TU-1B is closely related to finite zero-error coding / side-information partition problems.",
+    "Do not claim standalone information-theory novelty without a dedicated prior-art audit."
+  ],
+  "open_extensions": [
+    "Carrier-changing revision through a declared replacement relation or faithful common lift.",
+    "Lift-invariance of revision debt.",
+    "Probabilistic/expected revision cost under a declared world distribution.",
+    "Approximate revision under tolerance-qualified state equivalence.",
+    "Empirical revision cost when auxiliary labels must be measured through a failure-prone observation contract."
+  ]
+}
