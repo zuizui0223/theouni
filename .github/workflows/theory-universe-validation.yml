@@ -59,3 +59,6 @@ jobs:
 
       - name: Validate Concrete Research Universe
         run: python empirical/validate_empirical_universe.py
+
+      - name: Validate Reality-to-Theory path firewalls
+        run: python empirical/validate_reality_theory_graph.py
