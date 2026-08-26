@@ -1,0 +1,60 @@
+{
+  "schema_version": "theouni-revision-reserve.v0.1",
+  "status": "bounded_self_application_safeguard",
+  "frozen_representation": "theory/FREEZE_v0.5.json",
+  "current_interpretation": "theory/CURRENT.json",
+  "general_reuse_draft": "theory/DRAFT_v0.6_CONTRACT_INDEXED_QUOTIENT_TRANSPORT.md",
+  "guarantees": {
+    "freeze_identity": true,
+    "source_provenance": true,
+    "known_source_reopenability": true,
+    "arbitrary_future_contract_revisability": false
+  },
+  "reserve_sources": [
+    {
+      "kind": "portfolio_source_snapshots",
+      "path": "universe/PROVENANCE.json",
+      "purpose": "Retain source repository snapshot identities without transferring ownership."
+    },
+    {
+      "kind": "portfolio_registry",
+      "path": "universe/registry.json",
+      "purpose": "Retain source paths, claim ceilings, non-claims, and bridge provenance."
+    },
+    {
+      "kind": "git_history",
+      "path": ".git",
+      "purpose": "Retain historical formulations and superseded repository states when available in repository history."
+    },
+    {
+      "kind": "semantic_clarification",
+      "path": "theory/CLARIFICATION_v0.5.1.md",
+      "purpose": "Preserve later interpretation without overwriting the historical v0.5 freeze."
+    },
+    {
+      "kind": "open_obligations",
+      "path": "theory/core_universe.json",
+      "purpose": "Retain explicit known incompletenesses rather than silently deleting them."
+    },
+    {
+      "kind": "bridge_provenance",
+      "path": "universe/bridges/eco_genetic_crest_bridge_registry.json",
+      "purpose": "Retain one implemented bridge's source/evidence/claim ceiling provenance."
+    }
+  ],
+  "required_future_revision_ledger_fields": [
+    "old_representation",
+    "new_contract_or_task",
+    "exposed_insufficiency",
+    "reserve_source_used",
+    "new_information_required",
+    "semantic_version_effect",
+    "claim_ceiling_effect"
+  ],
+  "explicit_non_claims": [
+    "A frozen checksum does not guarantee future-contract adequacy.",
+    "Git history cannot recover distinctions that were never represented or recorded.",
+    "Source provenance reduces avoidable revision loss but does not eliminate TU-1 revision debt in general.",
+    "The revision reserve is not a substitute for collecting new evidence when a future contract requires previously unmeasured distinctions."
+  ]
+}
