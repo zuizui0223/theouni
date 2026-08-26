@@ -26,6 +26,21 @@
     "representation": "A retained map R: Omega -> Z with quotient Q_R induced by its fibers.",
     "exact_adequacy": "R models alpha iff Sigma_alpha = f o R for some map f."
   },
+  "transport_principle": {
+    "licensed_direction": "Adequacy transports only in the direction licensed by task-signature factorization.",
+    "nontransport_modes": [
+      {
+        "id": "strict-direction-mismatch",
+        "covered_by": "CIRA-3",
+        "statement": "If alpha <=task beta strictly, q_beta models alpha but q_alpha does not model beta."
+      },
+      {
+        "id": "incomparable-tasks",
+        "covered_by": "CIRA-4",
+        "statement": "If neither alpha <=task beta nor beta <=task alpha, neither canonical task state is reusable for the other task."
+      }
+    ]
+  },
   "results": [
     {
       "id": "CIRA-1",
@@ -125,7 +140,11 @@
     "theory/bridges/RACH_MRM_CED_POSITIVE_BRIDGE.md"
   ],
   "documentation": "theory/DRAFT_v0.6_CONTRACT_INDEXED_QUOTIENT_TRANSPORT.md",
+  "prior_art_audit": "theory/PRIOR_ART_AUDIT_v0.6.md",
   "verifier": "theory/verify_contract_indexed_quotient_transport.py",
   "contradiction_registry": "theory/contradiction_matrix.json",
-  "contradiction_certificate": "theory/CONTRADICTION_CERTIFICATE_v0.6.md"
+  "contradiction_certificate": "theory/CONTRADICTION_CERTIFICATE_v0.6.md",
+  "triadic_screen": "theory/triadic_screen.json",
+  "triadic_screen_document": "theory/TRIADIC_SCREEN_v0.6.md",
+  "triadic_screen_validator": "theory/validate_triadic_screen.py"
 }

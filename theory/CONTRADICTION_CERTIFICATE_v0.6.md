@@ -3,9 +3,9 @@
 Status: **machine-generated finite typed audit; outside the frozen v0.5 core**.
 
 Registry: [`contradiction_matrix.json`](contradiction_matrix.json)
-Canonical registry SHA-256: `221db21006a287cd367007728bd9f9c16f8922cf4380c3eb978f709a1b82f831`
+Canonical registry SHA-256: `6a7724e482b25b3ef11bfaf6a396e83f8bfe0e6b045d24bf2bd8ca6326519575`
 
-This certificate audits the current claim ceilings of 12 named theory modules. It proves registry completeness and the absence of a declared pairwise `actual-conflict`; it does not prove empirical truth, a missing bridge, joint-state existence, or higher-order consistency.
+This certificate audits the current claim ceilings of 12 named theory modules. It proves registry completeness and the absence of a declared pairwise `actual-conflict`; it does not prove empirical truth, a missing bridge, joint-state existence, higher-order consistency, or the semantic correctness of the human-assigned relation labels.
 
 ## Result
 
@@ -122,6 +122,6 @@ Relation counts:
 
 ## Claim ceiling
 
-`actual-conflict = 0` means that no pair is jointly unsatisfiable after respecting its registered types and current scope. `conditional-on-common-carrier-or-map` and `open-bridge` are not silently upgraded to completed compositions. Pairwise closure also does not establish three-way or global consistency.
+`actual-conflict = 0` means that no pair is jointly unsatisfiable after respecting its registered types and current scope. `conditional-on-common-carrier-or-map` and `open-bridge` are not silently upgraded to completed compositions. Pairwise closure also does not establish three-way or global consistency. The validator certifies registry completeness and internal parity, not the truth of the human-assigned relation; relation misclassification remains an external-review risk.
 
 Regenerate with `python theory/build_contradiction_certificate.py` and validate with `python theory/validate_contradiction_matrix.py`.

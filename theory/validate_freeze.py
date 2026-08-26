@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-import hashlib
 import json
+import subprocess
 from pathlib import Path
 
 
@@ -10,9 +10,16 @@ MANIFEST = ROOT / "theory" / "FREEZE_v0.5.json"
 
 
 def git_blob_sha(path: Path) -> str:
-    data = path.read_bytes()
-    header = f"blob {len(data)}\0".encode("utf-8")
-    return hashlib.sha1(header + data).hexdigest()
+    """Hash canonical Git content after repository clean filters are applied."""
+    relative = path.relative_to(ROOT).as_posix()
+    result = subprocess.run(
+        ["git", "hash-object", f"--path={relative}", relative],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    return result.stdout.strip()
 
 
 def main() -> None:

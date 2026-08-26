@@ -3,7 +3,7 @@
 `theouni` is organized as four deliberately separate layers.
 
 1. **Theory Universe v0.5.1 — current interpretation over frozen v0.5 core**  
-   Worlds, scientific contracts, required states, evidence, learning, revision, loss states, and warning states. v0.5.1 clarifies `D_req != E_y` and requires a contract-complete loss-response signature. A separate v0.6 draft supplies the machine-readable Contract-Indexed Representation Adequacy spine and pairwise contradiction certificate without modifying the frozen base.
+   Worlds, scientific contracts, required states, evidence, learning, revision, loss states, and warning states. v0.5.1 clarifies `D_req != E_y` and requires a contract-complete loss-response signature. A separate v0.6 draft supplies the machine-readable Contract-Indexed Representation Adequacy spine, pairwise certificate, triadic screen, and bounded prior-art audit without modifying the frozen base.
 2. **Empirical Projection Gate v0.1 — Reality -> Theory admission**  
    The claim-discipline protocol that decides when measured coordinates may earn target-relative partial-state status.
 3. **Concrete Research Universe v0.1 — typed real-research programmes**  
@@ -164,7 +164,7 @@ TU-2
     = graded epistemic analogue, not literally the same exact theorem
 ```
 
-The precise principle is **failure of order transport across incomparable scientific tasks**, not generic noncommutativity of quotient formation.
+The precise principle is: **adequacy transports only in the direction licensed by task factorization**. Nontransport has two distinct modes: reverse reuse across a strict task refinement, and reuse across incomparable tasks. Neither is generic noncommutativity of quotient formation.
 
 Executable draft surfaces:
 
@@ -172,9 +172,14 @@ Executable draft surfaces:
 - [`theory/verify_contract_indexed_quotient_transport.py`](theory/verify_contract_indexed_quotient_transport.py) — exhaustive four-world partition verification and exact/graded branch enforcement;
 - [`theory/contradiction_matrix.json`](theory/contradiction_matrix.json) — all 66 unordered pairs among the 12 theory modules, typed with the five audited relations;
 - [`theory/CONTRADICTION_CERTIFICATE_v0.6.md`](theory/CONTRADICTION_CERTIFICATE_v0.6.md) — generated human-readable matrix and pair ledger;
-- [`theory/validate_contradiction_matrix.py`](theory/validate_contradiction_matrix.py) — fail-closed completeness, vocabulary, certificate-parity, and `actual-conflict = 0` validation.
+- [`theory/validate_contradiction_matrix.py`](theory/validate_contradiction_matrix.py) — fail-closed completeness, vocabulary, certificate-parity, and `actual-conflict = 0` validation;
+- [`theory/TRIADIC_SCREEN_v0.6.md`](theory/TRIADIC_SCREEN_v0.6.md) and [`theory/triadic_screen.json`](theory/triadic_screen.json) — complete 220-triple pair-profile screen plus two bounded executable shared-carrier witnesses;
+- [`theory/validate_triadic_screen.py`](theory/validate_triadic_screen.py) — exact generated-artifact parity and bounded triadic-witness validation;
+- [`theory/PRIOR_ART_AUDIT_v0.6.md`](theory/PRIOR_ART_AUDIT_v0.6.md) — bounded primary-source positioning against Blackwell comparison, Le Cam deficiency, classical sufficiency, and Markov lumpability.
 
-The current pairwise certificate passes with `actual-conflict = 0`. This does not turn conditional relations into bridges and does not claim empirical truth, three-way/global consistency, or standalone mathematical novelty. The draft is not part of the frozen core.
+The current pairwise certificate passes with `actual-conflict = 0`. Relation labels remain human audit judgments: the validator checks completeness and internal parity, not their semantic truth. The triadic screen enumerates all 220 triples, but only two have executable bounded witnesses; it does not exclude emergent three-way inconsistency in the other 218. These artifacts do not turn conditional relations into bridges and do not claim empirical truth, global consistency, or standalone mathematical novelty. The draft is not part of the frozen core.
+
+The prior-art verdict is also narrow: CIRA-1 through CIRA-5 are an exact deterministic synthesis near the deterministic edge of Blackwell comparison, not a new general information order or sufficiency theorem. Le Cam identifies the structure still missing for approximate/stochastic transport, and finite Markov lumpability is a response-signature specialization relevant to TU-3 rather than a conflicting result. Any defensible novelty must come from the ecological contract/provenance/bridge/revision architecture doing nontrivial scientific work.
 
 ## 2. Empirical Projection Gate v0.1
 
@@ -337,7 +342,7 @@ empirical state
 
 The frozen core should not be expanded simply by numbering another TU module. Development now belongs mainly at the genuinely open bridges:
 
-1. **v0.6 promotion audit** — the machine-readable spine and pairwise certificate now pass; prior-art positioning, manuscript-level nontriviality, and higher-order consistency remain open.
+1. **v0.6 promotion audit** — the machine-readable spine, 66-pair certificate, 220-triple screen, two bounded triadic witnesses, and named-source prior-art positioning now pass; wider prior-art coverage, manuscript-level nontriviality, and executable assessment of the other 218 triples remain open.
 2. **Positive bridge extension** — retain the implemented finite RACH→MRM→CED bridge and test whether any source-faithful extension survives empirical calibration or broader carriers.
 3. **Projection manifests** — instantiate `(U,tau,Z,H,A,Y,O,V,Delta,epsilon)` for concrete programmes.
 4. **Empirical-state factorization** — evaluate candidate `Z` first, residual context/history second, using whole ecological units held out.
@@ -358,6 +363,7 @@ python theory/validate_freeze.py
 python theory/validate_clarification_v0_5_1.py
 python theory/verify_contract_indexed_quotient_transport.py
 python theory/validate_contradiction_matrix.py
+python theory/validate_triadic_screen.py
 python theory/validate_revision_and_positive_bridge.py
 python theory/bridges/verify_rach_mrm_ced_bridge.py
 python theory/validate_empirical_projection.py

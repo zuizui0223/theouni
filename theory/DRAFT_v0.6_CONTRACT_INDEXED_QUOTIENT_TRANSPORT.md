@@ -14,6 +14,13 @@ The programme-level slogan is therefore:
 
 > **Fineness, sufficiency, or value under one scientific responsibility does not transport to another responsibility unless the second responsibility factors through the retained representation.**
 
+Two failure modes must remain distinct:
+
+1. **strict direction mismatch** — if `alpha <=task beta` strictly, the stronger `beta` state can answer `alpha`, but the weaker canonical `alpha` state cannot be reused for `beta`;
+2. **task incomparability** — if neither task factors through the other, neither canonical state is reusable for the other task.
+
+Thus non-totality of the task preorder explains CIRA-4, but it is not the whole programme-level principle: CIRA-3 already gives nontransport in the reverse direction along a strict comparable refinement.
+
 ---
 
 ## 1. Primitive setup
@@ -392,6 +399,12 @@ The substrate has strong classical relatives and should be positioned as synthes
 
 The possible novelty of the wider programme, if any, lies in the **ecological contract architecture and the coupling of future, history, mechanism, evidence, revision, empirical admission, and warning claim ceilings**, not in the bare factorization lemma.
 
+The bounded primary-source audit in [`PRIOR_ART_AUDIT_v0.6.md`](PRIOR_ART_AUDIT_v0.6.md) sharpens that ceiling. CIRA-1 through CIRA-5 lie near the deterministic edge of Blackwell experiment comparison and must not be advertised as a new information order or a new general sufficiency theorem. Le Cam deficiency supplies the missing vocabulary for any future approximate/stochastic extension. Classical sufficiency is model/family-relative rather than, by default, relative to one selected loss. Finite Markov lumpability is a transition-response specialization of the same fiber-constancy pattern and is therefore close prior art for TU-3, not a contradiction.
+
+The manuscript-level Blackwell positioning is:
+
+> **Relative to Blackwell, v0.6 does not claim a new information order; it recasts deterministic factorization as a contract-indexed ecological accountability discipline, and any novelty must come from the added provenance, bridge, revision, and claim-ceiling structure producing nontrivial ecological consequences.**
+
 ---
 
 # 11. Current decision
@@ -410,9 +423,17 @@ The cross-module audit is also executable:
 - [`CONTRADICTION_CERTIFICATE_v0.6.md`](CONTRADICTION_CERTIFICATE_v0.6.md) is the generated human-readable certificate;
 - [`validate_contradiction_matrix.py`](validate_contradiction_matrix.py) fails closed on a missing/duplicate pair, an unknown relation, certificate drift, or any nonzero `actual-conflict` count.
 
-The current certificate has `actual-conflict = 0`. This is a **pairwise typed non-contradiction result only**. `conditional-on-common-carrier-or-map` and `open-bridge` are not upgraded to completed compositions, and no empirical truth or higher-order consistency result is claimed.
+The current certificate has `actual-conflict = 0`. This is a **pairwise typed non-contradiction result only**. `conditional-on-common-carrier-or-map` and `open-bridge` are not upgraded to completed compositions. The validator certifies completeness and internal parity, not the semantic truth of human-assigned relation labels; relation misclassification remains an external-review risk.
 
-Before promotion, two non-executable gates remain:
+The higher-order audit is explicitly split:
 
-1. prior-art audit for task-indexed quotient/factorization formulations;
-2. manuscript-level test that replacing four apparently independent principles by this one meta-theorem actually sharpens, rather than trivializes, the ecological argument.
+- [`triadic_screen.json`](triadic_screen.json) and [`TRIADIC_SCREEN_v0.6.md`](TRIADIC_SCREEN_v0.6.md) enumerate all 220 unordered triples and copy their three registered pair relations into a complete triage ledger;
+- [`validate_triadic_screen.py`](validate_triadic_screen.py) checks generated-artifact parity and jointly realizes two bounded shared-carrier witnesses: `MRM/CED/RACH` and `TU-1/TU-3/TU-4`.
+
+This does not promote a pairwise ledger into a three-way consistency theorem. The remaining 218 triples have no executable higher-order assessment, and emergent three-way inconsistency is neither discovered nor excluded by the pair-profile screen.
+
+The named-source prior-art gate is boundedly complete for draft positioning. Before promotion, the remaining non-executable gates are:
+
+1. wider prior-art coverage of computational mechanics, bisimulation/state abstraction, predictive representations, and modern task-specific sufficiency;
+2. manuscript-level test that replacing four apparently independent principles by this one meta-theorem actually sharpens, rather than trivializes, the ecological argument;
+3. separate domain-level novelty checks for TU-1 repair cost, TU-3 nuisance/hidden-coordinate witnesses, and TU-4 warning portability.

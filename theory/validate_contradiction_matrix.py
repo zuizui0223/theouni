@@ -69,6 +69,8 @@ def main() -> None:
     assert policy["fail_closed"] is True
     assert policy["higher_order_consistency_claimed"] is False
     assert policy["empirical_truth_claimed"] is False
+    assert policy["human_relation_truth_validated"] is False
+    assert policy["relation_misclassification_external_review_risk"] is True
 
     certificate_path = ROOT / matrix["certificate_document"]
     validator_path = ROOT / matrix["validator"]

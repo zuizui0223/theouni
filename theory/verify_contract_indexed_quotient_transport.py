@@ -88,6 +88,14 @@ def verify_registry_contract(registry: dict) -> None:
     result_ids = [result["id"] for result in registry["results"]]
     assert result_ids == ["CIRA-1", "CIRA-2", "CIRA-3", "CIRA-4", "CIRA-5"]
 
+    principle = registry["transport_principle"]
+    assert "only in the direction" in principle["licensed_direction"]
+    modes = {item["id"]: item["covered_by"] for item in principle["nontransport_modes"]}
+    assert modes == {
+        "strict-direction-mismatch": "CIRA-3",
+        "incomparable-tasks": "CIRA-4",
+    }
+
     branches = {item["module"]: item["branch"] for item in registry["specializations"]}
     assert {module for module, branch in branches.items() if branch == "exact"} == {
         "TU-1",
@@ -102,9 +110,13 @@ def verify_registry_contract(registry: dict) -> None:
         assert (ROOT / path).is_file(), path
     for field in (
         "documentation",
+        "prior_art_audit",
         "verifier",
         "contradiction_registry",
         "contradiction_certificate",
+        "triadic_screen",
+        "triadic_screen_document",
+        "triadic_screen_validator",
     ):
         assert (ROOT / registry[field]).is_file(), registry[field]
 

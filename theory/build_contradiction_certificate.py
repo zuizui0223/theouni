@@ -45,7 +45,8 @@ def render_certificate(matrix: dict) -> str:
         "",
         "This certificate audits the current claim ceilings of 12 named theory modules. "
         "It proves registry completeness and the absence of a declared pairwise `actual-conflict`; "
-        "it does not prove empirical truth, a missing bridge, joint-state existence, or higher-order consistency.",
+        "it does not prove empirical truth, a missing bridge, joint-state existence, higher-order consistency, "
+        "or the semantic correctness of the human-assigned relation labels.",
         "",
         "## Result",
         "",
@@ -99,7 +100,9 @@ def render_certificate(matrix: dict) -> str:
             "`actual-conflict = 0` means that no pair is jointly unsatisfiable after respecting "
             "its registered types and current scope. `conditional-on-common-carrier-or-map` and "
             "`open-bridge` are not silently upgraded to completed compositions. Pairwise closure "
-            "also does not establish three-way or global consistency.",
+            "also does not establish three-way or global consistency. The validator certifies registry "
+            "completeness and internal parity, not the truth of the human-assigned relation; relation "
+            "misclassification remains an external-review risk.",
             "",
             "Regenerate with `python theory/build_contradiction_certificate.py` and validate with "
             "`python theory/validate_contradiction_matrix.py`.",

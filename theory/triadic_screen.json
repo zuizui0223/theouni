@@ -1,0 +1,7767 @@
+{
+  "schema_version": "theouni-triadic-screen.v0.6-draft",
+  "id": "THEORY-TRIADIC-SCREEN-v0.6-draft",
+  "status": "complete_pairwise-derived_screen_with_bounded_witnesses",
+  "source_matrix": "theory/contradiction_matrix.json",
+  "source_matrix_canonical_sha256": "6a7724e482b25b3ef11bfaf6a396e83f8bfe0e6b045d24bf2bd8ca6326519575",
+  "method": {
+    "description": "Enumerate every unordered triple and copy its three registered pair relations. The highest-priority pair gate determines screen_class; this is triage, not a satisfiability decision.",
+    "relation_priority": [
+      "actual-conflict",
+      "open-bridge",
+      "conditional-on-common-carrier-or-map",
+      "orthogonal-estimand",
+      "compatible"
+    ],
+    "screen_class_rule": "The first present relation in relation_priority supplies one mutually exclusive screen class.",
+    "pairwise_relation_truth_revalidated": false,
+    "emergent_three_way_conflict_excluded": false
+  },
+  "counts": {
+    "modules": 12,
+    "unordered_triples": 220,
+    "screen_classes": {
+      "all-three-pairs-compatible": 1,
+      "contains-declared-pair-conflict": 0,
+      "contains-open-bridge": 125,
+      "contains-orthogonal-estimand": 25,
+      "requires-common-carrier-or-map": 69
+    },
+    "executable_assessments": {
+      "not-executably-assessed": 218,
+      "verified-in-bounded-witness": 2
+    }
+  },
+  "executable_witnesses": [
+    {
+      "id": "TRIAD-W1-RACH-MRM-CED",
+      "modules": [
+        "MRM",
+        "CED",
+        "RACH"
+      ],
+      "status": "bounded-shared-carrier-witness",
+      "verifier": "theory/validate_triadic_screen.py",
+      "claim": "One finite bridge carrier jointly realizes RACH causal multiplicity, MRM response equivalence, and CED deterministic target licensing."
+    },
+    {
+      "id": "TRIAD-W2-TU1-TU3-TU4",
+      "modules": [
+        "TU-1",
+        "TU-3",
+        "TU-4"
+      ],
+      "status": "bounded-shared-carrier-witness",
+      "verifier": "theory/validate_triadic_screen.py",
+      "claim": "One four-world carrier jointly realizes TU-1 reverse-reuse failure, TU-3 loss-response adequacy, and TU-4 strict warning refinement."
+    }
+  ],
+  "triads": [
+    {
+      "modules": [
+        "CREST",
+        "CCOC",
+        "MLTR"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "CCOC",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CREST",
+          "right": "MLTR",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CCOC",
+          "right": "MLTR",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 3,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "CCOC",
+        "MRM"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "CCOC",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CREST",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CCOC",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 3,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "CCOC",
+        "CED"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "CCOC",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CREST",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CCOC",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "CCOC",
+        "RACH"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "CCOC",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CREST",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CCOC",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "CCOC",
+        "EGC"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "CCOC",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CREST",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CCOC",
+          "right": "EGC",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "CCOC",
+        "EGW"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "CCOC",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CREST",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CCOC",
+          "right": "EGW",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "CCOC",
+        "TU-1"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "CCOC",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-1",
+          "relation": "compatible"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-1",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 0,
+        "compatible": 1
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "CCOC",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "CCOC",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "CCOC",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "CCOC",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-3",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "CCOC",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "CCOC",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "MLTR",
+        "MRM"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "MLTR",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CREST",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MLTR",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 3,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "MLTR",
+        "CED"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "MLTR",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CREST",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MLTR",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "MLTR",
+        "RACH"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "MLTR",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CREST",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MLTR",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "MLTR",
+        "EGC"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "MLTR",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CREST",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MLTR",
+          "right": "EGC",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "MLTR",
+        "EGW"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "MLTR",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CREST",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MLTR",
+          "right": "EGW",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "MLTR",
+        "TU-1"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "MLTR",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-1",
+          "relation": "compatible"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-1",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 1
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "MLTR",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "MLTR",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "MLTR",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "MLTR",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-3",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "MLTR",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "MLTR",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "MRM",
+        "CED"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CREST",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MRM",
+          "right": "CED",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "MRM",
+        "RACH"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CREST",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MRM",
+          "right": "RACH",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "MRM",
+        "EGC"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CREST",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MRM",
+          "right": "EGC",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "MRM",
+        "EGW"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CREST",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MRM",
+          "right": "EGW",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "MRM",
+        "TU-1"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-1",
+          "relation": "compatible"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-1",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 0,
+        "compatible": 1
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "MRM",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "MRM",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 3,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "MRM",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "CED",
+        "RACH"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CREST",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CED",
+          "right": "RACH",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "CED",
+        "EGC"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CREST",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CED",
+          "right": "EGC",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "CED",
+        "EGW"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CREST",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CED",
+          "right": "EGW",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "CED",
+        "TU-1"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-1",
+          "relation": "compatible"
+        },
+        {
+          "left": "CED",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 1
+      },
+      "screen_class": "contains-orthogonal-estimand",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "CED",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CED",
+          "right": "TU-2",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 1
+      },
+      "screen_class": "contains-orthogonal-estimand",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "CED",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CED",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "CED",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CED",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "RACH",
+        "EGC"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CREST",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "RACH",
+          "right": "EGC",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "RACH",
+        "EGW"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CREST",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "RACH",
+          "right": "EGW",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "RACH",
+        "TU-1"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-1",
+          "relation": "compatible"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 1
+      },
+      "screen_class": "contains-orthogonal-estimand",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "RACH",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-2",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 1
+      },
+      "screen_class": "contains-orthogonal-estimand",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "RACH",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "RACH",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "EGC",
+        "EGW"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CREST",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "EGC",
+          "right": "EGW",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "EGC",
+        "TU-1"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-1",
+          "relation": "compatible"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 1,
+        "compatible": 1
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "EGC",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "EGC",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "EGC",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "EGW",
+        "TU-1"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-1",
+          "relation": "compatible"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 1,
+        "compatible": 1
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "EGW",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "EGW",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "EGW",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "TU-1",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "TU-1",
+          "relation": "compatible"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "TU-1",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 1
+      },
+      "screen_class": "contains-orthogonal-estimand",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "TU-1",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "TU-1",
+          "relation": "compatible"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "TU-1",
+          "right": "TU-3",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 2
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "TU-1",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "TU-1",
+          "relation": "compatible"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "TU-1",
+          "right": "TU-4",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 2
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "TU-2",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "TU-2",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "TU-2",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "TU-2",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CREST",
+        "TU-3",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "CREST",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CREST",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "TU-3",
+          "right": "TU-4",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 0,
+        "compatible": 1
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "MLTR",
+        "MRM"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "MLTR",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CCOC",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MLTR",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 3,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "MLTR",
+        "CED"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "MLTR",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CCOC",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MLTR",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "MLTR",
+        "RACH"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "MLTR",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CCOC",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MLTR",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "MLTR",
+        "EGC"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "MLTR",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CCOC",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MLTR",
+          "right": "EGC",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "MLTR",
+        "EGW"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "MLTR",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CCOC",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MLTR",
+          "right": "EGW",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "MLTR",
+        "TU-1"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "MLTR",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-1",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-1",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "MLTR",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "MLTR",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "MLTR",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "MLTR",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-3",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-3",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "MLTR",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "MLTR",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "MRM",
+        "CED"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CCOC",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MRM",
+          "right": "CED",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "MRM",
+        "RACH"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CCOC",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MRM",
+          "right": "RACH",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "MRM",
+        "EGC"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CCOC",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MRM",
+          "right": "EGC",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "MRM",
+        "EGW"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CCOC",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MRM",
+          "right": "EGW",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "MRM",
+        "TU-1"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-1",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-1",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 3,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "MRM",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "MRM",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-3",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "MRM",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "CED",
+        "RACH"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CCOC",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CED",
+          "right": "RACH",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "CED",
+        "EGC"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CCOC",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CED",
+          "right": "EGC",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "CED",
+        "EGW"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CCOC",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CED",
+          "right": "EGW",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "CED",
+        "TU-1"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-1",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CED",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "CED",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CED",
+          "right": "TU-2",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 1
+      },
+      "screen_class": "contains-orthogonal-estimand",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "CED",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-3",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CED",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "CED",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CED",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "RACH",
+        "EGC"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CCOC",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "RACH",
+          "right": "EGC",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "RACH",
+        "EGW"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CCOC",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "RACH",
+          "right": "EGW",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "RACH",
+        "TU-1"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-1",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "RACH",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-2",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 1
+      },
+      "screen_class": "contains-orthogonal-estimand",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "RACH",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-3",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "RACH",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 3,
+        "compatible": 0
+      },
+      "screen_class": "contains-orthogonal-estimand",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "EGC",
+        "EGW"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CCOC",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "EGC",
+          "right": "EGW",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "EGC",
+        "TU-1"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-1",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "EGC",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "EGC",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-3",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "EGC",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "EGW",
+        "TU-1"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-1",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "EGW",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "EGW",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-3",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "EGW",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "TU-1",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "TU-1",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "TU-1",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "TU-1",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "TU-1",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-3",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "TU-1",
+          "right": "TU-3",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 1
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "TU-1",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "TU-1",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "TU-1",
+          "right": "TU-4",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 1,
+        "compatible": 1
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "TU-2",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-3",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "TU-2",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "TU-2",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "TU-2",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 3,
+        "compatible": 0
+      },
+      "screen_class": "contains-orthogonal-estimand",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CCOC",
+        "TU-3",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "CCOC",
+          "right": "TU-3",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CCOC",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "TU-3",
+          "right": "TU-4",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 1,
+        "compatible": 1
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "MRM",
+        "CED"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MLTR",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MRM",
+          "right": "CED",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "MRM",
+        "RACH"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MLTR",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MRM",
+          "right": "RACH",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "MRM",
+        "EGC"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MLTR",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MRM",
+          "right": "EGC",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "MRM",
+        "EGW"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MLTR",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MRM",
+          "right": "EGW",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "MRM",
+        "TU-1"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-1",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-1",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "MRM",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "MRM",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-3",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "MRM",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "MRM",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "CED",
+        "RACH"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MLTR",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CED",
+          "right": "RACH",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "CED",
+        "EGC"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MLTR",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CED",
+          "right": "EGC",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "CED",
+        "EGW"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MLTR",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CED",
+          "right": "EGW",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "CED",
+        "TU-1"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-1",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CED",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "CED",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CED",
+          "right": "TU-2",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 1
+      },
+      "screen_class": "contains-orthogonal-estimand",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "CED",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-3",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CED",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "CED",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "CED",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CED",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "RACH",
+        "EGC"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MLTR",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "RACH",
+          "right": "EGC",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "RACH",
+        "EGW"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MLTR",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "RACH",
+          "right": "EGW",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "RACH",
+        "TU-1"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-1",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "RACH",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-2",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 1
+      },
+      "screen_class": "contains-orthogonal-estimand",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "RACH",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-3",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "RACH",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "RACH",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "EGC",
+        "EGW"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MLTR",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "EGC",
+          "right": "EGW",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "EGC",
+        "TU-1"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-1",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "EGC",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "EGC",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-3",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "EGC",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "EGW",
+        "TU-1"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-1",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "EGW",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "EGW",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-3",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "EGW",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "TU-1",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "TU-1",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "TU-1",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "TU-1",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "TU-1",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-3",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "TU-1",
+          "right": "TU-3",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 0,
+        "compatible": 1
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "TU-1",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "TU-1",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "TU-1",
+          "right": "TU-4",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 0,
+        "compatible": 1
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "TU-2",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-3",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "TU-2",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "TU-2",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "TU-2",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MLTR",
+        "TU-3",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "MLTR",
+          "right": "TU-3",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MLTR",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "TU-3",
+          "right": "TU-4",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 0,
+        "compatible": 1
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MRM",
+        "CED",
+        "RACH"
+      ],
+      "pair_relations": [
+        {
+          "left": "MRM",
+          "right": "CED",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MRM",
+          "right": "RACH",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CED",
+          "right": "RACH",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 3,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "verified-in-bounded-witness",
+        "witness_id": "TRIAD-W1-RACH-MRM-CED"
+      }
+    },
+    {
+      "modules": [
+        "MRM",
+        "CED",
+        "EGC"
+      ],
+      "pair_relations": [
+        {
+          "left": "MRM",
+          "right": "CED",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MRM",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CED",
+          "right": "EGC",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MRM",
+        "CED",
+        "EGW"
+      ],
+      "pair_relations": [
+        {
+          "left": "MRM",
+          "right": "CED",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MRM",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CED",
+          "right": "EGW",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MRM",
+        "CED",
+        "TU-1"
+      ],
+      "pair_relations": [
+        {
+          "left": "MRM",
+          "right": "CED",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-1",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CED",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MRM",
+        "CED",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "MRM",
+          "right": "CED",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CED",
+          "right": "TU-2",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 1,
+        "compatible": 1
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MRM",
+        "CED",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "MRM",
+          "right": "CED",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CED",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MRM",
+        "CED",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "MRM",
+          "right": "CED",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CED",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MRM",
+        "RACH",
+        "EGC"
+      ],
+      "pair_relations": [
+        {
+          "left": "MRM",
+          "right": "RACH",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MRM",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "RACH",
+          "right": "EGC",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MRM",
+        "RACH",
+        "EGW"
+      ],
+      "pair_relations": [
+        {
+          "left": "MRM",
+          "right": "RACH",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MRM",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "RACH",
+          "right": "EGW",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MRM",
+        "RACH",
+        "TU-1"
+      ],
+      "pair_relations": [
+        {
+          "left": "MRM",
+          "right": "RACH",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-1",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MRM",
+        "RACH",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "MRM",
+          "right": "RACH",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-2",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 1,
+        "compatible": 1
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MRM",
+        "RACH",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "MRM",
+          "right": "RACH",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MRM",
+        "RACH",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "MRM",
+          "right": "RACH",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MRM",
+        "EGC",
+        "EGW"
+      ],
+      "pair_relations": [
+        {
+          "left": "MRM",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MRM",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "EGC",
+          "right": "EGW",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MRM",
+        "EGC",
+        "TU-1"
+      ],
+      "pair_relations": [
+        {
+          "left": "MRM",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-1",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MRM",
+        "EGC",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "MRM",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MRM",
+        "EGC",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "MRM",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MRM",
+        "EGC",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "MRM",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MRM",
+        "EGW",
+        "TU-1"
+      ],
+      "pair_relations": [
+        {
+          "left": "MRM",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-1",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MRM",
+        "EGW",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "MRM",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MRM",
+        "EGW",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "MRM",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MRM",
+        "EGW",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "MRM",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MRM",
+        "TU-1",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "MRM",
+          "right": "TU-1",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "TU-1",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MRM",
+        "TU-1",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "MRM",
+          "right": "TU-1",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "TU-1",
+          "right": "TU-3",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 0,
+        "compatible": 1
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MRM",
+        "TU-1",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "MRM",
+          "right": "TU-1",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "TU-1",
+          "right": "TU-4",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 1
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MRM",
+        "TU-2",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "MRM",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "TU-2",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MRM",
+        "TU-2",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "MRM",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "TU-2",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "MRM",
+        "TU-3",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "MRM",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "MRM",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "TU-3",
+          "right": "TU-4",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 1
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CED",
+        "RACH",
+        "EGC"
+      ],
+      "pair_relations": [
+        {
+          "left": "CED",
+          "right": "RACH",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CED",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "RACH",
+          "right": "EGC",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CED",
+        "RACH",
+        "EGW"
+      ],
+      "pair_relations": [
+        {
+          "left": "CED",
+          "right": "RACH",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CED",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "RACH",
+          "right": "EGW",
+          "relation": "open-bridge"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CED",
+        "RACH",
+        "TU-1"
+      ],
+      "pair_relations": [
+        {
+          "left": "CED",
+          "right": "RACH",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CED",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CED",
+        "RACH",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "CED",
+          "right": "RACH",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CED",
+          "right": "TU-2",
+          "relation": "compatible"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-2",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 2
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CED",
+        "RACH",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "CED",
+          "right": "RACH",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CED",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CED",
+        "RACH",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "CED",
+          "right": "RACH",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "CED",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CED",
+        "EGC",
+        "EGW"
+      ],
+      "pair_relations": [
+        {
+          "left": "CED",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CED",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "EGC",
+          "right": "EGW",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CED",
+        "EGC",
+        "TU-1"
+      ],
+      "pair_relations": [
+        {
+          "left": "CED",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CED",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CED",
+        "EGC",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "CED",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CED",
+          "right": "TU-2",
+          "relation": "compatible"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 1,
+        "compatible": 1
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CED",
+        "EGC",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "CED",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CED",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CED",
+        "EGC",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "CED",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CED",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CED",
+        "EGW",
+        "TU-1"
+      ],
+      "pair_relations": [
+        {
+          "left": "CED",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CED",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CED",
+        "EGW",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "CED",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CED",
+          "right": "TU-2",
+          "relation": "compatible"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 1,
+        "compatible": 1
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CED",
+        "EGW",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "CED",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CED",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CED",
+        "EGW",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "CED",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "CED",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CED",
+        "TU-1",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "CED",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CED",
+          "right": "TU-2",
+          "relation": "compatible"
+        },
+        {
+          "left": "TU-1",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 1
+      },
+      "screen_class": "contains-orthogonal-estimand",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CED",
+        "TU-1",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "CED",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CED",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "TU-1",
+          "right": "TU-3",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 1
+      },
+      "screen_class": "contains-orthogonal-estimand",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CED",
+        "TU-1",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "CED",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CED",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "TU-1",
+          "right": "TU-4",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 1,
+        "compatible": 1
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CED",
+        "TU-2",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "CED",
+          "right": "TU-2",
+          "relation": "compatible"
+        },
+        {
+          "left": "CED",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "TU-2",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 1
+      },
+      "screen_class": "contains-orthogonal-estimand",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CED",
+        "TU-2",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "CED",
+          "right": "TU-2",
+          "relation": "compatible"
+        },
+        {
+          "left": "CED",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "TU-2",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 1,
+        "compatible": 1
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "CED",
+        "TU-3",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "CED",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "CED",
+          "right": "TU-4",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "TU-3",
+          "right": "TU-4",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 1,
+        "compatible": 1
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "RACH",
+        "EGC",
+        "EGW"
+      ],
+      "pair_relations": [
+        {
+          "left": "RACH",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "RACH",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "EGC",
+          "right": "EGW",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 2,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "RACH",
+        "EGC",
+        "TU-1"
+      ],
+      "pair_relations": [
+        {
+          "left": "RACH",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "RACH",
+        "EGC",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "RACH",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-2",
+          "relation": "compatible"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 1,
+        "compatible": 1
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "RACH",
+        "EGC",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "RACH",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "RACH",
+        "EGC",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "RACH",
+          "right": "EGC",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "RACH",
+        "EGW",
+        "TU-1"
+      ],
+      "pair_relations": [
+        {
+          "left": "RACH",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "RACH",
+        "EGW",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "RACH",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-2",
+          "relation": "compatible"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 1,
+        "compatible": 1
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "RACH",
+        "EGW",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "RACH",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "RACH",
+        "EGW",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "RACH",
+          "right": "EGW",
+          "relation": "open-bridge"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 1,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 1,
+        "compatible": 0
+      },
+      "screen_class": "contains-open-bridge",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "RACH",
+        "TU-1",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "RACH",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-2",
+          "relation": "compatible"
+        },
+        {
+          "left": "TU-1",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 1
+      },
+      "screen_class": "contains-orthogonal-estimand",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "RACH",
+        "TU-1",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "RACH",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "TU-1",
+          "right": "TU-3",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 1
+      },
+      "screen_class": "contains-orthogonal-estimand",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "RACH",
+        "TU-1",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "RACH",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "TU-1",
+          "right": "TU-4",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 1
+      },
+      "screen_class": "contains-orthogonal-estimand",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "RACH",
+        "TU-2",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "RACH",
+          "right": "TU-2",
+          "relation": "compatible"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "TU-2",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 1
+      },
+      "screen_class": "contains-orthogonal-estimand",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "RACH",
+        "TU-2",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "RACH",
+          "right": "TU-2",
+          "relation": "compatible"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "TU-2",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 1
+      },
+      "screen_class": "contains-orthogonal-estimand",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "RACH",
+        "TU-3",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "RACH",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "RACH",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "TU-3",
+          "right": "TU-4",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 1
+      },
+      "screen_class": "contains-orthogonal-estimand",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "EGC",
+        "EGW",
+        "TU-1"
+      ],
+      "pair_relations": [
+        {
+          "left": "EGC",
+          "right": "EGW",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "EGC",
+        "EGW",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "EGC",
+          "right": "EGW",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "EGC",
+        "EGW",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "EGC",
+          "right": "EGW",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 3,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "EGC",
+        "EGW",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "EGC",
+          "right": "EGW",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 3,
+        "orthogonal-estimand": 0,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "EGC",
+        "TU-1",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "EGC",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "TU-1",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 3,
+        "compatible": 0
+      },
+      "screen_class": "contains-orthogonal-estimand",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "EGC",
+        "TU-1",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "EGC",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "TU-1",
+          "right": "TU-3",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 1,
+        "compatible": 1
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "EGC",
+        "TU-1",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "EGC",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "TU-1",
+          "right": "TU-4",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 1,
+        "compatible": 1
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "EGC",
+        "TU-2",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "EGC",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "TU-2",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "EGC",
+        "TU-2",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "EGC",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "TU-2",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "EGC",
+        "TU-3",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "EGC",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "EGC",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "TU-3",
+          "right": "TU-4",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 0,
+        "compatible": 1
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "EGW",
+        "TU-1",
+        "TU-2"
+      ],
+      "pair_relations": [
+        {
+          "left": "EGW",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "TU-1",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 3,
+        "compatible": 0
+      },
+      "screen_class": "contains-orthogonal-estimand",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "EGW",
+        "TU-1",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "EGW",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "TU-1",
+          "right": "TU-3",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 1,
+        "compatible": 1
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "EGW",
+        "TU-1",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "EGW",
+          "right": "TU-1",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "TU-1",
+          "right": "TU-4",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 1,
+        "compatible": 1
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "EGW",
+        "TU-2",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "EGW",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "TU-2",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "EGW",
+        "TU-2",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "EGW",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "TU-2",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 1,
+        "orthogonal-estimand": 2,
+        "compatible": 0
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "EGW",
+        "TU-3",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "EGW",
+          "right": "TU-3",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "EGW",
+          "right": "TU-4",
+          "relation": "conditional-on-common-carrier-or-map"
+        },
+        {
+          "left": "TU-3",
+          "right": "TU-4",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 2,
+        "orthogonal-estimand": 0,
+        "compatible": 1
+      },
+      "screen_class": "requires-common-carrier-or-map",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "TU-1",
+        "TU-2",
+        "TU-3"
+      ],
+      "pair_relations": [
+        {
+          "left": "TU-1",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "TU-1",
+          "right": "TU-3",
+          "relation": "compatible"
+        },
+        {
+          "left": "TU-2",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 1
+      },
+      "screen_class": "contains-orthogonal-estimand",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "TU-1",
+        "TU-2",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "TU-1",
+          "right": "TU-2",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "TU-1",
+          "right": "TU-4",
+          "relation": "compatible"
+        },
+        {
+          "left": "TU-2",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 1
+      },
+      "screen_class": "contains-orthogonal-estimand",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    },
+    {
+      "modules": [
+        "TU-1",
+        "TU-3",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "TU-1",
+          "right": "TU-3",
+          "relation": "compatible"
+        },
+        {
+          "left": "TU-1",
+          "right": "TU-4",
+          "relation": "compatible"
+        },
+        {
+          "left": "TU-3",
+          "right": "TU-4",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 0,
+        "compatible": 3
+      },
+      "screen_class": "all-three-pairs-compatible",
+      "executable_assessment": {
+        "status": "verified-in-bounded-witness",
+        "witness_id": "TRIAD-W2-TU1-TU3-TU4"
+      }
+    },
+    {
+      "modules": [
+        "TU-2",
+        "TU-3",
+        "TU-4"
+      ],
+      "pair_relations": [
+        {
+          "left": "TU-2",
+          "right": "TU-3",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "TU-2",
+          "right": "TU-4",
+          "relation": "orthogonal-estimand"
+        },
+        {
+          "left": "TU-3",
+          "right": "TU-4",
+          "relation": "compatible"
+        }
+      ],
+      "pair_relation_counts": {
+        "actual-conflict": 0,
+        "open-bridge": 0,
+        "conditional-on-common-carrier-or-map": 0,
+        "orthogonal-estimand": 2,
+        "compatible": 1
+      },
+      "screen_class": "contains-orthogonal-estimand",
+      "executable_assessment": {
+        "status": "not-executably-assessed"
+      }
+    }
+  ],
+  "claim_ceiling": "Complete 220-triple pair-profile coverage and two bounded shared-carrier witnesses only. Pairwise labels remain human judgments, and the screen neither discovers nor excludes emergent three-way inconsistency in unmodelled triples.",
+  "documentation": "theory/TRIADIC_SCREEN_v0.6.md",
+  "builder": "theory/build_triadic_screen.py",
+  "validator": "theory/validate_triadic_screen.py"
+}

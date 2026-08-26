@@ -204,4 +204,6 @@ open-bridge != favourable or null evidence
 actual-conflict = 0 != global or higher-order consistency proof
 ```
 
+The five labels are human semantic judgments. The validator is deliberately fail-closed for missing pairs, unknown vocabulary, generated-certificate drift, and a declared `actual-conflict`, but it cannot prove that a reviewer chose the correct label. Relation misclassification therefore remains an external-review risk rather than a machine-certified property.
+
 The canonical registry is [`contradiction_matrix.json`](contradiction_matrix.json), and the generated audit surface is [`CONTRADICTION_CERTIFICATE_v0.6.md`](CONTRADICTION_CERTIFICATE_v0.6.md).

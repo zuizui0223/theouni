@@ -24,9 +24,13 @@ The v0.6 generalization remains a draft outside this current v0.5.1 interpretati
 - [`DRAFT_v0.6_CONTRACT_INDEXED_QUOTIENT_TRANSPORT.md`](DRAFT_v0.6_CONTRACT_INDEXED_QUOTIENT_TRANSPORT.md) — theory-spine statement;
 - [`contract_indexed_adequacy_registry.json`](contract_indexed_adequacy_registry.json) — machine-readable CIRA-1 through CIRA-5 and exact/graded specialization branches;
 - [`CONTRADICTION_CERTIFICATE_v0.6.md`](CONTRADICTION_CERTIFICATE_v0.6.md) — generated 12-module, 66-pair typed contradiction certificate;
-- [`contradiction_matrix.json`](contradiction_matrix.json) and [`validate_contradiction_matrix.py`](validate_contradiction_matrix.py) — canonical audit data and fail-closed validator.
+- [`contradiction_matrix.json`](contradiction_matrix.json) and [`validate_contradiction_matrix.py`](validate_contradiction_matrix.py) — canonical audit data and fail-closed validator;
+- [`TRIADIC_SCREEN_v0.6.md`](TRIADIC_SCREEN_v0.6.md), [`triadic_screen.json`](triadic_screen.json), and [`validate_triadic_screen.py`](validate_triadic_screen.py) — complete 220-triple pair-profile screen and two bounded executable witnesses;
+- [`PRIOR_ART_AUDIT_v0.6.md`](PRIOR_ART_AUDIT_v0.6.md) — bounded primary-source positioning against Blackwell, Le Cam, classical sufficiency, and finite Markov lumpability.
 
-The pairwise result is `actual-conflict = 0` at current claim ceilings. It is not a global-consistency, empirical-truth, or bridge-completion claim.
+The pairwise result is `actual-conflict = 0` at current claim ceilings. The relation labels are human audit judgments whose semantic truth is not validated. The triadic ledger is complete as a screen, but only two of 220 triples have executable bounded witnesses. Neither result is a global-consistency, empirical-truth, or bridge-completion claim.
+
+The bounded prior-art result treats CIRA-1 through CIRA-5 as an exact deterministic synthesis, not a new general information order or sufficiency theorem. Manuscript-level novelty remains conditional on the ecological contract architecture producing a nontrivial theorem, analysis decision, or claim restriction beyond that classical substrate.
 
 ---
 
@@ -588,8 +592,9 @@ python theory/validate_freeze.py
 python theory/validate_clarification_v0_5_1.py
 python theory/verify_contract_indexed_quotient_transport.py
 python theory/validate_contradiction_matrix.py
+python theory/validate_triadic_screen.py
 python theory/validate_revision_and_positive_bridge.py
 python theory/bridges/verify_rach_mrm_ced_bridge.py
 ```
 
-The frozen v0.5 validator guarantees that the historical core did not drift. The v0.5.1 validator guarantees that `D_req`/`E_y` and full loss-contract signature semantics remain separated. The draft v0.6 validators guarantee registry completeness, exact/graded branch separation, and a complete 66-pair certificate with zero registered `actual-conflict` relations.
+The frozen v0.5 validator guarantees that the historical core did not drift. The v0.5.1 validator guarantees that `D_req`/`E_y` and full loss-contract signature semantics remain separated. The draft v0.6 validators guarantee registry completeness, exact/graded branch separation, a complete 66-pair certificate with zero registered `actual-conflict` relations, a complete 220-triple pair-profile screen, and two bounded executable triadic witnesses. They do not validate human relation judgments or unmodelled higher-order consistency.

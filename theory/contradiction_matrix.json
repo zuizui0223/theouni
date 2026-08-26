@@ -2,7 +2,7 @@
   "schema_version": "theouni-pairwise-contradiction-matrix.v0.6-draft",
   "id": "THEORY-PAIRWISE-CERTIFICATE-v0.6-draft",
   "status": "draft_finite_typed_noncontradiction_audit",
-  "scope": "Pairwise audit of 12 named theory modules at their current declared claim ceilings. A non-conflict classification is not a proof of empirical truth, a bridge, equality, joint-state existence, or higher-order consistency.",
+  "scope": "Pairwise audit of 12 named theory modules at their current declared claim ceilings. A non-conflict classification is not a proof of empirical truth, a bridge, equality, joint-state existence, or higher-order consistency. Relation labels are human audit judgments; the validator checks their presence and internal parity, not their semantic truth.",
   "base": {
     "current_interpretation": "v0.5.1",
     "immutable_manifest": "theory/FREEZE_v0.5.json",
@@ -112,7 +112,9 @@
     "required_actual_conflict_count": 0,
     "fail_closed": true,
     "higher_order_consistency_claimed": false,
-    "empirical_truth_claimed": false
+    "empirical_truth_claimed": false,
+    "human_relation_truth_validated": false,
+    "relation_misclassification_external_review_risk": true
   },
   "certificate_document": "theory/CONTRADICTION_CERTIFICATE_v0.6.md",
   "validator": "theory/validate_contradiction_matrix.py"
