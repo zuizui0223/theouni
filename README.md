@@ -2,8 +2,8 @@
 
 `theouni` is organized as four deliberately separate layers.
 
-1. **Theory Universe v0.5 — frozen semantic core**  
-   Worlds, scientific contracts, required states, evidence, learning, revision, loss states, and warning states.
+1. **Theory Universe v0.5.1 — current interpretation over frozen v0.5 core**  
+   Worlds, scientific contracts, required states, evidence, learning, revision, loss states, and warning states. v0.5.1 clarifies `D_req != E_y` and requires a contract-complete loss-response signature.
 2. **Empirical Projection Gate v0.1 — Reality -> Theory admission**  
    The claim-discipline protocol that decides when measured coordinates may earn target-relative partial-state status.
 3. **Concrete Research Universe v0.1 — typed real-research programmes**  
@@ -26,17 +26,19 @@ Concrete species, island syndromes, floral polymorphisms, SDMs, sensors, and fie
 
 > **What may science safely forget, what must remain revisable, and which distinctions are required by the scientific question actually being asked?**
 
-The v0.5 worldview is:
+The current worldview is:
 
 - ecological reality is temporally extended and is not itself a `State`;
 - mathematics acts on declared `ModelWorld`s rather than directly on reality;
 - a `RequiredState` is a contract-relative quotient of model worlds;
 - ecological laws are effective laws on adequate quotients;
+- `D_req` is a pre-observation evidence/reliability requirement, whereas `E_y^{D_req}` is the realized post-observation compatible-world class;
 - evidence identifies or licenses but does not create structural distinctions;
 - causal uncertainty remains set-valued until discriminating evidence exists;
 - scientific compression can become unrevisable after a contract changes;
 - causal-learning value and target-licensing value are different scientific utilities;
 - raw simulator-state complexity is not target-relevant state complexity;
+- `LossGeneratingState` is defined by the full response signature required by the loss contract, not automatically by one scalar loss summary;
 - a `LossGeneratingState` need not be sufficient for warning evaluation;
 - within-state warning reproducibility and cross-state warning portability are separate claims.
 
@@ -51,7 +53,7 @@ flowchart TD
     C --> G[Future / Gamma]
     C --> H[History / H]
     C --> M[Mechanism / Theta]
-    C --> D[Evidence / D]
+    C --> DREQ[Evidence / reliability requirement D_req]
     C --> T[Target / T]
 
     G --> CCOC[CCOC]
@@ -61,17 +63,20 @@ flowchart TD
     MLTR --> J
     MRM --> J
 
+    DREQ --> OBS[ObservationRecord y]
+    OBS --> EY[RealizedEvidenceClass E_y]
     J --> CED[CED evidence / reportability]
-    D --> CED
+    DREQ --> CED
     T --> CED
-    CED --> E[EvidenceClass]
-    E --> RACH[RACH admissible causal set]
+    EY --> CED
+    EY --> RACH[RACH admissible causal set]
 
     J --> TU1[TU-1 revision after compression]
     RACH --> TU2[TU-2 learning != licensing]
 
     W --> DYN[Declared dynamics]
-    DYN --> TU3[TU-3 loss-state representation]
+    DYN --> SIGL[Full loss-contract signature Sigma_C_L]
+    SIGL --> TU3[TU-3 loss-state representation]
     TU3 --> LS[LossGeneratingState]
     LS --> TU4[TU-4 warning-state refinement]
     TU4 --> WS[WarningEvaluationState]
@@ -80,14 +85,19 @@ flowchart TD
     PORT[Named project / repository] --> CR
 ```
 
-## 1. Theory Universe v0.5
+## 1. Theory Universe v0.5.1
+
+The immutable base remains v0.5; the current interpretation layer is v0.5.1.
 
 Start with:
 
-- [`theory/CONSTITUTION.md`](theory/CONSTITUTION.md) — normative axioms, definitions, claim ceilings, and frozen scientific sentence.
-- [`theory/README.md`](theory/README.md) — readable theory-world exposition.
-- [`theory/core_universe.json`](theory/core_universe.json) — machine-readable type/operator/theorem registry.
-- [`theory/theorem_graph.json`](theory/theorem_graph.json) — prerequisite-to-dependent theorem DAG.
+- [`theory/CURRENT.json`](theory/CURRENT.json) — current version pointer and immutable base.
+- [`theory/CONSTITUTION.md`](theory/CONSTITUTION.md) — frozen v0.5 axioms, definitions, claim ceilings, and scientific sentence.
+- [`theory/CLARIFICATION_v0.5.1.md`](theory/CLARIFICATION_v0.5.1.md) — current semantic clarification of evidence and loss-response notation.
+- [`theory/clarification_v0.5.1.json`](theory/clarification_v0.5.1.json) — machine-readable clarification contract.
+- [`theory/README.md`](theory/README.md) — readable current theory exposition.
+- [`theory/core_universe.json`](theory/core_universe.json) — frozen v0.5 type/operator/theorem registry.
+- [`theory/theorem_graph.json`](theory/theorem_graph.json) — frozen prerequisite-to-dependent theorem DAG.
 - [`theory/FREEZE_v0.5.json`](theory/FREEZE_v0.5.json) — semantic-core freeze manifest.
 - [`theory/CONSISTENCY_AUDIT.md`](theory/CONSISTENCY_AUDIT.md) — cross-repository ownership and anti-collapse audit.
 
@@ -98,7 +108,19 @@ Current `theouni` theorem/firewall modules:
 - [`theory/TU3_LOSS_STATE_INVARIANCE.md`](theory/TU3_LOSS_STATE_INVARIANCE.md) — loss-state representation invariance.
 - [`theory/TU4_WARNING_STATE_PORTABILITY.md`](theory/TU4_WARNING_STATE_PORTABILITY.md) — warning-evaluation state and portability.
 
-The semantic core is frozen at v0.5. Changes to its axioms, canonical type identities, theorem semantics, claim ceilings, or dependency directions require a version increment.
+The v0.5.1 patch does **not** alter the theorem dependency graph or expand claim ceilings. It fixes two dangerous readings:
+
+```text
+D_req == realized evidence
+```
+
+and
+
+```text
+one convenient loss statistic == full LossGeneratingState
+```
+
+Both are now forbidden.
 
 ## 2. Empirical Projection Gate v0.1
 
@@ -156,6 +178,7 @@ Machine-readable definitions and reusable project manifest:
 - [`empirical/system_types.json`](empirical/system_types.json)
 - [`empirical/project_manifest.template.json`](empirical/project_manifest.template.json)
 - [`empirical/validate_empirical_universe.py`](empirical/validate_empirical_universe.py)
+- [`empirical/reality_theory_graph.json`](empirical/reality_theory_graph.json) — path-level Reality-to-Theory firewalls.
 
 A named project must declare exactly one primary CR type, may declare secondary supporting types, and cannot use cross-repository state language until the Empirical Projection Gate earns it.
 
@@ -178,7 +201,7 @@ Reality
 != ModelWorld
 != Snapshot
 != RequiredState
-!= EvidenceClass
+!= E_y^{D_req}
 != AdmissibleCausalSet
 != Report
 ```
@@ -186,7 +209,9 @@ Reality
 and
 
 ```text
+D_req != E_y^{D_req}
 CompleteSimulatorState != LossGeneratingState
+single loss summary != LossGeneratingState by default
 LossGeneratingState <= WarningEvaluationState
 StoredStateRepresentation != RevisedRequiredState
 CausalLearningValue != TargetLicensingStatus
@@ -226,12 +251,20 @@ more simulator detail
 more target-relevant state
 ```
 
+and v0.5.1 sharpens it to:
+
+```text
+same one loss summary
+    does not imply
+same full loss-contract state
+```
+
 TU-4 adds:
 
 ```text
-same loss state
+same LossGeneratingState
     does not imply
-same warning-evaluation state
+same WarningEvaluationState
 ```
 
 The empirical layers add:
@@ -244,14 +277,14 @@ empirical state
 
 ## Current frontier
 
-The frozen core should not be expanded simply by numbering another TU module. Development now belongs mainly outside the core:
+The frozen core should not be expanded simply by numbering another TU module. Development now belongs mainly at the genuinely open bridges:
 
-1. **Named-project typing** — assign real repositories to CR-1–CR-5 without granting state claims.
-2. **Projection manifests** — instantiate `(U,tau,Z,H,A,Y,O,V,Delta,epsilon)` for each concrete programme.
-3. **Empirical-state factorization** — evaluate candidate `Z` first, residual context/history second, using whole ecological units held out.
-4. **Observation licensing** — connect sensing/calibration to CED before sensor records become biological evidence.
-5. **Spatial-world semantics** — preserve the distinction among suitability, support, reachability, occupancy and observation candidates.
-6. **Cross-system portability** — require target and observation semantics to commute before comparing empirical partial states across systems.
+1. **Projection manifests** — instantiate `(U,tau,Z,H,A,Y,O,V,Delta,epsilon)` for concrete programmes.
+2. **Empirical-state factorization** — evaluate candidate `Z` first, residual context/history second, using whole ecological units held out.
+3. **Observation licensing** — connect sensing/calibration to CED before sensor records become biological evidence.
+4. **Spatial-world semantics** — preserve the distinction among suitability, support, reachability, occupancy and observation candidates.
+5. **Cross-system portability** — require target and observation semantics to commute before comparing empirical partial states across systems.
+6. **Beyond finite exact** — extend state/factorization results to stochastic, approximate and delayed-observation settings without collapsing the clarified type boundaries.
 
 ## Validation
 
@@ -263,8 +296,10 @@ python theory/verify_tu2.py
 python theory/verify_tu3.py
 python theory/verify_tu4.py
 python theory/validate_freeze.py
+python theory/validate_clarification_v0_5_1.py
 python theory/validate_empirical_projection.py
 python empirical/validate_empirical_universe.py
+python empirical/validate_reality_theory_graph.py
 ```
 
 GitHub Actions runs these checks whenever `theory/**`, `empirical/**`, the root README, or the validation workflow changes. The wider portfolio/Graphify validation remains a separate provenance task.
