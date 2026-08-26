@@ -1,12 +1,21 @@
-# Theory Universe v0.5 — a contract-relative ecology of worlds, states, evidence, learning, revision, loss, and warning
+# Theory Universe v0.5.1 — contract-relative ecology with clarified evidence and loss semantics
 
 This directory is the **theory-first core** of `theouni`.
 
-Concrete species, island syndromes, floral polymorphisms, SDMs, cameras, sensors, and field protocols are deliberately excluded from the core. They enter later only through typed empirical projection contracts.
+The immutable semantic base is **Theory Universe v0.5**. The current interpretation is **v0.5.1**, which adds only two semantic clarifications without changing TU-1–TU-4 results, dependency direction, or claim ceilings:
 
-The canonical governing document is [`CONSTITUTION.md`](CONSTITUTION.md).
+1. `D_req` (pre-observation evidence/reliability requirement) is distinct from realized evidence `E_y^{D_req}`;
+2. `LossResponseSignature` means the **full contract-complete loss-response signature** `Sigma_{C_L}`, not one convenient scalar loss summary.
 
-The programme question is:
+Version pointers:
+
+- [`CURRENT.json`](CURRENT.json) — current theory version and base freeze;
+- [`FREEZE_v0.5.json`](FREEZE_v0.5.json) — immutable v0.5 semantic-core manifest;
+- [`CONSTITUTION.md`](CONSTITUTION.md) — frozen v0.5 constitution;
+- [`CLARIFICATION_v0.5.1.md`](CLARIFICATION_v0.5.1.md) — current semantic clarification layer;
+- [`clarification_v0.5.1.json`](clarification_v0.5.1.json) — machine-readable clarification contract.
+
+The programme question remains:
 
 > **What may science safely forget, what must remain revisable, and which distinctions are required by the scientific question actually being asked?**
 
@@ -14,12 +23,12 @@ The programme question is:
 
 ## 1. One universe, five layers
 
-Theory Universe v0.5 separates:
+Theory Universe separates:
 
 1. **Reality** — temporally extended ecological reality \(\mathfrak R\).
 2. **Model worlds** — a declared mathematical universe \(\Omega\).
 3. **Representation** — contract-relative quotients such as `RequiredState`, `LossGeneratingState`, and `WarningEvaluationState`.
-4. **Epistemology** — `EvidenceClass`, reportability, `AdmissibleCausalSet`, and learning.
+4. **Epistemology** — realized evidence classes, reportability, admissible causal sets, and learning.
 5. **Cross-time / cross-representation operations** — revision after compression, representation change, and warning portability.
 
 The first firewall is
@@ -30,7 +39,7 @@ The first firewall is
 }
 \]
 
-A theorem on a model-world universe is not automatically a theorem about nature.
+A theorem on model worlds is not automatically a theorem about nature.
 
 ---
 
@@ -44,15 +53,23 @@ A temporally extended model world can be written schematically as
 
 where history, present configuration, retained mechanism, and future-response structure may matter.
 
-A scientific contract is
+The canonical scientific contract is now written
 
 \[
-\mathcal C=(\Gamma,\mathcal H,\Theta,\mathcal D;T),
+\boxed{
+\mathcal C=(\Gamma,\mathcal H,\Theta,\mathcal D_{\rm req};T).
+}
 \]
 
-with future, historical, mechanism, evidence, and target responsibilities.
+Here:
 
-Two worlds may be merged only when they are scientifically interchangeable for the declared contract. The required state is therefore
+- \(\Gamma\): future/intervention responsibilities;
+- \(\mathcal H\): historical/semantic responsibilities;
+- \(\Theta\): retained mechanism responsibilities;
+- \(\mathcal D_{\rm req}\): **pre-observation** experiment, calibration, failure, reliability, resolution, and reporting requirements;
+- \(T\): requested target/report/decision.
+
+Two worlds may be merged only when they are scientifically interchangeable for the declared contract. The required state is
 
 \[
 \boxed{
@@ -60,7 +77,7 @@ S_{\mathcal C}=\Omega/\sim_{\mathcal C}.
 }
 \]
 
-The state is the **maximal lawful forgetting** compatible with that contract.
+The state is the **maximal lawful forgetting** compatible with the contract.
 
 On a declared finite common carrier, CREST owns the least-information adequate-state construction. `theouni` does not re-own that theorem.
 
@@ -90,29 +107,47 @@ For actions \(A\),
 L:S_{\mathcal C}\times A\to S_{\mathcal C}
 \]
 
-is well-defined only if all worlds merged into one state agree on the contract-relevant response.
+is well-defined only if all worlds merged into one state agree on every contract-relevant response.
 
-A law may therefore stop transporting after a contract or ecological structure changes because the old quotient ceases to be adequate, even though the law was valid in its original domain.
+A law may stop transporting after a contract or ecological structure changes because the old quotient ceases to be adequate, even though the law was valid in its original domain.
 
 ---
 
-## 5. Evidence is not state — CED layer
+## 5. Evidence requirement is not realized evidence — CED layer
 
-An observation record \(y\) determines a reliability-qualified compatible-world class
-
-\[
-E(y)=\{\omega\in\Omega:\omega\text{ remains compatible with }y\}.
-\]
-
-This is an epistemic object:
+The v0.5.1 distinction is
 
 \[
 \boxed{
-\text{EvidenceClass}\neq\text{RequiredState}.
+\mathcal D_{\rm req}\neq E_y^{\mathcal D_{\rm req}}.
 }
 \]
 
-The canonical separation is
+`D_req` is declared **before** observation and specifies what observation/reliability architecture counts as acceptable.
+
+After a realized record \(y\), define
+
+\[
+\boxed{
+E_y^{\mathcal D_{\rm req}}
+=
+\{\omega\in\Omega:
+\omega\text{ remains compatible with }y
+\text{ under }\mathcal D_{\rm req}\}.
+}
+\]
+
+This is an epistemic object.
+
+Therefore
+
+\[
+\boxed{
+\text{RequiredState}\neq\text{RealizedEvidenceClass}\neq\text{Report}.
+}
+\]
+
+The canonical separation remains
 
 \[
 \boxed{
@@ -120,7 +155,23 @@ The canonical separation is
 }
 \]
 
-A target can be deterministic on an evidence class even when the full required state remains unresolved. CED owns the finite evidence, failure, calibration, risk, and reportability layer.
+The correct direction is
+
+```text
+ScientificContract / D_req -> required distinctions
+realized observation y     -> E_y^{D_req}
+required + identified      -> licensed report
+```
+
+and not
+
+```text
+realized data -> structural distinction by decree
+```
+
+Where older v0.5 prose writes `C_{D,T}`, v0.5.1 reads it as `C_{D_req,T}`: the **required resolution/reportability responsibility**, not the accidental contents of the realized sample.
+
+CED owns the finite evidence, failure, calibration, risk, and reportability layer.
 
 ---
 
@@ -129,7 +180,7 @@ A target can be deterministic on an evidence class even when the full required s
 For declared causal programmes \(m\) supporting world subsets \(\Omega_m\), define
 
 \[
-A(y)=\{m:\Omega_m\cap E(y)\neq\varnothing\}.
+A(y)=\{m:\Omega_m\cap E_y^{\mathcal D_{\rm req}}\neq\varnothing\}.
 \]
 
 This is the `AdmissibleCausalSet`, not a best-model winner.
@@ -140,11 +191,11 @@ RACH keeps compatible causal programmes and designs next observations that reduc
 \operatorname{NOV}(Q)=\frac{I(S;Q\mid A_\epsilon)}{K}.
 \]
 
-The fact that an observation is valuable for causal learning does not by itself say whether a requested ecological target becomes reportable; TU-2 formalizes that firewall.
+An observation can be valuable for causal learning without licensing the requested ecological target; TU-2 formalizes that firewall.
 
 ---
 
-## 7. Dynamics, simulator state, and target-specific state
+## 7. Dynamics, simulator state, and contract-complete target state
 
 Model worlds evolve under a declared dynamics law
 
@@ -154,9 +205,9 @@ Model worlds evolve under a declared dynamics law
 
 A `CompleteSimulatorState` can be future-sufficient under one explicit simulator closure without being minimal, natural, or empirically observable.
 
-For a declared target-response signature \(r\), worlds are target-equivalent when they have the same required response. Raw representation complexity is therefore separate from target-relevant state complexity.
+For any target-specific state, the response object used to define equivalence must be complete for the declared scientific responsibility. A convenient scalar response is sufficient only if it has independently been shown to exhaust the contract.
 
-This separation is the basis of TU-3.
+This requirement is especially important for TU-3 and loss state.
 
 ---
 
@@ -166,15 +217,11 @@ This separation is the basis of TU-3.
 
 CREST asks what state is adequate while the full common carrier is still available. TU-1 asks what happens **after a previous state has already been stored**.
 
-Let \(P\) be the old stored-state partition and \(Q\) the revised required partition.
-
-State-only revision exists iff
+Let \(P\) be the old stored-state partition and \(Q\) the revised required partition. State-only revision exists iff
 
 \[
 q_Q=f\circ q_P.
 \]
-
-Equivalently, every old `P` block must lie inside one revised `Q` block.
 
 If not, define
 
@@ -196,9 +243,7 @@ with worst-case revision debt
 D_{\rm rev}=\log_2 K_{\rm rev}.
 \]
 
-A finite construction shows that worst-case local debt can be arbitrarily large while average refinement debt is arbitrarily small.
-
-**Interpretation:** scientific compression can be adequate today but unrevisable for a later scientific responsibility.
+Scientific compression can be adequate today but unrevisable for a later scientific responsibility.
 
 Source: [`TU1_CONTRACT_REVISION.md`](TU1_CONTRACT_REVISION.md).
 
@@ -208,21 +253,13 @@ Source: [`TU1_CONTRACT_REVISION.md`](TU1_CONTRACT_REVISION.md).
 
 RACH and CED assign value to different scientific objects.
 
-In a finite product universe
-
-\[
-\Omega=\{0,1\}^m\times\{0,1\},
-\]
-
-let \(S\) be causal state and \(T\) an independent report target.
-
-Experiments can be constructed with
+Finite constructions give both
 
 \[
 \operatorname{NOV}=1,\quad L_T=0,
 \]
 
-and conversely
+and
 
 \[
 \operatorname{NOV}=0,\quad L_T=1.
@@ -244,82 +281,119 @@ Source: [`TU2_LEARNING_LICENSING.md`](TU2_LEARNING_LICENSING.md).
 
 ## TU-3 — Loss-state representation invariance
 
-Let \(r_L\) be the declared loss-response signature. The loss-generating quotient is
+Let the loss contract be
 
 \[
-Q_L=\Omega/\!\sim_L,
-\qquad
-\omega\sim_L\omega'\iff r_L(\omega)=r_L(\omega').
+\mathcal C_L
+=(\Gamma_L,\mathcal H_L,\Theta_L,\mathcal D_{L,\rm req};T_L).
 \]
 
-For a representation projection \(\pi:X\to Z\), the coarse representation is loss-faithful iff
+Let \(\mathcal Q_L\) index **all loss-relevant query contexts required by that contract**, including declared actions/interventions, horizons/stopping rules, retained history/mechanism semantics, and target/report distinctions when applicable.
+
+The full loss-contract response signature is
 
 \[
-r_L=\bar r_L\circ\pi.
+\boxed{
+\Sigma_{\mathcal C_L}(\omega)
+=
+\bigl(R_q(\omega)\bigr)_{q\in\mathcal Q_L}.
+}
 \]
 
-If this factorization holds, nuisance coordinates can make a simulator arbitrarily more detailed without increasing the loss-state quotient. If it fails, even one hidden coordinate can make the projection transition/loss-insufficient.
+The loss-generating quotient is
+
+\[
+\boxed{
+Q_L
+=
+\Omega/\ker\Sigma_{\mathcal C_L}.
+}
+\]
+
+A representation projection \(\pi:X\to Z\) is loss-faithful iff the **full signature** factors through it:
+
+\[
+\boxed{
+\Sigma_{\mathcal C_L}
+=
+\bar\Sigma_{\mathcal C_L}\circ\pi.
+}
+\]
+
+A quotient based only on one loss probability, one threshold time, or one horizon is merely a candidate loss quotient unless that summary has been shown to exhaust `C_L`.
+
+If `Sigma_{C_L}` exhaustively encodes the loss-specialized CREST responsibilities on the declared common carrier, then
+
+\[
+Q_L\cong S_{\mathcal C_L}.
+\]
 
 Therefore
 
 \[
 \boxed{
-\text{raw simulator-state complexity}\neq\text{loss-state complexity}.
+\text{raw simulator-state complexity}\neq\text{contract-complete loss-state complexity}.
 }
 \]
 
-Source: [`TU3_LOSS_STATE_INVARIANCE.md`](TU3_LOSS_STATE_INVARIANCE.md).
+Source: [`TU3_LOSS_STATE_INVARIANCE.md`](TU3_LOSS_STATE_INVARIANCE.md), interpreted through [`CLARIFICATION_v0.5.1.md`](CLARIFICATION_v0.5.1.md).
 
 ---
 
 ## TU-4 — Warning evaluation state and portability
 
-A loss-generating state need not determine warning behaviour.
-
-Let \(r_L\) be the loss response and \(r_G\) the warning response. Define the warning-evaluation quotient by equality of the joint signature
-
-\[
-(r_L,r_G).
-\]
-
-Then
+Let \(\Sigma_G(\omega)\) be the warning response required by the warning contract. The warning-evaluation signature is
 
 \[
 \boxed{
-Q_{\rm loss}\preceq Q_{\rm warn}.
+\Sigma_W(\omega)
+=
+\bigl(\Sigma_{\mathcal C_L}(\omega),\Sigma_G(\omega)\bigr).
 }
 \]
 
-Equality holds iff warning response factors through the loss state:
+The warning-evaluation quotient therefore satisfies
 
 \[
-r_G=\bar r_G\circ q_L.
+\boxed{
+Q_L\preceq Q_W.
+}
 \]
 
-Thus two worlds can have the same loss future but different lead/tie/lag warning ordering and must then occupy different warning-evaluation states.
+Equality holds iff the required warning response factors through the **full loss-contract state**.
+
+Thus two distinct warnings are protected against collapse:
+
+```text
+same scalar loss summary
+    does not imply
+same LossGeneratingState
+
+same LossGeneratingState
+    does not imply
+same WarningEvaluationState
+```
 
 Warning portability across domains is an additional commutation condition on a declared cross-state correspondence; within-state reproducibility does not imply portability.
 
-Source: [`TU4_WARNING_STATE_PORTABILITY.md`](TU4_WARNING_STATE_PORTABILITY.md).
+Source: [`TU4_WARNING_STATE_PORTABILITY.md`](TU4_WARNING_STATE_PORTABILITY.md), interpreted through [`CLARIFICATION_v0.5.1.md`](CLARIFICATION_v0.5.1.md).
 
 ---
 
 ## 9. Canonical state hierarchy
-
-The word `state` is qualified throughout cross-repository work.
 
 ```text
 ModelWorld
    |
    +--> RequiredState(C)
    |
-   +--> CompleteSimulatorState       [model-specific sufficient representation]
+   +--> CompleteSimulatorState
    |
-   +--> LossGeneratingState          [quotient for loss response]
+   +--> LossGeneratingState          [full contract-complete loss signature]
    |       |
-   |       `--> WarningEvaluationState [joint loss + warning response]
+   |       `--> WarningEvaluationState [joint full loss + warning response]
    |
-   `--> EvidenceClass                [NOT an ontic state; epistemic compatible set]
+   `--> E_y^{D_req}                  [NOT ontic state; realized epistemic class]
 ```
 
 In particular,
@@ -330,11 +404,9 @@ In particular,
 \neq
 \text{LossGeneratingState}
 \preceq
-\text{WarningEvaluationState}
+\text{WarningEvaluationState}.
 }
 \]
-
-unless explicit factorization/minimality conditions establish equality.
 
 ---
 
@@ -344,29 +416,21 @@ unless explicit factorization/minimality conditions establish equality.
 
 ```text
 Reality
-  |
-  | model / measurement bridge
-  v
-ModelWorldUniverse
-  |
-  +--> dynamics through time
-  |
-  `--> ScientificContract
-          |
-          v
-       RequiredState
+  -> model / measurement bridge
+  -> ModelWorldUniverse
+  -> ScientificContract C=(Gamma,H,Theta,D_req;T)
+  -> RequiredState
 ```
 
 ### Epistemic / learning
 
 ```text
-World
-  -> ObservationRecord
-  -> EvidenceClass
+World + D_req
+  -> ObservationRecord y
+  -> E_y^{D_req}
        |\
        | `--> TargetLicensingStatus / Report
        `----> AdmissibleCausalSet
-                  |
                   `--> CausalLearningValue / next observation
 ```
 
@@ -382,16 +446,13 @@ RequiredState under C0
 ### Loss and warning
 
 ```text
-World dynamics
-  -> declared LossResponseSignature
+LossContract C_L
+  -> full Sigma_{C_L}
   -> TU-3 LossGeneratingState
-       |
-       + declared WarningResponseSignature
-       v
-     TU-4 WarningEvaluationState
-       |
-       +--> within-state WarningValidity
-       `--> cross-state WarningPortability audit
+       + Sigma_G
+       -> TU-4 WarningEvaluationState
+            +--> within-state WarningValidity
+            `--> cross-state WarningPortability audit
 ```
 
 ---
@@ -404,9 +465,11 @@ Without an explicit bridge/theorem, the following collapses are forbidden:
 |---|---|
 | `Reality = ModelWorld` | model theorem is not empirical truth |
 | `Snapshot = RequiredState` | sufficiency must be demonstrated |
+| `D_req = E_y^{D_req}` | contract requirement and realized evidence are different layers |
+| `EvidenceClass = RequiredState` | epistemic resolution differs from structural adequacy |
 | `CompleteSimulatorState = RequiredState` | sufficiency does not prove minimality/naturality |
 | `CompleteSimulatorState = LossGeneratingState` | target-relative quotient may be much coarser |
-| `EvidenceClass = RequiredState` | epistemic resolution differs from structural adequacy |
+| `single loss summary = LossGeneratingState` | only valid after full-contract sufficiency is established |
 | `AdmissibleCausalSet = CausalWinner` | unresolved causal multiplicity must remain |
 | `CausalLearningValue = TargetLicensingStatus` | TU-2 separates them exactly |
 | `StoredState = RevisedRequiredState` | TU-1 factorization is required after contract change |
@@ -435,17 +498,29 @@ Without an explicit bridge/theorem, the following collapses are forbidden:
 | loss-state representation firewall | `theouni` / TU-3 |
 | warning-state/portability firewall | `theouni` / TU-4 |
 
-Source theorem/evidence ownership is never transferred merely because the objects appear in the same theory graph.
+Source theorem/evidence ownership is never transferred merely because objects appear in the same theory graph.
 
 ---
 
-## 13. Frozen dependency graph
+## 13. Frozen base and current clarification
 
-The machine-readable dependency DAG is [`theorem_graph.json`](theorem_graph.json).
+The frozen dependency DAG is [`theorem_graph.json`](theorem_graph.json).
 
-The normative constitution is [`CONSTITUTION.md`](CONSTITUTION.md).
+The immutable v0.5 semantic core remains protected by [`FREEZE_v0.5.json`](FREEZE_v0.5.json).
 
-The dependency graph is intentionally directed from prerequisite to dependent and preserves open problems as explicit open nodes. Graph reachability is not itself scientific proof.
+The current v0.5.1 overlay does **not** alter dependency direction. It only prevents two dangerous readings:
+
+```text
+D_req == realized evidence
+```
+
+and
+
+```text
+one loss statistic == full loss-contract state
+```
+
+Both are now forbidden.
 
 ---
 
@@ -455,16 +530,14 @@ The dependency graph is intentionally directed from prerequisite to dependent an
 |---|---|---|
 | TU-1 | same-carrier revision criterion + exact idealized revision debt + local/global divergence | carrier-changing revision; physical irreversibility; empirical measurement cost |
 | TU-2 | causal-learning/target-licensing orthogonality and policy reversal | reliability-aware coincidence theorem; generic active-learning novelty |
-| TU-3 | target-response factorization + representation-faithful loss quotient + nuisance inflation | recursive stochastic quotient dynamics; empirical natural-state minimality |
+| TU-3 | full-response factorization + representation-faithful loss quotient + nuisance inflation | recursive stochastic quotient dynamics; empirical natural-state minimality |
 | TU-4 | warning-state refinement/equality criterion + finite portability commutation | universal thresholds; natural cross-domain portability |
 
-These modules currently serve primarily as **cross-layer type firewalls**. Their elementary finite mathematical substrates overlap established areas, so standalone mathematical novelty is not assumed.
+The v0.5.1 patch narrows signature interpretation; it does not expand any theorem claim.
 
 ---
 
 ## 15. Remaining frontier
-
-The next theory development should target gaps that genuinely connect layers rather than add more labels.
 
 1. **Reality -> model adequacy** — when does a model-world projection earn empirical adequacy rather than compatibility only?
 2. **Beyond finite exact** — stochastic, continuous, approximate, delayed-observation, and tolerance-qualified state construction.
@@ -486,12 +559,10 @@ A concrete system must be projected as
 \[
 \text{empirical system}
 \to
-(\Omega,\mathcal C,O_{\mathcal D},T)
+(\Omega,\mathcal C,O_{\mathcal D_{\rm req}},T)
 \]
 
 with explicit empirical unit, time/cohort, measured and missing coordinates, reliability/calibration, validation design, and claim ceiling.
-
-This is where thistles, island syndromes, flower-colour polymorphism, SDM-derived field design, visit cameras, and other concrete programmes will enter later.
 
 ---
 
@@ -504,6 +575,8 @@ python theory/verify_tu1.py
 python theory/verify_tu2.py
 python theory/verify_tu3.py
 python theory/verify_tu4.py
+python theory/validate_freeze.py
+python theory/validate_clarification_v0_5_1.py
 ```
 
-The theory validators enforce the type firewall and dependency graph. They do not convert finite witnesses into empirical ecological evidence.
+The frozen v0.5 validator guarantees that the historical core did not drift. The v0.5.1 validator guarantees that `D_req`/`E_y` and full loss-contract signature semantics remain separated.
