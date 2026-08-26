@@ -60,6 +60,9 @@ jobs:
       - name: Verify v0.6 contract-indexed quotient transport draft
         run: python theory/verify_contract_indexed_quotient_transport.py
 
+      - name: Validate v0.6 pairwise contradiction certificate
+        run: python theory/validate_contradiction_matrix.py
+
       - name: Validate revision reserve and positive bridge registry
         run: python theory/validate_revision_and_positive_bridge.py
 

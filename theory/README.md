@@ -19,6 +19,15 @@ The programme question remains:
 
 > **What may science safely forget, what must remain revisable, and which distinctions are required by the scientific question actually being asked?**
 
+The v0.6 generalization remains a draft outside this current v0.5.1 interpretation. Its entrypoints are:
+
+- [`DRAFT_v0.6_CONTRACT_INDEXED_QUOTIENT_TRANSPORT.md`](DRAFT_v0.6_CONTRACT_INDEXED_QUOTIENT_TRANSPORT.md) — theory-spine statement;
+- [`contract_indexed_adequacy_registry.json`](contract_indexed_adequacy_registry.json) — machine-readable CIRA-1 through CIRA-5 and exact/graded specialization branches;
+- [`CONTRADICTION_CERTIFICATE_v0.6.md`](CONTRADICTION_CERTIFICATE_v0.6.md) — generated 12-module, 66-pair typed contradiction certificate;
+- [`contradiction_matrix.json`](contradiction_matrix.json) and [`validate_contradiction_matrix.py`](validate_contradiction_matrix.py) — canonical audit data and fail-closed validator.
+
+The pairwise result is `actual-conflict = 0` at current claim ceilings. It is not a global-consistency, empirical-truth, or bridge-completion claim.
+
 ---
 
 ## 1. One universe, five layers
@@ -577,6 +586,10 @@ python theory/verify_tu3.py
 python theory/verify_tu4.py
 python theory/validate_freeze.py
 python theory/validate_clarification_v0_5_1.py
+python theory/verify_contract_indexed_quotient_transport.py
+python theory/validate_contradiction_matrix.py
+python theory/validate_revision_and_positive_bridge.py
+python theory/bridges/verify_rach_mrm_ced_bridge.py
 ```
 
-The frozen v0.5 validator guarantees that the historical core did not drift. The v0.5.1 validator guarantees that `D_req`/`E_y` and full loss-contract signature semantics remain separated.
+The frozen v0.5 validator guarantees that the historical core did not drift. The v0.5.1 validator guarantees that `D_req`/`E_y` and full loss-contract signature semantics remain separated. The draft v0.6 validators guarantee registry completeness, exact/graded branch separation, and a complete 66-pair certificate with zero registered `actual-conflict` relations.

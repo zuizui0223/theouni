@@ -1,0 +1,131 @@
+{
+  "schema_version": "theouni-contract-indexed-adequacy.v0.6-draft",
+  "id": "CIRA-SPINE-v0.6-draft",
+  "status": "draft_machine_readable_theory_spine",
+  "base_contract": {
+    "current_interpretation": "v0.5.1",
+    "current_pointer": "theory/CURRENT.json",
+    "immutable_base": "theory/FREEZE_v0.5.json",
+    "semantic_core_changed": false,
+    "claim_ceiling_expanded": false
+  },
+  "scope": {
+    "carrier": "one declared finite exact model-world carrier",
+    "response_semantics": "deterministic contract-complete response signatures",
+    "order_convention": "P <= Q means Q refines P and therefore retains at least every distinction retained by P",
+    "outside_scope": [
+      "reality-to-model empirical adequacy",
+      "stochastic, continuous, approximate, or delayed-observation extensions",
+      "carrier-changing transport without an explicit common lift or typed map",
+      "standalone mathematical novelty of the factorization substrate"
+    ]
+  },
+  "objects": {
+    "task": "A scientific responsibility alpha represented by a contract-complete response signature Sigma_alpha: Omega -> Y_alpha.",
+    "task_quotient": "Q_alpha = Omega / ker(Sigma_alpha).",
+    "representation": "A retained map R: Omega -> Z with quotient Q_R induced by its fibers.",
+    "exact_adequacy": "R models alpha iff Sigma_alpha = f o R for some map f."
+  },
+  "results": [
+    {
+      "id": "CIRA-1",
+      "name": "Contract-Indexed Representation Adequacy",
+      "kind": "equivalence_theorem",
+      "equivalent_conditions": [
+        "R models alpha",
+        "Sigma_alpha factors through R",
+        "every R-fiber is contained in one alpha-equivalence class",
+        "ker(R) is a subset of ker(Sigma_alpha)",
+        "Q_alpha <= Q_R"
+      ]
+    },
+    {
+      "id": "CIRA-2",
+      "name": "Task preorder and quotient monotonicity",
+      "kind": "preorder_theorem",
+      "definition": "alpha <=task beta iff Sigma_alpha factors through Sigma_beta",
+      "laws": ["reflexive", "transitive"],
+      "quotient_correspondence": "alpha <=task beta iff Q_alpha <= Q_beta"
+    },
+    {
+      "id": "CIRA-3",
+      "name": "Canonical-state reuse",
+      "kind": "reuse_theorem",
+      "statement": "q_alpha models beta iff beta <=task alpha",
+      "firewall": "Adequacy for a weaker task does not license reuse for a stronger task."
+    },
+    {
+      "id": "CIRA-4",
+      "name": "Incomparability and nontransport",
+      "kind": "incomparability_theorem",
+      "statement": "If alpha and beta are task-incomparable, q_alpha fails beta and q_beta fails alpha.",
+      "preferred_term": "failure of order transport across incomparable task indices"
+    },
+    {
+      "id": "CIRA-5",
+      "name": "Joint responsibility",
+      "kind": "joint_signature_theorem",
+      "definition": "Sigma_(alpha join beta) = (Sigma_alpha, Sigma_beta)",
+      "kernel_identity": "ker(Sigma_(alpha join beta)) = ker(Sigma_alpha) intersect ker(Sigma_beta)",
+      "quotient_identity": "Q_(alpha join beta) = Q_alpha join Q_beta",
+      "adequacy_identity": "R models (alpha join beta) iff R models alpha and R models beta"
+    }
+  ],
+  "specializations": [
+    {
+      "module": "TU-1",
+      "branch": "exact",
+      "generic_result": "CIRA-3",
+      "substitution": "alpha=C0, beta=C1, R=q_C0",
+      "additional_source_owned_content": "minimum auxiliary side-information alphabet and revision-debt bounds",
+      "source": "theory/TU1_CONTRACT_REVISION.md"
+    },
+    {
+      "module": "TU-3",
+      "branch": "exact",
+      "generic_result": "CIRA-1",
+      "substitution": "alpha=C_L, R=pi, Sigma_alpha=Sigma_C_L",
+      "additional_source_owned_content": "nuisance-inflation and hidden loss-coordinate witnesses",
+      "source": "theory/TU3_LOSS_STATE_INVARIANCE.md"
+    },
+    {
+      "module": "TU-4",
+      "branch": "exact",
+      "generic_result": "CIRA-2,CIRA-3,CIRA-5",
+      "substitution": "alpha=C_L, beta=C_W, Sigma_C_W=(Sigma_C_L,Sigma_G)",
+      "additional_source_owned_content": "warning-state strict-refinement and portability criteria",
+      "source": "theory/TU4_WARNING_STATE_PORTABILITY.md"
+    },
+    {
+      "module": "TU-2",
+      "branch": "graded_epistemic_analogue",
+      "generic_result": "CIRA-4 exact endpoints only",
+      "substitution": "alpha=causal-identification task, beta=target-report task",
+      "additional_source_owned_content": "graded RACH information utility, target licensing, and policy reversal",
+      "not_claimed": "Intermediate graded utility values are not direct corollaries of exact quotient adequacy.",
+      "source": "theory/TU2_LEARNING_LICENSING.md"
+    }
+  ],
+  "finite_witnesses": {
+    "worlds": ["00", "01", "10", "11"],
+    "task_signatures": {
+      "constant": [0, 0, 0, 0],
+      "a": [0, 0, 1, 1],
+      "b": [0, 1, 0, 1],
+      "joint": [0, 1, 2, 3]
+    },
+    "preorder_chain": ["constant", "a", "joint"],
+    "incomparable_pair": ["a", "b"],
+    "joint_pair": ["a", "b"]
+  },
+  "preserved_artifacts": [
+    "theory/CLARIFICATION_v0.5.1.md",
+    "theory/REVISION_RESERVE.md",
+    "theory/RELATION_SEMANTICS.md",
+    "theory/bridges/RACH_MRM_CED_POSITIVE_BRIDGE.md"
+  ],
+  "documentation": "theory/DRAFT_v0.6_CONTRACT_INDEXED_QUOTIENT_TRANSPORT.md",
+  "verifier": "theory/verify_contract_indexed_quotient_transport.py",
+  "contradiction_registry": "theory/contradiction_matrix.json",
+  "contradiction_certificate": "theory/CONTRADICTION_CERTIFICATE_v0.6.md"
+}

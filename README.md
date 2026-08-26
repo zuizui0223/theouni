@@ -3,7 +3,7 @@
 `theouni` is organized as four deliberately separate layers.
 
 1. **Theory Universe v0.5.1 — current interpretation over frozen v0.5 core**  
-   Worlds, scientific contracts, required states, evidence, learning, revision, loss states, and warning states. v0.5.1 clarifies `D_req != E_y` and requires a contract-complete loss-response signature.
+   Worlds, scientific contracts, required states, evidence, learning, revision, loss states, and warning states. v0.5.1 clarifies `D_req != E_y` and requires a contract-complete loss-response signature. A separate v0.6 draft supplies the machine-readable Contract-Indexed Representation Adequacy spine and pairwise contradiction certificate without modifying the frozen base.
 2. **Empirical Projection Gate v0.1 — Reality -> Theory admission**  
    The claim-discipline protocol that decides when measured coordinates may earn target-relative partial-state status.
 3. **Concrete Research Universe v0.1 — typed real-research programmes**  
@@ -166,7 +166,15 @@ TU-2
 
 The precise principle is **failure of order transport across incomparable scientific tasks**, not generic noncommutativity of quotient formation.
 
-The draft is not part of the frozen core and carries no standalone mathematical novelty claim.
+Executable draft surfaces:
+
+- [`theory/contract_indexed_adequacy_registry.json`](theory/contract_indexed_adequacy_registry.json) — CIRA-1 through CIRA-5, task preorder, reuse, incomparability, joint responsibility, scope, and specialization branches;
+- [`theory/verify_contract_indexed_quotient_transport.py`](theory/verify_contract_indexed_quotient_transport.py) — exhaustive four-world partition verification and exact/graded branch enforcement;
+- [`theory/contradiction_matrix.json`](theory/contradiction_matrix.json) — all 66 unordered pairs among the 12 theory modules, typed with the five audited relations;
+- [`theory/CONTRADICTION_CERTIFICATE_v0.6.md`](theory/CONTRADICTION_CERTIFICATE_v0.6.md) — generated human-readable matrix and pair ledger;
+- [`theory/validate_contradiction_matrix.py`](theory/validate_contradiction_matrix.py) — fail-closed completeness, vocabulary, certificate-parity, and `actual-conflict = 0` validation.
+
+The current pairwise certificate passes with `actual-conflict = 0`. This does not turn conditional relations into bridges and does not claim empirical truth, three-way/global consistency, or standalone mathematical novelty. The draft is not part of the frozen core.
 
 ## 2. Empirical Projection Gate v0.1
 
@@ -329,8 +337,8 @@ empirical state
 
 The frozen core should not be expanded simply by numbering another TU module. Development now belongs mainly at the genuinely open bridges:
 
-1. **v0.6 synthesis audit** — determine whether the contract-indexed quotient-transport theorem is the correct single meta-principle and whether it clarifies rather than trivializes the ecology.
-2. **Positive bridge completion** — move beyond anti-collapse firewalls by completing at least one multi-source bridge end-to-end with source semantics, factorization condition, evidence gate, and claim ceiling.
+1. **v0.6 promotion audit** — the machine-readable spine and pairwise certificate now pass; prior-art positioning, manuscript-level nontriviality, and higher-order consistency remain open.
+2. **Positive bridge extension** — retain the implemented finite RACH→MRM→CED bridge and test whether any source-faithful extension survives empirical calibration or broader carriers.
 3. **Projection manifests** — instantiate `(U,tau,Z,H,A,Y,O,V,Delta,epsilon)` for concrete programmes.
 4. **Empirical-state factorization** — evaluate candidate `Z` first, residual context/history second, using whole ecological units held out.
 5. **Observation licensing** — connect sensing/calibration to CED before sensor records become biological evidence.
@@ -349,6 +357,9 @@ python theory/verify_tu4.py
 python theory/validate_freeze.py
 python theory/validate_clarification_v0_5_1.py
 python theory/verify_contract_indexed_quotient_transport.py
+python theory/validate_contradiction_matrix.py
+python theory/validate_revision_and_positive_bridge.py
+python theory/bridges/verify_rach_mrm_ced_bridge.py
 python theory/validate_empirical_projection.py
 python empirical/validate_empirical_universe.py
 python empirical/validate_reality_theory_graph.py

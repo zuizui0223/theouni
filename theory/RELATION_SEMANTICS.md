@@ -181,3 +181,27 @@ If a figure becomes visually ambiguous, split it into separate normative and ope
 The Theory Universe already forbids type collapse among `World`, `State`, `EvidenceClass`, and `Report`. Graph relations require the same discipline.
 
 A graph edge is not a generic relation. The **kind of arrow is part of the scientific claim**.
+
+---
+
+## 8. Pairwise contradiction-audit relations
+
+The v0.6 draft contradiction matrix uses a second vocabulary for **symmetric pairwise comparison**. These values are audit classifications, not directed graph edges:
+
+- `compatible` — the two typed claims are directly co-satisfiable in their already-declared matched scope; equality or implication is not asserted;
+- `conditional-on-common-carrier-or-map` — no conflict follows after an explicit common carrier, lift, typed map, response map, or commutation contract is supplied; composition is forbidden until then;
+- `orthogonal-estimand` — the modules constrain different typed objects, so neither is the logical negation of the other and no automatic bridge follows;
+- `open-bridge` — no current contradiction is identified, but the scientifically useful cross-layer identification or composition is not proved at the stated generality;
+- `actual-conflict` — after carrier, type, scope, and estimand are matched, the two claims are jointly unsatisfiable.
+
+These relations must not be collapsed into the arrow types above. In particular:
+
+```text
+compatible != mathematical equivalence
+conditional-on-common-carrier-or-map != completed bridge
+orthogonal-estimand != evidence of independence
+open-bridge != favourable or null evidence
+actual-conflict = 0 != global or higher-order consistency proof
+```
+
+The canonical registry is [`contradiction_matrix.json`](contradiction_matrix.json), and the generated audit surface is [`CONTRADICTION_CERTIFICATE_v0.6.md`](CONTRADICTION_CERTIFICATE_v0.6.md).

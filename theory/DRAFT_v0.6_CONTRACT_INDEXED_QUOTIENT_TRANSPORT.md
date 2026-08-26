@@ -82,7 +82,7 @@ Equivalently, `R` never merges two worlds that task `alpha` requires to remain d
 
 ---
 
-# 3. General theorem — Contract-Indexed Representation Adequacy
+# 3. General theorem CIRA-1 — Contract-Indexed Representation Adequacy
 
 For any task `alpha` and representation `R`, the following are equivalent:
 
@@ -122,7 +122,7 @@ This is classical factorization/quotient substrate. The role here is not to clai
 
 ---
 
-## 4. A preorder on scientific responsibilities
+## 4. CIRA-2 — A preorder on scientific responsibilities
 
 Define
 
@@ -160,7 +160,7 @@ This is the precise sense in which order **does** transport: it transports only 
 
 ---
 
-# 5. Reuse theorem — when one task's state answers another task
+# 5. CIRA-3 — Reuse theorem
 
 Let `q_alpha` be the canonical state retained for task `alpha`.
 
@@ -206,7 +206,7 @@ This is TU-1's core logical condition before revision debt is quantified.
 
 ---
 
-# 6. Incomparability theorem — no free cross-task order transport
+# 6. CIRA-4 — Incomparability theorem
 
 Suppose tasks `alpha` and `beta` are incomparable:
 
@@ -231,7 +231,7 @@ The quotient map is well behaved once the task relation is typed. The problem is
 
 ---
 
-## 7. Joint responsibilities
+## 7. CIRA-5 — Joint responsibilities
 
 For two tasks `alpha` and `beta`, define the joint response signature
 
@@ -398,8 +398,21 @@ The possible novelty of the wider programme, if any, lies in the **ecological co
 
 This is a **v0.6 draft**, not a change to the frozen core.
 
-Before promotion, three things are required:
+The generalization now has an executable draft spine:
+
+- [`contract_indexed_adequacy_registry.json`](contract_indexed_adequacy_registry.json) records CIRA-1 through CIRA-5, their scope, and the specialization branches;
+- [`verify_contract_indexed_quotient_transport.py`](verify_contract_indexed_quotient_transport.py) exhausts all 15 partitions of a four-world carrier and checks adequacy/kernel equivalence, preorder reflexivity/transitivity, reuse, incomparability witnesses, and joint responsibility;
+- the registry requires `TU-1`, `TU-3`, and `TU-4` to remain on the `exact` branch and `TU-2` to remain on the `graded_epistemic_analogue` branch.
+
+The cross-module audit is also executable:
+
+- [`contradiction_matrix.json`](contradiction_matrix.json) types every one of the 66 unordered pairs among CREST, CCOC, MLTR, MRM, CED, RACH, EGC, EGW, and TU-1 through TU-4;
+- [`CONTRADICTION_CERTIFICATE_v0.6.md`](CONTRADICTION_CERTIFICATE_v0.6.md) is the generated human-readable certificate;
+- [`validate_contradiction_matrix.py`](validate_contradiction_matrix.py) fails closed on a missing/duplicate pair, an unknown relation, certificate drift, or any nonzero `actual-conflict` count.
+
+The current certificate has `actual-conflict = 0`. This is a **pairwise typed non-contradiction result only**. `conditional-on-common-carrier-or-map` and `open-bridge` are not upgraded to completed compositions, and no empirical truth or higher-order consistency result is claimed.
+
+Before promotion, two non-executable gates remain:
 
 1. prior-art audit for task-indexed quotient/factorization formulations;
-2. executable finite verification that TU-1/3/4 instantiate the same generic criterion and that TU-2 is only a graded analogue;
-3. manuscript-level test that replacing four apparently independent principles by this one meta-theorem actually sharpens, rather than trivializes, the ecological argument.
+2. manuscript-level test that replacing four apparently independent principles by this one meta-theorem actually sharpens, rather than trivializes, the ecological argument.
