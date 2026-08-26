@@ -1,0 +1,30 @@
+{
+  "schema_version": "theouni-positive-bridge.v0.1",
+  "id": "bridge:RACH-MRM-CED",
+  "status": "finite_exact_implemented",
+  "source_snapshots": {
+    "microdonta": "f7303c4a618d432949177c424adaafeb9c78f1d3",
+    "mrm": "12b4fc375d96a18b9b18cb625861aa028e77a73e",
+    "ced": "85aad0092e743a35d5c41ff0665b954a5cfd77c0"
+  },
+  "source_semantics": {
+    "RACH": "Finite admissible causal set after current constraints/evidence; causal multiplicity retained rather than forced to one winner.",
+    "MRM": "Response-equivalence/candidate-safe quotient over retained mechanisms for declared actions and target.",
+    "CED": "Reliability-qualified evidence classes and deterministic-vs-set-valued target reporting criterion."
+  },
+  "carrier_contract": "Fix one ecological context and construct one latent bridge world for each RACH-admissible causal programme.",
+  "positive_claims": [
+    "A causal singleton is not necessary for a deterministic mechanism-robust target when all admissible programmes agree at the required response/target resolution.",
+    "A reliability-qualified evidence class may contain multiple causal programmes while still licensing one response class or target value.",
+    "Evidence need only resolve report-relevant disagreement, not exact causal identity by default."
+  ],
+  "firewalls_preserved": [
+    "RACH NOV is not converted into CED licensing value.",
+    "MRM response equivalence is not causal truth.",
+    "CED evidence licensing does not create the MRM response distinction.",
+    "Source theorem ownership remains in the source repositories."
+  ],
+  "verification": "theory/bridges/verify_rach_mrm_ced_bridge.py",
+  "documentation": "theory/bridges/RACH_MRM_CED_POSITIVE_BRIDGE.md",
+  "claim_ceiling": "Finite exact shared-carrier composition; no canonical natural-world embedding, no generic operator commutation, no empirical calibration, and no standalone quotient novelty claim."
+}
