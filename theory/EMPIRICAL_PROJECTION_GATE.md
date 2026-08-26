@@ -52,6 +52,49 @@ A variable can be predictive yet still leave substantial target-relevant informa
 
 A coordinate set earns partial-state status only after both its own endpoint information and its residual-context boundary are evaluated under leakage-free validation.
 
+### 2A. What this gate adds beyond ordinary cross-validation
+
+The gate does **not** claim a new causal estimator or a new generalization theorem.
+
+Its added value over ordinary cross-validation is a **preregistered type-and-claim discipline** that couples, before outcome-driven expansion,
+
+\[
+(U,\tau,Z,H,A,Y,\mathcal O,\mathcal V,\Delta,\epsilon)
+\]
+
+with an ordered decision procedure and explicit claim ceiling.
+
+In particular, it requires all of the following to be declared as part of one scientific object rather than chosen independently after model fitting:
+
+- the ecological transfer unit `U`;
+- temporal/cohort alignment `tau`;
+- candidate state coordinates `Z`;
+- upstream context/history set `H`;
+- target/action family `A,Y`;
+- observation/reliability contract `O`;
+- whole-unit validation partition `V`;
+- minimum candidate-state gain `Delta`;
+- maximum tolerated residual-context gain `epsilon`;
+- ordered failure classes from `not_identifiable` through bounded partial-state support.
+
+The gate therefore adds **claim discipline and falsification order**, not causal identification by itself.
+
+### 2B. Causal limitation
+
+A candidate `Z` can pass held-out prediction even when its association with the target is noncausal, including cases where unmeasured structure influences both `Z` and `Y`.
+
+Likewise, failure of the declared `H` set to add residual held-out information does not prove absence of all unmeasured confounding or hidden history. It establishes only bounded predictive redundancy for the **predeclared** context set and validation scope.
+
+Therefore an E3 decision means:
+
+> `Z` behaves as a target-relative predictive partial state under the declared transfer test.
+
+It does **not** mean:
+
+> `Z` is a causally sufficient state of nature.
+
+Causal interpretation requires an additional mechanism/intervention/evidence bridge, potentially involving MRM, RACH, CED, or a domain-specific causal design.
+
 ---
 
 ## 3. Empirical projection contract
@@ -150,7 +193,7 @@ under the preregistered uncertainty/decision rule.
 - `G_H > epsilon`: `residual_context_detected` — the candidate state is incomplete for the declared target/validation class, or the current state coordinates are missing a process, memory, alignment, compensation, scale, or observation coordinate.
 - `G_H <= epsilon`: `no_detected_residual_context_information` — upstream context did not add transferable predictive information beyond the candidate state within the declared scope.
 
-This is a **bounded redundancy statement**, not proof that origin/history is biologically irrelevant.
+This is a **bounded redundancy statement**, not proof that origin/history is biologically irrelevant and not proof of causal sufficiency.
 
 ---
 
@@ -237,17 +280,21 @@ G0–G4 pass, G1 passes, and no material residual context is detected under G2 f
 
 Meaning:
 
-> the measured coordinates behave as a target-relative empirical partial state within the tested scope.
+> the measured coordinates behave as a target-relative **predictive** empirical partial state within the tested scope.
 
-Non-meaning:
+Non-meanings:
 
-> the complete natural state has been identified.
+> the complete natural state has been identified;
+
+> the coordinates are causally sufficient;
+
+> no unmeasured confounding/history remains.
 
 ### E4 — `portable_empirical_partial_state_supported`
 
 E3 is independently reproduced across a predeclared external domain/system class while preserving target and observation semantics.
 
-This is stronger than E3 but remains target/domain relative.
+This is stronger than E3 but remains target/domain relative and still does not by itself establish causal sufficiency.
 
 ---
 
@@ -329,10 +376,12 @@ The same abstract gate can later receive:
 
 They remain biologically different systems. What becomes comparable is the **scientific contract used to decide whether a measured representation closes the declared future target**.
 
+Its main methodological contribution is therefore not "cross-validation plus a new name" but the requirement that prediction, residual-context testing, reliability, transfer unit, thresholds, and claim ceiling be declared as one typed contract before the state language is licensed.
+
 ---
 
 ## 15. Status
 
 This document is a bridge/admission protocol, not TU-5 and not part of the frozen Theory Universe v0.5 semantic core.
 
-The unresolved mathematical question remains whether useful generalization bounds or necessary/sufficient empirical-state identification results can be proved under explicit stochastic/model classes. Until then, E0–E4 are claim-discipline categories built around preregistered held-out factorization tests, not a proof of complete ecological ontology.
+The unresolved mathematical question remains whether useful generalization bounds or necessary/sufficient empirical-state identification results can be proved under explicit stochastic/model classes. Until then, E0–E4 are claim-discipline categories built around preregistered held-out factorization tests, not a proof of complete ecological ontology or causal state identification.
