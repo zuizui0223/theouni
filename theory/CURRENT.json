@@ -1,0 +1,19 @@
+{
+  "schema_version": "theouni-theory-current.v1",
+  "current_version": "v0.5.1",
+  "base_frozen_core": {
+    "version": "v0.5",
+    "manifest": "theory/FREEZE_v0.5.json",
+    "status": "immutable"
+  },
+  "clarification_overlay": {
+    "version": "v0.5.1",
+    "document": "theory/CLARIFICATION_v0.5.1.md",
+    "registry": "theory/clarification_v0.5.1.json",
+    "status": "current"
+  },
+  "semantic_change_class": "notation_and_interpretation_narrowing_only",
+  "theorem_dependency_graph_changed": false,
+  "claim_ceiling_expanded": false,
+  "next_breaking_or_semantic_extension_requires": "version greater than v0.5.1"
+}
