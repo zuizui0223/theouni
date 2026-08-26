@@ -1,0 +1,99 @@
+{
+  "schema_version": "theouni-theory-clarification.v0.5.1",
+  "base_freeze": "theouni-theory-core.v0.5",
+  "status": "current_semantic_clarification_overlay",
+  "semantic_scope": [
+    "evidence requirement versus realized evidence",
+    "contract-complete loss-response signature"
+  ],
+  "notation": {
+    "scientific_contract": "C=(Gamma,H,Theta,D_req;T)",
+    "evidence_requirement": "D_req",
+    "observation_record": "y",
+    "realized_evidence_class": "E_y^{D_req}",
+    "required_state": "J_C or S_C",
+    "loss_contract": "C_L",
+    "full_loss_contract_signature": "Sigma_{C_L}",
+    "loss_generating_state": "Q_L=Omega/ker(Sigma_{C_L})",
+    "warning_response_signature": "Sigma_G",
+    "warning_evaluation_state": "Q_W=Omega/ker(Sigma_{C_L},Sigma_G)"
+  },
+  "types": [
+    {
+      "id": "clarified:EvidenceRequirement",
+      "canonical_symbol": "D_req",
+      "layer": "scientific_contract",
+      "definition": "Pre-observation experiment, reliability, calibration, failure, resolution and reporting requirement declared as part of the scientific contract."
+    },
+    {
+      "id": "clarified:RealizedEvidenceClass",
+      "canonical_symbol": "E_y^{D_req}",
+      "layer": "epistemic",
+      "definition": "Worlds remaining compatible with realized observation y under the declared evidence/reliability requirement D_req."
+    },
+    {
+      "id": "clarified:FullLossContractResponseSignature",
+      "canonical_symbol": "Sigma_{C_L}",
+      "layer": "target_response",
+      "definition": "Tuple/family of every response object required by the declared loss contract C_L over all contract-required actions, horizons, retained histories/mechanisms, and report distinctions."
+    }
+  ],
+  "hard_distinctions": [
+    {
+      "left": "clarified:EvidenceRequirement",
+      "right": "clarified:RealizedEvidenceClass",
+      "rule": "never identical; requirement is pre-observation contract architecture, evidence class is post-observation epistemic compatibility"
+    },
+    {
+      "left": "clarified:FullLossContractResponseSignature",
+      "right": "single_loss_summary",
+      "rule": "not interchangeable unless the single summary is independently proved sufficient for every responsibility in C_L"
+    }
+  ],
+  "operators": [
+    {
+      "id": "clarified:RealizeEvidence",
+      "signature": "ObservationRecord y x EvidenceRequirement D_req -> RealizedEvidenceClass E_y^{D_req}",
+      "meaning": "Produces epistemic compatible-world set without creating structural distinctions."
+    },
+    {
+      "id": "clarified:FullLossSignature",
+      "signature": "World omega x LossContract C_L -> FullLossContractResponseSignature Sigma_{C_L}(omega)",
+      "meaning": "Collects all loss-relevant response objects required by C_L."
+    },
+    {
+      "id": "clarified:LossStateQuotient",
+      "signature": "ModelWorldUniverse Omega x FullLossContractResponseSignature -> LossGeneratingState Q_L",
+      "meaning": "Q_L identifies worlds exactly when their full loss-contract response signatures agree."
+    }
+  ],
+  "equations": {
+    "realized_evidence": "E_y^{D_req}={omega in Omega: omega compatible with y under D_req}",
+    "loss_equivalence": "omega ~_L omega' iff Sigma_{C_L}(omega)=Sigma_{C_L}(omega')",
+    "loss_quotient": "Q_L=Omega/ker(Sigma_{C_L})",
+    "warning_joint_signature": "Sigma_W=(Sigma_{C_L},Sigma_G)",
+    "warning_refinement": "Q_L <= Q_W"
+  },
+  "crest_alignment": {
+    "required_resolution_closure_reading": "C_{D,T} in v0.5 prose is canonically read as C_{D_req,T}, a pre-observation required resolution/reportability obligation.",
+    "realized_evidence_separate": "Realized evidence is E_y^{D_req} and is not an input that creates ontic distinctions.",
+    "loss_state_equivalence": "Q_L is isomorphic to the loss-specialized CREST RequiredState only when Sigma_{C_L} exhaustively encodes all distinctions required by C_L on the declared common carrier."
+  },
+  "anti_upgrade_rules": [
+    "Do not treat realized evidence E_y as a ScientificContract component.",
+    "Do not treat D_req as if it were an observed evidence class.",
+    "Do not call a quotient based on one convenient loss statistic LossGeneratingState unless sufficiency for the full loss contract has been established.",
+    "Do not infer WarningEvaluationState from LossGeneratingState unless warning response factors through the full loss-contract quotient.",
+    "Do not treat this clarification patch as new empirical evidence or a new standalone theorem family."
+  ],
+  "theorem_effect": {
+    "dependency_graph_changed": false,
+    "TU1_semantics_changed": false,
+    "TU2_semantics_changed": false,
+    "TU3_result_changed": false,
+    "TU3_signature_interpretation_narrowed": true,
+    "TU4_result_changed": false,
+    "TU4_signature_interpretation_narrowed": true,
+    "claim_ceiling_expanded": false
+  }
+}
