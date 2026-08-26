@@ -54,6 +54,9 @@ jobs:
       - name: Verify frozen v0.5 semantic core
         run: python theory/validate_freeze.py
 
+      - name: Validate v0.5.1 semantic clarification
+        run: python theory/validate_clarification_v0_5_1.py
+
       - name: Validate empirical projection admission gate
         run: python theory/validate_empirical_projection.py
 
