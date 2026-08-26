@@ -57,6 +57,15 @@ jobs:
       - name: Validate v0.5.1 semantic clarification
         run: python theory/validate_clarification_v0_5_1.py
 
+      - name: Verify v0.6 contract-indexed quotient transport draft
+        run: python theory/verify_contract_indexed_quotient_transport.py
+
+      - name: Validate revision reserve and positive bridge registry
+        run: python theory/validate_revision_and_positive_bridge.py
+
+      - name: Verify positive RACH-MRM-CED bridge
+        run: python theory/bridges/verify_rach_mrm_ced_bridge.py
+
       - name: Validate empirical projection admission gate
         run: python theory/validate_empirical_projection.py
 
