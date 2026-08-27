@@ -5,12 +5,18 @@ on:
     paths:
       - 'theory/**'
       - 'empirical/**'
+      - 'universe/**'
+      - 'scripts/**'
+      - 'graphify-out/WORLDLINE_REPORT.md'
       - 'README.md'
       - '.github/workflows/theory-universe-validation.yml'
   pull_request:
     paths:
       - 'theory/**'
       - 'empirical/**'
+      - 'universe/**'
+      - 'scripts/**'
+      - 'graphify-out/WORLDLINE_REPORT.md'
       - 'README.md'
       - '.github/workflows/theory-universe-validation.yml'
   workflow_dispatch:
@@ -30,8 +36,8 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Compile theory and empirical modules
-        run: python -m compileall -q theory empirical
+      - name: Compile theory, empirical, and meta-registry modules
+        run: python -m compileall -q theory empirical scripts
 
       - name: Validate type system
         run: python theory/validate_core.py
@@ -80,3 +86,12 @@ jobs:
 
       - name: Validate Reality-to-Theory path firewalls
         run: python empirical/validate_reality_theory_graph.py
+
+      - name: Validate task-indexed worldline atlas
+        run: python scripts/validate_worldline_atlas.py
+
+      - name: Rebuild Graphify worldline overlay
+        run: python scripts/build_worldline_overlay.py /tmp/theouni-worldline-extraction.json
+
+      - name: Check generated worldline report is synchronized
+        run: git diff --exit-code -- graphify-out/WORLDLINE_REPORT.md

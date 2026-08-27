@@ -1,0 +1,238 @@
+{
+  "schema_version": "theouni-worldline-atlas.v1",
+  "status": "meta_architecture_only_no_source_ownership_transfer",
+  "title": "Theory Universe Worldline Atlas",
+  "principle": "The theory has a dependency structure but no privileged narrative order. Scientific worldlines are task-indexed views of declared model worlds, not separate ecological realities.",
+  "claim_ceiling": [
+    "This atlas reorganizes already declared theory modules and claim ceilings; it does not create a new source theorem.",
+    "No bridge is treated as completed unless a source theorem, executable witness, or declared typed map already exists.",
+    "Pairwise non-contradiction does not establish global joint satisfiability.",
+    "Chapter-order flexibility is a presentation property constrained by scientific dependencies, not a claim that theorem prerequisites disappear."
+  ],
+  "origin": {
+    "nodes": [
+      {"id": "origin:reality", "label": "Ecological Reality"},
+      {"id": "origin:model_world", "label": "Declared ModelWorld universe"},
+      {"id": "origin:task", "label": "Scientific task / contract"},
+      {"id": "origin:signature", "label": "Contract-complete response signature"},
+      {"id": "origin:quotient", "label": "Task-indexed scientific state"}
+    ],
+    "edges": [
+      {"source": "origin:reality", "target": "origin:model_world", "relation": "projected_through_measurement_or_model_bridge"},
+      {"source": "origin:model_world", "target": "origin:task", "relation": "evaluated_under"},
+      {"source": "origin:task", "target": "origin:signature", "relation": "declares_required_responses"},
+      {"source": "origin:signature", "target": "origin:quotient", "relation": "induces_equivalence_quotient"}
+    ]
+  },
+  "invariants": [
+    {"id": "invariant:reality_model_separation", "label": "Reality is not ModelWorld", "statement": "A theorem on declared model worlds is not automatically a theorem about ecological reality."},
+    {"id": "invariant:task_indexing", "label": "State is task-indexed", "statement": "No context-free intrinsic state is inferred merely from a snapshot or repository-local state label."},
+    {"id": "invariant:response_preservation", "label": "Safe merging requires response preservation", "statement": "A representation may merge worlds only while every response required by the declared task factors through what is retained."},
+    {"id": "invariant:evidence_noncreation", "label": "Evidence does not create structural distinctions", "statement": "Evidence can identify or license distinctions required by a task; it does not manufacture structural distinctions by observation alone."},
+    {"id": "invariant:three_way_separation", "label": "Required, identified, reportable remain distinct", "statement": "RequiredState, identified state/evidence resolution, and reportable target are not interchangeable."},
+    {"id": "invariant:bridge_noncontradiction", "label": "No bridge is not a contradiction", "statement": "Failure to transport a result across worldlines is not a logical conflict unless carrier, type, scope, and estimand have first been matched."},
+    {"id": "invariant:portability_nonautomatic", "label": "Validity here does not imply portability elsewhere", "statement": "A result supported in one task or domain does not transfer to another without an explicit factorization, lift, correspondence, or evidence bridge."}
+  ],
+  "worldlines": [
+    {
+      "id": "worldline:capability",
+      "label": "Capability / Required-State",
+      "owner_modules": ["CREST"],
+      "source_repositories": ["repo:crest"],
+      "question": "How much can required state and monitoring resolution change when admissible management capability changes?",
+      "output_type": "RequiredState",
+      "forbidden_inference": "small capability gain => small state or monitoring burden",
+      "signature_focus": "intervention-indexed response obligations and viable carrier",
+      "perspective_observables": ["observable:capability_resolution_gap", "observable:monitoring_debt"]
+    },
+    {
+      "id": "worldline:future",
+      "label": "Future / Open Grammar",
+      "owner_modules": ["CCOC"],
+      "source_repositories": ["repo:ccoc"],
+      "question": "Can exact compression that is small under fixed closed future grammars remain comparably small when the future grammar is opened?",
+      "output_type": "OpenGrammarExactInterface",
+      "forbidden_inference": "simple closed interfaces => simple open interface",
+      "signature_focus": "future/composition response grammar",
+      "perspective_observables": ["observable:interface_inflation"]
+    },
+    {
+      "id": "worldline:history",
+      "label": "History / Replacement",
+      "owner_modules": ["MLTR"],
+      "source_repositories": ["repo:mltr"],
+      "question": "Can an inherited macro-law survive structural replacement, and if not, what source-relative repair or history context is required?",
+      "output_type": "TransportedOrRepairedState",
+      "forbidden_inference": "valid source law => valid law after replacement",
+      "signature_focus": "carried semantics across source-target replacement",
+      "perspective_observables": ["observable:transport_defect", "observable:history_mode_debt"]
+    },
+    {
+      "id": "worldline:mechanism",
+      "label": "Mechanism / Response Type",
+      "owner_modules": ["MRM"],
+      "source_repositories": ["repo:mrm"],
+      "question": "Which latent mechanism distinctions must remain when retained mechanisms disagree on required future responses?",
+      "output_type": "MechanismSafeStateOrTypedLaw",
+      "forbidden_inference": "same visible state => same mechanism-safe deterministic law",
+      "signature_focus": "candidate-mechanism response types under declared actions",
+      "perspective_observables": ["observable:mechanism_ambiguity_frontier"]
+    },
+    {
+      "id": "worldline:evidence",
+      "label": "Evidence / Licensing",
+      "owner_modules": ["CED"],
+      "source_repositories": ["repo:ced"],
+      "question": "Which required distinctions or targets are honestly licensed by the declared experiment, failure architecture, and risk contract?",
+      "output_type": "EvidenceClassAndLicensedReport",
+      "forbidden_inference": "more or nominally finer information => licensed target",
+      "signature_focus": "experiment records, target, reliability and false-resolution contract",
+      "perspective_observables": ["observable:identification_gap", "observable:failure_domain_ceiling"]
+    },
+    {
+      "id": "worldline:learning",
+      "label": "Causal Learning / Next Observation",
+      "owner_modules": ["RACH", "TU-2"],
+      "source_repositories": ["repo:microdonta", "repo:theouni"],
+      "question": "Which causal programmes remain admissible, and which next observation is valuable for causal learning without confusing that value with target licensing?",
+      "output_type": "AdmissibleCausalSetAndNextObservation",
+      "forbidden_inference": "pattern fit or high causal-learning value => identified cause or licensed target",
+      "signature_focus": "causal programme identity and observation utility",
+      "perspective_observables": ["observable:admissible_causal_set", "observable:next_observation_value"]
+    },
+    {
+      "id": "worldline:revision",
+      "label": "Revision / After Compression",
+      "owner_modules": ["TU-1"],
+      "source_repositories": ["repo:theouni"],
+      "question": "After an old scientific state has already been stored, can a revised required state be recovered from it, and what auxiliary revision debt remains if not?",
+      "output_type": "RevisabilityStatusAndRevisionDebt",
+      "forbidden_inference": "adequate compression now => revisable representation later",
+      "signature_focus": "old stored partition versus revised task partition",
+      "perspective_observables": ["observable:revision_debt", "observable:local_hidden_split"]
+    },
+    {
+      "id": "worldline:loss",
+      "label": "Loss / Dynamic State",
+      "owner_modules": ["EcoGeneticCriticality", "TU-3"],
+      "source_repositories": ["repo:eco-genetic-criticality", "repo:theouni"],
+      "question": "Which distinctions in a simulator or ecological representation are actually required for the declared functional-loss response?",
+      "output_type": "LossGeneratingState",
+      "forbidden_inference": "raw simulator detail or common coarse marginals => correct loss-relevant state",
+      "signature_focus": "contract-complete loss-response signature",
+      "perspective_observables": ["observable:loss_state_complexity", "observable:representation_faithfulness"]
+    },
+    {
+      "id": "worldline:warning",
+      "label": "Warning / Portability",
+      "owner_modules": ["EcoGeneticWarningExtensions", "TU-4"],
+      "source_repositories": ["repo:eco-genetic-warning-extensions", "repo:theouni"],
+      "question": "After the loss domain is fixed warning-blind, what state is required for warning evaluation and does warning behaviour transport across calibrated states or domains?",
+      "output_type": "WarningEvaluationStateAndPortabilityStatus",
+      "forbidden_inference": "signal leads loss => valid or portable warning",
+      "signature_focus": "joint loss and warning response",
+      "perspective_observables": ["observable:warning_refinement", "observable:warning_portability"]
+    }
+  ],
+  "perspective_observables": [
+    {"id": "observable:capability_resolution_gap", "label": "Capability-resolution divergence", "visible_in": ["worldline:capability"]},
+    {"id": "observable:monitoring_debt", "label": "Monitoring-resolution debt", "visible_in": ["worldline:capability", "worldline:evidence"]},
+    {"id": "observable:interface_inflation", "label": "Closed-to-open interface inflation", "visible_in": ["worldline:future"]},
+    {"id": "observable:transport_defect", "label": "Transport defect", "visible_in": ["worldline:history"]},
+    {"id": "observable:history_mode_debt", "label": "Minimal history-mode augmentation", "visible_in": ["worldline:history"]},
+    {"id": "observable:mechanism_ambiguity_frontier", "label": "Mechanism ambiguity / response-type frontier", "visible_in": ["worldline:mechanism"]},
+    {"id": "observable:identification_gap", "label": "Required-versus-identified resolution gap", "visible_in": ["worldline:evidence"]},
+    {"id": "observable:failure_domain_ceiling", "label": "Failure-domain guarantee ceiling", "visible_in": ["worldline:evidence"]},
+    {"id": "observable:admissible_causal_set", "label": "Admissible causal set", "visible_in": ["worldline:learning"]},
+    {"id": "observable:next_observation_value", "label": "Next-observation value", "visible_in": ["worldline:learning"]},
+    {"id": "observable:revision_debt", "label": "Revision debt after stored compression", "visible_in": ["worldline:revision"]},
+    {"id": "observable:local_hidden_split", "label": "Worst local hidden split", "visible_in": ["worldline:revision"]},
+    {"id": "observable:loss_state_complexity", "label": "Loss-generating state complexity", "visible_in": ["worldline:loss"]},
+    {"id": "observable:representation_faithfulness", "label": "Loss-response representation faithfulness", "visible_in": ["worldline:loss"]},
+    {"id": "observable:warning_refinement", "label": "Warning-state refinement beyond loss state", "visible_in": ["worldline:warning"]},
+    {"id": "observable:warning_portability", "label": "Within-state validity versus cross-state portability", "visible_in": ["worldline:warning"]}
+  ],
+  "intersections": [
+    {
+      "id": "intersection:required_state",
+      "label": "Required-State Junction",
+      "worldlines": ["worldline:capability", "worldline:future", "worldline:history", "worldline:mechanism"],
+      "condition": "Shared carrier or faithful common lift plus typed response obligations.",
+      "result": "A joint required state may refine all contributing structural responsibilities without transferring theorem ownership."
+    },
+    {
+      "id": "intersection:knowledge",
+      "label": "Knowledge Junction",
+      "worldlines": ["worldline:capability", "worldline:evidence", "worldline:learning"],
+      "condition": "Required state, evidence classes, causal programmes, and report target are typed on compatible model worlds.",
+      "result": "Required distinctions, evidential identification, causal learning, and reportability can be compared without collapsing their estimands."
+    },
+    {
+      "id": "intersection:revision",
+      "label": "Revision Junction",
+      "worldlines": ["worldline:capability", "worldline:future", "worldline:history", "worldline:mechanism", "worldline:evidence", "worldline:revision"],
+      "condition": "An earlier scientific representation has actually been stored and a revised required task has been defined.",
+      "result": "TU-1 tests whether the revised state factors through what was retained and quantifies exact same-carrier revision debt."
+    },
+    {
+      "id": "intersection:loss_warning",
+      "label": "Loss-Warning Junction",
+      "worldlines": ["worldline:loss", "worldline:warning"],
+      "condition": "Loss is fixed warning-blind and warning response is declared on a compatible carrier or domain.",
+      "result": "WarningEvaluationState refines LossGeneratingState; equality and portability require additional factorization or commutation conditions."
+    },
+    {
+      "id": "intersection:reality_admission",
+      "label": "Reality-to-Theory Junction",
+      "worldlines": ["worldline:capability", "worldline:future", "worldline:history", "worldline:mechanism", "worldline:evidence", "worldline:learning", "worldline:revision", "worldline:loss", "worldline:warning"],
+      "condition": "Empirical units, observation/reliability bridge, model-world support, target, validation unit, and claim ceiling are declared.",
+      "result": "Natural measurements may earn bounded task-relative empirical state language; theory alone does not establish empirical truth."
+    }
+  ],
+  "bridge_types": [
+    {"id": "bridge:common_carrier", "label": "Common carrier", "purpose": "Place structural responsibilities on one declared world set."},
+    {"id": "bridge:faithful_lift", "label": "Faithful common lift", "purpose": "Compare non-nested source/target or representation spaces without pretending they are identical."},
+    {"id": "bridge:factorization", "label": "Task factorization", "purpose": "Permit reuse of a retained representation for another scientific task."},
+    {"id": "bridge:replacement_map", "label": "Replacement correspondence", "purpose": "Carry inherited semantics across structural change."},
+    {"id": "bridge:evidence_projection", "label": "Evidence / reliability projection", "purpose": "Relate observations to compatible model worlds and licensed reports."},
+    {"id": "bridge:causal_response_map", "label": "Causal-programme to response-type map", "purpose": "Connect RACH causal multiplicity to MRM response classes on a shared bridge carrier."},
+    {"id": "bridge:portability_correspondence", "label": "Cross-domain portability correspondence", "purpose": "Compare task-specific response signatures across calibrated states or domains."}
+  ],
+  "termination_modes": [
+    {"id": "termination:resolved", "label": "Resolved", "definition": "All task-relevant distinctions required for the declared output are represented and, where needed, identified."},
+    {"id": "termination:licensed_ignorance", "label": "Licensed ignorance", "definition": "Full state remains unresolved but the requested target is constant on the relevant evidence class and can be reported honestly."},
+    {"id": "termination:honest_ambiguity", "label": "Honest ambiguity", "definition": "The target varies across compatible worlds, so the sharp output remains set-valued or explicitly unresolved."},
+    {"id": "termination:bounded_nonportability", "label": "Bounded non-portability", "definition": "A result is valid within a declared task or domain but an explicit transport test fails or remains unsupported elsewhere."},
+    {"id": "termination:open", "label": "Open worldline", "definition": "A bridge, evidence contract, model adequacy condition, or required response specification remains incomplete; the worldline stays open without being called a contradiction."}
+  ],
+  "failure_modes": [
+    {"id": "failure:carrier_collapse", "label": "Carrier collapse", "definition": "The declared joint obligations have no adequate common carrier or required coverage, so refinement cannot rescue the model-world problem."},
+    {"id": "failure:ill_posed_task", "label": "Ill-posed task", "definition": "The task or response signature is post-hoc, vacuous, non-testable, or otherwise fails the declared scientific responsibility criteria."},
+    {"id": "failure:representation_failure", "label": "Representation failure", "definition": "The required response does not factor through the retained representation; scientifically necessary distinctions were erased."},
+    {"id": "failure:reality_model_failure", "label": "Reality-to-model failure", "definition": "The declared model-world universe has not earned adequacy for the empirical system or target, so internal theorem validity does not establish ecological truth."},
+    {"id": "failure:global_consistency_failure", "label": "Higher-order consistency failure", "definition": "Pairwise compatibility does not guarantee that multiple responsibilities admit one jointly satisfiable carrier or map; this remains an open global risk outside bounded witnesses."}
+  ],
+  "hard_dependencies": [
+    {"source": "worldline:loss", "target": "worldline:warning", "relation": "scientific_prerequisite", "reason": "Warning evaluation includes an independently fixed loss responsibility; warning-blind loss calibration precedes warning claims."}
+  ],
+  "presentation": {
+    "rule": "Chapter order is not theory identity. Any presentation order is admissible when each chapter imports its required definitions and does not reverse a hard scientific dependency without restating the prerequisite locally.",
+    "privileged_narrative_order": false,
+    "example_orders": {
+      "state_first": ["worldline:capability", "worldline:future", "worldline:history", "worldline:mechanism", "worldline:evidence", "worldline:learning", "worldline:revision", "worldline:loss", "worldline:warning"],
+      "intervention_first": ["worldline:capability", "worldline:mechanism", "worldline:future", "worldline:history", "worldline:revision", "worldline:evidence", "worldline:learning", "worldline:loss", "worldline:warning"],
+      "knowledge_first": ["worldline:evidence", "worldline:learning", "worldline:capability", "worldline:future", "worldline:history", "worldline:mechanism", "worldline:revision", "worldline:loss", "worldline:warning"],
+      "dynamics_first": ["worldline:loss", "worldline:warning", "worldline:capability", "worldline:future", "worldline:history", "worldline:mechanism", "worldline:evidence", "worldline:learning", "worldline:revision"]
+    }
+  },
+  "consistency_reference": {
+    "pairwise_certificate": "theory/CONTRADICTION_CERTIFICATE_v0.6.md",
+    "pairwise_modules": 12,
+    "pairwise_pairs": 66,
+    "registered_actual_conflicts": 0,
+    "triadic_screen": "theory/TRIADIC_SCREEN_v0.6.md",
+    "triads": 220,
+    "bounded_executable_triads": 2,
+    "claim": "The atlas inherits these claim ceilings and does not promote pairwise screening to global consistency."
+  }
+}
