@@ -4,21 +4,21 @@
   "claim_ceiling": [
     "Draft progress does not change chapter claim ceilings or source ownership.",
     "A prose draft is not evidence that a source theorem, empirical bridge, or bibliography is complete.",
-    "Internal source tags must be replaced by verified dissertation citations before submission."
+    "Bibliographic metadata and priority-sensitive novelty language require primary-source verification before submission."
   ],
   "units": {
     "chapter:introduction": {
-      "stage": "draft_v0_1",
-      "draft_file": "thesis/drafts/00_general_introduction_v0.1.md",
-      "source_map_file": "thesis/source_maps/00_general_introduction_sources.md",
-      "minimum_words": 1500,
-      "next_action": "Replace internal source tags with a verified bibliography and remove duplication with the CREST chapter introduction."
+      "stage": "draft_v0_2",
+      "draft_file": "thesis/drafts/00_general_introduction_v0.2.md",
+      "source_map_file": "thesis/source_maps/00_general_introduction_v0.2_sources.md",
+      "minimum_words": 2000,
+      "next_action": "Verify reference metadata against primary publications, freeze shared citation style, and adapt Chapter 1 using the overlap audit."
     },
     "chapter:1": {
       "stage": "brief_only",
       "draft_file": null,
       "source_map_file": null,
-      "next_action": "Adapt the CREST paper into a dissertation chapter without returning to a general state-framework opening."
+      "next_action": "Adapt the CREST paper into a dissertation chapter using thesis/audits/00_general_introduction_crest_overlap.md."
     },
     "chapter:2": {
       "stage": "brief_only",
