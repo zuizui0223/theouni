@@ -6,9 +6,11 @@ on:
       - 'theory/**'
       - 'empirical/**'
       - 'universe/**'
+      - 'thesis/**'
       - 'scripts/**'
       - 'graphify-out/WORLDLINE_REPORT.md'
       - 'graphify-out/DISSERTATION_REPORT.md'
+      - 'graphify-out/THESIS_WORKSPACE_REPORT.md'
       - 'README.md'
       - '.github/workflows/theory-universe-validation.yml'
   pull_request:
@@ -16,9 +18,11 @@ on:
       - 'theory/**'
       - 'empirical/**'
       - 'universe/**'
+      - 'thesis/**'
       - 'scripts/**'
       - 'graphify-out/WORLDLINE_REPORT.md'
       - 'graphify-out/DISSERTATION_REPORT.md'
+      - 'graphify-out/THESIS_WORKSPACE_REPORT.md'
       - 'README.md'
       - '.github/workflows/theory-universe-validation.yml'
   workflow_dispatch:
@@ -106,3 +110,12 @@ jobs:
 
       - name: Check generated dissertation report is synchronized
         run: git diff --exit-code -- graphify-out/DISSERTATION_REPORT.md
+
+      - name: Validate thesis chapter workspace
+        run: python scripts/validate_thesis_workspace.py
+
+      - name: Rebuild thesis workspace report
+        run: python scripts/build_thesis_workspace_report.py
+
+      - name: Check generated thesis workspace report is synchronized
+        run: git diff --exit-code -- graphify-out/THESIS_WORKSPACE_REPORT.md
