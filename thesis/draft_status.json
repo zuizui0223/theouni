@@ -15,19 +15,24 @@
         "thesis/audits/00_general_introduction_crest_overlap.md"
       ],
       "minimum_words": 2000,
-      "next_action": "Verify reference metadata against primary publications, freeze shared citation style, and adapt Chapter 1 using the overlap audit."
+      "next_action": "Verify reference metadata against primary publications and freeze the shared dissertation citation style."
     },
     "chapter:1": {
-      "stage": "brief_only",
-      "draft_file": null,
-      "source_map_file": null,
-      "next_action": "Adapt the CREST paper into a dissertation chapter using thesis/audits/00_general_introduction_crest_overlap.md."
+      "stage": "draft_v0_2",
+      "draft_file": "thesis/drafts/01_conservation_capacity_v0.2.md",
+      "source_map_file": "thesis/source_maps/01_conservation_capacity_sources.md",
+      "audit_files": [
+        "thesis/audits/00_general_introduction_crest_overlap.md",
+        "thesis/audits/01_crest_monitoring_budget_connection.md"
+      ],
+      "minimum_words": 3000,
+      "next_action": "Verify the official EPA citation, decide figure reuse/redrawing, and convert Chapter 2 from the CCOC theorem spine."
     },
     "chapter:2": {
       "stage": "brief_only",
       "draft_file": null,
       "source_map_file": null,
-      "next_action": "Convert the CCOC theorem spine into chapter prose centered on cross-grammar nontransport."
+      "next_action": "Convert the CCOC theorem spine into chapter prose centered on cross-grammar nontransport and the transition from Chapter 1."
     },
     "chapter:3": {
       "stage": "brief_only",

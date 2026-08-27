@@ -30,7 +30,7 @@ This is the preferred editorial traversal, not the only valid topological order 
 3. [`draft_status.json`](draft_status.json) owns mutable prose progress and next drafting actions. Draft stage never upgrades scientific status.
 4. Files under [`chapters/`](chapters/) are source-bounded writing briefs.
 5. Files under [`drafts/`](drafts/) are working prose, and files under [`source_maps/`](source_maps/) record the support and non-support boundary for those drafts.
-6. Files under [`audits/`](audits/) record editorial overlap, duplication, and claim-allocation decisions.
+6. Files under [`audits/`](audits/) record editorial overlap, duplication, practical-connection, and claim-allocation decisions.
 7. [`../universe/DISSERTATION_ARCHITECTURE.md`](../universe/DISSERTATION_ARCHITECTURE.md) owns the novelty-first editorial rationale.
 8. [`../universe/WORLDLINE_ATLAS.md`](../universe/WORLDLINE_ATLAS.md) owns the non-linear theory map.
 
@@ -58,11 +58,19 @@ Every prose draft must additionally have a source map. The source map states wha
 
 ## Current writing state
 
-The ten source-bounded briefs are present. The General Introduction has progressed to citation-audited v0.2 under [`drafts/00_general_introduction_v0.2.md`](drafts/00_general_introduction_v0.2.md), with support boundaries recorded in [`source_maps/00_general_introduction_v0.2_sources.md`](source_maps/00_general_introduction_v0.2_sources.md).
+Two units now have citation-audited v0.2 prose.
 
-Version 0.2 replaces provisional source tags with an explicit reference list and separates the dissertation-level reuse problem from the CREST chapter's conservation paradox, contract construction, shallow-lake case, and capability–resolution theorem. The allocation decision is recorded in [`audits/00_general_introduction_crest_overlap.md`](audits/00_general_introduction_crest_overlap.md).
+### General Introduction
 
-The remaining eight research chapters and General Synthesis remain at brief stage. Chapter 1 is now the next active drafting target and must be adapted from the CREST paper using the overlap audit rather than reintroducing the full dissertation framework.
+[`drafts/00_general_introduction_v0.2.md`](drafts/00_general_introduction_v0.2.md) frames the dissertation around the reuse problem, provides only the minimum factorization language, and leaves the source-owned scientific results to Chapters 1–8. Its support boundary is recorded in [`source_maps/00_general_introduction_v0.2_sources.md`](source_maps/00_general_introduction_v0.2_sources.md).
+
+### Chapter 1 — CREST
+
+[`drafts/01_conservation_capacity_v0.2.md`](drafts/01_conservation_capacity_v0.2.md) adapts the CREST submission manuscript into a dissertation chapter. It retains the conservation paradox, contract-relative state, shallow-lake case, finite architecture, capability–resolution theorem, and transition to CCOC while avoiding a second dissertation-level philosophy introduction.
+
+The source/proof/evidence handoff is recorded in [`source_maps/01_conservation_capacity_sources.md`](source_maps/01_conservation_capacity_sources.md). The overlap allocation with the General Introduction is fixed in [`audits/00_general_introduction_crest_overlap.md`](audits/00_general_introduction_crest_overlap.md). The practical connection to proportional restoration-monitoring budgets is bounded in [`audits/01_crest_monitoring_budget_connection.md`](audits/01_crest_monitoring_budget_connection.md): cost scaling may be administratively useful but cannot certify response-resolution adequacy.
+
+Chapter 2 is now the next active drafting target. It must explain cross-grammar interface inflation without treating CCOC as a CREST corollary.
 
 Run:
 
