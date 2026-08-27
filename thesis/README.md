@@ -30,8 +30,9 @@ This is the preferred editorial traversal, not the only valid topological order 
 3. [`draft_status.json`](draft_status.json) owns mutable prose progress and next drafting actions. Draft stage never upgrades scientific status.
 4. Files under [`chapters/`](chapters/) are source-bounded writing briefs.
 5. Files under [`drafts/`](drafts/) are working prose, and files under [`source_maps/`](source_maps/) record the support and non-support boundary for those drafts.
-6. [`../universe/DISSERTATION_ARCHITECTURE.md`](../universe/DISSERTATION_ARCHITECTURE.md) owns the novelty-first editorial rationale.
-7. [`../universe/WORLDLINE_ATLAS.md`](../universe/WORLDLINE_ATLAS.md) owns the non-linear theory map.
+6. Files under [`audits/`](audits/) record editorial overlap, duplication, and claim-allocation decisions.
+7. [`../universe/DISSERTATION_ARCHITECTURE.md`](../universe/DISSERTATION_ARCHITECTURE.md) owns the novelty-first editorial rationale.
+8. [`../universe/WORLDLINE_ATLAS.md`](../universe/WORLDLINE_ATLAS.md) owns the non-linear theory map.
 
 ## Writing rule for every chapter
 
@@ -45,7 +46,7 @@ Each brief must retain these sections:
 - **Canonical source handoff** — where the proof, data, code, and manuscript live;
 - **Transition** — why the next chapter is scientifically necessary.
 
-Every prose draft must additionally have a source map. The source map states what each source supports, what it does not support, and which claims still require primary-literature verification.
+Every prose draft must additionally have a source map. The source map states what each source supports, what it does not support, and which claims still require primary-literature verification. Citation-audited drafts must contain a reference list and must not retain provisional internal source tags.
 
 ## Ownership firewall
 
@@ -57,9 +58,11 @@ Every prose draft must additionally have a source map. The source map states wha
 
 ## Current writing state
 
-The ten source-bounded briefs are present. The General Introduction has progressed to a v0.1 prose draft under [`drafts/00_general_introduction_v0.1.md`](drafts/00_general_introduction_v0.1.md), with support boundaries recorded in [`source_maps/00_general_introduction_sources.md`](source_maps/00_general_introduction_sources.md). It frames the dissertation around the reuse problem, uses only the minimum factorization language, and leaves source-owned results to the research chapters.
+The ten source-bounded briefs are present. The General Introduction has progressed to citation-audited v0.2 under [`drafts/00_general_introduction_v0.2.md`](drafts/00_general_introduction_v0.2.md), with support boundaries recorded in [`source_maps/00_general_introduction_v0.2_sources.md`](source_maps/00_general_introduction_v0.2_sources.md).
 
-The remaining eight research chapters and General Synthesis remain at brief stage, but their source maturity and next actions are recorded explicitly in `chapter_registry.json` and `draft_status.json`.
+Version 0.2 replaces provisional source tags with an explicit reference list and separates the dissertation-level reuse problem from the CREST chapter's conservation paradox, contract construction, shallow-lake case, and capability–resolution theorem. The allocation decision is recorded in [`audits/00_general_introduction_crest_overlap.md`](audits/00_general_introduction_crest_overlap.md).
+
+The remaining eight research chapters and General Synthesis remain at brief stage. Chapter 1 is now the next active drafting target and must be adapted from the CREST paper using the overlap audit rather than reintroducing the full dissertation framework.
 
 Run:
 
@@ -68,4 +71,4 @@ python scripts/validate_thesis_workspace.py
 python scripts/build_thesis_workspace_report.py
 ```
 
-The first command checks chapter order, source ownership, TU allocation, hard dependencies, required headings, claim ceilings, draft/source-map presence, and minimum draft length. The second rebuilds `graphify-out/THESIS_WORKSPACE_REPORT.md`.
+The first command checks chapter order, source ownership, TU allocation, hard dependencies, required headings, claim ceilings, draft/source-map/audit presence, citation-stage requirements, and minimum draft length. The second rebuilds `graphify-out/THESIS_WORKSPACE_REPORT.md`.
