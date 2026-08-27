@@ -21,11 +21,13 @@ def count_orders(nodes: list[str], edges: list[tuple[str, str]]) -> int:
     def dp(mask: int) -> int:
         if mask == (1 << len(nodes)) - 1:
             return 1
-        return sum(
-            dp(mask | (1 << i))
-            for i in range(len(nodes))
-            if not mask & (1 << i) and not prereq[i] & ~mask
-        )
+        total = 0
+        for i in range(len(nodes)):
+            bit = 1 << i
+            if mask & bit or prereq[i] & ~mask:
+                continue
+            total += dp(mask | bit)
+        return total
 
     return dp(0)
 
@@ -33,18 +35,25 @@ def count_orders(nodes: list[str], edges: list[tuple[str, str]]) -> int:
 def main() -> None:
     atlas = json.loads(ATLAS.read_text(encoding="utf-8"))
     output = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else DEFAULT_OUTPUT
+    registry = json.loads((ROOT / "universe" / "registry.json").read_text(encoding="utf-8"))
+    repo_labels = {repo["id"]: repo["name"] for repo in registry["repositories"]}
 
     nodes: list[dict] = []
     edges: list[dict] = []
-    seen: set[str] = set()
+    node_ids: set[str] = set()
+    edge_keys: set[tuple[str, str, str, str]] = set()
 
     def add_node(node_id: str, label: str, node_type: str, **extra: object) -> None:
-        if node_id in seen:
+        if node_id in node_ids:
             return
-        seen.add(node_id)
+        node_ids.add(node_id)
         nodes.append({"id": node_id, "label": label, "file_type": node_type, **extra})
 
     def add_edge(source: str, target: str, relation: str, context: str = "worldline_atlas") -> None:
+        key = (source, target, relation, context)
+        if key in edge_keys:
+            return
+        edge_keys.add(key)
         edges.append(
             {
                 "source": source,
@@ -70,11 +79,6 @@ def main() -> None:
     for invariant in atlas["invariants"]:
         add_node(invariant["id"], invariant["label"], "universe_invariant", description=invariant["statement"])
         add_edge(root, invariant["id"], "governed_by_invariant")
-
-    repo_labels: dict[str, str] = {}
-    registry = json.loads((ROOT / "universe" / "registry.json").read_text(encoding="utf-8"))
-    for repo in registry["repositories"]:
-        repo_labels[repo["id"]] = repo["name"]
 
     for worldline in atlas["worldlines"]:
         add_node(
@@ -121,26 +125,18 @@ def main() -> None:
         add_node(failure["id"], failure["label"], "universe_failure_mode", description=failure["definition"])
         add_edge(root, failure["id"], "recognizes_failure_mode")
 
-    dependencies = []
+    dependencies: list[tuple[str, str]] = []
     for dependency in atlas["hard_dependencies"]:
         dependencies.append((dependency["source"], dependency["target"]))
-        add_edge(
-            dependency["source"],
-            dependency["target"],
-            dependency["relation"],
-            context=dependency["reason"],
-        )
+        add_edge(dependency["source"], dependency["target"], dependency["relation"], dependency["reason"])
+
+    assert all(edge["source"] in node_ids and edge["target"] in node_ids for edge in edges)
+    assert not any(edge["source"] == edge["target"] for edge in edges)
 
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(
         json.dumps(
-            {
-                "nodes": nodes,
-                "edges": edges,
-                "hyperedges": [],
-                "input_tokens": 0,
-                "output_tokens": 0,
-            },
+            {"nodes": nodes, "edges": edges, "hyperedges": [], "input_tokens": 0, "output_tokens": 0},
             ensure_ascii=False,
             indent=2,
         )
@@ -150,7 +146,7 @@ def main() -> None:
 
     worldline_ids = [item["id"] for item in atlas["worldlines"]]
     order_count = count_orders(worldline_ids, dependencies)
-    report = f"""# Graphify Worldline Overlay Report\n\n## Purpose\n\nThis is the focused task/perspective overlay for `theouni`. It complements the full portfolio Graphify graph; it does not replace repository provenance, source theorem ownership, or evidence leaves.\n\n## Summary\n\n- worldlines: {len(atlas['worldlines'])}\n- universe-wide invariants: {len(atlas['invariants'])}\n- perspective-specific observables: {len(atlas['perspective_observables'])}\n- worldline intersections: {len(atlas['intersections'])}\n- bridge types: {len(atlas['bridge_types'])}\n- legitimate termination modes: {len(atlas['termination_modes'])}\n- genuine universe failure modes: {len(atlas['failure_modes'])}\n- hard scientific dependency edges: {len(dependencies)}\n- topological chapter orders under those hard dependencies: {order_count}\n- Graphify-compatible overlay nodes: {len(nodes)}\n- Graphify-compatible overlay edges: {len(edges)}\n\n## Hard dependency\n\nThe current atlas declares one chapter-level scientific prerequisite:\n\n```text\nLoss / Dynamic State -> Warning / Portability\n```\n\nWarning remains free to appear early in a narrative only if its loss prerequisite is restated locally; presentation does not reverse the theorem dependency.\n\n## Main intersections\n\n- Required-State Junction — Capability, Future, History, Mechanism.\n- Knowledge Junction — Required state, Evidence/Licensing, Causal Learning.\n- Revision Junction — a stored old representation meets a revised scientific task.\n- Loss-Warning Junction — `LossGeneratingState <= WarningEvaluationState`.\n- Reality-to-Theory Junction — every model-world worldline returns to empirical admission and claim ceilings.\n\n## Consistency ceiling\n\nThe overlay inherits the v0.6 pairwise result (`12` modules, `66` pairs, `actual-conflict = 0`) and the triadic screen (`220` triples, `2` bounded executable shared-carrier witnesses). It does not turn either audit into a global consistency theorem.\n\n## Interpretation\n\nThe organized view is therefore:\n\n```text\nPortfolio graph = provenance / ownership / evidence / repository topology\nWorldline atlas = task / perspective / intersection / invariant / termination topology\n```\n\nThe theory has a dependency structure, but no privileged narrative order.\n"""
+    report = f"""# Graphify Worldline Overlay Report\n\n## Purpose\n\nThis is the focused task/perspective overlay for `theouni`. It complements the full portfolio Graphify graph; it does not replace repository provenance, source theorem ownership, or evidence leaves.\n\n## Summary\n\n- worldlines: {len(atlas['worldlines'])}\n- universe-wide invariants: {len(atlas['invariants'])}\n- perspective-specific observables: {len(atlas['perspective_observables'])}\n- worldline intersections: {len(atlas['intersections'])}\n- bridge types: {len(atlas['bridge_types'])}\n- legitimate termination modes: {len(atlas['termination_modes'])}\n- genuine universe failure modes: {len(atlas['failure_modes'])}\n- hard scientific dependency edges: {len(dependencies)}\n- topological chapter orders under those hard dependencies: {order_count}\n- Graphify-compatible overlay nodes: {len(nodes)}\n- Graphify-compatible overlay edges: {len(edges)}\n\n## Hard dependency\n\nThe current atlas declares one chapter-level scientific prerequisite:\n\n```text\nLoss / Dynamic State -> Warning / Portability\n```\n\nWarning remains free to appear early in a narrative only if its loss prerequisite is restated locally; presentation does not reverse the theorem dependency.\n\n## Main intersections\n\n- Required-State Junction — Capability, Future, History, Mechanism.\n- Knowledge Junction — Required state, Evidence/Licensing, Causal Learning.\n- Revision Junction — a stored old representation meets a revised scientific task.\n- Loss-Warning Junction — `LossGeneratingState <= WarningEvaluationState`.\n- Reality-to-Theory Junction — every model-world worldline returns to empirical admission and claim ceilings.\n\n## Consistency ceiling\n\nThe overlay inherits the v0.6 pairwise result (`12` modules, `66` pairs, `actual-conflict = 0`) and the triadic screen (`220` triples, `2` bounded executable shared-carrier witnesses). It does not turn either audit into a global consistency theorem.\n\n## Interpretation\n\n```text\nPortfolio graph = provenance / ownership / evidence / repository topology\nWorldline atlas = task / perspective / intersection / invariant / termination topology\n```\n\nThe theory has a dependency structure, but no privileged narrative order.\n"""
     REPORT.write_text(report, encoding="utf-8")
     print(f"Worldline overlay: {len(nodes)} nodes, {len(edges)} edges, {order_count} topological orders")
 
