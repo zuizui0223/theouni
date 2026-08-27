@@ -1,0 +1,228 @@
+{
+  "schema_version": "theouni-dissertation-architecture.v1",
+  "status": "preferred_editorial_traversal_not_privileged_theory_order",
+  "title": "When Ecological Representations Stop Travelling",
+  "subtitle": "State, evidence, revision, loss, and warning in a task-indexed theory universe",
+  "core_question": "When does a scientific representation that is adequate for one ecological task cease to be reusable after capability, future grammar, structural replacement, mechanism responsibility, evidence, target, representation, or domain changes?",
+  "editorial_principle": "Lead with the strongest non-obvious forbidden inference, treat each source programme as a distinct transport-failure problem, embed bridge/firewall theorems in the chapters where they do scientific work, and reserve theouni for synthesis rather than source-theorem ownership.",
+  "source_atlas": "universe/worldline_atlas.json",
+  "claim_ceiling": [
+    "This file selects an editorial traversal intended to maximize dissertation novelty; it does not impose a privileged order on the underlying theory universe.",
+    "Source theorem ownership remains with CREST, CCOC, MLTR, MRM, CED, RACH, eco-genetic-criticality, and eco-genetic-warning-extensions.",
+    "TU-2, TU-3, and TU-4 are bridge or firewall modules embedded in source-owned scientific chapters rather than promoted as independent novelty chapters.",
+    "TU-1 is used in the General Synthesis as the revision-after-compression result; it becomes an independent research chapter only after a stronger carrier-changing revision result is established.",
+    "The architecture does not convert open empirical bridges, pairwise non-conflict, or bounded witnesses into global theory or empirical validation claims."
+  ],
+  "general_introduction": {
+    "id": "chapter:introduction",
+    "title": "The Reuse Problem in Ecology",
+    "role": "Pose the problem of transporting a state, law, measurement, or warning beyond the task for which it was built, while introducing only the minimum task-factorization vocabulary and universe-wide invariants.",
+    "headline_question": "When may a scientific representation be reused for another ecological responsibility?",
+    "must_not_do": [
+      "Do not begin with a catalogue of repositories or nine state definitions.",
+      "Do not present purpose relativity, partition refinement, or factorization as the dissertation's principal novelty.",
+      "Do not reveal the complete theouni synthesis before the source-owned failures have done their scientific work."
+    ],
+    "invariants_imported": [
+      "invariant:reality_model_separation",
+      "invariant:task_indexing",
+      "invariant:response_preservation",
+      "invariant:evidence_noncreation",
+      "invariant:three_way_separation",
+      "invariant:bridge_noncontradiction",
+      "invariant:portability_nonautomatic"
+    ]
+  },
+  "parts": [
+    {
+      "id": "part:1",
+      "order": 1,
+      "title": "When Doing More Requires Knowing More",
+      "part_conclusion": "Expanding what can happen or what can be done need not produce a commensurate increase in what can be represented with the old state or interface.",
+      "chapters": [
+        {
+          "id": "chapter:1",
+          "order": 1,
+          "title": "When Conservation Capacity Outgrows Conservation Knowledge",
+          "primary_worldlines": ["worldline:capability"],
+          "primary_source_repositories": ["repo:crest"],
+          "primary_modules": ["CREST"],
+          "embedded_theouni_modules": [],
+          "headline_result": "For every m >= 1, one newly admitted controllable action can add exactly one viable world while forcing a retained present slice to refine from one state to 2^m states, producing exactly m bits of monitoring debt under unchanged evidence.",
+          "primary_forbidden_inference": "small intervention or capability gain => small required-state or monitoring burden",
+          "novelty_role": "Open the dissertation with the strongest conservation-facing no-bound result rather than with a general framework definition.",
+          "ecological_payoff": "Intervention scale may be an administrative budgeting variable, but it cannot by itself certify adequate monitoring resolution.",
+          "transition_question": "How can one newly available action expose arbitrarily many distinctions hidden by the previous representation?"
+        },
+        {
+          "id": "chapter:2",
+          "order": 2,
+          "title": "When Closed Simplicity Fails under Open Futures",
+          "primary_worldlines": ["worldline:future"],
+          "primary_source_repositories": ["repo:ccoc"],
+          "primary_modules": ["CCOC"],
+          "embedded_theouni_modules": [],
+          "headline_result": "Exact interfaces that are constant-sized under fixed closed response grammars can require exponentially more states or m additional bits under a jointly opened future grammar.",
+          "primary_forbidden_inference": "simple exact interfaces under each closed grammar => a simple exact interface under the open grammar",
+          "novelty_role": "Provide the cross-grammar structural mechanism beneath capability-resolution divergence without collapsing CCOC into CREST.",
+          "ecological_payoff": "A model or monitoring interface calibrated under fixed compositions need not remain adequate when colonization, reconnection, or new interventions become legal.",
+          "transition_question": "Even when future exposure is understood, can a scientific law survive when the ecological system itself is replaced?"
+        }
+      ]
+    },
+    {
+      "id": "part:2",
+      "order": 2,
+      "title": "When Scientific Laws Fail to Travel",
+      "part_conclusion": "A law may fail to transport because inherited meaning is broken by replacement or because unresolved mechanisms imply different required responses.",
+      "chapters": [
+        {
+          "id": "chapter:3",
+          "order": 3,
+          "title": "When Macro-Laws Do Not Survive Ecological Replacement",
+          "primary_worldlines": ["worldline:history"],
+          "primary_source_repositories": ["repo:mltr"],
+          "primary_modules": ["MLTR"],
+          "embedded_theouni_modules": [],
+          "headline_result": "A declared source macro-law transports exactly under source-target coherence conditions; otherwise a unique coarsest source-relative repair, transport defect, and minimal history augmentation can be constructed.",
+          "primary_forbidden_inference": "an exact source macro-law => the same exact macro-law after turnover, recolonization, extinction, or rewiring",
+          "novelty_role": "Distinguish source-relative semantic repair from unconstrained target re-aggregation and from CCOC's independently optimized closed/open minima.",
+          "ecological_payoff": "State labels and macro-laws may retain or lose operational meaning after non-nested ecological replacement, and the least repair can be quantified.",
+          "transition_question": "What if the visible system is unchanged, but several hidden mechanisms still imply different intervention responses?"
+        },
+        {
+          "id": "chapter:4",
+          "order": 4,
+          "title": "When Visible Equivalence Fails under Mechanism Uncertainty",
+          "primary_worldlines": ["worldline:mechanism"],
+          "primary_source_repositories": ["repo:mrm"],
+          "primary_modules": ["MRM"],
+          "embedded_theouni_modules": [],
+          "headline_result": "A candidate-independent deterministic law exists exactly when retained mechanism response types agree; otherwise the honest outputs are typed or set-valued and the coarsest candidate-safe quotient retains only response-relevant mechanism distinctions.",
+          "primary_forbidden_inference": "same visible state => same deterministic intervention law",
+          "novelty_role": "Make response type, rather than full mechanism identity or visible state alone, the criterion for mechanism-safe ecological law.",
+          "ecological_payoff": "Mechanism uncertainty matters only where it changes the response demanded by the scientific task, but it cannot be erased when it does.",
+          "transition_question": "Once the necessary distinctions are known in principle, has the observation system actually earned them?"
+        }
+      ]
+    },
+    {
+      "id": "part:3",
+      "order": 3,
+      "title": "When More Information Does Not Give the Needed Answer",
+      "part_conclusion": "Required resolution, target licensing, causal learning, and reliability-qualified evidence are distinct scientific achievements and may rank observations differently.",
+      "chapters": [
+        {
+          "id": "chapter:5",
+          "order": 5,
+          "title": "When Evidence Does Not License the State We Need",
+          "primary_worldlines": ["worldline:evidence"],
+          "primary_source_repositories": ["repo:ced"],
+          "primary_modules": ["CED"],
+          "embedded_theouni_modules": [],
+          "headline_result": "Finite experiment records induce compatible-world classes; deterministic reporting is licensed exactly when the target is constant on the relevant class, while trustworthy refinement depends on failure architecture and explicit false-resolution control.",
+          "primary_forbidden_inference": "more, finer, or nominally distinguishing information => a licensed ecological target",
+          "novelty_role": "Turn state adequacy into a failure-aware reporting problem rather than treating additional data or full-world information as automatically useful.",
+          "ecological_payoff": "Repeated effort within one shared failure domain is not equivalent to independent observation modes, and full state identification is unnecessary when the target is already constant.",
+          "transition_question": "If the present evidence leaves several causal programmes alive, which observation should be collected next?"
+        },
+        {
+          "id": "chapter:6",
+          "order": 6,
+          "title": "When Learning the Cause and Licensing the Decision Diverge",
+          "primary_worldlines": ["worldline:learning"],
+          "primary_source_repositories": ["repo:microdonta"],
+          "primary_modules": ["RACH"],
+          "embedded_theouni_modules": ["TU-2"],
+          "headline_result": "RACH retains all causal programmes compatible with the declared model, constraints, and observations and selects measurements by validated next-observation value; TU-2 proves that causal-learning value and target-licensing status can vary independently and reverse experiment rankings.",
+          "primary_forbidden_inference": "pattern fit or high causal-learning value => identified cause or licensed decision target",
+          "novelty_role": "Pair an executable next-observation method with a formal firewall showing that learning explanation and licensing action are different estimands.",
+          "ecological_payoff": "The observation most useful for understanding mechanism need not be the observation that resolves the immediate conservation decision, and vice versa.",
+          "transition_question": "How do these distinctions affect claims about ecological loss and early warning in an explicit dynamic system?"
+        }
+      ]
+    },
+    {
+      "id": "part:4",
+      "order": 4,
+      "title": "When an Early Signal Is Not a Warning",
+      "part_conclusion": "Warning is meaningful only after the loss-generating state is fixed independently, and temporal precedence alone does not establish discrimination or portability.",
+      "chapters": [
+        {
+          "id": "chapter:7",
+          "order": 7,
+          "title": "Which State Actually Generates Functional Loss?",
+          "primary_worldlines": ["worldline:loss"],
+          "primary_source_repositories": ["repo:eco-genetic-criticality"],
+          "primary_modules": ["EcoGeneticCriticality"],
+          "embedded_theouni_modules": ["TU-3"],
+          "headline_result": "The complete explicit simulator state is future-sufficient under the declared closure, but common ecological and genetic marginals can hide transition-relevant cross-layer alignment; TU-3 separates raw simulator representation from the contract-complete loss-generating quotient.",
+          "primary_forbidden_inference": "raw simulator detail or matching coarse eco-genetic marginals => the correct loss-generating state",
+          "novelty_role": "Ground the representation theory in a dynamic eco-genetic system where joint spatial structure, not a generic state slogan, changes the next transition.",
+          "ecological_payoff": "Loss and warning analyses must condition on a state representation that preserves the complete declared loss response rather than on convenient marginal summaries.",
+          "transition_question": "Once the loss domain is frozen warning-blind, does a signal that consistently appears before loss actually discriminate impending loss?"
+        },
+        {
+          "id": "chapter:8",
+          "order": 8,
+          "title": "When an Early Signal Is Not a Warning",
+          "primary_worldlines": ["worldline:warning"],
+          "primary_source_repositories": ["repo:eco-genetic-warning-extensions"],
+          "primary_modules": ["EcoGeneticWarningExtensions"],
+          "embedded_theouni_modules": ["TU-4"],
+          "headline_result": "Baseline-relative genetic erosion preceded realized loss in all inherited and fresh event trajectories, yet the same thresholds fired in all audited non-event trajectories, yielding zero specificity and AUC 0.5; TU-4 separates LossGeneratingState from WarningEvaluationState and within-state validity from portability.",
+          "primary_forbidden_inference": "signal precedes loss => the signal is a valid or portable warning",
+          "novelty_role": "End the empirical arc with a reproduced temporal ordering that fails prediction, making state conditioning, full denominators, and portability scientifically unavoidable rather than decorative cautions.",
+          "ecological_payoff": "A warning must discriminate events from non-events within a warning-adequate state and must pass a separate transport test before becoming a cross-system indicator.",
+          "transition_question": "After building task-adequate representations across the dissertation, can any of them be reused when the scientific responsibility later changes?"
+        }
+      ]
+    }
+  ],
+  "general_synthesis": {
+    "id": "chapter:synthesis",
+    "title": "The Theory Universe: Adequacy Has No Privileged Direction of Travel",
+    "primary_worldlines": ["worldline:revision"],
+    "primary_source_repositories": ["repo:theouni"],
+    "primary_modules": ["TU-1", "theouni"],
+    "headline_result": "A revised state Q is recoverable from an old stored state P exactly when q_Q factors through q_P; otherwise TU-1 quantifies the exact same-carrier auxiliary revision debt and shows that worst local revisability burden can diverge arbitrarily from average global refinement.",
+    "primary_forbidden_inference": "a representation adequate for the original task => a representation revisable for a later task",
+    "novelty_role": "Recover the dissertation as a typed theory of transport, non-transport, and revision across task-indexed worldlines without claiming that all source results are one theorem.",
+    "synthesis_claim": "The common object is not one privileged ecological state but the family of explicit bridge conditions governing whether a state, law, evidence claim, causal result, loss representation, or warning may travel to another scientific responsibility.",
+    "independent_chapter_upgrade_condition": "Promote TU-1 to a ninth research chapter only after a nontrivial carrier-changing revision theorem is established and distinguished from MLTR source-target transport."
+  },
+  "preferred_sequence": [
+    "chapter:introduction",
+    "chapter:1",
+    "chapter:2",
+    "chapter:3",
+    "chapter:4",
+    "chapter:5",
+    "chapter:6",
+    "chapter:7",
+    "chapter:8",
+    "chapter:synthesis"
+  ],
+  "scientific_dependencies": [
+    {
+      "source": "chapter:7",
+      "target": "chapter:8",
+      "relation": "loss_domain_must_be_fixed_warning_blind_before_warning_evaluation"
+    }
+  ],
+  "embedded_module_allocation": {
+    "TU-1": "chapter:synthesis",
+    "TU-2": "chapter:6",
+    "TU-3": "chapter:7",
+    "TU-4": "chapter:8"
+  },
+  "novelty_firewalls": [
+    "Do not title the dissertation as a unified theory of ecological state alone; foreground transport failure and reuse boundaries.",
+    "Do not count purpose relativity, quotient construction, partition refinement, or fixed-task factorization as separate novelty contributions.",
+    "Give each research chapter one primary forbidden inference and one source-owned result that makes that prohibition nontrivial.",
+    "Do not create standalone TU-2, TU-3, or TU-4 chapters; their value is the exact bridge or firewall they provide inside an ecological result.",
+    "Do not let the General Synthesis re-own source theorems or erase the distinctions among future, history, mechanism, evidence, learning, loss, and warning.",
+    "Do not claim global consistency from pairwise non-conflict or two bounded triadic witnesses.",
+    "Do not infer empirical natural-state adequacy without the Reality-to-Theory admission bridge."
+  ]
+}

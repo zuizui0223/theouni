@@ -8,6 +8,7 @@ on:
       - 'universe/**'
       - 'scripts/**'
       - 'graphify-out/WORLDLINE_REPORT.md'
+      - 'graphify-out/DISSERTATION_REPORT.md'
       - 'README.md'
       - '.github/workflows/theory-universe-validation.yml'
   pull_request:
@@ -17,6 +18,7 @@ on:
       - 'universe/**'
       - 'scripts/**'
       - 'graphify-out/WORLDLINE_REPORT.md'
+      - 'graphify-out/DISSERTATION_REPORT.md'
       - 'README.md'
       - '.github/workflows/theory-universe-validation.yml'
   workflow_dispatch:
@@ -95,3 +97,12 @@ jobs:
 
       - name: Check generated worldline report is synchronized
         run: git diff --exit-code -- graphify-out/WORLDLINE_REPORT.md
+
+      - name: Validate preferred dissertation architecture
+        run: python scripts/validate_dissertation_architecture.py
+
+      - name: Rebuild Graphify dissertation overlay
+        run: python scripts/build_dissertation_overlay.py /tmp/theouni-dissertation-extraction.json
+
+      - name: Check generated dissertation report is synchronized
+        run: git diff --exit-code -- graphify-out/DISSERTATION_REPORT.md
