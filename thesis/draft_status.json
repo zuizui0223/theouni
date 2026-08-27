@@ -36,13 +36,17 @@
         "thesis/audits/02_ccoc_crest_mltr_boundary.md"
       ],
       "minimum_words": 3000,
-      "next_action": "Verify historical bibliography metadata, decide CCOC figure reuse/redrawing, and draft Chapter 3 from the MLTR source-relative repair programme."
+      "next_action": "Verify historical bibliography metadata and decide CCOC figure reuse or redrawing."
     },
     "chapter:3": {
-      "stage": "brief_only",
-      "draft_file": null,
-      "source_map_file": null,
-      "next_action": "Consolidate the MLTR paper draft around source-relative repair, transport defect, and history completion."
+      "stage": "draft_v0_2",
+      "draft_file": "thesis/drafts/03_macro_law_replacement_v0.2.md",
+      "source_map_file": "thesis/source_maps/03_macro_law_replacement_sources.md",
+      "audit_files": [
+        "thesis/audits/03_mltr_transport_repair_boundary.md"
+      ],
+      "minimum_words": 3000,
+      "next_action": "Verify bibliography and plant-pollinator figure labels, then draft Chapter 4 from the MRM response-type theorem hierarchy."
     },
     "chapter:4": {
       "stage": "brief_only",
