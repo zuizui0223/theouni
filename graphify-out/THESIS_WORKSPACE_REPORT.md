@@ -13,7 +13,7 @@ This report tracks the source-bounded writing workspace for the preferred novelt
 - total writing units: 10
 - source-owned research chapters: 8
 - general introduction and synthesis units: 2
-- units with prose drafts: 2
+- units with prose drafts: 3
 - canonical source handoffs: 29
 - unique primary forbidden inferences: 10
 - embedded TU modules: 4
@@ -25,7 +25,7 @@ This report tracks the source-bounded writing workspace for the preferred novelt
 |---:|---|---|---|---|---|---|
 | 0 | The Reuse Problem in Ecology | theouni | — | `brief_ready` | `draft_v0_2` | `thesis/drafts/00_general_introduction_v0.2.md` |
 | 1 | When Conservation Capacity Outgrows Conservation Knowledge | crest | — | `source_manuscript_available` | `draft_v0_2` | `thesis/drafts/01_conservation_capacity_v0.2.md` |
-| 2 | When Closed Simplicity Fails under Open Futures | ccoc | — | `source_manuscript_in_conversion` | `brief_only` | — |
+| 2 | When Closed Simplicity Fails under Open Futures | ccoc | — | `source_manuscript_in_conversion` | `draft_v0_2` | `thesis/drafts/02_open_futures_v0.2.md` |
 | 3 | When Macro-Laws Do Not Survive Ecological Replacement | mltr | — | `source_results_drafted` | `brief_only` | — |
 | 4 | When Visible Equivalence Fails under Mechanism Uncertainty | mrm | — | `source_theorem_core_available` | `brief_only` | — |
 | 5 | When Evidence Does Not License the State We Need | ced | — | `source_paper_core_available` | `brief_only` | — |
@@ -36,10 +36,12 @@ This report tracks the source-bounded writing workspace for the preferred novelt
 
 ## Drafted units
 
-- `chapter:introduction` — `draft_v0_2`, 2737 words, source map `thesis/source_maps/00_general_introduction_v0.2_sources.md`
+- `chapter:introduction` — `draft_v0_2`, draft `thesis/drafts/00_general_introduction_v0.2.md`, source map `thesis/source_maps/00_general_introduction_v0.2_sources.md`
   - next: Verify reference metadata against primary publications and freeze the shared dissertation citation style.
-- `chapter:1` — `draft_v0_2`, 3141 words, source map `thesis/source_maps/01_conservation_capacity_sources.md`
-  - next: Verify the official EPA citation, decide figure reuse/redrawing, and convert Chapter 2 from the CCOC theorem spine.
+- `chapter:1` — `draft_v0_2`, draft `thesis/drafts/01_conservation_capacity_v0.2.md`, source map `thesis/source_maps/01_conservation_capacity_sources.md`
+  - next: Verify the official EPA citation and decide figure reuse or redrawing.
+- `chapter:2` — `draft_v0_2`, draft `thesis/drafts/02_open_futures_v0.2.md`, source map `thesis/source_maps/02_open_futures_sources.md`
+  - next: Verify historical bibliography metadata, decide CCOC figure reuse/redrawing, and draft Chapter 3 from the MLTR source-relative repair programme.
 
 ## Source-state counts
 
@@ -55,8 +57,8 @@ This report tracks the source-bounded writing workspace for the preferred novelt
 
 ## Draft-stage counts
 
-- `brief_only`: 8
-- `draft_v0_2`: 2
+- `brief_only`: 7
+- `draft_v0_2`: 3
 
 ## Embedded module allocation
 
@@ -71,4 +73,4 @@ This report tracks the source-bounded writing workspace for the preferred novelt
 
 ## Writing boundary
 
-Each chapter must preserve its source-owned headline result, one primary forbidden inference, an explicit claim ceiling, and canonical source handoffs. Draft progress is tracked separately from claim status. The workspace may coordinate prose and transitions, but it may not absorb source theorem ownership, upgrade bridge modules into independent novelty claims, or infer natural-state adequacy without the Reality-to-Theory admission bridge.
+Each chapter must preserve its source-owned headline result, one primary forbidden inference, an explicit claim ceiling, and canonical source handoffs. Draft progress is tracked separately from claim status. Minimum draft length is enforced by the validator rather than repeated in this generated report. The workspace may coordinate prose and transitions, but it may not absorb source theorem ownership, upgrade bridge modules into independent novelty claims, or infer natural-state adequacy without the Reality-to-Theory admission bridge.
