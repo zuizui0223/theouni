@@ -25,11 +25,13 @@ This is the preferred editorial traversal, not the only valid topological order 
 
 ## Source-of-truth hierarchy
 
-1. Source repository manuscript and theorem documents own scientific claims.
-2. [`chapter_registry.json`](chapter_registry.json) owns chapter allocation, claim ceilings, source handoffs, and writing status.
-3. Files under [`chapters/`](chapters/) are writing briefs. They may reorganize source-owned material but may not strengthen it.
-4. [`../universe/DISSERTATION_ARCHITECTURE.md`](../universe/DISSERTATION_ARCHITECTURE.md) owns the novelty-first editorial rationale.
-5. [`../universe/WORLDLINE_ATLAS.md`](../universe/WORLDLINE_ATLAS.md) owns the non-linear theory map.
+1. Source repository manuscripts, proofs, evidence ledgers, and code own scientific claims.
+2. [`chapter_registry.json`](chapter_registry.json) owns stable chapter allocation, source handoffs, headline claims, forbidden inferences, and claim ceilings.
+3. [`draft_status.json`](draft_status.json) owns mutable prose progress and next drafting actions. Draft stage never upgrades scientific status.
+4. Files under [`chapters/`](chapters/) are source-bounded writing briefs.
+5. Files under [`drafts/`](drafts/) are working prose, and files under [`source_maps/`](source_maps/) record the support and non-support boundary for those drafts.
+6. [`../universe/DISSERTATION_ARCHITECTURE.md`](../universe/DISSERTATION_ARCHITECTURE.md) owns the novelty-first editorial rationale.
+7. [`../universe/WORLDLINE_ATLAS.md`](../universe/WORLDLINE_ATLAS.md) owns the non-linear theory map.
 
 ## Writing rule for every chapter
 
@@ -43,16 +45,21 @@ Each brief must retain these sections:
 - **Canonical source handoff** — where the proof, data, code, and manuscript live;
 - **Transition** — why the next chapter is scientifically necessary.
 
+Every prose draft must additionally have a source map. The source map states what each source supports, what it does not support, and which claims still require primary-literature verification.
+
 ## Ownership firewall
 
 - CREST, CCOC, MLTR, MRM, CED, RACH, eco-genetic-criticality, and eco-genetic-warning-extensions remain the primary owners of their source results.
 - `theouni` owns the cross-repository type system, bridge registry, chapter coordination, and synthesis only.
 - TU-2 belongs inside Chapter 6, TU-3 inside Chapter 7, TU-4 inside Chapter 8, and TU-1 inside the General Synthesis.
 - A chapter may cite another worldline but may not silently absorb its theorem or empirical evidence.
+- Prose completion, word count, or editorial polish does not alter a claim ceiling.
 
 ## Current writing state
 
-The chapter registry and all ten writing briefs are the next-stage deliverables. Scientific results are already available at different maturity levels, from submission-frozen RACH and active CREST/EGW manuscripts to theorem-core chapter sources. The workspace records these differences rather than pretending that all chapters are equally drafted.
+The ten source-bounded briefs are present. The General Introduction has progressed to a v0.1 prose draft under [`drafts/00_general_introduction_v0.1.md`](drafts/00_general_introduction_v0.1.md), with support boundaries recorded in [`source_maps/00_general_introduction_sources.md`](source_maps/00_general_introduction_sources.md). It frames the dissertation around the reuse problem, uses only the minimum factorization language, and leaves source-owned results to the research chapters.
+
+The remaining eight research chapters and General Synthesis remain at brief stage, but their source maturity and next actions are recorded explicitly in `chapter_registry.json` and `draft_status.json`.
 
 Run:
 
@@ -61,4 +68,4 @@ python scripts/validate_thesis_workspace.py
 python scripts/build_thesis_workspace_report.py
 ```
 
-The first command checks chapter order, source ownership, TU allocation, hard dependencies, required headings, and claim-ceiling markers. The second rebuilds `graphify-out/THESIS_WORKSPACE_REPORT.md`.
+The first command checks chapter order, source ownership, TU allocation, hard dependencies, required headings, claim ceilings, draft/source-map presence, and minimum draft length. The second rebuilds `graphify-out/THESIS_WORKSPACE_REPORT.md`.
