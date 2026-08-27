@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import json
-import re
 from collections import Counter
 from pathlib import Path
 
@@ -9,10 +8,6 @@ ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / "thesis" / "chapter_registry.json"
 DRAFT_STATUS = ROOT / "thesis" / "draft_status.json"
 OUTPUT = ROOT / "graphify-out" / "THESIS_WORKSPACE_REPORT.md"
-
-
-def count_words(text: str) -> int:
-    return len(re.findall(r"\b[\w'-]+\b", text, flags=re.UNICODE))
 
 
 def main() -> None:
@@ -71,10 +66,8 @@ def main() -> None:
         lines.append("- none")
     for unit in drafted:
         progress = draft_status["units"][unit["id"]]
-        draft_path = ROOT / progress["draft_file"]
-        words = count_words(draft_path.read_text(encoding="utf-8"))
         lines.append(
-            f"- `{unit['id']}` — `{progress['stage']}`, {words} words, source map `{progress['source_map_file']}`"
+            f"- `{unit['id']}` — `{progress['stage']}`, draft `{progress['draft_file']}`, source map `{progress['source_map_file']}`"
         )
         lines.append(f"  - next: {progress['next_action']}")
 
@@ -99,7 +92,7 @@ def main() -> None:
             "",
             "## Writing boundary",
             "",
-            "Each chapter must preserve its source-owned headline result, one primary forbidden inference, an explicit claim ceiling, and canonical source handoffs. Draft progress is tracked separately from claim status. The workspace may coordinate prose and transitions, but it may not absorb source theorem ownership, upgrade bridge modules into independent novelty claims, or infer natural-state adequacy without the Reality-to-Theory admission bridge.",
+            "Each chapter must preserve its source-owned headline result, one primary forbidden inference, an explicit claim ceiling, and canonical source handoffs. Draft progress is tracked separately from claim status. Minimum draft length is enforced by the validator rather than repeated in this generated report. The workspace may coordinate prose and transitions, but it may not absorb source theorem ownership, upgrade bridge modules into independent novelty claims, or infer natural-state adequacy without the Reality-to-Theory admission bridge.",
             "",
         ]
     )

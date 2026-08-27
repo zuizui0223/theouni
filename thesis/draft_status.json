@@ -26,19 +26,23 @@
         "thesis/audits/01_crest_monitoring_budget_connection.md"
       ],
       "minimum_words": 3000,
-      "next_action": "Verify the official EPA citation, decide figure reuse/redrawing, and convert Chapter 2 from the CCOC theorem spine."
+      "next_action": "Verify the official EPA citation and decide figure reuse or redrawing."
     },
     "chapter:2": {
-      "stage": "brief_only",
-      "draft_file": null,
-      "source_map_file": null,
-      "next_action": "Convert the CCOC theorem spine into chapter prose centered on cross-grammar nontransport and the transition from Chapter 1."
+      "stage": "draft_v0_2",
+      "draft_file": "thesis/drafts/02_open_futures_v0.2.md",
+      "source_map_file": "thesis/source_maps/02_open_futures_sources.md",
+      "audit_files": [
+        "thesis/audits/02_ccoc_crest_mltr_boundary.md"
+      ],
+      "minimum_words": 3000,
+      "next_action": "Verify historical bibliography metadata, decide CCOC figure reuse/redrawing, and draft Chapter 3 from the MLTR source-relative repair programme."
     },
     "chapter:3": {
       "stage": "brief_only",
       "draft_file": null,
       "source_map_file": null,
-      "next_action": "Consolidate the MLTR paper draft around source-relative repair and history completion."
+      "next_action": "Consolidate the MLTR paper draft around source-relative repair, transport defect, and history completion."
     },
     "chapter:4": {
       "stage": "brief_only",
