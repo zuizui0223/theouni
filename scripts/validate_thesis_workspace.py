@@ -32,6 +32,7 @@ ALLOWED_DRAFT_STAGES = {
     "citation_ready",
     "chapter_integrated",
 }
+INTERNAL_SOURCE_TAG = re.compile(r"\[(?:[A-E])(?:\s*,\s*[A-E])*\]")
 
 
 def load(path: Path) -> dict:
@@ -140,10 +141,11 @@ def main() -> None:
     draft_word_counts: dict[str, int] = {}
     for unit in units:
         progress = draft_status["units"][unit["id"]]
-        assert progress["stage"] in ALLOWED_DRAFT_STAGES
+        stage = progress["stage"]
+        assert stage in ALLOWED_DRAFT_STAGES
         assert progress["next_action"].strip()
 
-        if progress["stage"] == "brief_only":
+        if stage == "brief_only":
             assert progress["draft_file"] is None
             assert progress["source_map_file"] is None
             continue
@@ -156,12 +158,21 @@ def main() -> None:
         assert draft_path.is_file(), progress["draft_file"]
         assert source_map_path.is_file(), progress["source_map_file"]
 
+        for audit_file in progress.get("audit_files", []):
+            assert (ROOT / audit_file).is_file(), audit_file
+
         draft_text = draft_path.read_text(encoding="utf-8")
         source_map_text = source_map_path.read_text(encoding="utf-8")
         assert f"<!-- draft-id: {unit['id']}:" in draft_text
         assert unit["title"] in draft_text
-        assert "## Internal source keys" in draft_text
         assert "## Section-to-source matrix" in source_map_text
+
+        if stage == "draft_v0_1":
+            assert "## Internal source keys" in draft_text
+        elif stage in {"draft_v0_2", "citation_ready", "chapter_integrated"}:
+            assert "## References" in draft_text
+            assert "## Internal source keys" not in draft_text
+            assert not INTERNAL_SOURCE_TAG.search(draft_text)
 
         word_count = count_words(draft_text)
         assert word_count >= progress.get("minimum_words", 0)
