@@ -13,7 +13,7 @@ This report tracks the source-bounded writing workspace for the preferred novelt
 - total writing units: 10
 - source-owned research chapters: 8
 - general introduction and synthesis units: 2
-- units with prose drafts: 1
+- units with prose drafts: 2
 - canonical source handoffs: 29
 - unique primary forbidden inferences: 10
 - embedded TU modules: 4
@@ -24,7 +24,7 @@ This report tracks the source-bounded writing workspace for the preferred novelt
 | Order | Unit | Primary owner | Embedded | Source state | Draft stage | Draft |
 |---:|---|---|---|---|---|---|
 | 0 | The Reuse Problem in Ecology | theouni | — | `brief_ready` | `draft_v0_2` | `thesis/drafts/00_general_introduction_v0.2.md` |
-| 1 | When Conservation Capacity Outgrows Conservation Knowledge | crest | — | `source_manuscript_available` | `brief_only` | — |
+| 1 | When Conservation Capacity Outgrows Conservation Knowledge | crest | — | `source_manuscript_available` | `draft_v0_2` | `thesis/drafts/01_conservation_capacity_v0.2.md` |
 | 2 | When Closed Simplicity Fails under Open Futures | ccoc | — | `source_manuscript_in_conversion` | `brief_only` | — |
 | 3 | When Macro-Laws Do Not Survive Ecological Replacement | mltr | — | `source_results_drafted` | `brief_only` | — |
 | 4 | When Visible Equivalence Fails under Mechanism Uncertainty | mrm | — | `source_theorem_core_available` | `brief_only` | — |
@@ -37,7 +37,9 @@ This report tracks the source-bounded writing workspace for the preferred novelt
 ## Drafted units
 
 - `chapter:introduction` — `draft_v0_2`, 2737 words, source map `thesis/source_maps/00_general_introduction_v0.2_sources.md`
-  - next: Verify reference metadata against primary publications, freeze shared citation style, and adapt Chapter 1 using the overlap audit.
+  - next: Verify reference metadata against primary publications and freeze the shared dissertation citation style.
+- `chapter:1` — `draft_v0_2`, 3141 words, source map `thesis/source_maps/01_conservation_capacity_sources.md`
+  - next: Verify the official EPA citation, decide figure reuse/redrawing, and convert Chapter 2 from the CCOC theorem spine.
 
 ## Source-state counts
 
@@ -53,8 +55,8 @@ This report tracks the source-bounded writing workspace for the preferred novelt
 
 ## Draft-stage counts
 
-- `brief_only`: 9
-- `draft_v0_2`: 1
+- `brief_only`: 8
+- `draft_v0_2`: 2
 
 ## Embedded module allocation
 
