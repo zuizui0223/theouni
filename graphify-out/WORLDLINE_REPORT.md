@@ -16,7 +16,7 @@ This is the focused task/perspective overlay for `theouni`. It complements the f
 - hard scientific dependency edges: 1
 - topological chapter orders under those hard dependencies: 181440
 - Graphify-compatible overlay nodes: 69
-- Graphify-compatible overlay edges: 114
+- Graphify-compatible overlay edges: 115
 
 ## Hard dependency
 
