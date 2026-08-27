@@ -1,10 +1,12 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / "thesis" / "chapter_registry.json"
+DRAFT_STATUS = ROOT / "thesis" / "draft_status.json"
 ARCHITECTURE = ROOT / "universe" / "dissertation_architecture.json"
 UNIVERSE = ROOT / "universe" / "registry.json"
 
@@ -23,6 +25,13 @@ EXPECTED_EMBEDDED = {
     "TU-3": "chapter:7",
     "TU-4": "chapter:8",
 }
+ALLOWED_DRAFT_STAGES = {
+    "brief_only",
+    "draft_v0_1",
+    "draft_v0_2",
+    "citation_ready",
+    "chapter_integrated",
+}
 
 
 def load(path: Path) -> dict:
@@ -40,8 +49,13 @@ def architecture_units(architecture: dict) -> dict[str, dict]:
     return units
 
 
+def count_words(text: str) -> int:
+    return len(re.findall(r"\b[\w'-]+\b", text, flags=re.UNICODE))
+
+
 def main() -> None:
     registry = load(REGISTRY)
+    draft_status = load(DRAFT_STATUS)
     architecture = load(ARCHITECTURE)
     universe = load(UNIVERSE)
 
@@ -53,8 +67,11 @@ def main() -> None:
     assert len({unit["file"] for unit in units}) == len(units)
     assert len({unit["forbidden_inference"] for unit in units}) == len(units)
 
+    unit_ids = {unit["id"] for unit in units}
+    assert set(draft_status["units"]) == unit_ids
+
     arch_by_id = architecture_units(architecture)
-    assert set(arch_by_id) == {unit["id"] for unit in units}
+    assert set(arch_by_id) == unit_ids
 
     repo_ids = {repo["id"] for repo in universe["repositories"]}
     research_units = [unit for unit in units if unit["kind"] == "research_chapter"]
@@ -119,10 +136,45 @@ def main() -> None:
         }
     ]
 
+    drafted_units = 0
+    draft_word_counts: dict[str, int] = {}
+    for unit in units:
+        progress = draft_status["units"][unit["id"]]
+        assert progress["stage"] in ALLOWED_DRAFT_STAGES
+        assert progress["next_action"].strip()
+
+        if progress["stage"] == "brief_only":
+            assert progress["draft_file"] is None
+            assert progress["source_map_file"] is None
+            continue
+
+        drafted_units += 1
+        assert progress["draft_file"]
+        assert progress["source_map_file"]
+        draft_path = ROOT / progress["draft_file"]
+        source_map_path = ROOT / progress["source_map_file"]
+        assert draft_path.is_file(), progress["draft_file"]
+        assert source_map_path.is_file(), progress["source_map_file"]
+
+        draft_text = draft_path.read_text(encoding="utf-8")
+        source_map_text = source_map_path.read_text(encoding="utf-8")
+        assert f"<!-- draft-id: {unit['id']}:" in draft_text
+        assert unit["title"] in draft_text
+        assert "## Internal source keys" in draft_text
+        assert "## Section-to-source matrix" in source_map_text
+
+        word_count = count_words(draft_text)
+        assert word_count >= progress.get("minimum_words", 0)
+        draft_word_counts[unit["id"]] = word_count
+
+    assert drafted_units >= 1
+
     source_counts = sum(len(unit["canonical_sources"]) for unit in units)
+    draft_summary = ", ".join(f"{unit_id}={words} words" for unit_id, words in draft_word_counts.items())
     print(
         f"Validated thesis workspace: {len(units)} units, {len(research_units)} source-owned research chapters, "
-        f"{source_counts} canonical source handoffs, unique forbidden inferences, TU allocation, and Loss->Warning dependency."
+        f"{source_counts} canonical source handoffs, {drafted_units} drafted unit(s) ({draft_summary}), "
+        "unique forbidden inferences, TU allocation, and Loss->Warning dependency."
     )
 
 
