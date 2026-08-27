@@ -11,6 +11,9 @@
       "stage": "draft_v0_2",
       "draft_file": "thesis/drafts/00_general_introduction_v0.2.md",
       "source_map_file": "thesis/source_maps/00_general_introduction_v0.2_sources.md",
+      "audit_files": [
+        "thesis/audits/00_general_introduction_crest_overlap.md"
+      ],
       "minimum_words": 2000,
       "next_action": "Verify reference metadata against primary publications, freeze shared citation style, and adapt Chapter 1 using the overlap audit."
     },
