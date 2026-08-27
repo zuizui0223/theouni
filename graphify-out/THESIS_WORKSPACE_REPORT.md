@@ -23,7 +23,7 @@ This report tracks the source-bounded writing workspace for the preferred novelt
 
 | Order | Unit | Primary owner | Embedded | Source state | Draft stage | Draft |
 |---:|---|---|---|---|---|---|
-| 0 | The Reuse Problem in Ecology | theouni | — | `brief_ready` | `draft_v0_1` | `thesis/drafts/00_general_introduction_v0.1.md` |
+| 0 | The Reuse Problem in Ecology | theouni | — | `brief_ready` | `draft_v0_2` | `thesis/drafts/00_general_introduction_v0.2.md` |
 | 1 | When Conservation Capacity Outgrows Conservation Knowledge | crest | — | `source_manuscript_available` | `brief_only` | — |
 | 2 | When Closed Simplicity Fails under Open Futures | ccoc | — | `source_manuscript_in_conversion` | `brief_only` | — |
 | 3 | When Macro-Laws Do Not Survive Ecological Replacement | mltr | — | `source_results_drafted` | `brief_only` | — |
@@ -36,8 +36,8 @@ This report tracks the source-bounded writing workspace for the preferred novelt
 
 ## Drafted units
 
-- `chapter:introduction` — `draft_v0_1`, 2280 words, source map `thesis/source_maps/00_general_introduction_sources.md`
-  - next: Replace internal source tags with a verified bibliography and remove duplication with the CREST chapter introduction.
+- `chapter:introduction` — `draft_v0_2`, 2737 words, source map `thesis/source_maps/00_general_introduction_v0.2_sources.md`
+  - next: Verify reference metadata against primary publications, freeze shared citation style, and adapt Chapter 1 using the overlap audit.
 
 ## Source-state counts
 
@@ -54,7 +54,7 @@ This report tracks the source-bounded writing workspace for the preferred novelt
 ## Draft-stage counts
 
 - `brief_only`: 9
-- `draft_v0_1`: 1
+- `draft_v0_2`: 1
 
 ## Embedded module allocation
 
