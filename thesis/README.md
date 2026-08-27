@@ -58,7 +58,7 @@ Every prose draft must additionally have a source map. The source map states wha
 
 ## Current writing state
 
-Three units now have citation-audited v0.2 prose.
+Four units now have citation-audited v0.2 prose.
 
 ### General Introduction
 
@@ -76,7 +76,13 @@ Its source/proof handoff is [`source_maps/01_conservation_capacity_sources.md`](
 
 Its theorem/prior-art/reproducibility handoff is [`source_maps/02_open_futures_sources.md`](source_maps/02_open_futures_sources.md). The quantified boundary against CREST and MLTR is fixed in [`audits/02_ccoc_crest_mltr_boundary.md`](audits/02_ccoc_crest_mltr_boundary.md), preventing the three chapters from collapsing into the slogan that state merely depends on context.
 
-Chapter 3 is now the next active drafting target. It must move from a fixed plant with changing legal futures to non-nested structural replacement and one inherited source macro-law.
+### Chapter 3 — MLTR
+
+[`drafts/03_macro_law_replacement_v0.2.md`](drafts/03_macro_law_replacement_v0.2.md) develops exact inherited-law portability, local obstruction, unique coarsest source-relative repair, transport defect, route coherence, minimum history augmentation, and the plant–pollinator restoration-priority witness.
+
+Its proof/example/reproducibility handoff is [`source_maps/03_macro_law_replacement_sources.md`](source_maps/03_macro_law_replacement_sources.md). The distinction between source-relative repair, target-only abstraction, CCOC grammar inflation, conditional history, and MRM mechanism uncertainty is fixed in [`audits/03_mltr_transport_repair_boundary.md`](audits/03_mltr_transport_repair_boundary.md).
+
+Chapter 4 is now the next active drafting target. It must move from declared source/target replacement to retained mechanism candidates that share a visible state but disagree under future interventions.
 
 Run:
 
