@@ -58,7 +58,7 @@ Every prose draft must additionally have a source map. The source map states wha
 
 ## Current writing state
 
-Two units now have citation-audited v0.2 prose.
+Three units now have citation-audited v0.2 prose.
 
 ### General Introduction
 
@@ -66,11 +66,17 @@ Two units now have citation-audited v0.2 prose.
 
 ### Chapter 1 — CREST
 
-[`drafts/01_conservation_capacity_v0.2.md`](drafts/01_conservation_capacity_v0.2.md) adapts the CREST submission manuscript into a dissertation chapter. It retains the conservation paradox, contract-relative state, shallow-lake case, finite architecture, capability–resolution theorem, and transition to CCOC while avoiding a second dissertation-level philosophy introduction.
+[`drafts/01_conservation_capacity_v0.2.md`](drafts/01_conservation_capacity_v0.2.md) retains the conservation paradox, contract-relative state, shallow-lake case, finite architecture, capability–resolution theorem, and transition to CCOC while avoiding a second dissertation-level philosophy introduction.
 
-The source/proof/evidence handoff is recorded in [`source_maps/01_conservation_capacity_sources.md`](source_maps/01_conservation_capacity_sources.md). The overlap allocation with the General Introduction is fixed in [`audits/00_general_introduction_crest_overlap.md`](audits/00_general_introduction_crest_overlap.md). The practical connection to proportional restoration-monitoring budgets is bounded in [`audits/01_crest_monitoring_budget_connection.md`](audits/01_crest_monitoring_budget_connection.md): cost scaling may be administratively useful but cannot certify response-resolution adequacy.
+Its source/proof handoff is [`source_maps/01_conservation_capacity_sources.md`](source_maps/01_conservation_capacity_sources.md). The General Introduction allocation is fixed in [`audits/00_general_introduction_crest_overlap.md`](audits/00_general_introduction_crest_overlap.md), and the restoration-budget interpretation is bounded in [`audits/01_crest_monitoring_budget_connection.md`](audits/01_crest_monitoring_budget_connection.md).
 
-Chapter 2 is now the next active drafting target. It must explain cross-grammar interface inflation without treating CCOC as a CREST corollary.
+### Chapter 2 — CCOC
+
+[`drafts/02_open_futures_v0.2.md`](drafts/02_open_futures_v0.2.md) develops the grammar-aware exact interface, cross-grammar addressability lower bound, maximal one-action family, bounded-local relay, positive portability boundary, and ecological reading of open future addressability.
+
+Its theorem/prior-art/reproducibility handoff is [`source_maps/02_open_futures_sources.md`](source_maps/02_open_futures_sources.md). The quantified boundary against CREST and MLTR is fixed in [`audits/02_ccoc_crest_mltr_boundary.md`](audits/02_ccoc_crest_mltr_boundary.md), preventing the three chapters from collapsing into the slogan that state merely depends on context.
+
+Chapter 3 is now the next active drafting target. It must move from a fixed plant with changing legal futures to non-nested structural replacement and one inherited source macro-law.
 
 Run:
 
