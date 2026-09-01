@@ -1,14 +1,12 @@
 from __future__ import annotations
 
 import json
-import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / "thesis" / "chapter_registry.json"
 DRAFT_STATUS = ROOT / "thesis" / "draft_status.json"
-ARCHITECTURE = ROOT / "universe" / "dissertation_architecture.json"
-UNIVERSE = ROOT / "universe" / "registry.json"
+ARCHITECTURE = ROOT / "thesis" / "final_chapter_architecture.json"
 
 REQUIRED_HEADINGS = (
     "## Problem",
@@ -19,174 +17,96 @@ REQUIRED_HEADINGS = (
     "## Canonical source handoff",
     "## Transition",
 )
-EXPECTED_EMBEDDED = {
-    "TU-1": "chapter:synthesis",
-    "TU-2": "chapter:6",
-    "TU-3": "chapter:7",
-    "TU-4": "chapter:8",
-}
-ALLOWED_DRAFT_STAGES = {
-    "brief_only",
-    "draft_v0_1",
-    "draft_v0_2",
-    "citation_ready",
-    "chapter_integrated",
-}
-INTERNAL_SOURCE_TAG = re.compile(r"\[(?:[A-E])(?:\s*,\s*[A-E])*\]")
+EXPECTED_PRIMARY = [
+    "repo:theouni",
+    "repo:boundary",
+    "repo:eco-genetic-warning-extensions",
+    "repo:mrod",
+    "repo:eco-genetic-criticality",
+    "repo:ccoc",
+    "repo:crest",
+    "repo:mltr",
+    "repo:ced",
+    "repo:theouni",
+]
+EXPECTED_EMBEDDED = {"TU-1":"chapter:synthesis","TU-2":"chapter:3","TU-3":"chapter:4","TU-4":"chapter:2"}
 
 
 def load(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def architecture_units(architecture: dict) -> dict[str, dict]:
-    units: dict[str, dict] = {
-        architecture["general_introduction"]["id"]: architecture["general_introduction"]
-    }
-    for part in architecture["parts"]:
-        for chapter in part["chapters"]:
-            units[chapter["id"]] = chapter
-    units[architecture["general_synthesis"]["id"]] = architecture["general_synthesis"]
-    return units
-
-
-def count_words(text: str) -> int:
-    return len(re.findall(r"\b[\w'-]+\b", text, flags=re.UNICODE))
-
-
 def main() -> None:
     registry = load(REGISTRY)
     draft_status = load(DRAFT_STATUS)
     architecture = load(ARCHITECTURE)
-    universe = load(UNIVERSE)
 
+    assert architecture["schema_version"] == "theouni-final-chapter-architecture.v1"
+    assert architecture["status"] == "final_editorial_order_forbidden_inference_spine"
+    assert registry["architecture_source"] == "thesis/final_chapter_architecture.json"
+
+    chapters = architecture["chapters"]
     units = registry["units"]
-    assert len(units) == 10
-    assert [unit["order"] for unit in units] == list(range(10))
-    assert [unit["id"] for unit in units] == architecture["preferred_sequence"]
-    assert len({unit["id"] for unit in units}) == len(units)
-    assert len({unit["file"] for unit in units}) == len(units)
-    assert len({unit["forbidden_inference"] for unit in units}) == len(units)
+    assert len(chapters) == len(units) == 10
+    assert [c["order"] for c in chapters] == list(range(10))
+    assert [u["order"] for u in units] == list(range(10))
+    assert [c["id"] for c in chapters] == architecture["preferred_sequence"]
+    assert [u["id"] for u in units] == architecture["preferred_sequence"]
+    assert [u["primary_source_repositories"][0] for u in units] == EXPECTED_PRIMARY
+    assert len({u["forbidden_inference"] for u in units}) == 10
+    assert units[-1]["forbidden_inference"] == "より詳細にする／より多く測る／より長く記憶する／より多く介入する ⇒ より妥当になる"
 
-    unit_ids = {unit["id"] for unit in units}
-    assert set(draft_status["units"]) == unit_ids
+    source_map = architecture["source_repository_map"]
+    assert source_map["repo:boundary"] == "zuizui0223/boundary"
+    assert source_map["repo:mrod"] == "zuizui0223/mrod"
+    assert architecture["companion_programmes"]["MRM"]["repository"] == "repo:mrm"
+    assert architecture["companion_programmes"]["RACH"]["repository"] == "repo:microdonta"
+    primary_modules = [u["primary_modules"][0] for u in units]
+    assert "MRM" not in primary_modules and "RACH" not in primary_modules
 
-    arch_by_id = architecture_units(architecture)
-    assert set(arch_by_id) == unit_ids
+    observed_embedded = {module: unit["id"] for unit in units for module in unit["embedded_modules"]}
+    observed_embedded["TU-1"] = "chapter:synthesis"
+    assert observed_embedded == EXPECTED_EMBEDDED
+    assert registry["embedded_module_allocation"] == EXPECTED_EMBEDDED
+    assert architecture["embedded_module_allocation"] == EXPECTED_EMBEDDED
 
-    repo_ids = {repo["id"] for repo in universe["repositories"]}
-    research_units = [unit for unit in units if unit["kind"] == "research_chapter"]
-    assert len(research_units) == 8
-    assert len({unit["primary_source_repositories"][0] for unit in research_units}) == 8
-    assert all(unit["primary_source_repositories"][0] != "repo:theouni" for unit in research_units)
+    assert registry["hard_dependencies"] == []
+    assert architecture["source_preconditions"] == registry["source_preconditions"]
+    assert architecture["source_preconditions"][0]["chapter"] == "chapter:2"
+    assert "frozen" in architecture["source_preconditions"][0]["condition"].lower()
 
-    allowed_statuses = {
-        "brief_ready",
-        "source_manuscript_available",
-        "source_manuscript_in_conversion",
-        "source_results_drafted",
-        "source_theorem_core_available",
-        "source_paper_core_available",
-        "source_submission_frozen",
-        "source_scientific_campaign_closed",
-        "source_integrated_manuscript_active",
-    }
-
+    arch_by_id = {c["id"]: c for c in chapters}
+    assert set(draft_status["units"]) == {u["id"] for u in units}
     for unit in units:
-        assert unit["status"] in allowed_statuses
-        assert unit["primary_source_repositories"]
-        assert all(repo in repo_ids for repo in unit["primary_source_repositories"])
-        assert unit["headline_result"].strip()
-        assert unit["forbidden_inference"].strip()
-        assert unit["canonical_sources"]
-
         arch = arch_by_id[unit["id"]]
         assert unit["title"] == arch["title"]
-        if unit["id"].startswith("chapter:") and unit["id"] not in {"chapter:introduction", "chapter:synthesis"}:
-            assert unit["primary_source_repositories"] == arch["primary_source_repositories"]
-            assert unit["primary_modules"] == arch["primary_modules"]
-            assert unit["embedded_modules"] == arch["embedded_theouni_modules"]
-            assert unit["forbidden_inference"] == arch["primary_forbidden_inference"]
-        elif unit["id"] == "chapter:synthesis":
-            assert unit["primary_source_repositories"] == arch["primary_source_repositories"]
-            assert unit["primary_modules"] == arch["primary_modules"]
-            assert unit["forbidden_inference"] == arch["primary_forbidden_inference"]
+        assert unit["english_title"] == arch["english_title"]
+        assert unit["primary_source_repositories"] == arch["primary_source_repositories"]
+        assert unit["primary_modules"] == arch["primary_modules"]
+        assert unit["embedded_modules"] == arch["embedded_theouni_modules"]
+        assert unit["forbidden_inference"] == arch["primary_forbidden_inference"]
+        assert unit["canonical_sources"] == arch["canonical_sources"]
 
-        path = ROOT / unit["file"]
-        assert path.is_file(), unit["file"]
-        text = path.read_text(encoding="utf-8")
+        chapter_path = ROOT / unit["file"]
+        assert chapter_path.is_file(), unit["file"]
+        text = chapter_path.read_text(encoding="utf-8")
         assert f"<!-- chapter-id: {unit['id']} -->" in text
         assert unit["title"] in text
+        assert unit["forbidden_inference"] in text
         for heading in REQUIRED_HEADINGS:
             assert heading in text, f"{unit['file']} missing {heading}"
 
-    assert registry["embedded_module_allocation"] == EXPECTED_EMBEDDED
-    observed_embedded = {
-        module: unit["id"]
-        for unit in units
-        for module in unit["embedded_modules"]
-    }
-    observed_embedded["TU-1"] = "chapter:synthesis"
-    assert observed_embedded == EXPECTED_EMBEDDED
-
-    assert registry["hard_dependencies"] == [
-        {
-            "source": "chapter:7",
-            "target": "chapter:8",
-            "relation": "loss domain must be fixed warning-blind before warning evaluation",
-        }
-    ]
-
-    drafted_units = 0
-    draft_word_counts: dict[str, int] = {}
-    for unit in units:
         progress = draft_status["units"][unit["id"]]
-        stage = progress["stage"]
-        assert stage in ALLOWED_DRAFT_STAGES
+        assert progress["stage"] == "brief_only"
+        assert progress["draft_file"] is None and progress["source_map_file"] is None
         assert progress["next_action"].strip()
 
-        if stage == "brief_only":
-            assert progress["draft_file"] is None
-            assert progress["source_map_file"] is None
-            continue
+    forbidden_chain = [u["forbidden_inference"] for u in units]
+    assert "観測を豊かにした ⇒ 潜在機構に近づいた" in forbidden_chain
+    assert "損失に先行した ⇒ 損失を予告する" in forbidden_chain
+    assert "同じ手法を繰り返した ⇒ 証拠が強くなった" in forbidden_chain
 
-        drafted_units += 1
-        assert progress["draft_file"]
-        assert progress["source_map_file"]
-        draft_path = ROOT / progress["draft_file"]
-        source_map_path = ROOT / progress["source_map_file"]
-        assert draft_path.is_file(), progress["draft_file"]
-        assert source_map_path.is_file(), progress["source_map_file"]
-
-        for audit_file in progress.get("audit_files", []):
-            assert (ROOT / audit_file).is_file(), audit_file
-
-        draft_text = draft_path.read_text(encoding="utf-8")
-        source_map_text = source_map_path.read_text(encoding="utf-8")
-        assert f"<!-- draft-id: {unit['id']}:" in draft_text
-        assert unit["title"] in draft_text
-        assert "## Section-to-source matrix" in source_map_text
-
-        if stage == "draft_v0_1":
-            assert "## Internal source keys" in draft_text
-        elif stage in {"draft_v0_2", "citation_ready", "chapter_integrated"}:
-            assert "## References" in draft_text
-            assert "## Internal source keys" not in draft_text
-            assert not INTERNAL_SOURCE_TAG.search(draft_text)
-
-        word_count = count_words(draft_text)
-        assert word_count >= progress.get("minimum_words", 0)
-        draft_word_counts[unit["id"]] = word_count
-
-    assert drafted_units >= 1
-
-    source_counts = sum(len(unit["canonical_sources"]) for unit in units)
-    draft_summary = ", ".join(f"{unit_id}={words} words" for unit_id, words in draft_word_counts.items())
-    print(
-        f"Validated thesis workspace: {len(units)} units, {len(research_units)} source-owned research chapters, "
-        f"{source_counts} canonical source handoffs, {drafted_units} drafted unit(s) ({draft_summary}), "
-        "unique forbidden inferences, TU allocation, and Loss->Warning dependency."
-    )
+    print("Validated final ten-chapter forbidden-inference spine: 0 Reuse, 1 Boundary, 2 EGWE, 3 MROD, 4 EcoGenCriticality, 5 CCOC, 6 CREST, 7 MLTR, 8 CED, 9 TU-1 synthesis; MRM/RACH retained as companions.")
 
 
 if __name__ == "__main__":
