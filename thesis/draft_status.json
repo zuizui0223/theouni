@@ -1,84 +1,21 @@
 {
-  "schema_version": "theouni-thesis-draft-status.v1",
-  "status": "mutable_writing_progress_no_claim_upgrade",
+  "schema_version": "theouni-thesis-draft-status.v2",
+  "status": "reset_to_final_forbidden_inference_architecture",
   "claim_ceiling": [
-    "Draft progress does not change chapter claim ceilings or source ownership.",
-    "A prose draft is not evidence that a source theorem, empirical bridge, or bibliography is complete.",
-    "Bibliographic metadata and priority-sensitive novelty language require primary-source verification before submission."
+    "The former CREST-first draft sequence is preserved in git history but is not treated as current chapter prose.",
+    "All final-order units restart at brief_only until source-bounded prose is rebuilt under the new chapter assignment.",
+    "Resetting draft status changes no source theorem, evidence ledger, or publication claim."
   ],
   "units": {
-    "chapter:introduction": {
-      "stage": "draft_v0_2",
-      "draft_file": "thesis/drafts/00_general_introduction_v0.2.md",
-      "source_map_file": "thesis/source_maps/00_general_introduction_v0.2_sources.md",
-      "audit_files": [
-        "thesis/audits/00_general_introduction_crest_overlap.md"
-      ],
-      "minimum_words": 2000,
-      "next_action": "Verify reference metadata against primary publications and freeze the shared dissertation citation style."
-    },
-    "chapter:1": {
-      "stage": "draft_v0_2",
-      "draft_file": "thesis/drafts/01_conservation_capacity_v0.2.md",
-      "source_map_file": "thesis/source_maps/01_conservation_capacity_sources.md",
-      "audit_files": [
-        "thesis/audits/00_general_introduction_crest_overlap.md",
-        "thesis/audits/01_crest_monitoring_budget_connection.md"
-      ],
-      "minimum_words": 3000,
-      "next_action": "Verify the official EPA citation and decide figure reuse or redrawing."
-    },
-    "chapter:2": {
-      "stage": "draft_v0_2",
-      "draft_file": "thesis/drafts/02_open_futures_v0.2.md",
-      "source_map_file": "thesis/source_maps/02_open_futures_sources.md",
-      "audit_files": [
-        "thesis/audits/02_ccoc_crest_mltr_boundary.md"
-      ],
-      "minimum_words": 3000,
-      "next_action": "Verify historical bibliography metadata, decide CCOC figure reuse/redrawing, and draft Chapter 3 from the MLTR source-relative repair programme."
-    },
-    "chapter:3": {
-      "stage": "brief_only",
-      "draft_file": null,
-      "source_map_file": null,
-      "next_action": "Consolidate the MLTR paper draft around source-relative repair, transport defect, and history completion."
-    },
-    "chapter:4": {
-      "stage": "brief_only",
-      "draft_file": null,
-      "source_map_file": null,
-      "next_action": "Create a manuscript-facing MRM narrative with one response-type theorem hierarchy."
-    },
-    "chapter:5": {
-      "stage": "brief_only",
-      "draft_file": null,
-      "source_map_file": null,
-      "next_action": "Adapt CED Paper B into dissertation prose while preserving the required-versus-identified boundary."
-    },
-    "chapter:6": {
-      "stage": "brief_only",
-      "draft_file": null,
-      "source_map_file": null,
-      "next_action": "Import the frozen RACH manuscript and embed TU-2 only at the learning-versus-licensing junction."
-    },
-    "chapter:7": {
-      "stage": "brief_only",
-      "draft_file": null,
-      "source_map_file": null,
-      "next_action": "Extract the closed eco-genetic campaign into a loss-state chapter with TU-3 as a representation firewall."
-    },
-    "chapter:8": {
-      "stage": "brief_only",
-      "draft_file": null,
-      "source_map_file": null,
-      "next_action": "Adapt the integrated warning manuscript around event/non-event discrimination and bounded portability."
-    },
-    "chapter:synthesis": {
-      "stage": "brief_only",
-      "draft_file": null,
-      "source_map_file": null,
-      "next_action": "Write only after Chapters 1-8 are stable enough to test which reuse claims genuinely cross their boundaries."
-    }
+    "chapter:introduction":{"stage":"brief_only","draft_file":null,"source_map_file":null,"next_action":"Redraft Chapter 0 around the reuse problem and the final forbidden-inference chain."},
+    "chapter:1":{"stage":"brief_only","draft_file":null,"source_map_file":null,"next_action":"Draft Boundary as the identification-limit chapter without equating mechanistic proximity with identification strength."},
+    "chapter:2":{"stage":"brief_only","draft_file":null,"source_map_file":null,"next_action":"Draft EGWE warning validity from full event/non-event denominators while importing frozen loss labels as source preconditions."},
+    "chapter:3":{"stage":"brief_only","draft_file":null,"source_map_file":null,"next_action":"Draft MROD around observation information value and sequential measurement choice; use RACH/MRM only as companions."},
+    "chapter:4":{"stage":"brief_only","draft_file":null,"source_map_file":null,"next_action":"Draft the eco-genetic five-state separation chapter and keep TU-3 as the loss-state firewall."},
+    "chapter:5":{"stage":"brief_only","draft_file":null,"source_map_file":null,"next_action":"Redraft CCOC around open-future memory burden and the physical-boundary/causal-memory forbidden inference."},
+    "chapter:6":{"stage":"brief_only","draft_file":null,"source_map_file":null,"next_action":"Redraft CREST after CCOC as the capability-versus-knowledge escalation chapter."},
+    "chapter:7":{"stage":"brief_only","draft_file":null,"source_map_file":null,"next_action":"Draft MLTR around source-relative law transport, repair, and history completion."},
+    "chapter:8":{"stage":"brief_only","draft_file":null,"source_map_file":null,"next_action":"Draft CED around failure-domain diversity rather than raw replication count."},
+    "chapter:synthesis":{"stage":"brief_only","draft_file":null,"source_map_file":null,"next_action":"Write TU-1 synthesis only after Chapters 0-8 are redrafted under the final forbidden-inference spine."}
   }
 }
