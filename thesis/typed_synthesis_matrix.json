@@ -1,0 +1,98 @@
+{
+  "schema_version": "theouni-typed-synthesis-matrix.v1",
+  "status": "bounded_cross_chapter_synthesis",
+  "purpose": "Support Chapter 9 without inventing a single scalar adequacy order. Each row records one source-owned monotone shortcut that fails under its own scientific type.",
+  "claim_ceiling": [
+    "This matrix is not a theorem that every notion of richer information lowers adequacy.",
+    "Rows use different carriers, estimands, contracts, and comparison orders and therefore may not be pooled into one scalar effect or one global partial order.",
+    "The safe synthesis claim is that no one listed richness proxy is privileged as an automatic certificate of adequacy across the dissertation's distinct scientific responsibilities.",
+    "TU-1 remains the exact theorem for revision after compression; the rows below are source-owned counterexamples supporting the broader dissertation synthesis."
+  ],
+  "rows": [
+    {
+      "axis_id": "observation_richness",
+      "chapter": "chapter:1",
+      "source": "boundary",
+      "richness_proxy": "more biologically proximal or more numerous observed channels",
+      "forbidden_monotone_inference": "richer observation => closer identification of the latent mechanism",
+      "counterexample_type": "partial-identification theorem",
+      "decisive_result": "With k multiplicative channels and r independent direct anchors, the residual unidentified dimension is k-1-r; adding observations that do not independently anchor the remaining gauge directions does not identify the latent channel decomposition.",
+      "safe_conclusion": "Identification strength depends on which independent directions are anchored, not on observational richness alone."
+    },
+    {
+      "axis_id": "temporal_precedence",
+      "chapter": "chapter:2",
+      "source": "EGWE",
+      "richness_proxy": "more reproducible or universal-looking lead-before-loss ordering among event trajectories",
+      "forbidden_monotone_inference": "more consistent precedence => stronger predictive warning validity",
+      "counterexample_type": "full-denominator frozen audit",
+      "decisive_result": "All six frozen thresholds led 35/35 and 33/33 observed losses but also fired in 48/48 and 49/49 non-events, yielding specificity 0 and binary-marker AUC 0.5.",
+      "safe_conclusion": "Temporal precedence is not a monotone proxy for discrimination."
+    },
+    {
+      "axis_id": "measurement_availability",
+      "chapter": "chapter:3",
+      "source": "mrod",
+      "richness_proxy": "more available measurable variables or arbitrary extra measurements",
+      "forbidden_monotone_inference": "more measurable variables => more useful mechanism resolution; measurement order is neutral",
+      "counterexample_type": "truth-peek-free controlled benchmark",
+      "decisive_result": "Information-guided sequential design reaches the same resolved-confounding endpoint with fewer observations and far fewer nuisance selections than random ordering, while some available candidates have zero current mechanism information value.",
+      "safe_conclusion": "Measurement value is conditional on the current admissible mechanism set and must be recomputed after each outcome."
+    },
+    {
+      "axis_id": "state_summary_singularity",
+      "chapter": "chapter:4",
+      "source": "eco-genetic-criticality",
+      "richness_proxy": "one increasingly detailed eco-genetic summary used as a universal state descriptor",
+      "forbidden_monotone_inference": "a richer common summary => adequate representation of every target-relevant state",
+      "counterexample_type": "finite-model state-separation and representation counterexamples",
+      "decisive_result": "Potential viability, realised occupancy, demographic/genetic quantities and realised function follow different fragmentation responses; states sharing common marginals can also differ in cross-layer alignment and exact next interaction transition.",
+      "safe_conclusion": "State adequacy is target-relative; adding detail to one summary does not turn it into a universal state."
+    },
+    {
+      "axis_id": "physical_boundary_width",
+      "chapter": "chapter:5",
+      "source": "CCOC",
+      "richness_proxy": "physical/local interface width as a proxy for required causal memory",
+      "forbidden_monotone_inference": "narrower physical boundary => smaller exact future-response memory",
+      "counterexample_type": "finite extremal synthetic witness",
+      "decisive_result": "A relay with a focal/exterior cut of at most one and uniformly bounded local alphabets can require 2^m open-grammar response distinctions, equivalently m exterior response bits.",
+      "safe_conclusion": "Static physical cut size is not an exact bound on counterfactual response memory under an open future grammar."
+    },
+    {
+      "axis_id": "capability_increment",
+      "chapter": "chapter:6",
+      "source": "CREST",
+      "richness_proxy": "size of the newly admitted intervention repertoire or viable-carrier gain",
+      "forbidden_monotone_inference": "smaller capability gain => smaller representation and monitoring burden",
+      "counterexample_type": "finite deterministic existence theorem",
+      "decisive_result": "For every m>=1, one new controllable action can add exactly one viable world while refining a retained present slice from one state to 2^m states and creating exactly m bits of monitoring debt under unchanged evidence.",
+      "safe_conclusion": "Capability change and knowledge burden need not scale together."
+    },
+    {
+      "axis_id": "structural_reuse",
+      "chapter": "chapter:7",
+      "source": "MLTR",
+      "richness_proxy": "confidence in or exactness of an accepted source macro-law",
+      "forbidden_monotone_inference": "a law that is exact at the source => the same law remains exact after structural replacement",
+      "counterexample_type": "source-relative transport theorem and history-completion boundary",
+      "decisive_result": "Transport requires explicit source-target operational coherence; route disagreement in complete carried terminal maps forces explicit history modes, one per distinct map.",
+      "safe_conclusion": "Source exactness is not a monotone certificate of portability after replacement."
+    },
+    {
+      "axis_id": "replicate_count",
+      "chapter": "chapter:8",
+      "source": "CED",
+      "richness_proxy": "more repeated observations under the same failure architecture",
+      "forbidden_monotone_inference": "more repeats => evidence strength equivalent to diversified observation modes",
+      "counterexample_type": "failure-domain guarantee theorem and equal-effort witness",
+      "decisive_result": "Within one shared failure domain, arbitrarily many repeats cannot raise the worst-case guarantee beyond the declared failure-domain ceiling, while independent modes can provide a stronger guarantee at equal raw effort.",
+      "safe_conclusion": "Evidence strength depends on failure diversity and the observation contract, not raw replicate count alone."
+    }
+  ],
+  "synthesis_rule": {
+    "permitted": "Across these typed responsibilities, none of the recorded richness proxies is an automatic certificate of scientific adequacy.",
+    "forbidden": "Do not infer a universal scalar law that more detail, more measurement, more memory, more intervention, or more repetition always increases or decreases adequacy.",
+    "exact_substrate": "TU-1 separately proves the factorization criterion and exact revision debt for same-carrier revision after compression."
+  }
+}
