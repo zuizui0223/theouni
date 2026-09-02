@@ -124,6 +124,9 @@ jobs:
       - name: Validate typed Chapter 9 synthesis
         run: python scripts/validate_typed_synthesis_matrix.py
 
+      - name: Validate typed chapter question handoffs
+        run: python scripts/validate_chapter_transition_recovery.py
+
       - name: Rebuild thesis workspace report
         run: python scripts/build_thesis_workspace_report.py
 
