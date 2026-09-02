@@ -22,8 +22,11 @@ def main() -> None:
     assert matrix["status"] == "editorial_question_handoffs_verified"
     assert matrix["relation_type"] == "editorial_question_handoff"
     assert len(matrix["relation_firewall"]) >= 4
-    assert any("not a theorem implication" in item for item in matrix["relation_firewall"])
-    assert any("No transition transfers theorem" in item for item in matrix["relation_firewall"])
+    firewall = " ".join(matrix["relation_firewall"])
+    assert "logically deduced" in firewall
+    assert "transfers theorem or evidence ownership" in firewall
+    assert "orthogonal estimand" in firewall
+    assert "Source preconditions" in firewall
 
     preferred = architecture["preferred_sequence"]
     transitions = matrix["transitions"]
@@ -64,10 +67,22 @@ def main() -> None:
 
     # High-risk adjacent pairs must remain explicitly separated by estimand/type.
     by_pair = {(item["from"], item["to"]): item for item in transitions}
-    assert "orthogonal" in by_pair[("chapter:1", "chapter:2")]["handoff_reason"]
-    assert "different" in by_pair[("chapter:5", "chapter:6")]["handoff_reason"]
-    assert "different transports" in by_pair[("chapter:6", "chapter:7")]["handoff_reason"]
-    assert "different bottleneck" in by_pair[("chapter:7", "chapter:8")]["handoff_reason"]
+    boundary_warning = by_pair[("chapter:1", "chapter:2")]
+    assert "orthogonal" in boundary_warning["handoff_reason"]
+    assert "non-identified mechanism" in boundary_warning["forbidden_bridge"]
+
+    ccoc_crest = by_pair[("chapter:5", "chapter:6")]
+    assert "distinct intervention-capability question" in ccoc_crest["handoff_reason"]
+    assert "CCOC as a proof of the CREST capability theorem" in ccoc_crest["forbidden_bridge"]
+
+    crest_mltr = by_pair[("chapter:6", "chapter:7")]
+    assert "CREST changes responsibility/capability" in crest_mltr["handoff_reason"]
+    assert "MLTR changes source-target structure" in crest_mltr["handoff_reason"]
+    assert "structural replacement" in crest_mltr["forbidden_bridge"]
+
+    mltr_ced = by_pair[("chapter:7", "chapter:8")]
+    assert "different bottleneck" in mltr_ced["handoff_reason"]
+    assert "failure domains" in mltr_ced["forbidden_bridge"]
 
     assert "question handoffs" in ledger
     assert "not theorem implications" in ledger
