@@ -4,7 +4,6 @@ This map supports `thesis/drafts/final/00_reuse_problem_v0.1.md`. It is intentio
 
 ## Snapshot and ownership lock
 
-- theouni architecture/recovery base: `3bdd7ca54f88974114f9143be4e666b219d3add7` and later recovery merges on `main`.
 - Chapter 0 verification record: `thesis/verification_recovery_registry.json`, status `synthesis_framing_verified_not_independent_theorem`.
 - Chapter 0 forbidden inference: `一度うまくいった表現 ⇒ 以後どの責任にも再利用できる表現`.
 - Chapter 0 claim ceiling: it poses the reuse problem; it does not claim that every reuse fails or that one theorem subsumes the source programmes.
@@ -63,15 +62,13 @@ The Chapter 0 roadmap may preview only the following bounded claims. Full proof/
 | Chapter | Source snapshot | Allowed preview | Hard ceiling |
 |---:|---|---|---|
 | 1 Boundary | `d950cf9fe4d21d4677f1e16f29e8fbe3c7af8f84` | endpoint-only multiplicative observation leaves `k-1-r` unresolved dimensions after `r` channel anchors | declared multiplicative/channel model only |
-| 2 EGWE | `7b2ca69b3987751652541086816231507edf9d` is **not** EGWE; canonical EGWE snapshot is `7b2ca69b398d32071fd92d1da1d3b169c18a5d84` | temporal lead can coexist with specificity 0 and AUC 0.5 | six frozen thresholds, two tested finite-model ensembles |
+| 2 EGWE | `7b2ca69b398d32071fd92d1da1d3b169c18a5d84` | temporal lead can coexist with specificity 0 and AUC 0.5 | six frozen thresholds, two tested finite-model ensembles |
 | 3 MROD | `5a89c3f77b3987751652541086816231507edf9d` | information-guided ordering beats random ordering on frozen controlled benchmark | no universal optimality or natural mechanism claim |
 | 4 eco-gen-criticality | `290663cd25dd2ab06ef8913f97696fd29370f7f2` | five target-dependent states need not move together; coarse marginals can hide transition-relevant alignment | finite declared closure, not universal taxonomy |
 | 5 CCOC | `96d823309ce04affb33446f1996aedf0a163a039` | narrow physical cut does not bound exact future-response memory in finite relay | synthetic witness, not real-network prevalence |
 | 6 CREST | `2ff41e18cdbf100932813fbef9851078ec60413a` | one action can induce `1→2^m` required-state refinement and `m` monitoring bits | finite deterministic existence theorem |
 | 7 MLTR | `d9e23d27c385759b9e1fea93a556f30618122fe1` | route coherence and minimum history completion are source-relative | declared histories/maps, not inferred natural history |
 | 8 CED | `e76c82cb9ab2ff674488f1434d0c13a7cb0c24ce` | repetition inside a shared failure domain is not independent failure diversity | failure-domain/reliability contract, not “repetition is useless” |
-
-The erroneous-looking EGWE/MROD hash juxtaposition is written explicitly so the two repositories cannot be confused during drafting.
 
 ## D. Typed synthesis boundary
 
