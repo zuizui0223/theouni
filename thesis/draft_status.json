@@ -23,10 +23,11 @@
       "next_action": "Verify Boundary bibliography and decide figure reuse for the k-1-r dimension, joint identified set, and breakdown-factor panels."
     },
     "chapter:2": {
-      "stage": "brief_only",
-      "draft_file": null,
-      "source_map_file": null,
-      "next_action": "Draft EGWE warning validity from full event/non-event denominators while importing frozen loss labels as source preconditions."
+      "stage": "draft_v0_1",
+      "draft_file": "thesis/drafts/final/02_precedence_not_warning_v0.1.md",
+      "source_map_file": "thesis/source_maps/final/02_precedence_not_warning_v0.1_sources.md",
+      "minimum_words": 2000,
+      "next_action": "Verify warning/discrimination bibliography and choose a dissertation figure that keeps 35/35 with 48/48 and 33/33 with 49/49 visibly paired."
     },
     "chapter:3": {
       "stage": "brief_only",
