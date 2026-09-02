@@ -1,21 +1,74 @@
 {
-  "schema_version": "theouni-thesis-draft-status.v2",
-  "status": "reset_to_final_forbidden_inference_architecture",
+  "schema_version": "theouni-thesis-draft-status.v3",
+  "status": "progressive_source_bounded_redraft_under_final_architecture",
   "claim_ceiling": [
-    "The former CREST-first draft sequence is preserved in git history but is not treated as current chapter prose.",
-    "All final-order units restart at brief_only until source-bounded prose is rebuilt under the new chapter assignment.",
-    "Resetting draft status changes no source theorem, evidence ledger, or publication claim."
+    "The former CREST-first draft sequence remains historical only and is not treated as current chapter prose.",
+    "A final-order chapter may leave brief_only only when both a final-order draft and a source map exist and the workspace validator accepts its source/claim contract.",
+    "Draft progression changes no source theorem, evidence ledger, or publication claim.",
+    "Chapter 0 remains framing and Chapter 9 remains bounded synthesis unless separately upgraded by verified theorem work."
   ],
   "units": {
-    "chapter:introduction":{"stage":"brief_only","draft_file":null,"source_map_file":null,"next_action":"Redraft Chapter 0 around the reuse problem and the final forbidden-inference chain."},
-    "chapter:1":{"stage":"brief_only","draft_file":null,"source_map_file":null,"next_action":"Draft Boundary as the identification-limit chapter without equating mechanistic proximity with identification strength."},
-    "chapter:2":{"stage":"brief_only","draft_file":null,"source_map_file":null,"next_action":"Draft EGWE warning validity from full event/non-event denominators while importing frozen loss labels as source preconditions."},
-    "chapter:3":{"stage":"brief_only","draft_file":null,"source_map_file":null,"next_action":"Draft MROD around observation information value and sequential measurement choice; use RACH/MRM only as companions."},
-    "chapter:4":{"stage":"brief_only","draft_file":null,"source_map_file":null,"next_action":"Draft the eco-genetic five-state separation chapter and keep TU-3 as the loss-state firewall."},
-    "chapter:5":{"stage":"brief_only","draft_file":null,"source_map_file":null,"next_action":"Redraft CCOC around open-future memory burden and the physical-boundary/causal-memory forbidden inference."},
-    "chapter:6":{"stage":"brief_only","draft_file":null,"source_map_file":null,"next_action":"Redraft CREST after CCOC as the capability-versus-knowledge escalation chapter."},
-    "chapter:7":{"stage":"brief_only","draft_file":null,"source_map_file":null,"next_action":"Draft MLTR around source-relative law transport, repair, and history completion."},
-    "chapter:8":{"stage":"brief_only","draft_file":null,"source_map_file":null,"next_action":"Draft CED around failure-domain diversity rather than raw replication count."},
-    "chapter:synthesis":{"stage":"brief_only","draft_file":null,"source_map_file":null,"next_action":"Write TU-1 synthesis only after Chapters 0-8 are redrafted under the final forbidden-inference spine."}
+    "chapter:introduction": {
+      "stage": "draft_v0_1",
+      "draft_file": "thesis/drafts/final/00_reuse_problem_v0.1.md",
+      "source_map_file": "thesis/source_maps/final/00_reuse_problem_v0.1_sources.md",
+      "minimum_words": 1800,
+      "next_action": "Audit primary literature and replace internal source keys with shared dissertation citations after Chapters 1–8 source maps stabilize."
+    },
+    "chapter:1": {
+      "stage": "draft_v0_1",
+      "draft_file": "thesis/drafts/final/01_observation_boundary_v0.1.md",
+      "source_map_file": "thesis/source_maps/final/01_observation_boundary_v0.1_sources.md",
+      "minimum_words": 2000,
+      "next_action": "Verify Boundary bibliography and decide figure reuse for the k-1-r dimension, joint identified set, and breakdown-factor panels."
+    },
+    "chapter:2": {
+      "stage": "brief_only",
+      "draft_file": null,
+      "source_map_file": null,
+      "next_action": "Draft EGWE warning validity from full event/non-event denominators while importing frozen loss labels as source preconditions."
+    },
+    "chapter:3": {
+      "stage": "brief_only",
+      "draft_file": null,
+      "source_map_file": null,
+      "next_action": "Draft MROD around observation information value and sequential measurement choice; use RACH/MRM only as companions."
+    },
+    "chapter:4": {
+      "stage": "brief_only",
+      "draft_file": null,
+      "source_map_file": null,
+      "next_action": "Draft the eco-genetic five-state separation chapter and keep TU-3 as the loss-state firewall."
+    },
+    "chapter:5": {
+      "stage": "brief_only",
+      "draft_file": null,
+      "source_map_file": null,
+      "next_action": "Redraft CCOC around open-future memory burden and the physical-boundary/causal-memory forbidden inference."
+    },
+    "chapter:6": {
+      "stage": "brief_only",
+      "draft_file": null,
+      "source_map_file": null,
+      "next_action": "Redraft CREST after CCOC as the capability-versus-knowledge escalation chapter."
+    },
+    "chapter:7": {
+      "stage": "brief_only",
+      "draft_file": null,
+      "source_map_file": null,
+      "next_action": "Draft MLTR around source-relative law transport, repair, and history completion."
+    },
+    "chapter:8": {
+      "stage": "brief_only",
+      "draft_file": null,
+      "source_map_file": null,
+      "next_action": "Draft CED around failure-domain diversity rather than raw replication count."
+    },
+    "chapter:synthesis": {
+      "stage": "brief_only",
+      "draft_file": null,
+      "source_map_file": null,
+      "next_action": "Write TU-1 synthesis only after Chapters 0-8 are redrafted under the final forbidden-inference spine."
+    }
   }
 }
