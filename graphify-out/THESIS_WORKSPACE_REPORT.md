@@ -13,7 +13,7 @@ This report tracks the final forbidden-inference dissertation traversal. The ord
 - total writing units: 10
 - source-owned research chapters: 8
 - general introduction and synthesis units: 2
-- units with prose drafts: 3
+- units with prose drafts: 4
 - canonical source handoffs: 30
 - unique primary forbidden inferences: 10
 - embedded TU modules: 4
@@ -26,7 +26,7 @@ This report tracks the final forbidden-inference dissertation traversal. The ord
 | 0 | 再利用問題 | theouni | — | `brief_ready` | `draft_v0_1` |
 | 1 | 観測が原理的に届かない範囲 | boundary | — | `source_paper_core_available` | `draft_v0_1` |
 | 2 | 先行することは、警告することではない | eco-genetic-warning-extensions | TU-4 | `source_integrated_manuscript_active` | `draft_v0_1` |
-| 3 | 境界の内側で、次に何を測るか | mrod | TU-2 | `source_submission_frozen` | `brief_only` |
+| 3 | 境界の内側で、次に何を測るか | mrod | TU-2 | `source_submission_frozen` | `draft_v0_1` |
 | 4 | 一つの系に、状態は一つではない | eco-genetic-criticality | TU-3 | `source_scientific_campaign_closed` | `brief_only` |
 | 5 | 未来を開くと、記憶が要る | ccoc | — | `source_manuscript_in_conversion` | `brief_only` |
 | 6 | 能力は知識を追い越す | crest | — | `source_manuscript_available` | `brief_only` |
@@ -58,8 +58,8 @@ This report tracks the final forbidden-inference dissertation traversal. The ord
 
 ## Draft-stage counts
 
-- `brief_only`: 7
-- `draft_v0_1`: 3
+- `brief_only`: 6
+- `draft_v0_1`: 4
 
 ## Source-state counts
 

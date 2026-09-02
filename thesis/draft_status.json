@@ -8,68 +8,15 @@
     "Chapter 0 remains framing and Chapter 9 remains bounded synthesis unless separately upgraded by verified theorem work."
   ],
   "units": {
-    "chapter:introduction": {
-      "stage": "draft_v0_1",
-      "draft_file": "thesis/drafts/final/00_reuse_problem_v0.1.md",
-      "source_map_file": "thesis/source_maps/final/00_reuse_problem_v0.1_sources.md",
-      "minimum_words": 1800,
-      "next_action": "Audit primary literature and replace internal source keys with shared dissertation citations after Chapters 1–8 source maps stabilize."
-    },
-    "chapter:1": {
-      "stage": "draft_v0_1",
-      "draft_file": "thesis/drafts/final/01_observation_boundary_v0.1.md",
-      "source_map_file": "thesis/source_maps/final/01_observation_boundary_v0.1_sources.md",
-      "minimum_words": 2000,
-      "next_action": "Verify Boundary bibliography and decide figure reuse for the k-1-r dimension, joint identified set, and breakdown-factor panels."
-    },
-    "chapter:2": {
-      "stage": "draft_v0_1",
-      "draft_file": "thesis/drafts/final/02_precedence_not_warning_v0.1.md",
-      "source_map_file": "thesis/source_maps/final/02_precedence_not_warning_v0.1_sources.md",
-      "minimum_words": 2000,
-      "next_action": "Verify warning/discrimination bibliography and choose a dissertation figure that keeps 35/35 with 48/48 and 33/33 with 49/49 visibly paired."
-    },
-    "chapter:3": {
-      "stage": "brief_only",
-      "draft_file": null,
-      "source_map_file": null,
-      "next_action": "Draft MROD around observation information value and sequential measurement choice; use RACH/MRM only as companions."
-    },
-    "chapter:4": {
-      "stage": "brief_only",
-      "draft_file": null,
-      "source_map_file": null,
-      "next_action": "Draft the eco-genetic five-state separation chapter and keep TU-3 as the loss-state firewall."
-    },
-    "chapter:5": {
-      "stage": "brief_only",
-      "draft_file": null,
-      "source_map_file": null,
-      "next_action": "Redraft CCOC around open-future memory burden and the physical-boundary/causal-memory forbidden inference."
-    },
-    "chapter:6": {
-      "stage": "brief_only",
-      "draft_file": null,
-      "source_map_file": null,
-      "next_action": "Redraft CREST after CCOC as the capability-versus-knowledge escalation chapter."
-    },
-    "chapter:7": {
-      "stage": "brief_only",
-      "draft_file": null,
-      "source_map_file": null,
-      "next_action": "Draft MLTR around source-relative law transport, repair, and history completion."
-    },
-    "chapter:8": {
-      "stage": "brief_only",
-      "draft_file": null,
-      "source_map_file": null,
-      "next_action": "Draft CED around failure-domain diversity rather than raw replication count."
-    },
-    "chapter:synthesis": {
-      "stage": "brief_only",
-      "draft_file": null,
-      "source_map_file": null,
-      "next_action": "Write TU-1 synthesis only after Chapters 0-8 are redrafted under the final forbidden-inference spine."
-    }
+    "chapter:introduction": {"stage":"draft_v0_1","draft_file":"thesis/drafts/final/00_reuse_problem_v0.1.md","source_map_file":"thesis/source_maps/final/00_reuse_problem_v0.1_sources.md","minimum_words":1800,"next_action":"Audit primary literature and replace internal source keys with shared dissertation citations after Chapters 1–8 source maps stabilize."},
+    "chapter:1": {"stage":"draft_v0_1","draft_file":"thesis/drafts/final/01_observation_boundary_v0.1.md","source_map_file":"thesis/source_maps/final/01_observation_boundary_v0.1_sources.md","minimum_words":2000,"next_action":"Verify Boundary bibliography and decide figure reuse for the k-1-r dimension, joint identified set, and breakdown-factor panels."},
+    "chapter:2": {"stage":"draft_v0_1","draft_file":"thesis/drafts/final/02_precedence_not_warning_v0.1.md","source_map_file":"thesis/source_maps/final/02_precedence_not_warning_v0.1_sources.md","minimum_words":2000,"next_action":"Verify warning/discrimination bibliography and choose a dissertation figure that keeps 35/35 with 48/48 and 33/33 with 49/49 visibly paired."},
+    "chapter:3": {"stage":"draft_v0_1","draft_file":"thesis/drafts/final/03_next_measurement_v0.1.md","source_map_file":"thesis/source_maps/final/03_next_measurement_v0.1_sources.md","minimum_words":2200,"next_action":"Verify experimental-design and mutual-information bibliography and choose G2 panels that show both budget-limited resolution and nuisance-selection efficiency."},
+    "chapter:4": {"stage":"brief_only","draft_file":null,"source_map_file":null,"next_action":"Draft the eco-genetic five-state separation chapter and keep TU-3 as the loss-state firewall."},
+    "chapter:5": {"stage":"brief_only","draft_file":null,"source_map_file":null,"next_action":"Redraft CCOC around open-future memory burden and the physical-boundary/causal-memory forbidden inference."},
+    "chapter:6": {"stage":"brief_only","draft_file":null,"source_map_file":null,"next_action":"Redraft CREST after CCOC as the capability-versus-knowledge escalation chapter."},
+    "chapter:7": {"stage":"brief_only","draft_file":null,"source_map_file":null,"next_action":"Draft MLTR around source-relative law transport, repair, and history completion."},
+    "chapter:8": {"stage":"brief_only","draft_file":null,"source_map_file":null,"next_action":"Draft CED around failure-domain diversity rather than raw replication count."},
+    "chapter:synthesis": {"stage":"brief_only","draft_file":null,"source_map_file":null,"next_action":"Write TU-1 synthesis only after Chapters 0-8 are redrafted under the final forbidden-inference spine."}
   }
 }
