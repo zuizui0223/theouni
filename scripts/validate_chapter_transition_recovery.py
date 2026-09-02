@@ -55,8 +55,9 @@ def main() -> None:
     architecture_preconditions = {
         item["chapter"]: item["condition"] for item in architecture["source_preconditions"]
     }
-    assert preconditions["chapter:2"] == architecture_preconditions["chapter:2"]
-    assert "declared locally" not in preconditions["chapter:2"]
+    for text in (preconditions["chapter:2"], architecture_preconditions["chapter:2"]):
+        assert "EGWE/parent source contracts" in text
+        assert "Chapter 2" in text and "Chapter 4" in text
     assert "MROD" in preconditions["chapter:3"]
     assert "MLTR" in preconditions["chapter:7"]
     assert "CED" in preconditions["chapter:8"]
