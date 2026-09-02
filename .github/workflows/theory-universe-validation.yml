@@ -118,6 +118,9 @@ jobs:
       - name: Validate thesis chapter workspace
         run: python scripts/validate_thesis_workspace.py
 
+      - name: Validate forbidden-inference verification recovery
+        run: python scripts/validate_chapter_verification_recovery.py
+
       - name: Rebuild thesis workspace report
         run: python scripts/build_thesis_workspace_report.py
 
