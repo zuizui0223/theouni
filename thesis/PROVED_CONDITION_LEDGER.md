@@ -21,14 +21,16 @@ A formula without this chain is not counted as a recovered chapter result.
 |---|---|---|
 | 0 Reuse | revised task is recoverable from stored state **iff** revised response factors through old quotient | TU-1 merged; framing only |
 | 1 Boundary | new exact scalar measurement reduces structural ambiguity **iff** its observation row increases rank | merged `2919842f...`; `k-1-r` is a corollary |
-| 2 EGWE | perfect event precedence fixes sensitivity but not specificity; binary AUC follows the full denominator | source PR #140 pending CI/merge |
-| 3 MROD | adaptive second-step choice strictly beats best precommitted static choice **iff** no candidate is optimal in every positive-probability branch | source PR #101 pending CI/merge |
+| 2 EGWE | perfect event precedence fixes sensitivity but leaves specificity free; binary AUC spans chance-to-perfect with the same event lead result | merged `ef545bfa...`; locked ensembles attain AUC 0.5 sharp endpoint |
+| 3 MROD | adaptive second-step choice strictly beats best precommitted static choice **iff** no candidate is optimal in every positive-probability branch | merged `689ba17d...`; four-world sharp witness and three-world minimality check |
 | 4 Eco-genetic criticality | one exact directionally coherent scalar exists **iff** declared target vectors form a product-order chain | merged `2a35b2d2...`; locked H3 crossing violates condition |
 | 5 CCOC | decoder addressability gives lower bound; bounded-local family attains it; separate positive portability conditions are sufficient | already merged/proved |
 | 6 CREST | one-action capability expansion can have fixed carrier gain but arbitrary `m`-bit burden; hence no bound from carrier gain alone | already merged/proved |
 | 7 MLTR | carried law exactness has an iff test; repair is unique coarsest; history modes equal distinct carried maps necessarily and sufficiently | already merged/proved |
 | 8 CED | at fixed two-read effort, diversity vs repetition reverses at `p*=2-2^(1/k)` under the declared failure contract | merged `590f6459...` |
 | 9 Synthesis | no new global iff; combines TU-1 with typed source conditions | synthesis only |
+
+All eight source-owned research chapters therefore have a merged proof/condition source. Chapters 0 and 9 remain deliberately different: Chapter 0 is a reuse framing backed by TU-1, and Chapter 9 is a typed synthesis rather than a fabricated global scalar theorem.
 
 ## Anti-obviousness rule
 
@@ -52,3 +54,5 @@ A theorem still living only on an unmerged source PR is recorded as `pending_ci_
 3. update the relevant chapter source map and verification recovery record;
 4. rewrite the chapter's headline result around the proved condition rather than the old slogan;
 5. run the full Theory Universe validation before merging the theouni import.
+
+That gate is now closed for Chapters 1–8: none of the current proved-condition imports remains `pending_ci_merge`.
