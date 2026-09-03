@@ -20,14 +20,14 @@ A formula without this chain is not counted as a recovered chapter result.
 | Chapter | Proved condition | Recovery status |
 |---|---|---|
 | 0 Reuse | revised task is recoverable from stored state **iff** revised response factors through old quotient | TU-1 merged; framing only |
-| 1 Boundary | new exact scalar measurement reduces structural ambiguity **iff** its observation row increases rank | merged in Boundary `2919842f...`; `k-1-r` is a corollary |
+| 1 Boundary | new exact scalar measurement reduces structural ambiguity **iff** its observation row increases rank | merged `2919842f...`; `k-1-r` is a corollary |
 | 2 EGWE | perfect event precedence fixes sensitivity but not specificity; binary AUC follows the full denominator | source PR #140 pending CI/merge |
 | 3 MROD | adaptive second-step choice strictly beats best precommitted static choice **iff** no candidate is optimal in every positive-probability branch | source PR #101 pending CI/merge |
-| 4 Eco-genetic criticality | one exact directionally coherent scalar exists **iff** declared target vectors form a product-order chain | source PR #77 pending CI/merge; locked H3 crossing violates condition |
+| 4 Eco-genetic criticality | one exact directionally coherent scalar exists **iff** declared target vectors form a product-order chain | merged `2a35b2d2...`; locked H3 crossing violates condition |
 | 5 CCOC | decoder addressability gives lower bound; bounded-local family attains it; separate positive portability conditions are sufficient | already merged/proved |
 | 6 CREST | one-action capability expansion can have fixed carrier gain but arbitrary `m`-bit burden; hence no bound from carrier gain alone | already merged/proved |
 | 7 MLTR | carried law exactness has an iff test; repair is unique coarsest; history modes equal distinct carried maps necessarily and sufficiently | already merged/proved |
-| 8 CED | at fixed two-read effort, diversity vs repetition reverses at `p*=2-2^(1/k)` under the declared failure contract | source PR #50 pending CI/merge |
+| 8 CED | at fixed two-read effort, diversity vs repetition reverses at `p*=2-2^(1/k)` under the declared failure contract | merged `590f6459...` |
 | 9 Synthesis | no new global iff; combines TU-1 with typed source conditions | synthesis only |
 
 ## Anti-obviousness rule
