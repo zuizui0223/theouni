@@ -8,8 +8,8 @@ REGISTRY = ROOT / "thesis" / "proved_condition_registry.json"
 CHAPTERS = ROOT / "thesis" / "chapter_registry.json"
 LEDGER = ROOT / "thesis" / "PROVED_CONDITION_LEDGER.md"
 
-PENDING = {"chapter:2": 140, "chapter:3": 101, "chapter:4": 77, "chapter:8": 50}
-MERGED_RESEARCH = {"chapter:1", "chapter:5", "chapter:6", "chapter:7"}
+PENDING = {"chapter:2": 140, "chapter:3": 101, "chapter:4": 77}
+MERGED_RESEARCH = {"chapter:1", "chapter:5", "chapter:6", "chapter:7", "chapter:8"}
 
 
 def load(path: Path) -> dict:
@@ -30,7 +30,6 @@ def main() -> None:
     chapter_ids = [u["id"] for u in chapters["units"]]
     assert [u["chapter"] for u in units] == chapter_ids
     assert len(units) == 10
-
     by_chapter = {u["chapter"]: u for u in units}
     assert len(by_chapter) == 10
 
@@ -41,29 +40,30 @@ def main() -> None:
         assert unit["source_status"] in {"merged", "pending_ci_merge"}
         assert "definition_only" not in unit["condition_class"]
 
-    # Framing/synthesis are deliberately not promoted to global theorem claims.
     assert by_chapter["chapter:introduction"]["condition_class"] == "iff"
     assert "framing" in by_chapter["chapter:introduction"]["claim_ceiling"]
     assert by_chapter["chapter:synthesis"]["condition_class"] == "typed_synthesis_not_global_iff"
     assert "global" in by_chapter["chapter:synthesis"]["proved_condition"]
 
-    # Fail closed: unmerged source work remains explicitly pending and carries PR identity.
     for chapter, pr in PENDING.items():
         unit = by_chapter[chapter]
         assert unit["source_status"] == "pending_ci_merge"
         assert unit["source_pr"] == pr
         assert "source_snapshot_sha" not in unit
 
-    # Already merged source conditions may be imported; Ch1's refreshed SHA is pinned exactly.
     for chapter in MERGED_RESEARCH:
         assert by_chapter[chapter]["source_status"] == "merged"
+
     assert by_chapter["chapter:1"]["source_snapshot_sha"] == "2919842f19bdd93221363b9f39f2ba1ebb146d17"
     assert by_chapter["chapter:1"]["proof_source"] == "docs/observation_rank_identification_theorem_2026-09-03.md"
     assert by_chapter["chapter:1"]["verification_source"] == "tests/test_observation_rank_theorem.py"
     assert "if and only if" in by_chapter["chapter:1"]["proved_condition"]
     assert "k-1-r" in by_chapter["chapter:1"]["special_case"]
 
-    # The new conditions must actually be sharper than slogans.
+    assert by_chapter["chapter:8"]["source_snapshot_sha"] == "590f6459a7c3ef31e8a527319771fd3d736a704a"
+    assert by_chapter["chapter:8"]["proof_source"] == "docs/repeat_vs_mode_allocation_theorem_2026-09-03.md"
+    assert by_chapter["chapter:8"]["verification_source"] == "tests/test_repeat_vs_mode_allocation_boundary.py"
+
     assert "AUC=(1+specificity)/2" in by_chapter["chapter:2"]["proved_condition"]
     assert "if and only if" in by_chapter["chapter:3"]["proved_condition"]
     assert "if and only if" in by_chapter["chapter:4"]["proved_condition"]
@@ -71,7 +71,6 @@ def main() -> None:
     assert "necessary and sufficient" in by_chapter["chapter:7"]["proved_condition"]
     assert "2-2^(1/k)" in by_chapter["chapter:8"]["proved_condition"]
 
-    # Locked evidence applications are retained where they turn an abstract condition into a recovered result.
     assert "35/35" in by_chapter["chapter:2"]["locked_evidence"] and "49/49" in by_chapter["chapter:2"]["locked_evidence"]
     assert "2-patch" in by_chapter["chapter:4"]["locked_evidence"] and "16-patch" in by_chapter["chapter:4"]["locked_evidence"]
 
@@ -80,8 +79,8 @@ def main() -> None:
     assert "`pending_ci_merge`" in ledger
 
     print(
-        "Validated proved-condition registry: 10 chapter units; 4 source theorem upgrades merged, "
-        "4 fail-closed pending source PRs, and Chapters 0/9 kept as framing/synthesis boundaries."
+        "Validated proved-condition registry: 10 chapter units; 5 research condition sources merged, "
+        "3 fail-closed pending source PRs, and Chapters 0/9 kept as framing/synthesis boundaries."
     )
 
 
