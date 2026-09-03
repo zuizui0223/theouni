@@ -47,13 +47,6 @@ This report tracks the final forbidden-inference dissertation traversal. The ord
 - **8 反復は、多様性の代わりにならない** — `同じ手法を繰り返した ⇒ 証拠が強くなった`
 - **9 総合 — 妥当性に特権的な方向はない** — `より詳細にする／より多く測る／より長く記憶する／より多く介入する ⇒ より妥当になる`
 
-## Proved-condition synthesis boundary
-
-- Chapters 1–8 are source-owned proved conditions and remain distinct by responsibility type.
-- Chapter 9's exact theorem substrate is TU-1 on revision after compression.
-- `thesis/typed_synthesis_matrix.json` v2 must match `thesis/proved_condition_registry.json` exactly for each research chapter's condition class and proved condition.
-- No global scalar adequacy score, pooled effect, or universal monotonicity theorem is licensed by the ten-chapter architecture.
-
 ## Companion programmes
 
 - **MRM** — mechanism-response companion; may support Chapters 3-4 but owns no primary chapter here
@@ -65,7 +58,6 @@ This report tracks the final forbidden-inference dissertation traversal. The ord
 
 ## Draft-stage counts
 
-- `brief_only`: 0
 - `draft_v0_1`: 10
 
 ## Source-state counts
@@ -81,4 +73,4 @@ This report tracks the final forbidden-inference dissertation traversal. The ord
 
 ## Writing boundary
 
-The former CREST-first draft sequence remains in git history but is not current prose. Every final chapter has now been redrafted from its canonical handoffs around one forbidden inference and, where available, its sharper source-owned proved condition. This editorial traversal does not reopen source analyses, transfer theorem ownership, turn a prohibited inference into proof of its converse, or collapse the eight research conditions into one global adequacy theorem.
+The former CREST-first draft sequence remains in git history but is not current prose. Every final chapter must be redrafted from its canonical handoffs around exactly one forbidden inference. The reset changes editorial traversal only; it does not reopen source analyses, transfer theorem ownership, or turn a prohibited inference into proof of its converse.
