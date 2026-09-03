@@ -8,8 +8,8 @@ REGISTRY = ROOT / "thesis" / "proved_condition_registry.json"
 CHAPTERS = ROOT / "thesis" / "chapter_registry.json"
 LEDGER = ROOT / "thesis" / "PROVED_CONDITION_LEDGER.md"
 
-PENDING = {"chapter:2": 140, "chapter:3": 101, "chapter:4": 77}
-MERGED_RESEARCH = {"chapter:1", "chapter:5", "chapter:6", "chapter:7", "chapter:8"}
+PENDING = {"chapter:2": 140, "chapter:3": 101}
+MERGED_RESEARCH = {"chapter:1", "chapter:4", "chapter:5", "chapter:6", "chapter:7", "chapter:8"}
 
 
 def load(path: Path) -> dict:
@@ -60,6 +60,10 @@ def main() -> None:
     assert "if and only if" in by_chapter["chapter:1"]["proved_condition"]
     assert "k-1-r" in by_chapter["chapter:1"]["special_case"]
 
+    assert by_chapter["chapter:4"]["source_snapshot_sha"] == "2a35b2d2b11f4b8a00b8a4346bdba90773511a71"
+    assert by_chapter["chapter:4"]["proof_source"] == "docs/common_scalar_state_theorem_2026-09-03.md"
+    assert by_chapter["chapter:4"]["verification_source"] == "tests/test_common_scalar_state_theorem.py"
+
     assert by_chapter["chapter:8"]["source_snapshot_sha"] == "590f6459a7c3ef31e8a527319771fd3d736a704a"
     assert by_chapter["chapter:8"]["proof_source"] == "docs/repeat_vs_mode_allocation_theorem_2026-09-03.md"
     assert by_chapter["chapter:8"]["verification_source"] == "tests/test_repeat_vs_mode_allocation_boundary.py"
@@ -79,8 +83,8 @@ def main() -> None:
     assert "`pending_ci_merge`" in ledger
 
     print(
-        "Validated proved-condition registry: 10 chapter units; 5 research condition sources merged, "
-        "3 fail-closed pending source PRs, and Chapters 0/9 kept as framing/synthesis boundaries."
+        "Validated proved-condition registry: 10 chapter units; 6 research condition sources merged, "
+        "2 fail-closed pending source PRs, and Chapters 0/9 kept as framing/synthesis boundaries."
     )
 
 
