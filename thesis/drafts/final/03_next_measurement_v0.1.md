@@ -3,25 +3,27 @@
 
 *English working title: What to Measure Next Inside the Boundary*
 
-> **Draft status:** source-bounded v0.1 from MROD snapshot `5a89c3f77b3987751652541086816231507edf9d`. The chapter concerns observation ordering under a declared admissible mechanism family and verified candidate measurements. It is not a rescue analysis of the failed EGWE warning thresholds and does not claim universal optimality over ecological experimental design.
+> **Draft status:** source-bounded v0.1 from merged MROD snapshot `689ba17d14fec2218e9e96f4c9e432eb8b71fb58`. The chapter concerns mechanism-learning observation design inside a declared admissible mechanism family. Its headline theorem is an exact two-step condition for when adaptive recomputation strictly improves expected information over the best precommitted second measurement; the frozen G2 challenge remains a separate controlled validation layer.
 
-## 1. “Collect more data” is not an observation design
+## 1. The question is not whether information can rank measurements
 
-Once a scientific analysis admits that several mechanisms remain compatible with existing observations, one practical question becomes unavoidable: what should be measured next?
+Once multiple mechanisms remain compatible with current observations, “collect more data” is not yet a design. There may be many technically valid, biologically interesting and affordable candidate measurements. The scientific question is which candidate should be collected **now**, conditional on what remains unresolved.
 
-The tempting shortcut is to treat measurability itself as evidence of value. If a variable can be collected, is biologically interesting, or has high technical precision, it may be added to the measurement programme without asking which unresolved mechanism distinction it can actually resolve. Under limited budgets, this can be wasteful even when every measurement is perfectly valid.
-
-The forbidden inference of this chapter is:
+The motivating forbidden inference is
 
 > **測れるものは測る価値がある ⇒ 測る順序に良し悪しはない**
 
-The first half is intentionally phrased as a temptation rather than a theorem: a measurable variable may be worth measuring for many scientific reasons. The error is the second step—assuming that all available measurements are equally useful for the particular ambiguity that remains.
+but merely defining an information score does not remove the obviousness problem. If a method says “measure the variable with the highest information,” a reviewer can reasonably ask whether the adaptive part of the procedure has any theorem-level content or merely repeats an algorithmic convention.
 
-MROD changes the object of inference. Instead of forcing a single “best” mechanism from data that do not distinguish the candidates, it retains the admissible mechanism region and asks which candidate observation carries information about that retained ambiguity. [M1]
+The nontrivial question is therefore narrower and stronger:
 
-This chapter therefore begins where Chapter 2 leaves us, but it does not repair Chapter 2. The failed genetic warning thresholds are not candidate observations inside the MROD benchmark, and the negative warning result does not supply MROD's hidden truth. The handoff is only a question: after one easy measurement shortcut fails, how should a new observation be selected under unresolved explanation? [TR0]
+> **After a fixed first observation is taken, under exactly what condition can choosing the second measurement after seeing the first outcome achieve more expected mechanism information than every second measurement chosen in advance?**
 
-## 2. Keep the compatible mechanisms before choosing among measurements
+MROD now answers that question with a necessary-and-sufficient condition. [M0]
+
+The chapter still begins from the MROD principle of retaining compatible mechanisms rather than forcing a winner. But the scientific peak is no longer “we recompute the score.” It is the condition under which recomputation is strictly valuable.
+
+## 2. The admissible mechanism region defines what is still unresolved
 
 Let
 
@@ -29,254 +31,260 @@ Let
 S\in\{0,1\}^K
 \]
 
-be a declared binary mechanism vector and let \(\theta\) denote continuous or discrete parameters. Let \(G(\theta)\) be a pre-data biological constraint grammar, \(x_{obs}\) fixed context, \(y_{obs}\) observed targets, \(f\) a simulator or predictive model, \(P_{sim},P_{obs}\) mappings into a shared pattern space, \(d\) a predeclared discrepancy, and \(\epsilon\) an acceptance tolerance.
-
-MROD defines the admissible mechanism region
+be a declared mechanism vector and let `theta` contain the remaining parameters. A pre-data biological grammar, fixed ecological context, observed targets, simulator/predictive map, discrepancy function and tolerance define an admissible mechanism region
 
 \[
-A_\epsilon(y_{obs},x_{obs})=
-\{(\theta,s):G(\theta)=1,
+A_\epsilon
+=\{(\theta,s):G(\theta)=1,
 \ d(P_{sim}(f(x_{obs};\theta,s)),P_{obs}(y_{obs}))\le\epsilon\}.
 \]
 
-The implementation approximates this set by prior sampling and rejection. The important conceptual choice is that multiplicity in the retained region is not treated as a nuisance to be hidden behind a modal row. It is the scientific object needed for the observation-design problem. [M1]
+The implementation represents this region with accepted draws. The conceptual commitment is that multiplicity in `A_epsilon` is not removed merely because one row or mechanism combination has the largest mass. If multiple mechanism programmes remain compatible, that multiplicity is the object the next observation is supposed to resolve. [M1]
 
-If several mechanism programmes survive the current evidence, then the design problem is not “which one should we declare correct?” but “which prospective measurement separates the surviving programmes?”
-
-This is a different response to ambiguity from ranking alone. A highest posterior or likelihood model may be useful when evidence genuinely separates candidates. But a modal label does not remove structural overlap among the remaining programmes. MROD preserves the overlap first, then acts on it.
-
-The method also fixes evidence roles before inference:
-
-- `observed_target` may enter the acceptance discrepancy;
-- `input_context` conditions the simulator but is not recycled as independent target evidence;
-- `diagnostic_only` checks inference/software behaviour after fitting;
-- `future_observation` is withheld and evaluated as a prospective measurement.
-
-This role discipline prevents a variable from being used to define the initial state, fit the mechanism and then appear again as independent validation. [M1]
-
-## 3. Residual mechanism ambiguity is an explicit output
-
-For the retained mechanism vector \(S\), MROD uses the joint entropy
+For the retained mechanism state, MROD reports joint entropy
 
 \[
 D=H(S\mid A_\epsilon)
 \]
 
-as residual mechanism entropy and defines normalized resolvability
+and normalized resolvability
 
 \[
-R=1-\frac{D}{K}.
+R=1-D/K.
 \]
 
-Because a \(K\)-bit switch vector has at most \(K\) bits of entropy,
+These quantities are not universal ecological uncertainty measures. They are typed to the declared mechanism vector. Their role is to make the remaining ambiguity explicit enough that a candidate observation can be evaluated against it.
 
-\[
-0\le D\le K,
-\qquad
-0\le R\le1.
-\]
+The evidence roles are also fixed before selection: current observed targets may constrain `A_epsilon`; context variables condition the simulator; diagnostics remain diagnostics; future observations remain withheld until selection. The same variable is not allowed to define the current state, rank itself as a prospective measurement and then reappear as independent validation.
 
-The normalization uses the maximum switch entropy rather than the realized prior entropy. Thus \(R=1\) means the declared switch vector is fully resolved inside the accepted region, while lower values preserve joint ambiguity. [M1]
+## 3. Candidate value requires a verified predictive partition
 
-This does not turn entropy into a universal measure of ecological uncertainty. It is the declared mechanism-state uncertainty for this method. Parameter uncertainty, model-family misspecification, target uncertainty and observation failure remain distinct objects.
+Let `Q` be a prospective measurement. When its possible outcomes form a mutually exclusive and exhaustive partition of the current admissible region, the stored region identifies the predictive outcome distribution needed for a mechanism-information calculation.
 
-The key move is methodological: unresolved ambiguity is reported instead of silently discarded. That makes it possible to ask which future observation can change the ambiguity.
-
-## 4. Observation value is conditional on what remains unresolved now
-
-Let \(Q\) be a candidate future measurement with finite outcomes \(q\). For a validated stored-region calculation, the candidate's outcome maps must form a mutually exclusive and exhaustive partition of the current admissible region.
-
-MROD defines the observation information value as the expected gain in normalized resolvability:
-
-\[
-V(Q)=E_Q[R(A_\epsilon\mid Q)-R(A_\epsilon)].
-\]
-
-Using the entropy definition,
+MROD uses
 
 \[
 V(Q)=\frac{I(S;Q\mid A_\epsilon)}{K}.
 \]
 
-Therefore
+Equivalently, this is the expected increase in normalized resolvability after observing `Q`. Thus a candidate can be perfectly measurable yet carry zero information about the particular mechanism distinctions that remain.
+
+The partition condition matters. Missing prediction rows, overlapping outcome maps or incomplete outcome maps invalidate the stored-region information calculation. Such a candidate is reported as non-estimable unless an explicitly different predictive model is supplied. An external prior is not silently inserted and relabelled as the validated MROD value. [M1]
+
+This fail-closed condition became important during the theorem upgrade. A stale Figure 1 regression test still pointed to a retired generator name. The fix did not resurrect that retired implementation; it connected the test to the current canonical information-value implementation and preserved the verified-partition semantics. The theorem PR then passed the full Python 3.10/3.11/3.12 suite. [M5]
+
+## 4. The adaptive problem can be stated independently of random order
+
+Consider a two-step finite design. The first observation has already been selected. Let its realised outcome be `X`, with positive-probability branches `x`. There is a finite set of remaining candidate measurements.
+
+For each remaining candidate `q`, define its branch-specific second-step mechanism-learning value
 
 \[
-0\le V(Q)\le1-R(A_\epsilon)\le1.
+U_q(x)=I(S;Q_q\mid X=x).
 \]
 
-A candidate has \(V(Q)=0\) exactly when it carries no information about the residual mechanism identity under the current admissible region. [M2]
+Dividing all values by `K` would give the normalized MROD scale and would not change any rankings or conclusions.
 
-This provides the direct answer to the chapter's forbidden inference. Two measurable variables can have very different values for the current scientific responsibility. A candidate can be biologically meaningful and technically valid while having zero information about the mechanism distinctions that remain.
-
-The value is state-dependent in an epistemic sense: it must be recomputed after each realized measurement because the admissible region changes. An observation that is valuable before one measurement may become redundant after that measurement. Conversely, a candidate that was initially modest may become decisive once another ambiguity is removed.
-
-A candidate is reported as non-estimable when its predictive outcomes do not form a valid partition of the stored region, fail to cover it, overlap, or require unavailable outputs. MROD does not silently insert an external outcome prior and relabel the result as validated information value. [M1]
-
-Thus “not estimable” is part of the scientific output rather than an invitation to improvise a score.
-
-## 5. Sequential design makes ordering consequential
-
-The design is adaptive:
+An adaptive policy is allowed to observe `X=x` and then choose whichever candidate has the highest value in that branch. Its expected second-step value is
 
 \[
-A_0=A_\epsilon.
+V_{adapt}
+=\mathbb E_X\left[\max_q U_q(X)\right].
 \]
 
-At step \(t\):
-
-1. compute \(V_t(Q)=I(S;Q\mid A_t)/K\) for every verified remaining candidate;
-2. select the candidate with maximum positive current value;
-3. reveal or obtain its realized outcome only after selection;
-4. condition \(A_t\) on that outcome to obtain \(A_{t+1}\);
-5. recompute all remaining candidate values.
-
-The procedure stops when the observation budget is exhausted, the declared confounding structure is resolved, or every remaining verified candidate has zero current information value. [M1]
-
-The final stop condition is important. Mechanism ambiguity may remain even when no available candidate can resolve it. That is not algorithmic failure; it is a limitation of the declared measurement vocabulary.
-
-The method therefore distinguishes two statements that are often conflated:
-
-> unresolved mechanism remains
-
-and
-
-> a currently available measurement can resolve it.
-
-The first does not imply the second.
-
-## 6. The frozen benchmark tests selection without truth peeking
-
-MROD's primary validation is not a natural ecological mechanism claim. It is a controlled benchmark designed to test the observation-selection policy itself.
-
-The frozen G2 protocol uses five predeclared seeds and 200 generated systems per seed. Each system contains \(K\in\{4,5,6\}\) mechanism switches, one or two disjoint two-driver confounds, randomized pre-data coefficients, 1,500 prior draws, and one explicit resolving quantitative observation for each confound. Two additional binary nuisance measurements are generated independently of the mechanism vector. [M3]
-
-These nuisance measurements are deliberately important. They are valid candidate observations: their outcomes are mutually exclusive and exhaustive. They simply contain no designed information about the mechanism identity. The benchmark therefore distinguishes “valid to measure” from “valuable for the current ambiguity.”
-
-The same seed-defined systems, hidden truths, candidate sets and budgets 0–4 are supplied to two policies:
-
-- **information-guided:** select the remaining candidate with maximum current \(V(Q)\);
-- **random order:** select uniformly among remaining candidates.
-
-Neither policy sees a hidden candidate outcome before selection. Hidden truth is used only after a policy selects a measurement, to materialize that benchmark outcome. The accepted region is then conditioned and the guided policy recomputes values. [M3]
-
-This truth-peek-free structure matters because a measurement policy can look optimal if candidate outcomes are inspected before selection. The benchmark prohibits that shortcut.
-
-## 7. Under a limited budget, ordering changes what is resolved
-
-At budget two, the information-guided policy resolved all initial confounding edges on average:
+A static policy must choose one candidate before `X` is known. The strongest possible static comparator is therefore
 
 \[
-\text{mean fraction resolved}=1.000.
+V_{static}
+=\max_q\mathbb E_X[U_q(X)].
 \]
 
-It converged to an empty confounding graph in 0.990 of systems across the five frozen seeds, used 1.505 observations on average, and selected only 0.001 nuisance measurements per system. [M3]
+This comparator is deliberately stronger than the random-order policy used in G2. The theorem does not win by comparing an information policy with a weak random baseline. It asks whether adaptation itself can beat the **best candidate one could have precommitted to in expectation**. [M0]
 
-Random ordering, on the identical generated systems and budget, resolved only
+## 5. Theorem A1: adaptation can never be worse than the best fixed second measurement
+
+For every fixed candidate `q` and every branch `x`,
 
 \[
-0.6045
+\max_j U_j(x)\ge U_q(x).
 \]
 
-of the initial confounding edges on average and converged in 0.435 of systems. It used 1.821 observations and selected 0.974 nuisance measurements per system. [M3]
-
-Thus the measurements were not interchangeable under a constrained budget. The guided policy did not gain an advantage by adding more measurement opportunities; both policies had the same candidates. The advantage came from ordering candidates according to their current relation to the unresolved mechanism set.
-
-At budget one, convergence was 0.495 for information-guided design and 0.179 for random order. The gap reflects the fact that a first measurement can either attack a current confound or spend the only available opportunity on a nuisance candidate.
-
-These policy contrasts were designated descriptive in the frozen protocol. There was no favourable-result threshold that the guided policy had to pass for the analysis to be retained. [M3]
-
-## 8. When both policies have enough budget, nuisance selection exposes efficiency
-
-Budget four is particularly informative because both policies resolved all initial confounding edges on average. At that point the headline distinction is no longer whether one policy can eventually remove the declared confounds, but how much irrelevant measurement effort it spends on the way.
-
-The information-guided policy converged in 0.999 of systems and used 1.518 observations. Random order converged in 0.940 and used 2.673 observations. [M3]
-
-Most visibly, random ordering selected
+Taking expectations gives
 
 \[
-1.169
+\mathbb E[\max_jU_j(X)]\ge\mathbb E[U_q(X)].
 \]
 
-mechanism-independent nuisance measurements per system, whereas information-guided selection used
+Because this holds for every fixed candidate, it holds for the fixed candidate with the largest expected value:
 
 \[
-0.014.
+\boxed{V_{adapt}\ge V_{static}.}
 \]
 
-The ratio is approximately 83.5-fold, corresponding descriptively to about 98.8% fewer nuisance selections relative to random order. The absolute difference is more stable and remains visible without relying on a ratio with a small denominator. [M3]
+This inequality is simple, but it is not yet the main result. The critical question is when it is **strict**.
 
-The result is not “information theory always saves 98.8% of measurements.” It is a benchmark-specific demonstration that a policy tied to residual mechanism information can avoid valid but mechanism-irrelevant observations when candidate order matters.
+## 6. Theorem A2: exact condition for strict adaptive advantage
 
-## 9. Truth retention prevents a trivial route to apparent resolution
-
-A method could achieve impressive resolution numbers simply by conditioning so aggressively that it excludes the true generating explanation. The G2 benchmark therefore records false exclusion of hidden truth.
-
-Hidden-truth false exclusion was zero in every policy-by-budget cell. All 10,000 stored system–policy–budget records retained the generating explanation. [M3]
-
-This matters for interpretation. The guided policy's ambiguity reduction was not obtained by manufacturing confidence through deletion of the hidden true mechanism. The benchmark tests selection within a declared candidate family, not arbitrary model misspecification, but within that family the generating programme remains admissible throughout.
-
-## 10. Candidate value is not identical to target licensing
-
-MROD's observation value is explicitly about residual mechanism identity. That scientific responsibility must not be confused with every other reason to measure something.
-
-TU-2 makes this distinction exact. Let \(S\in\{0,1\}^m\) be a causal programme state and let \(T\in\{0,1\}\) be an independent report target. For experiments \(Q_{k,b}\), where \(k\) controls how many causal bits are revealed and \(b\) controls whether \(T\) is also observed, TU-2 constructs pairs with the same causal information gain but opposite target-licensing status. [T2]
-
-For every \(k\),
+For each positive-probability branch, let
 
 \[
-I(S;Q_{k,0})=I(S;Q_{k,1})=k,
+A(x)=\operatorname{argmax}_qU_q(x)
 \]
 
-while the target remains unlicensed for \(Q_{k,0}\) and fully licensed for \(Q_{k,1}\).
+be the set of branchwise best candidates.
 
-At one extreme, observing all of \(S\) gives maximal mechanism-learning value while leaving the independent target unresolved. At the other, observing \(T\) directly gives zero information about \(S\) while completely licensing the target. [T2]
+The theorem states
 
-The lesson is not that MROD's value function is wrong. It is that it is correctly typed. It ranks observations for learning the declared mechanism vector. A different scientific responsibility can rank the same measurements differently.
+\[
+\boxed{V_{adapt}=V_{static}}
+\]
 
-This prevents the dissertation from upgrading
+if and only if
 
-> high observation information value for mechanism learning
+\[
+\boxed{\bigcap_{x:P(X=x)>0}A(x)\ne\varnothing.}
+\]
 
-into
+Equivalently,
 
-> universally best observation.
+\[
+\boxed{V_{adapt}>V_{static}}
+\]
 
-## 11. What this chapter establishes—and what it does not
+if and only if **no single remaining candidate is optimal in every positive-probability first-outcome branch**. [M0]
 
-The chapter establishes that, under MROD's declared mechanism vocabulary, admissible-region construction and verified candidate outcome partitions:
+The sufficiency direction is direct. If some candidate `q*` belongs to every branchwise argmax set, then it attains the adaptive maximum branch by branch. Precommitting `q*` therefore matches the adaptive expected value.
 
-1. unresolved mechanism multiplicity can be retained as an inferential output;
-2. candidate observation value is normalized mutual information about the residual mechanism vector;
-3. value must be recomputed after each realized observation;
-4. a valid measurable candidate can have zero value for the current mechanism ambiguity;
-5. in the frozen truth-peek-free G2 benchmark, information-guided ordering resolves confounding more efficiently than random ordering under limited budgets;
-6. the selection advantage does not arise from excluding the hidden generating explanation;
-7. mechanism-learning value remains distinct from target licensing.
+For necessity, suppose equality holds and let `q*` be a static candidate attaining `V_static`. Define the nonnegative branchwise gap
 
-It does **not** establish universal optimality over all experimental-design algorithms, priors, simulator families or ecological systems. It does not identify a true natural mechanism. It does not imply that low-\(V(Q)\) observations are scientifically useless for other targets. It does not say the declared mechanism vocabulary is complete. It does not rescue the failed EGWE warning thresholds. [M4]
+\[
+D(x)=\max_qU_q(x)-U_{q*}(x)\ge0.
+\]
+
+Equality of adaptive and static expected values implies
+
+\[
+\mathbb E[D(X)]=0.
+\]
+
+A nonnegative random variable has expectation zero only if it is zero on every positive-probability branch. Hence `q*` must be branchwise optimal everywhere.
+
+This proof gives the exact replacement for the vague phrase “rankings can change after the first measurement.” Ranking movement alone is not enough. If one candidate remains tied for best in every branch, adaptation has no expected second-step advantage. Strict advantage requires the **common argmax intersection to be empty**.
+
+## 7. A four-world witness attains a strict adaptive gain
+
+The abstract condition has a minimal deterministic realization. Take four equally likely mechanism states
+
+\[
+S\in\{a,b,c,d\}.
+\]
+
+The first observation partitions them into two branches:
+
+\[
+X=0:\{a,b\},
+\qquad
+X=1:\{c,d\}.
+\]
+
+Two remaining deterministic candidates are designed as follows:
+
+- `Q1` distinguishes `a` from `b` but is constant on `c,d`;
+- `Q2` is constant on `a,b` but distinguishes `c` from `d`.
+
+The branchwise mutual-information table is then
+
+| first-outcome branch | `Q1` | `Q2` |
+|---|---:|---:|
+| `X=0` | 1 bit | 0 bits |
+| `X=1` | 0 bits | 1 bit |
+
+There is no common best candidate. Theorem A2 gives
+
+\[
+V_{adapt}=1\text{ bit},
+\qquad
+V_{static}=0.5\text{ bit}.
+\]
+
+The first observation itself carries one bit, so the two-step totals are two bits adaptively versus 1.5 bits with the best precommitted second candidate. [M0]
+
+The source also establishes minimality within this deterministic branch-switch class. Strict branch switching needs at least two positive-probability branches. A branch containing only one mechanism state has zero conditional entropy, so every remaining candidate is tied at zero there and cannot eliminate a common maximizer. Therefore each of two branches needs at least two compatible mechanism states: four worlds are necessary, and the witness attains that lower bound.
+
+This minimality matters. The example is not a large construction hiding an arbitrary advantage. It is the smallest deterministic branch structure capable of the strict effect under the declared class.
+
+## 8. Sequential MROD uses the theorem's branch logic repeatedly, without claiming global greedy optimality
+
+The publication-facing procedure computes current `V(Q)`, selects the largest positive value, obtains the realised outcome, conditions the admissible region and recomputes all remaining candidate values. [M1]
+
+Theorem A2 justifies the possibility of strict value in recomputation. It does **not** prove that the entire multi-step greedy policy is globally optimal over every experiment tree. Such a result would require additional structural assumptions such as adaptive submodularity or a full dynamic-programming argument.
+
+This distinction is important for claim discipline. The chapter can say exactly when adaptive choice at the second step beats every fixed second measurement. It cannot silently extend that theorem to arbitrary long-horizon design.
+
+## 9. G2 is a separate controlled policy validation, not the proof of adaptation
+
+The frozen G2 challenge tests information-guided sequential selection on 1,000 generated systems per policy across five predeclared seeds. Each generated system contains four to six mechanism switches, one or two designed confounds, explicit resolving candidates and two mechanism-independent nuisance candidates. Hidden truth is unavailable to the ranking calculation and is materialised only after selection. [M2]
+
+At budget two, information-guided selection achieves mean initial-confounding resolution `1.000` and convergence `0.990`, compared with `0.6045` and `0.435` under random order. Nuisance selection is `0.001` versus `0.974` per system. Hidden-truth false exclusion remains zero. [M2]
+
+At budget four, both policies reach mean edge resolution `1.000`, but guided design uses `1.518` observations compared with `2.673` for random order and selects `0.014` nuisance measurements compared with `1.169`. The nuisance ratio is about 83.5-fold; the absolute values must accompany that ratio. [M2]
+
+G2 demonstrates that the current implementation can exploit designed information structure under a truth-peek-free protocol. But random order is not the comparator in Theorem A2. The theorem deliberately answers the stronger conceptual question: **when can adaptation beat the best fixed second candidate, not merely random order?**
+
+## 10. Zero false exclusion prevents one trivial route to apparent success
+
+A mechanism-resolution policy could appear powerful by conditioning away the hidden generating explanation. G2 therefore records whether hidden truth remains inside the admissible set.
+
+False exclusion is zero in every policy-by-budget cell. [M2]
+
+This does not prove robustness to model-family misspecification. It does establish that the benchmark's favourable resolution numbers are not produced by silently deleting the known generating mechanism within the declared family.
+
+## 11. TU-2: the adaptive theorem is typed to mechanism learning
+
+The observation value in this chapter has a declared object: residual mechanism identity. It is not a universal measure of scientific worth.
+
+TU-2 constructs experiments with identical information about a causal programme state but opposite target-licensing status. It also constructs maximal causal learning with zero licensing of an independent target, and zero causal learning with perfect target licensing. [T2]
+
+Thus Theorem A2 means:
+
+> if branchwise optimal measurements disagree, adaptive recomputation strictly improves expected information about the declared mechanism state.
+
+It does not mean:
+
+> the adaptive choice is universally the best observation for every ecological decision, report target or reliability obligation.
+
+This distinction is especially important because “information” can otherwise become an untyped word that swallows the rest of the dissertation.
+
+## 12. What the chapter establishes
+
+The chapter now has two independent result layers.
+
+**Exact design condition.** For a fixed first observation and finite remaining candidate set, adaptive expected second-step mechanism information is at least that of the best precommitted second candidate, with strict advantage **iff** there is no candidate optimal on every positive-probability branch. A four-world deterministic witness attains a `1` versus `0.5` bit second-step contrast and is minimal within the declared branch-switch class. [M0]
+
+**Controlled implementation validation.** In the frozen truth-peek-free G2 challenge, current information-guided sequential selection resolves designed confounds more efficiently than random ordering and avoids mechanism-independent nuisance measurements while retaining hidden truth. [M2]
+
+The chapter does **not** prove global optimality of arbitrary multi-step greedy design, completeness of the mechanism vocabulary, natural-system causal truth, or universal scientific utility of the MROD score. It does not rescue Chapter 2's failed warning thresholds. [M4]
 
 The safe conclusion is:
 
-> **When the scientific responsibility is resolution of a declared mechanism ambiguity, measurement order can be evaluated by the information each candidate carries about what remains unresolved, and valid candidates need not be equally valuable.**
+> **Measurement order has a provable adaptive advantage exactly when first-observation outcomes create incompatible optimal next measurements; the controlled MROD benchmark then shows that the implemented policy can exploit such mechanism-relevant information without truth peeking.**
 
-## 12. Transition: what exactly is the state being learned?
+## 13. Transition: a good measurement policy still needs a correctly typed state
 
-MROD provides a disciplined answer to “what should be measured next?” only after the object of learning has been declared. Its mechanism vector, admissible region and candidate outcomes are typed by the scientific model.
+Theorem A2 tells us when adaptation improves a declared mechanism-learning objective. It does not tell us whether the state or target being learned should itself be represented by one scalar summary.
 
-This creates the next question. If measurement value depends on which distinctions matter for the declared responsibility, can one eco-genetic summary represent all relevant states of a system? Or can potential viability, realized occupancy, demographic condition, genetic diversity and allele persistence respond differently even under one fragmentation contrast?
+Chapter 4 asks that next question. Potential viability, realised occupancy, demographic condition, genetic diversity and allele persistence may impose different response responsibilities. The source chapter proves an exact condition for when several oriented targets can be represented by one common monotone scalar, and then tests that condition against the locked fragmentation gradient. [TR]
 
-Chapter 4 therefore asks:
+Thus the transition is not “MROD proves multiple ecological states.” It is:
 
-> **Once we can choose measurements intelligently, is there one context-free ecological state that those measurements are trying to recover?**
-
-The transition is again a question handoff. MROD does not prove the eco-genetic five-state separation; the next chapter supplies its own finite-model evidence and TU-3 firewall. [TR1]
+> **Once observation value is explicitly relative to a learning object, under what condition can several ecological responsibilities share one state axis at all?**
 
 ## Internal source keys
 
-- **[M1]** MROD `paper/manuscript.md`, Sections 1–2 — admissible region, evidence roles, entropy/resolvability, information value and sequential design.
-- **[M2]** MROD information-value identity `V(Q)=I(S;Q|A_epsilon)/K`; independent implementation checks described in Methods/Results.
-- **[M3]** MROD frozen G2 benchmark and `paper/results/g2_frozen_v2_summary.json` — five seeds, 1,000 systems per policy, budget outcomes, nuisance selections, false exclusion.
-- **[M4]** `thesis/verification_recovery_registry.json`, Chapter 3 claim ceiling; MROD manuscript limitations.
-- **[T2]** `theory/TU2_LEARNING_LICENSING.md` and `theory/verify_tu2.py` — causal learning and target licensing are orthogonal; policy reversal.
-- **[TR0]** `thesis/transition_recovery_matrix.json`, Chapter 2→3 — MROD is not a rescue analysis of failed warning thresholds.
-- **[TR1]** transition recovery, Chapter 3→4 — next-observation value and target-dependent state separation are different estimands; the next chapter owns the latter result.
+- **[M0]** MROD `docs/adaptive_recomputation_theorem_2026-09-03.md` and `tests/test_adaptive_recomputation_theorem.py` — A1/A2, common-argmax iff, four-world witness and minimality.
+- **[M1]** MROD `docs/mainline.md`, `paper/manuscript.md`, and current canonical information-value implementation — admissible region, verified predictive partition, `V(Q)=I(S;Q|A_epsilon)/K`, sequential conditioning.
+- **[M2]** MROD `paper/results/g2_frozen_v2_summary.json` and `paper/check_submission_bundle.py` — frozen G2 counts, nuisance selections, convergence and zero false exclusion.
+- **[M4]** `thesis/verification_recovery_registry.json`, Chapter 3 claim ceiling.
+- **[M5]** MROD PR #101 CI recovery — stale retired Figure 1 import removed; current canonical test suite passes Python 3.10/3.11/3.12.
+- **[T2]** `theory/TU2_LEARNING_LICENSING.md` and `theory/verify_tu2.py` — mechanism learning versus target licensing firewall.
+- **[TR]** `thesis/transition_recovery_matrix.json` — Chapter 3→4 is a question handoff, not theorem implication.

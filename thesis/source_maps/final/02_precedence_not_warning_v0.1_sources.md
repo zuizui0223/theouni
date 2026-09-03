@@ -1,134 +1,163 @@
 # Source map — Chapter 2 v0.1: 先行することは、警告することではない
 
-This map supports `thesis/drafts/final/02_precedence_not_warning_v0.1.md` and is locked to the recovered EGWE warning-validity snapshot `7b2ca69b398d32071fd92d1da1d3b169c18a5d84` unless the verification-recovery registry is deliberately refreshed.
+This map supports `thesis/drafts/final/02_precedence_not_warning_v0.1.md` and is locked to merged EGWE snapshot `ef545bfa871c1a2b01daca1fc86e6db67f6e8c95`.
 
 ## Snapshot and chapter contract
 
 - owning repository: `zuizui0223/eco-genetic-warning-extensions`
-- recovered snapshot: `7b2ca69b398d32071fd92d1da1d3b169c18a5d84`
-- verification class: `verified_full_denominator_empirical_model_audit`
+- current theorem snapshot: `ef545bfa871c1a2b01daca1fc86e6db67f6e8c95`
+- verification class: `verified_exact_denominator_theorem_plus_locked_full_denominator_audit`
 - forbidden inference: `損失に先行した ⇒ 損失を予告する`
-- chapter claim ceiling: the result rejects predictive-warning validity for the six frozen diversity-threshold rules in the two tested finite-model ensembles; it does not show that genetic diversity contains no predictive information generally.
+- chapter claim ceiling: the exact theorem concerns binary markers at a common administrative horizon, while the locked empirical conclusion rejects predictive-warning validity only for the six frozen diversity-threshold rules in the two tested finite-model ensembles; neither result says that genetic diversity contains no predictive information generally.
 
-## A. Primary warning-validity manuscript
+## A. Headline theorem: what perfect precedence actually determines
 
-### A1 — `manuscript/warning_validity.md`
+### A1 — `docs/PRECEDENCE_DISCRIMINATION_THEOREM_2026-09-03.md`
 
-Supports:
+Fix event status `Y` and a binary marker `M` at a common horizon. If the marker strictly precedes every observed event, then every event is marker-positive by the horizon.
 
-- distinction between event-conditioned ordering and predictive warning validity;
-- frozen parent/fresh ensemble structure;
-- six baseline-relative `H_alpha`/`H_gamma` thresholds at 5%, 10%, and 20%;
-- inherited counts: 83 eligible, 35 losses, 48 horizon non-events;
-- fresh counts: 82 eligible, 33 losses, 49 horizon non-events;
-- event-conditioned leads `35/35` and `33/33` with zero ties/lags;
-- non-event firings `48/48` and `49/49`;
-- sensitivity 1, false-positive rate 1, specificity 0, binary-marker AUC 0.5;
-- PPV equal to prevalence, 0.422 inherited and 0.402 fresh; NPV undefined because all eligible trajectories are marker-positive;
-- secondary fixed ramp-end AUC ranges `0.500–0.538` inherited and `0.500–0.510` fresh;
-- exact claim boundary and prohibition on post-result threshold rescue.
+The theorem proves:
 
-## B. Frozen provenance and reproducibility
+1. perfect event-conditioned precedence forces `sensitivity = 1`;
+2. precedence imposes **no restriction** on marker firing among non-events;
+3. with `n0` non-events, every specificity value on `{0, 1/n0, ..., 1}` is compatible with the same perfect event lead result;
+4. for a binary marker,
+   `AUC = (sensitivity + specificity)/2`, hence under perfect precedence `AUC = (1 + specificity)/2`;
+5. the same perfect event precedence can therefore coexist with binary AUC from `0.5` to `1`;
+6. if every non-event also fires, specificity is zero, AUC is `0.5`, and PPV equals event prevalence.
 
-### B1 — `REPRODUCIBILITY.md`
+This is the non-obvious result. The chapter is not merely advising readers to “remember false positives”; it identifies exactly what an event-conditioned lead result determines and exactly which predictive dimensions it deletes.
 
-Supports the frozen warning-blind parent/fresh source architecture and the full-denominator paired reporting. It confirms that the warning-validity conclusion is derived from existing locked trajectories rather than endpoint, seed, or schedule retuning.
+## B. Proof and independent oracle
 
-### B2 — warning-validity artifacts and source manifest
+### B1 — written proof
 
-The source manuscript identifies:
+The proof has two parts:
 
-- `artifacts/warning_validity/trajectory_endpoint_records.csv`
-- `artifacts/warning_validity/source_manifest.json`
-- `artifacts/prepublication_review/warning_validity_audit.json`
-- `manuscript/tables/warning_validity_audit.csv`
+- P1 constructs arbitrary non-event firing count `f` while keeping all event trajectories unchanged, proving the specificity grid is free under fixed perfect precedence;
+- P2 derives the binary-score ROC area by trapezoidal integration and obtains `AUC=(sensitivity+specificity)/2`.
 
-The compact 1,200-row record table is source-manifest locked. The dissertation does not need to duplicate the artifact but must preserve the denominators.
+### B2 — `tests/test_precedence_discrimination_theorem.py`
 
-### B3 — `scripts/validate_publication_lanes.py`
+The executable obligations verify:
 
-Machine guard for the paired warning denominators, specificity/AUC wording, and separation of warning-validity claims from state-validity and natural-data publication lanes.
+- every finite specificity grid point under perfect event sensitivity;
+- the binary-AUC identity against an independent pairwise-ranking oracle;
+- the full `0.5..1` AUC range while event precedence remains fixed;
+- the `f=n0` sharp endpoint;
+- direct parsing of the locked warning table after filtering the two source ensembles, without treating the six `combined_descriptive` rows as a third replicate ensemble.
 
-## C. Source precondition: loss/event labels are imported, not created by chapter order
+The final point is deliberate: inherited and fresh ensembles remain separate evidence sources. Their pooled descriptive rows do not create an additional replication denominator.
 
-Source: `thesis/final_chapter_architecture.json` and `thesis/transition_recovery_matrix.json`.
+## C. Locked EGWE evidence attains the sharp endpoint
 
-Required statement:
+### C1 — `manuscript/warning_validity.md`
 
-> Warning event/non-event labels and loss endpoints are imported from the frozen EGWE/parent source contracts; Chapter 2 does not infer them from Chapter 4.
+Six frozen baseline-relative rules are audited separately in two ensembles.
 
-This permits Chapter 2 to appear before Chapter 4 editorially without turning the dissertation order into a scientific dependency inversion.
+Inherited ensemble:
+
+- baseline eligible: `83`
+- events: `35`
+- non-events: `48`
+- event leads: `35/35`
+- non-event firings: `48/48`
+
+Fresh ensemble:
+
+- baseline eligible: `82`
+- events: `33`
+- non-events: `49`
+- event leads: `33/33`
+- non-event firings: `49/49`
+
+For every frozen rule in both source ensembles:
+
+- sensitivity `1`
+- specificity `0`
+- false-positive rate `1`
+- binary-marker AUC `0.5`
+- PPV equal to event prevalence (`35/83≈0.422`, `33/82≈0.402`).
+
+The empirical result therefore lands at the theorem's **sharp minimum-discrimination endpoint compatible with perfect event sensitivity**.
+
+## D. Frozen provenance and no-rescue boundary
+
+### D1 — `REPRODUCIBILITY.md`
+
+Supports the warning-blind event definition, independent inherited/fresh source architecture, frozen thresholds, common horizon, and absence of post-result endpoint/seed retuning.
+
+### D2 — publication lane guards
+
+The warning-validity manuscript is the sole active owner of this denominator result. State-validity and natural-data lanes do not supply alternative warning endpoints.
+
+A negative result does not authorize a threshold search inside the same claim. A new warning statistic would require a separately declared development and validation programme.
+
+## E. Source precondition: Chapter 2 does not derive loss from Chapter 4
+
+Warning event/non-event labels and loss endpoints are imported from frozen source contracts. The dissertation's editorial order does not create a scientific dependency in which Chapter 4 must generate Chapter 2's target.
 
 Do not:
 
-- recalibrate the loss process from warning outcomes;
-- derive event labels from the later eco-genetic chapter;
-- interpret the chapter order as chronological provenance.
+- recalibrate loss from warning behaviour;
+- derive event labels from the later state-separation chapter;
+- treat chapter order as provenance order.
 
-## D. TU-4 warning-state firewall
+## F. TU-4 warning-state firewall
 
-### D1 — `theory/TU4_WARNING_STATE_PORTABILITY.md`
+### F1 — `theory/TU4_WARNING_STATE_PORTABILITY.md`
 
-Supports:
+TU-4 establishes a separate representation condition:
 
-- `LossGeneratingState` and `WarningEvaluationState` as distinct typed objects;
-- warning-evaluation quotient `Q_W` refines loss quotient `Q_L`;
-- equality iff warning signature factors through the loss quotient;
-- exact counterexample where identical loss state supports opposite warning ordering;
-- within-state replication ≠ cross-state portability;
-- portability requires a warning-law correspondence, not merely matching loss states.
+- `WarningEvaluationState` refines `LossGeneratingState`;
+- the two are equal exactly when the warning signature factors through the loss quotient;
+- warning portability requires its own correspondence condition.
 
-TU-4 does not create the empirical full-denominator result. It prevents the weaker source claim “fix loss warning-blind” from being inflated to “loss state determines warning validity.”
+TU-4 does not generate the 35/48 or 33/49 empirical denominators. It prevents a fixed loss representation from being mistaken for a sufficient warning-evaluation representation.
 
-## E. Statistical/interpretive boundary
+## G. Statistical boundary
 
 Allowed:
 
-- horizon-level binary discrimination because event/non-event status is known at the common administrative horizon;
-- event-time non-events remain right-censored;
-- event-conditioned lead counts and predictive metrics are different estimands;
-- secondary fixed-time summaries remain secondary.
+- binary horizon discrimination because event/non-event status is known at the common administrative horizon;
+- right-censoring remains relevant for event-time questions;
+- event-conditioned timing and predictive discrimination are different estimands.
 
 Not allowed:
 
-- treating six endpoints within one trajectory as six independent biological replicates;
-- inventing a common-time continuous score after the negative frozen-rule result;
-- selecting a new threshold, seed subset, or transformation and calling it validation of the same frozen rule;
-- converting `AUC=0.5` for these binary markers into “all genetic information is useless.”
+- treating six endpoints within one trajectory as independent biological replicates;
+- generalizing the binary-marker AUC theorem to arbitrary continuous time-dependent ROC objects;
+- using `AUC=0.5` here to claim all genetic information is useless.
 
-## F. Transition boundaries
+## H. Transition boundaries
 
-### F1 — Chapter 1 → 2
+### H1 — Chapter 1 → 2
 
-Identification and warning discrimination are orthogonal estimands. Failure to identify mechanism does not prove failure of prediction; predictive success would not identify mechanism.
+Mechanism identification and warning discrimination are different estimands. The Boundary rank theorem does not predict warning performance.
 
-### F2 — Chapter 2 → 3
+### H2 — Chapter 2 → 3
 
-MROD is not a rescue analysis of the failed EGWE thresholds. The transition is an editorial question handoff:
-
-> after a frozen warning rule fails discrimination, what observation should be chosen next when several explanations remain compatible?
-
-Chapter 3 owns a separate controlled observation-design benchmark.
+MROD does not rescue the six failed thresholds. The transition asks a new question: when several explanations remain compatible, under what condition is adaptive next-measurement choice actually better than fixed ordering?
 
 ## Section-to-source matrix
 
-| Draft section | Primary source | Formal/validator support | Main boundary |
+| Draft section | Primary source | Proof/verification | Main boundary |
 |---|---|---|---|
-| 1. Lead ≠ warning | A1 | B3 | denominator/estimand distinction |
-| 2. Warning-blind target | A1, B1 | C | source precondition, not Chapter 4 derivation |
-| 3. Six frozen rules | A1 | B1, B3 | no retuning |
-| 4. Event lead reproduction | A1 | B1 | event-conditioned protocol fact only |
-| 5. Non-event denominator | A1 | B2, B3 | specificity/AUC interpretation limited to frozen rules |
-| 6. Why event-only can mislead | A1 | — | conceptual generalization, not empirical universal law |
-| 7. TU-4 | D1 | `theory/verify_tu4.py` | formal firewall, not source of empirical counts |
-| 8. Secondary summaries | A1 | — | no post-result score rescue |
-| 9. Scope | A1 | recovery registry | no “genetics never predicts” converse |
-| 10. Transition | F2 | transition validator | question handoff, not rescue analysis |
+| 1. Lead ≠ warning | A1 | B1/B2 | theorem replaces slogan |
+| 2. Exact denominator condition | A1 | B1/B2 | binary common-horizon marker only |
+| 3. Frozen target/rules | C1/D1 | provenance guards | no retuning |
+| 4. Event lead reproduction | C1 | locked table test | event-conditioned fact |
+| 5. Non-event denominator | C1 | theorem application | sharp AUC 0.5 endpoint |
+| 6. Why conditioning loses information | A1 | specificity construction | no universal continuous-score claim |
+| 7. TU-4 | F1 | `theory/verify_tu4.py` | representation firewall |
+| 8. Secondary summaries | C1 | — | no post-result rescue |
+| 9. Scope | A1/C1 | recovery registry | no “genetics never predicts” converse |
+| 10. Transition | H2 | transition validator | question handoff, not rescue |
 
-## Drafting gate to v0.2
+## Drafting gate
 
-1. Verify bibliography metadata for early-warning evaluation, censoring, ROC/discrimination, and genetic-warning context against primary sources.
-2. Decide whether the main dissertation figure should show the 2×2 horizon denominator table, the event/non-event flow, or both.
-3. Keep the paired denominators visible in every summary of the headline result.
-4. Preserve the distinction between source-frozen loss calibration and TU-4 warning-state sufficiency.
-5. Any alternative warning statistic belongs to a separately declared development/validation programme and must not be introduced as a rescue of the six frozen rules.
+1. Put Theorems P1–P2 before the empirical counts so the chapter answers “what follows exactly?” before showing the endpoint case.
+2. Keep `35/35 ↔ 48/48` and `33/33 ↔ 49/49` visibly paired.
+3. Keep inherited and fresh ensembles separate; `combined_descriptive` is not a third replication ensemble.
+4. Preserve TU-4 as a different theorem layer from the full-denominator audit.
+5. Do not introduce a new warning score as a rescue of the six frozen rules.
