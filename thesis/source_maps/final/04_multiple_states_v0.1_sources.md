@@ -1,10 +1,11 @@
 # Source map — Chapter 4 v0.1: 一つの系に、状態は一つではない
 
-This map supports `thesis/drafts/final/04_multiple_states_v0.1.md` and is locked to merged eco-genetic-criticality theorem snapshot `2a35b2d2b11f4b8a00b8a4346bdba90773511a71`.
+This map supports `thesis/drafts/final/04_multiple_states_v0.1.md`. It preserves the original verification-recovery baseline `290663cd25dd2ab06ef8913f97696fd29370f7f2` and refreshes the theorem-level chapter source to merged eco-genetic-criticality snapshot `2a35b2d2b11f4b8a00b8a4346bdba90773511a71`.
 
 ## Snapshot and chapter contract
 
 - owning repository: `zuizui0223/eco-genetic-criticality`
+- previous recovered evidence baseline: `290663cd25dd2ab06ef8913f97696fd29370f7f2`
 - current theorem snapshot: `2a35b2d2b11f4b8a00b8a4346bdba90773511a71`
 - verification class: `verified_scalar_iff_plus_locked_finite_crossing`
 - forbidden inference: `生態遺伝的に要約した ⇒ 五つの側面を代表した`
@@ -115,7 +116,7 @@ Supports:
 
 TU-3 answers a different question from the scalar theorem. The scalar theorem asks whether several targets share one monotone sufficient axis. TU-3 asks whether one raw coordinate may be omitted for one target signature.
 
-## H. Section-to-source matrix
+## Section-to-source matrix
 
 | Draft section | Primary source | Verification | Main boundary |
 |---|---|---|---|
