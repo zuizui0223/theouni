@@ -20,6 +20,14 @@ REPO_MAP = {
     "repo:ced": "zuizui0223/ced",
 }
 
+REFRESHED = {
+    "chapter:1": "2919842f19bdd93221363b9f39f2ba1ebb146d17",
+    "chapter:2": "ef545bfa871c1a2b01daca1fc86e6db67f6e8c95",
+    "chapter:3": "689ba17d14fec2218e9e96f4c9e432eb8b71fb58",
+    "chapter:4": "2a35b2d2b11f4b8a00b8a4346bdba90773511a71",
+    "chapter:8": "590f6459a7c3ef31e8a527319771fd3d736a704a",
+}
+
 
 def load(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -58,6 +66,16 @@ def main() -> None:
     assert all(record["verification_status"].startswith("verified_") for record in research)
     assert all(record["remaining_recovery"] == [] for record in research)
 
+    for chapter, sha in REFRESHED.items():
+        assert by_id[chapter]["source_snapshot_sha"] == sha
+
+    # Newly sharpened chapters must point to theorem-level proof and executable obligations.
+    assert "docs/observation_rank_identification_theorem_2026-09-03.md" in by_id["chapter:1"]["evidence_paths"]
+    assert "docs/PRECEDENCE_DISCRIMINATION_THEOREM_2026-09-03.md" in by_id["chapter:2"]["evidence_paths"]
+    assert "docs/adaptive_recomputation_theorem_2026-09-03.md" in by_id["chapter:3"]["evidence_paths"]
+    assert "docs/common_scalar_state_theorem_2026-09-03.md" in by_id["chapter:4"]["evidence_paths"]
+    assert "docs/repeat_vs_mode_allocation_theorem_2026-09-03.md" in by_id["chapter:8"]["evidence_paths"]
+
     intro = records[0]
     synthesis = records[9]
     assert intro["verification_status"] == "synthesis_framing_verified_not_independent_theorem"
@@ -70,9 +88,11 @@ def main() -> None:
     assert summary["directly_verified"] == 8
     assert summary["unresolved_research_core"] == 0
     assert summary["synthesis_units"] == 2
+    assert "merged theorem/condition" in summary["critical_finding"]
 
+    # Claim ceilings stay fail-closed after sharpening.
     assert "all five state variables are pairwise distinct" in by_id["chapter:4"]["claim_ceiling"]
-    assert "finite synthetic witness" in by_id["chapter:5"]["claim_ceiling"]
+    assert "finite synthetic" in by_id["chapter:5"]["claim_ceiling"]
     assert "does not say that repetition is never useful" in by_id["chapter:8"]["claim_ceiling"]
     assert "does not yet prove one global theorem" in synthesis["claim_ceiling"]
 
@@ -82,8 +102,8 @@ def main() -> None:
     assert "forbidden inference → source-owned result" in ledger
 
     print(
-        "Verified chapter recovery: 8/8 research chapters have direct source evidence; "
-        "Chapter 0 remains framing; Chapter 9 remains TU-1-backed synthesis rather than a global theorem."
+        "Verified chapter recovery: 8/8 research chapters have direct source evidence and refreshed theorem-level snapshots where strengthened; "
+        "Chapter 0 remains framing and Chapter 9 remains TU-1-backed typed synthesis rather than a global theorem."
     )
 
 
