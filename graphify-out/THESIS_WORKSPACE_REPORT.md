@@ -13,7 +13,7 @@ This report tracks the final forbidden-inference dissertation traversal. The ord
 - total writing units: 10
 - source-owned research chapters: 8
 - general introduction and synthesis units: 2
-- units with prose drafts: 9
+- units with prose drafts: 10
 - canonical source handoffs: 30
 - unique primary forbidden inferences: 10
 - embedded TU modules: 4
@@ -32,7 +32,7 @@ This report tracks the final forbidden-inference dissertation traversal. The ord
 | 6 | 能力は知識を追い越す | crest | — | `source_manuscript_available` | `draft_v0_1` |
 | 7 | 法則は構造置換を越えない | mltr | — | `source_results_drafted` | `draft_v0_1` |
 | 8 | 反復は、多様性の代わりにならない | ced | — | `source_paper_core_available` | `draft_v0_1` |
-| 9 | 総合 — 妥当性に特権的な方向はない | theouni | — | `brief_ready` | `brief_only` |
+| 9 | 総合 — 妥当性に特権的な方向はない | theouni | — | `brief_ready` | `draft_v0_1` |
 
 ## Forbidden-inference spine
 
@@ -58,8 +58,7 @@ This report tracks the final forbidden-inference dissertation traversal. The ord
 
 ## Draft-stage counts
 
-- `brief_only`: 1
-- `draft_v0_1`: 9
+- `draft_v0_1`: 10
 
 ## Source-state counts
 
