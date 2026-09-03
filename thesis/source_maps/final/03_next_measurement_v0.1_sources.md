@@ -1,159 +1,153 @@
 # Source map — Chapter 3 v0.1: 境界の内側で、次に何を測るか
 
-This map supports `thesis/drafts/final/03_next_measurement_v0.1.md` and is locked to MROD snapshot `5a89c3f77b3987751652541086816231507edf9d` unless the verification-recovery registry is deliberately refreshed.
+This map supports `thesis/drafts/final/03_next_measurement_v0.1.md` and is locked to merged MROD snapshot `689ba17d14fec2218e9e96f4c9e432eb8b71fb58`.
 
 ## Snapshot and chapter contract
 
 - owning repository: `zuizui0223/mrod`
-- recovered snapshot: `5a89c3f77b3987751652541086816231507edf9d`
-- verification class: `verified_controlled_truth_peek_free_benchmark`
+- current theorem snapshot: `689ba17d14fec2218e9e96f4c9e432eb8b71fb58`
+- verification class: `verified_adaptive_iff_plus_controlled_truth_peek_free_benchmark`
 - forbidden inference: `測れるものは測る価値がある ⇒ 測る順序に良し悪しはない`
-- chapter claim ceiling: controlled validation of observation selection over the declared synthetic mechanism/candidate family; no universal optimality and no natural-system causal-mechanism claim.
+- chapter claim ceiling: the adaptive theorem is exact for a finite two-step design with a fixed first observation and finite candidate set; the G2 result validates one declared information-guided policy on a controlled synthetic family. Neither result proves global multi-step optimality or a natural-system causal mechanism.
 
-## A. Primary methods manuscript
+## A. Headline theorem: when recomputation has strict value
 
-### A1 — `paper/manuscript.md`
+### A1 — `docs/adaptive_recomputation_theorem_2026-09-03.md`
 
-Supports:
+Let `X` be the realised outcome of a fixed first observation and let `U_q(x)=I(S;Q_q|X=x)` be the second-step mechanism-information value of remaining candidate `q` in branch `x`.
 
-- retaining the full admissible mechanism region rather than forcing a winner;
-- role separation among `observed_target`, `input_context`, `diagnostic_only`, and `future_observation`;
-- residual mechanism entropy `D=H(S|A_epsilon)` and normalized resolvability `R=1-D/K`;
-- observation information value `V(Q)=I(S;Q|A_epsilon)/K` when candidate outcomes form a verified partition;
-- sequential recomputation after each realised observation;
-- fail-closed `non-estimable` treatment when a candidate partition is unavailable;
-- controlled validation and limitations.
+Define
 
-## B. Frozen G2 evidence
+- adaptive value: `V_adapt = E[max_q U_q(X)]`;
+- best static value: `V_static = max_q E[U_q(X)]`.
 
-### B1 — `paper/results/g2_frozen_v2_summary.json`
+The theorem proves:
 
-The frozen result record identifies protocol `rach-g2-truth-peek-free-v2` and stores five-seed aggregates.
+1. `V_adapt >= V_static` for every finite design of this form;
+2. equality holds **if and only if** at least one candidate is branchwise optimal on every positive-probability first-outcome branch;
+3. strict adaptive advantage holds **if and only if** the intersection of positive-branch argmax sets is empty;
+4. different unique best candidates in two positive-probability branches are sufficient for strict advantage;
+5. if one candidate is common-best everywhere, recomputation cannot improve expected second-step value over precommitting that candidate.
 
-Authorized headline values:
+This is the chapter's anti-obviousness result. “Recompute after each observation” is no longer an algorithmic instruction masquerading as a contribution; the theorem says exactly when the recomputation changes achievable expected value.
 
-### Budget 2
+## B. Proof, sharpness, and minimal witness
 
-Information-guided:
+### B1 — written proof
 
-- fraction converged: `0.990`
-- mean fraction of initial confounding edges resolved: `1.000`
-- mean observations: `1.505`
-- mean nuisance/distractor selections: `0.001`
-- false exclusion: `0`
+The lower bound follows pointwise from `max_j U_j(x) >= U_q(x)` and expectation. The iff equality condition follows by taking a best static candidate `q*`, defining the nonnegative branchwise gap `D(x)=max_q U_q(x)-U_q*(x)`, and using `E[D]=0` iff `D=0` on every positive-probability branch.
 
-Random order:
+### B2 — four-world sharp witness
 
-- fraction converged: `0.435`
-- mean fraction resolved: `0.6045`
-- mean observations: `1.821`
-- mean nuisance selections: `0.974`
-- false exclusion: `0`
+Four equally likely mechanism states are split by the first observation into two two-state branches. `Q1` resolves only the first branch; `Q2` resolves only the second.
 
-### Budget 4
+Then:
 
-Information-guided:
+- branch 0: `(Q1,Q2) = (1,0)` bit;
+- branch 1: `(Q1,Q2) = (0,1)` bit;
+- adaptive second-step value = `1.0` bit;
+- best static second candidate = `0.5` bit.
 
-- fraction converged: `0.999`
-- mean fraction resolved: `1.000`
-- mean observations: `1.518`
-- mean nuisance selections: `0.014`
+The source also proves minimality within this deterministic branch-switch class: strict branch switching requires at least two positive-probability branches with at least two compatible states each, hence at least four states.
 
-Random order:
+### B3 — `tests/test_adaptive_recomputation_theorem.py`
 
-- fraction converged: `0.940`
-- mean fraction resolved: `1.000`
-- mean observations: `2.673`
-- mean nuisance selections: `1.169`
+Executable obligations cover:
 
-Descriptive ratio: `1.169/0.014 = 83.5`; use with absolute values because ratios are unstable near zero.
+- exhaustive small utility tables;
+- `V_adapt >= V_static`;
+- the common-argmax iff condition;
+- strict rank-reversal cases;
+- equality cases with a common tied optimum;
+- the four-world mutual-information witness;
+- exhaustive exclusion of an equivalent three-world branch-switch witness.
 
-All policy-by-budget cells have zero hidden-truth false exclusion.
+## C. MROD information value and fail-closed candidate contract
 
-### B2 — `paper/supporting_information.md`
+### C1 — `docs/mainline.md` and `paper/manuscript.md`
 
-Supports the frozen table, uncertainty summaries, truth-peek-free benchmark design, and explicit statement that the methods submission excludes the separate Boundary Perspective and natural mechanism claims.
+MROD retains an admissible mechanism region `A_epsilon` and, for verified candidate outcome partitions, uses
 
-### B3 — `paper/check_submission_bundle.py`
+`V(Q)=I(S;Q|A_epsilon)/K`.
 
-Machine guard that freezes expected benchmark values and submission inventory. Use as provenance/consistency support, not an independent scientific dataset.
+The candidate partition must be mutually exclusive and exhaustive over the current admissible region. A candidate whose predictive partition is unavailable is non-estimable for the validated value; an external prior is not silently relabelled as stored-region information value.
 
-## C. Interpretation of candidate value
+Sequential design then conditions on the realised outcome and recomputes all remaining values.
 
-Allowed:
+The theorem in A1 does not depend on the historical project name. It is a condition on the branchwise values of the publication-facing Mechanism-Resolving Observation Design.
 
-- a measurable, valid candidate can have zero mechanism information under the current admissible region;
-- values change after conditioning, so measurement order can matter;
-- unresolved ambiguity may remain when the declared candidate vocabulary has no further positive-value observation;
-- `non-estimable` is a legitimate output when candidate predictions do not define a valid stored-region partition.
+## D. Frozen G2 controlled validation
 
-Do not:
+### D1 — `paper/results/g2_frozen_v2_summary.json`
 
-- label an external prior as validated `V(Q)` without a supported predictive partition;
-- interpret low mechanism-information value as general scientific uselessness;
-- call mechanism entropy a universal uncertainty metric across every dissertation chapter;
-- claim the mechanism vocabulary is complete because the benchmark resolves declared confounds.
+The frozen truth-peek-free challenge remains empirical/computational validation of the policy, not proof of A1–A2.
 
-## D. TU-2 learning/licensing firewall
+Budget 2:
 
-### D1 — `theory/TU2_LEARNING_LICENSING.md`
+- guided edge resolution `1.000` vs random `0.6045`;
+- guided convergence `0.990` vs random `0.435`;
+- guided nuisance selections `0.001` vs random `0.974`;
+- hidden-truth false exclusion `0` in both policies.
 
-Supports:
+Budget 4:
 
-- exact finite examples with the same `I(S;Q)` but opposite target-licensing status;
-- maximal causal learning with zero target licensing;
-- zero causal learning with complete target licensing;
-- policy reversal between causal-learning and target-licensing objectives.
+- both reach mean edge resolution `1.000`;
+- guided observations `1.518` vs random `2.673`;
+- guided nuisance selections `0.014` vs random `1.169`;
+- descriptive nuisance ratio `83.5-fold`; report absolute values with the ratio.
 
-### D2 — `theory/verify_tu2.py`
+G2's comparator is random order. The adaptive theorem is deliberately stronger because its comparator is the **best precommitted static second measurement**.
 
-Executable verification for the TU-2 family across `m=1..8`.
+## E. CI recovery and Figure 1 contract
 
-TU-2 prevents the Chapter 3 value function from becoming a universal observation-ranking score. MROD ranks for a declared mechanism-learning responsibility.
+The theorem PR initially exposed a stale test importing the retired `causal_model.confound_demo`. The scientific submission-boundary checks had already passed. The fix did not restore retired code: the test was migrated to the current canonical `controlled_confounding_demo` / information-value implementation. Python 3.10, 3.11 and 3.12 then passed.
 
-## E. Transition boundaries
+This matters for provenance because the chapter should not cite a retired heuristic implementation as proof of current observation value.
 
-### E1 — Chapter 2 → 3
+## F. TU-2 learning/licensing firewall
 
-Source: `thesis/transition_recovery_matrix.json`.
+### F1 — `theory/TU2_LEARNING_LICENSING.md`
 
-- EGWE warning failure and MROD observation selection are different estimands.
-- MROD is not a rescue analysis of the six failed warning rules.
-- no warning threshold, event label, or EGWE trajectory enters the G2 benchmark as a hidden source of favourable selection.
+TU-2 proves that mechanism-learning information and target licensing can vary independently. It prevents the MROD value function from becoming a universal observation score.
 
-### E2 — Chapter 3 → 4
+The adaptive theorem therefore means:
 
-- MROD assumes a declared object of mechanism learning.
-- Chapter 4 asks whether one eco-genetic summary can represent multiple target-dependent states.
-- MROD does not prove the Chapter 4 state-separation result.
+> adaptive recomputation can strictly improve the declared **mechanism-learning** objective under its iff branch condition.
 
-## F. Naming and provenance boundary
+It does not mean:
 
-Historical protocol/store keys retain earlier RACH labels for frozen provenance, but the current publication-facing method is **Mechanism-Resolving Observation Design / information-guided sequential design**. Do not use historical implementation naming to merge current MROD and RACH programme identities.
+> adaptive MROD is universally the best observation policy for every scientific target.
 
-RACH remains a companion programme in the dissertation architecture, not the owner of Chapter 3.
+## G. Transition boundaries
+
+### G1 — Chapter 2 → 3
+
+EGWE supplies no candidate ranking theorem and MROD is not a rescue of failed warning thresholds. The handoff is from a failed warning shortcut to a separate observation-design question.
+
+### G2 — Chapter 3 → 4
+
+MROD requires the object of learning to be declared. Chapter 4 asks whether several target responsibilities even admit one common scalar state. The adaptive theorem does not prove state scalarizability or non-scalarizability.
 
 ## Section-to-source matrix
 
-| Draft section | Primary source | Frozen/formal support | Main boundary |
+| Draft section | Primary source | Proof/verification | Main boundary |
 |---|---|---|---|
-| 1. More data ≠ design | A1 | recovery registry | no universal measurement ranking |
-| 2. Admissible region | A1 | — | declared model/constraint/tolerance only |
-| 3. Residual ambiguity | A1 | — | entropy of declared mechanism vector only |
-| 4. Observation value | A1 | information identity checks | requires verified candidate partition |
-| 5. Sequential design | A1 | — | recompute after realised outcome |
-| 6. Truth-peek-free benchmark | A1 | B1, B2 | controlled synthetic validation |
-| 7. Budget-2 result | B1 | B3 | descriptive frozen contrast |
-| 8. Budget-4 efficiency | B1 | B2, B3 | report absolute values with 83.5 ratio |
-| 9. Truth retention | B1 | B2 | no misspecification guarantee |
-| 10. Learning ≠ licensing | D1 | D2 | distinct scientific responsibilities |
-| 11. Scope | A1 | recovery registry | no natural mechanism or universal optimality claim |
-| 12. Transition | E2 | transition validator | question handoff, not implication |
+| 1. Measurement order problem | C1 | recovery registry | no universal ranking |
+| 2. Admissible mechanism region | C1 | source tests | declared model family only |
+| 3. Current observation value | C1 | canonical information implementation | verified partition required |
+| 4. Adaptive iff theorem | A1 | B1/B3 | fixed-first, two-step finite design |
+| 5. Sharp witness | B2 | B3 | deterministic branch-switch class |
+| 6. Sequential design | C1 | source implementation | greedy global optimality not claimed |
+| 7–8. G2 | D1 | submission bundle | controlled synthetic benchmark |
+| 9. Truth retention | D1 | frozen summary | no misspecification guarantee |
+| 10. Learning ≠ licensing | F1 | `theory/verify_tu2.py` | target-specific responsibility |
+| 11. Scope | A1/C1/D1 | recovery registry | no natural mechanism claim |
+| 12. Transition | G2 | transition validator | question handoff |
 
-## Drafting gate to v0.2
+## Drafting gate
 
-1. Verify bibliography metadata for ABC model choice, Bayesian/optimal experimental design, active learning, mutual information, and ecological value-of-information literature.
-2. Decide whether the G2 budget-2 and budget-4 comparisons share one figure or separate panels.
-3. Keep nuisance measurements visible because they operationalize the chapter's forbidden inference: valid/measurable candidates need not be equally valuable.
-4. Preserve zero false exclusion as a guardrail rather than turning it into a guarantee under model misspecification.
-5. Keep TU-2 as a type firewall; do not let target licensing compete with MROD's mechanism-learning objective inside one unlabeled score.
+1. Put the adaptive iff theorem before the G2 random-order benchmark.
+2. Make the best-static comparator explicit; do not sell “beats random” as the theorem.
+3. Keep the four-world witness because it demonstrates strict value, and keep the three-world lower-bound argument because it establishes minimality in the declared class.
+4. Preserve G2 as an independent controlled validation layer, not the proof of adaptive advantage.
+5. Preserve TU-2 so mechanism-learning value is never relabelled as universal scientific utility.
