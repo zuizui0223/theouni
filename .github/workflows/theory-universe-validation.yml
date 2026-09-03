@@ -121,6 +121,9 @@ jobs:
       - name: Validate forbidden-inference verification recovery
         run: python scripts/validate_chapter_verification_recovery.py
 
+      - name: Validate theorem-level proved conditions
+        run: python scripts/validate_proved_condition_registry.py
+
       - name: Validate typed Chapter 9 synthesis
         run: python scripts/validate_typed_synthesis_matrix.py
 
