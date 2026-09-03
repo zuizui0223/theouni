@@ -1,98 +1,131 @@
 {
-  "schema_version": "theouni-typed-synthesis-matrix.v1",
-  "status": "bounded_cross_chapter_synthesis",
-  "purpose": "Support Chapter 9 without inventing a single scalar adequacy order. Each row records one source-owned monotone shortcut that fails under its own scientific type.",
+  "schema_version": "theouni-typed-synthesis-matrix.v2",
+  "status": "proved_condition_backed_bounded_cross_chapter_synthesis",
+  "purpose": "Support Chapter 9 without inventing a single scalar adequacy order. Each row imports the source-owned proved condition for one scientific responsibility and records the monotone shortcut it replaces.",
   "claim_ceiling": [
     "This matrix is not a theorem that every notion of richer information lowers adequacy.",
     "Rows use different carriers, estimands, contracts, and comparison orders and therefore may not be pooled into one scalar effect or one global partial order.",
     "The safe synthesis claim is that no one listed richness proxy is privileged as an automatic certificate of adequacy across the dissertation's distinct scientific responsibilities.",
-    "TU-1 remains the exact theorem for revision after compression; the rows below are source-owned counterexamples supporting the broader dissertation synthesis."
+    "TU-1 remains the exact theorem for revision after compression; Chapters 1-8 retain theorem and evidence ownership in their source repositories.",
+    "A row is admitted only when its proved condition matches the corresponding entry in thesis/proved_condition_registry.json."
   ],
   "rows": [
     {
       "axis_id": "observation_richness",
       "chapter": "chapter:1",
       "source": "boundary",
-      "richness_proxy": "more biologically proximal or more numerous observed channels",
+      "responsibility_type": "structural mechanism identification",
+      "richness_proxy": "more biologically proximal, precise, or numerous observations",
       "forbidden_monotone_inference": "richer observation => closer identification of the latent mechanism",
-      "counterexample_type": "partial-identification theorem",
-      "decisive_result": "With k multiplicative channels and r independent direct anchors, the residual unidentified dimension is k-1-r; adding observations that do not independently anchor the remaining gauge directions does not identify the latent channel decomposition.",
-      "safe_conclusion": "Identification strength depends on which independent directions are anchored, not on observational richness alone."
+      "condition_class": "iff_plus_rank_sharpness",
+      "proved_condition": "For exact compatible log-linear observations Mx=y, compatible-set dimension is k-rank(M); one new scalar observation reduces ambiguity if and only if its row is outside the current row span, in which case the dimension falls by exactly one.",
+      "proof_source": "boundary:docs/observation_rank_identification_theorem_2026-09-03.md",
+      "verification_source": "boundary:tests/test_observation_rank_theorem.py",
+      "decisive_application": "The product-chain k-1-r rule is a corollary; repeated, rescaled, or linearly redundant observations do not change structural rank.",
+      "safe_conclusion": "Identification improves when the observation operator gains an independent direction, not because observational richness increases in an untyped sense."
     },
     {
       "axis_id": "temporal_precedence",
       "chapter": "chapter:2",
       "source": "EGWE",
+      "responsibility_type": "predictive warning discrimination",
       "richness_proxy": "more reproducible or universal-looking lead-before-loss ordering among event trajectories",
       "forbidden_monotone_inference": "more consistent precedence => stronger predictive warning validity",
-      "counterexample_type": "full-denominator frozen audit",
-      "decisive_result": "All six frozen thresholds led 35/35 and 33/33 observed losses but also fired in 48/48 and 49/49 non-events, yielding specificity 0 and binary-marker AUC 0.5.",
-      "safe_conclusion": "Temporal precedence is not a monotone proxy for discrimination."
+      "condition_class": "exact_denominator_identity_plus_sharp_endpoint",
+      "proved_condition": "For a binary common-horizon marker, perfect event-conditioned precedence forces sensitivity=1 but leaves non-event specificity free; binary-marker AUC=(1+specificity)/2, so the same perfect precedence is compatible with AUC from 0.5 to 1. All non-events firing gives the sharp chance-discrimination endpoint specificity=0 and AUC=0.5.",
+      "proof_source": "eco-genetic-warning-extensions:docs/PRECEDENCE_DISCRIMINATION_THEOREM_2026-09-03.md",
+      "verification_source": "eco-genetic-warning-extensions:tests/test_precedence_discrimination_theorem.py",
+      "decisive_application": "The locked ensembles realize the sharp endpoint: 35/35 event leads with 48/48 non-event firings and 33/33 event leads with 49/49 non-event firings.",
+      "safe_conclusion": "Temporal precedence identifies event sensitivity under this binary horizon contract but does not identify specificity or discrimination."
     },
     {
       "axis_id": "measurement_availability",
       "chapter": "chapter:3",
       "source": "mrod",
-      "richness_proxy": "more available measurable variables or arbitrary extra measurements",
+      "responsibility_type": "sequential mechanism-learning design",
+      "richness_proxy": "more available measurable variables or a fixed precommitted measurement list",
       "forbidden_monotone_inference": "more measurable variables => more useful mechanism resolution; measurement order is neutral",
-      "counterexample_type": "truth-peek-free controlled benchmark",
-      "decisive_result": "Information-guided sequential design reaches the same resolved-confounding endpoint with fewer observations and far fewer nuisance selections than random ordering, while some available candidates have zero current mechanism information value.",
-      "safe_conclusion": "Measurement value is conditional on the current admissible mechanism set and must be recomputed after each outcome."
+      "condition_class": "iff_adaptive_advantage",
+      "proved_condition": "Adaptive second-step value E[max_q U_q(X)] is at least max_q E[U_q(X)], with equality if and only if at least one candidate is branchwise optimal on every positive-probability first-outcome branch; strict advantage occurs if and only if the intersection of branchwise argmax sets is empty.",
+      "proof_source": "mrod:docs/adaptive_recomputation_theorem_2026-09-03.md",
+      "verification_source": "mrod:tests/test_adaptive_recomputation_theorem.py",
+      "decisive_application": "A minimal deterministic four-world witness gives adaptive second-step value 1.0 bit versus 0.5 bits for the best precommitted static second candidate; G2 separately validates the full method against random ordering.",
+      "safe_conclusion": "Adaptive measurement ordering has strict value exactly when first outcomes create incompatible branchwise optima; recomputation is not universally beneficial."
     },
     {
       "axis_id": "state_summary_singularity",
       "chapter": "chapter:4",
       "source": "eco-genetic-criticality",
-      "richness_proxy": "one increasingly detailed eco-genetic summary used as a universal state descriptor",
+      "responsibility_type": "multi-target eco-genetic state representation",
+      "richness_proxy": "one increasingly detailed scalar eco-genetic summary used as a universal state descriptor",
       "forbidden_monotone_inference": "a richer common summary => adequate representation of every target-relevant state",
-      "counterexample_type": "finite-model state-separation and representation counterexamples",
-      "decisive_result": "Potential viability, realised occupancy, demographic/genetic quantities and realised function follow different fragmentation responses; states sharing common marginals can also differ in cross-layer alignment and exact next interaction transition.",
-      "safe_conclusion": "State adequacy is target-relative; adding detail to one summary does not turn it into a universal state."
+      "condition_class": "iff_scalar_representability_plus_locked_counterexample",
+      "proved_condition": "For a finite set of target vectors oriented so higher is no worse, an exact directionally coherent sufficient scalar exists if and only if the distinct target vectors form a chain under coordinatewise product order.",
+      "proof_source": "eco-genetic-criticality:docs/common_scalar_state_theorem_2026-09-03.md",
+      "verification_source": "eco-genetic-criticality:tests/test_common_scalar_state_theorem.py",
+      "decisive_application": "The locked H3 2-patch versus 16-patch target vectors cross: retained interaction and local effective size decrease while realised high-trait mass increases, violating the chain condition.",
+      "safe_conclusion": "A common directional scalar is possible exactly on chain-ordered target sets; target crossings are exact impossibility certificates."
     },
     {
       "axis_id": "physical_boundary_width",
       "chapter": "chapter:5",
       "source": "CCOC",
-      "richness_proxy": "physical/local interface width as a proxy for required causal memory",
+      "responsibility_type": "exact open-future response-interface memory",
+      "richness_proxy": "static physical/local interface width used as a proxy for required causal memory",
       "forbidden_monotone_inference": "narrower physical boundary => smaller exact future-response memory",
-      "counterexample_type": "finite extremal synthetic witness",
-      "decisive_result": "A relay with a focal/exterior cut of at most one and uniformly bounded local alphabets can require 2^m open-grammar response distinctions, equivalently m exterior response bits.",
-      "safe_conclusion": "Static physical cut size is not an exact bound on counterfactual response memory under an open future grammar."
+      "condition_class": "lower_bound_plus_bounded_local_sharpness_and_positive_sufficient_boundary",
+      "proved_condition": "Decoder addressability gives a cross-grammar information lower bound; the fixed-regular relay family attains K_open-K_closed=m with fixed primitive alphabet, bounded degree, one-edge focal cut, and bounded local alphabets. Separate coherence conditions give sufficient positive portability criteria.",
+      "proof_source": "ccoc:docs/fixed_regular_extremal_theorem_2026-08-13.md",
+      "verification_source": "ccoc:causal_model/extremal_open_composition.py and theorem tests",
+      "decisive_application": "The closed quotient has 2 classes while the open quotient has 2^(m+1), attaining the finite-domain m-bit innovation bound under fixed local/static resource constants.",
+      "safe_conclusion": "Static physical locality alone does not upper-bound open-future exact response memory; coherent shared macro dynamics provide a separate positive portability boundary."
     },
     {
       "axis_id": "capability_increment",
       "chapter": "chapter:6",
       "source": "CREST",
+      "responsibility_type": "required state and monitoring under capability expansion",
       "richness_proxy": "size of the newly admitted intervention repertoire or viable-carrier gain",
       "forbidden_monotone_inference": "smaller capability gain => smaller representation and monitoring burden",
-      "counterexample_type": "finite deterministic existence theorem",
-      "decisive_result": "For every m>=1, one new controllable action can add exactly one viable world while refining a retained present slice from one state to 2^m states and creating exactly m bits of monitoring debt under unchanged evidence.",
-      "safe_conclusion": "Capability change and knowledge burden need not scale together."
+      "condition_class": "unbounded_separation_existence_family_plus_no_bound_corollary",
+      "proved_condition": "For every m>=1 there is one connected finite system where adding one action increases the robust carrier by exactly one world but refines a retained present slice from one to 2^m states and creates exactly m bits of monitoring debt; therefore no finite upper bound depending only on carrier-size gain can bound required resolution.",
+      "proof_source": "crest:docs/crest_capability_resolution_divergence_theorem_2026-08-22.md",
+      "verification_source": "crest:tests/test_crest_capability_resolution_divergence.py",
+      "decisive_application": "The same construction keeps a declared coarse target deterministically reportable while full required-state identification becomes unlicensed under unchanged evidence.",
+      "safe_conclusion": "Capability gain, required state resolution, monitoring burden, and target reportability are different quantities and need not scale together."
     },
     {
       "axis_id": "structural_reuse",
       "chapter": "chapter:7",
       "source": "MLTR",
+      "responsibility_type": "source-relative macro-law transport under replacement",
       "richness_proxy": "confidence in or exactness of an accepted source macro-law",
       "forbidden_monotone_inference": "a law that is exact at the source => the same law remains exact after structural replacement",
-      "counterexample_type": "source-relative transport theorem and history-completion boundary",
-      "decisive_result": "Transport requires explicit source-target operational coherence; route disagreement in complete carried terminal maps forces explicit history modes, one per distinct map.",
-      "safe_conclusion": "Source exactness is not a monotone certificate of portability after replacement."
+      "condition_class": "iff_portability_plus_unique_minimal_repair_plus_iff_history_completion",
+      "proved_condition": "The carried partition is exact if and only if output, legal-action rows and successor carried labels are constant within carried fibers; iterative refinement gives the unique coarsest exact source-relative repair; across routes, one immutable history mode per distinct carried terminal map is necessary and sufficient to preserve all inherited label semantics.",
+      "proof_source": "mltr:docs/master_theorem_proof.md",
+      "verification_source": "mltr:tests/test_section5_proof_obligations.py",
+      "decisive_application": "Distinct carried terminal maps cannot share one inherited history mode even when their unlabeled repaired partition shapes can coincide.",
+      "safe_conclusion": "Source exactness licenses target reuse only under explicit operational coherence; source-relative repair and history have exact minimal forms when coherence fails."
     },
     {
       "axis_id": "replicate_count",
       "chapter": "chapter:8",
       "source": "CED",
-      "richness_proxy": "more repeated observations under the same failure architecture",
-      "forbidden_monotone_inference": "more repeats => evidence strength equivalent to diversified observation modes",
-      "counterexample_type": "failure-domain guarantee theorem and equal-effort witness",
-      "decisive_result": "Within one shared failure domain, arbitrarily many repeats cannot raise the worst-case guarantee beyond the declared failure-domain ceiling, while independent modes can provide a stronger guarantee at equal raw effort.",
-      "safe_conclusion": "Evidence strength depends on failure diversity and the observation contract, not raw replicate count alone."
+      "responsibility_type": "failure-aware joint-detection evidence guarantee",
+      "richness_proxy": "more repeated observations under the same failure architecture or more independent modes at the same raw effort",
+      "forbidden_monotone_inference": "more repeats => uniformly stronger evidence; alternatively, more failure diversity => uniformly stronger evidence",
+      "condition_class": "exact_equal_effort_design_boundary_plus_availability_ceiling",
+      "proved_condition": "With two reads per present coordinate, equal mode availability a, per-read sensitivity p, independent modes and no false positives, two one-read independent modes beat one mode with two repeats for joint detection of k coordinates if and only if p>2-2^(1/k); deeper repetition wins below the threshold and they tie at it.",
+      "proof_source": "ced:docs/repeat_vs_mode_allocation_theorem_2026-09-03.md",
+      "verification_source": "ced:tests/test_repeat_vs_mode_allocation_boundary.py",
+      "decisive_application": "For fixed m modes, unlimited within-mode repetition still cannot raise the uniform worst-case guarantee above 1-(1-a)^m; finite effort and asymptotic effort therefore have distinct depth-versus-diversity constraints.",
+      "safe_conclusion": "Evidence allocation has an explicit sensitivity-by-target-size boundary and a separate failure-mode availability ceiling; neither raw repeats nor mode count is universally privileged."
     }
   ],
   "synthesis_rule": {
-    "permitted": "Across these typed responsibilities, none of the recorded richness proxies is an automatic certificate of scientific adequacy.",
+    "permitted": "Across these typed scientific responsibilities, none of the recorded richness proxies is an automatic certificate of adequacy; each chapter instead supplies a condition specifying when the relevant reuse, refinement, design, or report is licensed.",
     "forbidden": "Do not infer a universal scalar law that more detail, more measurement, more memory, more intervention, or more repetition always increases or decreases adequacy.",
-    "exact_substrate": "TU-1 separately proves the factorization criterion and exact revision debt for same-carrier revision after compression."
+    "exact_substrate": "TU-1 separately proves the same-carrier factorization criterion and exact revision debt after compression; the eight source-owned rows remain distinct proved conditions, not special cases of TU-1."
   }
 }
