@@ -130,6 +130,20 @@ Forbidden bridge:
 
 > Do not infer that failure of mechanism identification implies failure of prediction, or that predictive success identifies mechanism.
 
+## Section-to-source matrix
+
+| Draft section | Primary source | Proof/verification | Main boundary |
+|---|---|---|---|
+| 1. Mechanistic proximity vs identification | D1 | recovery registry | no generic molecular/field ranking |
+| 2. General rank condition | A1 | C1 | declared exact log-linear observation class |
+| 3. Product/channel corollary | B1 | C1 | `k-1-r` only when anchor rows are independent |
+| 4. Joint-measurement bottleneck | D1 | — | field-design implication, not empirical dataset claim |
+| 5. Calibration transport | E | source calibration tests | external/sensitivity bound required |
+| 6. Breakdown factor | E | source tests | breakpoint, not estimate of actual drift |
+| 7. Anchor distinctions | D1/E | source implementation | channel vs calibration information kept separate |
+| 8. Scope | A–E | recovery registry | no universal natural mechanism claim |
+| 9. Transition | G | transition validator | question handoff, not prediction theorem |
+
 ## Drafting gate
 
 Before Chapter 1 is promoted beyond the current v0.1 prose:
