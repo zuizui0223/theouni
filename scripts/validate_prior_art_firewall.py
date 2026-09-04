@@ -65,21 +65,23 @@ def main() -> None:
     by_chapter = {u["chapter"]: u for u in units}
     assert len(by_chapter) == 10
 
+    required_nonboolean = (
+        "source",
+        "risk_tier",
+        "classical_substrate",
+        "direct_prior_motifs",
+        "defensible_contribution",
+        "forbidden_priority_claims",
+        "priority_status",
+        "audit_sources",
+        "remaining_gate",
+    )
     for unit in units:
         chapter = unit["chapter"]
-        for key in (
-            "source",
-            "risk_tier",
-            "classical_substrate",
-            "direct_prior_motifs",
-            "defensible_contribution",
-            "forbidden_priority_claims",
-            "priority_status",
-            "firstness_allowed",
-            "audit_sources",
-            "remaining_gate",
-        ):
-            assert unit[key], f"{chapter} missing {key}"
+        for key in required_nonboolean:
+            assert key in unit, f"{chapter} missing {key}"
+            assert unit[key], f"{chapter} empty {key}"
+        assert "firstness_allowed" in unit, f"{chapter} missing firstness_allowed"
         assert unit["risk_tier"] == EXPECTED_TIERS[chapter]
         assert unit["firstness_allowed"] is False
         assert len(unit["classical_substrate"]) >= 1
