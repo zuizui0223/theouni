@@ -127,6 +127,9 @@ jobs:
       - name: Validate prior-art and priority-claim firewall
         run: python scripts/validate_prior_art_firewall.py
 
+      - name: Validate citation-ready prior-art references
+        run: python scripts/validate_prior_art_reference_registry.py
+
       - name: Validate typed Chapter 9 synthesis
         run: python scripts/validate_typed_synthesis_matrix.py
 
