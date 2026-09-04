@@ -45,6 +45,8 @@ def main() -> None:
     draft_status = load(DRAFT_STATUS)
     audit = AUDIT.read_text(encoding="utf-8")
     deep = DEEP.read_text(encoding="utf-8")
+    audit_fold = audit.casefold()
+    deep_fold = deep.casefold()
 
     assert registry["schema_version"] == "theouni-prior-art-risk-registry.v1"
     assert registry["status"] == "priority_claims_blocked_pending_chapter_specific_audit"
@@ -145,15 +147,15 @@ def main() -> None:
     )
 
     # Human-readable audit must retain its own fail-closed warning.
-    assert "novelty firewall, not a firstness certificate" in audit.lower()
-    assert "Correctness of a theorem licenses the result" in audit
-    assert "Tier A" in audit
-    assert "package-only novelty posture" in deep
-    assert "failure to find an exact match cannot establish historical firstness" in deep
-    assert "Baburin & Cotterell" in deep
-    assert "Dömösi & Nehaniv" in deep
-    assert "Conant & Ashby" in deep
-    assert "Ravindran & Barto" in deep
+    assert "novelty firewall, not a firstness certificate" in audit_fold
+    assert "correctness of a theorem licenses the result" in audit_fold
+    assert "tier a" in audit_fold
+    assert "package-only novelty posture" in deep_fold
+    assert "failure to find an exact match cannot establish historical firstness" in deep_fold
+    assert "baburin & cotterell" in deep_fold
+    assert "dömösi & nehaniv" in deep_fold
+    assert "conant & ashby" in deep_fold
+    assert "ravindran & barto" in deep_fold
 
     print(
         "Validated prior-art firewall: 10 chapter units, all priority claims blocked; "
