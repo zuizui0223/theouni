@@ -97,10 +97,11 @@ def main() -> None:
         assert "unresolved" in unit["priority_status"]
         assert len(unit["direct_prior_motifs"]) >= 3
 
-    # Pin the most important downward novelty corrections.
+    # Pin the most important downward novelty corrections semantically rather than
+    # by one fragile wording choice.
     ch5 = by_chapter["chapter:5"]
     motifs5 = " ".join(ch5["direct_prior_motifs"]).lower()
-    assert "one-transition" in motifs5
+    assert "transition" in motifs5 and "blow-up" in motifs5
     assert "outerplanar" in motifs5
     assert "krohn" in motifs5
     assert "package" in ch5["priority_status"]
