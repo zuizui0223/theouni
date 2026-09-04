@@ -130,6 +130,9 @@ jobs:
       - name: Validate citation-ready prior-art references
         run: python scripts/validate_prior_art_reference_registry.py
 
+      - name: Validate chapter citation insertion plan
+        run: python scripts/validate_chapter_citation_plan.py
+
       - name: Validate typed Chapter 9 synthesis
         run: python scripts/validate_typed_synthesis_matrix.py
 
