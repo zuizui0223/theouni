@@ -124,6 +124,9 @@ jobs:
       - name: Validate theorem-level proved conditions
         run: python scripts/validate_proved_condition_registry.py
 
+      - name: Validate prior-art and priority-claim firewall
+        run: python scripts/validate_prior_art_firewall.py
+
       - name: Validate typed Chapter 9 synthesis
         run: python scripts/validate_typed_synthesis_matrix.py
 
