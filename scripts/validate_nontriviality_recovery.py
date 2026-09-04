@@ -107,12 +107,13 @@ def main() -> None:
     assert "0.47416" in by_chapter["chapter:8"]["numeric_anchor"]
     assert "0.85427" in by_chapter["chapter:8"]["numeric_anchor"]
 
-    # Pin the main contradiction/no-bound recoveries.
+    # Pin the main contradiction/no-bound recoveries semantically rather than by prose wording.
     assert "null" in by_chapter["chapter:1"]["contradiction_anchor"].lower()
     assert "all non-events" in by_chapter["chapter:2"]["contradiction_anchor"].lower()
     assert "nonnegative" in by_chapter["chapter:3"]["contradiction_anchor"].lower()
     assert "crossing" in by_chapter["chapter:4"]["contradiction_anchor"].lower()
-    assert "choose" in by_chapter["chapter:5"]["contradiction_anchor"].lower()
+    ch5_contra = by_chapter["chapter:5"]["contradiction_anchor"].lower()
+    assert "finite upper bound" in ch5_contra and "m" in ch5_contra and "contradict" in ch5_contra
     assert "f(1)" in by_chapter["chapter:6"]["contradiction_anchor"]
     assert "incompatible" in by_chapter["chapter:7"]["contradiction_anchor"].lower()
     assert "opposite sides" in by_chapter["chapter:8"]["contradiction_anchor"].lower()
