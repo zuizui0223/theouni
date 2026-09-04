@@ -1,0 +1,124 @@
+{
+  "schema_version": "theouni-chapter-citation-plan.v1",
+  "status": "citation_ready_for_research_chapters_pending_prose_integration",
+  "purpose": "Specify where established prior substrate is conceded and where the source-owned contribution begins, so v0.2 prose cannot cite neighbours without preserving novelty and claim ceilings.",
+  "writing_rule": [
+    "Name the established substrate before stating the source-owned contribution.",
+    "Cite the nearest verified reference IDs at the point of concession, not only in a bibliography.",
+    "State what the cited work already solves before stating what remains different here.",
+    "Do not use priority language when the risk registry has firstness_allowed=false.",
+    "Do not imply that absence of an exact neighbour in the reference registry establishes historical novelty."
+  ],
+  "units": [
+    {
+      "chapter": "chapter:introduction",
+      "draft_file": "thesis/drafts/final/00_reuse_problem_v0.1.md",
+      "status": "pending_specific_prior_art_audit",
+      "reference_ids": [],
+      "insertion_location": "after the statement of the reuse/revision problem and before TU-1 is presented as the exact substrate",
+      "concession_sentence": "Compression, factorization and coding with side information have substantial established mathematical literatures; Chapter 0 therefore does not claim novelty for quotient factorization itself.",
+      "contribution_sentence": "The chapter's role is to formulate scientific responsibility revision as the common question and to use TU-1 as the exact internal boundary while leaving each later source programme scientifically independent.",
+      "claim_ceiling": "No firstness or complete prior-art claim until functional coding, experiment comparison and revisable sufficient-statistic literatures are audited directly.",
+      "v0_2_gate": "Complete the TU-1-specific nearest-neighbour audit across functional coding, experiment comparison and revisable sufficient-statistic literatures before adding external citations."
+    },
+    {
+      "chapter": "chapter:1",
+      "draft_file": "thesis/drafts/final/01_observation_boundary_v0.1.md",
+      "status": "citation_ready",
+      "reference_ids": ["bellman_astrom_1970"],
+      "insertion_location": "Section 1, immediately after separating biological proximity from identification strength and before the rank theorem",
+      "concession_sentence": "Structural identifiability—whether internal structure can be recovered from input-output observations—is a classical problem, and Bellman and Åström (1970) already framed experiment choice in terms of uniquely determining internal couplings.",
+      "contribution_sentence": "The present chapter does not claim rank-nullity as new; it uses the exact row-span condition to diagnose ecological joint-measurement bottlenecks and to separate channel identification from proxy-calibration transport.",
+      "claim_ceiling": "Do not say richer biological measurements are generally weak or that the rank condition is a new general identifiability theorem.",
+      "v0_2_gate": "Insert the structural-identifiability citation and retain k-1-r only as a corollary of the general observation-rank theorem."
+    },
+    {
+      "chapter": "chapter:2",
+      "draft_file": "thesis/drafts/final/02_precedence_not_warning_v0.1.md",
+      "status": "citation_ready",
+      "reference_ids": ["boettiger_hastings_2012", "boettiger_hastings_2013"],
+      "insertion_location": "Section 1, after defining event-conditioned precedence versus predictive warning validity",
+      "concession_sentence": "Selection on observed transitions and false-positive early-warning inference are established concerns; Boettiger and Hastings showed that conditioning on systems known to transition can produce misleading warning evidence and that some stochastic transitions need not carry classical early-warning signals.",
+      "contribution_sentence": "The distinctive result here is a frozen-rule replication that remains perfect for its original precedence estimand but reaches the sharp chance-discrimination endpoint when the non-event denominator is restored without retuning.",
+      "claim_ceiling": "Do not claim discovery of early-warning false positives, ROC/AUC logic, or general non-predictiveness of genetic diversity.",
+      "v0_2_gate": "Place both early-warning precedents before the P1/P2 denominator theorem and keep the 35/48 and 33/49 pairs visible."
+    },
+    {
+      "chapter": "chapter:3",
+      "draft_file": "thesis/drafts/final/03_next_measurement_v0.1.md",
+      "status": "citation_ready",
+      "reference_ids": ["lindley_1956", "golovin_krause_2011"],
+      "insertion_location": "Sections 1-2, before introducing MROD's admissible mechanism region and information value",
+      "concession_sentence": "Information-based experimental design and adaptive sequential selection are established fields, from Lindley's information measure for experiments to later adaptive optimization results such as adaptive submodularity.",
+      "contribution_sentence": "MROD's contribution is not the invention of mutual-information utility; it is the fail-closed ecological mechanism-resolution contract, truth-peek-free benchmark, and the exact branchwise condition for when recomputation beats the strongest precommitted second measurement.",
+      "claim_ceiling": "Do not claim universal greedy optimality or a new general theorem of adaptive design.",
+      "v0_2_gate": "Cite both information-design and adaptive-selection substrate before V(Q), then foreground the common-argmax iff theorem and G2 validation."
+    },
+    {
+      "chapter": "chapter:4",
+      "draft_file": "thesis/drafts/final/04_multiple_states_v0.1.md",
+      "status": "citation_ready",
+      "reference_ids": ["debreu_1954", "herden_levin_2012"],
+      "insertion_location": "before the common-scalar representability theorem",
+      "concession_sentence": "Representing an ordered set of alternatives by a scalar utility has a deep classical literature associated with Debreu and later generalizations of utility representation for preorders.",
+      "contribution_sentence": "The chapter therefore treats scalar representability as mathematical substrate and foregrounds the ecological result: the locked eco-genetic target vectors violate the required product-order chain, with independent viability/occupancy and alignment witnesses showing why the failure matters biologically.",
+      "claim_ceiling": "Do not claim invention of scalar utility representation or the impossibility of all approximate or target-specific ecological indices.",
+      "v0_2_gate": "Cite scalar-representation substrate before the iff theorem and make the locked H3 crossing the empirical reason the theorem matters."
+    },
+    {
+      "chapter": "chapter:5",
+      "draft_file": "thesis/drafts/final/05_open_future_memory_v0.1.md",
+      "status": "citation_ready_priority_unresolved",
+      "reference_ids": ["crutchfield_young_1989", "krohn_mateosian_rhodes_1967", "domosi_nehaniv_2000", "baburin_cotterell_2024"],
+      "insertion_location": "Introduction/prior-art subsection before stating the fixed-regular extremal theorem",
+      "concession_sentence": "Predictive/minimal-state constructions, algebraic decomposition of finite machines, bounded-local automata realizations and transition-edit state-complexity blow-up all have direct precedents; none of these motifs alone is claimed as new here.",
+      "contribution_sentence": "The defensible object is the simultaneous response-interface package used in this chapter: one fixed plant and primitive alphabet, a one-transition future-grammar opening, bounded local resources and a one-edge focal cut, together with an exact m-bit closed/open response-memory gap that attains the declared finite-domain bound.",
+      "claim_ceiling": "Historical priority of the complete package remains unresolved; never claim first one-transition blow-up, first bounded-local realization or invention of future equivalence.",
+      "v0_2_gate": "Add a nearest-neighbour comparison table in prose or supplement and keep package-only wording."
+    },
+    {
+      "chapter": "chapter:6",
+      "draft_file": "thesis/drafts/final/06_capacity_outgrows_knowledge_v0.1.md",
+      "status": "citation_ready_priority_unresolved",
+      "reference_ids": ["ashby_1956", "conant_ashby_1970", "givan_dean_greig_2003"],
+      "insertion_location": "Introduction before the capability-resolution divergence theorem",
+      "concession_sentence": "Cybernetics already connects regulation to requisite variety and internal models, while control and planning literatures contain exact state-abstraction and minimization frameworks.",
+      "contribution_sentence": "CREST therefore foregrounds the quantified cross-gate separation rather than the broad control-needs-information idea: one action and one added carrier world coexist with an arbitrary m-bit increase in required present-state and monitoring resolution while a coarser declared target remains reportable.",
+      "claim_ceiling": "Focused search has not cleared historical priority for this exact conjunction; do not claim invention of requisite variety, good-regulator modeling or state abstraction.",
+      "v0_2_gate": "Cite Ashby/Conant-Ashby/Givan before the theorem, then state the exact +1 versus m-bit separation and coarse-target retention."
+    },
+    {
+      "chapter": "chapter:7",
+      "draft_file": "thesis/drafts/final/07_law_replacement_v0.1.md",
+      "status": "citation_ready_priority_unresolved",
+      "reference_ids": ["givan_dean_greig_2003", "ravindran_barto_2003"],
+      "insertion_location": "Introduction before the portability iff criterion",
+      "concession_sentence": "Exact state minimization, bisimulation-style equivalence and homomorphic abstraction/transfer between decision processes are established substrates.",
+      "contribution_sentence": "MLTR's contribution locus is narrower and source-relative: it asks whether one already meaningful source label map retains one inherited meaning across declared replacement routes, and characterizes complete carried-map equality classes as the exact immutable history modes required when route independence fails.",
+      "claim_ceiling": "Do not claim invention of bisimulation, homomorphism, partition refinement or generic path dependence; route-semantic priority remains unresolved.",
+      "v0_2_gate": "Insert Givan and Ravindran-Barto before the master theorem and make inherited label semantics—not generic abstraction—the comparison dimension."
+    },
+    {
+      "chapter": "chapter:8",
+      "draft_file": "thesis/drafts/final/08_repetition_not_diversity_v0.1.md",
+      "status": "citation_ready_priority_unresolved",
+      "reference_ids": ["mackenzie_nichols_et_al_2002", "mackenzie_royle_2005", "bailey_hines_nichols_mackenzie_2007", "littlewood_1996"],
+      "insertion_location": "Introduction before the equal-effort allocation theorem",
+      "concession_sentence": "Imperfect detection, allocation of repeat survey effort, and the reliability consequences of common-mode failure versus diversity are established topics in ecology and reliability theory.",
+      "contribution_sentence": "CED therefore does not sell repetition/diversity as a new principle; under its declared one-sided two-read contract it derives the exact target-specific reversal threshold p*=2-2^(1/k), then separates that finite-effort boundary from the asymptotic availability ceiling for a fixed number of modes.",
+      "claim_ceiling": "The formula's historical priority remains unresolved, and the theorem does not extend automatically to correlated failures, heterogeneous costs, false positives or adaptive allocation.",
+      "v0_2_gate": "Cite occupancy-design and common-mode-diversity precedents before the threshold theorem; present both sides of the reversal and the separate large-repeat ceiling."
+    },
+    {
+      "chapter": "chapter:synthesis",
+      "draft_file": "thesis/drafts/final/09_no_privileged_direction_v0.1.md",
+      "status": "synthesis_uses_chapter_specific_references",
+      "reference_ids": [],
+      "insertion_location": "throughout the eight-row synthesis; citations are inherited from the source-owned chapter comparisons rather than introduced as a new global prior-art family",
+      "concession_sentence": "Chapter 9 does not seek mathematical priority for a new universal adequacy theorem; each row remains tied to its chapter-specific literature and proved condition.",
+      "contribution_sentence": "The synthesis contribution is architectural: eight differently typed shortcuts are replaced by responsibility-specific licensing conditions without pooling them into one scalar information or adequacy order.",
+      "claim_ceiling": "Do not claim a universal theorem of non-monotone scientific adequacy or a new global literature family.",
+      "v0_2_gate": "When citations are integrated, point each synthesis row back to the chapter-specific literature rather than creating uncited global claims."
+    }
+  ]
+}
