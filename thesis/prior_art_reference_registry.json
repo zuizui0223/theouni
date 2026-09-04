@@ -1,0 +1,344 @@
+{
+  "schema_version": "theouni-prior-art-reference-registry.v1",
+  "status": "citation_ready_core_neighbours_with_priority_unresolved",
+  "verified_on": "2026-09-04",
+  "policy": {
+    "purpose": "Provide verified bibliographic anchors for classical substrate and direct nearest neighbours without converting literature search into historical firstness clearance.",
+    "allowed_relations": [
+      "foundational_classical_substrate",
+      "direct_nearest_neighbour",
+      "adjacent_methodological_substrate",
+      "direct_ecological_precedent"
+    ],
+    "priority_rule": "An entry can support statements about prior substrate or proximity. No entry, and no absence of an entry, licenses firstness for a source theorem."
+  },
+  "references": [
+    {
+      "id": "bellman_astrom_1970",
+      "authors": ["Richard Bellman", "Karl J. Åström"],
+      "year": 1970,
+      "title": "On structural identifiability",
+      "venue": "Mathematical Biosciences",
+      "volume": "7",
+      "issue": "3-4",
+      "pages": "329-339",
+      "doi": "10.1016/0025-5564(70)90132-X",
+      "identifier_url": "https://doi.org/10.1016/0025-5564(70)90132-X",
+      "metadata_status": "verified_publisher",
+      "role": "foundational_classical_substrate"
+    },
+    {
+      "id": "boettiger_hastings_2012",
+      "authors": ["Carl Boettiger", "Alan Hastings"],
+      "year": 2012,
+      "title": "Early warning signals and the prosecutor's fallacy",
+      "venue": "Proceedings of the Royal Society B: Biological Sciences",
+      "volume": "279",
+      "issue": "1748",
+      "pages": "4734-4739",
+      "doi": "10.1098/rspb.2012.2085",
+      "identifier_url": "https://doi.org/10.1098/rspb.2012.2085",
+      "metadata_status": "verified_pubmed_pmc",
+      "role": "direct_ecological_precedent"
+    },
+    {
+      "id": "boettiger_hastings_2013",
+      "authors": ["Carl Boettiger", "Alan Hastings"],
+      "year": 2013,
+      "title": "No early warning signals for stochastic transitions: insights from large deviation theory",
+      "venue": "Proceedings of the Royal Society B: Biological Sciences",
+      "volume": "280",
+      "issue": "1766",
+      "pages": "20131372",
+      "doi": "10.1098/rspb.2013.1372",
+      "identifier_url": "https://doi.org/10.1098/rspb.2013.1372",
+      "metadata_status": "verified_pmc",
+      "role": "direct_ecological_precedent"
+    },
+    {
+      "id": "lindley_1956",
+      "authors": ["Dennis V. Lindley"],
+      "year": 1956,
+      "title": "On a Measure of the Information Provided by an Experiment",
+      "venue": "The Annals of Mathematical Statistics",
+      "volume": "27",
+      "issue": "4",
+      "pages": "986-1005",
+      "doi": null,
+      "alternate_identifier": "JSTOR 2237191",
+      "identifier_url": "https://www.jstor.org/stable/2237191",
+      "metadata_status": "verified_jstor",
+      "role": "foundational_classical_substrate"
+    },
+    {
+      "id": "golovin_krause_2011",
+      "authors": ["Daniel Golovin", "Andreas Krause"],
+      "year": 2011,
+      "title": "Adaptive Submodularity: Theory and Applications in Active Learning and Stochastic Optimization",
+      "venue": "Journal of Artificial Intelligence Research",
+      "volume": "42",
+      "issue": null,
+      "pages": "427-486",
+      "doi": "10.1613/JAIR.3278",
+      "identifier_url": "https://doi.org/10.1613/JAIR.3278",
+      "metadata_status": "verified_jair_index",
+      "role": "adjacent_methodological_substrate"
+    },
+    {
+      "id": "debreu_1954",
+      "authors": ["Gerard Debreu"],
+      "year": 1954,
+      "title": "Representation of a Preference Ordering by a Numerical Function",
+      "venue": "Decision Processes",
+      "editors": ["R. M. Thrall", "C. H. Coombs", "R. L. Davis"],
+      "publisher": "Wiley",
+      "pages": "159-165",
+      "doi": null,
+      "identifier_url": null,
+      "metadata_status": "verified_bibliographic_source_original_no_doi",
+      "role": "foundational_classical_substrate"
+    },
+    {
+      "id": "herden_levin_2012",
+      "authors": ["Gerhard Herden", "Vladimir L. Levin"],
+      "year": 2012,
+      "title": "Utility representation theorems for Debreu separable preorders",
+      "venue": "Journal of Mathematical Economics",
+      "volume": "48",
+      "issue": "3",
+      "pages": "148-154",
+      "doi": "10.1016/j.jmateco.2012.02.005",
+      "identifier_url": "https://doi.org/10.1016/j.jmateco.2012.02.005",
+      "metadata_status": "verified_publisher",
+      "role": "adjacent_methodological_substrate"
+    },
+    {
+      "id": "crutchfield_young_1989",
+      "authors": ["James P. Crutchfield", "Karl Young"],
+      "year": 1989,
+      "title": "Inferring Statistical Complexity",
+      "venue": "Physical Review Letters",
+      "volume": "63",
+      "issue": "2",
+      "pages": "105-108",
+      "doi": "10.1103/PhysRevLett.63.105",
+      "identifier_url": "https://doi.org/10.1103/PhysRevLett.63.105",
+      "metadata_status": "verified_aps",
+      "role": "adjacent_methodological_substrate"
+    },
+    {
+      "id": "krohn_mateosian_rhodes_1967",
+      "authors": ["Kenneth Krohn", "Richard Mateosian", "John Rhodes"],
+      "year": 1967,
+      "title": "Methods of the algebraic theory of machines: I. Decomposition theorem for generalized machines; Properties preserved under series and parallel compositions of machines",
+      "venue": "Journal of Computer and System Sciences",
+      "volume": "1",
+      "issue": "1",
+      "pages": "55-85",
+      "doi": "10.1016/S0022-0000(67)80007-2",
+      "identifier_url": "https://doi.org/10.1016/S0022-0000(67)80007-2",
+      "metadata_status": "verified_publisher",
+      "role": "direct_nearest_neighbour"
+    },
+    {
+      "id": "domosi_nehaniv_2000",
+      "authors": ["Pál Dömösi", "Chrystopher L. Nehaniv"],
+      "year": 2000,
+      "title": "On complete systems of automata",
+      "venue": "Theoretical Computer Science",
+      "volume": "245",
+      "issue": "1",
+      "pages": "27-54",
+      "doi": "10.1016/S0304-3975(99)00274-1",
+      "identifier_url": "https://doi.org/10.1016/S0304-3975(99)00274-1",
+      "metadata_status": "verified_publisher",
+      "role": "direct_nearest_neighbour"
+    },
+    {
+      "id": "baburin_cotterell_2024",
+      "authors": ["Ivan Baburin", "Ryan Cotterell"],
+      "year": 2024,
+      "title": "Blow-up in Non-Deterministic Automata",
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "doi": null,
+      "alternate_identifier": "arXiv:2407.09891",
+      "identifier_url": "https://arxiv.org/abs/2407.09891",
+      "metadata_status": "verified_arxiv",
+      "role": "direct_nearest_neighbour"
+    },
+    {
+      "id": "ashby_1956",
+      "authors": ["W. Ross Ashby"],
+      "year": 1956,
+      "title": "An Introduction to Cybernetics",
+      "venue": "Book",
+      "publisher": "Chapman & Hall",
+      "publication_place": "London",
+      "pages": "ix+295",
+      "doi": null,
+      "identifier_url": null,
+      "metadata_status": "verified_bibliographic_catalogue",
+      "role": "foundational_classical_substrate"
+    },
+    {
+      "id": "conant_ashby_1970",
+      "authors": ["Roger C. Conant", "W. Ross Ashby"],
+      "year": 1970,
+      "title": "Every good regulator of a system must be a model of that system",
+      "venue": "International Journal of Systems Science",
+      "volume": "1",
+      "issue": "2",
+      "pages": "89-97",
+      "doi": "10.1080/00207727008920220",
+      "identifier_url": "https://doi.org/10.1080/00207727008920220",
+      "metadata_status": "verified_publisher",
+      "role": "direct_nearest_neighbour"
+    },
+    {
+      "id": "givan_dean_greig_2003",
+      "authors": ["Robert Givan", "Thomas Dean", "Matthew Greig"],
+      "year": 2003,
+      "title": "Equivalence notions and model minimization in Markov decision processes",
+      "venue": "Artificial Intelligence",
+      "volume": "147",
+      "issue": "1-2",
+      "pages": "163-223",
+      "doi": "10.1016/S0004-3702(02)00376-4",
+      "identifier_url": "https://doi.org/10.1016/S0004-3702(02)00376-4",
+      "metadata_status": "verified_publisher",
+      "role": "direct_nearest_neighbour"
+    },
+    {
+      "id": "ravindran_barto_2003",
+      "authors": ["Balaraman Ravindran", "Andrew G. Barto"],
+      "year": 2003,
+      "title": "SMDP Homomorphisms: An Algebraic Approach to Abstraction in Semi-Markov Decision Processes",
+      "venue": "Proceedings of the Eighteenth International Joint Conference on Artificial Intelligence (IJCAI-03)",
+      "publisher": "AAAI Press",
+      "pages": "1011-1016",
+      "doi": null,
+      "identifier_url": "https://www.ijcai.org/Proceedings/03/Papers/145.pdf",
+      "metadata_status": "verified_ijcai_author_bibliography",
+      "role": "direct_nearest_neighbour"
+    },
+    {
+      "id": "mackenzie_nichols_et_al_2002",
+      "authors": ["Darryl I. MacKenzie", "James D. Nichols", "Gideon B. Lachman", "Sam Droege", "J. Andrew Royle", "Catherine A. Langtimm"],
+      "year": 2002,
+      "title": "Estimating site occupancy rates when detection probabilities are less than one",
+      "venue": "Ecology",
+      "volume": "83",
+      "issue": "8",
+      "pages": "2248-2255",
+      "doi": "10.1890/0012-9658(2002)083[2248:ESORWD]2.0.CO;2",
+      "identifier_url": "https://doi.org/10.1890/0012-9658(2002)083%5B2248:ESORWD%5D2.0.CO;2",
+      "metadata_status": "verified_usgs",
+      "role": "foundational_classical_substrate"
+    },
+    {
+      "id": "mackenzie_royle_2005",
+      "authors": ["Darryl I. MacKenzie", "J. Andrew Royle"],
+      "year": 2005,
+      "title": "Designing occupancy studies: general advice and allocating survey effort",
+      "venue": "Journal of Applied Ecology",
+      "volume": "42",
+      "issue": "6",
+      "pages": "1105-1114",
+      "doi": "10.1111/j.1365-2664.2005.01098.x",
+      "identifier_url": "https://doi.org/10.1111/j.1365-2664.2005.01098.x",
+      "metadata_status": "verified_usgs_publisher",
+      "role": "direct_ecological_precedent"
+    },
+    {
+      "id": "bailey_hines_nichols_mackenzie_2007",
+      "authors": ["Larissa L. Bailey", "James E. Hines", "James D. Nichols", "Darryl I. MacKenzie"],
+      "year": 2007,
+      "title": "Sampling design trade-offs in occupancy studies with imperfect detection: examples and software",
+      "venue": "Ecological Applications",
+      "volume": "17",
+      "issue": "1",
+      "pages": "281-290",
+      "doi": "10.1890/1051-0761(2007)017[0281:SDTIOS]2.0.CO;2",
+      "identifier_url": "https://doi.org/10.1890/1051-0761(2007)017%5B0281:SDTIOS%5D2.0.CO;2",
+      "metadata_status": "verified_pubmed",
+      "role": "direct_ecological_precedent"
+    },
+    {
+      "id": "littlewood_1996",
+      "authors": ["Bev Littlewood"],
+      "year": 1996,
+      "title": "The impact of diversity upon common mode failures",
+      "venue": "Reliability Engineering & System Safety",
+      "volume": "51",
+      "issue": "1",
+      "pages": "101-113",
+      "doi": "10.1016/0951-8320(95)00120-4",
+      "identifier_url": "https://doi.org/10.1016/0951-8320(95)00120-4",
+      "metadata_status": "verified_publisher_institutional_repository",
+      "role": "direct_nearest_neighbour"
+    }
+  ],
+  "chapter_links": [
+    {
+      "chapter": "chapter:1",
+      "reference_ids": ["bellman_astrom_1970"],
+      "comparison_status": "classical_identifiability_substrate_explicitly_precedes_boundary_rank_theorem",
+      "what_remains": "Ecological joint-measurement, channel-anchor and calibration-transport design consequences, not rank-nullity priority."
+    },
+    {
+      "chapter": "chapter:2",
+      "reference_ids": ["boettiger_hastings_2012", "boettiger_hastings_2013"],
+      "comparison_status": "direct_early_warning_false_positive_and_transition_precedent",
+      "what_remains": "Frozen rule replication plus exact full-denominator sharp endpoint in the two declared finite-model ensembles."
+    },
+    {
+      "chapter": "chapter:3",
+      "reference_ids": ["lindley_1956", "golovin_krause_2011"],
+      "comparison_status": "information_design_and_adaptive_selection_are_classical",
+      "what_remains": "Mechanism-resolving fail-closed candidate contract, truth-peek-free benchmark, and exact branchwise condition tied to this ecological mechanism-learning object."
+    },
+    {
+      "chapter": "chapter:4",
+      "reference_ids": ["debreu_1954", "herden_levin_2012"],
+      "comparison_status": "scalar_order_representation_has_deep_classical_precedent",
+      "what_remains": "Locked eco-genetic crossing that violates the declared exact monotone-scalar chain condition, plus independent state-separation witnesses."
+    },
+    {
+      "chapter": "chapter:5",
+      "reference_ids": ["crutchfield_young_1989", "krohn_mateosian_rhodes_1967", "domosi_nehaniv_2000", "baburin_cotterell_2024"],
+      "comparison_status": "multiple_direct_motifs_found_exact_package_priority_unresolved",
+      "what_remains": "Only the simultaneous fixed-resource exact response-interface extremal package is defensible; historical priority remains unresolved."
+    },
+    {
+      "chapter": "chapter:6",
+      "reference_ids": ["ashby_1956", "conant_ashby_1970", "givan_dean_greig_2003"],
+      "comparison_status": "regulatory_variety_model_and_state_abstraction_are_classical",
+      "what_remains": "Exact +1-carrier versus arbitrary m-bit required-resolution separation with coarse-target retention; focused search did not clear priority."
+    },
+    {
+      "chapter": "chapter:7",
+      "reference_ids": ["givan_dean_greig_2003", "ravindran_barto_2003"],
+      "comparison_status": "bisimulation_minimization_and_homomorphic_transfer_are_direct_neighbours",
+      "what_remains": "Inherited carried-map route semantics and exact minimum history modes before source-relative repair; priority unresolved."
+    },
+    {
+      "chapter": "chapter:8",
+      "reference_ids": ["mackenzie_nichols_et_al_2002", "mackenzie_royle_2005", "bailey_hines_nichols_mackenzie_2007", "littlewood_1996"],
+      "comparison_status": "imperfect_detection_allocation_and_common_mode_diversity_are_established",
+      "what_remains": "The declared target-specific exact two-read threshold p*=2-2^(1/k) and its placement beside the separate availability ceiling; formula priority unresolved."
+    }
+  ],
+  "unlinked_units": [
+    {
+      "chapter": "chapter:introduction",
+      "reason": "TU-1 needs a separate functional-coding/revisable-statistic audit before citation-ready nearest neighbours are locked."
+    },
+    {
+      "chapter": "chapter:synthesis",
+      "reason": "Chapter 9 seeks no mathematical priority; it cites the eight chapter-specific literatures and the TU-1 substrate rather than a new global prior-art family."
+    }
+  ]
+}
