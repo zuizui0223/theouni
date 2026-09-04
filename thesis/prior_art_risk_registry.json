@@ -1,0 +1,156 @@
+{
+  "schema_version": "theouni-prior-art-risk-registry.v1",
+  "status": "priority_claims_blocked_pending_chapter_specific_audit",
+  "audit_date": "2026-09-04",
+  "policy": {
+    "result_language_allowed": [
+      "we prove, for the declared model class",
+      "we derive an exact condition for",
+      "we construct a sharp finite witness in which",
+      "we recover a source-specific empirical boundary under a frozen protocol",
+      "we translate established mathematical substrate into an ecological identification or design consequence"
+    ],
+    "priority_language_blocked_without_explicit_clearance": [
+      "we are the first",
+      "for the first time",
+      "first-ever",
+      "novel theorem",
+      "new mathematical principle",
+      "previously unknown",
+      "first proof of"
+    ],
+    "rule": "Correctness of a theorem licenses the result but does not by itself license historical priority. A focused search may downgrade a novelty claim; failure to find a neighbour does not clear firstness."
+  },
+  "units": [
+    {
+      "chapter": "chapter:introduction",
+      "source": "theouni/TU-1",
+      "risk_tier": "C",
+      "classical_substrate": ["quotient factorization", "finite coding with side information", "sufficient-statistic style compression"],
+      "direct_prior_motifs": ["state-only factorization is elementary quotient logic", "minimum auxiliary side information is close to zero-error functional coding"],
+      "defensible_contribution": "Scientific revision after a previously licensed compression: exact revisability, minimum revision side information, and the separation between average refinement debt and worst-case locally hidden revision debt.",
+      "forbidden_priority_claims": ["invention of quotient factorization", "invention of side-information coding", "one theorem subsumes Chapters 1-8"],
+      "priority_status": "synthesis_architecture_only_no_firstness",
+      "firstness_allowed": false,
+      "audit_sources": ["thesis/PROVED_CONDITION_PRIOR_ART_AUDIT_2026-09-04.md"],
+      "remaining_gate": "Audit functional coding, experiment comparison and revisable sufficient-statistic literatures before any priority statement."
+    },
+    {
+      "chapter": "chapter:1",
+      "source": "boundary",
+      "risk_tier": "B",
+      "classical_substrate": ["structural identifiability", "rank-nullity", "observability and experimental design", "partial identification"],
+      "direct_prior_motifs": ["Bellman and Astrom 1970 structural identifiability", "linear observation-rank criteria are classical"],
+      "defensible_contribution": "Ecological mechanistic-evidence design: translate the exact rank condition into joint field-measurement, channel-anchor and calibration-transport consequences with fail-closed not-evaluable outcomes.",
+      "forbidden_priority_claims": ["invention of structural identifiability", "new rank-nullity theorem", "proximal biological measurements are generally weak"],
+      "priority_status": "classical_math_ecological_design_positioning",
+      "firstness_allowed": false,
+      "audit_sources": ["thesis/PROVED_CONDITION_PRIOR_ART_AUDIT_2026-09-04.md"],
+      "remaining_gate": "Complete direct comparison with ecological mechanism-measurement and partial-identification literature."
+    },
+    {
+      "chapter": "chapter:2",
+      "source": "EGWE",
+      "risk_tier": "B",
+      "classical_substrate": ["early-warning false-positive analysis", "selection bias conditional on events", "ROC and AUC"],
+      "direct_prior_motifs": ["Boettiger and Hastings prosecutor's-fallacy critique", "ROC/AUC evaluation of switching versus non-switching trajectories"],
+      "defensible_contribution": "A frozen replication that succeeds perfectly for the original event-conditioned precedence estimand yet attains the sharp chance-discrimination endpoint after the non-event denominator is restored.",
+      "forbidden_priority_claims": ["discovery of warning false positives", "invention of ROC/AUC", "genetic diversity is generally non-predictive"],
+      "priority_status": "frozen_empirical_sharp_endpoint_positioning",
+      "firstness_allowed": false,
+      "audit_sources": ["thesis/PROVED_CONDITION_PRIOR_ART_AUDIT_2026-09-04.md"],
+      "remaining_gate": "Finish prospective-prediction, censoring and ecological-forecasting comparison."
+    },
+    {
+      "chapter": "chapter:3",
+      "source": "mrod",
+      "risk_tier": "B",
+      "classical_substrate": ["Bayesian experimental design", "mutual-information utility", "adaptive experiment selection", "active learning"],
+      "direct_prior_motifs": ["Lindley 1956 information from experiments", "adaptive submodularity and modern active design"],
+      "defensible_contribution": "Mechanism-resolving ecological observation design with a fail-closed candidate contract, truth-peek-free G2 validation, and an exact branchwise condition for when recomputation adds value beyond the best static second choice.",
+      "forbidden_priority_claims": ["invention of mutual-information design", "universal optimality of adaptive greedy design", "the common-argmax equality fact is deep new decision theory"],
+      "priority_status": "method_integration_and_validation_not_information_theory_firstness",
+      "firstness_allowed": false,
+      "audit_sources": ["thesis/PROVED_CONDITION_PRIOR_ART_AUDIT_2026-09-04.md"],
+      "remaining_gate": "Compare directly with model discrimination, simulator-based design, active learning and ecological value-of-information."
+    },
+    {
+      "chapter": "chapter:4",
+      "source": "eco-genetic-criticality",
+      "risk_tier": "B",
+      "classical_substrate": ["utility and order representation", "multi-criteria/Pareto ordering", "composite ecological indicators"],
+      "direct_prior_motifs": ["Debreu-style scalar representation theory", "finite product-order comparability is elementary relative to the representation literature"],
+      "defensible_contribution": "The locked eco-genetic finite model violates the exact chain condition for one directionally coherent state score, with an observed target crossing plus independent viability/occupancy and alignment separations.",
+      "forbidden_priority_claims": ["invention of scalar utility representation", "no ecological health index can ever be useful", "all five states are always pairwise distinct"],
+      "priority_status": "ecological_locked_counterexample_primary",
+      "firstness_allowed": false,
+      "audit_sources": ["thesis/PROVED_CONDITION_PRIOR_ART_AUDIT_2026-09-04.md"],
+      "remaining_gate": "Audit composite biodiversity indicators, multiattribute ecological scores and eco-evolutionary state definitions."
+    },
+    {
+      "chapter": "chapter:5",
+      "source": "CCOC",
+      "risk_tier": "A",
+      "classical_substrate": ["Myhill-Nerode future equivalence", "minimal automata and transducers", "computational-mechanics causal states", "sequential-machine decomposition", "bounded-local and outerplanar automata products"],
+      "direct_prior_motifs": ["Krohn-Mateosian-Rhodes 1967 machine decomposition", "Domosi-Nehaniv 2000 bounded-factor/outerplanar automata realization", "Baburin-Cotterell 2024 notes single-transition exponential state-complexity blow-up motifs"],
+      "defensible_contribution": "The simultaneous fixed-resource exact response-interface package: one future-grammar transition edit, one-edge focal cut, bounded local resources, an exact m-bit closed/open response-memory gap attaining the finite-domain bound, and a separate positive coherence boundary.",
+      "forbidden_priority_claims": ["first one-transition exponential state blow-up", "first bounded-local realization of arbitrary finite machine complexity", "invention of future equivalence", "narrow real corridors necessarily hide large memory"],
+      "priority_status": "package_distinctness_plausible_but_priority_unresolved",
+      "firstness_allowed": false,
+      "audit_sources": ["thesis/PROVED_CONDITION_PRIOR_ART_AUDIT_2026-09-04.md", "thesis/PRIOR_ART_DEEP_AUDIT_TIER_A_2026-09-04.md"],
+      "remaining_gate": "Deeper historical search across sequential machines, transducers, descriptional complexity, interface/communication complexity and causal-state constructions."
+    },
+    {
+      "chapter": "chapter:6",
+      "source": "CREST",
+      "risk_tier": "A",
+      "classical_substrate": ["Ashby's requisite variety", "Conant-Ashby good-regulator theorem", "MDP/POMDP state abstraction", "bisimulation and sufficient-information control"],
+      "direct_prior_motifs": ["regulation requires sufficient variety/information", "successful simple regulation requires a model under Conant-Ashby assumptions", "exact control-relevant state minimization is classical"],
+      "defensible_contribution": "A connected all-m cross-gate separation with carrier gain fixed at one world, required state 1 to 2^m, monitoring debt 0 to m bits under unchanged evidence, and retained reportability of a coarser target.",
+      "forbidden_priority_claims": ["invention of requisite variety", "invention of good-regulator modeling", "every small intervention causes large monitoring debt", "m bits are empirical monitoring cost"],
+      "priority_status": "exact_cross_gate_neighbour_not_found_in_focused_search_priority_unresolved",
+      "firstness_allowed": false,
+      "audit_sources": ["thesis/PROVED_CONDITION_PRIOR_ART_AUDIT_2026-09-04.md", "thesis/PRIOR_ART_DEEP_AUDIT_TIER_A_2026-09-04.md"],
+      "remaining_gate": "Deep search for action/capability expansion results tied to exact abstraction-size or information-state lower bounds."
+    },
+    {
+      "chapter": "chapter:7",
+      "source": "MLTR",
+      "risk_tier": "A",
+      "classical_substrate": ["bisimulation", "lumpability", "MDP/SMDP homomorphisms", "partition refinement", "transfer across MDPs"],
+      "direct_prior_motifs": ["Givan-Dean-Greig exact MDP minimization", "Ravindran-Barto homomorphisms for abstraction and transfer", "transfer literature requires source-target mappings when state/action spaces differ"],
+      "defensible_contribution": "Source-relative semantic transport: route-free inherited meaning iff complete carried terminal maps agree; otherwise equality classes of carried maps are exactly the immutable history modes required before unique coarsest source-relative repair.",
+      "forbidden_priority_claims": ["invention of bisimulation or homomorphism", "invention of partition refinement", "generic novelty for history matters", "terminal data identify a natural history variable"],
+      "priority_status": "route_semantics_history_neighbour_not_found_in_focused_search_priority_unresolved",
+      "firstness_allowed": false,
+      "audit_sources": ["thesis/PROVED_CONDITION_PRIOR_ART_AUDIT_2026-09-04.md", "thesis/PRIOR_ART_DEEP_AUDIT_TIER_A_2026-09-04.md"],
+      "remaining_gate": "Deep comparison with MDP homomorphism composition, categorical/system morphisms, abstraction transfer and path-dependent state representations."
+    },
+    {
+      "chapter": "chapter:8",
+      "source": "CED",
+      "risk_tier": "B",
+      "classical_substrate": ["occupancy/imperfect-detection survey allocation", "replication design", "common-mode failure", "reliability diversity"],
+      "direct_prior_motifs": ["MacKenzie-Royle survey-effort allocation", "Bailey et al. imperfect-detection trade-offs", "Littlewood common-mode failure/diversity"],
+      "defensible_contribution": "A target-specific exact two-read depth-versus-independent-mode boundary p*=2-2^(1/k), plus a separate asymptotic availability ceiling and target-safe reporting architecture.",
+      "forbidden_priority_claims": ["invention of imperfect-detection replication design", "discovery of common-mode failure", "diversity is always better", "historical firstness of the threshold formula without focused confirmation"],
+      "priority_status": "formula_priority_unresolved_general_substrate_classical",
+      "firstness_allowed": false,
+      "audit_sources": ["thesis/PROVED_CONDITION_PRIOR_ART_AUDIT_2026-09-04.md", "thesis/PRIOR_ART_DEEP_AUDIT_TIER_A_2026-09-04.md"],
+      "remaining_gate": "Search specifically for closed-form equal-effort common-mode allocation thresholds matching the exact p* formula."
+    },
+    {
+      "chapter": "chapter:synthesis",
+      "source": "theouni/TU-1 plus Chapters 1-8",
+      "risk_tier": "C",
+      "classical_substrate": ["all chapter-specific mathematical substrates remain source-owned", "TU-1 factorization is the only exact theorem substrate of the synthesis"],
+      "direct_prior_motifs": ["multi-dimensional scientific adequacy has many established analogues; no global firstness claim is needed"],
+      "defensible_contribution": "Typed synthesis: eight different ecological inference shortcuts are replaced by responsibility-specific proved conditions or sharp frozen decisions, without collapsing them into one scalar adequacy order.",
+      "forbidden_priority_claims": ["one new global theorem unifies all eight chapters", "first universal theory of scientific adequacy", "all richness axes share one common order"],
+      "priority_status": "bounded_synthesis_only_no_firstness",
+      "firstness_allowed": false,
+      "audit_sources": ["thesis/PROVED_CONDITION_PRIOR_ART_AUDIT_2026-09-04.md", "thesis/typed_synthesis_matrix.json"],
+      "remaining_gate": "Maintain synthesis language; no priority clearance is sought for Chapter 9."
+    }
+  ]
+}
