@@ -1,88 +1,192 @@
 # Thesis writing workspace
 
-This directory converts the preferred dissertation traversal into a source-bounded writing workflow. It does not copy source manuscripts into `theouni`, transfer theorem ownership, or turn bridge modules into independent novelty claims.
+This directory now separates **scientific ownership** from **chapter/paper organization**.
+
+- Source repositories own proofs, code, evidence, frozen numerical results, and reproducibility.
+- `theouni` owns the cross-repository dependency audit, dissertation traversal, and synthesis.
+- A repository is **not** automatically a chapter or a paper.
 
 ## Central thesis
 
-> **When does a scientific representation that is adequate for one ecological task cease to be reusable after capability, future grammar, structural replacement, mechanism responsibility, evidence, target, representation, or domain changes?**
+> **When does a scientific representation that is adequate for one ecological responsibility cease to be reusable when the responsibility, future, structure, mechanism, evidence, or target changes?**
 
-The dissertation is not organized as repeated answers to “what is ecological state?” Each research chapter owns one non-obvious forbidden inference and one source-owned result that makes the prohibition scientifically consequential.
+The preferred dissertation architecture is now five chapters, with three paper-scale research chapters.
 
-## Canonical order
+## Preferred five-chapter order
 
-1. General Introduction — *The Reuse Problem in Ecology*
-2. CREST — *When Conservation Capacity Outgrows Conservation Knowledge*
-3. CCOC — *When Closed Simplicity Fails under Open Futures*
-4. MLTR — *When Macro-Laws Do Not Survive Ecological Replacement*
-5. MRM — *When Visible Equivalence Fails under Mechanism Uncertainty*
-6. CED — *When Evidence Does Not License the State We Need*
-7. RACH + TU-2 — *When Learning the Cause and Licensing the Decision Diverge*
-8. Eco-genetic criticality + TU-3 — *Which State Actually Generates Functional Loss?*
-9. Eco-genetic warning extensions + TU-4 — *When an Early Signal Is Not a Warning*
-10. General Synthesis — *The Theory Universe: Adequacy Has No Privileged Direction of Travel*
+| # | Chapter | Research scale |
+|---:|---|---|
+| 0 | **再利用問題 — The Reuse Problem** | General introduction / TU-1 framing |
+| 1 | **生態遺伝状態は、何を予測するための状態か — Eco-genetic State Is Responsibility-Specific** | Integrated eco-genetic paper-scale chapter |
+| 2 | **未来が変わると、必要な状態も変わる — CREST: State under Changing Futures** | Integrated flagship theory chapter |
+| 3 | **必要な区別を、どう観測で回収するか — Learning the State You Need** | Integrated identification / observation-design methods chapter |
+| 4 | **総合 — 妥当性に特権的な方向はない** | General synthesis / TU-1 return |
 
-This is the preferred editorial traversal, not the only valid topological order in the Worldline Atlas.
+The machine-readable source of truth is [`series_architecture.json`](series_architecture.json). The detailed dependency audit is [`SERIES_DEPENDENCY_AUDIT_2026-09-06.md`](SERIES_DEPENDENCY_AUDIT_2026-09-06.md).
+
+## What happened to the previous ten units?
+
+Nothing is deleted.
+
+`final_chapter_architecture.json`, `chapter_registry.json`, the existing `chapters/final/`, `drafts/final/`, `source_maps/final/`, proved-condition registries, prior-art audits, and recovery ledgers remain valid as **component-level provenance and writing material**.
+
+The change is editorial:
+
+> **old rule:** one source repository / forbidden inference tends to become one chapter;
+>
+> **new rule:** source repositories remain evidence modules, while chapters and papers are organized around one scientific question that can absorb several modules without transferring ownership.
+
+The old ten-unit architecture is therefore a component map, not the preferred dissertation traversal.
+
+## Research Chapter 1 — Eco-genetic state validity
+
+### Question
+
+Can one eco-genetic representation simultaneously stand in for potential viability, realised occupancy, transition dynamics, and predictive warning?
+
+### Source modules
+
+- `eco-genetic-criticality` — state separation, fragmentation response, common-scalar representability;
+- `eco-genetic-warning-extensions` state-validity — exact next-transition counterexample plus locked horizon/replication propagation experiment;
+- `eco-genetic-warning-extensions` warning-validity — full-denominator warning audit and precedence/discrimination theorem.
+
+### Internal logic
+
+These are **horizontal adequacy tests**, not a theorem chain.
+
+```text
+same scientific programme / source contracts
+    |-- Can different biological targets share one scalar state?
+    |-- Do coarse marginals preserve the next transition and downstream risk?
+    `-- Does temporal precedence constitute predictive warning?
+```
+
+The warning result is not derived from the scalar-state theorem. The state-propagation result does not validate the warning statistic. The natural-data four-gate programme remains a companion measurement-validation paper and is not empirical validation of the finite closure.
+
+### Publication role
+
+Default: one integrated eco-genetic domain-theory paper **only if needed**. Existing EGC, warning-only, and state-validity manuscripts/bundles are retained as fallback assets rather than automatic separate submissions.
+
+## Research Chapter 2 — CREST
+
+### Question
+
+When does a previously adequate ecological state cease to be adequate after the relevant future changes?
+
+### Correct dependency architecture
+
+```text
+temporally extended ecological worlds + declared scientific contract
+        |
+        |-- CCOC: future/composition obstruction
+        |-- MLTR: structural replacement/history obstruction
+        |-- MRM : retained-mechanism response obstruction
+        |
+        v
+required CREST state / quotient
+        |
+        v
+CED: evidence licensing and honest report
+```
+
+This replaces the misleading dissertation sequence in which CCOC, CREST, MLTR, and CED appeared as successive theorem chapters.
+
+- `CCOC`, `MLTR`, and `MRM` are parallel ways a present-state merge can become inadequate.
+- CREST supplies the world/contract-relative state framework and the flagship capacity-versus-knowledge theorem.
+- `CED` is downstream: evidence may or may not license a distinction already required by the task.
+
+### Publication role
+
+This is the preferred **flagship theory paper**. Detailed CCOC/MLTR/MRM/CED theorem families can remain source-owned and appear as supporting sections or Supplementary Information instead of becoming four default papers.
+
+Working title:
+
+> **When Conservation Capacity Outgrows Conservation Knowledge: A Contract-Relative Theory of Ecological State**
+
+## Research Chapter 3 — Identification and observation design
+
+### Question
+
+Given a distinction that matters, can the current observation map identify it, and what should be measured next?
+
+### Source modules
+
+- `boundary` — structural identification boundary, rank criterion, and field-like same-observation/different-mechanism witness;
+- `mrod` — admissible mechanism region, observation information value, sequential recomputation, and frozen truth-peek-free benchmark.
+
+### Internal logic
+
+```text
+Can this observation change structural identifiability at all?
+        -> Boundary
+If ambiguity remains and several candidate observations are available,
+which should be acquired next?
+        -> MROD
+```
+
+This is a strong conceptual handoff, but there is no hard theorem dependency: MROD is not restricted to the multiplicative Boundary model.
+
+### Publication role
+
+Preferred integrated methods paper:
+
+> **From Identifiability Limits to Mechanism-Resolving Observation Design**
+
+The frozen MROD benchmark remains the principal method validation. The Boundary theorem and pollination-style witness become the structural-identification theory layer. Standalone Boundary and frozen MROD submission assets remain fallback versions until the integrated manuscript passes length and journal-format review.
+
+## Vertical dissertation logic versus horizontal paper independence
+
+There are **no hard theorem dependencies among the three research chapters**.
+
+The dissertation connects them by questions:
+
+```text
+Eco-genetic
+  demonstrates that adequacy changes with the job assigned to a representation
+        ->
+CREST
+  generalizes why future/structure/mechanism/evidence changes split required states
+        ->
+Observation design
+  asks how those required distinctions can be identified and measured efficiently
+```
+
+This gives the desired architecture:
+
+- **horizontal:** each research chapter can stand alone as a paper;
+- **vertical:** the dissertation has a coherent progression without pretending that one paper proves the next.
+
+## Publication strategy
+
+The default is now a **small-paper-count strategy**.
+
+1. CREST flagship theory paper.
+2. Boundary + MROD integrated methods paper.
+3. Conditional eco-genetic integrated paper only if that material is too large or domain-specific to serve as a substantial worked layer around the flagship programme.
+
+Do **not** default to one submission per source repository.
 
 ## Source-of-truth hierarchy
 
-1. Source repository manuscripts, proofs, evidence ledgers, and code own scientific claims.
-2. [`chapter_registry.json`](chapter_registry.json) owns stable chapter allocation, source handoffs, headline claims, forbidden inferences, and claim ceilings.
-3. [`draft_status.json`](draft_status.json) owns mutable prose progress and next drafting actions. Draft stage never upgrades scientific status.
-4. Files under [`chapters/`](chapters/) are source-bounded writing briefs.
-5. Files under [`drafts/`](drafts/) are working prose, and files under [`source_maps/`](source_maps/) record the support and non-support boundary for those drafts.
-6. Files under [`audits/`](audits/) record editorial overlap, duplication, practical-connection, and claim-allocation decisions.
-7. [`../universe/DISSERTATION_ARCHITECTURE.md`](../universe/DISSERTATION_ARCHITECTURE.md) owns the novelty-first editorial rationale.
-8. [`../universe/WORLDLINE_ATLAS.md`](../universe/WORLDLINE_ATLAS.md) owns the non-linear theory map.
+1. Source repository manuscripts, proofs, evidence ledgers, code, frozen artifacts, and source CI own scientific claims.
+2. [`series_architecture.json`](series_architecture.json) owns the preferred five-chapter / three-series traversal and publication grouping.
+3. [`SERIES_DEPENDENCY_AUDIT_2026-09-06.md`](SERIES_DEPENDENCY_AUDIT_2026-09-06.md) owns hard-dependency, shared-precondition, handoff, and forbidden-implication decisions.
+4. `final_chapter_architecture.json`, `chapter_registry.json`, `proved_condition_registry.json`, and the existing final drafts remain the detailed component/provenance layer.
+5. The Worldline Atlas remains non-linear and does not inherit the dissertation order.
 
-## Writing rule for every chapter
+## Writing rule for an integrated research chapter
 
-Each brief must retain these sections:
+Each integrated chapter must contain:
 
-- **Problem** — the ecological or scientific failure that motivates the chapter;
-- **Headline result** — the one result that earns chapter status;
-- **Why the result is nontrivial** — why the chapter is not merely a familiar principle restated;
-- **Ecological payoff** — what inference, design, or interpretation changes;
-- **Claim ceiling** — what the source does not establish;
-- **Canonical source handoff** — where the proof, data, code, and manuscript live;
-- **Transition** — why the next chapter is scientifically necessary.
+- **One scientific question**, not one repository per section;
+- **Standalone contribution** — why the chapter is publishable without reading the preceding chapter;
+- **Internal dependency map** — which components are parallel, which are preconditions, and which are hard dependencies;
+- **Headline theorem/result** — one foreground result, with supporting theorem families demoted appropriately;
+- **Numerical or constructive recovery** — preserve the source-owned nontriviality evidence;
+- **Claim ceiling / forbidden implications** — especially where source modules share a system but do not prove one another;
+- **Source ownership map** — every proof and dataset continues to point to its source repository;
+- **Dissertation handoff** — why the next question follows conceptually without becoming a proof dependency.
 
-Every prose draft must additionally have a source map. The source map states what each source supports, what it does not support, and which claims still require primary-literature verification. Citation-audited drafts must contain a reference list and must not retain provisional internal source tags.
+## Legacy workspace validation
 
-## Ownership firewall
-
-- CREST, CCOC, MLTR, MRM, CED, RACH, eco-genetic-criticality, and eco-genetic-warning-extensions remain the primary owners of their source results.
-- `theouni` owns the cross-repository type system, bridge registry, chapter coordination, and synthesis only.
-- TU-2 belongs inside Chapter 6, TU-3 inside Chapter 7, TU-4 inside Chapter 8, and TU-1 inside the General Synthesis.
-- A chapter may cite another worldline but may not silently absorb its theorem or empirical evidence.
-- Prose completion, word count, or editorial polish does not alter a claim ceiling.
-
-## Current writing state
-
-Three units now have citation-audited v0.2 prose.
-
-### General Introduction
-
-[`drafts/00_general_introduction_v0.2.md`](drafts/00_general_introduction_v0.2.md) frames the dissertation around the reuse problem, provides only the minimum factorization language, and leaves the source-owned scientific results to Chapters 1–8. Its support boundary is recorded in [`source_maps/00_general_introduction_v0.2_sources.md`](source_maps/00_general_introduction_v0.2_sources.md).
-
-### Chapter 1 — CREST
-
-[`drafts/01_conservation_capacity_v0.2.md`](drafts/01_conservation_capacity_v0.2.md) retains the conservation paradox, contract-relative state, shallow-lake case, finite architecture, capability–resolution theorem, and transition to CCOC while avoiding a second dissertation-level philosophy introduction.
-
-Its source/proof handoff is [`source_maps/01_conservation_capacity_sources.md`](source_maps/01_conservation_capacity_sources.md). The General Introduction allocation is fixed in [`audits/00_general_introduction_crest_overlap.md`](audits/00_general_introduction_crest_overlap.md), and the restoration-budget interpretation is bounded in [`audits/01_crest_monitoring_budget_connection.md`](audits/01_crest_monitoring_budget_connection.md).
-
-### Chapter 2 — CCOC
-
-[`drafts/02_open_futures_v0.2.md`](drafts/02_open_futures_v0.2.md) develops the grammar-aware exact interface, cross-grammar addressability lower bound, maximal one-action family, bounded-local relay, positive portability boundary, and ecological reading of open future addressability.
-
-Its theorem/prior-art/reproducibility handoff is [`source_maps/02_open_futures_sources.md`](source_maps/02_open_futures_sources.md). The quantified boundary against CREST and MLTR is fixed in [`audits/02_ccoc_crest_mltr_boundary.md`](audits/02_ccoc_crest_mltr_boundary.md), preventing the three chapters from collapsing into the slogan that state merely depends on context.
-
-Chapter 3 is now the next active drafting target. It must move from a fixed plant with changing legal futures to non-nested structural replacement and one inherited source macro-law.
-
-Run:
-
-```bash
-python scripts/validate_thesis_workspace.py
-python scripts/build_thesis_workspace_report.py
-```
-
-The first command checks chapter order, source ownership, TU allocation, hard dependencies, required headings, claim ceilings, draft/source-map/audit presence, citation-stage requirements, and minimum draft length. The second rebuilds `graphify-out/THESIS_WORKSPACE_REPORT.md`.
+The existing ten-unit validators continue to protect the detailed component drafts while the integrated series drafts are built. A separate series validator checks the new preferred architecture. This staged migration prevents editorial regrouping from weakening source provenance or proved-condition contracts.
