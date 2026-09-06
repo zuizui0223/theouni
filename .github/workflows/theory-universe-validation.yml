@@ -106,8 +106,11 @@ jobs:
       - name: Check generated worldline report is synchronized
         run: git diff --exit-code -- graphify-out/WORLDLINE_REPORT.md
 
-      - name: Validate preferred dissertation architecture
+      - name: Validate legacy component dissertation architecture
         run: python scripts/validate_dissertation_architecture.py
+
+      - name: Validate preferred three-series dissertation architecture
+        run: python scripts/validate_series_architecture.py
 
       - name: Rebuild Graphify dissertation overlay
         run: python scripts/build_dissertation_overlay.py /tmp/theouni-dissertation-extraction.json
