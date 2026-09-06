@@ -1,107 +1,175 @@
-# Preferred dissertation chapter order — three research series
+# Preferred dissertation architecture — three parallel research pillars
 
-Status: **preferred five-chapter architecture**.
+Status: **Graphify-corrected preferred architecture**.
 
-The dissertation is no longer organized as one source repository per chapter. **Repositories own proofs, code, evidence, and frozen provenance; chapters are organized by scientific question.** The previous ten-unit forbidden-inference order remains in `thesis/final_chapter_architecture.json` as a component/provenance map and is not deleted.
+The dissertation is not one repository per chapter and is not one `state` spine. **Repositories own proofs, code, evidence, and provenance; the three research chapters are parallel paper-scale series.** Their displayed order is editorial only.
 
-| # | 章題 | Research series | Main source repositories |
+| # | Chapter | Research pillar | Main source repositories |
 |---:|---|---|---|
 | **0** | **再利用問題** | Introduction / TU-1 | `theouni` |
-| **1** | **生態遺伝状態は、何を予測するための状態か** | Eco-genetic state validity | `eco-genetic-criticality`, `eco-genetic-warning-extensions` |
-| **2** | **未来が変わると、必要な状態も変わる** | CREST | `crest`, `ccoc`, `mltr`, `mrm`, `ced` |
-| **3** | **必要な区別を、どう観測で回収するか** | Identification and observation design | `boundary`, `mrod` |
-| **4** | **総合 — 妥当性に特権的な方向はない** | Typed synthesis / TU-1 | `theouni` |
+| **1** | **生態遺伝機構から損失と警告へ** | Eco-genetic | `eco-genetic-criticality`, `eco-genetic-warning-extensions` |
+| **2** | **未来・構造・機構が変わると表現はどう壊れるか** | CREST | `crest`, `ccoc`, `mltr`, `mrm`, `ced` |
+| **3** | **原因の候補を残したまま、次に何を測るか** | microdonta/RACH causal learning | current `boundary`, `mrod`; legacy Graphify node `microdonta` |
+| **4** | **総合 — 三系列をつなぐjunction** | Required-State / Knowledge / Loss-Warning / Reality-to-Theory junctions | `theouni` |
 
-The machine-readable source of truth for this preferred architecture is `thesis/series_architecture.json`.
+The machine-readable source of truth is `thesis/series_architecture.json`. The detailed ten-unit architecture remains a provenance/component map.
 
-## Why the old ten-chapter order was too fine
+## The crucial correction
 
-The previous order made source repositories look like sequential theorem dependencies even when the actual science was parallel.
-
-- `CCOC`, `MLTR`, and `MRM` are **parallel reasons a present-state merge can fail**: a newly addressable future, inherited structural/history semantics, or retained mechanism disagreement.
-- `CED` is not a fourth ontic obstruction at the same level. It is **downstream evidence licensing**: once a distinction is scientifically required, does the observation contract identify it well enough to report?
-- `Boundary` and `MROD` form a genuine design handoff, but not a hard proof dependency: Boundary asks whether the observation map can reduce structural ambiguity at all; MROD asks which verified measurement is most informative inside a declared ambiguity set.
-- The eco-genetic source papers share one model/programme context, but state separation, transition sufficiency, and warning discrimination are separate adequacy tests rather than theorem implications.
-
-The preferred chapter structure therefore preserves proof ownership while removing false sequentiality.
-
-## Chapter 1 — Eco-genetic state validity
-
-Central question:
-
-> **Can one eco-genetic representation stand in for potential viability, realised occupancy, transition dynamics, and predictive warning?**
-
-The chapter combines three source-owned results:
-
-1. **state separation:** one common monotone sufficient scalar exists iff the distinct target vectors form a product-order chain; the locked fragmentation crossing violates that condition;
-2. **transition sufficiency:** identical declared coarse marginals can produce different exact next transitions, and the locked propagation experiment shows little loss-risk contrast at generations 5–10 but about five percentage points by generations 20–40 under the declared forcing path;
-3. **warning validity:** perfect event-conditioned precedence fixes sensitivity but not specificity; the frozen full-denominator audit reaches specificity `0` and binary-marker AUC `0.5`.
-
-These results are deliberately **not** written as `state separation -> warning failure`. They share a scientific system and ask different responsibilities of a representation.
-
-The natural-data four-gate programme remains an empirical measurement-validation companion, not empirical validation of the finite eco-genetic closure.
-
-## Chapter 2 — CREST
-
-Central question:
-
-> **When does a previously adequate ecological state cease to be adequate after the relevant future changes?**
-
-Canonical structure:
+The earlier v1 series draft incorrectly suggested:
 
 ```text
-temporally extended ecological worlds + scientific contract
-        |
-        +-- CCOC: newly addressable future/composition
-        +-- MLTR: inherited structure/history semantics
-        +-- MRM: retained mechanism response disagreement
-        |
-        v
-required CREST state / quotient
-        |
-        v
-CED: evidence licensing and honest report
+Eco-genetic -> CREST -> Observation design
 ```
 
-`CCOC`, `MLTR`, and `MRM` are parallel obstruction modules, not Chapters 5–7 in a theorem chain. The flagship CREST theorem remains the capacity-versus-knowledge no-bound construction. Detailed CCOC/MLTR/MRM/CED proofs can sit in sections or Supplementary Information without forcing separate default submissions.
+Graphify does **not** contain that hard or privileged spine.
 
-## Chapter 3 — Identification and observation design
+The edge-faithful view is:
 
-Central question:
+```text
+                 +-- Eco-genetic pillar
+Introduction ----+-- CREST pillar
+                 +-- microdonta/RACH pillar
+                         |
+                         v
+              typed junctions in synthesis
+```
 
-> **Given a distinction that matters, can the current observation map identify it, and what should be measured next?**
+The research pillars are independently readable and publishable. Cross-pillar travel is licensed only by an explicit registered bridge or junction condition.
 
-The chapter begins with Boundary's rank criterion and field-like same-observation/different-mechanism witness, then moves to MROD's admissible mechanism region and sequential observation-information design.
+## Pillar 1 — Eco-genetic
 
-This is a conceptual handoff, not a theorem dependency: MROD is not restricted to multiplicative Boundary models, and Boundary does not require MROD's synthetic benchmark.
+This is the one series with a direct extracted parent-to-extension edge:
+
+```text
+eco-genetic-criticality
+  --mechanistic_parent_to_condition_extension-->
+eco-genetic-warning-extensions
+```
+
+The scientific direction is:
+
+```text
+mechanistic eco-genetic parent
+    -> warning-blind loss-generating domain
+    -> warning evaluation / portability
+```
+
+The Worldline Atlas also fixes the Loss-Warning Junction:
+
+```text
+LossGeneratingState <= WarningEvaluationState
+```
+
+This does **not** mean that the common-scalar theorem mathematically implies warning failure. It means the warning experiment requires a loss-generating domain to be fixed first.
+
+Preferred paper: **From Eco-genetic Mechanism to Conditional Warning under Fragmentation**. EGC, state-validity, and warning-only assets remain fallback/source surfaces rather than three default submissions.
+
+## Pillar 2 — CREST
+
+Graphify gives a hub-and-spoke architecture:
+
+```text
+CCOC --conceptual_obstruction_input--\
+MLTR --conceptual_obstruction_input----> CREST
+MRM  --conceptual_obstruction_input--/
+CED  --downstream_evidence_licensing-->
+```
+
+`CCOC`, `MLTR`, and `MRM` are parallel structural inputs. They do not prove one another. `CED` is an evidence/reportability junction and is not ontically owned by CREST: evidence does not create the ecological distinction being licensed.
+
+Graphify clustering also keeps important separation:
+
+- `CREST and Evidence Licensing` is one community;
+- `Transport and Mechanism Robustness` is another;
+- future/open-composition is a distinct structural line.
+
+Therefore a CREST flagship is defensible only as a **hub paper** with one core theorem/story and typed supporting modules, not as five coequal theorem papers stapled together.
+
+Preferred paper: **When Conservation Capacity Outgrows Conservation Knowledge**. Full CCOC/MLTR/MRM/CED proofs remain supplements or fallback manuscripts.
+
+## Pillar 3 — microdonta/RACH causal learning
+
+The current Graphify registry was generated on **2026-08-25**, before the publication split into Boundary and MROD. Its legacy `microdonta` node is therefore stale as a physical repository label but still scientifically informative.
+
+Graphify Community 10, `RACH Causal Learning`, already co-clusters:
+
+- `W`-only/channel non-identifiability;
+- admissible causal hypotheses;
+- next-observation value / RACH-SEQ;
+- controlled synthetic observation-selection validation.
+
+Current publication mapping:
+
+```text
+channel-identifiability material -> Boundary
+causal-set / next-observation material -> MROD
+```
+
+This is strong graph support for one integrated methods paper, not merely an editorial convenience.
+
+Preferred paper: **From Identifiability Limits to Mechanism-Resolving Observation Design**.
+
+Two outward bridges remain explicitly incomplete:
+
+```text
+microdonta --missing_evidence_risk_bridge--> CED   [proposed / inferred]
+microdonta --missing_candidate_family_bridge--> MRM [proposed / inferred]
+```
+
+So causal-learning value is not already a CED license, and an admissible causal set is not automatically an MRM response-type family.
+
+## The junction synthesis
+
+The final chapter should not say that one concept—especially unqualified `state`—runs through everything. Graphify itself treats `state` as overloaded across repositories.
+
+Instead the synthesis is organized around explicit intersections:
+
+### Required-State Junction
+
+```text
+capability + future + history + mechanism
+```
+
+A joint required representation exists only under a compatible carrier/lift and typed response obligations.
+
+### Knowledge Junction
+
+```text
+capability + evidence + causal learning
+```
+
+Required distinctions, evidence classes, causal programmes, and report target must be typed on compatible model worlds. This is the conditional meeting point of CREST/CED and the microdonta/RACH learning line.
+
+### Loss-Warning Junction
+
+```text
+LossGeneratingState <= WarningEvaluationState
+```
+
+This is the strongest directed dependency among the three pillar programmes and belongs within the eco-genetic paper.
+
+### Reality-to-Theory Junction
+
+Every model-world result returns to empirical admission and a claim ceiling. Cross-repository integration never supplies natural-system validation by itself.
+
+## Cross-series bridges are not merger licenses
+
+The graph contains a bounded eco-genetic-to-CREST adapter, and the warning-domain-to-CREST edge is only `partial_bounded_witness_only` / inferred. Likewise the microdonta-to-CED/MRM edges are proposed/inferred.
+
+Therefore these edges belong in synthesis and future adapter work. They are **not** reasons to merge all three pillars into one paper.
 
 ## Publication strategy
 
-The default is no longer `one repository = one paper`.
+Default: **three strong papers, one per Graphify-supported pillar**.
 
-Preferred strategy:
+1. Eco-genetic mechanism -> loss -> warning.
+2. CREST hub-and-spoke flagship theory paper.
+3. Boundary + MROD causal-learning / observation-design methods paper.
 
-1. **CREST flagship theory paper** — integrate CREST + CCOC + MLTR + MRM + CED around one state-adequacy question.
-2. **Integrated methods paper** — Boundary + MROD, with the identification theorem as the theory layer and the frozen MROD benchmark as the primary validation.
-3. **Conditional eco-genetic paper** — integrate EGC + state-validity + warning-validity only if the material is too large or too domain-specific to serve as a worked layer around the flagship theory.
+Not default:
 
-Existing standalone manuscripts and frozen bundles are retained as **fallback assets**, not automatic obligations to submit many small papers.
-
-## Vertical dissertation logic
-
-The three research chapters remain readable independently, because there are **no cross-series hard theorem dependencies**.
-
-The dissertation-level handoff is instead:
-
-```text
-Eco-genetic series
-  shows that adequacy changes with the scientific responsibility
-        ->
-CREST
-  generalizes why required state changes under future/structure/mechanism/evidence changes
-        ->
-Observation design
-  asks how the needed distinction can be identified and efficiently measured
-```
-
-The final synthesis then returns to TU-1: when a later responsibility needs a different quotient, can the revised state be recovered from what the earlier representation retained?
+- one paper per repository;
+- one mega-paper spanning all three hubs;
+- separate CCOC/MLTR/MRM/CED submissions unless the flagship fails scope;
+- separate EGC/state-validity/warning submissions unless the integrated eco-genetic paper fails scope or length review.
