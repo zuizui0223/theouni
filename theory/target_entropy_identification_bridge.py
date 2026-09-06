@@ -2,8 +2,11 @@
 
 For a finite admissible support in which every stored world/row carries positive
 weight, the declared target is point-identified exactly when its entropy is zero.
-This is a bridge theorem between representations, not a transfer of ownership
-from boundary or MROD into Theory Universe.
+More generally, Shannon entropy supplies an effective target multiplicity
+``2^H`` bounded by the cardinality of the set-valued target image.
+
+This is a bridge between representations, not a transfer of ownership from
+boundary or MROD into Theory Universe.
 """
 from __future__ import annotations
 
@@ -18,6 +21,10 @@ class TargetEntropyIdentificationAudit:
     n_rows: int
     target_image_size: int
     entropy_bits: float
+    max_entropy_bits_for_image: float
+    effective_target_count: float
+    effective_to_image_ratio: float
+    cardinality_entropy_bound_holds: bool
     point_identified: bool
     entropy_zero: bool
     equivalence_holds: bool
@@ -61,7 +68,17 @@ def audit_target_entropy_identification(
     weights: Sequence[float] | None = None,
     tolerance: float = 1e-12,
 ) -> TargetEntropyIdentificationAudit:
-    """Audit ``|T(A)|=1 iff H(T|A)=0`` on a finite positive-weight support."""
+    """Audit finite target cardinality, entropy and effective multiplicity.
+
+    On a finite positive-weight target image of size ``m``:
+
+        0 <= H(T|A) <= log2(m),
+        1 <= 2^H <= m.
+
+    The lower equality is exactly point identification.  The upper equality
+    occurs when total probability mass is uniform across the distinct target
+    values, regardless of how many rows represent each value before weighting.
+    """
     if tolerance < 0.0:
         raise ValueError("tolerance must be non-negative")
     values = tuple(target_values)
@@ -69,12 +86,25 @@ def audit_target_entropy_identification(
         raise ValueError("target_values must be non-empty")
     entropy = weighted_target_entropy(values, weights=weights)
     image_size = len(set(values))
+    max_entropy = log2(image_size)
+    effective = 2.0 ** entropy
+    ratio = effective / image_size
+    bound = (
+        entropy >= -tolerance
+        and entropy <= max_entropy + tolerance
+        and effective >= 1.0 - tolerance
+        and effective <= image_size + tolerance
+    )
     point = image_size == 1
     zero = abs(entropy) <= tolerance
     return TargetEntropyIdentificationAudit(
         n_rows=len(values),
         target_image_size=image_size,
         entropy_bits=entropy,
+        max_entropy_bits_for_image=max_entropy,
+        effective_target_count=effective,
+        effective_to_image_ratio=ratio,
+        cardinality_entropy_bound_holds=bound,
         point_identified=point,
         entropy_zero=zero,
         equivalence_holds=(point == zero),
