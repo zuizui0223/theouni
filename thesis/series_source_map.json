@@ -1,0 +1,90 @@
+{
+  "schema_version": "theouni-series-source-map.v1",
+  "status": "provenance_preserving_integration_map",
+  "principle": "Integration changes editorial grouping only. Proofs, data, code, frozen artifacts and priority claims remain owned by their source repositories and source snapshots.",
+  "series": [
+    {
+      "chapter": "chapter:eco-genetic",
+      "draft": "thesis/drafts/series/01_eco_genetic_state_validity_v0.1.md",
+      "sources": [
+        {
+          "repository": "zuizui0223/eco-genetic-criticality",
+          "role": "cross-target state separation and finite fragmentation evidence",
+          "canonical_proof_snapshot": "2a35b2d2b11f4b8a00b8a4346bdba90773511a71",
+          "proof_paths": ["docs/common_scalar_state_theorem_2026-09-03.md", "tests/test_common_scalar_state_theorem.py"],
+          "evidence_paths": ["docs/H3_FRAGMENTATION_GRADIENT_SENSITIVITY_RESULTS.md", "manuscript/main_text.md", "manuscript/claim_evidence_map.md"],
+          "owned_claims": ["product-order chain iff condition", "locked 2-patch versus 16-patch crossing", "potential-versus-realised state separation"]
+        },
+        {
+          "repository": "zuizui0223/eco-genetic-warning-extensions",
+          "role": "state-validity transition/propagation and warning-validity denominator audit",
+          "warning_theorem_snapshot": "ef545bfa871c1a2b01daca1fc86e6db67f6e8c95",
+          "current_integrated_source_snapshot": "0c1ea049a74a66035c5eddea232a35da60ef6a8f",
+          "proof_paths": ["docs/PRECEDENCE_DISCRIMINATION_THEOREM_2026-09-03.md", "tests/test_precedence_discrimination_theorem.py"],
+          "state_paths": ["manuscript/state_validity_and_empirical_measurement_gates.md", "experiments/alignment_propagation_protocol.json", "artifacts/alignment_propagation/locked_summary.json"],
+          "warning_paths": ["manuscript/warning_validity.md", "manuscript/tables/warning_validity_audit.csv", "docs/PRECEDENCE_DISCRIMINATION_THEOREM_2026-09-03.md"],
+          "owned_claims": ["exact next-transition separation under equal coarse marginals", "locked horizon-dependent propagation result", "perfect precedence versus specificity/AUC theorem", "frozen full-denominator warning result"]
+        }
+      ],
+      "forbidden_transfer": ["theouni owns no eco-genetic proof or frozen data", "warning result is not derived from the scalar theorem", "natural-data four-gate evidence is not imported as finite-model validation"]
+    },
+    {
+      "chapter": "chapter:crest",
+      "draft": "thesis/drafts/series/02_crest_state_under_changing_futures_v0.1.md",
+      "sources": [
+        {
+          "repository": "zuizui0223/crest",
+          "role": "world/contract-relative state and flagship capability-resolution theorem",
+          "canonical_snapshot": "2ff41e18cdbf100932813fbef9851078ec60413a",
+          "paths": ["manuscript/crest_biology_philosophy_blinded_submission.md", "docs/crest_capability_resolution_divergence_theorem_2026-08-22.md", "tests/test_crest_capability_resolution_divergence.py", "docs/trajectory_first_program_architecture_2026-08-22.md"]
+        },
+        {
+          "repository": "zuizui0223/ccoc",
+          "role": "future/composition obstruction",
+          "canonical_snapshot": "96d823309ce04affb33446f1996aedf0a163a039",
+          "paths": ["manuscript/main.md", "docs/theorem_spine.md", "docs/fixed_regular_extremal_theorem_2026-08-13.md"]
+        },
+        {
+          "repository": "zuizui0223/mltr",
+          "role": "structural replacement, source-relative repair, route/history coherence",
+          "canonical_snapshot": "d9e23d27c385759b9e1fea93a556f30618122fe1",
+          "paths": ["manuscript/paper_a_main.tex", "docs/master_theorem_proof.md", "tests/test_section5_proof_obligations.py"]
+        },
+        {
+          "repository": "zuizui0223/mrm",
+          "role": "retained-mechanism response obstruction and active discrimination",
+          "canonical_snapshot": "f0b2a770a6d98dbc04d19db661c5c81e5a1ff348",
+          "paths": ["README.md", "docs/mrm_core_proofs.md", "docs/mechanism_ambiguity_frontier.md", "scripts/verify_mrm_core.py"]
+        },
+        {
+          "repository": "zuizui0223/ced",
+          "role": "downstream evidence licensing and failure-domain allocation",
+          "canonical_snapshot": "590f6459a7c3ef31e8a527319771fd3d736a704a",
+          "paths": ["docs/repeat_vs_mode_allocation_theorem_2026-09-03.md", "tests/test_repeat_vs_mode_allocation_boundary.py", "docs/mode_diverse_detection_theorem.md", "docs/paper_b_theorem_consolidation.md"]
+        }
+      ],
+      "forbidden_transfer": ["CCOC, MLTR and MRM are not a linear proof chain", "CED evidence licensing does not create an ecological distinction", "worked bridges do not prove CREST", "theouni owns no companion theorem family"]
+    },
+    {
+      "chapter": "chapter:observation-design",
+      "draft": "thesis/drafts/series/03_learning_the_state_you_need_v0.1.md",
+      "sources": [
+        {
+          "repository": "zuizui0223/boundary",
+          "role": "structural identification theory and ecological field-like witness",
+          "canonical_proof_snapshot": "2919842f19bdd93221363b9f39f2ba1ebb146d17",
+          "application_witness_snapshot": "b3c68708",
+          "paths": ["docs/observation_rank_identification_theorem_2026-09-03.md", "tests/test_observation_rank_theorem.py", "paper/manuscript.md", "paper/claim_evidence_matrix.md"]
+        },
+        {
+          "repository": "zuizui0223/mrod",
+          "role": "admissible-region observation design, adaptive theorem and frozen controlled validation",
+          "adaptive_theorem_snapshot": "689ba17d14fec2218e9e96f4c9e432eb8b71fb58",
+          "artifact_validation_snapshot": "3219ec40fbc372e003faf4a9d3be1f4e2c25effb",
+          "paths": ["paper/manuscript.md", "docs/adaptive_recomputation_theorem_2026-09-03.md", "tests/test_adaptive_recomputation_theorem.py", "paper/results/g2_frozen_v2_summary.json", "paper/release_readiness.json"]
+        }
+      ],
+      "forbidden_transfer": ["MROD is not restricted to Boundary multiplicative models", "Boundary witness is not algorithm validation", "MROD synthetic validation is not a natural-system mechanism claim"]
+    }
+  ]
+}
