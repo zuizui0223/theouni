@@ -146,9 +146,6 @@ def main() -> int:
     obs_text = DRAFTS["chapter:observation-design"].read_text(encoding="utf-8")
     for token in ["rowspan", "1.000", "0.6045", "83.5", "does **not** mathematically require"]:
         assert token in obs_text, token
-    # Semantic comparator check: the draft must explicitly compare adaptive
-    # recomputation with a precommitted static second measurement, but wording
-    # such as "best" versus "strongest" is editorial and not contractual.
     assert "precommitted static second measurement" in obs_text
     assert "0.5` bit" in obs_text and "four-world witness" in obs_text
 
@@ -161,14 +158,15 @@ def main() -> int:
     ]:
         assert token in order_text, token
 
-    for token in [
-        "There are **no hard theorem dependencies among the three research chapters**",
-        "horizontal publication independence with vertical dissertation coherence",
-        "Default: two primary papers",
-        "state separation theorem implies warning failure",
-        "CED -> existence of ecological distinction",
-    ]:
-        assert token in audit_text, token
+    # The audit contract is semantic rather than editorially phrase-exact.
+    assert "There are **no hard theorem dependencies among the three research chapters**" in audit_text
+    assert "horizontal publication independence with vertical dissertation coherence" in audit_text
+    assert "Default: two primary papers" in audit_text
+    assert "EGC state separation" in audit_text
+    assert "warning-validity failure" in audit_text
+    assert "**forbidden**" in audit_text
+    assert "CED -> existence of ecological distinction" in audit_text
+    assert "evidence does not create the underlying required distinction" in audit_text
 
     print("Three-series dissertation architecture validation passed.")
     print("Legacy research components partitioned exactly once:", sorted(mapped))
