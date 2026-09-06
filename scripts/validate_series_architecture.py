@@ -8,7 +8,7 @@ SERIES = ROOT / "thesis" / "series_architecture.json"
 LEGACY = ROOT / "thesis" / "final_chapter_architecture.json"
 SOURCE_MAP = ROOT / "thesis" / "series_source_map.json"
 ORDER = ROOT / "thesis" / "FINAL_CHAPTER_ORDER.md"
-AUDIT = ROOT / "thesis" / "SERIES_DEPENDENCY_AUDIT_2026-09-06.md"
+AUDIT = ROOT / "thesis" / "GRAPHIFY_EDGE_AUDIT_2026-09-06.md"
 
 DRAFTS = {
     "chapter:eco-genetic": ROOT / "thesis" / "drafts" / "series" / "01_eco_genetic_state_validity_v0.1.md",
@@ -17,160 +17,114 @@ DRAFTS = {
 }
 
 
-def _load(path: Path) -> dict:
+def load(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def _chapter_map(series: dict) -> dict[str, dict]:
-    return {row["id"]: row for row in series["chapters"]}
-
-
 def main() -> int:
-    series = _load(SERIES)
-    legacy = _load(LEGACY)
-    source_map = _load(SOURCE_MAP)
+    series = load(SERIES)
+    legacy = load(LEGACY)
+    source_map = load(SOURCE_MAP)
     order_text = ORDER.read_text(encoding="utf-8")
     audit_text = AUDIT.read_text(encoding="utf-8")
 
-    assert series["schema_version"] == "theouni-series-architecture.v1"
-    assert series["status"] == "preferred_five_chapter_three_series_architecture"
-    assert series["legacy_component_architecture"] == "thesis/final_chapter_architecture.json"
-    assert "not_preferred_chapter_order" in series["legacy_component_status"]
+    assert series["schema_version"] == "theouni-series-architecture.v2"
+    assert series["status"] == "preferred_parallel_three_series_architecture_graphify_corrected"
+    assert series["research_chapters_parallel"] is True
+    assert series["cross_series_hard_dependencies"] == []
+    assert series["graphify_basis"]["registry_generated_on"] == "2026-08-25"
+    assert "Boundary and MROD" in series["graphify_basis"]["registry_warning"]
 
     chapters = series["chapters"]
     assert len(chapters) == 5
     assert [row["order"] for row in chapters] == list(range(5))
-    expected_ids = [
-        "chapter:introduction",
-        "chapter:eco-genetic",
-        "chapter:crest",
-        "chapter:observation-design",
-        "chapter:synthesis",
-    ]
+    expected_ids = ["chapter:introduction", "chapter:eco-genetic", "chapter:crest", "chapter:observation-design", "chapter:synthesis"]
     assert [row["id"] for row in chapters] == expected_ids
+    by_id = {row["id"]: row for row in chapters}
 
-    by_id = _chapter_map(series)
-    research_ids = ["chapter:eco-genetic", "chapter:crest", "chapter:observation-design"]
-    assert all(by_id[cid]["kind"] == "integrated_research_chapter" for cid in research_ids)
-
-    legacy_chapters = legacy["chapters"]
-    legacy_ids = [row["id"] for row in legacy_chapters]
+    legacy_ids = [row["id"] for row in legacy["chapters"]]
     assert len(legacy_ids) == 10
-    assert legacy_ids[0] == "chapter:introduction"
-    assert legacy_ids[-1] == "chapter:synthesis"
-
-    mapped: list[str] = []
-    for cid in research_ids:
+    mapped = []
+    for cid in ["chapter:eco-genetic", "chapter:crest", "chapter:observation-design"]:
         mapped.extend(by_id[cid]["legacy_component_ids"])
-    expected_legacy_research = {f"chapter:{i}" for i in range(1, 9)}
-    assert set(mapped) == expected_legacy_research
+    assert set(mapped) == {f"chapter:{i}" for i in range(1, 9)}
     assert len(mapped) == len(set(mapped)) == 8
 
-    assert set(by_id["chapter:eco-genetic"]["primary_repositories"]) == {
-        "zuizui0223/eco-genetic-criticality",
-        "zuizui0223/eco-genetic-warning-extensions",
-    }
-    assert set(by_id["chapter:crest"]["primary_repositories"]) == {
-        "zuizui0223/crest",
-        "zuizui0223/ccoc",
-        "zuizui0223/mltr",
-        "zuizui0223/mrm",
-        "zuizui0223/ced",
-    }
-    assert set(by_id["chapter:observation-design"]["primary_repositories"]) == {
-        "zuizui0223/boundary",
-        "zuizui0223/mrod",
-    }
-
-    assert series["cross_series_hard_dependencies"] == []
-    handoffs = {(row["from"], row["to"]): row for row in series["cross_series_handoffs"]}
-    assert ("chapter:eco-genetic", "chapter:crest") in handoffs
-    assert ("chapter:crest", "chapter:observation-design") in handoffs
-    assert "do not prove CREST" in handoffs[("chapter:eco-genetic", "chapter:crest")]["claim_ceiling"]
-    assert "not yet a general target-conditioned CREST optimizer" in handoffs[("chapter:crest", "chapter:observation-design")]["claim_ceiling"]
-
     eco = by_id["chapter:eco-genetic"]
-    forbidden_eco = " ".join(eco["forbidden_dependency_claims"]).lower()
-    assert "state separation theorem implies warning failure" in forbidden_eco
-    assert "warning failure validates the common-scalar theorem" in forbidden_eco
-    assert eco["hard_dependencies"] == []
+    edge = eco["graphify_core_edge"]
+    assert (edge["source"], edge["target"], edge["type"], edge["confidence"]) == (
+        "repo:eco-genetic-criticality",
+        "repo:eco-genetic-warning-extensions",
+        "mechanistic_parent_to_condition_extension",
+        "EXTRACTED",
+    )
+    assert eco["hard_dependencies"] and "LossGeneratingState" in eco["hard_dependencies"][0]
 
     crest = by_id["chapter:crest"]
-    dep = crest["dependency_graph"]
-    assert dep["parallel_required_state_obstructions"] == ["CCOC", "MLTR", "MRM"]
-    assert dep["downstream_licensing"] == "CED"
-    assert "not a linear theorem chain" in dep["note"]
-    assert any("CED licensing presupposes" in item for item in crest["hard_dependencies"])
-    nondeps = " ".join(crest["non_dependencies"])
-    assert "CCOC, MLTR and MRM do not prove one another" in nondeps
+    edge_types = {(e["source"], e["target"], e["type"], e["confidence"]) for e in crest["graphify_core_edges"]}
+    assert edge_types == {
+        ("repo:ccoc", "repo:crest", "conceptual_obstruction_input", "EXTRACTED"),
+        ("repo:mltr", "repo:crest", "conceptual_obstruction_input", "EXTRACTED"),
+        ("repo:mrm", "repo:crest", "conceptual_obstruction_input", "EXTRACTED"),
+        ("repo:ced", "repo:crest", "downstream_evidence_licensing", "EXTRACTED"),
+    }
+    assert "hub-and-spoke" in crest["dependency_graph"]["note"]
+    assert "CED also receives" in " ".join(crest["cross_series_junctions_not_owned_by_crest"])
 
-    obs = by_id["chapter:observation-design"]
-    assert obs["hard_dependencies"] == []
-    obs_nondeps = " ".join(obs["non_dependencies"])
-    assert "MROD does not mathematically require the multiplicative Boundary model" in obs_nondeps
-    assert "Boundary does not require MROD's synthetic benchmark" in obs_nondeps
+    learning = by_id["chapter:observation-design"]
+    assert learning["graphify_legacy_node"] == "repo:microdonta"
+    assert learning["graphify_legacy_community"] == "RACH Causal Learning"
+    assert learning["graphify_split_mapping"]["channel_identifiability"] == "zuizui0223/boundary"
+    assert learning["graphify_split_mapping"]["admissible_causal_hypotheses_and_next_observation_value"] == "zuizui0223/mrod"
+    statuses = {(row["target"], row["type"], row["status"]) for row in learning["external_graphify_bridges"]}
+    assert statuses == {
+        ("CED", "missing_evidence_risk_bridge", "proposed/inferred"),
+        ("MRM", "missing_candidate_family_bridge", "proposed/inferred"),
+    }
+
+    cross = {(row["from"], row["to"], row["type"]): row for row in series["cross_series_edges"]}
+    assert cross[("eco-genetic-warning-extensions", "crest", "full_warning_domain_state_quotient_bridge")]["status"].startswith("partial")
+    assert cross[("microdonta/RACH legacy stream", "CED", "missing_evidence_risk_bridge")]["status"] == "proposed/inferred"
+    assert cross[("microdonta/RACH legacy stream", "MRM", "missing_candidate_family_bridge")]["status"] == "proposed/inferred"
+
+    logic = series["dissertation_logic"]
+    assert logic["form"] == "three_parallel_research_pillars_plus_junction_synthesis"
+    assert "not_allowed" in logic and "eco-genetic→CREST→observation-design" in logic["not_allowed"]
+    assert "LossGeneratingState" in logic["junctions"]["loss_warning"]
 
     policy = series["submission_policy"]
-    assert policy["preferred_count"] == 2
-    assert len(policy["preferred_primary_papers"]) == 2
-    assert policy["conditional_third_paper"]
-    not_default = " ".join(policy["not_default"]).lower()
-    assert "one paper per source repository" in not_default
-    assert "separate ccoc, mltr, mrm and ced submissions" in not_default
+    assert policy["preferred_count"] == 3
+    assert len(policy["preferred_primary_papers"]) == 3
+    assert "one mega-paper" in " ".join(policy["not_default"]).lower()
 
-    assert source_map["schema_version"] == "theouni-series-source-map.v1"
     source_rows = {row["chapter"]: row for row in source_map["series"]}
-    assert set(source_rows) == set(research_ids)
-    for cid in research_ids:
-        repo_set = {row["repository"] for row in source_rows[cid]["sources"]}
-        assert repo_set == set(by_id[cid]["primary_repositories"])
+    assert set(source_rows) == {"chapter:eco-genetic", "chapter:crest", "chapter:observation-design"}
+    for cid in source_rows:
         assert source_rows[cid]["forbidden_transfer"]
 
-    required_common = ["## Problem", "## Standalone contribution", "## Claim ceiling", "## Source ownership", "## Dissertation handoff"]
+    # Existing integrated drafts remain component reservoirs while their framing is revised.
     for cid, path in DRAFTS.items():
         text = path.read_text(encoding="utf-8")
         assert len(text) >= 7000, (cid, len(text))
-        for heading in required_common:
+        for heading in ["## Problem", "## Standalone contribution", "## Claim ceiling", "## Source ownership"]:
             assert heading in text, (cid, heading)
 
-    eco_text = DRAFTS["chapter:eco-genetic"].read_text(encoding="utf-8")
-    for token in ["0.2543", "+5.33", "35/35", "48/48", "specificity is `0`", "product-order chain"]:
-        assert token in eco_text, token
-    assert "does **not** establish" in eco_text
-
-    crest_text = DRAFTS["chapter:crest"].read_text(encoding="utf-8")
-    for token in ["2^m", "CCOC", "MLTR", "MRM", "CED", "parallel obstruction classes", "0.7401"]:
-        assert token in crest_text, token
-    assert "do not prove one another" in crest_text
-
-    obs_text = DRAFTS["chapter:observation-design"].read_text(encoding="utf-8")
-    for token in ["rowspan", "1.000", "0.6045", "83.5", "does **not** mathematically require"]:
-        assert token in obs_text, token
-    assert "precommitted static second measurement" in obs_text
-    assert "0.5` bit" in obs_text and "four-world witness" in obs_text
-
+    for token in ["parallel research pillars", "Eco-genetic", "CREST", "microdonta", "junction"]:
+        assert token.lower() in order_text.lower(), token
     for token in [
-        "preferred five-chapter architecture",
-        "repo",
-        "CCOC`, `MLTR`, and `MRM` are **parallel",
-        "Boundary + MROD",
-        "fallback assets",
+        "mechanistic_parent_to_condition_extension",
+        "conceptual_obstruction_input",
+        "downstream_evidence_licensing",
+        "missing_evidence_risk_bridge",
+        "missing_candidate_family_bridge",
+        "2026-08-25",
+        "Boundary",
+        "MROD",
     ]:
-        assert token in order_text, token
+        assert token in audit_text, token
 
-    # The audit contract is semantic rather than editorially phrase-exact.
-    assert "There are **no hard theorem dependencies among the three research chapters**" in audit_text
-    assert "horizontal publication independence with vertical dissertation coherence" in audit_text
-    assert "Default: two primary papers" in audit_text
-    assert "EGC state separation" in audit_text
-    assert "warning-validity failure" in audit_text
-    assert "**forbidden**" in audit_text
-    assert "CED -> existence of ecological distinction" in audit_text
-    assert "evidence does not create the underlying required distinction" in audit_text
-
-    print("Three-series dissertation architecture validation passed.")
+    print("Graphify-corrected three-series architecture validation passed.")
     print("Legacy research components partitioned exactly once:", sorted(mapped))
-    print("Preferred research chapters:", ", ".join(research_ids))
     return 0
 
 
