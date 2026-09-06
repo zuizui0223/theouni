@@ -1,38 +1,107 @@
-# Final dissertation chapter order — forbidden-inference spine
+# Preferred dissertation chapter order — three research series
 
-Status: **final editorial order**.
+Status: **preferred five-chapter architecture**.
 
-This file fixes the dissertation traversal, not a privileged order of the underlying theory universe. Each chapter is anchored by one source-owned `forbidden_inference`.
+The dissertation is no longer organized as one source repository per chapter. **Repositories own proofs, code, evidence, and frozen provenance; chapters are organized by scientific question.** The previous ten-unit forbidden-inference order remains in `thesis/final_chapter_architecture.json` as a component/provenance map and is not deleted.
 
-| # | 章題 | Primary source | Forbidden inference |
+| # | 章題 | Research series | Main source repositories |
 |---:|---|---|---|
-| **0** | **再利用問題** | `zuizui0223/theouni` | 一度うまくいった表現 ⇒ 以後どの責任にも再利用できる表現 |
-| **1** | **観測が原理的に届かない範囲** | `zuizui0223/boundary` | 観測を豊かにした ⇒ 潜在機構に近づいた |
-| **2** | **先行することは、警告することではない** | `zuizui0223/eco-genetic-warning-extensions` | 損失に先行した ⇒ 損失を予告する |
-| **3** | **境界の内側で、次に何を測るか** | `zuizui0223/mrod` | 測れるものは測る価値がある ⇒ 測る順序に良し悪しはない |
-| **4** | **一つの系に、状態は一つではない** | `zuizui0223/eco-genetic-criticality` | 生態遺伝的に要約した ⇒ 五つの側面を代表した |
-| **5** | **未来を開くと、記憶が要る** | `zuizui0223/ccoc` | 物理的境界が狭い ⇒ 必要な因果記憶も小さい |
-| **6** | **能力は知識を追い越す** | `zuizui0223/crest` | 介入の規模が小さい ⇒ 表現と監視の負担も小さい |
-| **7** | **法則は構造置換を越えない** | `zuizui0223/mltr` | ある構造で成り立った法則 ⇒ 置換後の構造でも成り立つ法則 |
-| **8** | **反復は、多様性の代わりにならない** | `zuizui0223/ced` | 同じ手法を繰り返した ⇒ 証拠が強くなった |
-| **9** | **総合 — 妥当性に特権的な方向はない** | `zuizui0223/theouni` / TU-1 | より詳細にする／より多く測る／より長く記憶する／より多く介入する ⇒ より妥当になる |
+| **0** | **再利用問題** | Introduction / TU-1 | `theouni` |
+| **1** | **生態遺伝状態は、何を予測するための状態か** | Eco-genetic state validity | `eco-genetic-criticality`, `eco-genetic-warning-extensions` |
+| **2** | **未来が変わると、必要な状態も変わる** | CREST | `crest`, `ccoc`, `mltr`, `mrm`, `ced` |
+| **3** | **必要な区別を、どう観測で回収するか** | Identification and observation design | `boundary`, `mrod` |
+| **4** | **総合 — 妥当性に特権的な方向はない** | Typed synthesis / TU-1 | `theouni` |
 
-## Editorial rule
+The machine-readable source of truth for this preferred architecture is `thesis/series_architecture.json`.
 
-Each chapter should eventually use the same five-step argumentative grammar:
+## Why the old ten-chapter order was too fine
 
-1. tempting inference;
-2. source-owned counterexample or failure witness;
-3. theorem / boundary / frozen result;
-4. permitted inference;
-5. the unresolved question that becomes the next chapter.
+The previous order made source repositories look like sequential theorem dependencies even when the actual science was parallel.
 
-MRM and RACH remain independent scientific programmes. They are retained as companion sources where useful, but they are not primary chapters in this final ten-chapter spine.
+- `CCOC`, `MLTR`, and `MRM` are **parallel reasons a present-state merge can fail**: a newly addressable future, inherited structural/history semantics, or retained mechanism disagreement.
+- `CED` is not a fourth ontic obstruction at the same level. It is **downstream evidence licensing**: once a distinction is scientifically required, does the observation contract identify it well enough to report?
+- `Boundary` and `MROD` form a genuine design handoff, but not a hard proof dependency: Boundary asks whether the observation map can reduce structural ambiguity at all; MROD asks which verified measurement is most informative inside a declared ambiguity set.
+- The eco-genetic source papers share one model/programme context, but state separation, transition sufficiency, and warning discrimination are separate adequacy tests rather than theorem implications.
 
-Chapter 2 (EGWE) may appear before Chapter 4 (eco-genetic criticality) because it imports its loss/event labels from the already frozen source contracts. The editorial order does not imply that warning validity logically creates the loss-generating state.
+The preferred chapter structure therefore preserves proof ownership while removing false sequentiality.
 
-The final synthesis forbids the universe-wide monotonicity shortcut:
+## Chapter 1 — Eco-genetic state validity
 
-> **より詳細にする／より多く測る／より長く記憶する／より多く介入する ⇒ より妥当になる**
+Central question:
 
-TU-1 then supplies the precise revision-after-compression question: when a later responsibility requires a different quotient, does the new state factor through what was previously retained?
+> **Can one eco-genetic representation stand in for potential viability, realised occupancy, transition dynamics, and predictive warning?**
+
+The chapter combines three source-owned results:
+
+1. **state separation:** one common monotone sufficient scalar exists iff the distinct target vectors form a product-order chain; the locked fragmentation crossing violates that condition;
+2. **transition sufficiency:** identical declared coarse marginals can produce different exact next transitions, and the locked propagation experiment shows little loss-risk contrast at generations 5–10 but about five percentage points by generations 20–40 under the declared forcing path;
+3. **warning validity:** perfect event-conditioned precedence fixes sensitivity but not specificity; the frozen full-denominator audit reaches specificity `0` and binary-marker AUC `0.5`.
+
+These results are deliberately **not** written as `state separation -> warning failure`. They share a scientific system and ask different responsibilities of a representation.
+
+The natural-data four-gate programme remains an empirical measurement-validation companion, not empirical validation of the finite eco-genetic closure.
+
+## Chapter 2 — CREST
+
+Central question:
+
+> **When does a previously adequate ecological state cease to be adequate after the relevant future changes?**
+
+Canonical structure:
+
+```text
+temporally extended ecological worlds + scientific contract
+        |
+        +-- CCOC: newly addressable future/composition
+        +-- MLTR: inherited structure/history semantics
+        +-- MRM: retained mechanism response disagreement
+        |
+        v
+required CREST state / quotient
+        |
+        v
+CED: evidence licensing and honest report
+```
+
+`CCOC`, `MLTR`, and `MRM` are parallel obstruction modules, not Chapters 5–7 in a theorem chain. The flagship CREST theorem remains the capacity-versus-knowledge no-bound construction. Detailed CCOC/MLTR/MRM/CED proofs can sit in sections or Supplementary Information without forcing separate default submissions.
+
+## Chapter 3 — Identification and observation design
+
+Central question:
+
+> **Given a distinction that matters, can the current observation map identify it, and what should be measured next?**
+
+The chapter begins with Boundary's rank criterion and field-like same-observation/different-mechanism witness, then moves to MROD's admissible mechanism region and sequential observation-information design.
+
+This is a conceptual handoff, not a theorem dependency: MROD is not restricted to multiplicative Boundary models, and Boundary does not require MROD's synthetic benchmark.
+
+## Publication strategy
+
+The default is no longer `one repository = one paper`.
+
+Preferred strategy:
+
+1. **CREST flagship theory paper** — integrate CREST + CCOC + MLTR + MRM + CED around one state-adequacy question.
+2. **Integrated methods paper** — Boundary + MROD, with the identification theorem as the theory layer and the frozen MROD benchmark as the primary validation.
+3. **Conditional eco-genetic paper** — integrate EGC + state-validity + warning-validity only if the material is too large or too domain-specific to serve as a worked layer around the flagship theory.
+
+Existing standalone manuscripts and frozen bundles are retained as **fallback assets**, not automatic obligations to submit many small papers.
+
+## Vertical dissertation logic
+
+The three research chapters remain readable independently, because there are **no cross-series hard theorem dependencies**.
+
+The dissertation-level handoff is instead:
+
+```text
+Eco-genetic series
+  shows that adequacy changes with the scientific responsibility
+        ->
+CREST
+  generalizes why required state changes under future/structure/mechanism/evidence changes
+        ->
+Observation design
+  asks how the needed distinction can be identified and efficiently measured
+```
+
+The final synthesis then returns to TU-1: when a later responsibility needs a different quotient, can the revised state be recovered from what the earlier representation retained?
