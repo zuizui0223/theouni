@@ -53,15 +53,12 @@ def main() -> int:
     research_ids = ["chapter:eco-genetic", "chapter:crest", "chapter:observation-design"]
     assert all(by_id[cid]["kind"] == "integrated_research_chapter" for cid in research_ids)
 
-    # Legacy component architecture remains intact as the detailed provenance layer.
     legacy_chapters = legacy["chapters"]
     legacy_ids = [row["id"] for row in legacy_chapters]
     assert len(legacy_ids) == 10
     assert legacy_ids[0] == "chapter:introduction"
     assert legacy_ids[-1] == "chapter:synthesis"
 
-    # The eight old research units must be partitioned exactly once across the
-    # three integrated research chapters. This is the key no-loss/no-double-count rule.
     mapped: list[str] = []
     for cid in research_ids:
         mapped.extend(by_id[cid]["legacy_component_ids"])
@@ -69,7 +66,6 @@ def main() -> int:
     assert set(mapped) == expected_legacy_research
     assert len(mapped) == len(set(mapped)) == 8
 
-    # Source repository grouping is deliberate and exact.
     assert set(by_id["chapter:eco-genetic"]["primary_repositories"]) == {
         "zuizui0223/eco-genetic-criticality",
         "zuizui0223/eco-genetic-warning-extensions",
@@ -86,7 +82,6 @@ def main() -> int:
         "zuizui0223/mrod",
     }
 
-    # Cross-series order is conceptual, not a hidden theorem chain.
     assert series["cross_series_hard_dependencies"] == []
     handoffs = {(row["from"], row["to"]): row for row in series["cross_series_handoffs"]}
     assert ("chapter:eco-genetic", "chapter:crest") in handoffs
@@ -94,14 +89,12 @@ def main() -> int:
     assert "do not prove CREST" in handoffs[("chapter:eco-genetic", "chapter:crest")]["claim_ceiling"]
     assert "not yet a general target-conditioned CREST optimizer" in handoffs[("chapter:crest", "chapter:observation-design")]["claim_ceiling"]
 
-    # Eco-genetic integration must preserve non-implication firewalls.
     eco = by_id["chapter:eco-genetic"]
     forbidden_eco = " ".join(eco["forbidden_dependency_claims"]).lower()
     assert "state separation theorem implies warning failure" in forbidden_eco
     assert "warning failure validates the common-scalar theorem" in forbidden_eco
     assert eco["hard_dependencies"] == []
 
-    # CREST: CCOC/MLTR/MRM are parallel obstruction classes; CED is downstream.
     crest = by_id["chapter:crest"]
     dep = crest["dependency_graph"]
     assert dep["parallel_required_state_obstructions"] == ["CCOC", "MLTR", "MRM"]
@@ -111,14 +104,12 @@ def main() -> int:
     nondeps = " ".join(crest["non_dependencies"])
     assert "CCOC, MLTR and MRM do not prove one another" in nondeps
 
-    # Observation-design integration is a handoff, not a proof import.
     obs = by_id["chapter:observation-design"]
     assert obs["hard_dependencies"] == []
     obs_nondeps = " ".join(obs["non_dependencies"])
     assert "MROD does not mathematically require the multiplicative Boundary model" in obs_nondeps
     assert "Boundary does not require MROD's synthetic benchmark" in obs_nondeps
 
-    # Publication strategy must explicitly prefer consolidation.
     policy = series["submission_policy"]
     assert policy["preferred_count"] == 2
     assert len(policy["preferred_primary_papers"]) == 2
@@ -127,8 +118,6 @@ def main() -> int:
     assert "one paper per source repository" in not_default
     assert "separate ccoc, mltr, mrm and ced submissions" in not_default
 
-    # Series source map must cover exactly the three research chapters and use
-    # the same source repository sets as the architecture.
     assert source_map["schema_version"] == "theouni-series-source-map.v1"
     source_rows = {row["chapter"]: row for row in source_map["series"]}
     assert set(source_rows) == set(research_ids)
@@ -137,8 +126,6 @@ def main() -> int:
         assert repo_set == set(by_id[cid]["primary_repositories"])
         assert source_rows[cid]["forbidden_transfer"]
 
-    # Integrated drafts must be substantial, standalone, and explicit about
-    # dependency/ownership boundaries rather than simple concatenations.
     required_common = ["## Problem", "## Standalone contribution", "## Claim ceiling", "## Source ownership", "## Dissertation handoff"]
     for cid, path in DRAFTS.items():
         text = path.read_text(encoding="utf-8")
@@ -157,13 +144,17 @@ def main() -> int:
     assert "do not prove one another" in crest_text
 
     obs_text = DRAFTS["chapter:observation-design"].read_text(encoding="utf-8")
-    for token in ["rowspan", "1.000", "0.6045", "83.5", "best precommitted", "does **not** mathematically require"]:
+    for token in ["rowspan", "1.000", "0.6045", "83.5", "does **not** mathematically require"]:
         assert token in obs_text, token
+    # Semantic comparator check: the draft must explicitly compare adaptive
+    # recomputation with a precommitted static second measurement, but wording
+    # such as "best" versus "strongest" is editorial and not contractual.
+    assert "precommitted static second measurement" in obs_text
+    assert "0.5` bit" in obs_text and "four-world witness" in obs_text
 
-    # Human-facing order and dependency audit must expose the same decision.
     for token in [
         "preferred five-chapter architecture",
-        "repo",  # keeps the ownership-vs-chapter distinction visible
+        "repo",
         "CCOC`, `MLTR`, and `MRM` are **parallel",
         "Boundary + MROD",
         "fallback assets",
