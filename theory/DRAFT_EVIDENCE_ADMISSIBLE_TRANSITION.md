@@ -1,6 +1,8 @@
 # Draft — Evidence-Admissible Transition
 
 > **Status:** executable bridge draft only. This does not modify the frozen Theory Universe core, does not expand TU-2's theorem claim, and is not a model of human informed consent.
+>
+> **2026-09-08 routing clarification:** EAT is a local bridge from **Boundary-style structural target identification** to **CED-style reliability-qualified terminal reporting**. It is not a replacement for REC/V3/TNOA observation processing or MROD prospective observation design. See [`WORLD_STATE_EVIDENCE_HIERARCHY_2026-09-08.md`](WORLD_STATE_EVIDENCE_HIERARCHY_2026-09-08.md).
 
 The motivating structural analogy is simple: a system should not move from an evidence state to a stronger scientific report merely because that report is globally attractive or convenient. The transition must be supported by the distinctions actually preserved by the current evidence and by the declared reliability contract.
 
@@ -57,7 +59,9 @@ and
 |T(E_y)| = 1.
 ```
 
-This is the same finite structural distinction now made executable in `boundary`: unresolved mechanism identity does not imply that every narrower target remains unidentified.
+This structural identification statement is owned by the current identification layer represented by `boundary`: unresolved mechanism identity does not imply that every narrower target remains unidentified.
+
+EAT adds no new identification theorem here. It asks whether a structurally identified target may be promoted to a terminal report after the separate reliability contract is checked.
 
 ## 3. Reliability remains separate from structural identification
 
@@ -77,30 +81,91 @@ D_req != E_y^{D_req}.
 
 A compatible-world set and the contract governing whether evidence is acceptable are different objects.
 
-## 4. Relation to the repository ecosystem
+This is also the clean Boundary/CED firewall:
+
+```text
+Boundary
+-> what the current observation map structurally identifies
+
+CED
+-> whether the attained evidence is reliable enough for terminal stopping/reporting
+
+EAT
+-> the local transition contract between those two objects
+```
+
+## 4. Relation to the observation-information family
 
 The draft is a composition layer, not a transfer of claim ownership.
 
 ```text
-TNOA
--> preserves process-aware observation state and now exposes fail-closed report transitions
+REC
+-> audits opportunities/records lost before row entry
 
-boundary
--> returns the target image of the current compatible-world set
+V3
+-> refines compatible states using already-retained side/reference information
+
+TNOA
+-> preserves process-aware observation semantics and licenses record-level attribution claims without forcing unsupported collapse
+
+Boundary
+-> returns the compatible-world geometry and target image under the current observation map
 
 MROD
--> can separately value mechanism information I(S;Q) and declared-target information I(T;Q)
+-> values/selects prospective observations expected to reduce residual mechanism/target ambiguity
 
-CED / TU-2
--> own the deeper target-reportability / learning-versus-licensing theory
+CED
+-> owns reliability/failure architecture and risk-limited terminal scientific reporting/stopping
 
 theouni EAT draft
--> states a finite transition contract connecting those objects.
+-> states a minimal finite Boundary-to-CED transition contract
 ```
 
-No source repository loses ownership of its theorem or empirical evidence.
+A realized MROD-selected observation may later become ordinary V3-style retained refinement. TNOA may preserve the semantic distinctions carried by the resulting record. Neither operation is collapsed into EAT.
 
-## 5. Why this is not called informed consent
+## 5. Relation to CREST
+
+CREST supplies the upstream required-state distinction:
+
+```text
+J = distinctions required by the declared scientific contract
+```
+
+whereas Boundary supplies the current identification state and CED supplies terminal reliability-qualified reportability.
+
+The larger hierarchy is therefore:
+
+```text
+CREST J: what must be distinguished
+        ↓
+observation family: what has actually survived and been identified
+        ↓
+Boundary: is the target structurally identified?
+        ↓
+EAT / CED reliability gate
+        ↓
+licensed or withheld terminal scientific report
+```
+
+EAT does not decide whether `J` itself is the correct required state; that remains a CREST/companion-theory question.
+
+## 6. Relation to the EG programme
+
+EGC/EGWE/EGWEE provide domain-specific tests of whether proposed eco-genetic states, representations, warning rules and empirical proxies actually carry endpoint-relevant future information.
+
+Those results can determine whether a measurable variable is a defensible input to an empirical evidence contract, but EAT does not promote a plausible proxy to state status by itself.
+
+```text
+plausible measurement
+!=
+validated EmpiricalPartialState
+!=
+reliable evidence for a terminal target
+```
+
+The generic empirical admission route remains the theouni Empirical Projection Gate.
+
+## 7. Why this is not called informed consent
 
 Human informed consent concerns autonomous persons, disclosure, comprehension, voluntariness and authorization. Those ethical requirements are not properties of ecological model states.
 
@@ -114,7 +179,7 @@ admissible transition under the declared information/authorization contract.
 
 Calling the ecological object Evidence-Admissible Transition avoids importing human-subject semantics that the model does not contain.
 
-## 6. Verification witness
+## 8. Verification witness
 
 Run from `theory/`:
 
