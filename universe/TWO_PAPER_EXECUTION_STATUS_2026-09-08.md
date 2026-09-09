@@ -1,6 +1,6 @@
-# Two-paper execution status — 2026-09-08
+# Two-paper execution status — 2026-09-09
 
-Status: **active implementation of the canonical two-paper submission architecture**.
+Status: **both papers structurally theory-closed; production/package work remains active**.
 
 ## Paper 1 — OBSERVATION
 
@@ -16,7 +16,14 @@ Integrated source repositories:
 - REC — record-entry selection, external-data distortion, irreversibility and correction transport;
 - TNOA — semantic preservation/coarsening.
 
-Completed:
+Structural closure:
+
+- canonical closure object: compatible-world partition and identified-set geometry;
+- `results/theory_closure_manifest.json` status = `structural-theory-closed`;
+- T1–T23 cover refinement, selection loss, coarsening, reversible/irreversible transforms, sequential refinement, future-observation refinement and new-information recovery;
+- remaining scientific questions are empirical rather than missing structural interfaces.
+
+Completed production gates:
 
 - integrated manuscript v1;
 - claim/source manifest;
@@ -24,7 +31,8 @@ Completed:
 - Figure 1–5 architecture;
 - integrated quantitative figure-data manifest with pinned source blobs;
 - regression tests binding figure values to claim values;
-- GitHub Actions `v3-ci` success on integration test commit `4b70323b610d952c2f2ecd81838ea2a636df492c` (run `34233530342`).
+- deterministic Figure 2–5 SVG/CSV generators;
+- GitHub Actions `v3-ci` success on commit `31dc26fda6fa32aeb116f1eaec322527b16ba748`, run `34235609625`.
 
 Current scientific spine:
 
@@ -36,6 +44,14 @@ irreversible loss -> requires independent/new information for recovery
 ```
 
 Primary reality-facing result is REC fox/badger record-entry distortion; V3 and TNOA supply controlled synthetic strictness/stress tests.
+
+Remaining publication work:
+
+1. merge/deduplicate V3/REC/TNOA bibliography;
+2. run source-text overlap audit against archived standalone drafts;
+3. assemble final Figure 1 plus generated Figure 2–5 in journal layout;
+4. select/apply journal-specific package rules;
+5. build anonymous reviewer archive from pinned source snapshots.
 
 ## Paper 2 — EVIDENCE
 
@@ -51,15 +67,12 @@ Integrated source repositories:
 - MROD — mechanism-learning observation value;
 - CED — target-safe reportability, failure-aware refinement and risk/cost reporting.
 
-Completed:
+Structural closure:
 
-- integrated manuscript v1;
-- claim/source manifest;
-- overlap firewall;
-- Figure 1–5 architecture;
-- exact eight-world learning-versus-licensing divergence benchmark;
-- executable benchmark implementation and regression tests;
-- frozen machine-readable divergence result.
+- canonical closure object: current compatible-world block with mechanism, target and candidate-observation maps;
+- `manuscript/evidence_theory_closure.json` status = `structural-theory-closed`;
+- E-T1–E-T10 close current identification, exact target reporting, target-safe resolution, learning/licensing divergence, mechanism/target resolution relations, candidate exhaustion, realized refinement and objective-relative stopping;
+- the three stopping predicates are formally separated: mechanism resolved, target resolved, and declared candidate vocabulary exhausted.
 
 New integrated Evidence result:
 
@@ -78,9 +91,25 @@ therefore:
 mechanism-learning top != target-licensing top
 ```
 
-This is the central synthesis that turns MROD and CED into two complementary utilities inside one paper rather than two competing next-observation manuscripts.
+Completed production gates:
 
-Current Evidence CI workflows are running from the latest integration commits; final status should be read from GitHub Actions before marking the implementation gate closed.
+- integrated manuscript v1;
+- claim/source manifest and overlap firewall;
+- quantitative Boundary/MROD/CED source manifest;
+- exact learning-versus-licensing benchmark, frozen result and Figure 2 generator;
+- integrated bibliography registry/core bibliography;
+- source-abstract long-text overlap audit;
+- integrated Evidence LaTeX preview in CI;
+- CED theorem tests successful on Python 3.10/3.11/3.12, commit `24b020b09ba05268f1cced109692a3f9368d197c`, run `34247658430`;
+- legacy Paper B, Supplement and integrated Evidence preview compiled successfully, run `34247658418`.
+
+Remaining publication work:
+
+1. promote integrated Evidence preview to the canonical journal-facing source;
+2. rewrite the MEE submission/front-matter package from standalone CED Paper B to integrated Evidence;
+3. assemble final integrated Figure 1–5;
+4. build/validate anonymous reviewer archive with pinned Boundary/MROD snapshots;
+5. run final word-count, citation and journal-format audits.
 
 ## Cross-paper firewall
 
@@ -98,30 +127,24 @@ and what additional measurement is warranted?
 ```
 
 Observation does not own next-measurement optimization or target reportability.
-Evidence does not re-own refinement, shadow/no-row support loss, or semantic-coarsening loss.
+Evidence does not re-own retained-reference refinement, shadow/no-row support loss, semantic-coarsening loss or downstream irreversibility.
 
 ## Source-repository role after consolidation
 
-The six source repositories remain reproducibility/provenance units, not independent near-term submission targets:
+The six source repositories remain theorem/evidence/software provenance and reproducibility units, not independent near-term submission targets:
 
 - `v3`, `rec`, `tnoa` -> Observation sources;
 - `boundary`, `mrod`, `ced` -> Evidence sources.
 
 Standalone source manuscripts remain archived/source material unless the two-paper architecture is explicitly revoked.
 
-## Next production gates
+## Programme state
 
-### Observation
+```text
+mathematical interface gaps: 0 under declared assumptions
 
-1. bibliography merge/deduplication;
-2. quantitative Figure 2–5 generation from pinned data;
-3. source-text overlap audit;
-4. journal-specific package and anonymous reviewer bundle.
+OBSERVATION -> theory closed / publication production active
+EVIDENCE    -> theory closed / publication production active
 
-### Evidence
-
-1. quantitative source manifest for Boundary/MROD/CED panels;
-2. Figure 2 generator for learning-versus-licensing divergence;
-3. migrate integrated Markdown draft into existing CED LaTeX/MEE production path;
-4. bibliography merge and overlap audit;
-5. update anonymous reviewer bundle to include pinned Boundary/MROD source snapshots.
+open frontier -> physical validity, predictive calibration, failure-contract validity and natural-system transport
+```
