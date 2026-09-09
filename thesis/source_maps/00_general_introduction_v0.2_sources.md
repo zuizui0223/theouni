@@ -1,6 +1,6 @@
 # Source map — General Introduction v0.2
 
-This map supports `thesis/drafts/00_general_introduction_v0.2.md`. It distinguishes literature-backed background, source-owned chapter previews, and dissertation-level synthesis claims.
+This map supports `thesis/drafts/00_general_introduction_v0.2.md`. It distinguishes literature-backed background, source-owned chapter previews, empirical bridge witnesses, and dissertation-level synthesis claims.
 
 ## A. Philosophy of representation and purpose
 
@@ -104,20 +104,60 @@ These documents reorganize source-owned results; they do not create new source t
 | Early signal may fail as warning | eco-genetic-warning-extensions + TU-4 | Event-conditional lead can coexist with zero specificity | Do not claim universal threshold or portability |
 | Old adequate state may not be revisable | TU-1 | Revised state must factor through stored representation or require auxiliary information | Do not equate revision debt with empirical cost or physical irreversibility |
 
-## F. Reference-list provenance
+## F. Empirical bridge witness — TTF observation-support gate
+
+**Owning source:** `zuizui0223/TTF`, branch `analysis/gate-i-geometry-calibration`.
+
+**Frozen evidence:**
+
+- `results/v11_fresh_density_scaled_qualification_v0.1.json`;
+- `benchmarks/frozen/v12_actual_geometry_source.json`;
+- terminal v0.12 freeze commit `3e4b221f2951aaf940d4695288254e27404fe2fb`.
+
+This source provides a bounded empirical bridge witness for the distinction between model-world qualification and observational admissibility.
+
+It supports the following claims:
+
+- a method can pass a prospectively frozen synthetic/semi-synthetic validity and detectability gate on a fresh geometry and still fail before empirical inference because the realized measurement process does not retain the support required to instantiate that geometry;
+- statistical/method qualification and observation-support qualification are distinct gates;
+- failure of an observation-support gate licenses `not_evaluable` / abstention rather than a biological null.
+
+Concrete bounded witness:
+
+- v0.11 used a fresh 250-species × 100-record geometry with predeclared density-scaled `k=15`; the maximum private-world Wilson upper bound was **0.09580**, while shared amplitude-2 power was **0.998** with Wilson lower bound **0.98876**, satisfying the frozen type-I and power gates;
+- v0.12 passed the same 25,000 frozen photographs through a location-blind frozen measurement pipeline before empirical TTF was permitted to read colour values; only **189/250 species** retained at least 40 evaluable photographs, the median was **51** and the minimum **15**, so **no actual geometry was retained and no empirical TTF statistic was computed**.
+
+Claim ceiling:
+
+- this is **not** an empirical flower-colour sharedness or no-sharedness result;
+- it does **not** prove that real observation generally destroys model validity;
+- it does **not** empirically validate CREST, CED, or the `theouni` architecture;
+- it is admissible only as a source-owned example showing that a bridge from a qualified model-world procedure to an empirical claim can terminate at observation support without producing a biological negative.
+
+This witness is therefore most relevant to the dissertation distinction:
+
+```text
+what a task requires
+    !=
+what the observation process actually preserves
+    !=
+what the available evidence licenses reporting
+```
+
+## G. Reference-list provenance
 
 The bibliographic entries in v0.2 were copied from the current CREST manuscript reference list. This establishes internal consistency with the source manuscript but is not a substitute for final primary-source checking, institutional style conversion, or DOI validation before submission.
 
 ## Section-to-source matrix
 
-| Draft section | Literature support | Internal theory support | Main boundary |
+| Draft section | Literature support | Internal theory / witness support | Main boundary |
 |---|---|---|---|
 | 1. Ecology is built from representations | A, B | D | Background does not prove programme novelty |
 | 2. Minimal adequacy/reuse criterion | A | C | Classical substrate, draft generalization |
 | 3. Five changes that break reuse | — | D, E | Chapter previews remain source-owned |
 | 4. Invariants | — | D | No global consistency theorem |
-| 5. Reality and endings | B | D | Empirical admission remains required |
-| 6. Dissertation claim | A, B | C, D | No privileged state or generic quotient novelty |
+| 5. Reality and endings | B | D, F | Empirical admission/support can terminate as not-evaluable without becoming an ecological null |
+| 6. Dissertation claim | A, B | C, D, F | TTF is a bounded bridge witness, not a theorem source or empirical validation of the programme |
 | 7. Roadmap | — | D | Editorial traversal, not theorem order |
 
 ## Remaining work for citation-ready status
@@ -127,3 +167,4 @@ The bibliographic entries in v0.2 were copied from the current CREST manuscript 
 3. Add chapter cross-references after final numbering is fixed.
 4. Review the phrase “one step later” relative to adequacy-for-purpose literature so it is not read as a historical priority claim.
 5. Audit the transferability literature beyond Yates et al. before the dissertation's final novelty statement is frozen.
+6. When the General Introduction text is next revised, decide whether the TTF witness belongs in the main prose or only in the General Synthesis; retain the source-owned claim ceiling either way.
