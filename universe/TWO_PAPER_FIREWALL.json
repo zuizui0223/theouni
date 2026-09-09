@@ -1,0 +1,56 @@
+{
+  "schema": "two-paper-firewall-v1",
+  "status": "canonical-single-source",
+  "papers": {
+    "OBSERVATION": {
+      "submission_home": "zuizui0223/v3",
+      "owns": [
+        "retained side-information/reference refinement before ecological inference",
+        "record-entry shadow/no-row support selection",
+        "downstream irreversibility after observation-stage information loss",
+        "calibration and transport domain of record-entry correction",
+        "semantic coarsening of retained observation evidence"
+      ],
+      "does_not_own": [
+        "current mechanism identification boundary",
+        "target-safe reportability or licensing",
+        "mechanism-learning versus target-licensing utility choice",
+        "next-observation optimization or objective-relative stopping",
+        "active intervention design used to create a new separating observation direction"
+      ]
+    },
+    "EVIDENCE": {
+      "submission_home": "zuizui0223/ced",
+      "owns": [
+        "current structural identification boundary",
+        "target-safe resolution requirement and reportability",
+        "mechanism-learning versus target-licensing utility distinction",
+        "failure-aware trustworthy refinement",
+        "objective-relative next-observation choice and stopping",
+        "active or interventional acquisition that changes the observation map to create a separating direction"
+      ],
+      "does_not_own": [
+        "generic retained-reference refinement before selection",
+        "record-entry shadow/no-row support loss",
+        "calibration or transport domain of record-entry correction",
+        "semantic-coarsening information loss",
+        "downstream irreversibility of an already collapsed observation record"
+      ]
+    }
+  },
+  "handoffs": {
+    "U4_future_observation_design": {
+      "from": "OBSERVATION exact-geometry benchmark",
+      "to": "EVIDENCE",
+      "lands_as": ["E4_mechanism_learning", "E6_adaptive_reporting"]
+    },
+    "U5_intervention_diagnosis": {
+      "from": "OBSERVATION exact-geometry benchmark",
+      "to": "EVIDENCE",
+      "lands_as": "non-headline active-identification extension",
+      "interpretation": "An intervention may change the observation map and introduce a separating direction that passive evidence lacks.",
+      "claim_ceiling": "structural/exact finite-world extension only; physical intervention validity remains for InsePi or another empirical validation layer"
+    }
+  },
+  "cross_paper_contract": "Observation ends at the compatible-world/identified set preserved by the recording system. Evidence begins from that retained set and asks what it identifies or licenses and what additional passive or active measurement is warranted."
+}
