@@ -1,236 +1,103 @@
 {
-  "schema_version": "1.0",
-  "as_of": "2026-09-08",
+  "schema_version": "1.1",
+  "as_of": "2026-09-09",
   "status": "cross_repository_synthesis_not_frozen_core",
   "canonical_human_readable": "theory/WORLD_STATE_EVIDENCE_HIERARCHY_2026-09-08.md",
+  "observation_support_bridge": "theory/OBSERVATION_SUPPORT_BRIDGE_2026-09-09.md",
   "worldview": {
-    "central_question": "Which distinctions among ecological worlds are required by a scientific task, which are actually preserved and identified by the observation system, and which measurable representations earn future-relevant predictive status?",
+    "central_question": "Which distinctions among ecological worlds are required by a scientific task, which procedures are qualified to recover them on a declared design, which support survives realized measurement, which distinctions are identified by the retained evidence, and which target statements are reportable?",
     "core_inequalities": [
       "EcologicalReality != ModelWorld",
       "ModelWorld != RequiredState",
-      "RequiredState != CompatibleWorldSet",
+      "RequiredState != MethodValidity",
+      "MethodValidity != DeploymentDetectability",
+      "DeploymentDetectability != ObservationSupport",
+      "ObservationSupport != CompatibleWorldSet",
       "CompatibleWorldSet != ReportableTarget",
       "BiologicallyPlausibleVariable != EmpiricalPartialState",
       "EarlySignal != PredictiveWarning"
     ],
-    "principal_interface": "RequiredState J versus current evidence/identification partition E"
+    "principal_interface": "RequiredState J -> qualified inferential responsibility -> realized ObservationSupport O -> current evidence/identification E -> ReportableTarget"
   },
   "layers": [
-    {
-      "id": "L0",
-      "name": "reality_and_model_world",
-      "question": "What world carrier is being represented?",
-      "owners": ["crest", "theouni_empirical_projection_gate"]
-    },
-    {
-      "id": "L1",
-      "name": "required_distinctions",
-      "question": "What must the scientific state remember?",
-      "owners": ["crest", "ccoc", "mltr", "mrm"]
-    },
-    {
-      "id": "L2",
-      "name": "observation_information_pipeline",
-      "question": "Which required distinctions survive, are identified, or can be acquired?",
-      "owners": ["rec", "v3", "tnoa", "boundary", "mrod"]
-    },
-    {
-      "id": "L3",
-      "name": "terminal_evidence_and_reporting",
-      "question": "Is the attained evidence reliable enough to stop and issue the declared scientific report?",
-      "owners": ["ced"]
-    },
-    {
-      "id": "L4",
-      "name": "domain_predictive_validation",
-      "question": "Do proposed biological states, representations, warnings and measurable proxies actually carry endpoint-relevant future information?",
-      "owners": ["egc", "egwe_state", "egwe_warning", "egwee"]
-    },
-    {
-      "id": "L5",
-      "name": "task_reuse_and_revision_meta_layer",
-      "question": "When can a representation or evidence state earned for one task be reused under another contract?",
-      "owners": ["theouni_tu1", "theouni_tu2", "theouni_tu3", "theouni_tu4", "theouni_cira", "theouni_eat"]
-    }
+    {"id":"L0","name":"reality_and_model_world","question":"What world carrier is being represented?","owners":["crest","theouni_empirical_projection_gate"]},
+    {"id":"L1","name":"required_distinctions","question":"What must the scientific state remember?","owners":["crest","ccoc","mltr","mrm"]},
+    {"id":"L2A","name":"method_and_deployment_qualification","question":"Can the frozen procedure recover the target with declared validity and detectability on the declared model worlds and deployment geometry?","owners":["source_methods"]},
+    {"id":"L2B","name":"realized_observation_support","question":"Did the realized measurement process preserve enough predeclared support to instantiate the qualified empirical procedure?","owners":["observation_support_bridge","source_measurement_pipelines"]},
+    {"id":"L2C","name":"observation_information_pipeline","question":"Among retained observations, which required distinctions survive semantically, are identified, or can be acquired?","owners":["rec","v3","tnoa","boundary","mrod"]},
+    {"id":"L3","name":"terminal_evidence_and_reporting","question":"Is the attained evidence reliable enough to stop and issue the declared scientific report?","owners":["ced"]},
+    {"id":"L4","name":"domain_predictive_validation","question":"Do proposed biological states, representations, warnings and measurable proxies actually carry endpoint-relevant future information?","owners":["egc","egwe_state","egwe_warning","egwee"]},
+    {"id":"L5","name":"task_reuse_and_revision_meta_layer","question":"When can a representation or evidence state earned for one task be reused under another contract?","owners":["theouni_tu1","theouni_tu2","theouni_tu3","theouni_tu4","theouni_cira","theouni_eat"]}
   ],
   "nodes": [
-    {
-      "id": "crest",
-      "repo": "zuizui0223/crest",
-      "series": "CREST",
-      "layer": "L1",
-      "owned_question": "What is the least-information contract-relative ecological state over temporally extended model worlds?",
-      "output": "RequiredState J"
-    },
-    {
-      "id": "ccoc",
-      "repo": "zuizui0223/ccoc",
-      "series": "CREST",
-      "layer": "L1",
-      "owned_question": "Can a closed-future compression remain exact when the legal future grammar is opened?",
-      "output": "future-sufficiency obstruction / required response-interface refinement"
-    },
-    {
-      "id": "mltr",
-      "repo": "zuizui0223/mltr",
-      "series": "CREST",
-      "layer": "L1",
-      "owned_question": "Can inherited state meaning be transported coherently through structural replacement, and what history must be retained?",
-      "output": "semantic/history obstruction and coarsest repair requirement"
-    },
-    {
-      "id": "mrm",
-      "repo": "zuizui0223/mrm",
-      "series": "CREST",
-      "layer": "L1",
-      "owned_question": "Which response-relevant mechanism distinctions must a robust macro-law retain?",
-      "output": "mechanism-robust candidate-safe state requirement"
-    },
-    {
-      "id": "rec",
-      "repo": "zuizui0223/rec",
-      "series": "observation",
-      "layer": "L2",
-      "owned_question": "Which biological opportunities fail to become retained rows, and does entry selection alter the ecological estimand?",
-      "output": "pre-row support-loss audit and entry provenance"
-    },
-    {
-      "id": "v3",
-      "repo": "zuizui0223/v3",
-      "series": "observation",
-      "layer": "L2",
-      "owned_question": "How much can already-retained side/reference information legitimately refine compatible states?",
-      "output": "refined compatible-world set"
-    },
-    {
-      "id": "tnoa",
-      "repo": "zuizui0223/tnoa",
-      "series": "observation",
-      "layer": "L2",
-      "owned_question": "Which process-aware evidence distinctions must be preserved before semantic coarsening?",
-      "output": "B/T/N/U-style process-preserving decision record and record-level claim licenses"
-    },
-    {
-      "id": "boundary",
-      "repo": "zuizui0223/boundary",
-      "series": "observation",
-      "layer": "L2",
-      "owned_question": "What does the current observation map structurally identify now?",
-      "output": "compatible-world fibre, identified set, target image"
-    },
-    {
-      "id": "mrod",
-      "repo": "zuizui0223/mrod",
-      "series": "observation",
-      "layer": "L2",
-      "owned_question": "Which prospective observation should be acquired to reduce residual mechanism or target ambiguity?",
-      "output": "sequential candidate-observation policy / information value"
-    },
-    {
-      "id": "ced",
-      "repo": "zuizui0223/ced",
-      "series": "CREST_observation_interface",
-      "layer": "L3",
-      "owned_question": "Given required distinctions, realized evidence and a calibrated reliability/failure contract, may monitoring stop and may the target be reported at the declared false-resolution risk?",
-      "output": "reliability-qualified deterministic/set-valued/abstaining terminal report"
-    },
-    {
-      "id": "egc",
-      "repo": "zuizui0223/egc",
-      "series": "EG",
-      "layer": "L4",
-      "owned_question": "Which biological eco-genetic quantities separate under fragmentation and related dynamics?",
-      "output": "biological-state separation and finite mechanistic domain evidence"
-    },
-    {
-      "id": "egwe_state",
-      "repo": "zuizui0223/egwe",
-      "series": "EG",
-      "layer": "L4",
-      "owned_question": "What information must an eco-genetic representation retain for a declared forecast target and horizon?",
-      "output": "forecast-relevant representation and portability boundaries"
-    },
-    {
-      "id": "egwe_warning",
-      "repo": "zuizui0223/egwe",
-      "series": "EG",
-      "layer": "L4",
-      "owned_question": "When does an early signal qualify as a fate-discriminative predictive warning under the full denominator?",
-      "output": "warning-validity decision"
-    },
-    {
-      "id": "egwee",
-      "repo": "zuizui0223/egwee",
-      "series": "EG",
-      "layer": "L4",
-      "owned_question": "Has a natural measurable state/proxy earned endpoint-relevant predictive status before residual context is interpreted?",
-      "output": "measurement/representation/residual-context/cross-study gate outcome"
-    },
-    {
-      "id": "theouni",
-      "repo": "zuizui0223/theouni",
-      "series": "meta",
-      "layer": "L5",
-      "owned_question": "When can task-indexed states, evidence, learning results, loss states and warning states be safely reused after the scientific contract changes?",
-      "output": "typed bridge, reuse, revision and admission contracts"
-    }
+    {"id":"crest","repo":"zuizui0223/crest","series":"CREST","layer":"L1","owned_question":"What is the least-information contract-relative ecological state over temporally extended model worlds?","output":"RequiredState J"},
+    {"id":"ccoc","repo":"zuizui0223/ccoc","series":"CREST","layer":"L1","owned_question":"Can a closed-future compression remain exact when the legal future grammar is opened?","output":"future-sufficiency obstruction / required response-interface refinement"},
+    {"id":"mltr","repo":"zuizui0223/mltr","series":"CREST","layer":"L1","owned_question":"Can inherited state meaning be transported coherently through structural replacement, and what history must be retained?","output":"semantic/history obstruction and coarsest repair requirement"},
+    {"id":"mrm","repo":"zuizui0223/mrm","series":"CREST","layer":"L1","owned_question":"Which response-relevant mechanism distinctions must a robust macro-law retain?","output":"mechanism-robust candidate-safe state requirement"},
+    {"id":"method_qualification","repo":"source-owned","series":"admission","layer":"L2A","owned_question":"Does the frozen inferential procedure have the declared error and power properties on the declared model/semi-synthetic world family?","output":"MethodValidity V(M,W)"},
+    {"id":"deployment_adequacy","repo":"source-owned","series":"admission","layer":"L2A","owned_question":"Does the intended sampling geometry support the predeclared target at the required detectability under the frozen method?","output":"DeploymentDetectability D(M,G)"},
+    {"id":"observation_support","repo":"zuizui0223/theouni","series":"admission_synthesis","layer":"L2B","owned_question":"After realized measurement, does enough predeclared support remain to instantiate the qualified procedure without replacement, retuning or target relaxation?","output":"ObservationSupport O(R,G) / admissible or not_evaluable"},
+    {"id":"ttf_bridge_witness","repo":"zuizui0223/TTF","series":"bounded_empirical_witness","layer":"L2B","owned_question":"Can method/design qualification pass while actual measurement support fails before the empirical statistic opens?","output":"v0.11 PASS -> v0.12 not_evaluable witness","claim_ceiling":"source-owned bounded witness; not a theorem proof and not an empirical flower-colour sharedness result"},
+    {"id":"rec","repo":"zuizui0223/rec","series":"observation","layer":"L2C","owned_question":"Which biological opportunities fail to become retained rows, and does entry selection alter the ecological estimand?","output":"pre-row support-loss audit and entry provenance"},
+    {"id":"v3","repo":"zuizui0223/v3","series":"observation","layer":"L2C","owned_question":"How much can already-retained side/reference information legitimately refine compatible states?","output":"refined compatible-world set"},
+    {"id":"tnoa","repo":"zuizui0223/tnoa","series":"observation","layer":"L2C","owned_question":"Which process-aware evidence distinctions must be preserved before semantic coarsening?","output":"B/T/N/U-style process-preserving decision record and record-level claim licenses"},
+    {"id":"boundary","repo":"zuizui0223/boundary","series":"observation","layer":"L2C","owned_question":"What does the current observation map structurally identify now?","output":"compatible-world fibre, identified set, target image"},
+    {"id":"mrod","repo":"zuizui0223/mrod","series":"observation","layer":"L2C","owned_question":"Which prospective observation should be acquired to reduce residual mechanism or target ambiguity?","output":"sequential candidate-observation policy / information value"},
+    {"id":"ced","repo":"zuizui0223/ced","series":"CREST_observation_interface","layer":"L3","owned_question":"Given required distinctions, realized evidence and a calibrated reliability/failure contract, may monitoring stop and may the target be reported at the declared false-resolution risk?","output":"reliability-qualified deterministic/set-valued/abstaining terminal report"},
+    {"id":"egc","repo":"zuizui0223/egc","series":"EG","layer":"L4","owned_question":"Which biological eco-genetic quantities separate under fragmentation and related dynamics?","output":"biological-state separation and finite mechanistic domain evidence"},
+    {"id":"egwe_state","repo":"zuizui0223/egwe","series":"EG","layer":"L4","owned_question":"What information must an eco-genetic representation retain for a declared forecast target and horizon?","output":"forecast-relevant representation and portability boundaries"},
+    {"id":"egwe_warning","repo":"zuizui0223/egwe","series":"EG","layer":"L4","owned_question":"When does an early signal qualify as a fate-discriminative predictive warning under the full denominator?","output":"warning-validity decision"},
+    {"id":"egwee","repo":"zuizui0223/egwee","series":"EG","layer":"L4","owned_question":"Has a natural measurable state/proxy earned endpoint-relevant predictive status before residual context is interpreted?","output":"measurement/representation/residual-context/cross-study gate outcome"},
+    {"id":"theouni","repo":"zuizui0223/theouni","series":"meta","layer":"L5","owned_question":"When can task-indexed states, evidence, learning results, loss states and warning states be safely reused after the scientific contract changes?","output":"typed bridge, reuse, revision and admission contracts"}
   ],
   "edges": [
-    {"from": "ccoc", "to": "crest", "type": "normative_obstruction", "object": "future_sufficiency"},
-    {"from": "mltr", "to": "crest", "type": "normative_obstruction", "object": "semantic_history_coherence"},
-    {"from": "mrm", "to": "crest", "type": "normative_obstruction", "object": "mechanism_robustness"},
-    {"from": "crest", "to": "ced", "type": "required_distinction_handoff", "object": "RequiredState_J"},
-    {"from": "rec", "to": "v3", "type": "operational_flow", "object": "retained_support_after_entry_selection"},
-    {"from": "v3", "to": "tnoa", "type": "operational_flow", "object": "refined_rich_evidence"},
-    {"from": "tnoa", "to": "boundary", "type": "operational_flow", "object": "preserved_observation_semantics"},
-    {"from": "boundary", "to": "mrod", "type": "unresolved_set_handoff", "object": "residual_identification_boundary"},
-    {"from": "mrod", "to": "v3", "type": "realized_future_observation_becomes_refinement", "object": "new_retained_channel"},
-    {"from": "boundary", "to": "ced", "type": "structural_identification_handoff", "object": "target_image_or_compatible_set"},
-    {"from": "tnoa", "to": "ced", "type": "record_semantics_handoff", "object": "process_preserving_decision_record"},
-    {"from": "egc", "to": "egwe_state", "type": "domain_state_candidate_handoff", "object": "biologically_separated_states"},
-    {"from": "egwe_state", "to": "egwe_warning", "type": "conditional_warning_evaluation", "object": "loss_generating_or_forecast_state"},
-    {"from": "egwe_state", "to": "egwee", "type": "measurement_validation_handoff", "object": "candidate_future_relevant_state"},
-    {"from": "egwee", "to": "ced", "type": "empirical_measurement_contract_input", "object": "validated_measurement_and_representation_limits"},
-    {"from": "egwe_state", "to": "crest", "type": "domain_witness_not_theorem_transfer", "object": "future_relevant_representation_counterexample"},
-    {"from": "crest", "to": "theouni", "type": "meta_reuse_input", "object": "task_indexed_required_state"},
-    {"from": "ced", "to": "theouni", "type": "meta_reuse_input", "object": "licensed_or_withheld_report"},
-    {"from": "egwe_state", "to": "theouni", "type": "meta_reuse_input", "object": "forecast_horizon_representation_boundary"},
-    {"from": "egwe_warning", "to": "theouni", "type": "meta_reuse_input", "object": "warning_validity_and_portability_boundary"}
+    {"from":"ccoc","to":"crest","type":"normative_obstruction","object":"future_sufficiency"},
+    {"from":"mltr","to":"crest","type":"normative_obstruction","object":"semantic_history_coherence"},
+    {"from":"mrm","to":"crest","type":"normative_obstruction","object":"mechanism_robustness"},
+    {"from":"crest","to":"method_qualification","type":"required_distinction_to_inferential_design","object":"target-relative required distinctions"},
+    {"from":"method_qualification","to":"deployment_adequacy","type":"qualified_method_to_geometry","object":"frozen method properties"},
+    {"from":"deployment_adequacy","to":"observation_support","type":"predeclared_geometry_to_realized_support","object":"sampling geometry and minimum support contract"},
+    {"from":"ttf_bridge_witness","to":"observation_support","type":"bounded_empirical_witness_not_theorem_transfer","object":"v0.11 qualified design plus v0.12 classifiability failure"},
+    {"from":"observation_support","to":"v3","type":"admitted_retained_evidence_handoff","object":"measurement outputs only when support gate passes"},
+    {"from":"observation_support","to":"ced","type":"fail_closed_abstention_handoff","object":"not_evaluable when support gate fails"},
+    {"from":"crest","to":"ced","type":"required_distinction_handoff","object":"RequiredState_J"},
+    {"from":"rec","to":"v3","type":"operational_flow","object":"retained_support_after_entry_selection"},
+    {"from":"v3","to":"tnoa","type":"operational_flow","object":"refined_rich_evidence"},
+    {"from":"tnoa","to":"boundary","type":"operational_flow","object":"preserved_observation_semantics"},
+    {"from":"boundary","to":"mrod","type":"unresolved_set_handoff","object":"residual_identification_boundary"},
+    {"from":"mrod","to":"v3","type":"realized_future_observation_becomes_refinement","object":"new_retained_channel"},
+    {"from":"boundary","to":"ced","type":"structural_identification_handoff","object":"target_image_or_compatible_set"},
+    {"from":"tnoa","to":"ced","type":"record_semantics_handoff","object":"process_preserving_decision_record"},
+    {"from":"egc","to":"egwe_state","type":"domain_state_candidate_handoff","object":"biologically_separated_states"},
+    {"from":"egwe_state","to":"egwe_warning","type":"conditional_warning_evaluation","object":"loss_generating_or_forecast_state"},
+    {"from":"egwe_state","to":"egwee","type":"measurement_validation_handoff","object":"candidate_future_relevant_state"},
+    {"from":"egwee","to":"ced","type":"empirical_measurement_contract_input","object":"validated_measurement_and_representation_limits"},
+    {"from":"egwe_state","to":"crest","type":"domain_witness_not_theorem_transfer","object":"future_relevant_representation_counterexample"},
+    {"from":"crest","to":"theouni","type":"meta_reuse_input","object":"task_indexed_required_state"},
+    {"from":"ced","to":"theouni","type":"meta_reuse_input","object":"licensed_or_withheld_report"},
+    {"from":"egwe_state","to":"theouni","type":"meta_reuse_input","object":"forecast_horizon_representation_boundary"},
+    {"from":"egwe_warning","to":"theouni","type":"meta_reuse_input","object":"warning_validity_and_portability_boundary"}
   ],
   "overlap_firewalls": [
-    {
-      "pair": ["boundary", "ced"],
-      "route": "Boundary owns structural target identification; CED owns reliability-qualified terminal stopping/reportability."
-    },
-    {
-      "pair": ["mrod", "ced"],
-      "route": "MROD owns prospective observation value and sequential acquisition; CED owns the false-resolution-constrained terminal decision."
-    },
-    {
-      "pair": ["tnoa", "ced"],
-      "route": "TNOA owns observation-level semantic preservation and local claim licensing; CED owns scientific-target licensing under the declared aggregate evidence/reliability contract."
-    },
-    {
-      "pair": ["v3", "boundary"],
-      "route": "V3 applies retained-information refinement; Boundary characterizes the current identification geometry after that refinement."
-    },
-    {
-      "pair": ["v3", "mrod"],
-      "route": "V3 uses an already-retained channel; MROD chooses a not-yet-realized future channel. The realized MROD observation becomes V3-style refinement."
-    },
-    {
-      "pair": ["crest", "egwe_state"],
-      "route": "CREST owns general contract-relative state theory; EGWE-state owns eco-genetic domain tests of forecast-relevant representation."
-    },
-    {
-      "pair": ["egwee", "theouni"],
-      "route": "EGWEE owns natural-data gate outcomes; theouni may abstract an empirical admission contract but does not own those outcomes."
-    }
+    {"pair":["method_qualification","observation_support"],"route":"Method qualification owns error/power properties on declared worlds; ObservationSupport owns whether realized measurement preserves the support needed to instantiate that qualified procedure."},
+    {"pair":["deployment_adequacy","observation_support"],"route":"Deployment adequacy is prospective geometry detectability; ObservationSupport is realized post-measurement admissibility on the frozen units."},
+    {"pair":["observation_support","ced"],"route":"ObservationSupport can terminate a workflow as not_evaluable before the empirical statistic exists; CED owns reliability-qualified reporting once an evidence state exists under its declared contract."},
+    {"pair":["observation_support","rec"],"route":"ObservationSupport is a generic admission gate for whether a predeclared inferential design remains instantiable after measurement; REC specifically owns biological opportunity loss before row entry and estimand shift."},
+    {"pair":["boundary","ced"],"route":"Boundary owns structural target identification; CED owns reliability-qualified terminal stopping/reportability."},
+    {"pair":["mrod","ced"],"route":"MROD owns prospective observation value and sequential acquisition; CED owns the false-resolution-constrained terminal decision."},
+    {"pair":["tnoa","ced"],"route":"TNOA owns observation-level semantic preservation and local claim licensing; CED owns scientific-target licensing under the declared aggregate evidence/reliability contract."},
+    {"pair":["v3","boundary"],"route":"V3 applies retained-information refinement; Boundary characterizes the current identification geometry after that refinement."},
+    {"pair":["v3","mrod"],"route":"V3 uses an already-retained channel; MROD chooses a not-yet-realized future channel. The realized MROD observation becomes V3-style refinement."},
+    {"pair":["crest","egwe_state"],"route":"CREST owns general contract-relative state theory; EGWE-state owns eco-genetic domain tests of forecast-relevant representation."},
+    {"pair":["egwee","theouni"],"route":"EGWEE owns natural-data gate outcomes; theouni may abstract an empirical admission contract but does not own those outcomes."}
   ],
   "canonical_loop": [
     "declare_target_and_scientific_responsibility",
     "construct_required_distinctions_with_CREST_CCOC_MLTR_MRM",
-    "audit_information_loss_and_identification_with_REC_V3_TNOA_Boundary",
+    "qualify_method_on_declared_world_family",
+    "qualify_detectability_on_predeclared_deployment_geometry",
+    "apply_realized_observation_support_gate_before_opening_empirical_statistic",
+    "if_support_passes_audit_retained_information_with_REC_V3_TNOA_Boundary",
     "if_unresolved_select_new_observation_with_MROD",
     "reenter_realized_observation_as_retained_refinement",
     "apply_CED_reliability_and_false_resolution_terminal_gate",
