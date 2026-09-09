@@ -1,12 +1,12 @@
-# World–State–Evidence hierarchy — 2026-09-08 synthesis
+# World–State–Evidence hierarchy — 2026-09-09 synchronized synthesis
 
-> **Status:** current cross-repository synthesis layer. This document does not modify the frozen Theory Universe v0.5 core, transfer theorem ownership, or turn empirical results into general theorems. It records the present division of labour among the CREST, observation-information, and eco-genetic (EG) programmes and the interfaces that connect them.
+> **Status:** current cross-repository synthesis layer. This document does not modify the frozen Theory Universe v0.5 core, transfer theorem ownership, or turn empirical results into general theorems. The 2026-09-09 synchronization adds an explicit inferential-qualification and realized observation-support bridge between required state and retained evidence.
 
 ## 1. One shared worldview
 
-The three programmes are not competing definitions of ecological state. They address different stages of one scientific problem:
+The source programmes are not competing definitions of ecological state. They address different stages of one scientific problem:
 
-> **A temporally extended ecological world contains more distinctions than any one scientific task needs. A scientific contract determines which distinctions matter; an observation system determines which of those distinctions are actually available; empirical validation determines whether proposed measurable summaries really carry the future-relevant information claimed for them.**
+> **A temporally extended ecological world contains more distinctions than any one scientific task needs. A scientific contract determines which distinctions matter; an inferential design must be qualified for those distinctions on a declared world family and deployment geometry; the realized measurement process determines whether enough support survives to instantiate that qualified design; the retained observation system determines which distinctions are actually identified; and terminal evidence rules determine what may be reported.**
 
 The common type separation is
 
@@ -14,25 +14,32 @@ The common type separation is
 EcologicalReality
 != ModelWorld
 != RequiredState
+!= MethodValidity
+!= DeploymentDetectability
+!= ObservationSupport
 != ObservationRecord
 != CompatibleWorldSet
 != ReportableTarget
 != EmpiricalPartialState
 ```
 
-unless an explicit bridge establishes the relevant factorization or equality.
+unless an explicit bridge establishes the relevant relation.
 
-The central three-stage separation is
+The central separation is therefore
 
 ```text
 what must be distinguished
         !=
-what has been distinguished by the evidence
+what a frozen method/design is qualified to recover
+        !=
+what realized measurement still supports
+        !=
+what has been identified by retained evidence
         !=
 what may now be reported at the declared risk level
 ```
 
-and the empirical corollary is
+The empirical corollary remains
 
 ```text
 biologically plausible variable
@@ -60,12 +67,17 @@ flowchart TD
     G --> CCOC[CCOC: future-sufficiency obstruction]
     H --> MLTR[MLTR: semantic/history obstruction]
     TH --> MRM[MRM: mechanism-robustness obstruction]
-
     CCOC --> J[CREST RequiredState J]
     MLTR --> J
     MRM --> J
 
-    MW --> REC[REC: pre-row selection / support loss]
+    J --> MQ[Method qualification: V M,W]
+    MQ --> DA[Deployment detectability: D M,G]
+    DA --> OS[Observation support: O R,G]
+    OS -->|fail| NE[not_evaluable / abstain]
+    OS -->|pass| REC[REC: pre-row selection / support loss]
+
+    MW --> REC
     REC --> V3[V3: refinement by retained side information]
     V3 --> TNOA[TNOA: preserve observation semantics / delay coarsening]
     TNOA --> BND[Boundary: current identification boundary]
@@ -73,7 +85,6 @@ flowchart TD
 
     J --> GAP[Required-vs-identified gap]
     E --> GAP
-
     GAP -->|unresolved distinction| MROD[MROD: choose prospective observation]
     MROD -->|realized observation| V3
 
@@ -81,6 +92,7 @@ flowchart TD
     D --> CED
     T --> CED
     J --> CED
+    NE --> CED
     CED --> REP[licensed deterministic / set-valued / abstaining report]
 
     EGC[EGC: biological-state separation] --> EGSTATE[EGWE state: forecast-relevant representation]
@@ -94,14 +106,17 @@ flowchart TD
     EGSTATE --> TU
 ```
 
-This diagram contains several relation types. It must not be read as one causal time sequence. In particular:
+This diagram contains several relation types and is not one causal time sequence.
 
-- **CREST arrows are mainly normative/representational:** they determine what a state must retain for a declared task.
-- **REC/V3/TNOA/Boundary/MROD arrows are mainly operational/epistemic:** they describe loss, refinement, identification and prospective acquisition in an observation system.
-- **EG arrows are validation/domain arrows:** they test whether candidate biological states, representations, warning rules and empirical proxies actually earn the claimed predictive role.
-- **theouni is a meta layer:** it studies reuse, revision and task transport across these typed objects; it does not own the source results.
+- **CREST arrows are normative/representational:** what a declared task requires a state to retain.
+- **Method/deployment qualification arrows are inferential:** whether a frozen procedure has the declared operating properties on the declared worlds and geometry.
+- **ObservationSupport is an admission arrow:** whether realized measurement preserves enough of the frozen support to instantiate that qualified procedure at all.
+- **REC/V3/TNOA/Boundary/MROD arrows are operational/epistemic:** loss, refinement, semantic preservation, identification and prospective acquisition.
+- **CED is terminal evidential:** reliability-qualified stopping/reportability once an admissible evidence state exists, while also accepting explicit abstention when an upstream gate legitimately terminates.
+- **EG arrows are domain-validation:** whether candidate states, proxies and warnings earn endpoint-relevant predictive roles.
+- **theouni is a meta layer:** reuse and revision across these typed objects; it does not own source results.
 
-## 3. Upper layer — CREST asks what must be remembered
+## 3. Upper layer — what must be remembered
 
 ### 3.1 CREST
 
@@ -111,333 +126,220 @@ Canonical question:
 
 > **Which differences among ecological worlds may be erased without invalidating the scientific task?**
 
-CREST therefore owns the distinction between a present snapshot and a contract-relative required state. It also supplies the cross-gate distinction
+CREST owns the contract-relative `RequiredState J`. CCOC contributes future-sufficiency obstructions, MLTR semantic/history obstructions, and MRM response-relevant mechanism obstructions. Their combined output is not “the true ecological state”; it is the required partition for the declared responsibility.
+
+The handoff is now stated carefully:
+
+> **CREST specifies what an empirical system would need to distinguish; it does not establish that a proposed estimator can recover those distinctions, that the deployment geometry makes them detectable, or that realized measurement preserves the support needed to run that estimator.**
+
+## 4. Admission layer — from required distinctions to an instantiable empirical procedure
+
+This layer is a synchronization rule rather than a claim of one new universal theorem. Its local formalization is in `OBSERVATION_SUPPORT_BRIDGE_2026-09-09.md`.
+
+For a target empirical claim, distinguish three gates.
+
+### 4.1 Method validity
+
+`V(M,W)` asks whether procedure `M` has its declared error/power properties on the specified model or semi-synthetic world family `W`.
+
+A method can be valid on its declared worlds without yet being adequate for the geometry on which an empirical claim will be attempted.
+
+### 4.2 Deployment detectability
+
+`D(M,G)` asks whether the frozen intended geometry `G` supplies enough structural support for the predeclared target to be detectable under `M`.
+
+This is prospective. It is not a statement about what survives the realized measurement pipeline.
+
+### 4.3 Realized observation support
+
+`O(R,G)` asks whether, after realized measurement process `R`, enough of the predeclared units/support remain to instantiate the geometry and statistic whose properties were qualified.
+
+The empirical statistic may be opened only under the workflow's declared admission conjunction. In the three-gate convention used here:
 
 ```text
-required state != identified state != reportable target.
+V(M,W) AND D(M,G) AND O(R,G)
 ```
 
-### 3.2 CCOC — future-sufficiency obstruction
-
-CCOC is representation theory. It asks whether a compression that is exact under one closed future grammar remains comparably exact after legal future interactions/actions are enlarged.
+If support fails before the statistic is instantiated, the correct endpoint is
 
 ```text
-same present / same closed-grammar response
-    does not imply
-same required state under a wider future grammar
+not_evaluable / abstain
 ```
 
-CCOC tells CREST that a merge is unsafe because a future-accessible response distinction was erased.
+not a biological negative.
 
-### 3.3 MLTR — semantic/history obstruction
+### 4.4 Bounded witness — TTF v0.11 -> v0.12
 
-MLTR asks whether an inherited classification can be carried through non-nested structural replacement, whether different replacement routes carry one coherent terminal meaning, and when historical context must be retained.
+TTF supplies a clean source-owned witness, not a theorem proof. Its v0.11 fresh 250-species × 100-record density-scaled design passed its frozen synthetic/semi-synthetic validity and power gate. The same frozen 25,000 photo IDs then entered a location-blind measurement pipeline. The predeclared v0.12 classifiability gate required every species to retain at least 40 evaluable photographs; only 189/250 met that minimum. TTF did not read colour vectors, compute pairwise colour distances, or compute an empirical transfer statistic.
+
+Thus:
 
 ```text
-same current descriptor
-    does not imply
-same inherited operational meaning after replacement
+qualified method/design
+        +
+insufficient realized observation support
+        ->
+empirical claim unopened
 ```
 
-MLTR tells CREST that a merge is unsafe because source-carried semantics or route history differ in a way that changes the declared operational task.
+This establishes only that such a bridge failure occurred in that source-owned workflow. It does not validate CREST/CED/theouni, and it gives no positive or negative flower-colour sharedness conclusion.
 
-### 3.4 MRM — mechanism-robustness obstruction
+## 5. Observation-information layer — what retained evidence survives and resolves
 
-MRM asks whether worlds sharing the same visible present state retain response mechanisms that disagree under relevant interventions.
+Once an observation-support gate admits a measurement output, the observation family asks what that retained evidence means and identifies.
+
+- **REC** owns pre-row biological opportunity/support loss and estimand shift. ObservationSupport does not absorb REC: the former asks whether a frozen inferential design remains instantiable after measurement; REC asks which biological opportunities entered the retained dataset at all.
+- **V3** owns refinement by already-retained side/reference information.
+- **TNOA** owns preservation of process-aware observation semantics before premature coarsening.
+- **Boundary** owns the compatible-world fibre, identified set and target image under the current observation map.
+- **MROD** owns prospective selection of a future observation expected to reduce residual ambiguity; a realized MROD observation re-enters as V3-style retained refinement.
+
+The key interface is
 
 ```text
-same visible state
-    does not imply
-same required state when retained mechanisms disagree on a required future response
+RequiredState J
+    versus
+IdentifiedEvidence E
 ```
 
-MRM does not require complete mechanism identity. It preserves only response-relevant mechanism distinctions.
+but this comparison is now downstream of method/deployment/support admission. An unresolved `J`–`E` gap can be a genuine identification problem only after the empirical evidence state itself has been legitimately instantiated.
 
-### 3.5 CREST output
+## 6. Terminal evidence layer — CED
 
-The combined output is not “the true ecological state.” It is a contract-relative required partition `J` over the declared model-world carrier.
+CED asks:
 
-That is the main handoff to the observation family:
+> **Given a required distinction, a realized admissible evidence state, a target and a calibrated reliability/failure contract, may monitoring stop and may a scientific target be reported at the declared false-resolution risk?**
 
-> **CREST specifies the distinctions the monitoring/evidence system must be capable of earning.**
-
-## 4. Middle layer — the observation family asks what evidence survives and resolves
-
-The current observation family is `REC -> V3/TNOA -> Boundary <-> MROD`, with CED as the terminal reliability/reportability gate. These projects share compatible-world geometry but own different operators.
-
-### 4.1 REC — support can be lost before a row exists
-
-REC starts before semantic classification. It asks which biological exposures/events entered the retained dataset at all and whether entry selection changes the ecological estimand.
-
-Its irreversibility rule is:
+The overlap firewalls are:
 
 ```text
-true exposure omitted before record entry
-    cannot be reconstructed by perfect downstream classification alone
+ObservationSupport = does an admissible evidence state exist for the frozen empirical procedure?
+Boundary           = what is structurally identified in that evidence state?
+MROD               = what future observation should be acquired?
+TNOA               = what observation semantics must be preserved?
+CED                = what terminal report/stopping decision is reliability-qualified?
 ```
 
-An external exposure/reference design may reveal the shadow world; the final event table alone generally cannot.
+A support failure can hand CED an explicit abstaining terminal status, but CED must not reinterpret that upstream non-evaluability as evidence for a biological null.
 
-### 4.2 V3 — retained side information can refine what remains
+## 7. Domain-validation layer — EG and empirical projection
 
-V3 studies refinement by information that already exists and has been retained. A reference channel can contract the compatible measurement-state set and therefore the compatible target-state set.
+The EG programme remains a domain-specific validation programme for future-relevant state claims in eco-genetic deterioration.
 
-Its central rule is:
+- **EGC:** biological quantities can separate under the same fragmentation contrast.
+- **EGWE state:** coarse marginals may fail to preserve next-transition information when cross-layer alignment differs.
+- **EGWE warning:** temporal precedence is not full-denominator predictive discrimination.
+- **EGWEE:** test a measurable state for endpoint-relevant predictive value before interpreting residual context.
+
+The empirical admission chain therefore has two different senses of “measurement validity” that must not be collapsed:
 
 ```text
-refine before loss; preserve reversible transforms; do not confuse decomposition with subtraction
+ObservationSupport
+= enough realized support exists to instantiate the prequalified procedure
+
+Empirical Projection / EGWEE
+= the resulting measurable coordinates actually earn the claimed endpoint-relevant state/proxy role
 ```
 
-A realized future MROD observation becomes an ordinary V3-style refinement once acquired and retained.
+Passing the first does not guarantee the second.
 
-### 4.3 TNOA — do not destroy scientific distinctions at the semantic interface
+## 8. Main junctions and overlap firewalls
 
-TNOA preserves positive target evidence, positive nuisance evidence, observability, attribution uncertainty and unresolved states instead of forcing premature binary collapse.
-
-Its role is record semantics:
-
-```text
-rich process-aware evidence
-    -> B / T / N / U or another justified decision vocabulary
-```
-
-TNOA may license record-level attribution claims, but it does not replace CED's scientific-target risk contract.
-
-### 4.4 Boundary — characterize what the current observation map identifies
-
-Boundary owns the current structural identification problem.
-
-For realized evidence `e`, it characterizes the compatible-world fibre and the target image. In the finite target-specific form:
-
-```text
-|T(C_E(e))| = 1  -> target structurally point-identified
-|T(C_E(e))| > 1  -> target remains set-valued / unresolved
-```
-
-This is structural identification, not terminal permission to report under a noisy/reliability contract.
-
-### 4.5 MROD — choose which new observation should split what remains
-
-MROD starts from a residual compatible mechanism region and a declared candidate-observation vocabulary. It asks which candidate observation is predicted to reduce residual mechanism/target ambiguity, recomputing after each realized acquisition.
-
-Its object is prospective information/refinement, not terminal scientific permission.
-
-### 4.6 CED — terminal reliability-qualified stopping and reporting
-
-CED is the crossover between CREST's required distinctions and the observation family's attained distinctions.
-
-The strongest non-overlapping role is:
-
-> **Given a required distinction, a realized evidence state, a target and a calibrated reliability/failure contract, may monitoring stop and may a deterministic scientific target be reported at the declared false-resolution risk?**
-
-This routing sharpens previous overlap:
-
-- target constancy over the current compatible class is **Boundary infrastructure**, not a standalone CED novelty claim;
-- generic prospective next-observation value belongs primarily to **MROD**;
-- semantic preservation of unresolved observation states belongs to **TNOA**;
-- CED owns the reliability/failure architecture and the risk-limited terminal report/stopping contract.
-
-Thus the canonical interface is
-
-```text
-CREST J: what must be distinguished
-Boundary E: what is structurally identified now
-MROD/V3: how the identification boundary may be refined
-REC/TNOA: how distinctions may be lost before or during representation
-CED: whether the attained evidence is reliable enough to stop and report
-```
-
-## 5. Lower/domain-validation layer — EG asks whether proposed states actually predict the future
-
-The EG programme is not merely an application of CREST. It is a domain-specific validation programme for future-relevant state claims in eco-genetic deterioration.
-
-Programme-level question:
-
-> **What must be biologically distinguished, representationally preserved, predictively validated and empirically measured before eco-genetic deterioration is forecastable?**
-
-### 5.1 EGC — biological-state separation
-
-EGC establishes that potential viability, realised occupancy, interaction, local effective size, genetic diversity, allele persistence and realised trait/function can respond differently to the same fragmentation contrast.
-
-Its role is to reject the assumption that “eco-genetic condition” is one interchangeable scalar state.
-
-### 5.2 EGWE state lane — forecast-relevant representation
-
-EGWE asks what information a representation must retain for a declared future target and forecast horizon. Matching coarse marginals can still hide different next transitions when cross-layer alignment differs.
-
-This is a domain-specific test of future-relevant representation, closely aligned with the CREST idea that adequacy is target/contract relative, but supported by its own simulator and natural-data evidence.
-
-### 5.3 EGWE warning lane — precedence is not predictive validity
-
-A signal can reliably occur before failures yet fail completely as a predictor if it also fires in non-failures. Warning validity therefore requires the full denominator and the declared predictive estimand, not event-conditioned temporal ordering alone.
-
-```text
-early signal != fate-discriminative warning
-```
-
-### 5.4 EGWEE — empirical state/proxy admission
-
-EGWEE asks whether a proposed measurable ecological state first earns endpoint-relevant predictive status, whether its analytical representation preserves the needed information, and only then whether residual geography/history/context adds predictive information.
-
-Canonical rule:
-
-> **Test the state before interpreting the residual.**
-
-This is the natural-data counterpart of the theouni Empirical Projection Gate.
-
-## 6. The three main junctions
-
-### Junction A — `RequiredState J` versus current evidence `E`
-
-This is the principal CREST-observation connection.
+### Junction A — RequiredState -> qualified inference -> realized support -> identified evidence
 
 ```text
 J = distinctions required by the scientific contract
-E = distinctions currently supplied by the retained observation architecture
+V = validity of the frozen method on declared worlds
+D = detectability on the intended frozen geometry
+O = support preserved by realized measurement
+E = distinctions identified by retained evidence
 ```
 
-If `E` is too coarse relative to `J`, the difference is monitoring/identification debt. Boundary diagnoses the unresolved split; MROD can search for a prospective observation; V3 can use retained side information; CED decides when the resulting evidence is reliable enough for terminal reporting.
+None is interchangeable with the next.
 
-### Junction B — proposed state versus empirical predictive state
+### Junction B — identified evidence -> reportable target
 
-CREST can define what a declared model contract requires, but a natural measurement does not become a state coordinate by analogy alone.
+Boundary characterizes structural identification; CED adds reliability/failure architecture and terminal risk. A target can be structurally identified yet not reliability-qualified for deterministic reporting.
+
+### Junction C — candidate biological state -> empirically predictive state
+
+A natural measurement does not become a state coordinate by analogy alone. EGWEE / the Empirical Projection Gate tests endpoint-relevant held-out information before a bounded `EmpiricalPartialState` claim is admitted.
+
+### Junction D — contract revision and state reuse
+
+A representation adequate for one target, horizon, future grammar or mechanism responsibility need not remain adequate after the contract changes. TU-1/CIRA asks whether the revised response factors through what was stored or requires auxiliary information.
+
+### Firewall — ObservationSupport versus REC
 
 ```text
-theoretical/domain-motivated candidate state
-        -> EGWEE / Empirical Projection Gate
-        -> held-out endpoint-relevant information
-        -> bounded EmpiricalPartialState claim
+ObservationSupport = is the frozen inferential design still instantiable after realized measurement?
+REC                = which biological opportunities failed to become retained rows, and did selection alter the estimand?
 ```
 
-A failed proxy is a measurement boundary, not evidence that the underlying biological process is irrelevant.
-
-### Junction C — contract revision and state reuse
-
-A representation adequate for one task need not remain adequate after the target, horizon, future grammar, mechanism responsibility or warning endpoint changes.
-
-This is theouni's meta-level problem:
+### Firewall — ObservationSupport versus CED
 
 ```text
-adequate for C0
-    does not imply
-adequate or revisable for C1
+ObservationSupport = upstream empirical admission / not_evaluable gate
+CED                = downstream reliability-qualified scientific report/stopping gate
 ```
 
-CREST supplies concrete state-refinement causes; the observation family supplies evidence/identification consequences; EG supplies concrete forecast and warning counterexamples.
-
-## 7. theouni's own position above the families
-
-Theouni should not be treated as a fourth scientific source programme. It is the typed synthesis and reuse layer.
-
-Its existing modules fit the hierarchy as follows:
-
-| theouni module | cross-family interpretation |
-|---|---|
-| **TU-1 contract revision** | when a stored compression remains reusable after the scientific contract changes |
-| **TU-2 learning vs licensing** | separates information that reduces causal/mechanism uncertainty from information sufficient to license the requested target |
-| **TU-3 loss-state invariance** | asks which representation is sufficient for the complete declared loss-response signature rather than one convenient scalar |
-| **TU-4 warning-state portability** | separates state sufficient for loss generation from state sufficient for warning evaluation and transport |
-| **CIRA draft v0.6** | task-indexed factorization/reuse relation among state representations |
-| **EAT draft** | local transition rule from identified target + satisfied reliability contract to an admissible scientific report |
-| **Empirical Projection Gate** | route from measured coordinates to a bounded target-relative EmpiricalPartialState claim |
-
-The hierarchy therefore gives theouni a compact meta-question:
-
-> **When can a distinction, representation, evidence state or warning rule earned for one scientific task be safely reused for another?**
-
-## 8. Overlap firewalls fixed by this synchronization
-
-### Boundary versus CED
+### Firewall — TTF witness versus theory stack
 
 ```text
-Boundary = structural identification under the current observation map
-CED      = reliability-qualified terminal reporting/stopping
+TTF v0.11/v0.12 = bounded empirical bridge-failure witness
+not              = empirical proof of CREST, CED, or theouni
+not              = flower-colour sharedness/no-sharedness result
 ```
 
-A structurally point-identified target can still be withheld by CED if the reliability contract is not met.
+All earlier Boundary/CED, MROD/CED, TNOA/CED, V3/Boundary, V3/MROD, CREST/EGWE and EGWEE/EPG ownership firewalls remain in force.
 
-### MROD versus CED
+## 9. theouni's position above the families
 
-```text
-MROD = prospective observation value / sequential acquisition
-CED  = risk-limited terminal decision and reportability
-```
+Theouni is not a fourth source programme. It is the typed synthesis and reuse layer. Its modules ask whether state representations, evidence results, learning outcomes, loss states and warnings earned for one task may travel after the scientific responsibility changes.
 
-CED may consume MROD-designed observations but should not claim generic next-observation selection as its defining novelty.
+The observation-support synchronization adds one reusable meta-rule:
 
-### TNOA versus CED
+> **A representation or inference rule cannot be transported from a qualified model/deployment responsibility into an empirical responsibility merely because its model-world gate passed. The realized observation process must first preserve the support required to instantiate that responsibility.**
 
-```text
-TNOA = preserve and license observation-level semantics
-CED  = license a scientific target after aggregating the declared evidence contract
-```
+This is a bridge discipline, not a new claim that all sciences must use the same numerical gates.
 
-### V3 versus Boundary/MROD
+## 10. Canonical full loop
+
+The synchronized loop is:
 
 ```text
-V3       = already-retained side information refines the current compatible set
-Boundary = describes the resulting current identification boundary
-MROD     = selects a future observation expected to refine it
-```
-
-The compatible-set algebra is shared; the timing/operator is different.
-
-### EGWE state versus CREST
-
-```text
-CREST     = general contract-relative required-state theory
-EGWE state = eco-genetic domain test of whether candidate representations preserve forecast-relevant distinctions
-```
-
-EGWE provides domain evidence and counterexamples; it does not empirically validate CREST as a universal natural-state theory.
-
-### EGWEE versus Empirical Projection Gate
-
-```text
-EGWEE = source empirical programme with locked natural-data analyses
-EPG   = theouni generic admission contract distilled from that class of problems
-```
-
-The generic gate does not acquire ownership of EGWEE outcomes.
-
-## 9. Canonical full loop
-
-The current synthesis is a loop, not a one-way ladder:
-
-```text
-1. declare a scientific target / responsibility
-2. CREST + CCOC/MLTR/MRM determine which world distinctions the task requires
-3. inspect the observation pipeline:
-      REC   — were relevant opportunities lost before row entry?
-      V3    — is useful side information already retained?
-      TNOA  — were distinctions collapsed semantically?
+1. declare target and scientific responsibility
+2. CREST + CCOC/MLTR/MRM determine required world distinctions
+3. freeze and qualify the inferential method on the declared world family
+4. qualify detectability on the predeclared deployment geometry
+5. run the realized measurement-support gate before opening the empirical statistic
+      fail -> not_evaluable / abstain; no biological sign inferred
+      pass -> admit retained measurement outputs
+6. audit retained evidence:
+      REC      — was biological opportunity/support lost before row entry?
+      V3       — what retained side information refines the compatible set?
+      TNOA     — were distinctions collapsed semantically?
       Boundary — what is identified now?
-4. if insufficient, MROD chooses a prospective observation and the realized result re-enters as V3-style refinement
-5. CED decides whether the evidence is reliable enough to stop and report the target
-6. EG/EPG tests whether proposed measurable state variables and warnings actually predict the declared endpoint in the relevant domain
-7. if target, horizon, mechanism set or management responsibility changes, TU-1/CIRA reopen the reuse audit and the loop begins again
+7. if unresolved, MROD chooses a prospective observation and the realized result re-enters as retained refinement
+8. CED decides whether the admissible evidence is reliable enough to stop and report the target
+9. EG/EPG tests whether proposed measurable states, proxies and warnings actually predict the declared endpoint
+10. if target, horizon, mechanism set or responsibility changes, TU-1/CIRA reopen the reuse audit
 ```
 
 The shortest statement of the combined worldview is therefore:
 
-> **Define the future-relevant distinction before measuring it; preserve information before losing or coarsening it; identify rather than assume what the observation map resolves; acquire new information only for distinctions that still matter; report only when reliability licenses the target; and require empirical proxies and warnings to earn their future-relevant status out of sample.**
+> **A scientific task determines what distinctions matter; a qualified design determines what could be recovered under declared conditions; realized measurement determines whether that design can actually be instantiated; retained evidence determines what is identified; reliability determines what may be reported; empirical validation determines which measurable states and warnings earn predictive status; and changed responsibilities reopen the reuse problem.**
 
-## 10. Source ownership and synchronization snapshots
+## 11. Claim ceiling
 
-This synthesis was checked against the current main-branch source surfaces on 2026-09-08:
+This synchronization does **not** claim:
 
-- `crest/README.md` — contract-relative world/state hierarchy and CED evidence gate;
-- `ccoc/README.md` — open-future response-interface obstruction;
-- `mltr/README.md` — carried semantics, route coherence and historical repair;
-- `mrm/README.md` — response-relevant mechanism ambiguity and active discrimination;
-- `ced/README.md` + Paper-B consolidation — evidence/reportability and failure/risk contracts;
-- `rec/README.md` — record-entry selection and irreversibility;
-- `v3/README.md` + `docs/CLOSED_LOOP_THEORY.md` — retained-information refinement and five-project compatible-world loop;
-- `tnoa/README.md` + `tnoa/licensing.py` — process-preserving semantic states and record-level licensing;
-- `boundary/README.md` + target-identification extension — present observation-map identification;
-- `mrod/README.md` — residual mechanism ambiguity and sequential prospective observation design;
-- `egc/README.md` + EG-series publication boundary — biological state separation;
-- `egwe/README.md` — representation, warning validity and process portability;
-- `egwee/README.md` — natural-data measurement/representation gate programme.
+- one intrinsic ecological state;
+- a new generic theorem of quotient construction or statistical power;
+- that `V`, `D`, and `O` are the unique possible decomposition for every empirical science;
+- global consistency of all source modules on one carrier;
+- that TTF empirically validates the theory hierarchy;
+- that a support failure is evidence for absence of the biological target;
+- that passing observation support guarantees predictive proxy validity or portability.
 
-Source repositories retain theorem, code and empirical ownership. This file owns only the cross-repository typed synthesis.
+Source theorem, code and empirical ownership remains with the source repositories. The hierarchy owns only the typed routing, explicit non-equivalences, and bridge discipline.
