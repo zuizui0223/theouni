@@ -9,6 +9,8 @@ PROGRAMME = ROOT / "universe" / "PUBLICATION_PROGRAMME_2026-09-11.json"
 THESIS = ROOT / "thesis" / "final_chapter_architecture.json"
 PROPOSAL = ROOT / "proposals" / "C2_MORE_MEASUREMENT_NOT_MORE_EVIDENCE_TREE_PROPOSAL.md"
 C2_LEDGER = ROOT / "proposals" / "C2_SOURCE_LEDGER.json"
+C2_PRIOR_ART = ROOT / "proposals" / "C2_PRIOR_ART_MAP.md"
+C2_EDITOR_PITCH = ROOT / "proposals" / "C2_TREE_EDITOR_PITCH.md"
 
 
 def load(path: Path):
@@ -50,6 +52,30 @@ def main() -> None:
         "pipeline",
     ]
     assert PROPOSAL.exists()
+    assert C2_PRIOR_ART.exists()
+    assert C2_EDITOR_PITCH.exists()
+
+    prior_art_text = C2_PRIOR_ART.read_text(encoding="utf-8")
+    for required in (
+        "Structural Identifiability",
+        "targeted experiment design",
+        "Pseudoreplication",
+        "site occupancy",
+        "Calibration of probability predictions",
+        "four-way synthesis",
+    ):
+        assert required.lower() in prior_art_text.lower()
+
+    pitch_text = C2_EDITOR_PITCH.read_text(encoding="utf-8")
+    for required in (
+        "Geometry failure",
+        "Objective failure",
+        "Dependence failure",
+        "Pipeline failure",
+        "Prior-art position",
+        "Selected external anchors",
+    ):
+        assert required.lower() in pitch_text.lower()
 
     assert methods["M1"]["repository"] == "zuizui0223/tnoa"
     assert methods["M2"]["repository"] == "zuizui0223/mrod"
