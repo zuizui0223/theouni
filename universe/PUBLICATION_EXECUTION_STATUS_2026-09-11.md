@@ -8,23 +8,26 @@ This file tracks production state only. It does not replace source-repository th
 
 **More measurement is not more evidence: four failures of monotonic reasoning in ecology**
 
-State: **proposal drafted; source ledger pinned; concept-track primary pitch**.
+State: **proposal + editor-facing pitch drafted; source ledger pinned; concept-track primary pitch**.
 
 Completed:
 
 - four-failure synthesis fixed: geometry / objective / dependence / pipeline;
-- proposal drafted at `proposals/C2_MORE_MEASUREMENT_NOT_MORE_EVIDENCE_TREE_PROPOSAL.md`;
+- long source-backed proposal drafted at `proposals/C2_MORE_MEASUREMENT_NOT_MORE_EVIDENCE_TREE_PROPOSAL.md`;
+- concise editor-facing version drafted at `proposals/C2_TREE_EDITOR_PITCH.md`;
 - source-owned claim ledger at `proposals/C2_SOURCE_LEDGER.json`;
 - Boundary, CED, REC, TNOA and MROD source blobs pinned;
+- exact CED information/licensing witness, BirdVox contrast and TNOA threshold-portability anchors pinned;
 - Campanula Tier-A structural example separated from phenomenological coefficients;
 - island-pollination translation explicitly retained as empirically open / translation-only;
-- C1 firewall specified.
+- C1 firewall specified;
+- current public TREE editorial advice rechecked: presubmission proposals are central, and the proposal should make broad relevance and novelty clear.
 
 Remaining before an actual pitch:
 
-- current TREE proposal mechanics/editorial contact must be rechecked immediately before sending;
+- verify the live contact/submission mechanics immediately before sending;
 - author/coauthor decision and responsible-author approval;
-- final proposal-length/style pass against the live journal guidance.
+- final length/style pass against the live journal instructions.
 
 No full C2 manuscript should be written before editorial interest unless there is a separate strategic reason.
 
@@ -35,17 +38,19 @@ State: **proposal-ready, parked conditional**.
 Existing assets:
 
 - `zuizui0223/boundary/paper/ecology_letters_proposal.md`;
-- `zuizui0223/boundary/paper/ecology_letters_proposal_email.md`.
+- `zuizui0223/boundary/paper/ecology_letters_proposal_email.md`;
+- `zuizui0223/boundary/paper/PUBLICATION_ROUTE_2026-09-11.md`.
 
 Activation rule: use as a fallback if C2 is declined/too broad, or proceed only with an explicit firewall where C1 owns the full identification-axis argument and C2 uses Boundary only as one geometry-failure exemplar.
 
 ## M1 — TNOA / Methods in Ecology and Evolution
 
-State: **scientifically ready; production/human-metadata gates only**.
+State: **scientifically ready; production/human-metadata gates only; restored-route CI passed**.
 
 Source status:
 
 - active standalone MEE manuscript and package restored;
+- `PUBLICATION_ROUTE_2026-09-11.md` committed and repository validation passed on the route-restoration commit;
 - repository states no unresolved scientific blockers;
 - numbered abstract prepared (302 repository-counted words);
 - eight keywords prepared;
@@ -73,6 +78,7 @@ State: **scientifically frozen; pre-export blocked on human metadata**.
 
 Source status:
 
+- standalone route restored at `paper/PUBLICATION_ROUTE_2026-09-11.md`;
 - source-matched final validation SHA: `a8d21b30646df4dc337f1455ca7d89662b4d7ba3`;
 - G2 frozen benchmark unchanged and passed;
 - G5 reproducibility passed;
@@ -103,9 +109,17 @@ Interpretation: **no G2 retuning or additional ecological analysis is justified 
 
 ## M3 — CED / Ecological Modelling
 
-State: **standalone route restored; journal-facing reframing required**.
+State: **standalone canonical status restored; scientific base already strong; journal-facing production next**.
 
-Keep as canonical scientific core:
+Completed in the reorganization:
+
+- `manuscript/CED_SUBMISSION_STATUS_2026-09-11.json` created as current standalone status;
+- old `EVIDENCE_SUBMISSION_STATUS.json` explicitly marked historical/superseded as a submission unit;
+- publication-contract tests added;
+- standalone `paper_b_main.tex` audited: its own framing already leads with target-safe reportability, failure-diverse evidence and false-resolution control rather than Boundary/MROD integration;
+- current Ecological Modelling fit rechecked at the level of modelling-method/user relevance.
+
+Canonical scientific core:
 
 - experiment-induced compatible-world quotient;
 - target-safe quotient / exact compatible target reports;
@@ -114,13 +128,22 @@ Keep as canonical scientific core:
 - false-resolution/cost contract;
 - risk-limited adaptive reporting/stopping.
 
-Do not keep the integrated Evidence paper as the submission unit. Boundary and MROD return to their source ownership; `EVIDENCE_DRAFT_V1.md` remains a synthesis/provenance artifact.
+Boundary and MROD remain external source owners. `EVIDENCE_DRAFT_V1.md` and integrated closure assets remain synthesis/provenance artifacts.
 
-Next production task: restore the strongest standalone CED manuscript surface and map it to Ecological Modelling structure without importing Boundary/MROD novelty.
+Next production task: replace legacy MEE-oriented submission metadata with Ecological Modelling-facing metadata after a final live Guide-for-Authors check; do not redesign the scientific core.
 
 ## M4 — V3 + REC / Ecological Informatics
 
-State: **scientific reframing active; one external-rights blocker**.
+State: **new standalone integration draft and claim manifest created; one external-rights blocker**.
+
+Completed:
+
+- `zuizui0223/v3/manuscript/M4_V3_REC_DRAFT_V1.md` created;
+- `M4_V3_REC_CLAIM_MANIFEST.json` pins V3/REC source blobs and headline numerical anchors;
+- old `OBSERVATION_SUBMISSION_STATUS.json` marked historical/superseded;
+- M4 publication contract tests added;
+- TNOA is explicitly excluded and belongs to M1;
+- current Ecological Informatics scope rechecked: monitoring/sensor acquisition, ecological information processing/transfer and uncertainty are direct scope matches.
 
 Paper identity:
 
@@ -139,23 +162,21 @@ REC contribution:
 - no-row/shadow irreversibility;
 - transport-limited correction.
 
-TNOA is excluded and belongs to M1.
-
 External blocker:
 
 - Findlay linked-data reuse/licence clarification must be archived before the final reviewer/data package is fixed.
 
-The former integrated Observation MEE manuscript/PDF remains a useful asset bank but is not the current submission unit.
+The former integrated Observation MEE manuscript/PDF remains a useful source/production asset but is no longer the current submission unit.
 
 ## Portfolio summary
 
 ```text
-C2  TREE proposal                    drafted + source-pinned
+C2  TREE proposal                    long proposal + short editor pitch + source pins
 C1  Ecology Letters Perspective      proposal-ready / parked conditional
-M1  TNOA -> MEE                      science done / human+visual production only
+M1  TNOA -> MEE                      science done / route CI success / human+visual only
 M2  MROD -> MEE                      science frozen / human metadata + export only
-M3  CED -> Ecological Modelling      standalone reframing active
-M4  V3+REC -> Ecological Informatics reframing active / Findlay rights blocker
+M3  CED -> Ecological Modelling      standalone canonical restored / production next
+M4  V3+REC -> Ecological Informatics draft v1 + claim manifest / Findlay rights blocker
 ```
 
 Hard rule:
