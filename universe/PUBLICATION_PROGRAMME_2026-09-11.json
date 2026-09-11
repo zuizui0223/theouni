@@ -104,7 +104,7 @@
       "status": "reframe_v3_plus_rec_without_tnoa",
       "headline": "Ecological observation systems should retain discriminating side information and audit the opportunity universe before record-entry loss; an event table is not the opportunity universe.",
       "firewall": "TNOA is excluded and returns to M1. V3 contributes retained-information refinement; REC contributes external opportunity/reference auditing, irreversibility and transport-limited correction.",
-      "external_blocker": "Findlay linked-data reuse confirmation/licence clarification"
+      "external_blocker": "No scientific-analysis blocker. Original Findlay CSV redistribution remains fail-closed until repository-level reuse terms are clarified; analysis, derived results and source-retrieval reproducibility may proceed."
     }
   ],
   "parked_material": [
@@ -119,8 +119,8 @@
     "M1 TNOA production/submission",
     "M2 MROD production/submission",
     "C1 conditional Ecology Letters proposal",
-    "M3 CED standalone framing",
-    "M4 V3+REC framing after external data-rights clarification"
+    "M3 CED Ecological Modelling production",
+    "M4 V3+REC Ecological Informatics production; clarify Findlay raw-source redistribution before final reviewer-package freeze"
   ],
   "non_claims": [
     "Publication units do not transfer theorem, data or code ownership between repositories.",
