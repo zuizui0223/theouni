@@ -1,0 +1,68 @@
+{
+  "schema": "c2-authorship-ledger-v1",
+  "status": "provisional-author-evidence-complete-human-decision-open",
+  "paper": "C2_MORE_MEASUREMENT_NOT_MORE_EVIDENCE",
+  "target": "Trends in Ecology & Evolution Opinion",
+  "documented_people": [
+    {
+      "name": "Ruiqi Zhang",
+      "provisional_order": 1,
+      "provisional_corresponding_author": true,
+      "affiliation": "Kyoto University, Kyoto, Japan",
+      "evidence": {
+        "repository": "zuizui0223/mrod",
+        "source_file": "paper/title_page_draft.md",
+        "source_blob_sha1": "52c840b04303c18c29367c6a9681790bf83f8afd",
+        "supports": [
+          "named author",
+          "named corresponding author",
+          "conceptualization",
+          "software implementation",
+          "analysis",
+          "manuscript writing",
+          "scientific responsibility"
+        ]
+      }
+    }
+  ],
+  "working_default": {
+    "author_list": ["Ruiqi Zhang"],
+    "corresponding_author": "Ruiqi Zhang",
+    "status": "proposal-stage provisional only"
+  },
+  "additional_author_rule": {
+    "required": [
+      "substantive C2-level conceptual or interpretive contribution",
+      "substantive drafting or revision contribution",
+      "responsibility for a defined part of the final argument",
+      "approval of the submitted version"
+    ],
+    "insufficient_alone": [
+      "supervision or seniority",
+      "authorship of a reused source paper or dataset",
+      "source-repository ownership",
+      "repository commits",
+      "routine comments"
+    ]
+  },
+  "source_owner_not_automatic_author": [
+    "zuizui0223/boundary",
+    "zuizui0223/ced",
+    "zuizui0223/mrod",
+    "zuizui0223/rec",
+    "zuizui0223/tnoa",
+    "zuizui0223/v3"
+  ],
+  "provisional_credit_for_ruiqi_zhang": [
+    "Conceptualization",
+    "Methodology",
+    "Formal analysis",
+    "Software",
+    "Writing - original draft",
+    "Writing - review & editing",
+    "Visualization",
+    "Project administration"
+  ],
+  "human_decision_required_before_send": "Does any additional person have, or will they make before submission, a substantive C2-level conceptual/drafting/accountability contribution that warrants coauthorship?",
+  "email_policy": "Do not send or replace the editor-facing author placeholder until final authorship and corresponding-author responsibility are approved."
+}
