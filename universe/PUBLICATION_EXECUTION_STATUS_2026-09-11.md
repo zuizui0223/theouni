@@ -8,26 +8,34 @@ This file tracks production state only. It does not replace source-repository th
 
 **More measurement is not more evidence: four failures of monotonic reasoning in ecology**
 
-State: **proposal + editor-facing pitch drafted; source ledger pinned; concept-track primary pitch**.
+State: **proposal + editor-facing pitch + external prior-art firewall drafted; source ledger pinned; concept-track primary pitch**.
 
 Completed:
 
 - four-failure synthesis fixed: geometry / objective / dependence / pipeline;
 - long source-backed proposal drafted at `proposals/C2_MORE_MEASUREMENT_NOT_MORE_EVIDENCE_TREE_PROPOSAL.md`;
 - concise editor-facing version drafted at `proposals/C2_TREE_EDITOR_PITCH.md`;
+- external novelty firewall drafted at `proposals/C2_PRIOR_ART_MAP.md`;
+- presubmission email draft at `proposals/C2_TREE_PRESUBMISSION_EMAIL_DRAFT.md`;
 - source-owned claim ledger at `proposals/C2_SOURCE_LEDGER.json`;
 - Boundary, CED, REC, TNOA and MROD source blobs pinned;
 - exact CED information/licensing witness, BirdVox contrast and TNOA threshold-portability anchors pinned;
 - Campanula Tier-A structural example separated from phenomenological coefficients;
 - island-pollination translation explicitly retained as empirically open / translation-only;
 - C1 firewall specified;
-- current public TREE editorial advice rechecked: presubmission proposals are central, and the proposal should make broad relevance and novelty clear.
+- current public TREE editorial advice rechecked: proposal-first consultation is central, broad relevance and novelty must be explicit, and a strong reference list helps editors assess fit;
+- component novelty explicitly disclaimed: structural identifiability, targeted/goal-oriented design, ecological value of information, pseudoreplication, imperfect detection, classifier calibration and dataset-shift analysis are treated as prior foundations rather than C2 inventions.
+
+Current novelty statement:
+
+> C2 does not discover that “more data can fail.” It separates four different reasons why more measurement fails to become more evidence, and ties each failure to a different ecological design remedy.
 
 Remaining before an actual pitch:
 
 - verify the live contact/submission mechanics immediately before sending;
 - author/coauthor decision and responsible-author approval;
-- final length/style pass against the live journal instructions.
+- final length/style pass against the live journal instructions;
+- one broad-interest read by an ecologist outside the immediate theory/methods niche.
 
 No full C2 manuscript should be written before editorial interest unless there is a separate strategic reason.
 
@@ -50,7 +58,7 @@ State: **scientifically ready; production/human-metadata gates only; restored-ro
 Source status:
 
 - active standalone MEE manuscript and package restored;
-- `PUBLICATION_ROUTE_2026-09-11.md` committed and repository validation passed on the route-restoration commit;
+- `PUBLICATION_ROUTE_2026-09-11.md` committed and repository validation passed on route-restoration run `34564310098`;
 - repository states no unresolved scientific blockers;
 - numbered abstract prepared (302 repository-counted words);
 - eight keywords prepared;
@@ -109,13 +117,13 @@ Interpretation: **no G2 retuning or additional ecological analysis is justified 
 
 ## M3 — CED / Ecological Modelling
 
-State: **standalone canonical status restored; scientific base already strong; journal-facing production next**.
+State: **standalone canonical status restored; publication-contract CI passed; journal-facing production next**.
 
 Completed in the reorganization:
 
 - `manuscript/CED_SUBMISSION_STATUS_2026-09-11.json` created as current standalone status;
 - old `EVIDENCE_SUBMISSION_STATUS.json` explicitly marked historical/superseded as a submission unit;
-- publication-contract tests added;
+- publication-contract tests added and CED reproducibility run `34565147309` passed;
 - standalone `paper_b_main.tex` audited: its own framing already leads with target-safe reportability, failure-diverse evidence and false-resolution control rather than Boundary/MROD integration;
 - current Ecological Modelling fit rechecked at the level of modelling-method/user relevance.
 
@@ -134,14 +142,14 @@ Next production task: replace legacy MEE-oriented submission metadata with Ecolo
 
 ## M4 — V3 + REC / Ecological Informatics
 
-State: **new standalone integration draft and claim manifest created; one external-rights blocker**.
+State: **new standalone integration draft + claim manifest created; publication-contract CI passed; one external-rights blocker**.
 
 Completed:
 
 - `zuizui0223/v3/manuscript/M4_V3_REC_DRAFT_V1.md` created;
 - `M4_V3_REC_CLAIM_MANIFEST.json` pins V3/REC source blobs and headline numerical anchors;
 - old `OBSERVATION_SUBMISSION_STATUS.json` marked historical/superseded;
-- M4 publication contract tests added;
+- M4 publication contract tests added and v3-ci run `34565047115` passed;
 - TNOA is explicitly excluded and belongs to M1;
 - current Ecological Informatics scope rechecked: monitoring/sensor acquisition, ecological information processing/transfer and uncertainty are direct scope matches.
 
@@ -171,12 +179,12 @@ The former integrated Observation MEE manuscript/PDF remains a useful source/pro
 ## Portfolio summary
 
 ```text
-C2  TREE proposal                    long proposal + short editor pitch + source pins
+C2  TREE proposal                    proposal + pitch + prior-art map + email draft
 C1  Ecology Letters Perspective      proposal-ready / parked conditional
 M1  TNOA -> MEE                      science done / route CI success / human+visual only
 M2  MROD -> MEE                      science frozen / human metadata + export only
-M3  CED -> Ecological Modelling      standalone canonical restored / production next
-M4  V3+REC -> Ecological Informatics draft v1 + claim manifest / Findlay rights blocker
+M3  CED -> Ecological Modelling      standalone canonical / route CI success / production next
+M4  V3+REC -> Ecological Informatics draft v1 + claim manifest / route CI success / Findlay rights blocker
 ```
 
 Hard rule:
