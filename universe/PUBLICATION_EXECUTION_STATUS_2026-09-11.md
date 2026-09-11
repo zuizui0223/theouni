@@ -8,24 +8,35 @@ Whole-owner publication governance lives in `PORTFOLIO_GOVERNANCE_2026-09-11.jso
 
 **More measurement is not more evidence: four failures of monotonic reasoning in ecology**
 
-State: **pitch-ready; not sent**.
+State: **machine-ready for presubmission; human send gates only; not sent**.
 
 Completed:
 
-- four failure classes fixed: geometry / objective / dependence / pipeline;
+- four failure classes fixed and rewritten for broad ecological readership as same dimension / wrong target / shared dependence / upstream loss;
 - long source-backed proposal: `proposals/C2_MORE_MEASUREMENT_NOT_MORE_EVIDENCE_TREE_PROPOSAL.md`;
 - editor-facing pitch: `proposals/C2_TREE_EDITOR_PITCH.md`;
 - external prior-art firewall: `proposals/C2_PRIOR_ART_MAP.md`;
 - source ledger with pinned Boundary/CED/REC/TNOA/MROD blobs: `proposals/C2_SOURCE_LEDGER.json`;
-- presubmission email draft: `proposals/C2_TREE_PRESUBMISSION_EMAIL_DRAFT.md`;
-- Campanula structural and island-pollination translation examples retained with explicit empirical ceilings;
-- component novelty is disclaimed for structural identifiability, targeted/goal-oriented design, ecological value of information, pseudoreplication, imperfect detection, calibration and dataset shift.
+- frozen presubmission send candidate: `proposals/C2_TREE_SEND_CANDIDATE.md`;
+- authorship evidence ledger and metadata template: `proposals/C2_AUTHORSHIP_LEDGER.json`, `proposals/C2_TREE_AUTHOR_METADATA_TEMPLATE.md`;
+- outside-reader packet: `proposals/C2_OUTSIDE_READER_PACKET.md`;
+- TREE editorial red-team: `proposals/C2_TREE_RED_TEAM.md`;
+- machine-readable send gate: `proposals/C2_SEND_READINESS.json`;
+- latest validation run `34603216300` — **success** for send-candidate/outside-reader/red-team contracts.
 
 Current novelty statement:
 
 > C2 does not discover that “more data can fail.” It separates four different reasons why more measurement fails to become more evidence, and ties each failure to a different ecological design remedy.
 
-Remaining: authorship/responsible-author approval, live TREE contact/mechanics check, final style pass and one broad-interest ecological read. Do not write a full manuscript before editorial interest unless strategy changes.
+Working proposal authorship is **Ruiqi Zhang — provisional first/corresponding author** because this is the only fully documented named-author/corresponding-author metadata currently present in the source set. Additional authors require substantive C2-level synthesis, drafting and accountability contributions; supervision, source-result ownership or repository commits alone are insufficient.
+
+Remaining human send gates:
+
+1. final authorship/corresponding-author approval;
+2. one broad-interest ecologist outside the immediate theory/methods niche reads the pitch;
+3. live TREE contact route is rechecked immediately before dispatch.
+
+Do not write a full C2 manuscript before editorial interest unless strategy changes.
 
 ## C1 — Boundary / Ecology Letters
 
@@ -41,27 +52,74 @@ Activation rule: fallback if C2 is declined/too broad, or proceed only with the 
 
 ## M1 — TNOA / Methods in Ecology and Evolution
 
-State: **science complete; human/visual production only**.
+State: **science complete; production validated; human metadata/visual inspection only**.
 
-Validated route-restoration run: `34564310098` — success.
+Canonical status: `zuizui0223/tnoa/submission/TNOA_SUBMISSION_STATUS_2026-09-11.json`.
 
-Ready assets include the standalone MEE manuscript, 302-word numbered abstract, eight keywords, validated anonymous DOCX (7,712 repository-visible words), 24 active-paper references with zero orphan active citations, reproducible Figures 1–4/S2 and anonymous-review machinery.
+Scientific/package state:
 
-Remaining: final publisher-facing count/visual inspection, author/institution/correspondence metadata, CRediT, acknowledgements, funding, competing interests, final anonymous ZIP/private upload and final claim audit after material edits.
+- `scientific_submission_blockers = 0` in the canonical submission manifest;
+- standalone MEE manuscript and numbered abstract fixed;
+- MIT licence present;
+- anonymous DOCX built with double spacing, continuous line numbering, page numbering and rendered citations/references;
+- deterministic anonymous reviewer bundle built and validated against pinned PolliPi/InsePi source checkouts;
+- Figures 1–4 and Supplementary Figure S2 code-assembled from pinned quantitative sources;
+- status itself is now CI-validated.
 
-**No new scientific analysis is required.**
+Validation receipts:
+
+- source/package validation SHA `1f78e65ba3cb2c8fdfb622107b06cc16879a9bec`;
+- original route/package run `34564310098` — **success**;
+- anonymous DOCX artifact `10185463934`, digest `sha256:5a010f2524669732cf9f7f87eb6946e4865c986edb39c49b381a60fa5bdddfaf`;
+- anonymous reviewer bundle artifact `10185463162`, digest `sha256:a08e8a45488ad495bd6c8fa7d2cd6c8c88ded030ce8fcb38fcaed8b4c08fb345`;
+- initial-submission readiness artifact `10185463542`, digest `sha256:fe6bfc0ab53540b83b4c2e6c26b6bee1c3ec6296fe53d5851c889dade2f74b18`;
+- composite-figure artifact `10185464425`, digest `sha256:439945387667f1af43fe48f963e1e62f622c1487ce5ca40cb2f4e53139712b1e`;
+- latest status-contract HEAD `83e62cc446528453bd2f4ff5c0c14fbc9d4eef15`;
+- latest validation run `34604066032` — **success**.
+
+Remaining before submission:
+
+- final author names/affiliations and corresponding-author details;
+- CRediT contributions, acknowledgements, funding and competing interests;
+- final human visual inspection of DOCX and code-assembled figures;
+- live publisher word-count/submission-rule check;
+- rebuild final private reviewer ZIP with final identity literals supplied to the scanner;
+- rerun claim audit only if manuscript text materially changes.
+
+**Science blocker: 0. Machine production blocker: 0.**
 
 ## M2 — MROD / Methods in Ecology and Evolution
 
-State: **science frozen; human metadata/export only**.
+State: **science frozen; anonymous Main/SI PDF production validated; human metadata/title page only**.
 
-Validated source SHA: `a8d21b30646df4dc337f1455ca7d89662b4d7ba3`.
+Scientific version-of-record SHA: `a8d21b30646df4dc337f1455ca7d89662b4d7ba3`.
 
-G2, G5, Python 3.10/3.11/3.12 and the anonymous reviewer bundle passed. MIT licence, cover-letter draft and ScholarOne contracts exist.
+G2, G5, Python 3.10/3.11/3.12 and the anonymous reviewer bundle already passed. MIT licence, cover-letter draft and ScholarOne contracts exist.
 
-Remaining human blockers: postal address, correspondence email, acknowledgements, funding, ORCID and final ChatGPT application/model-version disclosure; then main/SI/title-page export and archival release/DOI work.
+New presentation-only PDF production:
 
-**No G2 retuning or additional ecological analysis is justified.**
+- `paper/submission_header.tex` adds double spacing, continuous line numbering and page numbering;
+- `paper/build_submission_source.py` appends only frozen Figure 1–3 / S1 outputs to canonical Main/SI Markdown;
+- `.github/workflows/manuscript_pdf.yml` rebuilds the frozen figures, scans anonymous sources and renders XeLaTeX PDFs;
+- production run `34603759786` — **success**;
+- production source SHA `4a1637844583fdfe3fdf2886fc6741fc60001f79`;
+- PDF artifact `10265242618` — `mrod-mee-anonymous-pdfs-4a1637844583fdfe3fdf2886fc6741fc60001f79`;
+- artifact digest `sha256:cb430f7bc68bfcc91d1f64b459b4cf11f6a0784e379506dbb9eb4a06ad85ce0d`;
+- receipt: `paper/PDF_PRODUCTION_STATUS_2026-09-11.json`.
+
+This production layer is presentation-only and does not supersede the frozen scientific validation SHA.
+
+Remaining human blockers:
+
+- correspondence postal address and email;
+- acknowledgements and funding statement;
+- ORCID;
+- confirm/report the ChatGPT application/model version(s) used for final manuscript preparation;
+- complete/export the non-anonymous title page;
+- final human visual inspection of Main/SI PDFs;
+- after the submitted file set is frozen, tag/archive and mint DOI according to the double-anonymous release plan.
+
+**Science blocker: 0. Anonymous Main/SI PDF production blocker: 0.**
 
 ## M3 — CED / Ecological Modelling
 
@@ -75,27 +133,17 @@ Canonical scientific unit:
 
 Integrated `EVIDENCE_*` assets are synthesis/provenance only and are not submission units.
 
-Ecological Modelling package includes:
-
-- submission checklist;
-- five conservative Highlights;
-- cover-letter draft;
-- Data/Code statement;
-- title-page template;
-- machine-readable package manifest;
-- standalone main + supplement production workflow.
+Ecological Modelling package includes submission checklist, five Highlights, cover-letter draft, Data/Code statement, title-page template, machine-readable package manifest, and standalone main + supplement production workflow.
 
 Validation receipt:
 
-- production source SHA: `60258505aa5bcdcf9adc3befa3207f359a0de0db`;
+- production source SHA `60258505aa5bcdcf9adc3befa3207f359a0de0db`;
 - reproducibility run `34575265031` — **success**;
 - manuscript build run `34575265062` — **success**;
 - artifact `10189451673` — `ced-ecological-modelling-package`;
 - artifact digest `sha256:81a4ec9bd871c73fab03b29b77f374f0eefc1099b5736eaa652d9840475f9394`;
-- final route/status-contract HEAD: `381b17b9f11772c5c1ed52b0eb5db3ebd0219387`;
-- final route/status reproducibility run `34576313642` — **success** after synchronizing the legacy status assertion to `standalone-production-validated`.
-
-Scientific core remains target-safe quotient/reportability, failure-aware evidence, the CED-internal learning/licensing witness, and risk-limited reporting/stopping. Boundary and MROD retain their own novelty.
+- final route/status-contract HEAD `381b17b9f11772c5c1ed52b0eb5db3ebd0219387`;
+- final route/status reproducibility run `34576313642` — **success**.
 
 Remaining: live Guide-for-Authors check, final visual/reference/overlap audit and human author/declaration metadata.
 
@@ -113,20 +161,12 @@ Canonical unit:
 
 TNOA is explicitly excluded and remains M1.
 
-Production includes:
-
-- Ecological Informatics checklist, Highlights, cover letter, Data/Code statement and title-page template;
-- Figure 1–5 architecture with no TNOA panel;
-- deterministic Figure 2–5 SVG/CSV generator reading only the M4 claim manifest;
-- exact figure-value regression tests;
-- fail-closed reviewer policy and machine-readable reviewer manifest;
-- v3 CI now produces M4 figures rather than the superseded Observation MEE PDF.
+Production includes Ecological Informatics checklist, Highlights, cover letter, Data/Code statement, title-page template, Figure 1–5 architecture with no TNOA panel, deterministic Figure 2–5 generator, figure-value regression tests, and fail-closed reviewer package policy/manifest.
 
 Validation receipt:
 
-- production source SHA: `bb6aa2589d73dedea980fe5f8fbdbd46ead84808`;
+- production source SHA `bb6aa2589d73dedea980fe5f8fbdbd46ead84808`;
 - v3-ci run `34575119019` — **success** on Python 3.10 and 3.11;
-- M4 quantitative figure generation — **success**;
 - artifact `10189408057` — `m4-v3-rec-quantitative-figures`;
 - artifact digest `sha256:52998fa71ab5ee46631cab7d187911675530cbb84784cfa86b43d3a577fff1f4`;
 - canonical status receipt HEAD `24278fe47f6e51139f9d09b255cafc5e858602d4`;
@@ -139,9 +179,7 @@ Third-party data state:
 - Findlay GitHub repository: no explicit root licence found;
 - scientific reanalysis/publication preparation may proceed;
 - original Findlay CSV redistribution remains fail-closed;
-- reviewer reproduction therefore retrieves the original files from the source repository using pinned commit/file identities and distributes derived summaries/code, not copied original CSVs.
-
-The residual Findlay issue is **data-package governance, not a missing scientific result**.
+- reviewer reproduction retrieves original files from the source repository using pinned identities and distributes derived summaries/code, not copied original CSVs.
 
 Remaining: live Guide-for-Authors check, final human visual Figure 1–5 assembly, final safe reviewer bundle, author/declaration metadata, final text-overlap audit and preferably written repository-level reuse clarification before any original-source redistribution.
 
@@ -150,10 +188,10 @@ Remaining: live Guide-for-Authors check, final human visual Figure 1–5 assembl
 ## Observation / Evidence track summary
 
 ```text
-C2  TREE Opinion pitch                 pitch-ready / authorship + send decision
+C2  TREE Opinion pitch                 machine-ready / 3 human send gates
 C1  Ecology Letters Perspective        proposal-ready / parked conditional
-M1  TNOA -> MEE                        science done / human + visual production
-M2  MROD -> MEE                        science frozen / human metadata + export
+M1  TNOA -> MEE                        production validated / human+visual only
+M2  MROD -> MEE                        production validated / human metadata+title page only
 M3  CED -> Ecological Modelling        production validated / blockers 0
 M4  V3+REC -> Ecological Informatics   production validated / blockers 0
 ```
