@@ -1,12 +1,19 @@
 {
   "schema": "theouni-publication-programme-v1",
   "date": "2026-09-11",
-  "status": "canonical_publication_programme",
+  "status": "canonical_track_publication_programme",
+  "scope": {
+    "track_id": "observation_evidence",
+    "whole_owner_portfolio": false,
+    "parent_governance": "universe/PORTFOLIO_GOVERNANCE_2026-09-11.json",
+    "rule": "This file governs only the Observation/Evidence track. Its 5+1 count must never be reported as the whole zuizui0223 publication portfolio."
+  },
   "governance": {
+    "portfolio_governance": "universe/PORTFOLIO_GOVERNANCE_2026-09-11.json",
     "thesis_architecture": "thesis/final_chapter_architecture.json",
     "publication_programme": "universe/PUBLICATION_PROGRAMME_2026-09-11.json",
     "worldline_map": "universe/WORLDLINE_ATLAS.md",
-    "rule": "Dissertation order, theory-map order and publication units are different estimands and must not be inferred from one another.",
+    "rule": "Dissertation order, theory-map order, track-local publication units and whole-portfolio paper units are different estimands and must not be inferred from one another.",
     "superseded_publication_plans": [
       "universe/SUBMISSION_ARCHITECTURE_2026-09-08.md",
       "universe/TWO_PAPER_EXECUTION_STATUS_2026-09-08.md"
@@ -14,10 +21,12 @@
     "historical_firewall_snapshot": "universe/TWO_PAPER_FIREWALL.json"
   },
   "portfolio": {
+    "scope": "observation_evidence_track_only",
     "confirmed_submission_units": 5,
     "conditional_submission_units": 1,
     "maximum_submission_units": 6,
-    "principle": "Use a high-level forbidden-inference concept paper to own the cross-programme synthesis, while source methods papers retain implementation/theorem ownership and do not borrow novelty from the concept paper."
+    "whole_owner_count_claim": false,
+    "principle": "Use a high-level forbidden-inference concept paper to own the cross-programme synthesis inside this track, while source methods papers retain implementation/theorem ownership and do not borrow novelty from the concept paper."
   },
   "concept_track": [
     {
@@ -123,6 +132,7 @@
     "M4 V3+REC Ecological Informatics production; clarify Findlay raw-source redistribution before final reviewer-package freeze"
   ],
   "non_claims": [
+    "This 5+1 router is track-local and is not the whole-owner publication portfolio.",
     "Publication units do not transfer theorem, data or code ownership between repositories.",
     "C2 does not turn heterogeneous source results into one universal scalar theorem.",
     "Campanula/Izu and island-pollination translation examples are ecological illustrations unless their source files explicitly establish empirical validation.",
