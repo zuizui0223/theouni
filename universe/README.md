@@ -1,6 +1,6 @@
 # `theouni` universe views
 
-`universe/` has three complementary views of the same research programme.
+`universe/` keeps distinct views of the same research programme because they answer different questions.
 
 ## 1. Portfolio architecture
 
@@ -46,49 +46,59 @@ The central organizational rule is:
 
 A dissertation chapter sequence is one traversal of the theory atlas, not the definition of the universe.
 
-## 3. Preferred dissertation traversal
+## 3. Dissertation traversal
 
-[`DISSERTATION_ARCHITECTURE.md`](DISSERTATION_ARCHITECTURE.md) and [`dissertation_architecture.json`](dissertation_architecture.json) answer:
+The canonical dissertation source is [`../thesis/final_chapter_architecture.json`](../thesis/final_chapter_architecture.json).
 
-> **Which valid traversal best exposes the source programmes as distinct, non-obvious failures of scientific transport and reuse?**
+It answers:
 
-This is an editorial view, not a new theorem layer. It chooses the following novelty-first sequence:
+> **Which valid traversal best exposes the source programmes as distinct forbidden inferences?**
+
+Its status is `final_editorial_order_forbidden_inference_spine`. The ten chapters are an editorial traversal and do not define publication units or transfer theorem ownership.
+
+Older dissertation-view files under `universe/` remain useful overlays, but they do not override the thesis canonical source.
+
+## 4. Publication programme
+
+[`PUBLICATION_PROGRAMME_2026-09-11.json`](PUBLICATION_PROGRAMME_2026-09-11.json) is the **only current publication-routing source of truth**.
+
+It answers:
+
+> **Which scientific questions should be submitted as papers, and which repository retains each method/result?**
+
+Current programme:
 
 ```text
-General Introduction — the reuse problem
+CONCEPT TRACK
+C2  More measurement is not more evidence       -> TREE proposal-first
+C1  Boundary identification-axis Perspective     -> conditional / parked
 
-Part I   — capability and open futures
-Part II  — macro-law and mechanism transport
-Part III — evidence, causal learning, and decision licensing
-Part IV  — loss-generating state and warning failure
-
-General Synthesis — revision after compression and the Theory Universe
+METHOD TRACK
+M1  TNOA                                         -> MEE
+M2  MROD                                         -> MEE
+M3  CED                                          -> Ecological Modelling
+M4  V3 + REC, excluding TNOA                     -> Ecological Informatics
 ```
 
-The source-owned research chapters are:
+Thus the current plan is **five confirmed submission units plus one conditional concept paper**, not a ten-paper chapter mapping and not the previous two-paper Observation/Evidence consolidation.
 
-1. CREST — conservation capacity can outgrow conservation knowledge;
-2. CCOC — closed simplicity need not survive open futures;
-3. MLTR — inherited macro-laws need not survive replacement;
-4. MRM — visible equivalence need not support one mechanism-safe law;
-5. CED — more information need not license the target;
-6. RACH + TU-2 — causal learning and decision licensing can diverge;
-7. eco-genetic criticality + TU-3 — simulator detail and coarse marginals need not define the loss state;
-8. eco-genetic warning extensions + TU-4 — a signal can lead loss without predicting it.
+The old files
 
-TU-1 is retained for the General Synthesis, where it asks whether an old scientific compression remains revisable after the task changes. TU-2, TU-3, and TU-4 remain embedded bridge/firewall modules rather than standalone novelty chapters.
+- `SUBMISSION_ARCHITECTURE_2026-09-08.md`;
+- `TWO_PAPER_EXECUTION_STATUS_2026-09-08.md`;
 
-The preferred traversal maximizes editorial novelty while preserving the Worldline Atlas claim that theory identity is not chapter order.
+are historical snapshots. `TWO_PAPER_FIREWALL.json` remains a frozen historical artifact because downstream manifests may pin its blob SHA; it is not current publication governance.
 
 ## Graphify surfaces
 
 - [`../graphify-out/GRAPH_REPORT.md`](../graphify-out/GRAPH_REPORT.md) — full portfolio/provenance graph.
 - [`../graphify-out/WORLDLINE_REPORT.md`](../graphify-out/WORLDLINE_REPORT.md) — focused task/perspective overlay.
-- [`../graphify-out/DISSERTATION_REPORT.md`](../graphify-out/DISSERTATION_REPORT.md) — novelty-first dissertation overlay.
+- [`../graphify-out/DISSERTATION_REPORT.md`](../graphify-out/DISSERTATION_REPORT.md) — dissertation overlay.
 - `python scripts/build_worldline_overlay.py` — writes a Graphify-compatible worldline extraction.
 - `python scripts/build_dissertation_overlay.py` — writes a Graphify-compatible dissertation extraction.
+- `python scripts/validate_publication_programme.py` — validates publication/thesis separation and the current 5+1 routing.
 
-Do not merge the three views into one overloaded graph merely to reduce file count. Their estimands are different:
+Do not merge the views merely to reduce file count. Their estimands are different:
 
 ```text
 Portfolio architecture
@@ -98,5 +108,14 @@ Worldline atlas
     = scientifically allowed task / perspective topology
 
 Dissertation architecture
-    = preferred editorial traversal for exposing novelty
+    = editorial traversal around forbidden inferences
+
+Publication programme
+    = submission units / journals / cross-paper firewalls
+```
+
+The hard rule is:
+
+```text
+thesis order != theory-map order != publication units
 ```
