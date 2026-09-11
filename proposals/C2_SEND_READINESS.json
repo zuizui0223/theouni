@@ -9,7 +9,8 @@
     "presubmission_email": "proposals/C2_TREE_PRESUBMISSION_EMAIL_DRAFT.md",
     "prior_art_map": "proposals/C2_PRIOR_ART_MAP.md",
     "source_ledger": "proposals/C2_SOURCE_LEDGER.json",
-    "authorship_ledger": "proposals/C2_AUTHORSHIP_LEDGER.json"
+    "authorship_ledger": "proposals/C2_AUTHORSHIP_LEDGER.json",
+    "author_metadata_template": "proposals/C2_TREE_AUTHOR_METADATA_TEMPLATE.md"
   },
   "machine_checks": {
     "four_failure_structure_fixed": true,
@@ -19,6 +20,9 @@
     "c1_c2_firewall_fixed": true,
     "broad_interest_editor_pitch_written": true,
     "proposal_first_strategy": true,
+    "historical_official_tree_contact_found": true,
+    "historical_official_tree_contact": "tree@cell.com",
+    "current_live_journal_contact_independently_confirmed": false,
     "machine_blockers": 0
   },
   "authorship_state": {
