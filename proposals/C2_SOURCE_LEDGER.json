@@ -66,7 +66,7 @@
     "campanula_izu": {
       "repository": "zuizui0223/mrod",
       "source_file": "causal_model/campanula_structural.py",
-      "source_blob_sha1": "89c7c940ee69be73bfa251fe504412432296a75d",
+      "source_blob_sha1": "93a5ad63f5c2d63a1385e9a8fe957bbe9f12fbd8",
       "role": "Tier-A structural worked example in which published ordinal patterns leave S2/S3 jointly admissible and a guide-gradient candidate separates the competing structures",
       "claim_ceiling": "directional structural example; do not import phenomenological coefficient magnitudes as evidence"
     },
