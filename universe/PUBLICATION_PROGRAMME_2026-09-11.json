@@ -1,0 +1,131 @@
+{
+  "schema": "theouni-publication-programme-v1",
+  "date": "2026-09-11",
+  "status": "canonical_publication_programme",
+  "governance": {
+    "thesis_architecture": "thesis/final_chapter_architecture.json",
+    "publication_programme": "universe/PUBLICATION_PROGRAMME_2026-09-11.json",
+    "worldline_map": "universe/WORLDLINE_ATLAS.md",
+    "rule": "Dissertation order, theory-map order and publication units are different estimands and must not be inferred from one another.",
+    "superseded_publication_plans": [
+      "universe/SUBMISSION_ARCHITECTURE_2026-09-08.md",
+      "universe/TWO_PAPER_EXECUTION_STATUS_2026-09-08.md"
+    ],
+    "historical_firewall_snapshot": "universe/TWO_PAPER_FIREWALL.json"
+  },
+  "portfolio": {
+    "confirmed_submission_units": 5,
+    "conditional_submission_units": 1,
+    "maximum_submission_units": 6,
+    "principle": "Use a high-level forbidden-inference concept paper to own the cross-programme synthesis, while source methods papers retain implementation/theorem ownership and do not borrow novelty from the concept paper."
+  },
+  "concept_track": [
+    {
+      "id": "C2",
+      "title": "More measurement is not more evidence: four failures of monotonic reasoning in ecology",
+      "target": "Trends in Ecology & Evolution Opinion (proposal-first)",
+      "status": "primary_concept_pitch",
+      "home": "zuizui0223/theouni",
+      "proposal": "proposals/C2_MORE_MEASUREMENT_NOT_MORE_EVIDENCE_TREE_PROPOSAL.md",
+      "headline": "Scientific evidence is not monotone in measurement amount, precision, latent information or repetition; adequacy is objective- and failure-architecture-relative.",
+      "four_failures": [
+        {
+          "id": "geometry",
+          "claim": "More precision or more measurements along an existing observation direction need not improve structural identification.",
+          "owner": "zuizui0223/boundary"
+        },
+        {
+          "id": "objective",
+          "claim": "More latent-state information need not be more useful for the declared scientific target.",
+          "owner": "zuizui0223/ced with TU-2/MROD interface"
+        },
+        {
+          "id": "dependence",
+          "claim": "More repeats inside one shared failure domain need not provide more independent evidential support.",
+          "owner": "zuizui0223/ced"
+        },
+        {
+          "id": "pipeline",
+          "claim": "Better downstream classification or inherited thresholds need not recover distinctions or operating meaning lost upstream or under representation shift.",
+          "owners": ["zuizui0223/rec", "zuizui0223/tnoa"]
+        }
+      ],
+      "ecological_worked_examples": [
+        {
+          "source": "zuizui0223/mrod/examples/campanula_izu",
+          "role": "worked observation-design example; do not present phenomenological coefficients as empirical evidence"
+        },
+        {
+          "source": "zuizui0223/mrod/examples/island_pollination_translation",
+          "role": "translation/adapter example; explicitly not empirical evidence"
+        }
+      ]
+    },
+    {
+      "id": "C1",
+      "title": "Mechanistic evidence needs an identification axis: measurement boundaries in ecological chains",
+      "target": "Ecology Letters Perspective proposal",
+      "status": "proposal_ready_parked_conditional",
+      "home": "zuizui0223/boundary",
+      "proposal": "paper/ecology_letters_proposal.md",
+      "headline": "Mechanistic proximity and identification strength are distinct axes.",
+      "activation_rule": "Submit independently only if C2 is declined, judged too broad, or an explicit firewall is retained so C1 owns identification geometry while C2 owns cross-failure non-monotonicity."
+    }
+  ],
+  "method_track": [
+    {
+      "id": "M1",
+      "repository": "zuizui0223/tnoa",
+      "target": "Methods in Ecology and Evolution",
+      "status": "independent_submission_restored",
+      "headline": "Observation evidence should preserve unresolvedness and non-complementary support rather than force target semantics prematurely.",
+      "firewall": "Own semantic restraint, operating-semantics calibration and controlled coarsening consequences; C2 may cite the forbidden inference but not re-own the method."
+    },
+    {
+      "id": "M2",
+      "repository": "zuizui0223/mrod",
+      "target": "Methods in Ecology and Evolution",
+      "status": "independent_submission_restored",
+      "headline": "Given unresolved mechanisms and a declared candidate family, rank and sequentially update the next observation by mechanism-learning value.",
+      "firewall": "Own observation-design algorithm, sequential recomputation and frozen benchmark; C2 uses only the broader forbidden inference."
+    },
+    {
+      "id": "M3",
+      "repository": "zuizui0223/ced",
+      "target": "Ecological Modelling",
+      "status": "standalone_submission_restored",
+      "headline": "Target-safe reportability, failure-aware refinement and risk-limited stopping need not coincide with full latent-world information.",
+      "firewall": "Integrated Evidence manuscript is no longer the canonical submission unit; Boundary and MROD remain external sources/contrasts rather than absorbed ownership."
+    },
+    {
+      "id": "M4",
+      "repositories": ["zuizui0223/v3", "zuizui0223/rec"],
+      "target": "Ecological Informatics",
+      "status": "reframe_v3_plus_rec_without_tnoa",
+      "headline": "Ecological observation systems should retain discriminating side information and audit the opportunity universe before record-entry loss; an event table is not the opportunity universe.",
+      "firewall": "TNOA is excluded and returns to M1. V3 contributes retained-information refinement; REC contributes external opportunity/reference auditing, irreversibility and transport-limited correction.",
+      "external_blocker": "Findlay linked-data reuse confirmation/licence clarification"
+    }
+  ],
+  "parked_material": [
+    "v3 audit-design extensions: burden, complexity, portfolio, sampling, constrained and multi-reference",
+    "ced supporting theorem family not needed for M3 main text",
+    "mrod robust/adaptive cost and Pareto/horizon extensions not needed for M2 main text",
+    "REC H6 same-system prospective contract until new data exist",
+    "InsePi V13 physical validation until physical data exist"
+  ],
+  "submission_order": [
+    "C2 TREE proposal",
+    "M1 TNOA production/submission",
+    "M2 MROD production/submission",
+    "C1 conditional Ecology Letters proposal",
+    "M3 CED standalone framing",
+    "M4 V3+REC framing after external data-rights clarification"
+  ],
+  "non_claims": [
+    "Publication units do not transfer theorem, data or code ownership between repositories.",
+    "C2 does not turn heterogeneous source results into one universal scalar theorem.",
+    "Campanula/Izu and island-pollination translation examples are ecological illustrations unless their source files explicitly establish empirical validation.",
+    "The thesis ten-chapter order is not a six-paper publication order."
+  ]
+}
