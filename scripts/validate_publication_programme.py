@@ -14,6 +14,10 @@ C2_PRIOR_ART = ROOT / "proposals" / "C2_PRIOR_ART_MAP.md"
 C2_EDITOR_PITCH = ROOT / "proposals" / "C2_TREE_EDITOR_PITCH.md"
 C2_AUTHORSHIP = ROOT / "proposals" / "C2_AUTHORSHIP_LEDGER.json"
 C2_SEND_READINESS = ROOT / "proposals" / "C2_SEND_READINESS.json"
+C2_AUTHOR_METADATA = ROOT / "proposals" / "C2_TREE_AUTHOR_METADATA_TEMPLATE.md"
+C2_SEND_CANDIDATE = ROOT / "proposals" / "C2_TREE_SEND_CANDIDATE.md"
+C2_OUTSIDE_READER = ROOT / "proposals" / "C2_OUTSIDE_READER_PACKET.md"
+C2_RED_TEAM = ROOT / "proposals" / "C2_TREE_RED_TEAM.md"
 
 
 def load(path: Path):
@@ -79,7 +83,17 @@ def main() -> None:
         "dependence",
         "pipeline",
     ]
-    for path in (PROPOSAL, C2_PRIOR_ART, C2_EDITOR_PITCH, C2_AUTHORSHIP, C2_SEND_READINESS):
+    for path in (
+        PROPOSAL,
+        C2_PRIOR_ART,
+        C2_EDITOR_PITCH,
+        C2_AUTHORSHIP,
+        C2_SEND_READINESS,
+        C2_AUTHOR_METADATA,
+        C2_SEND_CANDIDATE,
+        C2_OUTSIDE_READER,
+        C2_RED_TEAM,
+    ):
         assert path.exists()
 
     prior_art_text = C2_PRIOR_ART.read_text(encoding="utf-8")
@@ -159,8 +173,20 @@ def main() -> None:
     # Machine preparation is complete; actual sending stays blocked on explicit human gates.
     assert readiness["status"] == "machine-ready-human-decisions-open"
     assert readiness["machine_checks"]["machine_blockers"] == 0
+    assert readiness["machine_checks"]["frozen_send_candidate_written"] is True
+    assert readiness["machine_checks"]["outside_reader_packet_written"] is True
+    assert readiness["machine_checks"]["tree_editorial_red_team_completed"] is True
+    assert readiness["machine_checks"]["internal_red_team_decision"].startswith("GO")
     assert readiness["authorship_state"]["working_author_list"] == ["Ruiqi Zhang"]
     assert readiness["authorship_state"]["working_corresponding_author"] == "Ruiqi Zhang"
+    expected_assets = {
+        "author_metadata_template": "proposals/C2_TREE_AUTHOR_METADATA_TEMPLATE.md",
+        "send_candidate": "proposals/C2_TREE_SEND_CANDIDATE.md",
+        "outside_reader_packet": "proposals/C2_OUTSIDE_READER_PACKET.md",
+        "editorial_red_team": "proposals/C2_TREE_RED_TEAM.md",
+    }
+    for key, value in expected_assets.items():
+        assert readiness["proposal_assets"][key] == value
     human_ids = {row["id"] for row in readiness["human_blockers_before_send"] if row["required"]}
     assert human_ids == {"authorship", "broad_interest_read", "live_contact_check"}
 
