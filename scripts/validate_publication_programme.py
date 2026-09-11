@@ -23,6 +23,11 @@ def _assert_blob_pin(value: str) -> None:
     int(value, 16)
 
 
+def _assert_any(text: str, *aliases: str) -> None:
+    lower = text.lower()
+    assert any(alias.lower() in lower for alias in aliases), aliases
+
+
 def main() -> None:
     programme = load(PROGRAMME)
     thesis = load(THESIS)
@@ -67,14 +72,11 @@ def main() -> None:
         assert required.lower() in prior_art_text.lower()
 
     pitch_text = C2_EDITOR_PITCH.read_text(encoding="utf-8")
-    for required in (
-        "Geometry failure",
-        "Objective failure",
-        "Dependence failure",
-        "Pipeline failure",
-        "Prior-art position",
-        "Selected external anchors",
-    ):
+    _assert_any(pitch_text, "Geometry failure", "Same-dimension failure")
+    _assert_any(pitch_text, "Objective failure", "Wrong-target failure")
+    _assert_any(pitch_text, "Dependence failure", "False-independence failure")
+    _assert_any(pitch_text, "Pipeline failure", "Too-late failure")
+    for required in ("Prior-art position", "Selected external anchors"):
         assert required.lower() in pitch_text.lower()
 
     assert methods["M1"]["repository"] == "zuizui0223/tnoa"
