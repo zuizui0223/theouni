@@ -1,8 +1,8 @@
-# Publication execution status — 2026-09-11
+# Observation / Evidence track execution status — 2026-09-11
 
-Status: **validated execution companion to `PUBLICATION_PROGRAMME_2026-09-11.json`**.
+Status: **validated track-local execution companion to `PUBLICATION_PROGRAMME_2026-09-11.json`**.
 
-This file tracks production state only. It does not transfer theorem/evidence ownership and it does not alter the ten-chapter dissertation architecture.
+Whole-owner publication governance lives in `PORTFOLIO_GOVERNANCE_2026-09-11.json`. This file tracks production state only for the Observation/Evidence 5+1 track. It does not transfer theorem/evidence ownership, define the whole publication portfolio, or alter the ten-chapter dissertation architecture.
 
 ## C2 — TREE Opinion pitch
 
@@ -147,7 +147,7 @@ Remaining: live Guide-for-Authors check, final human visual Figure 1–5 assembl
 
 **Science blocker: 0. Known CI/status-contract blockers: 0.**
 
-## Portfolio summary
+## Observation / Evidence track summary
 
 ```text
 C2  TREE Opinion pitch                 pitch-ready / authorship + send decision
@@ -160,4 +160,4 @@ M4  V3+REC -> Ecological Informatics   production validated / blockers 0
 
 Hard rule:
 
-> Concept papers own cross-programme forbidden-inference synthesis. Method papers own their algorithms, theorems, benchmarks and claim ceilings. No publication unit may silently re-own another repository's result.
+> Concept papers own cross-programme forbidden-inference synthesis inside this track. Method papers own their algorithms, theorems, benchmarks and claim ceilings. No publication unit may silently re-own another repository's result, and this track summary must never be reported as the whole-owner publication portfolio.

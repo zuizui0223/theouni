@@ -6,6 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PROGRAMME = ROOT / "universe" / "PUBLICATION_PROGRAMME_2026-09-11.json"
+PORTFOLIO = ROOT / "universe" / "PORTFOLIO_GOVERNANCE_2026-09-11.json"
 THESIS = ROOT / "thesis" / "final_chapter_architecture.json"
 PROPOSAL = ROOT / "proposals" / "C2_MORE_MEASUREMENT_NOT_MORE_EVIDENCE_TREE_PROPOSAL.md"
 C2_LEDGER = ROOT / "proposals" / "C2_SOURCE_LEDGER.json"
@@ -30,18 +31,36 @@ def _assert_any(text: str, *aliases: str) -> None:
 
 def main() -> None:
     programme = load(PROGRAMME)
+    portfolio_governance = load(PORTFOLIO)
     thesis = load(THESIS)
     ledger = load(C2_LEDGER)
 
-    assert programme["status"] == "canonical_publication_programme"
+    assert portfolio_governance["status"] == "canonical_portfolio_governance"
+    assert portfolio_governance["scope"]["repository_count"] == 38
+
+    # PUBLICATION_PROGRAMME is intentionally track-local, not whole-owner governance.
+    assert programme["status"] == "canonical_track_publication_programme"
+    assert programme["scope"]["track_id"] == "observation_evidence"
+    assert programme["scope"]["whole_owner_portfolio"] is False
+    assert programme["scope"]["parent_governance"] == "universe/PORTFOLIO_GOVERNANCE_2026-09-11.json"
+    assert programme["governance"]["portfolio_governance"] == "universe/PORTFOLIO_GOVERNANCE_2026-09-11.json"
     assert programme["governance"]["thesis_architecture"] == "thesis/final_chapter_architecture.json"
     assert thesis["status"] == "final_editorial_order_forbidden_inference_spine"
     assert len(thesis["chapters"]) == 10
 
     portfolio = programme["portfolio"]
+    assert portfolio["scope"] == "observation_evidence_track_only"
     assert portfolio["confirmed_submission_units"] == 5
     assert portfolio["conditional_submission_units"] == 1
     assert portfolio["maximum_submission_units"] == 6
+    assert portfolio["whole_owner_count_claim"] is False
+
+    local_contract = portfolio_governance["local_router_contract"]
+    assert local_contract["path"] == "universe/PUBLICATION_PROGRAMME_2026-09-11.json"
+    assert local_contract["track"] == "observation_evidence"
+    assert local_contract["confirmed"] == 5
+    assert local_contract["conditional"] == 1
+    assert set(local_contract["paper_units"]) == set(portfolio_governance["tracks"]["observation_evidence"])
 
     concept = {row["id"]: row for row in programme["concept_track"]}
     methods = {row["id"]: row for row in programme["method_track"]}
@@ -123,7 +142,7 @@ def main() -> None:
     assert tnoa["inherited_raw_threshold"] == 0.55
     assert tnoa["nuisance_recall_after_representation_change"] == 0.23125
 
-    print("PUBLICATION_PROGRAMME PASS")
+    print("PUBLICATION_PROGRAMME TRACK PASS")
 
 
 if __name__ == "__main__":
