@@ -1,0 +1,54 @@
+{
+  "schema": "c2-tree-send-readiness-v1",
+  "status": "machine-ready-human-decisions-open",
+  "paper": "C2_MORE_MEASUREMENT_NOT_MORE_EVIDENCE",
+  "target": "Trends in Ecology & Evolution Opinion",
+  "proposal_assets": {
+    "long_proposal": "proposals/C2_MORE_MEASUREMENT_NOT_MORE_EVIDENCE_TREE_PROPOSAL.md",
+    "editor_pitch": "proposals/C2_TREE_EDITOR_PITCH.md",
+    "presubmission_email": "proposals/C2_TREE_PRESUBMISSION_EMAIL_DRAFT.md",
+    "prior_art_map": "proposals/C2_PRIOR_ART_MAP.md",
+    "source_ledger": "proposals/C2_SOURCE_LEDGER.json",
+    "authorship_ledger": "proposals/C2_AUTHORSHIP_LEDGER.json"
+  },
+  "machine_checks": {
+    "four_failure_structure_fixed": true,
+    "external_prior_art_firewall_present": true,
+    "source_claims_blob_pinned": true,
+    "worked_examples_claim_ceiling_fixed": true,
+    "c1_c2_firewall_fixed": true,
+    "broad_interest_editor_pitch_written": true,
+    "proposal_first_strategy": true,
+    "machine_blockers": 0
+  },
+  "authorship_state": {
+    "working_author_list": ["Ruiqi Zhang"],
+    "working_corresponding_author": "Ruiqi Zhang",
+    "status": "provisional until explicit human approval",
+    "additional_authors": "none documented yet"
+  },
+  "human_blockers_before_send": [
+    {
+      "id": "authorship",
+      "required": true,
+      "question": "Does any additional person have, or will they make before submission, a substantive C2-level conceptual/drafting/accountability contribution that warrants coauthorship?"
+    },
+    {
+      "id": "broad_interest_read",
+      "required": true,
+      "question": "Has at least one ecologist outside the immediate theory/methods niche read the pitch for broad-interest clarity?"
+    },
+    {
+      "id": "live_contact_check",
+      "required": true,
+      "question": "Immediately before sending, has the current TREE editor/contact route been rechecked on the live journal/Cell Press site?"
+    }
+  ],
+  "do_not_block_on": [
+    "full manuscript drafting before editorial interest",
+    "C1 Ecology Letters submission while C1 remains parked",
+    "new scientific analysis in Boundary/CED/MROD/REC/TNOA/V3",
+    "adding senior coauthors by status alone"
+  ],
+  "send_gate": "Send only after the three human blockers are explicitly closed; do not alter source ownership or inflate the author list to improve perceived prestige."
+}
