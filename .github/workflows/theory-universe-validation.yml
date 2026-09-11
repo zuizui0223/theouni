@@ -102,7 +102,10 @@ jobs:
       - name: Validate task-indexed worldline atlas
         run: python scripts/validate_worldline_atlas.py
 
-      - name: Validate canonical publication programme
+      - name: Validate whole-owner portfolio governance
+        run: python scripts/validate_portfolio_governance.py
+
+      - name: Validate Observation Evidence track publication programme
         run: python scripts/validate_publication_programme.py
 
       - name: Rebuild Graphify worldline overlay
