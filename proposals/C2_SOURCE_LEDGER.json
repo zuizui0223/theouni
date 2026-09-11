@@ -1,0 +1,93 @@
+{
+  "schema": "c2-more-measurement-source-ledger-v1",
+  "status": "proposal-source-pins",
+  "proposal": "proposals/C2_MORE_MEASUREMENT_NOT_MORE_EVIDENCE_TREE_PROPOSAL.md",
+  "principle": "C2 owns only the cross-programme non-monotonicity synthesis. Every mathematical, empirical and methodological result remains source-owned.",
+  "failure_classes": {
+    "geometry": {
+      "repository": "zuizui0223/boundary",
+      "source_file": "docs/observation_rank_identification_theorem_2026-09-03.md",
+      "source_blob_sha1": "9de0b383de588debe77c91e4fc3722b9987d2a6a",
+      "source_claims": [
+        "residual structural dimension = k-rank(M) in the declared positive log-linear class",
+        "a scalar candidate reduces structural ambiguity iff its row is outside the current row span",
+        "precision, repeats, rescaling and exact linear combinations inside the old row span do not add structural identification"
+      ],
+      "claim_ceiling": "exact declared log-linear family; not a theorem that every ecological observation problem is linear"
+    },
+    "objective": {
+      "repository": "zuizui0223/ced",
+      "source_file": "ced/learning_licensing.py",
+      "source_blob_sha1": "996e71016c43cdaa6a23d7e2e7e582824638f949",
+      "anchors": {
+        "nuisance_detail_mechanism_information_bits": 2.0,
+        "nuisance_detail_target_resolution_probability": 0.0,
+        "target_split_mechanism_information_bits": 1.0,
+        "target_split_target_resolution_probability": 1.0
+      },
+      "claim_ceiling": "exact finite equal-cost divergence witness; not a universal observation utility theorem"
+    },
+    "dependence": {
+      "repository": "zuizui0223/ced",
+      "source_file": "ced/mode_detection.py",
+      "source_blob_sha1": "7f95d869bce6a9fabcc134f16e9b2f8247e8c8f5",
+      "source_claims": [
+        "repeats within an operating mode can improve sensitivity",
+        "only additional independent failure modes improve the worst-case guarantee against common-mode loss under the declared contract"
+      ],
+      "claim_ceiling": "conditional on the declared independent-mode availability and detector contracts"
+    },
+    "pipeline_rec": {
+      "repository": "zuizui0223/rec",
+      "source_file": "results/birdvox_protected_02_05_real_data_v1.json",
+      "source_blob_sha1": "9ebd90fd2416644693483eec5a7578eb4d614ffc",
+      "anchors": {
+        "truth_late_minus_early": 0.13082037112040884,
+        "oracle_downstream_true_entry_late_minus_early": -0.00002542329758148573
+      },
+      "claim_ceiling": "protected acoustic-system irreversibility result; not general detector performance or abundance inference"
+    },
+    "pipeline_tnoa": {
+      "repository": "zuizui0223/tnoa",
+      "source_file": "README.md",
+      "source_blob_sha1": "0049e3795701ceb2afa4ad7ce1ab7247a6e0558e",
+      "anchors": {
+        "inherited_raw_threshold": 0.55,
+        "nuisance_recall_after_representation_change": 0.23125,
+        "pooled_false_nuisance_attribution": 0.08889,
+        "declared_alpha": 0.05,
+        "family_max_calibrated_heldout_rate": 0.04444
+      },
+      "source_claim": "the transferable object in the frozen experiment was the declared error semantics, not the numerical raw-score threshold",
+      "claim_ceiling": "closed-world family-conditional calibration result; not classical FWER or universal threshold transport"
+    }
+  },
+  "worked_examples": {
+    "campanula_izu": {
+      "repository": "zuizui0223/mrod",
+      "source_file": "causal_model/campanula_structural.py",
+      "source_blob_sha1": "89c7c940ee69be73bfa251fe504412432296a75d",
+      "role": "Tier-A structural worked example in which published ordinal patterns leave S2/S3 jointly admissible and a guide-gradient candidate separates the competing structures",
+      "claim_ceiling": "directional structural example; do not import phenomenological coefficient magnitudes as evidence"
+    },
+    "example_status_registry": {
+      "repository": "zuizui0223/mrod",
+      "source_file": "repository_programs.json",
+      "source_blob_sha1": "e51c786523173e8ab15d760f274eef09a7a10f16",
+      "claim_ceiling": "campanula_izu is a prospective observation-design example; island_pollination_translation is explicitly not empirical evidence"
+    },
+    "island_pollination_translation": {
+      "repository": "zuizui0223/mrod",
+      "source_file": "examples/island_pollination_translation/CURRENT_STATE.json",
+      "source_blob_sha1": "448e3d9f564c9afb04affb88fe9337ca775cb0a3",
+      "role": "three falsifiable translation tracks illustrating task-specific measurement requirements",
+      "claim_ceiling": "epistemically resolved translation contracts with empirical resolution still open; no empirical causal claim"
+    }
+  },
+  "forbidden_promotions": [
+    "Do not present C2 as proving one universal evidence score.",
+    "Do not transfer Boundary, CED, REC, TNOA or MROD theorem/result ownership to theouni.",
+    "Do not call the island-pollination translation tracks empirically validated.",
+    "Do not convert the Campanula phenomenological model's chosen coefficients into empirical findings."
+  ]
+}
