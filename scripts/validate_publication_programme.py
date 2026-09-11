@@ -12,6 +12,8 @@ PROPOSAL = ROOT / "proposals" / "C2_MORE_MEASUREMENT_NOT_MORE_EVIDENCE_TREE_PROP
 C2_LEDGER = ROOT / "proposals" / "C2_SOURCE_LEDGER.json"
 C2_PRIOR_ART = ROOT / "proposals" / "C2_PRIOR_ART_MAP.md"
 C2_EDITOR_PITCH = ROOT / "proposals" / "C2_TREE_EDITOR_PITCH.md"
+C2_AUTHORSHIP = ROOT / "proposals" / "C2_AUTHORSHIP_LEDGER.json"
+C2_SEND_READINESS = ROOT / "proposals" / "C2_SEND_READINESS.json"
 
 
 def load(path: Path):
@@ -34,6 +36,8 @@ def main() -> None:
     portfolio_governance = load(PORTFOLIO)
     thesis = load(THESIS)
     ledger = load(C2_LEDGER)
+    authorship = load(C2_AUTHORSHIP)
+    readiness = load(C2_SEND_READINESS)
 
     assert portfolio_governance["status"] == "canonical_portfolio_governance"
     assert portfolio_governance["scope"]["repository_count"] == 38
@@ -75,9 +79,8 @@ def main() -> None:
         "dependence",
         "pipeline",
     ]
-    assert PROPOSAL.exists()
-    assert C2_PRIOR_ART.exists()
-    assert C2_EDITOR_PITCH.exists()
+    for path in (PROPOSAL, C2_PRIOR_ART, C2_EDITOR_PITCH, C2_AUTHORSHIP, C2_SEND_READINESS):
+        assert path.exists()
 
     prior_art_text = C2_PRIOR_ART.read_text(encoding="utf-8")
     for required in (
@@ -141,6 +144,25 @@ def main() -> None:
     tnoa = ledger["failure_classes"]["pipeline_tnoa"]["anchors"]
     assert tnoa["inherited_raw_threshold"] == 0.55
     assert tnoa["nuisance_recall_after_representation_change"] == 0.23125
+
+    # C2 proposal-stage authorship is evidence-based but remains a human decision.
+    assert authorship["status"] == "provisional-author-evidence-complete-human-decision-open"
+    assert authorship["working_default"]["author_list"] == ["Ruiqi Zhang"]
+    assert authorship["working_default"]["corresponding_author"] == "Ruiqi Zhang"
+    documented = authorship["documented_people"]
+    assert len(documented) == 1
+    assert documented[0]["name"] == "Ruiqi Zhang"
+    assert documented[0]["provisional_corresponding_author"] is True
+    _assert_blob_pin(documented[0]["evidence"]["source_blob_sha1"])
+    assert "repository commits" in authorship["additional_author_rule"]["insufficient_alone"]
+
+    # Machine preparation is complete; actual sending stays blocked on explicit human gates.
+    assert readiness["status"] == "machine-ready-human-decisions-open"
+    assert readiness["machine_checks"]["machine_blockers"] == 0
+    assert readiness["authorship_state"]["working_author_list"] == ["Ruiqi Zhang"]
+    assert readiness["authorship_state"]["working_corresponding_author"] == "Ruiqi Zhang"
+    human_ids = {row["id"] for row in readiness["human_blockers_before_send"] if row["required"]}
+    assert human_ids == {"authorship", "broad_interest_read", "live_contact_check"}
 
     print("PUBLICATION_PROGRAMME TRACK PASS")
 
