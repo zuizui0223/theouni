@@ -87,17 +87,19 @@ Ecological Modelling package includes:
 
 Validation receipt:
 
-- validated source SHA: `60258505aa5bcdcf9adc3befa3207f359a0de0db`;
+- production source SHA: `60258505aa5bcdcf9adc3befa3207f359a0de0db`;
 - reproducibility run `34575265031` — **success**;
 - manuscript build run `34575265062` — **success**;
 - artifact `10189451673` — `ced-ecological-modelling-package`;
-- artifact digest `sha256:81a4ec9bd871c73fab03b29b77f374f0eefc1099b5736eaa652d9840475f9394`.
+- artifact digest `sha256:81a4ec9bd871c73fab03b29b77f374f0eefc1099b5736eaa652d9840475f9394`;
+- final route/status-contract HEAD: `381b17b9f11772c5c1ed52b0eb5db3ebd0219387`;
+- final route/status reproducibility run `34576313642` — **success** after synchronizing the legacy status assertion to `standalone-production-validated`.
 
 Scientific core remains target-safe quotient/reportability, failure-aware evidence, the CED-internal learning/licensing witness, and risk-limited reporting/stopping. Boundary and MROD retain their own novelty.
 
 Remaining: live Guide-for-Authors check, final visual/reference/overlap audit and human author/declaration metadata.
 
-**Science blocker: 0.**
+**Science blocker: 0. Known CI/status-contract blockers: 0.**
 
 ## M4 — V3 + REC / Ecological Informatics
 
@@ -122,11 +124,13 @@ Production includes:
 
 Validation receipt:
 
-- validated source SHA: `bb6aa2589d73dedea980fe5f8fbdbd46ead84808`;
+- production source SHA: `bb6aa2589d73dedea980fe5f8fbdbd46ead84808`;
 - v3-ci run `34575119019` — **success** on Python 3.10 and 3.11;
 - M4 quantitative figure generation — **success**;
 - artifact `10189408057` — `m4-v3-rec-quantitative-figures`;
-- artifact digest `sha256:52998fa71ab5ee46631cab7d187911675530cbb84784cfa86b43d3a577fff1f4`.
+- artifact digest `sha256:52998fa71ab5ee46631cab7d187911675530cbb84784cfa86b43d3a577fff1f4`;
+- canonical status receipt HEAD `24278fe47f6e51139f9d09b255cafc5e858602d4`;
+- metadata/status v3-ci run `34575758824` — **success**.
 
 Third-party data state:
 
@@ -141,7 +145,7 @@ The residual Findlay issue is **data-package governance, not a missing scientifi
 
 Remaining: live Guide-for-Authors check, final human visual Figure 1–5 assembly, final safe reviewer bundle, author/declaration metadata, final text-overlap audit and preferably written repository-level reuse clarification before any original-source redistribution.
 
-**Science blocker: 0.**
+**Science blocker: 0. Known CI/status-contract blockers: 0.**
 
 ## Portfolio summary
 
@@ -150,8 +154,8 @@ C2  TREE Opinion pitch                 pitch-ready / authorship + send decision
 C1  Ecology Letters Perspective        proposal-ready / parked conditional
 M1  TNOA -> MEE                        science done / human + visual production
 M2  MROD -> MEE                        science frozen / human metadata + export
-M3  CED -> Ecological Modelling        production validated / science blocker 0
-M4  V3+REC -> Ecological Informatics   production validated / science blocker 0
+M3  CED -> Ecological Modelling        production validated / blockers 0
+M4  V3+REC -> Ecological Informatics   production validated / blockers 0
 ```
 
 Hard rule:
