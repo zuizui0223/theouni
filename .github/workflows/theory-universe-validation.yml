@@ -108,6 +108,9 @@ jobs:
       - name: Validate Observation Evidence track publication programme
         run: python scripts/validate_publication_programme.py
 
+      - name: Validate concise publication handoff and human-input gate
+        run: python scripts/validate_publication_handoff.py
+
       - name: Rebuild Graphify worldline overlay
         run: python scripts/build_worldline_overlay.py /tmp/theouni-worldline-extraction.json
 
