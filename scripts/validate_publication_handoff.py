@@ -10,14 +10,16 @@ HANDOFF_MD = ROOT / "universe" / "PUBLICATION_HANDOFF_2026-09-12.md"
 LIVE_RULES = ROOT / "universe" / "LIVE_JOURNAL_RULES_2026-09-12.md"
 HUMAN_JSON = ROOT / "universe" / "HUMAN_SUBMISSION_INPUTS_2026-09-12.json"
 HUMAN_MD = ROOT / "universe" / "HUMAN_SUBMISSION_INPUTS_2026-09-12.md"
+PROPAGATION = ROOT / "universe" / "HUMAN_INPUT_PROPAGATION_MAP_2026-09-12.json"
 
 
 def main() -> None:
-    for path in (HANDOFF_JSON, HANDOFF_MD, LIVE_RULES, HUMAN_JSON, HUMAN_MD):
+    for path in (HANDOFF_JSON, HANDOFF_MD, LIVE_RULES, HUMAN_JSON, HUMAN_MD, PROPAGATION):
         assert path.exists(), path
 
     handoff = json.loads(HANDOFF_JSON.read_text(encoding="utf-8"))
     human = json.loads(HUMAN_JSON.read_text(encoding="utf-8"))
+    propagation = json.loads(PROPAGATION.read_text(encoding="utf-8"))
 
     assert handoff["status"] == "machine-work-closed-human-completion-open"
     assert handoff["scope"] == "observation_evidence_track_only"
@@ -53,6 +55,14 @@ def main() -> None:
     assert human["ai_assistance"]["do_not_infer_from_repository_history"] is True
     assert human["papers"]["C1"]["human_metadata_effort_now"] is False
     assert human["papers"]["M4"]["raw_findlay_redistribution_allowed"] is False
+
+    assert propagation["source"] == "universe/HUMAN_SUBMISSION_INPUTS_2026-09-12.json"
+    assert set(propagation["destinations"]) == {"C2", "M1", "M2", "M3", "M4"}
+    blocked = set(propagation["blocked_automatic_actions"])
+    assert "copy MROD affiliation into another paper without confirmation" in blocked
+    assert "derive authorship from Git commits or repository ownership" in blocked
+    assert "guess ChatGPT application/model versions from repository dates or assistant model identity" in blocked
+    assert "mark a visual inspection complete without human review" in blocked
 
     text = HANDOFF_MD.read_text(encoding="utf-8")
     for required in (
