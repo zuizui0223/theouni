@@ -10,7 +10,7 @@ The contribution is not another warning that “more data can be bad,” nor a u
 
 | diagnosed failure | question before collecting more data | appropriate next move |
 |---|---|---|
-| same dimension | does the new measurement separate a previously unresolved alternative? | add a new identification direction, not merely precision on the old one |
+| same dimension | does the new measurement separate a previously unresolved alternative? | measure a distinction that separates an unresolved explanation, not merely the old quantity more precisely |
 | wrong target | can the new distinction change the declared prediction or decision? | measure target-relevant information rather than maximizing generic information |
 | shared dependence | does the added observation create a genuinely independent opportunity for evidence to survive failure? | diversify failure domains rather than only increasing repeat count |
 | upstream loss | is the needed distinction still present in the retained record? | capture it earlier in the pipeline; downstream accuracy cannot recreate deleted information |
@@ -21,7 +21,7 @@ This mapping is the unifying ecological claim: a measurement can fail to become 
 
 Each component has a mature literature. Structural-identifiability work distinguishes structural resolution from estimation precision (Villaverde et al. 2016). Targeted and goal-oriented experimental design, together with ecological value-of-information analysis, shows that information value depends on the prediction or decision of interest (Vanlier et al. 2012; Canessa et al. 2015; Attia et al. 2018). Ecological experimental design has long distinguished sample count from independent replication (Hurlbert 1984). Imperfect-detection, calibration and dataset-shift literatures show that observed records and classifier outputs cannot be read naively as biological truth (MacKenzie et al. 2002; Dormann 2020).
 
-What is missing is a cross-cutting ecological diagnosis of **why** an additional measurement failed to become additional evidence. The four failures are not interchangeable, and neither are their remedies: more precision cannot solve a missing-identification-direction problem; more total information cannot solve a target mismatch; more repeats cannot solve shared dependence; and a better downstream classifier cannot recreate information deleted upstream.
+What is missing is a cross-cutting ecological diagnosis of **why** an additional measurement failed to become additional evidence. The four failures are not interchangeable, and neither are their remedies: more precision cannot solve a problem in which competing explanations remain observationally indistinguishable; more total information cannot solve a target mismatch; more repeats cannot solve shared dependence; and a better downstream classifier cannot recreate information deleted upstream.
 
 Two worked ecological examples make the synthesis concrete. In an island *Campanula* system, several mechanism structures can remain compatible with the same coarse clinal pattern, so a targeted nectar-guide measurement can be more informative than simply increasing observations of the original pattern. In island pollination, questions about pollinator occurrence, effective service and service-to-reproduction links require different observations; collecting more of one kind does not substitute for measuring another link in the chain. These are explicitly worked design examples, not new empirical-validation claims.
 
@@ -54,4 +54,4 @@ This Opinion owns only the cross-programme synthesis. The component results rema
 
 ## Relationship to the Boundary Perspective proposal
 
-The Boundary proposal asks the narrower question of whether mechanistic proximity and identification strength are distinct axes. If both routes proceed, the Boundary paper retains the full identification theorem and Γ–κ development; the TREE Opinion uses Boundary only as the geometry-failure exemplar within the broader four-failure synthesis.
+The Boundary proposal asks the narrower question of whether mechanistic proximity and identification strength are distinct axes. If both routes proceed, the Boundary paper retains the full identification theorem and Γ–κ development; the TREE Opinion uses Boundary only as the qualitative same-direction exemplar within the broader four-failure synthesis.
