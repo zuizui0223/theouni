@@ -47,7 +47,6 @@ def main() -> None:
     assert portfolio_governance["status"] == "canonical_portfolio_governance"
     assert portfolio_governance["scope"]["repository_count"] == 38
 
-    # PUBLICATION_PROGRAMME is intentionally track-local, not whole-owner governance.
     assert programme["status"] == "canonical_track_publication_programme"
     assert programme["scope"]["track_id"] == "observation_evidence"
     assert programme["scope"]["whole_owner_portfolio"] is False
@@ -77,6 +76,16 @@ def main() -> None:
     assert set(methods) == {"M1", "M2", "M3", "M4"}
     assert concept["C2"]["status"] == "primary_concept_pitch"
     assert concept["C1"]["status"] == "proposal_ready_parked_conditional"
+
+    c1 = concept["C1"]
+    assert c1["home"] == "zuizui0223/boundary"
+    assert c1["role_contract"] == "paper/BOUNDARY_ROLE_CONTRACT_2026-09-12.json"
+    assert c1["machine_blockers"] == 0
+    assert "k-rank(M)" in c1["exclusive_owner"]
+    assert "geometry-failure exemplar" in c1["c2_interface"]
+    assert "does not own Boundary rank geometry" in c1["ced_interface"]
+    assert "C2 is declined" in c1["activation_rule"]
+
     assert len(concept["C2"]["four_failures"]) == 4
     assert [row["id"] for row in concept["C2"]["four_failures"]] == [
         "geometry",
@@ -84,6 +93,9 @@ def main() -> None:
         "dependence",
         "pipeline",
     ]
+    geometry = concept["C2"]["four_failures"][0]
+    assert geometry["owner"] == "zuizui0223/boundary"
+
     for path in (
         PROPOSAL,
         C2_PRIOR_ART,
@@ -108,6 +120,11 @@ def main() -> None:
         "Ecological Modelling",
         "Ecological Informatics",
         "Trends in Ecology & Evolution",
+        "Ecology Letters Perspective / Boundary",
+        "no more than 300 words",
+        "ecolets@cefe.cnrs.fr",
+        "ecolets2@cefe.cnrs.fr",
+        "same novelty expectation as a Letter",
         "must not be guessed",
     ):
         assert required in live_rules
@@ -136,12 +153,18 @@ def main() -> None:
     assert methods["M3"]["repository"] == "zuizui0223/ced"
     assert methods["M4"]["repositories"] == ["zuizui0223/v3", "zuizui0223/rec"]
     assert "TNOA is excluded" in methods["M4"]["firewall"]
+    assert "Boundary retains structural identification geometry" in methods["M3"]["boundary_interface"]
+    assert "not k-rank(M)" in methods["M3"]["boundary_interface"]
 
     superseded = set(programme["governance"]["superseded_publication_plans"])
     assert superseded == {
         "universe/SUBMISSION_ARCHITECTURE_2026-09-08.md",
         "universe/TWO_PAPER_EXECUTION_STATUS_2026-09-08.md",
     }
+
+    non_claims = "\n".join(programme["non_claims"])
+    assert "does not transfer Boundary theorem ownership" in non_claims
+    assert "does not transfer Boundary rank-geometry ownership" in non_claims
 
     assert ledger["status"] == "proposal-source-pins"
     assert ledger["proposal"] == concept["C2"]["proposal"]
@@ -175,7 +198,6 @@ def main() -> None:
     assert tnoa["inherited_raw_threshold"] == 0.55
     assert tnoa["nuisance_recall_after_representation_change"] == 0.23125
 
-    # C2 proposal-stage authorship is evidence-based but remains a human decision.
     assert authorship["status"] == "provisional-author-evidence-complete-human-decision-open"
     assert authorship["working_default"]["author_list"] == ["Ruiqi Zhang"]
     assert authorship["working_default"]["corresponding_author"] == "Ruiqi Zhang"
@@ -186,7 +208,6 @@ def main() -> None:
     _assert_blob_pin(documented[0]["evidence"]["source_blob_sha1"])
     assert "repository commits" in authorship["additional_author_rule"]["insufficient_alone"]
 
-    # Machine preparation is complete; actual sending stays blocked on explicit human gates.
     assert readiness["status"] == "machine-ready-human-decisions-open"
     assert readiness["machine_checks"]["machine_blockers"] == 0
     assert readiness["machine_checks"]["frozen_send_candidate_written"] is True
