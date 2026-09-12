@@ -20,16 +20,20 @@
     "C1": {
       "repository": "zuizui0223/boundary",
       "target": "Ecology Letters Perspective",
-      "state": "parked-conditional",
+      "state": "machine-ready-strategically-parked",
       "role_contract": "zuizui0223/boundary/paper/BOUNDARY_ROLE_CONTRACT_2026-09-12.json",
       "send_readiness": "zuizui0223/boundary/paper/C1_SEND_READINESS_2026-09-12.json",
       "exclusive_owner": "structural identification geometry",
-      "c2_role": "geometry exemplar only; no theorem-ownership transfer",
+      "c2_role": "qualitative geometry exemplar only; exact theorem surface stays in Boundary; no theorem-ownership transfer",
       "ced_role": "external identification-geometry source/contrast only; no theorem-ownership transfer",
       "machine_blocker": false,
       "proposal_max_words": 300,
+      "proposal_word_count": 226,
+      "proposal_word_headroom": 74,
+      "current_strategy_decision": "keep parked until C2 editorial outcome",
       "activation_gate": "activate if C2 is declined/too broad or if both proceed under explicit ownership firewall",
-      "human_gates": ["activation decision", "authorship", "author qualification", "contact metadata", "live rule recheck"]
+      "current_human_blockers": [],
+      "human_gates_if_activated": ["authorship", "author qualification", "contact metadata", "live rule recheck"]
     },
     "M1": {
       "repository": "zuizui0223/tnoa",
