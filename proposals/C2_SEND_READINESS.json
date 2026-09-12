@@ -13,7 +13,8 @@
     "authorship_ledger": "proposals/C2_AUTHORSHIP_LEDGER.json",
     "author_metadata_template": "proposals/C2_TREE_AUTHOR_METADATA_TEMPLATE.md",
     "outside_reader_packet": "proposals/C2_OUTSIDE_READER_PACKET.md",
-    "editorial_red_team": "proposals/C2_TREE_RED_TEAM.md"
+    "editorial_red_team": "proposals/C2_TREE_RED_TEAM.md",
+    "live_route_check": "proposals/C2_TREE_LIVE_ROUTE_CHECK_20260912.md"
   },
   "machine_checks": {
     "four_failure_structure_fixed": true,
@@ -34,7 +35,12 @@
     "proposal_first_strategy": true,
     "historical_official_tree_contact_found": true,
     "historical_official_tree_contact": "tree@cell.com",
-    "current_live_journal_contact_independently_confirmed": false,
+    "current_live_journal_contact_independently_confirmed": true,
+    "current_live_journal_contact_checked_on": "2026-09-12",
+    "current_live_journal_contact": "tree@cell.com",
+    "current_live_editor": "Andrea Stephens",
+    "current_public_route": "proposal by email to the editor before full-manuscript preparation",
+    "dispatch_time_recheck_still_required": true,
     "machine_blockers": 0
   },
   "authorship_state": {
@@ -55,9 +61,9 @@
       "question": "Has at least one ecologist outside the immediate theory/methods niche read the pitch for broad-interest clarity?"
     },
     {
-      "id": "live_contact_check",
+      "id": "dispatch_time_route_recheck",
       "required": true,
-      "question": "Immediately before sending, has the current TREE editor/contact route been rechecked on the live journal/Cell Press site?"
+      "question": "Immediately before sending, has the live TREE/Cell Press/Elsevier proposal route been rechecked against the 2026-09-12 receipt?"
     }
   ],
   "do_not_block_on": [
@@ -66,5 +72,5 @@
     "new scientific analysis in Boundary/CED/MROD/REC/TNOA/V3",
     "adding senior coauthors by status alone"
   ],
-  "send_gate": "Send only after the three human blockers are explicitly closed; do not alter source ownership or inflate the author list to improve perceived prestige."
+  "send_gate": "Send only after final authorship, the outside-reader gate, and a dispatch-time live route recheck are explicitly closed; do not alter source ownership or inflate the author list to improve perceived prestige."
 }
