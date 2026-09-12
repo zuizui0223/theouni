@@ -1,6 +1,6 @@
 # Publication handoff — 2026-09-12
 
-Status: **science and machine production closed for M1–M4; C2 machine-ready; C1/Boundary proposal-ready but conditionally parked; remaining work is human metadata, visual review and dispatch decisions.**
+Status: **science and machine production closed for M1–M4; C2 machine-ready; C1/Boundary machine-ready but strategically parked until the C2 editorial outcome; remaining work is human metadata, visual review and dispatch decisions.**
 
 This is the concise operational handoff for the Observation/Evidence publication track. The full historical execution log remains in `PUBLICATION_EXECUTION_STATUS_2026-09-11.md`; thesis order remains in `thesis/final_chapter_architecture.json`; the track publication architecture remains in `PUBLICATION_PROGRAMME_2026-09-11.json`.
 
@@ -9,7 +9,7 @@ This is the concise operational handoff for the Observation/Evidence publication
 | Unit | Target | Current state | Next true gate |
 |---|---|---|---|
 | C2 | Trends in Ecology & Evolution Opinion | machine-ready presubmission pitch; live proposal route checked 2026-09-12 | final authorship + one broad-interest read + dispatch-time route recheck |
-| C1 / Boundary | Ecology Letters Perspective | proposal-ready, parked conditional; independent owner of identification geometry | activate only if C2 route warrants it or both proceed under explicit firewall |
+| C1 / Boundary | Ecology Letters Perspective | machine-ready, strategically parked; independent owner of identification geometry | keep parked until C2 editorial outcome; activate only under the explicit trigger/firewall |
 | M1 | TNOA → Methods in Ecology and Evolution | science closed; DOCX/reviewer bundle/figures validated | human metadata + AI disclosure + visual check |
 | M2 | MROD → Methods in Ecology and Evolution | science frozen; anonymous Main/SI PDFs validated | human metadata/title page + AI disclosure + visual check |
 | M3 | CED → Ecological Modelling | science closed; audited package/PDFs validated | human metadata + AI declaration + visual check |
@@ -78,17 +78,20 @@ Boundary / C1
           no theorem-ownership transfer
 ```
 
-Activation rule:
+Current strategy decision:
 
-- keep C1 parked while C2 is the primary broad concept pitch;
+- **keep C1 parked until the C2 editorial outcome**;
+- this parking is strategic, not scientific or technical;
 - activate C1 if C2 is declined or judged too broad;
-- alternatively run both only with the explicit firewall above.
+- alternatively run both only with the explicit ownership firewall above.
+
+Therefore C1 has **no current human blocker**. Author list, qualification sentence, contact metadata and the final live-rule recheck are required only if the strategy gate later activates C1.
 
 Ecology Letters live gate checked 2026-09-12: unsolicited Perspective proposals are ≤300 words, must precede any full manuscript, and are sent to both `ecolets@cefe.cnrs.fr` and `ecolets2@cefe.cnrs.fr`. The journal states that Perspective novelty is expected at Letter level and should appeal broadly across ecology.
 
 Current Boundary proposal is **226/300 words** under the canonical `paper/check_submission.py` word-count semantics, leaving **74 words** of headroom. If C1 is activated, keep the factual author-qualification sentence concise (recommended ≤40 words), then rerun the checker before dispatch.
 
-C1 editorial red-team decision: **GO if activated**. So Boundary has **machine blocker 0**. Its unresolved state is strategic activation/authorship, not missing science.
+C1 editorial red-team decision: **GO if activated**. So Boundary has **machine blocker 0**. Its current unresolved state is only the future strategy trigger after C2, not missing science, production, or metadata needed today.
 
 ## M1 — TNOA / MEE
 
@@ -132,6 +135,7 @@ Final scientific/audit facts:
 
 - citation audit: `16/16`, missing `0`, unused `0`;
 - historical Evidence self-overlap: no exact sentence of >=12 words reused;
+- canonical `paper_b_main.tex` contains no Boundary theorem surface (`k-rank(M)`, row-span theorem, Γ/κ/breakdown/anchor diagnostics);
 - Boundary remains an external identification-geometry source/contrast, not absorbed ownership;
 - compatibility regression was repaired by retaining old production-status aliases; reproducibility returned to success.
 
@@ -194,14 +198,16 @@ Known but **not automatically cross-propagated**:
 - publication name: Ruiqi Zhang;
 - `Kyoto University, Kyoto, Japan` is documented for MROD only and must be confirmed before reuse elsewhere.
 
-Still human-supplied:
+Still human-supplied now:
 
-- final paper-specific author lists and order, including whether/when C1 is activated;
+- C2 authorship approval and one broad-interest read;
+- M1–M4 paper-specific author/correspondence/CRediT metadata;
 - correspondence details / ORCID;
-- CRediT;
 - funding / competing interests / acknowledgements;
 - exact AI application/model version(s), use scope and responsible-author wording;
 - final visual approval.
+
+C1 fields are deliberately **not** part of the current human-input burden while it remains strategically parked.
 
 ## Stop rule
 
