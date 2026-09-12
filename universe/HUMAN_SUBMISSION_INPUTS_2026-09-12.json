@@ -72,7 +72,14 @@
     "C1": {
       "target": "Ecology Letters Perspective",
       "status": "parked-conditional",
-      "human_metadata_effort_now": false
+      "human_metadata_effort_now": false,
+      "activation_decision": null,
+      "final_author_list": null,
+      "corresponding_author": null,
+      "author_qualification_sentence": null,
+      "contact_metadata_confirmed": false,
+      "live_rule_recheck_complete": false,
+      "note": "Fields are pre-staged only. Do not require completion while C1 remains parked."
     }
   },
   "hard_rule": "Missing human metadata must not reopen frozen scientific claims, theorems, benchmarks or numerical results."
