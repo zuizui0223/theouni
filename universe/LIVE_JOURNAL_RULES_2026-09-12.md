@@ -95,6 +95,37 @@ The existing C2 send gate therefore remains correct:
 2. one broad-interest ecological read;
 3. current TREE contact/submission route checked manually on the live site immediately before sending.
 
+## C1 — Ecology Letters Perspective / Boundary
+
+Official Ecology Letters Author Guidelines and the journal's Perspective/Synthesis editorial guidance were rechecked on 2026-09-12.
+
+Verified current requirements relevant to Boundary:
+
+- Perspective is **proposal-first** unless directly invited;
+- unsolicited proposals must be **no more than 300 words**;
+- the proposal should describe the nature and novelty of the work and its contribution to the discipline;
+- the journal's Perspective/Synthesis editorial guidance additionally recommends stating the qualifications of the proposed author(s);
+- proposals are sent to the Editorial Office at **both** `ecolets@cefe.cnrs.fr` and `ecolets2@cefe.cnrs.fr`;
+- a full Perspective manuscript submitted without an invitation or approved proposal will not be considered;
+- if invited, Perspective allows up to **7500 words** of main text and up to **10** figures/tables/text boxes;
+- the journal states that Perspective has the **same novelty expectation as a Letter**;
+- successful Perspectives should be broadly relevant to ecology and are not meant to be primarily reviews, unsupported opinion pieces, or summaries of the authors' own work;
+- quantitative analysis is described by the journal as common in successful Perspectives and can strengthen justification for a new perspective.
+
+Current Boundary implementation:
+
+- `zuizui0223/boundary/paper/ecology_letters_proposal.md` is the proposal asset;
+- `zuizui0223/boundary/paper/ecology_letters_proposal_email.md` already addresses both official Editorial Office emails;
+- `zuizui0223/boundary/paper/BOUNDARY_ROLE_CONTRACT_2026-09-12.json` fixes C1 as the independent owner of structural identification geometry;
+- C1 remains parked by publication strategy, not because of a machine or scientific blocker.
+
+Human gate before any C1 dispatch:
+
+1. decide whether C1 is activated now or remains parked behind C2;
+2. confirm final author list and the author-qualification sentence used in the proposal/email;
+3. confirm corresponding-author/contact metadata;
+4. recheck the live Ecology Letters instructions immediately before sending.
+
 ## Elsevier AI declaration rule used for M3/M4
 
 The current Elsevier journal policy (updated June 2026) requires authors who used generative-AI tools substantively in manuscript preparation to include a separate declaration before the References. The declaration should identify the tool/service, purpose of use and human review/responsibility. Basic grammar/spelling/punctuation checks alone do not require disclosure.
