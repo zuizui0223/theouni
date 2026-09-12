@@ -4,9 +4,18 @@
 
 **More measurement is not more evidence: four failures of monotonic reasoning in ecology**
 
-Ecologists can now measure more often, more precisely and with increasingly automated tools. Yet extra measurements do not automatically strengthen the evidence for the question at hand. We propose an Opinion built around four common ways that the intuitive rule “more is better” breaks. **Same-dimension failure (geometry):** measuring an already observed quantity more precisely need not separate competing ecological mechanisms. **Wrong-target failure (objective):** a measurement can reveal more about the system overall while revealing less about the particular ecological quantity or decision we care about. **False-independence failure (dependence):** many repeated observations can still share the same blind spot or failure mode. **Too-late failure (pipeline):** better downstream classification cannot recover events or distinctions that never entered the retained record, and thresholds can lose their meaning when representations change.
+Ecologists can now measure more often, more precisely and with increasingly automated tools. Yet extra measurements do not automatically strengthen the evidence for the question at hand. We propose an Opinion built around four recurrent ways that the intuitive rule “more is better” breaks. **Same-dimension failure (geometry):** measuring an already observed quantity more precisely need not separate competing ecological mechanisms. **Wrong-target failure (objective):** a measurement can reveal more about the system overall while revealing less about the particular ecological quantity or decision we care about. **False-independence failure (dependence):** many repeated observations can still share the same blind spot or failure mode. **Too-late failure (pipeline):** better downstream classification cannot recover events or distinctions that never entered the retained record, and thresholds can lose their meaning when representations change.
 
-The contribution is not another warning that “more data can be bad,” nor a universal evidence score. It is a practical diagnostic for deciding **what kind of additional measurement could actually change an ecological conclusion**. For any proposed measurement, the framework asks four different questions: does it separate a previously unresolved alternative; does that distinction matter to the scientific target; does it add an independent opportunity for evidence to survive failure; and is the relevant information retained before it can be irreversibly lost?
+The contribution is not another warning that “more data can be bad,” nor a universal evidence score. It is a **remedy-matched diagnostic** for deciding what kind of additional measurement could actually change an ecological conclusion. The four failures point to four different next moves:
+
+| diagnosed failure | question before collecting more data | appropriate next move |
+|---|---|---|
+| same dimension | does the new measurement separate a previously unresolved alternative? | add a new identification direction, not merely precision on the old one |
+| wrong target | can the new distinction change the declared prediction or decision? | measure target-relevant information rather than maximizing generic information |
+| shared dependence | does the added observation create a genuinely independent opportunity for evidence to survive failure? | diversify failure domains rather than only increasing repeat count |
+| upstream loss | is the needed distinction still present in the retained record? | capture it earlier in the pipeline; downstream accuracy cannot recreate deleted information |
+
+This mapping is the unifying ecological claim: a measurement can fail to become evidence for different structural reasons, and diagnosing the wrong reason leads to the wrong remedy.
 
 ## Prior-art position
 
@@ -22,7 +31,7 @@ The framework is intended to travel across field sampling, biodiversity monitori
 
 ## Proposed elements
 
-- **Figure 1:** four panels—same dimension, wrong target, shared blind spot, upstream loss.
+- **Figure 1:** the central decision map: each of the four failures leads to a different diagnostic question and a different next measurement action.
 - **Box 1:** island *Campanula* mechanism discrimination as a worked observation-design example.
 - **Box 2:** island pollination from ecological question to required measurement.
 - **Outstanding questions:** how to infer shared failure structure, how robust target-relative evidence is to model misspecification, and how lost observation opportunities can be audited prospectively.
