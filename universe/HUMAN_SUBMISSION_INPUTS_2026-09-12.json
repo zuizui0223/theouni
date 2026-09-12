@@ -33,7 +33,8 @@
       "working_author_list": ["Ruiqi Zhang"],
       "working_corresponding_author": "Ruiqi Zhang",
       "authorship_status": "provisional-human-approval-required",
-      "human_gates": ["final authorship approval", "broad-interest outside read", "live contact route check"]
+      "live_route_verified_on": "2026-09-12",
+      "human_gates": ["final authorship approval", "broad-interest outside read", "dispatch-time route recheck"]
     },
     "M1": {
       "target": "Methods in Ecology and Evolution",
@@ -71,9 +72,10 @@
     },
     "C1": {
       "target": "Ecology Letters Perspective",
-      "status": "parked-conditional",
+      "status": "machine-ready-strategically-parked",
       "human_metadata_effort_now": false,
-      "activation_decision": null,
+      "activation_decision": "keep parked until C2 editorial outcome",
+      "activation_trigger": "C2 declined/too broad or explicit decision to run both under ownership firewall",
       "final_author_list": null,
       "corresponding_author": null,
       "author_qualification_sentence": null,
