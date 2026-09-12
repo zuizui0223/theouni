@@ -35,14 +35,26 @@ Working default is Ruiqi Zhang as provisional first/corresponding author.
 - If no, additional author(s), order, affiliation and substantive C2-level contribution: **[ ]**
 - Name of one broad-interest ecologist who can read the pitch before dispatch: **[ ]**
 
-## 5. M1 — TNOA / MEE
+## 5. C1 — Boundary / Ecology Letters Perspective
+
+Current state is **parked conditional**. You do not need to fill this section unless activating C1.
+
+- Activate C1 now, or keep parked behind C2? **[activate / keep parked]**
+- If activated, final author list and order: **[ ]**
+- Corresponding author: **[ ]**
+- One concise factual author-qualification sentence for the proposal: **[ ]**
+- Confirm C1 affiliation/contact metadata: **[ ]**
+
+Do not infer the qualification sentence from supervision, seniority, repository ownership or commit history. After filling it, recheck the complete proposal packet against the 300-word ceiling.
+
+## 6. M1 — TNOA / MEE
 
 - Final author list and order: **[ ]**
 - Corresponding author: **[ ]**
 - CRediT contributions by author: **[ ]**
 - Paper-specific acknowledgements/funding differences, if any: **[ ]**
 
-## 6. M2 — MROD / MEE
+## 7. M2 — MROD / MEE
 
 Repository metadata currently names Ruiqi Zhang as author/corresponding author.
 
@@ -51,14 +63,14 @@ Repository metadata currently names Ruiqi Zhang as author/corresponding author.
 - Confirm or revise current author-contribution statement: **[ ]**
 - Paper-specific acknowledgements/funding differences, if any: **[ ]**
 
-## 7. M3 — CED / Ecological Modelling
+## 8. M3 — CED / Ecological Modelling
 
 - Final author list and order: **[ ]**
 - Corresponding author: **[ ]**
 - CRediT contributions by author: **[ ]**
 - Paper-specific acknowledgements/funding differences, if any: **[ ]**
 
-## 8. M4 — V3+REC / Ecological Informatics
+## 9. M4 — V3+REC / Ecological Informatics
 
 - Final author list and order: **[ ]**
 - Corresponding author: **[ ]**
@@ -67,7 +79,7 @@ Repository metadata currently names Ruiqi Zhang as author/corresponding author.
 
 Findlay/BirdVox provenance and rights wording is source-controlled; do not supply invented permission language here.
 
-## 9. Visual approval
+## 10. Visual approval
 
 These are author-facing checks, not scientific analyses.
 
@@ -75,7 +87,8 @@ These are author-facing checks, not scientific analyses.
 - M2 Main/SI PDFs visually acceptable: **[yes / changes needed]**
 - M3 main/supplement/figures visually acceptable: **[yes / changes needed]**
 - M4 Figures 1–5 visually acceptable: **[yes / changes needed]**
+- C1 proposal packet visually/structurally acceptable if activated: **[yes / changes needed / parked]**
 
-## 10. Dispatch
+## 11. Dispatch
 
 Do not interpret filling this form as permission to submit or send external emails. Final dispatch remains a separate explicit action.
