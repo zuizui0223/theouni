@@ -33,12 +33,20 @@ def main() -> None:
     assert c1["state"] == "parked-conditional"
     assert c1["repository"] == "zuizui0223/boundary"
     assert c1["role_contract"] == "zuizui0223/boundary/paper/BOUNDARY_ROLE_CONTRACT_2026-09-12.json"
+    assert c1["send_readiness"] == "zuizui0223/boundary/paper/C1_SEND_READINESS_2026-09-12.json"
     assert c1["exclusive_owner"] == "structural identification geometry"
     assert "geometry exemplar only" in c1["c2_role"]
     assert "external identification-geometry" in c1["ced_role"]
     assert c1["machine_blocker"] is False
     assert c1["proposal_max_words"] == 300
     assert "C2 is declined/too broad" in c1["activation_gate"]
+    assert set(c1["human_gates"]) == {
+        "activation decision",
+        "authorship",
+        "author qualification",
+        "contact metadata",
+        "live rule recheck",
+    }
 
     assert units["C2"]["machine_state"] == "ready"
     assert units["C2"]["sent"] is False
@@ -80,6 +88,7 @@ def main() -> None:
         "science and machine production closed for M1–M4",
         "C1 — Boundary / Ecology Letters Perspective",
         "Boundary is **not archived material and is not absorbed into C2 or CED**",
+        "BOUNDARY_ROLE_CONTRACT_2026-09-12.json",
         "geometry exemplar only",
         "There is no theorem-ownership transfer",
         "human metadata, visual review and dispatch decisions",
