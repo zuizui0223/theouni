@@ -55,24 +55,25 @@ Paper-specific placement:
 
 Working proposal state: **Ruiqi Zhang — provisional first/corresponding author**.
 
+The live proposal route was checked on 2026-09-12; only a dispatch-time route recheck remains.
+
 Human decision required: does any additional person make a substantive C2-level synthesis/drafting/accountability contribution that warrants coauthorship?
 
 Do not add someone solely for supervision, seniority, source-result ownership or repository commits.
 
 ### C1 — Boundary / Ecology Letters Perspective
 
-Current state: **parked conditional, machine-ready if activated**.
+Current state: **machine-ready, strategically parked until the C2 editorial outcome**.
 
-No human metadata is required while it remains parked. If activated, fill:
+This is not a science or production blocker. No C1 human metadata is required now. If C1 is later activated because C2 is declined/too broad, or because both routes are intentionally run under the ownership firewall, then fill:
 
-- Activation decision: **[activate / keep parked]**
 - Final author list/order: **[human input]**
 - Corresponding author: **[human input]**
 - One concise factual author-qualification sentence for the proposal: **[human input]**
 - Affiliation/contact metadata confirmed for C1: **[yes / no]**
 - Live Ecology Letters proposal instructions rechecked immediately before dispatch: **[yes / no]**
 
-Do not infer the qualification sentence from repository ownership, seniority or supervision alone. After filling it, recheck the total proposal packet against the 300-word ceiling.
+The current proposal is 226/300 words under the canonical checker, leaving 74 words of headroom. Keep the qualification sentence concise (recommended <=40 words). Do not infer it from repository ownership, seniority or supervision alone.
 
 ### M1 — TNOA / MEE
 
@@ -110,7 +111,7 @@ These cannot be meaningfully certified by CI alone:
 - M3: main PDF, supplement and figure layout inspection;
 - M4: Figure 1–5 assembly/legibility inspection;
 - C2: one broad-interest ecologist reads the pitch before dispatch;
-- C1: no full-manuscript visual work while parked; if activated, inspect only the proposal packet before sending.
+- C1: no visual or metadata work while parked; if activated, inspect only the proposal packet before sending.
 
 ## F. Final upload-only checks
 
