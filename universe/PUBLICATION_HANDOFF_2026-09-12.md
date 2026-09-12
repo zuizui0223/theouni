@@ -120,12 +120,17 @@ Important production implications:
 - substantive generative-AI manuscript preparation under current Elsevier policy requires a declaration immediately before References.
 - exact Ecological Modelling/Ecological Informatics article-type, graphical-abstract and portal-specific rules remain upload-time checks rather than scientific tasks.
 
-## Single human-input ledger
+## Single human-input surface
 
-Use:
+Canonical ledgers:
 
 - `HUMAN_SUBMISSION_INPUTS_2026-09-12.md`
 - `HUMAN_SUBMISSION_INPUTS_2026-09-12.json`
+- `HUMAN_INPUT_PROPAGATION_MAP_2026-09-12.json`
+
+One-pass form for the remaining author decisions:
+
+- `HUMAN_INPUT_FORM_2026-09-12.md`
 
 Known but **not automatically cross-propagated**:
 
