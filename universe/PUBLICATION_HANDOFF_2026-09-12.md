@@ -1,6 +1,6 @@
 # Publication handoff — 2026-09-12
 
-Status: **science and machine production closed for M1–M4; C2 machine-ready; remaining work is human metadata, visual review and dispatch decisions.**
+Status: **science and machine production closed for M1–M4; C2 machine-ready; C1/Boundary proposal-ready but conditionally parked; remaining work is human metadata, visual review and dispatch decisions.**
 
 This is the concise operational handoff for the Observation/Evidence publication track. The full historical execution log remains in `PUBLICATION_EXECUTION_STATUS_2026-09-11.md`; thesis order remains in `thesis/final_chapter_architecture.json`; the track publication architecture remains in `PUBLICATION_PROGRAMME_2026-09-11.json`.
 
@@ -9,7 +9,7 @@ This is the concise operational handoff for the Observation/Evidence publication
 | Unit | Target | Current state | Next true gate |
 |---|---|---|---|
 | C2 | Trends in Ecology & Evolution Opinion | machine-ready presubmission pitch | final authorship + one broad-interest read + live contact check |
-| C1 | Ecology Letters Perspective | proposal-ready, parked conditional | activate only if C2 route warrants it |
+| C1 / Boundary | Ecology Letters Perspective | proposal-ready, parked conditional; independent owner of identification geometry | activate only if C2 route warrants it or both proceed under explicit firewall |
 | M1 | TNOA → Methods in Ecology and Evolution | science closed; DOCX/reviewer bundle/figures validated | human metadata + AI disclosure + visual check |
 | M2 | MROD → Methods in Ecology and Evolution | science frozen; anonymous Main/SI PDFs validated | human metadata/title page + AI disclosure + visual check |
 | M3 | CED → Ecological Modelling | science closed; audited package/PDFs validated | human metadata + AI declaration + visual check |
@@ -34,6 +34,48 @@ Human send gates:
 3. manually verify the current TREE contact/submission route immediately before dispatch.
 
 Do not write the full Opinion before editorial interest unless strategy changes.
+
+## C1 — Boundary / Ecology Letters Perspective
+
+Boundary is **not archived material and is not absorbed into C2 or CED**. It is the conditional sixth submission unit and remains the exclusive owner of the structural identification axis.
+
+Canonical Boundary role contract:
+
+- `zuizui0223/boundary/paper/BOUNDARY_ROLE_CONTRACT_2026-09-12.json`;
+- proposal: `paper/ecology_letters_proposal.md`;
+- proposal email: `paper/ecology_letters_proposal_email.md`.
+
+Boundary owns:
+
+- `k-rank(M)` structural unidentified dimension for the declared log-linear observation map;
+- the iff condition that a new scalar measurement reduces ambiguity only when its row lies outside the current row span;
+- positive-product unidentified directions and direct-anchor reduction;
+- Γ/κ proxy uncertainty, sharp joint sets and breakdown factor;
+- the identification-axis/anchor-ladder ecological-chain argument.
+
+Interfaces are deliberately narrow:
+
+```text
+Boundary / C1
+  ├─> C2: geometry exemplar only
+  │       “more precision in the same direction need not add identification”
+  │       no theorem-ownership transfer
+  │
+  └─> CED / M3: external identification boundary / contrast
+          Boundary asks what remains structurally unidentified
+          CED asks what target statement is still safe to report
+          no theorem-ownership transfer
+```
+
+Activation rule:
+
+- keep C1 parked while C2 is the primary broad concept pitch;
+- activate C1 if C2 is declined or judged too broad;
+- alternatively run both only with the explicit firewall above.
+
+Ecology Letters live gate checked 2026-09-12: unsolicited Perspective proposals are ≤300 words, must precede any full manuscript, and are sent to both `ecolets@cefe.cnrs.fr` and `ecolets2@cefe.cnrs.fr`. The journal states that Perspective novelty is expected at Letter level and should appeal broadly across ecology.
+
+So Boundary has **machine blocker 0**. Its unresolved state is strategic activation/authorship, not missing science.
 
 ## M1 — TNOA / MEE
 
@@ -77,6 +119,7 @@ Final scientific/audit facts:
 
 - citation audit: `16/16`, missing `0`, unused `0`;
 - historical Evidence self-overlap: no exact sentence of >=12 words reused;
+- Boundary remains an external identification-geometry source/contrast, not absorbed ownership;
 - compatibility regression was repaired by retaining old production-status aliases; reproducibility returned to success.
 
 Latest package including the Elsevier AI-declaration template:
@@ -118,6 +161,7 @@ Important production implications:
 - MEE requires the current double-anonymous formatting/code-review surface already implemented for M1/M2; substantive LLM use requires Methods disclosure with application name/version and human responsibility.
 - Elsevier Highlights, when required, use 3–5 bullets of <=85 characters.
 - substantive generative-AI manuscript preparation under current Elsevier policy requires a declaration immediately before References.
+- Ecology Letters C1 is proposal-first and remains a strategic gate rather than a full-manuscript production task.
 - exact Ecological Modelling/Ecological Informatics article-type, graphical-abstract and portal-specific rules remain upload-time checks rather than scientific tasks.
 
 ## Single human-input surface
@@ -139,7 +183,7 @@ Known but **not automatically cross-propagated**:
 
 Still human-supplied:
 
-- final paper-specific author lists and order;
+- final paper-specific author lists and order, including whether/when C1 is activated;
 - correspondence details / ORCID;
 - CRediT;
 - funding / competing interests / acknowledgements;
@@ -148,4 +192,4 @@ Still human-supplied:
 
 ## Stop rule
 
-> Do not reopen frozen science to solve an author, formatting, declaration, visual-QA or upload-field problem. The next phase is human completion and dispatch, not theorem hunting or new benchmark analysis.
+> Do not reopen frozen science or transfer Boundary theorem ownership to solve an author, formatting, declaration, visual-QA, publication-count or upload-field problem. The next phase is human completion and dispatch, not theorem hunting or new benchmark analysis.
