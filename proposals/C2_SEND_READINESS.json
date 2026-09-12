@@ -17,6 +17,11 @@
   },
   "machine_checks": {
     "four_failure_structure_fixed": true,
+    "remedy_matched_diagnosis_explicit": true,
+    "geometry_remedy_new_identification_direction": true,
+    "objective_remedy_target_relevant_information": true,
+    "dependence_remedy_independent_failure_opportunity": true,
+    "pipeline_remedy_earlier_capture_before_irreversible_loss": true,
     "external_prior_art_firewall_present": true,
     "source_claims_blob_pinned": true,
     "worked_examples_claim_ceiling_fixed": true,
