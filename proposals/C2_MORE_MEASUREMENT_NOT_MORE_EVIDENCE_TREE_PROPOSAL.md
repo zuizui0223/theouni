@@ -16,25 +16,25 @@ These are often discussed separately as identifiability, experimental design, de
 
 ## Four failures
 
-### 1. Geometry failure — more precision is not more identification
+### 1. Same-direction failure — more precision is not necessarily more identification
 
-In a declared positive log-linear observation family, residual structural unidentified dimension is `k - rank(M)`. Repeating, rescaling or measuring more precisely along an existing row direction can reduce sampling uncertainty while leaving the row span—and therefore structural identification—unchanged. A new measurement changes structural identification only when it adds a genuinely new observation direction. The ecological lesson is that closeness to a mechanism, measurement detail and measurement precision are not an identification axis by themselves.
+Repeated, rescaled or more precise measurement of a distinction already represented in the observation system can reduce sampling uncertainty without separating any additional mechanism states. What matters for structural identification is whether the new measurement creates a genuinely new distinction among otherwise compatible explanations. The ecological lesson is that closeness to a mechanism, measurement detail and measurement precision are not an identification axis by themselves.
 
-**Source owner:** `zuizui0223/boundary`.
+**Source owner:** `zuizui0223/boundary`. The exact rank theorem, sharp conditions, proxy-transport geometry and anchor diagnostics remain exclusively in the Boundary/C1 paper and are not reproduced here.
 
-### 2. Objective failure — more latent information is not more target evidence
+### 2. Wrong-target failure — more latent information is not more target evidence
 
 The same candidate measurements can be ranked differently depending on the scientific responsibility. In an exact eight-world witness, a candidate revealing nuisance detail carries `2 bits` of mechanism information but has target-resolution probability `0`, whereas a `1 bit` target split resolves the declared target with probability `1`. Full latent-state information and target-licensing value therefore need not have the same maximizer.
 
 **Source owners:** `zuizui0223/ced`; the learning/licensing distinction is coordinated with TU-2 and the MROD causal-learning programme without transferring MROD ownership.
 
-### 3. Dependence failure — more repeats are not more independent evidence
+### 3. False-independence failure — more repeats are not more independent evidence
 
 Repeated reads within one shared weather, access, sensor, observer, batch or laboratory failure domain are not evidentially equivalent to observations distributed across independent failure opportunities. Repetition can improve sensitivity conditional on an operating mode while leaving the worst-case common-mode failure guarantee unchanged. Ecological sampling design must therefore distinguish replicate count from failure diversity.
 
 **Source owner:** `zuizui0223/ced`.
 
-### 4. Pipeline failure — better downstream processing is not recovery of upstream meaning
+### 4. Too-late failure — better downstream processing is not recovery of upstream meaning
 
 Two complementary cases expose this failure. First, in a protected BirdVox analysis, a true late-minus-early contrast of approximately `+0.1308` was essentially absent (`-0.000025`) after upstream entry selection even when downstream semantics were made oracle-perfect among retained truth-positive rows. Second, after a nuisance representation changed in TNOA, an inherited raw threshold of `0.55` retained strong ranking but nuisance recall at that threshold fell to `0.23125`; the transferable object was a declared error criterion that required recalibration, not the raw threshold itself. Thus neither downstream semantic perfection nor threshold inheritance can guarantee recovery of distinctions or operating meaning lost earlier in the observation pipeline.
 
@@ -60,8 +60,8 @@ The `examples/island_pollination_translation/` programme provides adapter contra
 
 A single four-panel figure will show four distinct reasons why the horizontal axis “more measurement” does not imply a vertical increase in “scientific evidence”:
 
-1. **same row span** — precision increases, rank does not;
-2. **wrong objective** — information increases, target remains unresolved;
+1. **same direction** — precision increases, no additional mechanism distinction is created;
+2. **wrong target** — information increases, target remains unresolved;
 3. **shared failure** — replicate number increases, independent failure opportunities do not;
 4. **upstream collapse** — downstream accuracy increases, lost support/semantics do not return.
 
@@ -71,7 +71,7 @@ The figure will explicitly avoid a universal evidence score. Each panel has its 
 
 The mathematical ingredients—identification, information gain, dependence, missingness and calibration—have substantial literatures. The proposed contribution is therefore not a priority claim over those literatures. The new synthesis is an ecological **anti-monotonicity framework**: it identifies four recurrent ways in which common “more is better” reasoning fails, ties each failure to an explicit scientific responsibility, and turns the failures into practical design questions:
 
-- Did the measurement add a new identification direction?
+- Did the measurement create a new distinction among otherwise compatible explanations?
 - Did it resolve distinctions relevant to the declared target?
 - Did it add an independent failure opportunity?
 - Was the relevant distinction retained before irreversible selection or semantic collapse?
@@ -92,4 +92,4 @@ Detailed algorithms, proofs, thresholds and validation benchmarks remain in thos
 
 ## Relationship to the Boundary Perspective proposal
 
-The existing Ecology Letters Boundary proposal is retained as a conditional independent route. Its exclusive question is whether mechanistic proximity and identification strength form distinct axes. This proposal is broader: it asks why scientific evidence is non-monotone in measurement amount across geometry, objective, dependence and pipeline stages. If both routes proceed, Boundary mathematics appears here only as the geometry-failure exemplar rather than as the full identification-axis argument.
+The existing Ecology Letters Boundary proposal is retained as a conditional independent route. Its exclusive question is whether mechanistic proximity and identification strength form distinct axes. This proposal is broader: it asks why scientific evidence is non-monotone in measurement amount across geometry, objective, dependence and pipeline stages. If both routes proceed, Boundary appears here only as the qualitative same-direction exemplar; the exact identification-axis mathematics and diagnostics remain in C1.
