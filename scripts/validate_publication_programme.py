@@ -140,6 +140,21 @@ def main() -> None:
     ):
         assert required.lower() in prior_art_text.lower()
 
+    proposal_text = PROPOSAL.read_text(encoding="utf-8")
+    # C2 may use Boundary's qualitative geometry lesson, but the exact theorem and
+    # diagnostics stay in C1. Keep source provenance in the ledger rather than
+    # reproducing Boundary's flagship mathematical surface in the TREE proposal.
+    for boundary_owned_surface in (
+        "k-rank(M)",
+        "Gamma/kappa",
+        "breakdown factor",
+        "anchor-ladder",
+    ):
+        assert boundary_owned_surface not in proposal_text
+    assert "same-direction failure" in proposal_text.lower()
+    assert "exact rank theorem" in proposal_text.lower()
+    assert "remain exclusively in the Boundary/C1 paper" in proposal_text
+
     pitch_text = C2_EDITOR_PITCH.read_text(encoding="utf-8")
     _assert_any(pitch_text, "Geometry failure", "Same-dimension failure")
     _assert_any(pitch_text, "Objective failure", "Wrong-target failure")
