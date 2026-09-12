@@ -145,7 +145,15 @@ def main() -> None:
     _assert_any(pitch_text, "Objective failure", "Wrong-target failure")
     _assert_any(pitch_text, "Dependence failure", "False-independence failure")
     _assert_any(pitch_text, "Pipeline failure", "Too-late failure")
-    for required in ("Prior-art position", "Selected external anchors"):
+    for required in (
+        "Prior-art position",
+        "Selected external anchors",
+        "remedy-matched diagnostic",
+        "new identification direction",
+        "target-relevant information",
+        "independent opportunity",
+        "capture it earlier",
+    ):
         assert required.lower() in pitch_text.lower()
 
     assert methods["M1"]["repository"] == "zuizui0223/tnoa"
@@ -210,6 +218,12 @@ def main() -> None:
 
     assert readiness["status"] == "machine-ready-human-decisions-open"
     assert readiness["machine_checks"]["machine_blockers"] == 0
+    assert readiness["machine_checks"]["four_failure_structure_fixed"] is True
+    assert readiness["machine_checks"]["remedy_matched_diagnosis_explicit"] is True
+    assert readiness["machine_checks"]["geometry_remedy_new_identification_direction"] is True
+    assert readiness["machine_checks"]["objective_remedy_target_relevant_information"] is True
+    assert readiness["machine_checks"]["dependence_remedy_independent_failure_opportunity"] is True
+    assert readiness["machine_checks"]["pipeline_remedy_earlier_capture_before_irreversible_loss"] is True
     assert readiness["machine_checks"]["frozen_send_candidate_written"] is True
     assert readiness["machine_checks"]["outside_reader_packet_written"] is True
     assert readiness["machine_checks"]["tree_editorial_red_team_completed"] is True
