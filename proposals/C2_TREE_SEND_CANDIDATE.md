@@ -2,14 +2,14 @@
 
 Status: **content-ready, not authorized to send**.
 
-To: **tree@cell.com — historical official TREE contact; recheck live journal contact immediately before sending**  
+To: **tree@cell.com — current public TREE proposal route independently rechecked 2026-09-12; recheck immediately before dispatch**  
 Subject: **Opinion proposal — More measurement is not more evidence: four failures of monotonic reasoning in ecology**
 
 Dear Editors,
 
 We would like to propose an Opinion for *Trends in Ecology & Evolution* entitled **“More measurement is not more evidence: four failures of monotonic reasoning in ecology.”**
 
-Ecologists can now measure more often, more precisely and with increasingly automated tools, but extra measurements do not always strengthen the evidence for the question at hand. Mature literatures already show several reasons why: greater precision need not resolve mechanisms that remain structurally indistinguishable; information about a system overall need not answer the ecological target or decision that matters; many repeated observations can share the same blind spot; and better downstream classification cannot recreate information that never entered the retained record.
+Ecologists can now measure more often, more precisely and with increasingly automated tools, but extra measurements do not always strengthen the evidence for the question at hand. Mature literatures already show several reasons why: greater precision need not resolve mechanisms that remain structurally indistinguishable; information about a system overall need not answer the ecological target or decision that matters; many repeated observations can share the same blind spot; and better downstream classification cannot recreate information that never entered the retained record. The problem is becoming more consequential as ecological inference increasingly relies on automated sensors, classifier outputs and multi-stage digital pipelines, where increasing data volume or downstream performance can be much easier than adding the missing ecological distinction.
 
 Our proposed Opinion does not claim novelty for those component literatures. Its contribution is a **remedy-matched diagnosis** of four recurrent failures — same dimension, wrong target, shared dependence and upstream loss. Each failure requires a different next move: measure a distinction that separates an unresolved explanation rather than merely the old quantity more precisely; measure information relevant to the declared target rather than maximizing generic information; add an independent failure opportunity rather than nominal repeats; or capture a distinction earlier in the pipeline before it becomes irrecoverable. The practical question therefore changes from “how can we measure more?” to **“what distinction must the next measurement create or preserve for the ecological conclusion to change?”**
 
@@ -31,6 +31,11 @@ Kyoto University, Kyoto, Japan
 
 - `C2_TREE_EDITOR_PITCH.md`
 - selected external references from `C2_PRIOR_ART_MAP.md`
+
+## Route receipt
+
+- Current public proposal route checked 2026-09-12: `C2_TREE_LIVE_ROUTE_CHECK_20260912.md`.
+- The route must still be rechecked immediately before actual dispatch.
 
 ## Hard send gates
 
