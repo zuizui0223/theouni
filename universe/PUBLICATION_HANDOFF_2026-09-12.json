@@ -14,8 +14,16 @@
       "sent": false
     },
     "C1": {
+      "repository": "zuizui0223/boundary",
       "target": "Ecology Letters Perspective",
-      "state": "parked-conditional"
+      "state": "parked-conditional",
+      "role_contract": "zuizui0223/boundary/paper/BOUNDARY_ROLE_CONTRACT_2026-09-12.json",
+      "exclusive_owner": "structural identification geometry",
+      "c2_role": "geometry exemplar only; no theorem-ownership transfer",
+      "ced_role": "external identification-geometry source/contrast only; no theorem-ownership transfer",
+      "machine_blocker": false,
+      "proposal_max_words": 300,
+      "activation_gate": "activate if C2 is declined/too broad or if both proceed under explicit ownership firewall"
     },
     "M1": {
       "repository": "zuizui0223/tnoa",
