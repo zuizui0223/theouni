@@ -54,4 +54,4 @@ This Opinion owns only the cross-programme synthesis. The component results rema
 
 ## Relationship to the Boundary Perspective proposal
 
-The Boundary proposal asks the narrower question of whether mechanistic proximity and identification strength are distinct axes. If both routes proceed, the Boundary paper retains the full identification theorem and Γ–κ development; the TREE Opinion uses Boundary only as the qualitative same-direction exemplar within the broader four-failure synthesis.
+The Boundary proposal asks the narrower question of whether mechanistic proximity and identification strength are distinct axes. If both routes proceed, the Boundary paper retains the full identification theorem and Γ–κ development; the TREE Opinion uses Boundary only as the qualitative geometry-failure exemplar within the broader four-failure synthesis.
