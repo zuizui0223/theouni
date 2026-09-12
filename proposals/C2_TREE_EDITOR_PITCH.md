@@ -17,9 +17,15 @@ The contribution is not another warning that “more data can be bad,” nor a u
 
 This mapping is the unifying ecological claim: a measurement can fail to become evidence for different structural reasons, and diagnosing the wrong reason leads to the wrong remedy.
 
+## Why now, and why this perspective
+
+The issue is becoming more consequential as ecological inference increasingly combines automated sensors, classifier outputs, repeated digital records, mechanistic models and decision-support workflows. These systems make it easy to increase data volume or downstream performance while leaving the relevant ecological distinction unresolved, target-irrelevant, non-independent or already lost upstream.
+
+The proposal grows from a coordinated programme in ecological measurement design in which the author has worked across mechanism discrimination, target-relative observation design, repeated-observation failure structure and record-entry/representation boundaries. The Opinion does not ask readers to adopt those source methods; it uses the experience of confronting the four failure modes in one programme to connect mature literatures that are usually treated separately.
+
 ## Prior-art position
 
-Each component has a mature literature. Structural-identifiability work distinguishes structural resolution from estimation precision (Villaverde et al. 2016). Targeted and goal-oriented experimental design, together with ecological value-of-information analysis, shows that information value depends on the prediction or decision of interest (Vanlier et al. 2012; Canessa et al. 2015; Attia et al. 2018). Ecological experimental design has long distinguished sample count from independent replication (Hurlbert 1984). Imperfect-detection, calibration and dataset-shift literatures show that observed records and classifier outputs cannot be read naively as biological truth (MacKenzie et al. 2002; Dormann 2020).
+Each component has a mature literature. Structural-identifiability work distinguishes structural resolution from estimation precision (Villaverde et al. 2016). Targeted and goal-oriented experimental design, together with ecological value-of-information analysis, shows that information value depends on the prediction or decision of interest (Vanlier et al. 2012; Canessa et al. 2015; Attia et al. 2018). Ecological experimental design has long distinguished sample count from independent replication (Hurlbert 1984). Imperfect-detection, calibration and dataset-shift literatures show that observed records and classifier outputs cannot be read naively as biological truth (MacKenzie et al. 2002; Dormann 2020; Cowans et al. 2026).
 
 What is missing is a cross-cutting ecological diagnosis of **why** an additional measurement failed to become additional evidence. The four failures are not interchangeable, and neither are their remedies: more precision cannot solve a problem in which competing explanations remain observationally indistinguishable; more total information cannot solve a target mismatch; more repeats cannot solve shared dependence; and a better downstream classifier cannot recreate information deleted upstream.
 
@@ -45,6 +51,7 @@ The framework is intended to travel across field sampling, biodiversity monitori
 5. Villaverde AF, Barreiro A, Papachristodoulou A. 2016. *Structural Identifiability of Dynamic Systems Biology Models*. PLOS Computational Biology 12:e1005153. DOI: 10.1371/journal.pcbi.1005153.
 6. Attia A, Alexanderian A, Saibaba AK. 2018. *Goal-Oriented Optimal Design of Experiments for Large-Scale Bayesian Linear Inverse Problems*. Inverse Problems 34. DOI: 10.1088/1361-6420/aad210.
 7. Dormann CF. 2020. *Calibration of probability predictions from machine-learning and statistical models*. Global Ecology and Biogeography 29:760–765. DOI: 10.1111/geb.13070.
+8. Cowans et al. 2026. *Improving the integration of artificial intelligence into existing ecological inference workflows*. Methods in Ecology and Evolution. DOI: 10.1111/2041-210X.14485.
 
 A fuller novelty firewall is maintained in `proposals/C2_PRIOR_ART_MAP.md`.
 
