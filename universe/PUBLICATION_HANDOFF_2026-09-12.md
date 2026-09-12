@@ -78,6 +78,8 @@ Boundary / C1
           no theorem-ownership transfer
 ```
 
+**There is no theorem-ownership transfer:** C2 may use the qualitative geometry lesson, and CED may use Boundary as an external identification contrast, but the exact identification theorem and diagnostics remain owned by Boundary/C1.
+
 Current strategy decision:
 
 - **keep C1 parked until the C2 editorial outcome**;
@@ -203,6 +205,7 @@ Still human-supplied now:
 - C2 authorship approval and one broad-interest read;
 - M1–M4 paper-specific author/correspondence/CRediT metadata;
 - correspondence details / ORCID;
+- CRediT;
 - funding / competing interests / acknowledgements;
 - exact AI application/model version(s), use scope and responsible-author wording;
 - final visual approval.
