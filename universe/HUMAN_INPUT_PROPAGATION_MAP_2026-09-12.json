@@ -1,0 +1,99 @@
+{
+  "schema": "human-input-propagation-map-v1",
+  "date": "2026-09-12",
+  "source": "universe/HUMAN_SUBMISSION_INPUTS_2026-09-12.json",
+  "policy": "propagate only explicitly confirmed values; never infer a paper-specific author, affiliation, funding, ORCID or AI version from another paper",
+  "shared_fields": {
+    "publication_name": {
+      "source_path": "working_author_record.publication_name",
+      "cross_paper_propagation": "requires confirmation per author list"
+    },
+    "department_or_unit": {
+      "source_path": "working_author_record.department_or_unit",
+      "cross_paper_propagation": "allowed only after affiliation is confirmed for that paper"
+    },
+    "correspondence_email": {
+      "source_path": "working_author_record.correspondence_email",
+      "cross_paper_propagation": "allowed only when the same person is corresponding author"
+    },
+    "correspondence_postal_address": {
+      "source_path": "working_author_record.correspondence_postal_address",
+      "cross_paper_propagation": "allowed only when the same person is corresponding author"
+    },
+    "orcid": {
+      "source_path": "working_author_record.orcid",
+      "cross_paper_propagation": "author-specific; reusable after confirmation"
+    },
+    "funding": {
+      "source_path": "shared_declarations.funding_statement",
+      "cross_paper_propagation": "only if the same funding actually supported that paper"
+    },
+    "competing_interests": {
+      "source_path": "shared_declarations.competing_interest_statement",
+      "cross_paper_propagation": "only after all authors approve"
+    },
+    "acknowledgements": {
+      "source_path": "shared_declarations.general_acknowledgements",
+      "cross_paper_propagation": "paper-specific review required"
+    },
+    "ai_tool_versions": {
+      "source_path": "ai_assistance.exact_application_model_versions",
+      "cross_paper_propagation": "only for tools/versions actually used on that paper"
+    },
+    "ai_scope": {
+      "source_path": "ai_assistance.scope_of_use",
+      "cross_paper_propagation": "paper-specific verification required"
+    }
+  },
+  "destinations": {
+    "C2": {
+      "repository": "zuizui0223/theouni",
+      "surfaces": [
+        "proposals/C2_TREE_AUTHOR_METADATA_TEMPLATE.md",
+        "proposals/C2_TREE_SEND_CANDIDATE.md"
+      ],
+      "fields": ["publication_name", "affiliation", "corresponding_author"],
+      "dispatch_policy": "proposal only; do not add full-manuscript declarations before invitation unless current TREE rules require them"
+    },
+    "M1": {
+      "repository": "zuizui0223/tnoa",
+      "surfaces": [
+        "submission/TITLE_PAGE_TEMPLATE.md",
+        "submission/MEE_AI_DISCLOSURE_TEMPLATE.md"
+      ],
+      "fields": ["author_list", "affiliations", "corresponding_author", "credit", "funding", "competing_interests", "acknowledgements", "ai_tool_versions", "ai_scope"]
+    },
+    "M2": {
+      "repository": "zuizui0223/mrod",
+      "surfaces": [
+        "paper/title_page_draft.md",
+        "paper/manuscript.md"
+      ],
+      "fields": ["author_list", "affiliations", "corresponding_author", "orcid", "funding", "acknowledgements", "ai_tool_versions", "ai_scope"]
+    },
+    "M3": {
+      "repository": "zuizui0223/ced",
+      "surfaces": [
+        "submission/ECOLOGICAL_MODELLING_TITLE_PAGE_TEMPLATE.md",
+        "submission/ECOLOGICAL_MODELLING_AI_DECLARATION_TEMPLATE.md"
+      ],
+      "fields": ["author_list", "affiliations", "corresponding_author", "credit", "funding", "competing_interests", "acknowledgements", "ai_tool_versions", "ai_scope"]
+    },
+    "M4": {
+      "repository": "zuizui0223/v3",
+      "surfaces": [
+        "submission/ECOLOGICAL_INFORMATICS_TITLE_PAGE_TEMPLATE.md",
+        "submission/ECOLOGICAL_INFORMATICS_AI_DECLARATION_TEMPLATE.md"
+      ],
+      "fields": ["author_list", "affiliations", "corresponding_author", "credit", "funding", "competing_interests", "acknowledgements", "ai_tool_versions", "ai_scope"],
+      "third_party_note": "Findlay/BirdVox provenance is source-controlled and must not be replaced by invented permission language"
+    }
+  },
+  "blocked_automatic_actions": [
+    "copy MROD affiliation into another paper without confirmation",
+    "derive authorship from Git commits or repository ownership",
+    "guess ORCID, email, postal address, funding or grant numbers",
+    "guess ChatGPT application/model versions from repository dates or assistant model identity",
+    "mark a visual inspection complete without human review"
+  ]
+}
