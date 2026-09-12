@@ -20,6 +20,7 @@ C2_SEND_CANDIDATE = ROOT / "proposals" / "C2_TREE_SEND_CANDIDATE.md"
 C2_OUTSIDE_READER = ROOT / "proposals" / "C2_OUTSIDE_READER_PACKET.md"
 C2_RED_TEAM = ROOT / "proposals" / "C2_TREE_RED_TEAM.md"
 C2_LIVE_ROUTE = ROOT / "proposals" / "C2_TREE_LIVE_ROUTE_CHECK_20260912.md"
+C2_FIGURE1 = ROOT / "proposals" / "C2_FIGURE1_DECISION_MAP_SPEC.md"
 
 
 def load(path: Path):
@@ -108,6 +109,7 @@ def main() -> None:
         C2_OUTSIDE_READER,
         C2_RED_TEAM,
         C2_LIVE_ROUTE,
+        C2_FIGURE1,
         LIVE_RULES,
     ):
         assert path.exists()
@@ -156,6 +158,9 @@ def main() -> None:
     assert "same-direction failure" in proposal_text.lower()
     assert "exact rank theorem" in proposal_text.lower()
     assert "remain exclusively in the Boundary/C1 paper" in proposal_text
+    assert "measurement escalation should be diagnostic-first, not quantity-first" in proposal_text.lower()
+    assert "remedy-matched decision rule" in proposal_text.lower()
+    assert "C2_FIGURE1_DECISION_MAP_SPEC.md" in proposal_text
 
     pitch_text = C2_EDITOR_PITCH.read_text(encoding="utf-8")
     _assert_any(pitch_text, "Geometry failure", "Same-dimension failure")
@@ -184,6 +189,18 @@ def main() -> None:
         assert boundary_owned_surface not in send_text
     assert "separates an unresolved explanation" in send_text
     assert "C1/Boundary remains parked" in send_text
+
+    figure_text = C2_FIGURE1.read_text(encoding="utf-8")
+    for required in (
+        "diagnostic-first, not quantity-first",
+        "decision map",
+        "measure a new distinction",
+        "measure target-relevant information",
+        "diversify failure domains",
+        "capture earlier",
+        "four failures are exhaustive",
+    ):
+        assert required.lower() in figure_text.lower()
 
     assert methods["M1"]["repository"] == "zuizui0223/tnoa"
     assert methods["M2"]["repository"] == "zuizui0223/mrod"
@@ -248,11 +265,13 @@ def main() -> None:
     assert readiness["status"] == "machine-ready-human-decisions-open"
     assert readiness["machine_checks"]["machine_blockers"] == 0
     assert readiness["machine_checks"]["four_failure_structure_fixed"] is True
+    assert readiness["machine_checks"]["diagnostic_first_opinion_position_fixed"] is True
     assert readiness["machine_checks"]["remedy_matched_diagnosis_explicit"] is True
     assert readiness["machine_checks"]["geometry_remedy_new_identification_direction"] is True
     assert readiness["machine_checks"]["objective_remedy_target_relevant_information"] is True
     assert readiness["machine_checks"]["dependence_remedy_independent_failure_opportunity"] is True
     assert readiness["machine_checks"]["pipeline_remedy_earlier_capture_before_irreversible_loss"] is True
+    assert readiness["machine_checks"]["figure1_is_decision_map_not_taxonomy"] is True
     assert readiness["machine_checks"]["frozen_send_candidate_written"] is True
     assert readiness["machine_checks"]["outside_reader_packet_written"] is True
     assert readiness["machine_checks"]["tree_editorial_red_team_completed"] is True
@@ -270,6 +289,7 @@ def main() -> None:
         "outside_reader_packet": "proposals/C2_OUTSIDE_READER_PACKET.md",
         "editorial_red_team": "proposals/C2_TREE_RED_TEAM.md",
         "live_route_check": "proposals/C2_TREE_LIVE_ROUTE_CHECK_20260912.md",
+        "figure1_decision_map_spec": "proposals/C2_FIGURE1_DECISION_MAP_SPEC.md",
     }
     for key, value in expected_assets.items():
         assert readiness["proposal_assets"][key] == value
