@@ -19,6 +19,7 @@ C2_AUTHOR_METADATA = ROOT / "proposals" / "C2_TREE_AUTHOR_METADATA_TEMPLATE.md"
 C2_SEND_CANDIDATE = ROOT / "proposals" / "C2_TREE_SEND_CANDIDATE.md"
 C2_OUTSIDE_READER = ROOT / "proposals" / "C2_OUTSIDE_READER_PACKET.md"
 C2_RED_TEAM = ROOT / "proposals" / "C2_TREE_RED_TEAM.md"
+C2_LIVE_ROUTE = ROOT / "proposals" / "C2_TREE_LIVE_ROUTE_CHECK_20260912.md"
 
 
 def load(path: Path):
@@ -106,6 +107,7 @@ def main() -> None:
         C2_SEND_CANDIDATE,
         C2_OUTSIDE_READER,
         C2_RED_TEAM,
+        C2_LIVE_ROUTE,
         LIVE_RULES,
     ):
         assert path.exists()
@@ -255,6 +257,11 @@ def main() -> None:
     assert readiness["machine_checks"]["outside_reader_packet_written"] is True
     assert readiness["machine_checks"]["tree_editorial_red_team_completed"] is True
     assert readiness["machine_checks"]["internal_red_team_decision"].startswith("GO")
+    assert readiness["machine_checks"]["current_live_journal_contact_independently_confirmed"] is True
+    assert readiness["machine_checks"]["current_live_journal_contact_checked_on"] == "2026-09-12"
+    assert readiness["machine_checks"]["current_live_journal_contact"] == "tree@cell.com"
+    assert readiness["machine_checks"]["current_live_editor"] == "Andrea Stephens"
+    assert readiness["machine_checks"]["dispatch_time_recheck_still_required"] is True
     assert readiness["authorship_state"]["working_author_list"] == ["Ruiqi Zhang"]
     assert readiness["authorship_state"]["working_corresponding_author"] == "Ruiqi Zhang"
     expected_assets = {
@@ -262,11 +269,21 @@ def main() -> None:
         "send_candidate": "proposals/C2_TREE_SEND_CANDIDATE.md",
         "outside_reader_packet": "proposals/C2_OUTSIDE_READER_PACKET.md",
         "editorial_red_team": "proposals/C2_TREE_RED_TEAM.md",
+        "live_route_check": "proposals/C2_TREE_LIVE_ROUTE_CHECK_20260912.md",
     }
     for key, value in expected_assets.items():
         assert readiness["proposal_assets"][key] == value
     human_ids = {row["id"] for row in readiness["human_blockers_before_send"] if row["required"]}
-    assert human_ids == {"authorship", "broad_interest_read", "live_contact_check"}
+    assert human_ids == {"authorship", "broad_interest_read", "dispatch_time_route_recheck"}
+
+    route_text = C2_LIVE_ROUTE.read_text(encoding="utf-8")
+    for required in (
+        "Andrea Stephens",
+        "tree@cell.com",
+        "proposal by email",
+        "dispatch-time recheck still required",
+    ):
+        assert required.lower() in route_text.lower()
 
     print("PUBLICATION_PROGRAMME TRACK PASS")
 
