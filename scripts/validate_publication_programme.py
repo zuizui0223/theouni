@@ -164,12 +164,24 @@ def main() -> None:
         "Prior-art position",
         "Selected external anchors",
         "remedy-matched diagnostic",
-        "new identification direction",
+        "separates an unresolved explanation",
         "target-relevant information",
         "independent opportunity",
         "capture it earlier",
     ):
         assert required.lower() in pitch_text.lower()
+    assert "Boundary paper retains the full identification theorem" in pitch_text
+    assert "geometry-failure exemplar" in pitch_text
+
+    send_text = C2_SEND_CANDIDATE.read_text(encoding="utf-8")
+    for boundary_owned_surface in (
+        "k-rank(M)",
+        "breakdown factor",
+        "anchor-ladder",
+    ):
+        assert boundary_owned_surface not in send_text
+    assert "separates an unresolved explanation" in send_text
+    assert "C1/Boundary remains parked" in send_text
 
     assert methods["M1"]["repository"] == "zuizui0223/tnoa"
     assert methods["M2"]["repository"] == "zuizui0223/mrod"
