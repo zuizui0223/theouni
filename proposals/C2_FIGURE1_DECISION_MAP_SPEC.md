@@ -55,7 +55,7 @@ Caption fragment:
 
 Correct remedy:
 
-> Add a measurement that separates an unresolved explanation.
+> Measure a new distinction that separates an unresolved explanation.
 
 ### B — Wrong target
 
