@@ -13,7 +13,8 @@
         "a scalar candidate reduces structural ambiguity iff its row is outside the current row span",
         "precision, repeats, rescaling and exact linear combinations inside the old row span do not add structural identification"
       ],
-      "claim_ceiling": "exact declared log-linear family; not a theorem that every ecological observation problem is linear"
+      "claim_ceiling": "exact declared log-linear family; not a theorem that every ecological observation problem is linear",
+      "publication_surface_ceiling": "C2 may use only the qualitative same-direction lesson that extra precision need not separate additional compatible explanations. The exact rank theorem, row-span iff condition, Gamma/kappa proxy geometry, breakdown factor and anchor-ladder diagnostics remain Boundary/C1 publication surface."
     },
     "objective": {
       "repository": "zuizui0223/ced",
@@ -87,6 +88,7 @@
   "forbidden_promotions": [
     "Do not present C2 as proving one universal evidence score.",
     "Do not transfer Boundary, CED, REC, TNOA or MROD theorem/result ownership to theouni.",
+    "Do not reproduce Boundary's exact rank theorem, Gamma/kappa diagnostics, breakdown factor or anchor ladder as C2 headline/publication surface; keep those in C1.",
     "Do not call the island-pollination translation tracks empirically validated.",
     "Do not convert the Campanula phenomenological model's chosen coefficients into empirical findings."
   ]
