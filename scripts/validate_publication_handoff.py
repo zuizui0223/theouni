@@ -28,7 +28,18 @@ def main() -> None:
 
     units = handoff["units"]
     assert set(units) == {"C1", "C2", "M1", "M2", "M3", "M4"}
-    assert units["C1"]["state"] == "parked-conditional"
+
+    c1 = units["C1"]
+    assert c1["state"] == "parked-conditional"
+    assert c1["repository"] == "zuizui0223/boundary"
+    assert c1["role_contract"] == "zuizui0223/boundary/paper/BOUNDARY_ROLE_CONTRACT_2026-09-12.json"
+    assert c1["exclusive_owner"] == "structural identification geometry"
+    assert "geometry exemplar only" in c1["c2_role"]
+    assert "external identification-geometry" in c1["ced_role"]
+    assert c1["machine_blocker"] is False
+    assert c1["proposal_max_words"] == 300
+    assert "C2 is declined/too broad" in c1["activation_gate"]
+
     assert units["C2"]["machine_state"] == "ready"
     assert units["C2"]["sent"] is False
     assert set(units["C2"]["human_gates"]) == {
@@ -67,8 +78,12 @@ def main() -> None:
     text = HANDOFF_MD.read_text(encoding="utf-8")
     for required in (
         "science and machine production closed for M1–M4",
+        "C1 — Boundary / Ecology Letters Perspective",
+        "Boundary is **not archived material and is not absorbed into C2 or CED**",
+        "geometry exemplar only",
+        "There is no theorem-ownership transfer",
         "human metadata, visual review and dispatch decisions",
-        "Do not reopen frozen science",
+        "Do not reopen frozen science or transfer Boundary theorem ownership",
         "HUMAN_SUBMISSION_INPUTS_2026-09-12",
     ):
         assert required in text
