@@ -77,8 +77,13 @@
       "status": "proposal_ready_parked_conditional",
       "home": "zuizui0223/boundary",
       "proposal": "paper/ecology_letters_proposal.md",
+      "role_contract": "paper/BOUNDARY_ROLE_CONTRACT_2026-09-12.json",
       "headline": "Mechanistic proximity and identification strength are distinct axes.",
-      "activation_rule": "Submit independently only if C2 is declined, judged too broad, or an explicit firewall is retained so C1 owns identification geometry while C2 owns cross-failure non-monotonicity."
+      "exclusive_owner": "Boundary structural identification geometry, including k-rank(M), outside-row-span rank gain, product-preserving unidentified directions, Gamma/kappa proxy transport geometry, breakdown factor and anchor-ladder diagnostics.",
+      "c2_interface": "C2 may use Boundary only as the geometry-failure exemplar; theorem and diagnostic ownership remains in Boundary.",
+      "ced_interface": "CED may cite Boundary as an external identification-boundary source/contrast; CED does not own Boundary rank geometry.",
+      "activation_rule": "Submit independently only if C2 is declined, judged too broad, or an explicit firewall is retained so C1 owns identification geometry while C2 owns cross-failure non-monotonicity.",
+      "machine_blockers": 0
     }
   ],
   "method_track": [
@@ -104,7 +109,8 @@
       "target": "Ecological Modelling",
       "status": "standalone_submission_restored",
       "headline": "Target-safe reportability, failure-aware refinement and risk-limited stopping need not coincide with full latent-world information.",
-      "firewall": "Integrated Evidence manuscript is no longer the canonical submission unit; Boundary and MROD remain external sources/contrasts rather than absorbed ownership."
+      "firewall": "Integrated Evidence manuscript is no longer the canonical submission unit; Boundary and MROD remain external sources/contrasts rather than absorbed ownership.",
+      "boundary_interface": "Boundary retains structural identification geometry; CED begins from surviving compatible worlds and owns target-relative reportability, not k-rank(M)."
     },
     {
       "id": "M4",
@@ -127,7 +133,7 @@
     "C2 TREE proposal",
     "M1 TNOA production/submission",
     "M2 MROD production/submission",
-    "C1 conditional Ecology Letters proposal",
+    "C1 Boundary conditional Ecology Letters Perspective proposal",
     "M3 CED Ecological Modelling production",
     "M4 V3+REC Ecological Informatics production; clarify Findlay raw-source redistribution before final reviewer-package freeze"
   ],
@@ -135,6 +141,8 @@
     "This 5+1 router is track-local and is not the whole-owner publication portfolio.",
     "Publication units do not transfer theorem, data or code ownership between repositories.",
     "C2 does not turn heterogeneous source results into one universal scalar theorem.",
+    "C2 geometry failure does not transfer Boundary theorem ownership into C2.",
+    "CED target-relative reportability does not transfer Boundary rank-geometry ownership into CED.",
     "Campanula/Izu and island-pollination translation examples are ecological illustrations unless their source files explicitly establish empirical validation.",
     "The thesis ten-chapter order is not a six-paper publication order."
   ]
