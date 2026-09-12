@@ -8,6 +8,14 @@
 
 Ecologists often treat more precise, more informative, more repeated, or better classified observations as automatically stronger evidence, but these four monotonic intuitions fail for different structural reasons; evidence is stronger only when new observations change the distinctions relevant to the declared scientific responsibility under a credible observation contract.
 
+## Opinion position
+
+This Opinion argues for a change in default practice:
+
+> **Measurement escalation should be diagnostic-first, not quantity-first.**
+
+Before adding observations, precision, variables, replicates or downstream classifier performance, ecologists should first diagnose why the present evidence is inadequate. Different failures require different new information. Adding more of the wrong kind can leave the scientific conclusion unchanged even when data volume or nominal information increases substantially.
+
 ## Why this Opinion now
 
 Ecology is increasingly measurement-rich. Automated sensors, remote sensing, bioacoustics, camera traps, genomic assays and model-based monitoring can generate more observations at lower marginal cost than before. Yet the scientific value of additional measurement is rarely monotone in the amount of data collected. A repeated observation can share the same failure mode as its predecessor; a precise measurement can lie in an already-observed direction; a highly informative variable can resolve nuisance state while leaving the ecological target ambiguous; and a perfect downstream classifier cannot reconstruct opportunities removed before a record existed.
@@ -16,9 +24,11 @@ These are often discussed separately as identifiability, experimental design, de
 
 ## Four failures
 
-### 1. Same-direction failure — more precision is not necessarily more identification
+### 1. Same-dimension failure — more precision is not necessarily more identification
 
 Repeated, rescaled or more precise measurement of a distinction already represented in the observation system can reduce sampling uncertainty without separating any additional mechanism states. What matters for structural identification is whether the new measurement creates a genuinely new distinction among otherwise compatible explanations. The ecological lesson is that closeness to a mechanism, measurement detail and measurement precision are not an identification axis by themselves.
+
+This is the editor-facing label for the source-internal **same-direction failure**.
 
 **Source owner:** `zuizui0223/boundary`. The exact rank theorem, sharp conditions, proxy-transport geometry and anchor diagnostics remain exclusively in the Boundary/C1 paper and are not reproduced here.
 
@@ -40,6 +50,19 @@ Two complementary cases expose this failure. First, in a protected BirdVox analy
 
 **Source owners:** `zuizui0223/rec` and `zuizui0223/tnoa`.
 
+## Remedy-matched decision rule
+
+The central synthesis is not the names of the four failures. It is the mapping from diagnosis to next action.
+
+| diagnosed failure | question before collecting more data | appropriate next move |
+|---|---|---|
+| same dimension | does the new measurement separate a previously unresolved alternative? | measure a distinction that separates an unresolved explanation, not merely the old quantity more precisely |
+| wrong target | can the new distinction change the declared prediction or decision? | measure target-relevant information rather than maximizing generic information |
+| shared dependence | does the added observation create a genuinely independent opportunity for evidence to survive failure? | diversify failure domains rather than only increasing repeat count |
+| upstream loss | is the needed distinction still present in the retained record? | capture it earlier in the pipeline; downstream accuracy cannot recreate deleted information |
+
+A diagnosis is useful only if it changes what the ecologist would measure next.
+
 ## Ecological worked examples
 
 The Opinion will include two compact worked examples whose role is illustration, not new empirical validation.
@@ -58,25 +81,28 @@ The `examples/island_pollination_translation/` programme provides adapter contra
 
 ## Proposed conceptual figure
 
-A single four-panel figure will show four distinct reasons why the horizontal axis “more measurement” does not imply a vertical increase in “scientific evidence”:
+Figure 1 is a **decision map**, not a four-box catalogue.
 
-1. **same direction** — precision increases, no additional mechanism distinction is created;
-2. **wrong target** — information increases, target remains unresolved;
-3. **shared failure** — replicate number increases, independent failure opportunities do not;
-4. **upstream collapse** — downstream accuracy increases, lost support/semantics do not return.
+It begins from one common problem — current evidence does not resolve the ecological question — and asks which failure limits inference. Each diagnosis then leads to its own question and its own next measurement action:
 
-The figure will explicitly avoid a universal evidence score. Each panel has its own criterion for when extra measurement becomes scientifically useful.
+1. **same dimension** → add an identification direction;
+2. **wrong target** → add target-relevant information;
+3. **shared dependence** → add an independent failure opportunity;
+4. **upstream loss** → capture the distinction earlier in the pipeline.
+
+The figure will explicitly avoid a universal evidence score and will not imply that the four failures are exhaustive. Canonical specification: `proposals/C2_FIGURE1_DECISION_MAP_SPEC.md`.
 
 ## What is new in the synthesis
 
-The mathematical ingredients—identification, information gain, dependence, missingness and calibration—have substantial literatures. The proposed contribution is therefore not a priority claim over those literatures. The new synthesis is an ecological **anti-monotonicity framework**: it identifies four recurrent ways in which common “more is better” reasoning fails, ties each failure to an explicit scientific responsibility, and turns the failures into practical design questions:
+The mathematical ingredients—identification, information gain, dependence, missingness and calibration—have substantial literatures. The proposed contribution is therefore not a priority claim over those literatures. The new synthesis is an ecological **anti-monotonicity framework with remedy matching**: it identifies four recurrent ways in which common “more is better” reasoning fails, ties each failure to an explicit scientific responsibility, and makes the diagnosis operational by asking what distinct kind of measurement would actually change the conclusion.
 
-- Did the measurement create a new distinction among otherwise compatible explanations?
-- Did it resolve distinctions relevant to the declared target?
-- Did it add an independent failure opportunity?
-- Was the relevant distinction retained before irreversible selection or semantic collapse?
+This shifts monitoring and experimental design away from raw measurement abundance and toward responsibility-specific evidence contracts.
 
-This shifts monitoring design away from raw measurement abundance and toward responsibility-specific evidence contracts.
+## Why this perspective is timely and appropriately positioned
+
+The problem becomes more important as ecological workflows combine automated collection, model-based filtering, machine classification and downstream decision systems. In such pipelines, increasing throughput can make a study look increasingly information-rich while leaving the actual inferential bottleneck unchanged.
+
+The perspective arises from a linked programme spanning structural identification, target-relative reporting, failure-aware observation design, record-entry loss and calibration semantics. The Opinion does not ask TREE readers to adopt those source formalisms. It uses the cross-programme view to extract a simpler ecological decision doctrine that can travel across field sampling, biodiversity monitoring, sensor networks, experimental ecology, mechanistic inference and adaptive management.
 
 ## Relationship to source papers
 
@@ -92,4 +118,4 @@ Detailed algorithms, proofs, thresholds and validation benchmarks remain in thos
 
 ## Relationship to the Boundary Perspective proposal
 
-The existing Ecology Letters Boundary proposal is retained as a conditional independent route. Its exclusive question is whether mechanistic proximity and identification strength form distinct axes. This proposal is broader: it asks why scientific evidence is non-monotone in measurement amount across geometry, objective, dependence and pipeline stages. If both routes proceed, Boundary appears here only as the qualitative same-direction exemplar; the exact identification-axis mathematics and diagnostics remain in C1.
+The existing Ecology Letters Boundary proposal is retained as a conditional independent route. Its exclusive question is whether mechanistic proximity and identification strength form distinct axes. This proposal is broader: it asks why scientific evidence is non-monotone in measurement amount across geometry, objective, dependence and pipeline stages. If both routes proceed, Boundary appears here only as the qualitative same-dimension exemplar; the exact identification-axis mathematics and diagnostics remain in C1.
