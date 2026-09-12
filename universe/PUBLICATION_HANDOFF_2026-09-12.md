@@ -8,7 +8,7 @@ This is the concise operational handoff for the Observation/Evidence publication
 
 | Unit | Target | Current state | Next true gate |
 |---|---|---|---|
-| C2 | Trends in Ecology & Evolution Opinion | machine-ready presubmission pitch | final authorship + one broad-interest read + live contact check |
+| C2 | Trends in Ecology & Evolution Opinion | machine-ready presubmission pitch; live proposal route checked 2026-09-12 | final authorship + one broad-interest read + dispatch-time route recheck |
 | C1 / Boundary | Ecology Letters Perspective | proposal-ready, parked conditional; independent owner of identification geometry | activate only if C2 route warrants it or both proceed under explicit firewall |
 | M1 | TNOA → Methods in Ecology and Evolution | science closed; DOCX/reviewer bundle/figures validated | human metadata + AI disclosure + visual check |
 | M2 | MROD → Methods in Ecology and Evolution | science frozen; anonymous Main/SI PDFs validated | human metadata/title page + AI disclosure + visual check |
@@ -23,7 +23,16 @@ Machine assets complete:
 - prior-art firewall and pinned source ledger;
 - authorship ledger and author-metadata template;
 - outside-reader packet and editorial red-team;
-- machine-readable send gate.
+- machine-readable send gate;
+- live-route receipt: `proposals/C2_TREE_LIVE_ROUTE_CHECK_20260912.md`.
+
+Current route independently checked on 2026-09-12:
+
+- editor: **Andrea Stephens**;
+- contact: **tree@cell.com**;
+- route: **proposal by email to the editor before full-manuscript preparation**.
+
+This is a dated receipt, not permission to skip a dispatch-time recheck.
 
 Working proposal authorship: **Ruiqi Zhang — provisional first/corresponding author**. Do not add authors based only on supervision, seniority, source ownership or commits.
 
@@ -31,7 +40,7 @@ Human send gates:
 
 1. approve final author list/corresponding author;
 2. obtain one broad-interest ecological read;
-3. manually verify the current TREE contact/submission route immediately before dispatch.
+3. immediately before sending, recheck the live TREE/Cell Press/Elsevier proposal route against the 2026-09-12 receipt.
 
 Do not write the full Opinion before editorial interest unless strategy changes.
 
@@ -42,6 +51,7 @@ Boundary is **not archived material and is not absorbed into C2 or CED**. It is 
 Canonical Boundary role contract:
 
 - `zuizui0223/boundary/paper/BOUNDARY_ROLE_CONTRACT_2026-09-12.json`;
+- send readiness: `zuizui0223/boundary/paper/C1_SEND_READINESS_2026-09-12.json`;
 - proposal: `paper/ecology_letters_proposal.md`;
 - proposal email: `paper/ecology_letters_proposal_email.md`.
 
@@ -57,8 +67,9 @@ Interfaces are deliberately narrow:
 
 ```text
 Boundary / C1
-  ├─> C2: geometry exemplar only
-  │       “more precision in the same direction need not add identification”
+  ├─> C2: qualitative geometry exemplar only
+  │       “more precision in the same direction need not separate another explanation”
+  │       exact rank theorem / Γ–κ / breakdown / anchor diagnostics stay in C1
   │       no theorem-ownership transfer
   │
   └─> CED / M3: external identification boundary / contrast
@@ -75,7 +86,9 @@ Activation rule:
 
 Ecology Letters live gate checked 2026-09-12: unsolicited Perspective proposals are ≤300 words, must precede any full manuscript, and are sent to both `ecolets@cefe.cnrs.fr` and `ecolets2@cefe.cnrs.fr`. The journal states that Perspective novelty is expected at Letter level and should appeal broadly across ecology.
 
-So Boundary has **machine blocker 0**. Its unresolved state is strategic activation/authorship, not missing science.
+Current Boundary proposal is **226/300 words** under the canonical `paper/check_submission.py` word-count semantics, leaving **74 words** of headroom. If C1 is activated, keep the factual author-qualification sentence concise (recommended ≤40 words), then rerun the checker before dispatch.
+
+C1 editorial red-team decision: **GO if activated**. So Boundary has **machine blocker 0**. Its unresolved state is strategic activation/authorship, not missing science.
 
 ## M1 — TNOA / MEE
 
