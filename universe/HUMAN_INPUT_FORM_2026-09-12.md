@@ -29,7 +29,7 @@ Do not infer these from Git history or from the model currently answering in Cha
 
 ## 4. C2 — TREE Opinion
 
-Working default is Ruiqi Zhang as provisional first/corresponding author.
+Working default is Ruiqi Zhang as provisional first/corresponding author. The current TREE proposal route was checked on 2026-09-12; a dispatch-time recheck is still required.
 
 - Approve that working author list for the presubmission pitch? **[yes / no]**
 - If no, additional author(s), order, affiliation and substantive C2-level contribution: **[ ]**
@@ -37,15 +37,17 @@ Working default is Ruiqi Zhang as provisional first/corresponding author.
 
 ## 5. C1 — Boundary / Ecology Letters Perspective
 
-Current state is **parked conditional**. You do not need to fill this section unless activating C1.
+Current strategy decision: **keep parked until the C2 editorial outcome**. No C1 input is required now.
 
-- Activate C1 now, or keep parked behind C2? **[activate / keep parked]**
-- If activated, final author list and order: **[ ]**
+Only if C1 is later activated:
+
+- Final author list and order: **[ ]**
 - Corresponding author: **[ ]**
 - One concise factual author-qualification sentence for the proposal: **[ ]**
 - Confirm C1 affiliation/contact metadata: **[ ]**
+- Recheck live Ecology Letters proposal instructions immediately before dispatch: **[yes / no]**
 
-Do not infer the qualification sentence from supervision, seniority, repository ownership or commit history. After filling it, recheck the complete proposal packet against the 300-word ceiling.
+The current Boundary proposal is 226/300 words under its canonical checker, leaving 74 words of headroom. Keep the qualification sentence concise (recommended <=40 words). Do not infer it from supervision, seniority, repository ownership or commit history.
 
 ## 6. M1 — TNOA / MEE
 
@@ -87,7 +89,7 @@ These are author-facing checks, not scientific analyses.
 - M2 Main/SI PDFs visually acceptable: **[yes / changes needed]**
 - M3 main/supplement/figures visually acceptable: **[yes / changes needed]**
 - M4 Figures 1–5 visually acceptable: **[yes / changes needed]**
-- C1 proposal packet visually/structurally acceptable if activated: **[yes / changes needed / parked]**
+- C1 proposal packet: **parked; inspect only if activated**
 
 ## 11. Dispatch
 
