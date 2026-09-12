@@ -30,9 +30,10 @@ CURRENT EVIDENCE DOES NOT RESOLVE THE ECOLOGICAL QUESTION
       |                  |                  |                  |
       v                  v                  v                  v
 Does the next        Can the new       Is this a new       Is the needed
-measurement add      distinction       independent          distinction still
-an identification    change the        opportunity for      present in the
- direction?           target/decision? evidence to survive? retained record?
+measurement         distinction       independent          distinction still
+separate an          change the        opportunity for      present in the
+unresolved           target/decision? evidence to survive? retained record?
+explanation?
       |                  |                  |                  |
       v                  v                  v                  v
 MEASURE A NEW        MEASURE            DIVERSIFY            CAPTURE EARLIER
@@ -66,7 +67,7 @@ Caption fragment:
 
 Correct remedy:
 
-> Measure information that can change the prediction or decision.
+> Measure target-relevant information that can change the prediction or decision.
 
 ### C — Shared dependence
 
