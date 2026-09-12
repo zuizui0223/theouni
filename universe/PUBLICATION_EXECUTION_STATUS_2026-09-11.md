@@ -123,7 +123,7 @@ Remaining human blockers:
 
 ## M3 — CED / Ecological Modelling
 
-State: **standalone scientific core closed; journal production validated**.
+State: **standalone scientific core closed; machine production fully validated; human journal metadata/visual inspection only**.
 
 Canonical scientific unit:
 
@@ -135,23 +135,33 @@ Integrated `EVIDENCE_*` assets are synthesis/provenance only and are not submiss
 
 Ecological Modelling package includes submission checklist, five Highlights, cover-letter draft, Data/Code statement, title-page template, machine-readable package manifest, and standalone main + supplement production workflow.
 
-Validation receipt:
+Final validation receipt:
 
-- production source SHA `60258505aa5bcdcf9adc3befa3207f359a0de0db`;
-- reproducibility run `34575265031` — **success**;
-- manuscript build run `34575265062` — **success**;
-- artifact `10189451673` — `ced-ecological-modelling-package`;
-- artifact digest `sha256:81a4ec9bd871c73fab03b29b77f374f0eefc1099b5736eaa652d9840475f9394`;
-- final route/status-contract HEAD `381b17b9f11772c5c1ed52b0eb5db3ebd0219387`;
-- final route/status reproducibility run `34576313642` — **success**.
+- scientific source SHA `60258505aa5bcdcf9adc3befa3207f359a0de0db`;
+- final audited source SHA `47fb525b0e82334c297887a4e7b5705691ce5bf4`;
+- final reproducibility run `34605107374` — **success**;
+- final manuscript build run `34605107433` — **success**;
+- artifact `10265554938` — `ced-ecological-modelling-package`;
+- artifact digest `sha256:b7d8c54ad91d61dfa87fca7592176365c9723d5331169e233abf2d87b2e91ddf`;
+- citations: **16 keys / 16 bibitems / missing 0 / unused 0**;
+- overlap versus historical `EVIDENCE_DRAFT_V1.md`: **0.2014% 12-gram overlap, longest 14 words, exact sentences >=12 words = 0**;
+- overlap versus historical `evidence_main.tex`: **0.0671% 12-gram overlap, longest 12 words, exact sentences >=12 words = 0**.
 
-Remaining: live Guide-for-Authors check, final visual/reference/overlap audit and human author/declaration metadata.
+No further citation or self-overlap rewrite is indicated by the audit.
 
-**Science blocker: 0. Known CI/status-contract blockers: 0.**
+Remaining:
+
+- recheck live Ecological Modelling Guide for Authors immediately before upload;
+- confirm final journal article-type/abstract/keyword/Highlights/graphical-abstract rules;
+- final human visual inspection of main PDF, supplement and figures;
+- author/affiliation/correspondence/CRediT/funding/acknowledgement/competing-interest metadata;
+- permanent code/data archive and DOI if required by the final journal workflow.
+
+**Science blocker: 0. Machine production blocker: 0.**
 
 ## M4 — V3 + REC / Ecological Informatics
 
-State: **scientific analysis blocker 0; journal/figure/reviewer production validated**.
+State: **science closed; figures, safe reviewer package and self-overlap audit validated; human journal metadata/visual inspection only**.
 
 Canonical unit:
 
@@ -163,14 +173,20 @@ TNOA is explicitly excluded and remains M1.
 
 Production includes Ecological Informatics checklist, Highlights, cover letter, Data/Code statement, title-page template, Figure 1–5 architecture with no TNOA panel, deterministic Figure 2–5 generator, figure-value regression tests, and fail-closed reviewer package policy/manifest.
 
-Validation receipt:
+Validation receipts:
 
-- production source SHA `bb6aa2589d73dedea980fe5f8fbdbd46ead84808`;
+- scientific/figure source SHA `bb6aa2589d73dedea980fe5f8fbdbd46ead84808`;
 - v3-ci run `34575119019` — **success** on Python 3.10 and 3.11;
-- artifact `10189408057` — `m4-v3-rec-quantitative-figures`;
-- artifact digest `sha256:52998fa71ab5ee46631cab7d187911675530cbb84784cfa86b43d3a577fff1f4`;
-- canonical status receipt HEAD `24278fe47f6e51139f9d09b255cafc5e858602d4`;
-- metadata/status v3-ci run `34575758824` — **success**.
+- figure artifact `10189408057`, digest `sha256:52998fa71ab5ee46631cab7d187911675530cbb84784cfa86b43d3a577fff1f4`;
+- reviewer-package source SHA `db96ab67a3dd6615130680956f16082272db8b95`;
+- reviewer-package run `34604732209` — **success**;
+- safe reviewer artifact `10265608917`, digest `sha256:eb3c2f33a1fc4e1ce1e1160c501180091f718088243a6bc245d2cfa9bcf261df`;
+- reviewer package reverified pinned REC derived blobs, excluded both original Findlay CSVs, passed identity scan, and retains the TNOA firewall;
+- self-overlap source SHA `76bb76fbc71b21478fec5b5b07bf4471f857d0f4`;
+- self-overlap run `34604836830` — **success**;
+- overlap artifact `10265494094`, digest `sha256:b064fdd5f2c4a178fdc65992b389d25f3b319ed0526803de2312da7d5201a068`;
+- historical Observation 12-gram overlap **0.0902%**, longest exact run 13 words, exact sentences >=12 words = 0;
+- every audited REC source draft has **0% 12-gram overlap** and exact sentences >=12 words = 0.
 
 Third-party data state:
 
@@ -179,21 +195,28 @@ Third-party data state:
 - Findlay GitHub repository: no explicit root licence found;
 - scientific reanalysis/publication preparation may proceed;
 - original Findlay CSV redistribution remains fail-closed;
-- reviewer reproduction retrieves original files from the source repository using pinned identities and distributes derived summaries/code, not copied original CSVs.
+- validated reviewer archive contains safe derived/provenance material and no copied original Findlay CSV.
 
-Remaining: live Guide-for-Authors check, final human visual Figure 1–5 assembly, final safe reviewer bundle, author/declaration metadata, final text-overlap audit and preferably written repository-level reuse clarification before any original-source redistribution.
+Remaining:
 
-**Science blocker: 0. Known CI/status-contract blockers: 0.**
+- obtain/archive Findlay repository-level reuse clarification if any original-source redistribution is ever desired;
+- recheck live Ecological Informatics Guide for Authors immediately before upload;
+- confirm final article type, abstract, keywords, Highlights and graphical-abstract rules;
+- final human visual assembly/inspection of Figure 1–5;
+- author/affiliation/CRediT/funding/acknowledgement/competing-interest metadata;
+- freeze final submitted source and permanent archive receipt.
+
+**Science blocker: 0. Machine production blocker: 0.**
 
 ## Observation / Evidence track summary
 
 ```text
 C2  TREE Opinion pitch                 machine-ready / 3 human send gates
 C1  Ecology Letters Perspective        proposal-ready / parked conditional
-M1  TNOA -> MEE                        production validated / human+visual only
-M2  MROD -> MEE                        production validated / human metadata+title page only
-M3  CED -> Ecological Modelling        production validated / blockers 0
-M4  V3+REC -> Ecological Informatics   production validated / blockers 0
+M1  TNOA -> MEE                        machine production closed / human+visual only
+M2  MROD -> MEE                        machine production closed / human metadata+title page only
+M3  CED -> Ecological Modelling        machine production closed / human metadata+visual only
+M4  V3+REC -> Ecological Informatics   machine production closed / human metadata+visual only
 ```
 
 Hard rule:
