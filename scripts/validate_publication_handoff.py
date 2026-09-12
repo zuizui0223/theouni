@@ -30,23 +30,27 @@ def main() -> None:
     assert set(units) == {"C1", "C2", "M1", "M2", "M3", "M4"}
 
     c1 = units["C1"]
-    assert c1["state"] == "parked-conditional"
+    assert c1["state"] == "machine-ready-strategically-parked"
     assert c1["repository"] == "zuizui0223/boundary"
     assert c1["role_contract"] == "zuizui0223/boundary/paper/BOUNDARY_ROLE_CONTRACT_2026-09-12.json"
     assert c1["send_readiness"] == "zuizui0223/boundary/paper/C1_SEND_READINESS_2026-09-12.json"
     assert c1["exclusive_owner"] == "structural identification geometry"
-    assert "geometry exemplar only" in c1["c2_role"]
+    assert "qualitative geometry exemplar only" in c1["c2_role"]
+    assert "exact theorem surface stays in Boundary" in c1["c2_role"]
     assert "external identification-geometry" in c1["ced_role"]
     assert c1["machine_blocker"] is False
     assert c1["proposal_max_words"] == 300
-    assert "C2 is declined/too broad" in c1["activation_gate"]
-    assert set(c1["human_gates"]) == {
-        "activation decision",
+    assert c1["proposal_word_count"] == 226
+    assert c1["proposal_word_headroom"] == 74
+    assert c1["current_strategy_decision"] == "keep parked until C2 editorial outcome"
+    assert c1["current_human_blockers"] == []
+    assert set(c1["human_gates_if_activated"]) == {
         "authorship",
         "author qualification",
         "contact metadata",
         "live rule recheck",
     }
+    assert "C2 is declined/too broad" in c1["activation_gate"]
 
     assert units["C2"]["machine_state"] == "ready"
     assert units["C2"]["sent"] is False
@@ -77,6 +81,7 @@ def main() -> None:
     assert human["ai_assistance"]["exact_application_model_versions"] is None
     assert human["ai_assistance"]["do_not_infer_from_repository_history"] is True
     assert human["papers"]["C1"]["human_metadata_effort_now"] is False
+    assert human["papers"]["C1"]["activation_decision"] == "keep parked until C2 editorial outcome"
     assert human["papers"]["M4"]["raw_findlay_redistribution_allowed"] is False
 
     assert propagation["source"] == "universe/HUMAN_SUBMISSION_INPUTS_2026-09-12.json"
@@ -93,7 +98,8 @@ def main() -> None:
         "C1 — Boundary / Ecology Letters Perspective",
         "Boundary is **not archived material and is not absorbed into C2 or CED**",
         "BOUNDARY_ROLE_CONTRACT_2026-09-12.json",
-        "geometry exemplar only",
+        "qualitative geometry exemplar only",
+        "keep C1 parked until the C2 editorial outcome",
         "There is no theorem-ownership transfer",
         "human metadata, visual review and dispatch decisions",
         "Do not reopen frozen science or transfer Boundary theorem ownership",
