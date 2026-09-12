@@ -14,15 +14,18 @@
     "author_metadata_template": "proposals/C2_TREE_AUTHOR_METADATA_TEMPLATE.md",
     "outside_reader_packet": "proposals/C2_OUTSIDE_READER_PACKET.md",
     "editorial_red_team": "proposals/C2_TREE_RED_TEAM.md",
-    "live_route_check": "proposals/C2_TREE_LIVE_ROUTE_CHECK_20260912.md"
+    "live_route_check": "proposals/C2_TREE_LIVE_ROUTE_CHECK_20260912.md",
+    "figure1_decision_map_spec": "proposals/C2_FIGURE1_DECISION_MAP_SPEC.md"
   },
   "machine_checks": {
     "four_failure_structure_fixed": true,
+    "diagnostic_first_opinion_position_fixed": true,
     "remedy_matched_diagnosis_explicit": true,
     "geometry_remedy_new_identification_direction": true,
     "objective_remedy_target_relevant_information": true,
     "dependence_remedy_independent_failure_opportunity": true,
     "pipeline_remedy_earlier_capture_before_irreversible_loss": true,
+    "figure1_is_decision_map_not_taxonomy": true,
     "external_prior_art_firewall_present": true,
     "source_claims_blob_pinned": true,
     "worked_examples_claim_ceiling_fixed": true,
