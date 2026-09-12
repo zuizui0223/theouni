@@ -26,6 +26,34 @@ Do **not** read the source repositories before answering the questions below; th
 5. **Would you keep reading if this appeared as a TREE Opinion? Why or why not?**
    - Ask for the first concrete reason to reject, not general encouragement.
 
+## Two forced editorial checks
+
+These do not add points; they decide whether local wording should change before send.
+
+### Title check
+
+Current title:
+
+> **More measurement is not more evidence: four failures of monotonic reasoning in ecology**
+
+Does **“monotonic reasoning”** feel immediately intelligible to you as an ecologist outside theory/methods?
+
+- [ ] yes — keep current title
+- [ ] no — prefer the plainer fallback: **When more measurement is not more evidence: diagnosing four failures in ecological inference**
+
+Do not change the title merely because the fallback sounds less technical. Change it only if the current phrase obscures the paper's ecological point on first read.
+
+### Figure-logic check
+
+Without reading source theory, can you infer the intended Figure 1 logic from the pitch?
+
+> diagnose the failure → choose a different next measurement action
+
+- [ ] yes — the remedy matching is visible
+- [ ] no — the pitch still reads as a four-box taxonomy
+
+If “no,” do not add more examples; strengthen the diagnosis-to-remedy transition.
+
 ## Fast scoring
 
 Score each 0–2:
@@ -44,6 +72,8 @@ Maximum = 10.
 - **7–8:** revise the weakest failure/example before sending.
 - **≤6:** do not send; the proposal is still too internal or too generic.
 
+Independent of the score, a “no” on the Figure-logic check blocks send until the remedy mapping is clear. A “no” on the title check triggers only a title decision, not a scientific rewrite.
+
 ## What not to ask the reader to judge
 
 The outside reader is not being asked to verify theorem proofs, source numerics, repository provenance or code. Those are already controlled by source ledgers and CI. This read is specifically about TREE-level breadth, intelligibility and conceptual usefulness.
@@ -54,5 +84,7 @@ Reader: [ ]
 Field/subfield: [ ]  
 Date: [ ]  
 Score: [ ] / 10  
+Title check: [keep current / use fallback]  
+Figure-logic check: [pass / revise]  
 First rejection reason: [ ]  
 Required revision before send: [ ]
