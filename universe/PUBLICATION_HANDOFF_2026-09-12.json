@@ -10,7 +10,11 @@
     "C2": {
       "target": "Trends in Ecology & Evolution Opinion",
       "machine_state": "ready",
-      "human_gates": ["authorship approval", "broad-interest outside read", "live contact route check"],
+      "live_route_verified_on": "2026-09-12",
+      "current_live_contact": "tree@cell.com",
+      "current_live_editor": "Andrea Stephens",
+      "current_public_route": "proposal by email to the editor before full-manuscript preparation",
+      "human_gates": ["authorship approval", "broad-interest outside read", "dispatch-time route recheck"],
       "sent": false
     },
     "C1": {
