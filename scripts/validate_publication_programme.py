@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PROGRAMME = ROOT / "universe" / "PUBLICATION_PROGRAMME_2026-09-11.json"
 PORTFOLIO = ROOT / "universe" / "PORTFOLIO_GOVERNANCE_2026-09-11.json"
 THESIS = ROOT / "thesis" / "final_chapter_architecture.json"
+LIVE_RULES = ROOT / "universe" / "LIVE_JOURNAL_RULES_2026-09-12.md"
 PROPOSAL = ROOT / "proposals" / "C2_MORE_MEASUREMENT_NOT_MORE_EVIDENCE_TREE_PROPOSAL.md"
 C2_LEDGER = ROOT / "proposals" / "C2_SOURCE_LEDGER.json"
 C2_PRIOR_ART = ROOT / "proposals" / "C2_PRIOR_ART_MAP.md"
@@ -93,8 +94,23 @@ def main() -> None:
         C2_SEND_CANDIDATE,
         C2_OUTSIDE_READER,
         C2_RED_TEAM,
+        LIVE_RULES,
     ):
         assert path.exists()
+
+    live_rules = LIVE_RULES.read_text(encoding="utf-8")
+    for required in (
+        "7000–8000 words",
+        "continuous line numbering",
+        "3–5 bullets",
+        "85 characters",
+        "immediately before References",
+        "Ecological Modelling",
+        "Ecological Informatics",
+        "Trends in Ecology & Evolution",
+        "must not be guessed",
+    ):
+        assert required in live_rules
 
     prior_art_text = C2_PRIOR_ART.read_text(encoding="utf-8")
     for required in (
