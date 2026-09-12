@@ -50,10 +50,14 @@ def main() -> None:
 
     assert units["C2"]["machine_state"] == "ready"
     assert units["C2"]["sent"] is False
+    assert units["C2"]["live_route_verified_on"] == "2026-09-12"
+    assert units["C2"]["current_live_contact"] == "tree@cell.com"
+    assert units["C2"]["current_live_editor"] == "Andrea Stephens"
+    assert "proposal by email" in units["C2"]["current_public_route"]
     assert set(units["C2"]["human_gates"]) == {
         "authorship approval",
         "broad-interest outside read",
-        "live contact route check",
+        "dispatch-time route recheck",
     }
 
     for paper in ("M1", "M2", "M3", "M4"):
