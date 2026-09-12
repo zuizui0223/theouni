@@ -1,0 +1,69 @@
+{
+  "schema": "publication-handoff-v1",
+  "date": "2026-09-12",
+  "scope": "observation_evidence_track_only",
+  "status": "machine-work-closed-human-completion-open",
+  "canonical_architecture": "universe/PUBLICATION_PROGRAMME_2026-09-11.json",
+  "live_rules": "universe/LIVE_JOURNAL_RULES_2026-09-12.md",
+  "human_input_ledger": "universe/HUMAN_SUBMISSION_INPUTS_2026-09-12.json",
+  "units": {
+    "C2": {
+      "target": "Trends in Ecology & Evolution Opinion",
+      "machine_state": "ready",
+      "human_gates": ["authorship approval", "broad-interest outside read", "live contact route check"],
+      "sent": false
+    },
+    "C1": {
+      "target": "Ecology Letters Perspective",
+      "state": "parked-conditional"
+    },
+    "M1": {
+      "repository": "zuizui0223/tnoa",
+      "target": "Methods in Ecology and Evolution",
+      "science_blocker": false,
+      "machine_production_blocker": false,
+      "latest_validation_run": 34665544834,
+      "remaining_class": "human-metadata-ai-disclosure-visual"
+    },
+    "M2": {
+      "repository": "zuizui0223/mrod",
+      "target": "Methods in Ecology and Evolution",
+      "science_blocker": false,
+      "machine_production_blocker": false,
+      "scientific_version_of_record": "a8d21b30646df4dc337f1455ca7d89662b4d7ba3",
+      "pdf_production_run": 34603759786,
+      "pdf_artifact_id": 10265242618,
+      "pdf_artifact_digest": "sha256:cb430f7bc68bfcc91d1f64b459b4cf11f6a0784e379506dbb9eb4a06ad85ce0d",
+      "remaining_class": "human-metadata-ai-disclosure-title-page-visual"
+    },
+    "M3": {
+      "repository": "zuizui0223/ced",
+      "target": "Ecological Modelling",
+      "science_blocker": false,
+      "machine_production_blocker": false,
+      "latest_package_source_sha": "074bdf82e9fe4be47246de25210d798b546bdf6c",
+      "latest_package_run": 34665521229,
+      "latest_package_artifact_id": 10289241067,
+      "latest_package_artifact_digest": "sha256:568c8107ae66faa9272a5c40a19b5099b9f54cee4123365c4c29ab7623cd5f40",
+      "citation_missing": 0,
+      "citation_unused": 0,
+      "remaining_class": "human-metadata-ai-declaration-visual-live-portal"
+    },
+    "M4": {
+      "repository": "zuizui0223/v3",
+      "source_repositories": ["zuizui0223/v3", "zuizui0223/rec"],
+      "target": "Ecological Informatics",
+      "science_blocker": false,
+      "machine_production_blocker": false,
+      "final_status_ci_run": 34665099839,
+      "reviewer_package_run": 34604732209,
+      "reviewer_package_artifact_id": 10265608917,
+      "reviewer_package_artifact_digest": "sha256:eb3c2f33a1fc4e1ce1e1160c501180091f718088243a6bc245d2cfa9bcf261df",
+      "text_overlap_run": 34604836830,
+      "ai_contract_ci_run": 34665388809,
+      "findlay_raw_csv_redistribution_allowed": false,
+      "remaining_class": "human-metadata-ai-declaration-visual-live-portal"
+    }
+  },
+  "stop_rule": "Do not reopen frozen science to solve author, formatting, declaration, visual-QA or upload-field problems."
+}
