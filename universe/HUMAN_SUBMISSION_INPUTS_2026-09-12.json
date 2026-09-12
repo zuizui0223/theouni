@@ -1,0 +1,79 @@
+{
+  "schema": "human-submission-inputs-v1",
+  "date": "2026-09-12",
+  "scope": "observation_evidence_track_only",
+  "status": "human-input-open-machine-work-closed",
+  "working_author_record": {
+    "publication_name": "Ruiqi Zhang",
+    "publication_name_status": "documented-in-mrod-confirm-before-cross-paper-propagation",
+    "affiliation": "Kyoto University, Kyoto, Japan",
+    "affiliation_status": "documented-for-mrod-only-confirm-before-cross-paper-propagation",
+    "department_or_unit": null,
+    "correspondence_email": null,
+    "correspondence_postal_address": null,
+    "orcid": null
+  },
+  "shared_declarations": {
+    "funding_statement": null,
+    "competing_interest_statement": null,
+    "general_acknowledgements": null,
+    "archive_doi": null
+  },
+  "ai_assistance": {
+    "tool_or_service_names": null,
+    "exact_application_model_versions": null,
+    "scope_of_use": null,
+    "responsible_human_author": null,
+    "ai_assisted_code_annotation_check": null,
+    "do_not_infer_from_repository_history": true
+  },
+  "papers": {
+    "C2": {
+      "target": "Trends in Ecology & Evolution Opinion",
+      "working_author_list": ["Ruiqi Zhang"],
+      "working_corresponding_author": "Ruiqi Zhang",
+      "authorship_status": "provisional-human-approval-required",
+      "human_gates": ["final authorship approval", "broad-interest outside read", "live contact route check"]
+    },
+    "M1": {
+      "target": "Methods in Ecology and Evolution",
+      "final_author_list": null,
+      "corresponding_author": null,
+      "credit": null,
+      "ai_disclosure_finalized": false,
+      "visual_inspection_complete": false
+    },
+    "M2": {
+      "target": "Methods in Ecology and Evolution",
+      "working_author_list": ["Ruiqi Zhang"],
+      "working_corresponding_author": "Ruiqi Zhang",
+      "authorship_status": "documented-in-mrod-title-page-confirm-final",
+      "credit_finalized": false,
+      "ai_disclosure_finalized": false,
+      "visual_inspection_complete": false
+    },
+    "M3": {
+      "target": "Ecological Modelling",
+      "final_author_list": null,
+      "corresponding_author": null,
+      "credit": null,
+      "ai_declaration_finalized": false,
+      "visual_inspection_complete": false
+    },
+    "M4": {
+      "target": "Ecological Informatics",
+      "final_author_list": null,
+      "corresponding_author": null,
+      "credit": null,
+      "ai_declaration_finalized": false,
+      "visual_inspection_complete": false,
+      "raw_findlay_redistribution_allowed": false
+    },
+    "C1": {
+      "target": "Ecology Letters Perspective",
+      "status": "parked-conditional",
+      "human_metadata_effort_now": false
+    }
+  },
+  "hard_rule": "Missing human metadata must not reopen frozen scientific claims, theorems, benchmarks or numerical results."
+}
