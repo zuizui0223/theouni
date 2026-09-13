@@ -8,6 +8,7 @@ on:
       - 'universe/**'
       - 'thesis/**'
       - 'proposals/**'
+      - 'manuscript/**'
       - 'scripts/**'
       - 'graphify-out/WORLDLINE_REPORT.md'
       - 'graphify-out/DISSERTATION_REPORT.md'
@@ -21,6 +22,7 @@ on:
       - 'universe/**'
       - 'thesis/**'
       - 'proposals/**'
+      - 'manuscript/**'
       - 'scripts/**'
       - 'graphify-out/WORLDLINE_REPORT.md'
       - 'graphify-out/DISSERTATION_REPORT.md'
@@ -110,6 +112,9 @@ jobs:
 
       - name: Validate Observation Evidence track publication programme
         run: python scripts/validate_publication_programme.py
+
+      - name: Validate full C2 TREE Opinion manuscript
+        run: python scripts/validate_c2_manuscript.py
 
       - name: Validate C2 fail-closed dispatch gate
         run: python scripts/validate_c2_dispatch_gate.py
