@@ -1,0 +1,55 @@
+{
+  "schema": "c2-tree-manuscript-status-v1",
+  "date": "2026-09-13",
+  "paper": "C2_MORE_MEASUREMENT_NOT_MORE_EVIDENCE",
+  "target": "Trends in Ecology & Evolution Opinion",
+  "status": "preferred-full-draft-v4-validated",
+  "preferred_manuscript": "manuscript/C2_TREE_OPINION_DRAFT_V4.md",
+  "title": "When more measurement is not more evidence",
+  "article_spine": {
+    "positive_properties": [
+      "separation",
+      "relevance",
+      "failure diversity",
+      "timely preservation"
+    ],
+    "paired_failures": [
+      "same dimension",
+      "wrong target",
+      "false independence",
+      "too late"
+    ],
+    "central_rule": "Before collecting more data, ask what distinction the next measurement must create or preserve for the conclusion to change."
+  },
+  "validation": {
+    "run": 34750507798,
+    "source_sha": "16f32b2f3c453ea841353c294c69bd610e3aa01a",
+    "conclusion": "success",
+    "words_before_references": 3989,
+    "external_references": 14,
+    "boundary_exact_surface_present": false,
+    "internal_repository_or_placeholder_surface_present": false,
+    "decision_theory_non_harm_caveat_present": true,
+    "ecology_and_evolution_surface_present": true
+  },
+  "major_v4_changes": [
+    "reframed four failures as missing positive properties in a single measurement-to-evidence diagnostic",
+    "defined evidential progress operationally rather than as a general philosophical claim",
+    "added explicit caveat that cost-free ignorable information is not claimed to be harmful",
+    "made finite-budget measurement choice explicit in the wrong-target example",
+    "removed all unpublished source-manuscript placeholders from submission-facing prose",
+    "expanded and bibliographically corrected the external literature to 14 references",
+    "made Campanula and island pollination self-contained prospective worked examples"
+  ],
+  "next_manuscript_tasks": [
+    "journal-style copyedit for concision and TREE voice",
+    "turn Figure 1 specification into final conceptual figure",
+    "check reference style against live invited-manuscript instructions after editorial interest",
+    "resolve final title only after manuscript-level editorial read"
+  ],
+  "do_not_reopen": [
+    "Boundary exact rank theorem ownership",
+    "CED/MROD/REC/TNOA source-paper result ownership",
+    "new benchmark analysis merely to make the Opinion look more quantitative"
+  ]
+}
