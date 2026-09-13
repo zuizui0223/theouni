@@ -108,6 +108,9 @@ jobs:
       - name: Validate Observation Evidence track publication programme
         run: python scripts/validate_publication_programme.py
 
+      - name: Validate C2 fail-closed dispatch gate
+        run: python scripts/validate_c2_dispatch_gate.py
+
       - name: Validate concise publication handoff and human-input gate
         run: python scripts/validate_publication_handoff.py
 
