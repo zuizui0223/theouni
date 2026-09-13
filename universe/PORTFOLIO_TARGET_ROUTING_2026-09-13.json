@@ -1,0 +1,26 @@
+{
+  "schema": "zuizui0223-portfolio-target-routing-v1",
+  "date": "2026-09-13",
+  "status": "canonical_target_routing_overlay",
+  "base_governance": "universe/PORTFOLIO_GOVERNANCE_2026-09-11.json",
+  "scope": "journal routing only; paper-unit count, ownership, and paper_state remain governed by the base snapshot",
+  "changes": [
+    {
+      "paper_id": "ADAPTIVE_GAIN",
+      "home": "adaptive-gain",
+      "previous_first_target": "Theoretical Ecology",
+      "first_target": "Evolution Letters",
+      "submission_sequence": [
+        "Evolution Letters",
+        "The American Naturalist",
+        "Theoretical Ecology"
+      ],
+      "conditional_route": "Ecology Letters only if ecological recurrence is unmistakably load-bearing in the final narrative",
+      "paper_state": "SUBMISSION_READY",
+      "scientific_trigger": "nonlinear monotone-Lipschitz no-go theorem plus canonical Evolution Letters V2 surface machine-validated on adaptive-gain head 4a58f485d7a5920f0af62b4847ec2e3f3f340d2b",
+      "claim": "finite sensing architecture can exclude local eco-evolutionary feedback regimes",
+      "stop_rule": "Do not add theorem families to chase journal status; preserve the Theoretical Ecology package as fallback."
+    }
+  ],
+  "resolution_rule": "For journal-target questions after 2026-09-13, apply this overlay after the 2026-09-11 portfolio governance snapshot."
+}
