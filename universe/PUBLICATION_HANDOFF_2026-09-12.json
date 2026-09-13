@@ -10,6 +10,8 @@
     "C2": {
       "target": "Trends in Ecology & Evolution Opinion",
       "machine_state": "ready",
+      "dispatch_gate": "proposals/C2_DISPATCH_GATE_2026-09-13.json",
+      "outside_reader_request": "proposals/C2_OUTSIDE_READER_REQUEST_DRAFT.md",
       "live_route_verified_on": "2026-09-12",
       "current_live_contact": "tree@cell.com",
       "current_live_editor": "Andrea Stephens",
