@@ -5,7 +5,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-MANUSCRIPT = ROOT / "manuscript" / "C2_TREE_OPINION_DRAFT_V3.md"
+MANUSCRIPT = ROOT / "manuscript" / "C2_TREE_OPINION_DRAFT_V4.md"
 
 WORD_RE = re.compile(r"\b[\w*<>/=+.-]+\b", re.UNICODE)
 
@@ -21,17 +21,21 @@ def main() -> None:
         "## Abstract",
         "## The bottleneck is not always data quantity",
         "### A necessary non-harm caveat",
-        "## Failure 1: more precision can stay in the same evidential dimension",
-        "## Failure 2: more information can answer the wrong question",
-        "## Failure 3: more replicates can share the same blind spot",
-        "## Failure 4: better downstream processing can arrive too late",
-        "## The synthesis is a decision rule, not a four-box warning",
+        "## Property 1 — Separation",
+        "### Failure when missing: same dimension",
+        "## Property 2 — Relevance",
+        "### Failure when missing: wrong target",
+        "## Property 3 — Failure diversity",
+        "### Failure when missing: false independence",
+        "## Property 4 — Timely preservation",
+        "### Failure when missing: too late",
+        "## A four-question screen for the next measurement",
         "## Box 1. Island *Campanula*",
         "## Box 2. Island pollination",
         "## A measurement contract for ecological and evolutionary studies",
         "## Outstanding questions",
         "## Conclusion: ask what the next measurement changes",
-        "## Figure 1. Diagnostic-first measurement escalation",
+        "## Figure 1. From more measurement to more evidence: a four-question screen",
         "## References",
     ]
     for item in required:
@@ -42,7 +46,12 @@ def main() -> None:
     word_count = len(WORD_RE.findall(body))
     assert 3000 <= word_count <= 6000, word_count
 
-    # The broad-audience draft explicitly addresses ecology and evolution.
+    # Explicit operational definition of evidential progress.
+    assert "we use **evidential progress** in this operational sense" in lower
+    assert "increased ability to distinguish among live alternatives" in lower
+    assert "observation process actually preserves" in lower
+
+    # Broad ecology/evolution surface.
     for phrase in (
         "ecology and evolution",
         "genomic",
@@ -53,8 +62,7 @@ def main() -> None:
     ):
         assert phrase in lower, phrase
 
-    # Protect the crucial decision-theoretic caveat: C2 is about failure of
-    # quantity/performance metrics as proxies, not a theorem that information is harmful.
+    # Protect the decision-theoretic caveat: C2 is about proxy failure, not a theorem that information harms.
     for phrase in (
         "extra information is intrinsically harmful",
         "cost-free observation that can simply be ignored",
@@ -63,8 +71,32 @@ def main() -> None:
     ):
         assert phrase in lower, phrase
 
-    # C1/Boundary keeps its exact theorem/diagnostic surface. C2 states only the
-    # qualitative same-dimension lesson.
+    # Unified positive spine.
+    for phrase in (
+        "separation",
+        "relevance",
+        "failure diversity",
+        "timely preservation",
+        "four-question screen",
+        "measurement escalation should be diagnostic-first, not quantity-first",
+    ):
+        assert phrase in lower, phrase
+
+    # The four properties map one-to-one to the four failures/remedies.
+    mapping_phrases = (
+        "same dimension",
+        "wrong target",
+        "false independence",
+        "too late",
+        "measure a new distinction",
+        "target-relevant information",
+        "diversify failure domains",
+        "capture earlier",
+    )
+    for phrase in mapping_phrases:
+        assert phrase in lower, phrase
+
+    # C1/Boundary keeps its exact theorem/diagnostic surface.
     for forbidden in (
         "k-rank(M)",
         "Gamma/kappa",
@@ -74,7 +106,7 @@ def main() -> None:
     ):
         assert forbidden not in text, forbidden
 
-    # Submission-facing manuscript must not expose internal repository/provenance labels.
+    # Submission-facing manuscript must not expose internal provenance labels.
     for forbidden in (
         "zuizui0223",
         "manuscript placeholder",
@@ -84,28 +116,17 @@ def main() -> None:
     ):
         assert forbidden not in lower, forbidden
 
-    # C2 must stay remedy-matched rather than a four-box warning list.
-    for phrase in (
-        "diagnostic-first, not quantity-first",
-        "measure a new distinction",
-        "target-relevant information",
-        "diversify failure domains",
-        "capture the distinction earlier",
-        "what distinction the next measurement must create or preserve",
-    ):
-        assert phrase.lower() in lower, phrase
-
-    # Worked examples retain their epistemic ceilings while remaining self-contained.
+    # Worked examples retain their epistemic ceilings.
     assert "worked design example, not a new empirical validation claim" in lower
     assert "translation contract for observation design, not an empirical causal conclusion" in lower
 
-    # The manuscript explicitly rejects exhaustiveness and a universal score.
+    # Avoid converting the screen into an overclaimed theorem.
+    assert "not a necessary-and-sufficient theorem for all evidence" in lower
     assert "are the four failures exhaustive?" in lower
     assert "no. they are intended as a useful cross-cutting set" in lower
     assert "universal proxy for evidential strength" in lower
 
-    # Reference surface: enough external literature to prevent the Opinion from
-    # reading as an internal-programme synthesis.
+    # Reference surface: enough external literature to make this an externally grounded Opinion.
     references = text.split("## References", 1)[1]
     numbered_refs = re.findall(r"(?m)^\d+\. ", references)
     assert len(numbered_refs) >= 14, len(numbered_refs)
@@ -127,7 +148,7 @@ def main() -> None:
     ):
         assert doi in text, doi
 
-    print(f"C2_TREE_MANUSCRIPT_V3 PASS words_before_references={word_count} refs={len(numbered_refs)}")
+    print(f"C2_TREE_MANUSCRIPT_V4 PASS words_before_references={word_count} refs={len(numbered_refs)}")
 
 
 if __name__ == "__main__":
