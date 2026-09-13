@@ -5,7 +5,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-MANUSCRIPT = ROOT / "manuscript" / "C2_TREE_OPINION_DRAFT_V2.md"
+MANUSCRIPT = ROOT / "manuscript" / "C2_TREE_OPINION_DRAFT_V3.md"
 
 WORD_RE = re.compile(r"\b[\w*<>/=+.-]+\b", re.UNICODE)
 
@@ -19,7 +19,8 @@ def main() -> None:
         "# When more measurement is not more evidence",
         "## Highlights",
         "## Abstract",
-        "## The problem is no longer simply how to collect more data",
+        "## The bottleneck is not always data quantity",
+        "### A necessary non-harm caveat",
         "## Failure 1: more precision can stay in the same evidential dimension",
         "## Failure 2: more information can answer the wrong question",
         "## Failure 3: more replicates can share the same blind spot",
@@ -41,14 +42,24 @@ def main() -> None:
     word_count = len(WORD_RE.findall(body))
     assert 3000 <= word_count <= 6000, word_count
 
-    # The broad-audience revision must explicitly address both ecology and evolution.
-    assert "ecology and evolution" in lower
+    # The broad-audience draft explicitly addresses ecology and evolution.
     for phrase in (
+        "ecology and evolution",
         "genomic",
         "environmental-dna",
-        "evolutionary study",
+        "evolutionary biology",
         "populations",
         "biodiversity sequencing",
+    ):
+        assert phrase in lower, phrase
+
+    # Protect the crucial decision-theoretic caveat: C2 is about failure of
+    # quantity/performance metrics as proxies, not a theorem that information is harmful.
+    for phrase in (
+        "extra information is intrinsically harmful",
+        "cost-free observation that can simply be ignored",
+        "proxy-to-responsibility mapping",
+        "does not guarantee more resolution of the claim",
     ):
         assert phrase in lower, phrase
 
@@ -63,6 +74,16 @@ def main() -> None:
     ):
         assert forbidden not in text, forbidden
 
+    # Submission-facing manuscript must not expose internal repositories or placeholders.
+    for forbidden in (
+        "zuizui0223",
+        "manuscript placeholder",
+        "source ledger",
+        "source programme",
+        "repo",
+    ):
+        assert forbidden not in lower, forbidden
+
     # C2 must stay remedy-matched rather than a four-box warning list.
     for phrase in (
         "diagnostic-first, not quantity-first",
@@ -74,24 +95,39 @@ def main() -> None:
     ):
         assert phrase.lower() in lower, phrase
 
-    # Worked examples retain their epistemic ceilings.
+    # Worked examples retain their epistemic ceilings while remaining self-contained.
     assert "worked design example, not a new empirical validation claim" in lower
     assert "translation contract for observation design, not an empirical causal conclusion" in lower
-
-    # Source manuscripts remain explicit placeholders until citable versions exist.
-    for placeholder in (
-        "Boundary manuscript placeholder",
-        "MROD manuscript placeholder",
-        "MROD island-pollination translation placeholder",
-    ):
-        assert placeholder in text, placeholder
 
     # The manuscript explicitly rejects exhaustiveness and a universal score.
     assert "are the four failures exhaustive?" in lower
     assert "no. they are intended as a useful cross-cutting set" in lower
     assert "universal proxy for evidential strength" in lower
 
-    print(f"C2_TREE_MANUSCRIPT_V2 PASS words_before_references={word_count}")
+    # Reference surface: enough external literature to prevent the Opinion from
+    # reading as a synthesis of the author's own repositories.
+    references = text.split("## References", 1)[1]
+    numbered_refs = re.findall(r"(?m)^\d+\. ", references)
+    assert len(numbered_refs) >= 14, len(numbered_refs)
+    for doi in (
+        "10.1371/journal.pcbi.1005153",
+        "10.1093/bioinformatics/bts092",
+        "10.1088/1361-6420/aad210",
+        "10.1111/2041-210X.12423",
+        "10.1016/j.tree.2006.08.007",
+        "10.1016/j.tree.2009.03.005",
+        "10.2307/1942661",
+        "10.1111/ele.14400",
+        "10.1890/0012-9658(2002)083[2248:ESORWD]2.0.CO;2",
+        "10.1111/geb.12138",
+        "10.1111/geb.13070",
+        "10.1111/2041-210X.14485",
+        "10.1111/2041-210X.12849",
+        "10.1002/lom3.10659",
+    ):
+        assert doi in text, doi
+
+    print(f"C2_TREE_MANUSCRIPT_V3 PASS words_before_references={word_count} refs={len(numbered_refs)}")
 
 
 if __name__ == "__main__":
