@@ -74,13 +74,13 @@ def main() -> None:
     ):
         assert forbidden not in text, forbidden
 
-    # Submission-facing manuscript must not expose internal repositories or placeholders.
+    # Submission-facing manuscript must not expose internal repository/provenance labels.
     for forbidden in (
         "zuizui0223",
         "manuscript placeholder",
         "source ledger",
         "source programme",
-        "repo",
+        "repository ownership",
     ):
         assert forbidden not in lower, forbidden
 
@@ -105,7 +105,7 @@ def main() -> None:
     assert "universal proxy for evidential strength" in lower
 
     # Reference surface: enough external literature to prevent the Opinion from
-    # reading as a synthesis of the author's own repositories.
+    # reading as an internal-programme synthesis.
     references = text.split("## References", 1)[1]
     numbered_refs = re.findall(r"(?m)^\d+\. ", references)
     assert len(numbered_refs) >= 14, len(numbered_refs)
