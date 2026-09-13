@@ -13,6 +13,8 @@
     "authorship_ledger": "proposals/C2_AUTHORSHIP_LEDGER.json",
     "author_metadata_template": "proposals/C2_TREE_AUTHOR_METADATA_TEMPLATE.md",
     "outside_reader_packet": "proposals/C2_OUTSIDE_READER_PACKET.md",
+    "outside_reader_request": "proposals/C2_OUTSIDE_READER_REQUEST_DRAFT.md",
+    "dispatch_gate": "proposals/C2_DISPATCH_GATE_2026-09-13.json",
     "editorial_red_team": "proposals/C2_TREE_RED_TEAM.md",
     "live_route_check": "proposals/C2_TREE_LIVE_ROUTE_CHECK_20260912.md",
     "figure1_decision_map_spec": "proposals/C2_FIGURE1_DECISION_MAP_SPEC.md"
@@ -33,6 +35,8 @@
     "broad_interest_editor_pitch_written": true,
     "frozen_send_candidate_written": true,
     "outside_reader_packet_written": true,
+    "outside_reader_request_written": true,
+    "fail_closed_dispatch_gate_written": true,
     "tree_editorial_red_team_completed": true,
     "internal_red_team_decision": "GO subject to outside-reader check and final authorship/contact confirmation",
     "proposal_first_strategy": true,
@@ -75,5 +79,5 @@
     "new scientific analysis in Boundary/CED/MROD/REC/TNOA/V3",
     "adding senior coauthors by status alone"
   ],
-  "send_gate": "Send only after final authorship, the outside-reader gate, and a dispatch-time live route recheck are explicitly closed; do not alter source ownership or inflate the author list to improve perceived prestige."
+  "send_gate": "Send only after final authorship, the outside-reader gate, and a dispatch-time live route recheck are explicitly closed in proposals/C2_DISPATCH_GATE_2026-09-13.json; do not alter source ownership or inflate the author list to improve perceived prestige."
 }
