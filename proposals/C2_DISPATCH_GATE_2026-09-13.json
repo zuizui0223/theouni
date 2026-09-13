@@ -1,0 +1,36 @@
+{
+  "schema": "c2-tree-dispatch-gate-v1",
+  "date": "2026-09-13",
+  "paper": "C2_MORE_MEASUREMENT_NOT_MORE_EVIDENCE",
+  "target": "Trends in Ecology & Evolution Opinion",
+  "status": "not-authorized-to-send",
+  "machine_ready": true,
+  "machine_blockers": 0,
+  "current_working_author": "Ruiqi Zhang",
+  "current_working_corresponding_author": "Ruiqi Zhang",
+  "c1_boundary_state": "parked behind C2 editorial outcome",
+  "gates": {
+    "authorship_approval": {
+      "required": true,
+      "closed": false,
+      "close_when": "Final C2 author list/order and corresponding-author responsibility are explicitly approved."
+    },
+    "outside_reader": {
+      "required": true,
+      "closed": false,
+      "request_draft": "proposals/C2_OUTSIDE_READER_REQUEST_DRAFT.md",
+      "reader_packet": "proposals/C2_OUTSIDE_READER_PACKET.md",
+      "release_rule": "score >= 9 and figure-logic pass => local edits only; score 7-8 => revise weakest section; score <= 6 or figure-logic fail => no dispatch"
+    },
+    "dispatch_time_route_recheck": {
+      "required": true,
+      "closed": false,
+      "dated_receipt": "proposals/C2_TREE_LIVE_ROUTE_CHECK_20260912.md",
+      "current_contact_from_receipt": "tree@cell.com",
+      "rule": "Recheck the live TREE/Cell Press/Elsevier proposal route immediately before actual dispatch."
+    }
+  },
+  "send_candidate": "proposals/C2_TREE_SEND_CANDIDATE.md",
+  "send_rule": "Do not send unless every required gate has closed=true. Closing a gate must record the human evidence; do not infer closure from repository activity or elapsed time.",
+  "stop_rule": "Do not reopen Boundary/CED/MROD/REC/TNOA/V3 science to close a C2 dispatch gate."
+}
