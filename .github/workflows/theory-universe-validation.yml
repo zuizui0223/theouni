@@ -105,6 +105,9 @@ jobs:
       - name: Validate whole-owner portfolio governance
         run: python scripts/validate_portfolio_governance.py
 
+      - name: Validate portfolio target-routing overlay
+        run: python scripts/validate_portfolio_target_routing.py
+
       - name: Validate Observation Evidence track publication programme
         run: python scripts/validate_publication_programme.py
 
