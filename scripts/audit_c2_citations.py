@@ -58,27 +58,27 @@ def main() -> None:
             expected,
         ),
         "separation": (
-            "## Interface 1 — Separation",
-            "## Interface 2 — Relevance",
+            "## Interface 1 — Separation: does the measurement distinguish a live alternative?",
+            "## Interface 2 — Relevance: can the distinction change the declared target?",
             {1},
         ),
         "relevance": (
-            "## Interface 2 — Relevance",
-            "## Interface 3 — Failure diversity",
+            "## Interface 2 — Relevance: can the distinction change the declared target?",
+            "## Interface 3 — Failure diversity: is this a genuinely new opportunity for evidence to survive?",
             {2, 3, 4, 5, 6},
         ),
         "failure_diversity": (
-            "## Interface 3 — Failure diversity",
-            "## Interface 4 — Timely preservation",
+            "## Interface 3 — Failure diversity: is this a genuinely new opportunity for evidence to survive?",
+            "## Interface 4 — Timely preservation: is the needed distinction still available downstream?",
             {7, 8},
         ),
         "timely_preservation": (
-            "## Interface 4 — Timely preservation",
+            "## Interface 4 — Timely preservation: is the needed distinction still available downstream?",
             "## A four-question distinction-flow audit",
             {9, 10, 11, 12, 13, 14},
         ),
         "metabarcoding_box": (
-            "## Box 2. Metabarcoding",
+            "## Box 2. Metabarcoding: improve the interface that lost the taxon",
             "## What this stance changes",
             {11, 12, 13, 14},
         ),
@@ -95,12 +95,12 @@ def main() -> None:
         }
 
     # Prevent citation dumping after the claim-bearing prose: each core interface
-    # must contain at least one citation in its first two substantive paragraphs.
+    # must contain at least one relevant citation in its first two substantive paragraphs.
     first_anchor_expectations = {
-        "## Interface 1 — Separation": {1},
-        "## Interface 2 — Relevance": {2, 3, 4},
-        "## Interface 3 — Failure diversity": {7, 8},
-        "## Interface 4 — Timely preservation": {9, 10},
+        "## Interface 1 — Separation: does the measurement distinguish a live alternative?": {1},
+        "## Interface 2 — Relevance: can the distinction change the declared target?": {2, 3, 4},
+        "## Interface 3 — Failure diversity: is this a genuinely new opportunity for evidence to survive?": {7, 8},
+        "## Interface 4 — Timely preservation: is the needed distinction still available downstream?": {9, 10},
     }
     local_anchor = {}
     for heading, required in first_anchor_expectations.items():
