@@ -8,7 +8,7 @@ This is the concise operational handoff for the Observation/Evidence publication
 
 | Unit | Target | Current state | Next true gate |
 |---|---|---|---|
-| C2 | Trends in Ecology & Evolution Opinion | proposal-ready and validated full manuscript v5 available; live proposal route checked 2026-09-12 | final authorship + one broad-interest read + dispatch-time route recheck |
+| C2 | Trends in Ecology & Evolution Opinion | proposal-ready and validated full manuscript v6 available; live proposal route checked 2026-09-12 | final authorship + one broad-interest read + dispatch-time route recheck |
 | C1 / Boundary | Ecology Letters Perspective | machine-ready, strategically parked; independent owner of identification geometry | keep parked until C2 editorial outcome; activate only under the explicit trigger/firewall |
 | M1 | TNOA → Methods in Ecology and Evolution | science closed; DOCX/reviewer bundle/figures validated | human metadata + AI disclosure + visual check |
 | M2 | MROD → Methods in Ecology and Evolution | science frozen; anonymous Main/SI PDFs validated | human metadata/title page + AI disclosure + visual check |
@@ -24,18 +24,22 @@ Machine assets complete:
 - authorship ledger and author-metadata template;
 - outside-reader packet and editorial red-team;
 - machine-readable send gate;
-- validated full Opinion manuscript v5: `manuscript/C2_TREE_OPINION_DRAFT_V5.md`;
+- validated full Opinion manuscript v6: `manuscript/C2_TREE_OPINION_DRAFT_V6.md`;
+- section-aware citation audit: `scripts/audit_c2_citations.py`;
+- Figure 1 vector: `manuscript/figures/C2_FIGURE1_MEASUREMENT_TO_EVIDENCE.svg`;
 - manuscript status receipt: `manuscript/C2_MANUSCRIPT_STATUS_2026-09-14.json`;
 - live-route receipt: `proposals/C2_TREE_LIVE_ROUTE_CHECK_20260912.md`.
 
-Full manuscript v5 state:
+Full manuscript v6 state:
 
 - title: **When more measurement is not more evidence**;
-- 4,896 words before References under the repository validator;
-- 14 external references;
+- **3,503 words** before References under the repository validator;
+- **14/14 external references cited**, with section-level and early claim-anchor coverage checked;
 - cross-domain boxes: prospective island *Campanula* plus metabarcoding;
-- manuscript validation run `34797039443` — success;
+- Figure 1 machine-generated and machine-validated against the measurement-to-evidence interface specification;
+- manuscript/citation/Figure validation run `34798007047` — success;
 - conceptual spine: timely preservation / separation / relevance / failure diversity;
+- v5→v6 editorial compression removed **1,393 words (28.45%)** without adding science or removing references;
 - exact Boundary theorem surface, internal repository labels and unpublished-source placeholders are absent from the submission-facing manuscript.
 
 Current route independently checked on 2026-09-12:
@@ -44,7 +48,7 @@ Current route independently checked on 2026-09-12:
 - contact: **tree@cell.com**;
 - route: **proposal by email to the editor before full-manuscript dispatch**.
 
-This is a dated receipt, not permission to skip a dispatch-time recheck. The existence of a finished full manuscript does **not** override the proposal-first route: do not attach or dispatch v5 with the presubmission pitch unless TREE requests it or the live instructions change.
+This is a dated receipt, not permission to skip a dispatch-time recheck. The existence of a finished full manuscript does **not** override the proposal-first route: do not attach or dispatch v6 with the presubmission pitch unless TREE requests it or the live instructions change.
 
 Working proposal authorship: **Ruiqi Zhang — provisional first/corresponding author**. Do not add authors based only on supervision, seniority, source ownership or commits.
 
