@@ -11,7 +11,7 @@ LIVE_RULES = ROOT / "universe" / "LIVE_JOURNAL_RULES_2026-09-12.md"
 HUMAN_JSON = ROOT / "universe" / "HUMAN_SUBMISSION_INPUTS_2026-09-12.json"
 HUMAN_MD = ROOT / "universe" / "HUMAN_SUBMISSION_INPUTS_2026-09-12.md"
 PROPAGATION = ROOT / "universe" / "HUMAN_INPUT_PROPAGATION_MAP_2026-09-12.json"
-C2_MANUSCRIPT = ROOT / "manuscript" / "C2_TREE_OPINION_DRAFT_V5.md"
+C2_MANUSCRIPT = ROOT / "manuscript" / "C2_TREE_OPINION_DRAFT_V6.md"
 C2_MANUSCRIPT_STATUS = ROOT / "manuscript" / "C2_MANUSCRIPT_STATUS_2026-09-14.json"
 
 
@@ -67,11 +67,15 @@ def main() -> None:
     c2 = units["C2"]
     assert c2["machine_state"] == "proposal-and-full-manuscript-ready"
     assert c2["sent"] is False
-    assert c2["preferred_full_manuscript"] == "manuscript/C2_TREE_OPINION_DRAFT_V5.md"
+    assert c2["preferred_full_manuscript"] == "manuscript/C2_TREE_OPINION_DRAFT_V6.md"
     assert c2["full_manuscript_status"] == "manuscript/C2_MANUSCRIPT_STATUS_2026-09-14.json"
-    assert c2["full_manuscript_words_before_references"] == 4896
+    assert c2["full_manuscript_words_before_references"] == 3503
     assert c2["full_manuscript_external_references"] == 14
-    assert c2["full_manuscript_validation_run"] == 34797039443
+    assert c2["full_manuscript_validation_run"] == 34798007047
+    assert c2["full_manuscript_validation_head"] == "3cbed18df2b088ebfe566c3aa9e6ad49fbe96b49"
+    assert c2["citation_audit_pass"] is True
+    assert c2["all_external_references_cited"] is True
+    assert c2["figure1_machine_validated"] is True
     assert "do not attach" in c2["full_manuscript_dispatch_policy"].lower()
     assert c2["live_route_verified_on"] == "2026-09-12"
     assert c2["current_live_contact"] == "tree@cell.com"
@@ -83,16 +87,27 @@ def main() -> None:
         "dispatch-time route recheck",
     }
 
-    assert c2_status["status"] == "preferred-full-manuscript-v5-figure1-machine-validated"
-    assert c2_status["preferred_manuscript"] == "manuscript/C2_TREE_OPINION_DRAFT_V5.md"
-    assert c2_status["word_count_before_references"] == 4896
+    assert c2_status["status"] == "preferred-full-manuscript-v6-machine-validated"
+    assert c2_status["preferred_manuscript"] == "manuscript/C2_TREE_OPINION_DRAFT_V6.md"
+    assert c2_status["word_count_before_references"] == 3503
     assert c2_status["external_reference_count"] == 14
-    assert c2_status["validation"]["run_id"] == 34797039443
+    assert c2_status["validation"]["run_id"] == 34798007047
+    assert c2_status["validation"]["head_sha"] == "3cbed18df2b088ebfe566c3aa9e6ad49fbe96b49"
     assert c2_status["validation"]["conclusion"] == "success"
+    assert c2_status["validation"]["citation_audit_status"] == "pass"
+    assert c2_status["validation"]["all_external_references_cited"] is True
+    assert c2_status["validation"]["section_level_citation_coverage"] is True
     assert c2_status["figure1"]["machine_generated"] is True
     assert c2_status["figure1"]["machine_validated"] is True
-    assert c2_status["figure1"]["validation_run"] == 34797557513
+    assert c2_status["figure1"]["validation_run"] == 34798007047
     assert c2_status["figure1"]["human_visual_inspection_complete"] is False
+    assert c2_status["editorial_compression"]["from_version"] == "v5"
+    assert c2_status["editorial_compression"]["from_words_before_references"] == 4896
+    assert c2_status["editorial_compression"]["to_version"] == "v6"
+    assert c2_status["editorial_compression"]["to_words_before_references"] == 3503
+    assert c2_status["editorial_compression"]["reduction_words"] == 1393
+    assert c2_status["editorial_compression"]["science_added"] is False
+    assert c2_status["editorial_compression"]["references_removed"] == 0
     assert c2_status["journal_route"]["proposal_first"] is True
     assert c2_status["journal_route"]["full_manuscript_should_not_be_dispatched_with_presubmission_pitch_unless_requested"] is True
 
@@ -127,7 +142,10 @@ def main() -> None:
     text = HANDOFF_MD.read_text(encoding="utf-8")
     for required in (
         "science and machine production closed for M1–M4",
-        "validated full Opinion manuscript v5",
+        "validated full Opinion manuscript v6",
+        "3,503 words",
+        "14/14 external references cited",
+        "Figure 1 machine-generated and machine-validated",
         "C1 — Boundary / Ecology Letters Perspective",
         "Boundary is **not archived material and is not absorbed into C2 or CED**",
         "BOUNDARY_ROLE_CONTRACT_2026-09-12.json",
