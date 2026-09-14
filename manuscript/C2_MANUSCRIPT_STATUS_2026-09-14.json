@@ -1,26 +1,30 @@
 {
   "schema": "c2-tree-opinion-manuscript-status-v1",
   "date": "2026-09-14",
-  "status": "preferred-full-manuscript-v5-figure1-machine-validated",
+  "status": "preferred-full-manuscript-v6-machine-validated",
   "target": "Trends in Ecology & Evolution Opinion",
   "title": "When more measurement is not more evidence",
-  "preferred_manuscript": "manuscript/C2_TREE_OPINION_DRAFT_V5.md",
-  "word_count_before_references": 4896,
+  "preferred_manuscript": "manuscript/C2_TREE_OPINION_DRAFT_V6.md",
+  "word_count_before_references": 3503,
   "external_reference_count": 14,
   "validation": {
     "workflow": "Theory Universe Validation",
-    "run_id": 34797039443,
-    "head_sha": "07d20ab0eb8a71e249dd8e9751d3787b545b830e",
+    "run_id": 34798007047,
+    "head_sha": "3cbed18df2b088ebfe566c3aa9e6ad49fbe96b49",
     "conclusion": "success",
-    "manuscript_validator": "scripts/validate_c2_manuscript.py"
+    "manuscript_validator": "scripts/validate_c2_manuscript.py",
+    "citation_audit": "scripts/audit_c2_citations.py",
+    "citation_audit_status": "pass",
+    "all_external_references_cited": true,
+    "section_level_citation_coverage": true
   },
   "figure1": {
     "spec": "proposals/C2_FIGURE1_DECISION_MAP_SPEC.md",
     "vector_file": "manuscript/figures/C2_FIGURE1_MEASUREMENT_TO_EVIDENCE.svg",
     "machine_generated": true,
     "machine_validated": true,
-    "validation_run": 34797557513,
-    "validation_head_sha": "6cb5523051c4a0df02bd7f9e54c7fae77931c255",
+    "validation_run": 34798007047,
+    "validation_head_sha": "3cbed18df2b088ebfe566c3aa9e6ad49fbe96b49",
     "human_visual_inspection_complete": false
   },
   "conceptual_spine": {
@@ -51,6 +55,16 @@
     "extra_information_is_intrinsically_harmful_claim_absent": true,
     "four_interfaces_claimed_exhaustive": false
   },
+  "editorial_compression": {
+    "from_version": "v5",
+    "from_words_before_references": 4896,
+    "to_version": "v6",
+    "to_words_before_references": 3503,
+    "reduction_words": 1393,
+    "reduction_fraction": 0.2845,
+    "science_added": false,
+    "references_removed": 0
+  },
   "journal_route": {
     "proposal_first": true,
     "proposal_contact_receipt": "proposals/C2_TREE_LIVE_ROUTE_CHECK_20260912.md",
@@ -59,9 +73,8 @@
   },
   "remaining_manuscript_work": [
     "human visual inspection of Figure 1",
-    "perform final sentence-level editorial compression and citation-placement audit",
-    "recheck all reference metadata against publisher records immediately before invited full submission",
-    "apply any editor-requested article-length/format constraints after presubmission response"
+    "final publisher-style copyedit only after editorial interest or explicit editor request",
+    "dispatch-time reference metadata spot-check and journal formatting"
   ],
   "science_reopen_rule": "Do not reopen source-paper science merely to increase C2 length or add another failure class."
 }
