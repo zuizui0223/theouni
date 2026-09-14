@@ -1,0 +1,58 @@
+{
+  "schema": "c2-tree-opinion-manuscript-status-v1",
+  "date": "2026-09-14",
+  "status": "preferred-full-manuscript-v5-validated",
+  "target": "Trends in Ecology & Evolution Opinion",
+  "title": "When more measurement is not more evidence",
+  "preferred_manuscript": "manuscript/C2_TREE_OPINION_DRAFT_V5.md",
+  "word_count_before_references": 4896,
+  "external_reference_count": 14,
+  "validation": {
+    "workflow": "Theory Universe Validation",
+    "run_id": 34797039443,
+    "head_sha": "07d20ab0eb8a71e249dd8e9751d3787b545b830e",
+    "conclusion": "success",
+    "manuscript_validator": "scripts/validate_c2_manuscript.py"
+  },
+  "conceptual_spine": {
+    "stance": "Ecological and evolutionary measurement design should be organized around the flow of distinctions required by the claim, not around data volume alone.",
+    "interfaces": [
+      "timely preservation",
+      "separation",
+      "relevance",
+      "failure diversity"
+    ],
+    "failures": [
+      "too late",
+      "same dimension",
+      "wrong target",
+      "false independence"
+    ],
+    "operational_rule": "Before collecting more data, ask what distinction the next measurement must create or preserve for the conclusion to change."
+  },
+  "cross_domain_structure": {
+    "box_1": "prospective island Campanula design example for separation and relevance",
+    "box_2": "metabarcoding design example for timely preservation and failure diversity",
+    "reason": "avoid making the Opinion read as a synthesis of one island-pollination research programme"
+  },
+  "claim_firewalls": {
+    "boundary_exact_theorem_surface_absent": true,
+    "internal_repository_labels_absent": true,
+    "unpublished_source_manuscript_placeholders_absent": true,
+    "extra_information_is_intrinsically_harmful_claim_absent": true,
+    "four_interfaces_claimed_exhaustive": false
+  },
+  "journal_route": {
+    "proposal_first": true,
+    "proposal_contact_receipt": "proposals/C2_TREE_LIVE_ROUTE_CHECK_20260912.md",
+    "full_manuscript_should_not_be_dispatched_with_presubmission_pitch_unless_requested": true,
+    "interpretation": "The full manuscript is a prepared downstream asset, not a reason to bypass the proposal-first TREE route."
+  },
+  "remaining_manuscript_work": [
+    "render and visually inspect Figure 1 from the v5 measurement-to-evidence interface specification",
+    "perform final sentence-level editorial compression after Figure 1 is fixed",
+    "recheck all reference metadata against publisher records immediately before invited full submission",
+    "apply any editor-requested article-length/format constraints after presubmission response"
+  ],
+  "science_reopen_rule": "Do not reopen source-paper science merely to increase C2 length or add another failure class."
+}
