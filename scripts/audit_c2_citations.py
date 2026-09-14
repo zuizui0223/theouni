@@ -6,7 +6,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-MANUSCRIPT = ROOT / "manuscript" / "C2_TREE_OPINION_DRAFT_V5.md"
+MANUSCRIPT = ROOT / "manuscript" / "C2_TREE_OPINION_DRAFT_V6.md"
 OUT = ROOT / "manuscript" / "C2_CITATION_AUDIT_2026-09-14.json"
 
 CITATION_RE = re.compile(r"\[([0-9,–\- ]+)\]")
@@ -94,8 +94,6 @@ def main() -> None:
             "actual": sorted(actual),
         }
 
-    # Prevent citation dumping after the claim-bearing prose: each core interface
-    # must contain at least one relevant citation in its first two substantive paragraphs.
     first_anchor_expectations = {
         "## Interface 1 — Separation: does the measurement distinguish a live alternative?": {1},
         "## Interface 2 — Relevance: can the distinction change the declared target?": {2, 3, 4},
@@ -124,7 +122,7 @@ def main() -> None:
         "status": "pass",
     }
     OUT.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print("C2_CITATION_AUDIT PASS refs=14 all_cited=true section_coverage=true")
+    print("C2_CITATION_AUDIT PASS refs=14 all_cited=true section_coverage=true manuscript=v6")
 
 
 if __name__ == "__main__":
