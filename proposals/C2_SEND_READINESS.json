@@ -17,6 +17,8 @@
     "dispatch_gate": "proposals/C2_DISPATCH_GATE_2026-09-13.json",
     "editorial_red_team": "proposals/C2_TREE_RED_TEAM.md",
     "live_route_check": "proposals/C2_TREE_LIVE_ROUTE_CHECK_20260912.md",
+    "full_manuscript": "manuscript/C2_TREE_OPINION_DRAFT_V5.md",
+    "full_manuscript_status": "manuscript/C2_MANUSCRIPT_STATUS_2026-09-14.json",
     "figure1_decision_map_spec": "proposals/C2_FIGURE1_DECISION_MAP_SPEC.md"
   },
   "machine_checks": {
@@ -40,13 +42,18 @@
     "tree_editorial_red_team_completed": true,
     "internal_red_team_decision": "GO subject to outside-reader check and final authorship/contact confirmation",
     "proposal_first_strategy": true,
+    "full_manuscript_v5_written": true,
+    "full_manuscript_v5_validated": true,
+    "full_manuscript_word_count_before_references": 4896,
+    "full_manuscript_external_reference_count": 14,
+    "full_manuscript_validation_run": 34797039443,
     "historical_official_tree_contact_found": true,
     "historical_official_tree_contact": "tree@cell.com",
     "current_live_journal_contact_independently_confirmed": true,
     "current_live_journal_contact_checked_on": "2026-09-12",
     "current_live_journal_contact": "tree@cell.com",
     "current_live_editor": "Andrea Stephens",
-    "current_public_route": "proposal by email to the editor before full-manuscript preparation",
+    "current_public_route": "proposal by email to the editor before full-manuscript dispatch",
     "dispatch_time_recheck_still_required": true,
     "machine_blockers": 0
   },
@@ -74,10 +81,11 @@
     }
   ],
   "do_not_block_on": [
-    "full manuscript drafting before editorial interest",
     "C1 Ecology Letters submission while C1 remains parked",
     "new scientific analysis in Boundary/CED/MROD/REC/TNOA/V3",
-    "adding senior coauthors by status alone"
+    "adding senior coauthors by status alone",
+    "journal formatting of the full manuscript before the presubmission proposal receives editorial interest"
   ],
+  "full_manuscript_policy": "The validated v5 full manuscript is a prepared downstream asset. Do not attach or dispatch it with the presubmission pitch unless TREE requests it or the live route changes.",
   "send_gate": "Send only after final authorship, the outside-reader gate, and a dispatch-time live route recheck are explicitly closed in proposals/C2_DISPATCH_GATE_2026-09-13.json; do not alter source ownership or inflate the author list to improve perceived prestige."
 }
