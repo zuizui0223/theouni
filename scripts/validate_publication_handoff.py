@@ -11,15 +11,27 @@ LIVE_RULES = ROOT / "universe" / "LIVE_JOURNAL_RULES_2026-09-12.md"
 HUMAN_JSON = ROOT / "universe" / "HUMAN_SUBMISSION_INPUTS_2026-09-12.json"
 HUMAN_MD = ROOT / "universe" / "HUMAN_SUBMISSION_INPUTS_2026-09-12.md"
 PROPAGATION = ROOT / "universe" / "HUMAN_INPUT_PROPAGATION_MAP_2026-09-12.json"
+C2_MANUSCRIPT = ROOT / "manuscript" / "C2_TREE_OPINION_DRAFT_V5.md"
+C2_MANUSCRIPT_STATUS = ROOT / "manuscript" / "C2_MANUSCRIPT_STATUS_2026-09-14.json"
 
 
 def main() -> None:
-    for path in (HANDOFF_JSON, HANDOFF_MD, LIVE_RULES, HUMAN_JSON, HUMAN_MD, PROPAGATION):
+    for path in (
+        HANDOFF_JSON,
+        HANDOFF_MD,
+        LIVE_RULES,
+        HUMAN_JSON,
+        HUMAN_MD,
+        PROPAGATION,
+        C2_MANUSCRIPT,
+        C2_MANUSCRIPT_STATUS,
+    ):
         assert path.exists(), path
 
     handoff = json.loads(HANDOFF_JSON.read_text(encoding="utf-8"))
     human = json.loads(HUMAN_JSON.read_text(encoding="utf-8"))
     propagation = json.loads(PROPAGATION.read_text(encoding="utf-8"))
+    c2_status = json.loads(C2_MANUSCRIPT_STATUS.read_text(encoding="utf-8"))
 
     assert handoff["status"] == "machine-work-closed-human-completion-open"
     assert handoff["scope"] == "observation_evidence_track_only"
@@ -52,17 +64,33 @@ def main() -> None:
     }
     assert "C2 is declined/too broad" in c1["activation_gate"]
 
-    assert units["C2"]["machine_state"] == "ready"
-    assert units["C2"]["sent"] is False
-    assert units["C2"]["live_route_verified_on"] == "2026-09-12"
-    assert units["C2"]["current_live_contact"] == "tree@cell.com"
-    assert units["C2"]["current_live_editor"] == "Andrea Stephens"
-    assert "proposal by email" in units["C2"]["current_public_route"]
-    assert set(units["C2"]["human_gates"]) == {
+    c2 = units["C2"]
+    assert c2["machine_state"] == "proposal-and-full-manuscript-ready"
+    assert c2["sent"] is False
+    assert c2["preferred_full_manuscript"] == "manuscript/C2_TREE_OPINION_DRAFT_V5.md"
+    assert c2["full_manuscript_status"] == "manuscript/C2_MANUSCRIPT_STATUS_2026-09-14.json"
+    assert c2["full_manuscript_words_before_references"] == 4896
+    assert c2["full_manuscript_external_references"] == 14
+    assert c2["full_manuscript_validation_run"] == 34797039443
+    assert "do not attach" in c2["full_manuscript_dispatch_policy"].lower()
+    assert c2["live_route_verified_on"] == "2026-09-12"
+    assert c2["current_live_contact"] == "tree@cell.com"
+    assert c2["current_live_editor"] == "Andrea Stephens"
+    assert "proposal by email" in c2["current_public_route"]
+    assert set(c2["human_gates"]) == {
         "authorship approval",
         "broad-interest outside read",
         "dispatch-time route recheck",
     }
+
+    assert c2_status["status"] == "preferred-full-manuscript-v5-validated"
+    assert c2_status["preferred_manuscript"] == "manuscript/C2_TREE_OPINION_DRAFT_V5.md"
+    assert c2_status["word_count_before_references"] == 4896
+    assert c2_status["external_reference_count"] == 14
+    assert c2_status["validation"]["run_id"] == 34797039443
+    assert c2_status["validation"]["conclusion"] == "success"
+    assert c2_status["journal_route"]["proposal_first"] is True
+    assert c2_status["journal_route"]["full_manuscript_should_not_be_dispatched_with_presubmission_pitch_unless_requested"] is True
 
     for paper in ("M1", "M2", "M3", "M4"):
         assert units[paper]["science_blocker"] is False
