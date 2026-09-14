@@ -9,13 +9,19 @@
   "units": {
     "C2": {
       "target": "Trends in Ecology & Evolution Opinion",
-      "machine_state": "ready",
+      "machine_state": "proposal-and-full-manuscript-ready",
       "dispatch_gate": "proposals/C2_DISPATCH_GATE_2026-09-13.json",
       "outside_reader_request": "proposals/C2_OUTSIDE_READER_REQUEST_DRAFT.md",
+      "preferred_full_manuscript": "manuscript/C2_TREE_OPINION_DRAFT_V5.md",
+      "full_manuscript_status": "manuscript/C2_MANUSCRIPT_STATUS_2026-09-14.json",
+      "full_manuscript_words_before_references": 4896,
+      "full_manuscript_external_references": 14,
+      "full_manuscript_validation_run": 34797039443,
       "live_route_verified_on": "2026-09-12",
       "current_live_contact": "tree@cell.com",
       "current_live_editor": "Andrea Stephens",
-      "current_public_route": "proposal by email to the editor before full-manuscript preparation",
+      "current_public_route": "proposal by email to the editor before full-manuscript dispatch",
+      "full_manuscript_dispatch_policy": "prepared downstream asset; do not attach to presubmission pitch unless requested or the live route changes",
       "human_gates": ["authorship approval", "broad-interest outside read", "dispatch-time route recheck"],
       "sent": false
     },
