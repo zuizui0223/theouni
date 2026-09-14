@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Measurement-to-evidence interfaces and the four-question audit</title>
+  <desc id="desc">A left-to-right chain from biological opportunity to retained record, distinguishable alternatives, and declared target. Timely preservation, separation, and relevance label the three interfaces. Failure diversity spans the full chain as a cross-cutting robustness layer.</desc>
+  <defs>
+    <style>
+      .bg { fill:#ffffff; }
+      .title { font:700 34px Arial, Helvetica, sans-serif; fill:#161616; }
+      .subtitle { font:400 20px Arial, Helvetica, sans-serif; fill:#414141; }
+      .node { fill:#f7f8fa; stroke:#20242a; stroke-width:2.5; rx:18; }
+      .node-title { font:700 23px Arial, Helvetica, sans-serif; fill:#111820; text-anchor:middle; }
+      .node-sub { font:400 17px Arial, Helvetica, sans-serif; fill:#4d5661; text-anchor:middle; }
+      .arrow { stroke:#2f3a45; stroke-width:4; fill:none; marker-end:url(#arrowhead); }
+      .interface { font:700 19px Arial, Helvetica, sans-serif; fill:#1d4f73; text-anchor:middle; letter-spacing:.5px; }
+      .failure { font:700 17px Arial, Helvetica, sans-serif; fill:#8a2f2f; text-anchor:middle; }
+      .question { font:400 16px Arial, Helvetica, sans-serif; fill:#3e4650; text-anchor:middle; }
+      .remedy { font:700 16px Arial, Helvetica, sans-serif; fill:#1e5d3c; text-anchor:middle; }
+      .band { fill:#f4f7fb; stroke:#667789; stroke-width:2.5; rx:22; }
+      .band-title { font:700 22px Arial, Helvetica, sans-serif; fill:#22384d; text-anchor:middle; }
+      .band-text { font:400 17px Arial, Helvetica, sans-serif; fill:#3e4c5a; text-anchor:middle; }
+      .path { stroke:#7d8d9f; stroke-width:3; fill:none; stroke-dasharray:8 7; }
+      .footer { font:700 23px Arial, Helvetica, sans-serif; fill:#161616; text-anchor:middle; }
+      .footer2 { font:400 18px Arial, Helvetica, sans-serif; fill:#505861; text-anchor:middle; }
+    </style>
+    <marker id="arrowhead" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto">
+      <polygon points="0 0, 11 5.5, 0 11" fill="#2f3a45"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1600" height="900"/>
+  <text class="title" x="800" y="62" text-anchor="middle">From measurement to evidence: follow the distinction</text>
+  <text class="subtitle" x="800" y="98" text-anchor="middle">Different bottlenecks require different measurement actions</text>
+
+  <!-- Main chain nodes -->
+  <rect class="node" x="60" y="260" width="285" height="120"/>
+  <text class="node-title" x="202" y="306">BIOLOGICAL OPPORTUNITY</text>
+  <text class="node-title" x="202" y="334">/ LIVE ALTERNATIVES</text>
+  <text class="node-sub" x="202" y="364">what could differ in nature?</text>
+
+  <rect class="node" x="470" y="260" width="235" height="120"/>
+  <text class="node-title" x="587" y="320">RETAINED</text>
+  <text class="node-title" x="587" y="348">RECORD</text>
+
+  <rect class="node" x="835" y="260" width="300" height="120"/>
+  <text class="node-title" x="985" y="306">DISTINGUISHABLE</text>
+  <text class="node-title" x="985" y="334">ALTERNATIVES</text>
+  <text class="node-sub" x="985" y="364">what can the data separate?</text>
+
+  <rect class="node" x="1270" y="260" width="270" height="120"/>
+  <text class="node-title" x="1405" y="320">DECLARED</text>
+  <text class="node-title" x="1405" y="348">TARGET</text>
+
+  <!-- Interface arrows -->
+  <line class="arrow" x1="345" y1="320" x2="462" y2="320"/>
+  <text class="interface" x="404" y="185">TIMELY PRESERVATION</text>
+  <text class="failure" x="404" y="211">failure: TOO LATE</text>
+  <text class="question" x="404" y="410">Is the needed distinction still present?</text>
+  <text class="remedy" x="404" y="438">CAPTURE EARLIER</text>
+  <text class="question" x="404" y="461">or recalibrate if it is retained</text>
+
+  <line class="arrow" x1="705" y1="320" x2="827" y2="320"/>
+  <text class="interface" x="766" y="185">SEPARATION</text>
+  <text class="failure" x="766" y="211">failure: SAME DIMENSION</text>
+  <text class="question" x="766" y="410">Does it separate a live alternative?</text>
+  <text class="remedy" x="766" y="438">MEASURE A NEW DISTINCTION</text>
+
+  <line class="arrow" x1="1135" y1="320" x2="1262" y2="320"/>
+  <text class="interface" x="1198" y="185">RELEVANCE</text>
+  <text class="failure" x="1198" y="211">failure: WRONG TARGET</text>
+  <text class="question" x="1198" y="410">Can the difference change the target?</text>
+  <text class="remedy" x="1198" y="438">MEASURE TARGET-RELEVANT INFORMATION</text>
+
+  <!-- Cross-cutting failure-diversity layer -->
+  <rect class="band" x="90" y="525" width="1420" height="175"/>
+  <text class="band-title" x="800" y="565">FAILURE DIVERSITY ACROSS OBSERVATION PATHS</text>
+  <text class="failure" x="800" y="594">failure: FALSE INDEPENDENCE</text>
+
+  <path class="path" d="M180 635 C430 595, 660 675, 910 635 S1320 595, 1460 635"/>
+  <path class="path" d="M180 655 C430 695, 660 615, 910 655 S1320 695, 1460 655"/>
+  <circle cx="180" cy="635" r="8" fill="#667789"/>
+  <circle cx="180" cy="655" r="8" fill="#667789"/>
+  <circle cx="1460" cy="635" r="8" fill="#667789"/>
+  <circle cx="1460" cy="655" r="8" fill="#667789"/>
+
+  <text class="band-text" x="800" y="626">Do repeated observations create independent opportunities for the relevant distinction to survive?</text>
+  <text class="remedy" x="800" y="682">DIVERSIFY FAILURE DOMAINS — sensors, sites, populations, batches, primers, time windows</text>
+
+  <!-- Footer -->
+  <text class="footer" x="800" y="785">Before collecting more data, ask what distinction the next measurement must create or preserve</text>
+  <text class="footer" x="800" y="817">for the conclusion to change.</text>
+  <text class="footer2" x="800" y="855">Measurement escalation should be diagnostic-first, not quantity-first.</text>
+</svg>
