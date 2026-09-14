@@ -1,7 +1,7 @@
 {
   "schema": "c2-tree-opinion-manuscript-status-v1",
   "date": "2026-09-14",
-  "status": "preferred-full-manuscript-v5-validated",
+  "status": "preferred-full-manuscript-v5-figure1-machine-validated",
   "target": "Trends in Ecology & Evolution Opinion",
   "title": "When more measurement is not more evidence",
   "preferred_manuscript": "manuscript/C2_TREE_OPINION_DRAFT_V5.md",
@@ -13,6 +13,15 @@
     "head_sha": "07d20ab0eb8a71e249dd8e9751d3787b545b830e",
     "conclusion": "success",
     "manuscript_validator": "scripts/validate_c2_manuscript.py"
+  },
+  "figure1": {
+    "spec": "proposals/C2_FIGURE1_DECISION_MAP_SPEC.md",
+    "vector_file": "manuscript/figures/C2_FIGURE1_MEASUREMENT_TO_EVIDENCE.svg",
+    "machine_generated": true,
+    "machine_validated": true,
+    "validation_run": 34797557513,
+    "validation_head_sha": "6cb5523051c4a0df02bd7f9e54c7fae77931c255",
+    "human_visual_inspection_complete": false
   },
   "conceptual_spine": {
     "stance": "Ecological and evolutionary measurement design should be organized around the flow of distinctions required by the claim, not around data volume alone.",
@@ -49,8 +58,8 @@
     "interpretation": "The full manuscript is a prepared downstream asset, not a reason to bypass the proposal-first TREE route."
   },
   "remaining_manuscript_work": [
-    "render and visually inspect Figure 1 from the v5 measurement-to-evidence interface specification",
-    "perform final sentence-level editorial compression after Figure 1 is fixed",
+    "human visual inspection of Figure 1",
+    "perform final sentence-level editorial compression and citation-placement audit",
     "recheck all reference metadata against publisher records immediately before invited full submission",
     "apply any editor-requested article-length/format constraints after presubmission response"
   ],
