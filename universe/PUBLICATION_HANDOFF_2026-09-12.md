@@ -1,6 +1,6 @@
 # Publication handoff — 2026-09-12
 
-Status: **science and machine production closed for M1–M4; C2 machine-ready; C1/Boundary machine-ready but strategically parked until the C2 editorial outcome; remaining work is human metadata, visual review and dispatch decisions.**
+Status: **science and machine production closed for M1–M4; C2 proposal and full manuscript machine-ready; C1/Boundary machine-ready but strategically parked until the C2 editorial outcome; remaining work is human metadata, visual review and dispatch decisions.**
 
 This is the concise operational handoff for the Observation/Evidence publication track. The full historical execution log remains in `PUBLICATION_EXECUTION_STATUS_2026-09-11.md`; thesis order remains in `thesis/final_chapter_architecture.json`; the track publication architecture remains in `PUBLICATION_PROGRAMME_2026-09-11.json`.
 
@@ -8,7 +8,7 @@ This is the concise operational handoff for the Observation/Evidence publication
 
 | Unit | Target | Current state | Next true gate |
 |---|---|---|---|
-| C2 | Trends in Ecology & Evolution Opinion | machine-ready presubmission pitch; live proposal route checked 2026-09-12 | final authorship + one broad-interest read + dispatch-time route recheck |
+| C2 | Trends in Ecology & Evolution Opinion | proposal-ready and validated full manuscript v5 available; live proposal route checked 2026-09-12 | final authorship + one broad-interest read + dispatch-time route recheck |
 | C1 / Boundary | Ecology Letters Perspective | machine-ready, strategically parked; independent owner of identification geometry | keep parked until C2 editorial outcome; activate only under the explicit trigger/firewall |
 | M1 | TNOA → Methods in Ecology and Evolution | science closed; DOCX/reviewer bundle/figures validated | human metadata + AI disclosure + visual check |
 | M2 | MROD → Methods in Ecology and Evolution | science frozen; anonymous Main/SI PDFs validated | human metadata/title page + AI disclosure + visual check |
@@ -24,15 +24,27 @@ Machine assets complete:
 - authorship ledger and author-metadata template;
 - outside-reader packet and editorial red-team;
 - machine-readable send gate;
+- validated full Opinion manuscript v5: `manuscript/C2_TREE_OPINION_DRAFT_V5.md`;
+- manuscript status receipt: `manuscript/C2_MANUSCRIPT_STATUS_2026-09-14.json`;
 - live-route receipt: `proposals/C2_TREE_LIVE_ROUTE_CHECK_20260912.md`.
+
+Full manuscript v5 state:
+
+- title: **When more measurement is not more evidence**;
+- 4,896 words before References under the repository validator;
+- 14 external references;
+- cross-domain boxes: prospective island *Campanula* plus metabarcoding;
+- manuscript validation run `34797039443` — success;
+- conceptual spine: timely preservation / separation / relevance / failure diversity;
+- exact Boundary theorem surface, internal repository labels and unpublished-source placeholders are absent from the submission-facing manuscript.
 
 Current route independently checked on 2026-09-12:
 
 - editor: **Andrea Stephens**;
 - contact: **tree@cell.com**;
-- route: **proposal by email to the editor before full-manuscript preparation**.
+- route: **proposal by email to the editor before full-manuscript dispatch**.
 
-This is a dated receipt, not permission to skip a dispatch-time recheck.
+This is a dated receipt, not permission to skip a dispatch-time recheck. The existence of a finished full manuscript does **not** override the proposal-first route: do not attach or dispatch v5 with the presubmission pitch unless TREE requests it or the live instructions change.
 
 Working proposal authorship: **Ruiqi Zhang — provisional first/corresponding author**. Do not add authors based only on supervision, seniority, source ownership or commits.
 
@@ -41,8 +53,6 @@ Human send gates:
 1. approve final author list/corresponding author;
 2. obtain one broad-interest ecological read;
 3. immediately before sending, recheck the live TREE/Cell Press/Elsevier proposal route against the 2026-09-12 receipt.
-
-Do not write the full Opinion before editorial interest unless strategy changes.
 
 ## C1 — Boundary / Ecology Letters Perspective
 
