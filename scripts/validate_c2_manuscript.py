@@ -5,7 +5,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-MANUSCRIPT = ROOT / "manuscript" / "C2_TREE_OPINION_DRAFT_V4.md"
+MANUSCRIPT = ROOT / "manuscript" / "C2_TREE_OPINION_DRAFT_V5.md"
 
 WORD_RE = re.compile(r"\b[\w*<>/=+.-]+\b", re.UNICODE)
 
@@ -21,21 +21,24 @@ def main() -> None:
         "## Abstract",
         "## The bottleneck is not always data quantity",
         "### A necessary non-harm caveat",
-        "## Property 1 — Separation",
+        "## From measurement to evidence: four interfaces, not one quantity",
+        "## Interface 1 — Separation",
         "### Failure when missing: same dimension",
-        "## Property 2 — Relevance",
+        "## Interface 2 — Relevance",
         "### Failure when missing: wrong target",
-        "## Property 3 — Failure diversity",
+        "## Interface 3 — Failure diversity",
         "### Failure when missing: false independence",
-        "## Property 4 — Timely preservation",
+        "## Interface 4 — Timely preservation",
         "### Failure when missing: too late",
-        "## A four-question screen for the next measurement",
+        "## A four-question distinction-flow audit",
         "## Box 1. Island *Campanula*",
-        "## Box 2. Island pollination",
+        "## Box 2. Metabarcoding",
+        "## What this stance changes",
+        "## Predictions for a distinction-design research programme",
         "## A measurement contract for ecological and evolutionary studies",
         "## Outstanding questions",
-        "## Conclusion: ask what the next measurement changes",
-        "## Figure 1. From more measurement to more evidence: a four-question screen",
+        "## Conclusion: design distinctions, not just data volume",
+        "## Figure 1. Measurement-to-evidence interfaces and the four-question audit",
         "## References",
     ]
     for item in required:
@@ -44,14 +47,14 @@ def main() -> None:
     # Internal drafting range only; not a claim about a live journal word limit.
     body = text.split("## References", 1)[0]
     word_count = len(WORD_RE.findall(body))
-    assert 3000 <= word_count <= 6000, word_count
+    assert 3500 <= word_count <= 6000, word_count
 
     # Explicit operational definition of evidential progress.
     assert "we use **evidential progress** in this operational sense" in lower
     assert "increased ability to distinguish among live alternatives" in lower
     assert "observation process actually preserves" in lower
 
-    # Broad ecology/evolution surface.
+    # Broad ecology/evolution surface and deliberately cross-domain boxes.
     for phrase in (
         "ecology and evolution",
         "genomic",
@@ -59,8 +62,10 @@ def main() -> None:
         "evolutionary biology",
         "populations",
         "biodiversity sequencing",
+        "metabarcoding",
     ):
         assert phrase in lower, phrase
+    assert "## box 2. island pollination" not in lower
 
     # Protect the decision-theoretic caveat: C2 is about proxy failure, not a theorem that information harms.
     for phrase in (
@@ -71,19 +76,21 @@ def main() -> None:
     ):
         assert phrase in lower, phrase
 
-    # Unified positive spine.
+    # Unified positive spine: four interfaces in a measurement-to-evidence chain.
     for phrase in (
+        "measurement-to-evidence",
+        "timely preservation",
         "separation",
         "relevance",
         "failure diversity",
-        "timely preservation",
-        "four-question screen",
+        "flow of distinctions",
+        "diagnostic distinction design",
         "measurement escalation should be diagnostic-first, not quantity-first",
     ):
         assert phrase in lower, phrase
 
-    # The four properties map one-to-one to the four failures/remedies.
-    mapping_phrases = (
+    # The four interfaces map to distinct failures/remedies.
+    for phrase in (
         "same dimension",
         "wrong target",
         "false independence",
@@ -92,8 +99,18 @@ def main() -> None:
         "target-relevant information",
         "diversify failure domains",
         "capture earlier",
-    )
-    for phrase in mapping_phrases:
+    ):
+        assert phrase in lower, phrase
+
+    # The Opinion must take a stance and project a prospective research programme.
+    for phrase in (
+        "ecological and evolutionary measurement design should be organized around the flow of distinctions",
+        "design reports should name the limiting interface",
+        "benchmarks should follow the scientific responsibility through the pipeline",
+        "additional measurement should compete against alternative measurement",
+        "predictions for a distinction-design research programme",
+        "diagnosing the missing interface predicts which design intervention produces the largest gain",
+    ):
         assert phrase in lower, phrase
 
     # C1/Boundary keeps its exact theorem/diagnostic surface.
@@ -116,17 +133,17 @@ def main() -> None:
     ):
         assert forbidden not in lower, forbidden
 
-    # Worked examples retain their epistemic ceilings.
+    # Worked examples retain explicit epistemic ceilings.
     assert "worked design example, not a new empirical validation claim" in lower
-    assert "translation contract for observation design, not an empirical causal conclusion" in lower
+    assert "worked design illustration based on established metabarcoding and ecological-inference problems" in lower
 
-    # Avoid converting the screen into an overclaimed theorem.
+    # Avoid converting the audit into an overclaimed theorem.
     assert "not a necessary-and-sufficient theorem for all evidence" in lower
     assert "are the four failures exhaustive?" in lower
     assert "no. they are intended as a useful cross-cutting set" in lower
-    assert "universal proxy for evidential strength" in lower
+    assert "universal proxy for evidence" in lower or "universal proxy for evidential strength" in lower
 
-    # Reference surface: enough external literature to make this an externally grounded Opinion.
+    # Reference surface: enough external literature to keep the Opinion externally grounded.
     references = text.split("## References", 1)[1]
     numbered_refs = re.findall(r"(?m)^\d+\. ", references)
     assert len(numbered_refs) >= 14, len(numbered_refs)
@@ -148,7 +165,7 @@ def main() -> None:
     ):
         assert doi in text, doi
 
-    print(f"C2_TREE_MANUSCRIPT_V4 PASS words_before_references={word_count} refs={len(numbered_refs)}")
+    print(f"C2_TREE_MANUSCRIPT_V5 PASS words_before_references={word_count} refs={len(numbered_refs)}")
 
 
 if __name__ == "__main__":
