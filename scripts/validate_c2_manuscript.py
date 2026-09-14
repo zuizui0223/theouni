@@ -7,7 +7,7 @@ from pathlib import Path
 from audit_c2_citations import main as audit_citations
 
 ROOT = Path(__file__).resolve().parents[1]
-MANUSCRIPT = ROOT / "manuscript" / "C2_TREE_OPINION_DRAFT_V5.md"
+MANUSCRIPT = ROOT / "manuscript" / "C2_TREE_OPINION_DRAFT_V6.md"
 FIGURE1 = ROOT / "manuscript" / "figures" / "C2_FIGURE1_MEASUREMENT_TO_EVIDENCE.svg"
 FIGURE1_SPEC = ROOT / "proposals" / "C2_FIGURE1_DECISION_MAP_SPEC.md"
 
@@ -52,7 +52,7 @@ def main() -> None:
 
     body = text.split("## References", 1)[0]
     word_count = len(WORD_RE.findall(body))
-    assert 3500 <= word_count <= 6000, word_count
+    assert 3500 <= word_count <= 5500, word_count
 
     assert "we use **evidential progress** in this operational sense" in lower
     assert "increased ability to distinguish among live alternatives" in lower
@@ -64,7 +64,6 @@ def main() -> None:
         "environmental-dna",
         "evolutionary biology",
         "populations",
-        "biodiversity sequencing",
         "metabarcoding",
     ):
         assert phrase in lower, phrase
@@ -98,7 +97,7 @@ def main() -> None:
         "measure a new distinction",
         "target-relevant information",
         "diversify failure domains",
-        "capture earlier",
+        "capture the distinction earlier",
     ):
         assert phrase in lower, phrase
 
@@ -108,7 +107,7 @@ def main() -> None:
         "benchmarks should follow the scientific responsibility through the pipeline",
         "additional measurement should compete against alternative measurement",
         "predictions for a distinction-design research programme",
-        "diagnosing the missing interface predicts which design intervention produces the largest gain",
+        "does the matched remedy outperform an equal-cost quantity-first expansion",
     ):
         assert phrase in lower, phrase
 
@@ -188,13 +187,10 @@ def main() -> None:
     assert "campanula" in spec
     assert "edna" in spec
 
-    # Section-aware citation audit is part of manuscript validation so later
-    # compression cannot silently orphan references or detach citations from the
-    # claims they support.
     audit_citations()
 
     print(
-        f"C2_TREE_MANUSCRIPT_V5 PASS words_before_references={word_count} "
+        f"C2_TREE_MANUSCRIPT_V6 PASS words_before_references={word_count} "
         f"refs={len(numbered_refs)} figure1=validated citations=validated"
     )
 
