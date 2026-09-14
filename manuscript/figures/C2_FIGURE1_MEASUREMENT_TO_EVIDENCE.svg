@@ -8,6 +8,7 @@
       .subtitle { font:400 20px Arial, Helvetica, sans-serif; fill:#414141; }
       .node { fill:#f7f8fa; stroke:#20242a; stroke-width:2.5; rx:18; }
       .node-title { font:700 23px Arial, Helvetica, sans-serif; fill:#111820; text-anchor:middle; }
+      .node-title-small { font:700 20px Arial, Helvetica, sans-serif; fill:#111820; text-anchor:middle; }
       .node-sub { font:400 17px Arial, Helvetica, sans-serif; fill:#4d5661; text-anchor:middle; }
       .arrow { stroke:#2f3a45; stroke-width:4; fill:none; marker-end:url(#arrowhead); }
       .interface { font:700 19px Arial, Helvetica, sans-serif; fill:#1d4f73; text-anchor:middle; letter-spacing:.5px; }
@@ -18,6 +19,7 @@
       .band-title { font:700 22px Arial, Helvetica, sans-serif; fill:#22384d; text-anchor:middle; }
       .band-text { font:400 17px Arial, Helvetica, sans-serif; fill:#3e4c5a; text-anchor:middle; }
       .path { stroke:#7d8d9f; stroke-width:3; fill:none; stroke-dasharray:8 7; }
+      .band-mask { fill:#f4f7fb; }
       .footer { font:700 23px Arial, Helvetica, sans-serif; fill:#161616; text-anchor:middle; }
       .footer2 { font:400 18px Arial, Helvetica, sans-serif; fill:#505861; text-anchor:middle; }
     </style>
@@ -32,8 +34,8 @@
 
   <!-- Main chain nodes -->
   <rect class="node" x="60" y="260" width="285" height="120"/>
-  <text class="node-title" x="202" y="306">BIOLOGICAL OPPORTUNITY</text>
-  <text class="node-title" x="202" y="334">/ LIVE ALTERNATIVES</text>
+  <text class="node-title-small" x="202" y="306">BIOLOGICAL OPPORTUNITY</text>
+  <text class="node-title-small" x="202" y="334">/ LIVE ALTERNATIVES</text>
   <text class="node-sub" x="202" y="364">what could differ in nature?</text>
 
   <rect class="node" x="470" y="260" width="235" height="120"/>
@@ -74,13 +76,15 @@
   <text class="band-title" x="800" y="565">FAILURE DIVERSITY ACROSS OBSERVATION PATHS</text>
   <text class="failure" x="800" y="594">failure: FALSE INDEPENDENCE</text>
 
-  <path class="path" d="M180 635 C430 595, 660 675, 910 635 S1320 595, 1460 635"/>
-  <path class="path" d="M180 655 C430 695, 660 615, 910 655 S1320 695, 1460 655"/>
-  <circle cx="180" cy="635" r="8" fill="#667789"/>
-  <circle cx="180" cy="655" r="8" fill="#667789"/>
-  <circle cx="1460" cy="635" r="8" fill="#667789"/>
-  <circle cx="1460" cy="655" r="8" fill="#667789"/>
+  <path class="path" d="M180 642 C430 600, 660 680, 910 642 S1320 600, 1460 642"/>
+  <path class="path" d="M180 665 C430 705, 660 625, 910 665 S1320 705, 1460 665"/>
+  <circle cx="180" cy="642" r="8" fill="#667789"/>
+  <circle cx="180" cy="665" r="8" fill="#667789"/>
+  <circle cx="1460" cy="642" r="8" fill="#667789"/>
+  <circle cx="1460" cy="665" r="8" fill="#667789"/>
 
+  <!-- Mask the central path segments so labels remain readable at journal scale. -->
+  <rect class="band-mask" x="295" y="605" width="1010" height="83"/>
   <text class="band-text" x="800" y="626">Do repeated observations create independent opportunities for the relevant distinction to survive?</text>
   <text class="remedy" x="800" y="682">DIVERSIFY FAILURE DOMAINS — sensors, sites, populations, batches, primers, time windows</text>
 
