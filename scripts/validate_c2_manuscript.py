@@ -4,6 +4,8 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
+from audit_c2_citations import main as audit_citations
+
 ROOT = Path(__file__).resolve().parents[1]
 MANUSCRIPT = ROOT / "manuscript" / "C2_TREE_OPINION_DRAFT_V5.md"
 FIGURE1 = ROOT / "manuscript" / "figures" / "C2_FIGURE1_MEASUREMENT_TO_EVIDENCE.svg"
@@ -157,7 +159,6 @@ def main() -> None:
     ):
         assert doi in text, doi
 
-    # Figure 1 must implement the v5 measurement-to-evidence logic, not the old four-box layout.
     svg = FIGURE1.read_text(encoding="utf-8")
     svg_lower = svg.lower()
     for label in (
@@ -187,9 +188,14 @@ def main() -> None:
     assert "campanula" in spec
     assert "edna" in spec
 
+    # Section-aware citation audit is part of manuscript validation so later
+    # compression cannot silently orphan references or detach citations from the
+    # claims they support.
+    audit_citations()
+
     print(
         f"C2_TREE_MANUSCRIPT_V5 PASS words_before_references={word_count} "
-        f"refs={len(numbered_refs)} figure1=validated"
+        f"refs={len(numbered_refs)} figure1=validated citations=validated"
     )
 
 
