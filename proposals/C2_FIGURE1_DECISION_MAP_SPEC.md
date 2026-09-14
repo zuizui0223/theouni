@@ -1,132 +1,155 @@
-# C2 Figure 1 specification — diagnostic-first measurement escalation
+# C2 Figure 1 specification — measurement-to-evidence interfaces
 
-Status: **canonical conceptual-figure specification for the TREE Opinion proposal**.
+Status: **canonical Figure 1 specification for the preferred TREE Opinion v5**.
 
 ## Purpose
 
-Figure 1 must make the paper's distinctive contribution visible without equations or repository knowledge.
+Figure 1 must make the paper's conceptual advance visible in 20–30 seconds without equations, repository knowledge, or source-paper terminology.
 
-It should not be a four-box catalogue of familiar warnings. It should show one common decision point:
+The figure is **not** a four-box catalogue. It shows how a biologically relevant distinction must travel through a measurement-to-evidence system, and where four different bottlenecks can occur.
 
-> **Before collecting more data, diagnose why current evidence is inadequate.**
+Central stance:
 
-The figure then maps each diagnosis to a different next measurement action.
+> **Measurement design should follow the flow of distinctions required by the claim, not data volume alone.**
 
-## Central layout
+## Central visual grammar
 
-Use one left-to-right decision map.
+Use one main left-to-right chain:
 
 ```text
-CURRENT EVIDENCE DOES NOT RESOLVE THE ECOLOGICAL QUESTION
-                         |
-                         v
-          What kind of failure is limiting evidence?
-                         |
-      +------------------+------------------+------------------+
-      |                  |                  |                  |
-      v                  v                  v                  v
- SAME DIMENSION      WRONG TARGET     SHARED DEPENDENCE    UPSTREAM LOSS
-  geometry             objective          dependence          pipeline
-      |                  |                  |                  |
-      v                  v                  v                  v
-Does the next        Can the new       Is this a new       Is the needed
-measurement         distinction       independent          distinction still
-separate an          change the        opportunity for      present in the
-unresolved           target/decision? evidence to survive? retained record?
-explanation?
-      |                  |                  |                  |
-      v                  v                  v                  v
-MEASURE A NEW        MEASURE            DIVERSIFY            CAPTURE EARLIER
-DISTINCTION          TARGET-RELEVANT    FAILURE DOMAINS       IN THE PIPELINE
-                     INFORMATION
+BIOLOGICAL OPPORTUNITY / LIVE ALTERNATIVES
+                 |
+                 |  TIMELY PRESERVATION
+                 |  failure: TOO LATE
+                 |  remedy: CAPTURE EARLIER
+                 v
+          RETAINED RECORD
+                 |
+                 |  SEPARATION
+                 |  failure: SAME DIMENSION
+                 |  remedy: MEASURE A NEW DISTINCTION
+                 v
+     DISTINGUISHABLE ALTERNATIVES
+                 |
+                 |  RELEVANCE
+                 |  failure: WRONG TARGET
+                 |  remedy: MEASURE TARGET-RELEVANT INFORMATION
+                 v
+          DECLARED TARGET
 ```
 
-## Four panel micro-examples
+**Failure diversity is not a fourth sequential arrow.** Depict it as a band or bracket spanning the chain, representing multiple observation paths/modes:
 
-Each panel uses an ordinary ecological situation, not a theorem diagram.
+```text
+FAILURE DIVERSITY ACROSS OBSERVATION PATHS
+failure: FALSE INDEPENDENCE
+remedy: DIVERSIFY FAILURE DOMAINS
+```
 
-### A — Same dimension
+This is important. The figure must not imply that failure diversity occurs only after relevance or at one particular pipeline stage.
 
-Visual: repeated measurements along the same environmental or phenotypic gradient become more precise, but two causal explanations remain overlapped.
+## Four interfaces
 
-Caption fragment:
+### Timely preservation
 
-> More precision does not identify what the observation geometry never separates.
+Question:
 
-Correct remedy:
+> Is the needed distinction still present at the stage being improved?
 
-> Measure a new distinction that separates an unresolved explanation.
+Failure label: **TOO LATE**
 
-### B — Wrong target
+Remedy:
 
-Visual: one measurement reveals substantial nuisance detail while the decision-relevant state remains unresolved; a smaller targeted measurement splits the decision.
+> Capture earlier; if the distinction is retained but operating meaning changed, recalibrate.
 
-Caption fragment:
+Micro-example: a taxon lost before amplification cannot be recovered by a better taxonomic classifier.
 
-> More information about the system is not necessarily more evidence for the declared target.
+### Separation
 
-Correct remedy:
+Question:
 
-> Measure target-relevant information that can change the prediction or decision.
+> Does the measurement separate a live alternative?
 
-### C — Shared dependence
+Failure label: **SAME DIMENSION**
 
-Visual: many replicates come from one sensor/site/batch/failure domain; a smaller set distributed across independent modes survives one common-mode failure.
+Remedy:
 
-Caption fragment:
+> Measure a new distinction.
 
-> More repeats are not more independent opportunities for evidence to survive.
+Micro-example: denser measurements of the same trait cline need not distinguish mechanisms that predict the same cline.
 
-Correct remedy:
+### Relevance
 
-> Diversify failure domains, not only replicate count.
+Question:
 
-### D — Upstream loss
+> Can the separated alternative change the declared target?
 
-Visual: a biological event is missed before record creation; an increasingly accurate downstream classifier operates only on retained records and cannot recover the missing event.
+Failure label: **WRONG TARGET**
 
-Caption fragment:
+Remedy:
 
-> Downstream accuracy cannot recreate information deleted upstream.
+> Measure target-relevant information.
 
-Correct remedy:
+Micro-example: resolving nuisance latent states does not necessarily resolve the focal evolutionary contrast.
 
-> Capture the distinction earlier in the observation pipeline.
+### Failure diversity
+
+Question:
+
+> Does the added observation create an independent opportunity for the relevant distinction to survive failure?
+
+Failure label: **FALSE INDEPENDENCE**
+
+Remedy:
+
+> Diversify failure domains.
+
+Micro-example: thousands of reads from one extraction do not create thousands of independent opportunities to survive extraction failure.
+
+## Visual hierarchy
+
+1. **Primary:** the measurement-to-evidence chain and the four positive properties.
+2. **Secondary:** failure labels and remedy actions.
+3. **Tertiary:** one-line ecological/evolutionary examples.
+
+Do not put theorem notation or source-programme names in the figure.
+
+## Cross-domain balance
+
+Figure 1 should not visually anchor only on island pollination. Use at most two small domain icons/callouts:
+
+- field/phenotype example near **separation**;
+- molecular/eDNA example near **timely preservation/failure diversity**.
+
+Boxes in the manuscript carry the detailed Campanula and metabarcoding examples; Figure 1 stays generic.
 
 ## Footer
 
-Use one sentence spanning all four panels:
+Use the manuscript's operational rule:
 
-> **Measurement escalation should be diagnostic-first, not quantity-first: different failures require different new information.**
+> **Before collecting more data, ask what distinction the next measurement must create or preserve for the conclusion to change.**
 
-Secondary footer, if space permits:
+Optional secondary line:
 
-> Additional measurement becomes additional evidence only when it creates or preserves a distinction that can change the ecological question being asked.
-
-## Worked-example callouts
-
-Do not turn Figure 1 into a Campanula or island-pollination figure. Those remain Boxes 1–2.
-
-At most use small side labels:
-
-- Campanula: new mechanism-separating observation rather than more of the same cline;
-- island pollination: visitor occurrence, effective service and reproductive consequence require different measurements.
+> Measurement escalation should be diagnostic-first, not quantity-first.
 
 ## What Figure 1 must not imply
 
-- the four failures are exhaustive;
+- the four interfaces are exhaustive;
+- the interfaces form a necessary-and-sufficient theorem for evidence;
 - one scalar evidence score exists;
 - more measurement is generally harmful;
+- failure diversity is a final sequential stage;
 - all four failures occur in every study;
-- the source programmes empirically validate the whole framework;
-- Boundary's exact rank theorem, CED's finite witnesses, REC's numeric BirdVox result or TNOA's threshold numerics are themselves the TREE headline.
+- Boundary's exact rank theorem or any source-paper numeric result is the TREE headline.
 
 ## Editorial test
 
-A non-specialist ecologist should be able to look at Figure 1 for 30 seconds and answer:
+A reader outside the immediate methods niche should be able to answer after 20–30 seconds:
 
-1. why simply collecting more of the same data may fail;
-2. why the four failures are not interchangeable;
-3. what different action follows from each diagnosis.
+1. what must happen for a biological distinction to become evidence for a claim;
+2. why more precision, information, repeats and downstream accuracy can fail for different reasons;
+3. what different measurement action follows from each failure;
+4. why failure diversity spans observation paths rather than occupying one point in the chain.
 
-If the figure only teaches the names of four failure classes, it has failed its purpose.
+If the reader sees four warnings but not one measurement-to-evidence logic, the figure has failed.
