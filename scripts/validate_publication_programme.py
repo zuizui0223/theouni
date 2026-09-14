@@ -145,9 +145,6 @@ def main() -> None:
         assert required.lower() in prior_art_text.lower()
 
     proposal_text = PROPOSAL.read_text(encoding="utf-8")
-    # C2 may use Boundary's qualitative geometry lesson, but the exact theorem and
-    # diagnostics stay in C1. Keep source provenance in the ledger rather than
-    # reproducing Boundary's flagship mathematical surface in the TREE proposal.
     for boundary_owned_surface in (
         "k-rank(M)",
         "Gamma/kappa",
@@ -190,17 +187,28 @@ def main() -> None:
     assert "separates an unresolved explanation" in send_text
     assert "C1/Boundary remains parked" in send_text
 
+    # Figure 1 v5 owns the measurement-to-evidence interface view. Keep the
+    # proposal validator synchronized with that figure rather than with the old
+    # four-box decision-map wording.
     figure_text = C2_FIGURE1.read_text(encoding="utf-8")
     for required in (
-        "diagnostic-first, not quantity-first",
-        "decision map",
+        "measurement-to-evidence",
+        "biological opportunity / live alternatives",
+        "retained record",
+        "distinguishable alternatives",
+        "declared target",
+        "timely preservation",
+        "separation",
+        "relevance",
+        "failure diversity is not a fourth sequential arrow",
         "measure a new distinction",
         "measure target-relevant information",
         "diversify failure domains",
         "capture earlier",
-        "four failures are exhaustive",
+        "the four interfaces are exhaustive",
+        "diagnostic-first, not quantity-first",
     ):
-        assert required.lower() in figure_text.lower()
+        assert required.lower() in figure_text.lower(), required
 
     assert methods["M1"]["repository"] == "zuizui0223/tnoa"
     assert methods["M2"]["repository"] == "zuizui0223/mrod"
@@ -281,6 +289,10 @@ def main() -> None:
     assert readiness["machine_checks"]["current_live_journal_contact"] == "tree@cell.com"
     assert readiness["machine_checks"]["current_live_editor"] == "Andrea Stephens"
     assert readiness["machine_checks"]["dispatch_time_recheck_still_required"] is True
+    assert readiness["machine_checks"]["full_manuscript_v5_written"] is True
+    assert readiness["machine_checks"]["full_manuscript_v5_validated"] is True
+    assert readiness["machine_checks"]["full_manuscript_word_count_before_references"] == 4896
+    assert readiness["machine_checks"]["full_manuscript_external_reference_count"] == 14
     assert readiness["authorship_state"]["working_author_list"] == ["Ruiqi Zhang"]
     assert readiness["authorship_state"]["working_corresponding_author"] == "Ruiqi Zhang"
     expected_assets = {
@@ -290,6 +302,8 @@ def main() -> None:
         "editorial_red_team": "proposals/C2_TREE_RED_TEAM.md",
         "live_route_check": "proposals/C2_TREE_LIVE_ROUTE_CHECK_20260912.md",
         "figure1_decision_map_spec": "proposals/C2_FIGURE1_DECISION_MAP_SPEC.md",
+        "full_manuscript": "manuscript/C2_TREE_OPINION_DRAFT_V5.md",
+        "full_manuscript_status": "manuscript/C2_MANUSCRIPT_STATUS_2026-09-14.json",
     }
     for key, value in expected_assets.items():
         assert readiness["proposal_assets"][key] == value
