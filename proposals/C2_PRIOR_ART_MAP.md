@@ -1,185 +1,208 @@
-# C2 prior-art map — *More measurement is not more evidence*
+# C2 prior-art map — *When more measurement is not more evidence*
 
-Status: **external-literature novelty firewall for the TREE Opinion proposal**.  
-Checked: **2026-09-11**.  
-Purpose: prevent C2 from claiming novelty for component ideas that already have mature literatures. C2 owns only the cross-literature synthesis into four distinct failures of monotonic measurement reasoning in ecology.
+Status: **external-literature novelty firewall aligned with manuscript v7**.  
+Checked: **2026-09-15**.  
+Purpose: prevent C2 from claiming novelty for component ideas with mature literatures and make the R1/R2 defence explicit.
 
 ## The claim C2 may make
 
-> Ecologists often speak as if more measurement, greater precision, more latent-state information, more repeats, or better downstream classification all move evidence in the same favourable direction. They do not. Four different failure mechanisms — **geometry, objective, dependence, and pipeline** — break that monotonic intuition for different reasons and therefore require different design remedies.
+C2 does **not** claim to discover that more data can be unhelpful. Its proposed contribution is a cross-literature design doctrine built around a shared conditional structure:
 
-C2 should **not** claim that it is the first work to show that more data can be unhelpful, that identifiability matters, that experiments should be goal-directed, that pseudoreplication is dangerous, that nondetection is not absence, or that classifier calibration/domain shift matter.
+> **Precision, information gain, replicate count and classifier accuracy are local quantities conditioned on earlier choices about what was measured, what survived the observation process, what target matters, and which observations share failure domains.**
 
-The proposal-level novelty is instead:
+The manuscript organizes these conditions into four interacting interfaces:
 
-1. to distinguish four mathematically and operationally different ways in which “more” fails;
-2. to connect each failure to a different ecological measurement-design question;
-3. to show why no single scalar such as sample size, precision, entropy reduction, replicate count, or classifier accuracy can certify evidential adequacy across these responsibilities;
-4. to connect those abstract failures to concrete ecological measurement contracts without transferring theorem or empirical-result ownership from the source papers.
+1. **timely preservation** — did the biological distinction survive into the retained record?
+2. **separation** — does the retained measurement distinguish a live alternative?
+3. **relevance** — can the distinction change the declared scientific responsibility?
+4. **failure diversity** — does support depend on one shared failure domain?
+
+The strongest empirical claim is prospective, not definitional:
+
+> Given a predeclared claim and equal-cost measurement expansions, diagnosing the limiting interface before collecting new data should predict which intervention yields the largest gain in claim resolution.
+
+C2 should not claim that it invented competing-hypothesis reasoning, identifiability, goal-oriented design, value of information, pseudoreplication, imperfect detection, calibration, dataset-shift analysis, or the value of experiments relative to big observational data.
 
 ---
 
-## Failure 1 — Geometry
+## Historical separation tradition: multiple hypotheses and strong inference
+
+The separation interface sits in a long scientific tradition and must acknowledge it explicitly.
+
+- **Chamberlin TC (1890), “The Method of Multiple Working Hypotheses,” Science 15(366):92–96. DOI: 10.1126/science.ns-15.366.92.**  
+  Argues for carrying multiple explanations simultaneously rather than allowing one ruling theory to dominate observation and interpretation.
+
+- **Platt JR (1964), “Strong Inference,” Science 146(3642):347–353. DOI: 10.1126/science.146.3642.347.**  
+  Makes discriminating alternatives through decisive tests central to rapid scientific progress.
+
+### Novelty boundary
+
+C2 does not rebrand strong inference. It asks a measurement-design question downstream of that tradition: **what kind of observation creates the distinction needed to discriminate the alternatives, and what other interfaces can still block that distinction from becoming evidence?**
+
+---
+
+## Interface 1 — Timely preservation
 
 ### C2 formulation
 
-**More precise measurement, more repeats, or more reported variables need not improve structural identification when they do not add a new observation direction.**
+A distinction cannot support a claim downstream if it never entered, or was irreversibly deleted from, the retained record.
 
 ### Mature prior literature
 
-- **Villaverde, Barreiro & Papachristodoulou (2016), “Structural Identifiability of Dynamic Systems Biology Models,” PLOS Computational Biology 12:e1005153. DOI: 10.1371/journal.pcbi.1005153.**  
-  Structural identifiability is explicitly separated from the success of a parameter-estimation algorithm; unidentifiable model structure cannot be repaired merely by applying a better estimator.
+- **MacKenzie et al. (2002), Ecology 83:2248–2255. DOI: 10.1890/0012-9658(2002)083[2248:ESORWD]2.0.CO;2.**  
+  Nondetection is not absence when detection probability is below one; ecological state and observation process must be separated.
 
-This literature establishes that structural identifiability is a prerequisite and that richer/noisier estimation should not be confused with identifiability.
+- **Lahoz-Monfort, Guillera-Arroita & Wintle (2014), Global Ecology and Biogeography 23:504–515. DOI: 10.1111/geb.12138.**  
+  Demonstrates consequences of imperfect detection for species-distribution modelling.
 
-### Source-owned sharpening used by C2
+- **Alberdi et al. (2018), Methods in Ecology and Evolution 9:134–147. DOI: 10.1111/2041-210X.12849.**  
+  Shows how metabarcoding reliability depends on multiple upstream workflow steps, not only final taxonomic assignment.
 
-`zuizui0223/boundary` supplies the exact positive log-linear result:
+### Nearby but distinct literature: operating-semantics drift
 
-- residual dimension `k - rank(M)`;
-- one scalar candidate reduces the structural unidentified dimension iff its row lies outside the current row span;
-- duplicate, rescaled, or exact linear-combination rows add no structural identification.
+- **Dormann (2020), Global Ecology and Biogeography 29:760–765. DOI: 10.1111/geb.13070.**
+- **Cowans et al. (2026), Methods in Ecology and Evolution 17:228–237. DOI: 10.1111/2041-210X.14485.**
+- **Chen et al. (2025), Limnology and Oceanography: Methods 23:39–66. DOI: 10.1002/lom3.10659.**
 
-### Novelty boundary
+These establish calibration/uncertainty/dataset-shift problems. V7 deliberately distinguishes these from preservation failure: if the record survives but its operating meaning changes, recalibration may be possible; if the distinction never entered the record, downstream repair cannot recreate it.
 
-C2 does **not** invent structural identifiability, rank-nullity, or the idea that some measurements are redundant. Its contribution is to place **identification geometry** beside three other non-monotonicities and translate the result into a general ecological design diagnostic:
+### Source-owned sharpening
 
-> Did the new measurement cut a previously unresolved direction, or merely measure an old direction more accurately?
+`zuizui0223/rec` owns the protected record-entry irreversibility result. `zuizui0223/tnoa` owns representation-change/calibration semantics. C2 owns only the cross-interface lesson.
 
 ---
 
-## Failure 2 — Objective
+## Interface 2 — Separation
 
 ### C2 formulation
 
-**More information about the latent world need not be more useful evidence for the declared scientific target.**
+Greater precision need not distinguish live alternatives when those alternatives make the same prediction for the measured axis.
+
+### Mature prior literature: structural identification
+
+- **Villaverde, Barreiro & Papachristodoulou (2016), PLOS Computational Biology 12:e1005153. DOI: 10.1371/journal.pcbi.1005153.**
+
+### Ecology/statistics parameter-redundancy tradition
+
+- **Catchpole, Freeman & Morgan (1996), “Steps to Parameter Redundancy in Age-Dependent Recovery Models,” JRSS B 58:763–774. DOI: 10.1111/j.2517-6161.1996.tb02114.x.**  
+  Establishes inspection-based diagnosis of parameter redundancy in ecological recovery models.
+
+- **Cole & McCrea (2016), “Parameter redundancy in discrete state-space and integrated models,” Biometrical Journal 58:1071–1090. DOI: 10.1002/bimj.201400239.**  
+  Develops parameter-redundancy methods for ecological state-space/integrated models and shows how combining data types can change estimability.
+
+### Source-owned sharpening
+
+`zuizui0223/boundary` supplies the exact declared log-linear rank result and diagnostics.
+
+### Publication-surface ceiling
+
+C2 may state only that **separation can have formal, testable conditions** and that more precision is not synonymous with identification. The exact `k-rank(M)` theorem, row-span iff condition, Γ/κ development, breakdown factor and anchor ladder remain Boundary/C1 publication surface.
+
+---
+
+## Interface 3 — Relevance
+
+### C2 formulation
+
+More information about the latent world can be less useful for a declared target than a smaller amount of target-aligned information.
 
 ### Mature prior literature
 
-- **Vanlier et al. (2012), “A Bayesian approach to targeted experiment design,” Bioinformatics 28:1136–1142. DOI: 10.1093/bioinformatics/bts092.**  
-  Experimental effort is targeted at reducing uncertainty in predictions of interest rather than indiscriminately reducing all parameter uncertainty.
+- **Vanlier et al. (2012), Bioinformatics 28:1136–1142. DOI: 10.1093/bioinformatics/bts092.**
+- **Attia, Alexanderian & Saibaba (2018), Inverse Problems 34:095009. DOI: 10.1088/1361-6420/aad210.**
+- **Canessa et al. (2015), Methods in Ecology and Evolution 6:1219–1228. DOI: 10.1111/2041-210X.12423.**
+- **Nichols & Williams (2006), Trends in Ecology & Evolution 21:668–673. DOI: 10.1016/j.tree.2006.08.007.**
+- **Lindenmayer & Likens (2009), Trends in Ecology & Evolution 24:482–486. DOI: 10.1016/j.tree.2009.03.005.**
 
-- **Attia, Alexanderian & Saibaba (2018), “Goal-Oriented Optimal Design of Experiments for Large-Scale Bayesian Linear Inverse Problems,” Inverse Problems 34. DOI: 10.1088/1361-6420/aad210.**  
-  Goal-oriented OED minimizes posterior uncertainty in a declared quantity of interest rather than the full estimated parameter.
+These already establish target- and decision-dependent information value.
 
-- **Canessa et al. (2015), “When do we need more data? A primer on calculating the value of information for applied ecologists,” Methods in Ecology and Evolution 6:1219–1228. DOI: 10.1111/2041-210X.12423.**  
-  Ecological value-of-information analysis asks whether additional information is expected to improve management outcomes given explicit objectives and available actions.
+### V7 strengthening
 
-These literatures already establish that information value is objective-dependent.
+The manuscript no longer compares “pure nuisance information” against “perfect target information.” Candidate A now contains **more total world information and a nonzero noisy target signal**, whereas Candidate B has less total information but exact target resolution. The ranking reversal is therefore not a strawman comparison of useful information with irrelevant noise.
 
-### Source-owned sharpening used by C2
+### Source-owned sharpening
 
-`zuizui0223/ced` provides an exact same-world/same-cost finite witness:
-
-- `nuisance_detail`: 2 bits about full mechanism identity, exact target-resolution probability 0;
-- `target_split`: 1 bit about full mechanism identity, exact target-resolution probability 1.
-
-`zuizui0223/mrod` separately owns mechanism-learning observation design and must not be absorbed into C2.
-
-### Novelty boundary
-
-C2 does **not** claim to invent targeted OED, goal-oriented design, or value of information. It uses those traditions to make the broader synthesis credible and asks a sharper cross-programme question:
-
-> More information **about what**, for **which scientific responsibility**?
+`zuizui0223/ced` retains its exact finite equal-cost witness. C2 uses only the cross-literature objective-mismatch lesson.
 
 ---
 
-## Failure 3 — Dependence
+## Interface 4 — Failure diversity
 
 ### C2 formulation
 
-**More repeated observations need not provide more independent evidence when they share a failure domain.**
+Nominal replicate count need not equal independent opportunities for a distinction to survive when observations share a failure domain.
 
 ### Mature prior literature
 
-- **Hurlbert (1984), “Pseudoreplication and the Design of Ecological Field Experiments,” Ecological Monographs 54:187–211. DOI: 10.2307/1942661.**  
-  The classical pseudoreplication argument distinguishes nominal sample count from statistically independent replication and shows why non-independent replicates cannot be treated as independent evidence for a treatment effect.
+- **Hurlbert (1984), Ecological Monographs 54:187–211. DOI: 10.2307/1942661.**
+- **Marshall (2024), Ecology Letters 27:e14400. DOI: 10.1111/ele.14400.**
 
-This literature already makes dependence and experimental-unit structure central to ecological evidence.
+### Source-owned sharpening
 
-### Source-owned sharpening used by C2
-
-`zuizui0223/ced` supplies a failure-architecture result in which:
-
-- within-mode repeats can improve conditional sensitivity;
-- independent modes alter the worst-case guarantee against losing all assigned observations through common-mode failure;
-- unlimited repeats within a fixed shared-failure architecture need not reach the guarantee supplied by additional independent failure opportunities.
-
-### Novelty boundary
-
-C2 does **not** rebrand pseudoreplication as new. The new synthesis is to treat **failure-domain diversity** as a distinct measurement resource, separate from replicate number, precision, and target relevance:
-
-> Did we add another read, or another genuinely independent opportunity for the distinction to survive failure?
+`zuizui0223/ced` owns the failure-mode guarantee results. C2 does not rebrand pseudoreplication; it uses failure-domain diversity as one interacting interface in measurement-to-evidence design.
 
 ---
 
-## Failure 4 — Pipeline
+## Big-data / data-intensive ecology prior art
 
-### C2 formulation
+C2 must not imply that ecology has ignored the opportunities or limitations of data volume.
 
-**Better downstream classification, more confident thresholding, or an inherited numerical operating point need not restore distinctions or operating meaning lost earlier in the observation pipeline.**
+- **Michener & Jones (2012), “Ecoinformatics: supporting ecology as a data-intensive science,” Trends in Ecology & Evolution 27:85–93. DOI: 10.1016/j.tree.2011.11.016.**  
+  Frames ecology as increasingly data-intensive and emphasizes infrastructure for turning heterogeneous data into knowledge.
 
-This failure has two subtypes in C2: **upstream support loss** and **representation/operating-semantics shift**.
+- **Hampton et al. (2013), “Big data and the future of ecology,” Frontiers in Ecology and the Environment 11:156–162. DOI: 10.1890/120103.**  
+  Emphasizes the scientific opportunity of distributed ecological big data.
 
-### Mature prior literature: upstream observation error
+- **McCleery et al. (2023), “Uniting Experiments and Big Data to advance ecology and conservation,” Trends in Ecology & Evolution 38:970–979. DOI: 10.1016/j.tree.2023.05.010.**  
+  Explicitly argues that big observational data and experiments are complementary rather than substitutes, including for mechanism and intervention questions.
 
-- **MacKenzie et al. (2002), “Estimating site occupancy rates when detection probabilities are less than one,” Ecology 83:2248–2255. DOI: 10.1890/0012-9658(2002)083[2248:ESORWD]2.0.CO;2.**  
-  A nondetection does not imply absence when detection probability is below one; ecological state and observation process must be separated.
+### Novelty boundary relative to big-data Opinions
 
-This is a foundational ecological demonstration that the observed record is not automatically the latent biological state.
-
-### Mature prior literature: calibration and threshold semantics
-
-- **Dormann (2020), “Calibration of probability predictions from machine-learning and statistical models,” Global Ecology and Biogeography 29:760–765. DOI: 10.1111/geb.13070.**  
-  Raw probability predictions need not have their nominal probabilistic meaning and should be calibrated before probabilistic interpretation.
-
-- **Cowans et al. (2026), “Improving the integration of artificial intelligence into existing ecological inference workflows,” Methods in Ecology and Evolution. DOI: 10.1111/2041-210X.14485.**  
-  Thresholding AI confidence scores into ecological detections discards classification uncertainty; a single catch-all threshold is unlikely to yield consistent performance across classifiers/species/applications.
-
-- **Chen et al. (2024/2025), “Producing plankton classifiers that are robust to dataset shift,” Limnology and Oceanography: Methods. DOI: 10.1002/lom3.10659.**  
-  High-throughput ecological classifiers can fail under deployment dataset shift despite satisfactory nominal in-dataset performance.
-
-These literatures already establish imperfect observation, calibration problems, threshold sensitivity, and domain shift.
-
-### Source-owned sharpening used by C2
-
-`zuizui0223/rec` supplies a protected BirdVox irreversibility result in which the true late-minus-early contrast is about `+0.130820`, whereas an oracle downstream analysis restricted to truth-positive rows that actually entered the record yields about `-0.000025`. The claim is not that all detectors behave this way, but that downstream semantic perfection cannot recreate truth-positive rows omitted upstream in that audited system.
-
-`zuizui0223/tnoa` supplies a closed-world representation-change result in which an inherited raw threshold `0.55` yields nuisance recall `0.23125` after the representation changes, while recalibration against a declared family-conditional error meaning restores the predeclared operating criterion. TNOA owns the process-preserving observation interface and semantic-restraint method; C2 owns only the cross-programme lesson.
-
-### Novelty boundary
-
-C2 does **not** invent imperfect-detection modelling, classifier calibration, uncertainty-aware thresholding, or dataset-shift analysis. It adds a pipeline-level distinction:
-
-> Is the problem a downstream decision rule that can be recalibrated, or an upstream distinction that has already been deleted from the record and therefore requires independent new information to recover?
+C2 is not an anti-big-data argument and does not claim that experiments are always superior. Its proposed novelty is the **conditioning-set diagnosis**: ask what a local metric is conditional on, locate the limiting interface, and prospectively choose among equal-cost measurement expansions.
 
 ---
 
-# Cross-literature synthesis table
+# Why the synthesis is not merely four citations side by side
 
-| “More” proxy | Why it can fail | Mature literature already covering the component | C2 design question |
-|---|---|---|---|
-| precision / number of measured variables | same observation geometry | structural identifiability | Did the new measurement add a new identification direction? |
-| latent-world information / entropy reduction | wrong scientific objective | targeted/goal-oriented OED; ecological VoI | Did it resolve a distinction that can change the declared target? |
-| replicate count | shared dependence / common-mode failure | pseudoreplication / experimental-unit design | Did we add independent failure opportunities or only repeated reads? |
-| classifier quality / threshold confidence | upstream omission or changed operating semantics | imperfect detection; calibration; domain shift | Is the lost distinction still present to be recalibrated, or already gone? |
+The v7 synthesis must satisfy three tests.
 
-The unifying claim is therefore **not** that these literatures missed their own problem. The proposed TREE Opinion argues that ecology lacks a sufficiently explicit cross-cutting doctrine for deciding **which kind of “more” is evidentially relevant in a given scientific responsibility**.
+### 1. A common structure
+
+Each familiar metric is local because it is calculated after some eligibility condition has already been imposed:
+
+| metric | hidden/explicit conditioning set |
+|---|---|
+| precision | the observational axis already chosen |
+| information gain | the state variables included in the objective |
+| replicate count | the inferential unit and failure architecture |
+| classifier accuracy | records that survived upstream entry/processing |
+
+C2's cross-literature claim is that **local metric improvement is not equivalent to downstream claim resolution unless the relevant conditioning set preserves the distinction required by the claim**.
+
+### 2. Interface interactions
+
+The interfaces are not four independent boxes. Adding another sensor can increase failure diversity while changing detectability/calibration; primer diversity can protect against one amplification blind spot while reducing sequencing depth; a target-specific measurement can improve relevance while losing broader mechanism information; earlier capture can improve preservation while increasing annotation burden.
+
+### 3. A falsifiable prospective prediction
+
+The framework is not validated because its interface-specific remedies sound sensible. The decisive test is whether **pre-data diagnosis predicts intervention ranking** among equal-cost alternatives better than quantity-first or local-performance heuristics.
 
 ---
 
 # What would falsify or weaken the C2 pitch
 
-The TREE pitch should be weakened or redirected if a prior synthesis is found that already does all of the following together:
+The TREE pitch should be weakened or redirected if prior work already provides all three of the following together:
 
-1. separates structural identification gain from precision gain;
-2. separates latent-state information gain from target/decision value;
-3. separates replicate count from independent failure diversity;
-4. separates downstream calibration problems from irreversible upstream record loss;
-5. presents these as distinct non-monotonicities of ecological measurement/evidence rather than as one domain-specific problem.
+1. the conditional-locality synthesis across preservation, separation, relevance and failure diversity;
+2. explicit interaction/trade-off reasoning among those interfaces;
+3. a prospective doctrine in which pre-data diagnosis predicts which equal-cost measurement intervention should produce the largest gain for a declared claim.
 
-Finding strong prior art for any **one** of the four components does not falsify C2; it is expected and should be cited prominently. The novelty claim only survives if the **four-way synthesis and diagnostic separation** remains genuinely absent or underdeveloped.
+Strong prior art for any one interface is expected and should be cited prominently.
 
 # Proposal writing rule
 
-Lead with external literatures, not with repository names. Source-repository results should appear as compact demonstrations that make the synthesis testable and concrete. The editor should be able to accept the conceptual premise even without knowing the source programme.
+Lead with external intellectual traditions and the conditional-locality synthesis, not repository names. The editor should be able to state the novelty without knowing the source programme:
+
+> **The Opinion argues that familiar ecological performance metrics are conditional local quantities; evidential progress depends on whether their conditioning sets preserve and create the distinction required by the declared claim.**
+
+Then give the practical test: diagnose the limiting interface before collecting more data and ask whether that diagnosis predicts the best equal-cost measurement expansion.
