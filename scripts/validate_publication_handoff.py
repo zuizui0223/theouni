@@ -7,6 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 HANDOFF_JSON = ROOT / "universe" / "PUBLICATION_HANDOFF_2026-09-12.json"
 HANDOFF_MD = ROOT / "universe" / "PUBLICATION_HANDOFF_2026-09-12.md"
+INTEGRATION = ROOT / "universe" / "REPOSITORY_PAPER_INTEGRATION_CONTRACT_2026-09-15.json"
 LIVE_RULES = ROOT / "universe" / "LIVE_JOURNAL_RULES_2026-09-12.md"
 HUMAN_JSON = ROOT / "universe" / "HUMAN_SUBMISSION_INPUTS_2026-09-12.json"
 HUMAN_MD = ROOT / "universe" / "HUMAN_SUBMISSION_INPUTS_2026-09-12.md"
@@ -19,6 +20,7 @@ def main() -> None:
     for path in (
         HANDOFF_JSON,
         HANDOFF_MD,
+        INTEGRATION,
         LIVE_RULES,
         HUMAN_JSON,
         HUMAN_MD,
@@ -29,14 +31,24 @@ def main() -> None:
         assert path.exists(), path
 
     handoff = json.loads(HANDOFF_JSON.read_text(encoding="utf-8"))
+    integration = json.loads(INTEGRATION.read_text(encoding="utf-8"))
     human = json.loads(HUMAN_JSON.read_text(encoding="utf-8"))
     propagation = json.loads(PROPAGATION.read_text(encoding="utf-8"))
     c2_status = json.loads(C2_MANUSCRIPT_STATUS.read_text(encoding="utf-8"))
 
     assert handoff["status"] == "machine-work-closed-human-completion-open"
     assert handoff["scope"] == "observation_evidence_track_only"
+    assert handoff["repository_paper_integration_contract"] == "universe/REPOSITORY_PAPER_INTEGRATION_CONTRACT_2026-09-15.json"
     assert handoff["live_rules"] == "universe/LIVE_JOURNAL_RULES_2026-09-12.md"
     assert handoff["human_input_ledger"] == "universe/HUMAN_SUBMISSION_INPUTS_2026-09-12.json"
+
+    assert integration["status"] == "canonical-repository-paper-integration-contract"
+    assert integration["principles"]["source_export_does_not_transfer_ownership"] is True
+    assert integration["principles"]["one_repo_can_own_multiple_papers"] is True
+    assert integration["principles"]["one_paper_can_span_multiple_repos"] is True
+    assert integration["boundary_c1"]["home"] == "zuizui0223/boundary"
+    assert integration["boundary_c1"]["absorbed_into_c2"] is False
+    assert integration["boundary_c1"]["absorbed_into_ced"] is False
 
     units = handoff["units"]
     assert set(units) == {"C1", "C2", "M1", "M2", "M3", "M4"}
@@ -47,13 +59,17 @@ def main() -> None:
     assert c1["role_contract"] == "zuizui0223/boundary/paper/BOUNDARY_ROLE_CONTRACT_2026-09-12.json"
     assert c1["send_readiness"] == "zuizui0223/boundary/paper/C1_SEND_READINESS_2026-09-12.json"
     assert c1["exclusive_owner"] == "structural identification geometry"
+    assert "mechanistic proximity != mechanism identification" in c1["headline_claim"]
+    assert "k-rank(M)" in c1["primary_surface"]
+    assert "row-rank gain criterion" in c1["primary_surface"]
+    assert "Gamma/kappa" in c1["secondary_extension"]
     assert "qualitative geometry exemplar only" in c1["c2_role"]
     assert "exact theorem surface stays in Boundary" in c1["c2_role"]
     assert "external identification-geometry" in c1["ced_role"]
     assert c1["machine_blocker"] is False
     assert c1["proposal_max_words"] == 300
-    assert c1["proposal_word_count"] == 226
-    assert c1["proposal_word_headroom"] == 74
+    assert c1["proposal_word_count"] == 210
+    assert c1["proposal_word_headroom"] == 90
     assert c1["current_strategy_decision"] == "keep parked until C2 editorial outcome"
     assert c1["current_human_blockers"] == []
     assert set(c1["human_gates_if_activated"]) == {
@@ -142,12 +158,16 @@ def main() -> None:
     text = HANDOFF_MD.read_text(encoding="utf-8")
     for required in (
         "science and machine production closed for M1–M4",
+        "REPOSITORY_PAPER_INTEGRATION_CONTRACT_2026-09-15.json",
         "validated full Opinion manuscript v6",
         "3,503 words",
         "14/14 external references cited",
         "Figure 1 machine-generated and machine-validated",
         "C1 — Boundary / Ecology Letters Perspective",
         "Boundary is **not archived material and is not absorbed into C2 or CED**",
+        "mechanistic proximity != mechanism identification",
+        "210/300 words",
+        "90 words",
         "BOUNDARY_ROLE_CONTRACT_2026-09-12.json",
         "qualitative geometry exemplar only",
         "keep C1 parked until the C2 editorial outcome",
