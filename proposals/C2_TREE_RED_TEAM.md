@@ -1,6 +1,6 @@
 # C2 TREE red-team — likely editorial rejection reasons and pre-emptive fixes
 
-Status: **internal editorial-risk audit**.
+Status: **internal editorial-risk audit aligned with manuscript v6**.
 
 This audit asks how the proposal could be rejected even if every source result is correct.
 
@@ -8,103 +8,96 @@ This audit asks how the proposal could be rejected even if every source result i
 
 **Risk:** very high if the pitch leads with the slogan rather than the diagnostic separation.
 
-**Current defence:** the proposal separates four failures that have different causes and different remedies: same dimension, wrong target, shared dependence, upstream loss.
+**Current defence:** the paper does not argue that more information is intrinsically harmful. It distinguishes four recurrent bottlenecks — timely preservation, separation, relevance and failure diversity — whose missing properties generate different failures and therefore different remedies.
 
-**Required wording:** always follow the title-level slogan with the sentence that the contribution is the **four-way diagnostic separation**, not the slogan itself.
+**Required wording:** always follow the title-level slogan with the operational question: **what distinction must the next measurement create or preserve for the conclusion to change?**
 
-**Do not add:** more examples of generic bad data. That would strengthen the rejection rather than answer it.
+**Do not add:** generic examples of “bad data.” That would strengthen the rejection rather than answer it.
 
-## R2 — “The four boxes are a collage of known ideas from unrelated literatures.”
+## R2 — “This is a collage of known ideas from unrelated literatures.”
 
-**Risk:** high because structural identifiability, goal-oriented design, pseudoreplication and imperfect detection/calibration are all mature literatures.
+**Risk:** high because structural identifiability, goal-oriented design, value of information, pseudoreplication, imperfect detection, calibration and metabarcoding all have mature literatures.
 
-**Current defence:** C2 explicitly gives those literatures priority and claims only a cross-cutting doctrine for deciding which kind of ‘more’ is relevant to a particular ecological question.
+**Current defence:** C2 explicitly gives those literatures priority and claims only the cross-cutting **measurement-to-evidence** synthesis: a biological distinction must be preserved, must separate live alternatives, must matter to the declared target, and repeated support must contain sufficient failure diversity.
 
-**Editorial test:** the four failures must share one decision point:
+**Editorial test:** the paper must remain organized around one prospective design decision:
 
-> Before adding measurement effort, ask what distinction the new measurement creates or preserves, whether that distinction matters to the target, whether the opportunity is independent, and whether it survives the observation pipeline.
+> Before adding measurement effort, locate the limiting interface and ask what distinction the next measurement must create or preserve.
 
-If the paper cannot be organized around that common decision, R2 wins and C2 should be redirected to a narrower journal.
+If the paper collapses back into four unrelated warnings, R2 wins and the synthesis should be narrowed.
 
 ## R3 — “This sounds like statistics/methods, not ecology or evolution.”
 
 **Risk:** high if terms such as compatible worlds, rank, entropy, licensing and failure architecture dominate the proposal.
 
-**Current defence:** editor-facing text now uses ecological-language aliases: same dimension / wrong target / shared dependence / upstream loss. Formal labels remain secondary.
+**Current defence:** submission-facing text uses ecological-language interfaces and ordinary design questions. Formal mathematics remains in source papers.
 
-**Required figure logic:** Figure 1 should show four ordinary ecological choices, not four equations:
+**Required Figure 1 logic:** Figure 1 must show the flow from **biological opportunity → retained record → distinguishable alternatives → declared target**. Timely preservation, separation and relevance label the interfaces; failure diversity spans the observation paths as a cross-cutting robustness layer. The visual centre must be an ecological measurement problem, not equations.
 
-1. measuring the same gradient more precisely;
-2. measuring a nuisance trait instead of the biological target;
-3. repeating one sensor or method with the same blind spot;
-4. improving classification after missed encounters were never recorded.
-
-Equations belong in the eventual boxes or source papers, not in the proposal’s visual centre.
-
-## R4 — “The proposal is too inward-looking and based on the authors’ own programme.”
+## R4 — “The proposal is too inward-looking and based on the author’s own programme.”
 
 **Risk:** medium-high.
 
-**Current defence:** external prior-art map leads the intellectual positioning; source-repository results are demonstrations, not literature substitutes.
+**Current defence:** external prior art leads the intellectual positioning; source-repository results are demonstrations, not literature substitutes. The v6 manuscript uses fourteen external references and removes repository labels and unpublished-source placeholders from submission-facing prose.
 
-**Release rule:** the final proposal bibliography and prose should contain more external intellectual anchors than self-programme references. Repository names should never appear in the editor-facing email.
+**Release rule:** editor-facing prose should contain more external intellectual anchors than self-programme detail. Repository names must never appear in the actual email sent to TREE.
 
-## R5 — “The Campanula and island-pollination examples are unpublished or speculative.”
+## R5 — “The worked examples are unpublished or speculative.”
 
 **Risk:** medium.
 
-**Current defence:** both are explicitly worked measurement-design examples with claim ceilings; the proposal does not present their coefficients or translation tracks as new empirical findings.
+**Current defence:** Box 1 (*Campanula*) is explicitly a prospective worked design example, not empirical validation. Box 2 (metabarcoding) is based on established workflow-bias, calibration and ecological-inference literature rather than an unpublished field result.
 
-**Required label:** use “worked example” or “measurement-design example,” never “case study demonstrating” unless empirical validation exists.
+**Required label:** use “worked design example” or “worked design illustration,” never “case study demonstrating” unless empirical validation exists.
 
 ## R6 — “The framework is not genuinely useful because each field already knows its own warning.”
 
 **Risk:** high and substantive.
 
-**Best answer:** the framework is useful only if ecologists routinely face decisions where the wrong remedy is applied to the wrong failure — e.g. adding replicates to a structural-identification problem, optimizing classifier accuracy after upstream omission, or maximizing information about nuisance mechanisms when the reporting target is already different.
+**Best answer:** the framework is useful only if diagnosing the limiting interface changes the next measurement decision — for example, choosing a mechanism-separating observation instead of more precision, diversifying failure domains instead of adding nominal replicates, or moving a metabarcoding intervention upstream instead of optimizing a classifier after amplification loss.
 
-**Needed in final Opinion if invited:** at least one cross-domain example where diagnosing the failure class changes the next measurement decision.
+**Required payoff:** the final Opinion must make remedy matching more memorable than the four failure names themselves.
 
-## R7 — “The title overclaims: evidence is not monotone in measurement amount.”
+## R7 — “The title overclaims.”
 
 **Risk:** medium.
 
-**Current defence:** the paper does not say that more measurement never helps. It says additional measurement is not guaranteed to increase evidential adequacy across distinct scientific responsibilities.
+**Current defence:** the manuscript includes an explicit non-harm caveat. It does not claim that extra information necessarily worsens inference; it claims that sample size, precision, total information, replicate count and conditional classifier accuracy are not universal monotone proxies for evidential progress toward a declared responsibility.
 
-**Fallback title if editor pushes back:**
+**Current preferred title:** **When more measurement is not more evidence**.
 
-**When more measurement is not more evidence: diagnosing four failures in ecological inference**
-
-This is less provocative but more conditional.
+**Fallback if the editor requests more qualification:** **When more measurement is not more evidence: diagnosing bottlenecks in ecological inference**.
 
 ## R8 — “Why TREE rather than MEE or a statistics/methods journal?”
 
 **Risk:** high unless breadth is explicit.
 
-**TREE answer:** this is not a new estimator or workflow. It is an Opinion about how ecology should reason about escalating measurement effort across field sampling, monitoring, sensors, experiments and mechanistic inference. Detailed algorithms remain in source methods papers.
+**TREE answer:** this is not a new estimator or workflow. It is an Opinion about how ecology and evolution should reason about escalating measurement effort across field sampling, monitoring, sensors, eDNA, genomics, experiments and mechanistic inference. Detailed algorithms remain in source methods papers.
 
-If the editor asks for algorithmic validation or implementation detail as the central contribution, the concept is probably being read as MEE rather than TREE and the framing has failed.
+If the editor asks for algorithmic validation or implementation detail as the central contribution, the concept is being read as MEE rather than TREE and the framing has failed.
 
-## R9 — “The four failures are not exhaustive.”
+## R9 — “The four interfaces are not exhaustive.”
 
-**Risk:** medium if the text says or implies a complete taxonomy.
+**Risk:** medium if the text implies a complete taxonomy.
 
-**Current rule:** call them **four recurrent failures** or **four diagnostically distinct failures**, not an exhaustive universal partition of all evidence problems.
+**Current rule:** call them **four recurrent interfaces/bottlenecks** or a practical screen, not a necessary-and-sufficient partition of all evidence problems. Failure diversity is explicitly cross-cutting rather than a fourth sequential pipeline stage.
 
 ## R10 — “The authorship looks strategically inflated or under-supported.”
 
 **Risk:** currently low because only one named author is evidence-backed.
 
-**Rule:** do not add supervisors/senior collaborators automatically. Additional authors require substantive C2-level synthesis, drafting and accountability contributions. Source-result ownership is handled by citation, not automatic authorship.
+**Rule:** do not add supervisors or senior collaborators automatically. Additional authors require substantive C2-level synthesis, drafting and accountability contributions. Source-result ownership is handled by citation, not automatic authorship.
 
 # Go / no-go after red-team
 
 C2 should be sent only if all are true:
 
 - the proposal can state its novelty without claiming any component warning as new;
-- a non-specialist ecologist can explain the four failures after one read;
-- at least one example changes a plausible ecological measurement decision;
-- the paper is visibly an ecological Opinion, not a bundle of methods results;
+- a non-specialist ecologist can explain the measurement-to-evidence logic after one read;
+- at least one worked example changes a plausible ecological measurement decision;
+- the paper is visibly an ecological/evolutionary Opinion, not a bundle of methods results;
+- the four interfaces are presented as a practical screen rather than an exhaustive theorem;
+- Boundary/C1 theorem ownership remains outside C2;
 - authorship is defensible by C2-level contributions;
 - the live TREE contact route is confirmed immediately before sending.
 
