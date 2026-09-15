@@ -16,7 +16,10 @@
     "citation_audit": "scripts/audit_c2_citations.py",
     "citation_audit_status": "pass",
     "all_external_references_cited": true,
-    "section_level_citation_coverage": true
+    "section_level_citation_coverage": true,
+    "reference_metadata_audit": "manuscript/C2_REFERENCE_METADATA_AUDIT_2026-09-15.json",
+    "reference_metadata_audit_status": "pass",
+    "reference_metadata_discrepancies_requiring_edit": 0
   },
   "figure1": {
     "spec": "proposals/C2_FIGURE1_DECISION_MAP_SPEC.md",
@@ -25,6 +28,8 @@
     "machine_validated": true,
     "validation_run": 34798007047,
     "validation_head_sha": "3cbed18df2b088ebfe566c3aa9e6ad49fbe96b49",
+    "assistant_visual_audit": "manuscript/C2_FIGURE1_VISUAL_AUDIT_2026-09-15.json",
+    "assistant_visual_audit_status": "pass",
     "human_visual_inspection_complete": false
   },
   "conceptual_spine": {
@@ -72,9 +77,9 @@
     "interpretation": "The full manuscript is a prepared downstream asset, not a reason to bypass the proposal-first TREE route."
   },
   "remaining_manuscript_work": [
-    "human visual inspection of Figure 1",
+    "final human visual approval of Figure 1",
     "final publisher-style copyedit only after editorial interest or explicit editor request",
-    "dispatch-time reference metadata spot-check and journal formatting"
+    "lightweight dispatch-time reference metadata spot-check and journal formatting"
   ],
   "science_reopen_rule": "Do not reopen source-paper science merely to increase C2 length or add another failure class."
 }
