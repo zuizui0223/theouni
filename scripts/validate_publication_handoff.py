@@ -14,6 +14,8 @@ HUMAN_MD = ROOT / "universe" / "HUMAN_SUBMISSION_INPUTS_2026-09-12.md"
 PROPAGATION = ROOT / "universe" / "HUMAN_INPUT_PROPAGATION_MAP_2026-09-12.json"
 C2_MANUSCRIPT = ROOT / "manuscript" / "C2_TREE_OPINION_DRAFT_V6.md"
 C2_MANUSCRIPT_STATUS = ROOT / "manuscript" / "C2_MANUSCRIPT_STATUS_2026-09-14.json"
+C2_REFERENCE_AUDIT = ROOT / "manuscript" / "C2_REFERENCE_METADATA_AUDIT_2026-09-15.json"
+C2_FIGURE_VISUAL_AUDIT = ROOT / "manuscript" / "C2_FIGURE1_VISUAL_AUDIT_2026-09-15.json"
 
 
 def main() -> None:
@@ -27,6 +29,8 @@ def main() -> None:
         PROPAGATION,
         C2_MANUSCRIPT,
         C2_MANUSCRIPT_STATUS,
+        C2_REFERENCE_AUDIT,
+        C2_FIGURE_VISUAL_AUDIT,
     ):
         assert path.exists(), path
 
@@ -35,6 +39,8 @@ def main() -> None:
     human = json.loads(HUMAN_JSON.read_text(encoding="utf-8"))
     propagation = json.loads(PROPAGATION.read_text(encoding="utf-8"))
     c2_status = json.loads(C2_MANUSCRIPT_STATUS.read_text(encoding="utf-8"))
+    reference_audit = json.loads(C2_REFERENCE_AUDIT.read_text(encoding="utf-8"))
+    figure_visual_audit = json.loads(C2_FIGURE_VISUAL_AUDIT.read_text(encoding="utf-8"))
 
     assert handoff["status"] == "machine-work-closed-human-completion-open"
     assert handoff["scope"] == "observation_evidence_track_only"
@@ -95,7 +101,13 @@ def main() -> None:
     assert c2["full_manuscript_validation_head"] == "3cbed18df2b088ebfe566c3aa9e6ad49fbe96b49"
     assert c2["citation_audit_pass"] is True
     assert c2["all_external_references_cited"] is True
+    assert c2["reference_metadata_audit"] == "manuscript/C2_REFERENCE_METADATA_AUDIT_2026-09-15.json"
+    assert c2["reference_metadata_audit_pass"] is True
+    assert c2["reference_metadata_discrepancies_requiring_edit"] == 0
     assert c2["figure1_machine_validated"] is True
+    assert c2["figure1_visual_audit"] == "manuscript/C2_FIGURE1_VISUAL_AUDIT_2026-09-15.json"
+    assert c2["figure1_assistant_visual_audit_pass"] is True
+    assert c2["figure1_human_visual_approval"] is False
     assert "do not attach" in c2["full_manuscript_dispatch_policy"].lower()
     assert c2["live_route_verified_on"] == "2026-09-12"
     assert c2["current_live_contact"] == "tree@cell.com"
@@ -117,9 +129,14 @@ def main() -> None:
     assert c2_status["validation"]["citation_audit_status"] == "pass"
     assert c2_status["validation"]["all_external_references_cited"] is True
     assert c2_status["validation"]["section_level_citation_coverage"] is True
+    assert c2_status["validation"]["reference_metadata_audit"] == "manuscript/C2_REFERENCE_METADATA_AUDIT_2026-09-15.json"
+    assert c2_status["validation"]["reference_metadata_audit_status"] == "pass"
+    assert c2_status["validation"]["reference_metadata_discrepancies_requiring_edit"] == 0
     assert c2_status["figure1"]["machine_generated"] is True
     assert c2_status["figure1"]["machine_validated"] is True
     assert c2_status["figure1"]["validation_run"] == 34798007047
+    assert c2_status["figure1"]["assistant_visual_audit"] == "manuscript/C2_FIGURE1_VISUAL_AUDIT_2026-09-15.json"
+    assert c2_status["figure1"]["assistant_visual_audit_status"] == "pass"
     assert c2_status["figure1"]["human_visual_inspection_complete"] is False
     assert c2_status["editorial_compression"]["from_version"] == "v5"
     assert c2_status["editorial_compression"]["from_words_before_references"] == 4896
@@ -130,6 +147,19 @@ def main() -> None:
     assert c2_status["editorial_compression"]["references_removed"] == 0
     assert c2_status["journal_route"]["proposal_first"] is True
     assert c2_status["journal_route"]["full_manuscript_should_not_be_dispatched_with_presubmission_pitch_unless_requested"] is True
+
+    assert reference_audit["status"] == "pass"
+    assert reference_audit["reference_count"] == 14
+    assert reference_audit["discrepancies_requiring_manuscript_edit"] == 0
+    assert len(reference_audit["records"]) == 14
+    assert all(row["status"] == "match" for row in reference_audit["records"])
+
+    assert figure_visual_audit["status"] == "assistant-visual-pass-human-final-check-open"
+    assert figure_visual_audit["render_checked"] is True
+    assert figure_visual_audit["post_correction_checks"]["obvious_text_overlap"] is False
+    assert figure_visual_audit["post_correction_checks"]["obvious_clipping"] is False
+    assert figure_visual_audit["post_correction_checks"]["conceptual_order_matches_v6"] is True
+    assert figure_visual_audit["human_visual_inspection_complete"] is False
 
     for paper in ("M1", "M2", "M3", "M4"):
         assert units[paper]["science_blocker"] is False
@@ -166,7 +196,11 @@ def main() -> None:
         "validated full Opinion manuscript v6",
         "3,503 words",
         "14/14 external references cited",
+        "reference metadata audit",
+        "0 discrepancies requiring manuscript edit",
         "Figure 1 machine-generated and machine-validated",
+        "assistant visual audit PASS",
+        "human final visual approval remains open",
         "C1 — Boundary / Ecology Letters Perspective",
         "Boundary is **not archived material and is not absorbed into C2 or CED**",
         "mechanistic proximity != mechanism identification",
