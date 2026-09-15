@@ -1,0 +1,58 @@
+{
+  "schema": "repository-paper-integration-contract-v1",
+  "date": "2026-09-15",
+  "status": "canonical-integration-contract",
+  "source_of_truth": "universe/PORTFOLIO_GOVERNANCE_2026-09-11.json",
+  "purpose": "Keep repository-level paper ownership intact while allowing explicit cross-repository synthesis without accidental absorption or paper-count inflation.",
+  "layers": {
+    "repo_owned_papers": {
+      "definition": "A paper unit whose scientific ownership remains in its home repository even when parts are exported to a larger synthesis.",
+      "examples": ["BOUNDARY_C1", "TNOA_M1", "MROD_M2", "CED_M3", "BITA", "SCH"]
+    },
+    "cross_repo_syntheses": {
+      "definition": "A paper unit that integrates source repositories but owns only the new cross-repository synthesis, not the underlying source results.",
+      "examples": {
+        "C2_TREE": ["boundary", "ced", "mrod", "rec", "tnoa"],
+        "SLK": ["sch", "balance", "bita", "payoff"],
+        "CREST": ["ccoc", "mltr", "mrm", "ced"],
+        "EGWE_NEE": ["egwe", "egc"]
+      }
+    },
+    "modules_and_sources": {
+      "definition": "Reusable scientific components that may support papers but are not counted as separate active papers unless a distinct paper unit is explicitly registered.",
+      "examples": ["balance", "egc", "pollipi"]
+    },
+    "future_programmes": {
+      "definition": "Qualified or planned research programmes that are not active paper units until their activation conditions are met.",
+      "examples": ["aza3", "TTF", "insepi"]
+    }
+  },
+  "ownership_rules": [
+    "repo_count != paper_count != chapter_count != submission_queue",
+    "one repository may own multiple paper units",
+    "one paper may span multiple repositories",
+    "export to a synthesis does not transfer theorem or empirical-result ownership unless explicitly recorded",
+    "a module or source-only repository is not a failed paper",
+    "cross-repository synthesis must identify its new synthesis-level contribution separately from source-owned results"
+  ],
+  "boundary_decision": {
+    "repository": "zuizui0223/boundary",
+    "paper_unit": "BOUNDARY_C1",
+    "decision": "retain as independent conditional C1; do not absorb into C2 or CED",
+    "headline_claim": "mechanistic proximity is not mechanism identification; mechanistic evidence needs an identification axis",
+    "primary_surface": [
+      "k-rank(M) structural identification dimension",
+      "row-rank gain iff criterion for an informative new scalar measurement",
+      "ecological-chain component/anchor interpretation"
+    ],
+    "secondary_surface": [
+      "Gamma/kappa proxy uncertainty",
+      "sharp identified sets",
+      "breakdown factor"
+    ],
+    "c2_export_ceiling": "qualitative same-direction/separation lesson only",
+    "ced_export_ceiling": "external identification boundary/contrast only",
+    "submission_strategy": "keep parked until C2 editorial outcome; activate if C2 is declined/too broad or if both can proceed under the explicit ownership firewall"
+  },
+  "governance_test": "If a cross-repository paper can no longer state what is new at the synthesis level without re-owning source theorems/results, the integration is invalid and the source-paper boundary must be restored."
+}
