@@ -8,6 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 GOVERNANCE = ROOT / "universe" / "PORTFOLIO_GOVERNANCE_2026-09-11.json"
 TRACK_PROGRAMME = ROOT / "universe" / "PUBLICATION_PROGRAMME_2026-09-11.json"
+INTEGRATION = ROOT / "universe" / "REPOSITORY_PAPER_INTEGRATION_CONTRACT_2026-09-15.json"
 
 EXPECTED_REPOSITORIES = {
     "284b", "acsp", "adaptive-gain", "aza3", "azami", "balance", "bita",
@@ -44,6 +45,7 @@ def load(path: Path):
 def main() -> None:
     governance = load(GOVERNANCE)
     programme = load(TRACK_PROGRAMME)
+    integration = load(INTEGRATION)
 
     assert governance["status"] == "canonical_portfolio_governance"
     assert governance["scope"]["owner"] == "zuizui0223"
@@ -118,6 +120,35 @@ def main() -> None:
     }
     assert set(local_ids.values()) == set(contract["paper_units"])
     assert set(local_ids.values()) == set(governance["tracks"]["observation_evidence"])
+
+    # Repository-to-paper integration contract: cross-repo synthesis must not
+    # silently absorb source-paper ownership.
+    assert integration["status"] == "canonical-integration-contract"
+    assert integration["source_of_truth"] == "universe/PORTFOLIO_GOVERNANCE_2026-09-11.json"
+    layers = integration["layers"]
+    assert set(layers) == {
+        "repo_owned_papers", "cross_repo_syntheses", "modules_and_sources", "future_programmes"
+    }
+    syntheses = layers["cross_repo_syntheses"]["examples"]
+    assert set(syntheses["C2_TREE"]) == {"boundary", "ced", "mrod", "rec", "tnoa"}
+    assert set(syntheses["SLK"]) == {"sch", "balance", "bita", "payoff"}
+    assert set(syntheses["CREST"]) == {"ccoc", "mltr", "mrm", "ced"}
+    assert set(syntheses["EGWE_NEE"]) == {"egwe", "egc"}
+
+    boundary = integration["boundary_decision"]
+    assert boundary["paper_unit"] == "BOUNDARY_C1"
+    assert boundary["decision"] == "retain as independent conditional C1; do not absorb into C2 or CED"
+    assert "mechanistic proximity is not mechanism identification" in boundary["headline_claim"]
+    assert "k-rank(M)" in "\n".join(boundary["primary_surface"])
+    assert "row-rank gain iff" in "\n".join(boundary["primary_surface"])
+    assert "breakdown factor" in "\n".join(boundary["secondary_surface"])
+    assert boundary["c2_export_ceiling"] == "qualitative same-direction/separation lesson only"
+    assert boundary["ced_export_ceiling"] == "external identification boundary/contrast only"
+
+    assert by_id["BOUNDARY_C1"]["homes"] == ["boundary"]
+    assert by_id["C2_TREE"]["homes"] == ["theouni"]
+    assert set(by_id["C2_TREE"]["sources"]) == {"boundary", "ced", "mrod", "rec", "tnoa"}
+    assert by_id["CED_M3"]["homes"] == ["ced"]
 
     print("PORTFOLIO_GOVERNANCE PASS")
 
