@@ -1,104 +1,133 @@
 # C2 TREE red-team — likely editorial rejection reasons and pre-emptive fixes
 
-Status: **internal editorial-risk audit aligned with manuscript v6**.
+Status: **internal editorial-risk audit aligned with manuscript v7**.
 
 This audit asks how the proposal could be rejected even if every source result is correct.
 
 ## R1 — “This is just a sophisticated way to say more data are not always better.”
 
-**Risk:** very high if the pitch leads with the slogan rather than the diagnostic separation.
+**Residual risk:** medium; reduced from very high in v6.
 
-**Current defence:** the paper does not argue that more information is intrinsically harmful. It distinguishes four recurrent bottlenecks — timely preservation, separation, relevance and failure diversity — whose missing properties generate different failures and therefore different remedies.
+**V7 defence:** the paper now leads with a stronger common structure: familiar performance metrics are **local quantities conditioned on earlier measurement choices and losses**. Precision is conditional on the observational axis; information gain on the objective; replicate count on inferential unit/failure architecture; classifier accuracy on the retained-record set. The headline is therefore not “more can fail” but **when a local metric can and cannot proxy downstream claim resolution**.
 
-**Required wording:** always follow the title-level slogan with the operational question: **what distinction must the next measurement create or preserve for the conclusion to change?**
-
-**Do not add:** generic examples of “bad data.” That would strengthen the rejection rather than answer it.
+**Required wording:** preserve the sentence that a conditional local metric is not automatically a universal proxy for a downstream scientific responsibility.
 
 ## R2 — “This is a collage of known ideas from unrelated literatures.”
 
-**Risk:** high because structural identifiability, goal-oriented design, value of information, pseudoreplication, imperfect detection, calibration and metabarcoding all have mature literatures.
+**Residual risk:** medium-high; still the main editorial risk, but v7 now has two explicit defences.
 
-**Current defence:** C2 explicitly gives those literatures priority and claims only the cross-cutting **measurement-to-evidence** synthesis: a biological distinction must be preserved, must separate live alternatives, must matter to the declared target, and repeated support must contain sufficient failure diversity.
+### Defence A — shared conditional structure
 
-**Editorial test:** the paper must remain organized around one prospective design decision:
+The paper no longer relies only on a four-item list. It argues that the four literatures share one architecture: a local metric is evaluated after some conditioning set has already been imposed, and evidential adequacy depends on whether that conditioning set preserves/creates the distinction required by the claim.
 
-> Before adding measurement effort, locate the limiting interface and ask what distinction the next measurement must create or preserve.
+### Defence B — interface interactions
 
-If the paper collapses back into four unrelated warnings, R2 wins and the synthesis should be narrowed.
+V7 gives interactions in the main text: a second sensor can increase failure diversity while changing detectability/calibration; primer diversity can reduce amplification blind spots while reducing depth; target-specific measurement can improve relevance while sacrificing broad mechanism information; earlier capture can improve preservation while raising annotation/storage burden.
 
-## R3 — “This sounds like statistics/methods, not ecology or evolution.”
+**Editorial test:** if an outside reader still summarizes the paper as “identifiability + VOI + pseudoreplication + detection bias,” R2 remains unresolved. They should instead be able to state the conditional-locality thesis and the prospective intervention-ranking test.
 
-**Risk:** high if terms such as compatible worlds, rank, entropy, licensing and failure architecture dominate the proposal.
+## R3 — “Separation is just Chamberlin/Platt strong inference.”
 
-**Current defence:** submission-facing text uses ecological-language interfaces and ordinary design questions. Formal mathematics remains in source papers.
+**Residual risk:** low-medium after v7.
 
-**Required Figure 1 logic:** Figure 1 must show the flow from **biological opportunity → retained record → distinguishable alternatives → declared target**. Timely preservation, separation and relevance label the interfaces; failure diversity spans the observation paths as a cross-cutting robustness layer. The visual centre must be an ecological measurement problem, not equations.
+**V7 fix:** Chamberlin (1890) and Platt (1964) are now explicit prior art, and ecological parameter-redundancy literature is added (Catchpole et al. 1996; Cole & McCrea 2016). C2 does not claim the idea of discriminating hypotheses. Its question is what observation design creates/preserves the required discrimination and how the other interfaces can still block it.
 
-## R4 — “The proposal is too inward-looking and based on the author’s own programme.”
-
-**Risk:** medium-high.
-
-**Current defence:** external prior art leads the intellectual positioning; source-repository results are demonstrations, not literature substitutes. The v6 manuscript uses fourteen external references and removes repository labels and unpublished-source placeholders from submission-facing prose.
-
-**Release rule:** editor-facing prose should contain more external intellectual anchors than self-programme detail. Repository names must never appear in the actual email sent to TREE.
-
-## R5 — “The worked examples are unpublished or speculative.”
+## R4 — “This sounds like statistics/methods, not ecology or evolution.”
 
 **Risk:** medium.
 
-**Current defence:** Box 1 (*Campanula*) is explicitly a prospective worked design example, not empirical validation. Box 2 (metabarcoding) is based on established workflow-bias, calibration and ecological-inference literature rather than an unpublished field result.
+**Current defence:** submission-facing text uses ecological-language interfaces and ordinary design questions. Formal mathematics remains in source papers. Box 1 now uses island/site contrasts and pollinator exclusion logic rather than an abstract trait-only example.
 
-**Required label:** use “worked design example” or “worked design illustration,” never “case study demonstrating” unless empirical validation exists.
+**Required Figure 1 logic:** biological opportunity → retained record → distinguishable alternatives → declared target; failure diversity is cross-cutting.
 
-## R6 — “The framework is not genuinely useful because each field already knows its own warning.”
+## R5 — “The proposal ignores big-data ecology / prior TREE Opinions.”
 
-**Risk:** high and substantive.
+**Residual risk:** low after v7, but keep explicit.
 
-**Best answer:** the framework is useful only if diagnosing the limiting interface changes the next measurement decision — for example, choosing a mechanism-separating observation instead of more precision, diversifying failure domains instead of adding nominal replicates, or moving a metabarcoding intervention upstream instead of optimizing a classifier after amplification loss.
+**V7 fix:** prior-art map and manuscript now acknowledge Michener & Jones (2012) on data-intensive ecology and McCleery et al. (2023) on integrating experiments and big data. C2 is not anti-big-data; its novelty claim is the conditioning-set diagnosis and prospective intervention ranking.
 
-**Required payoff:** the final Opinion must make remedy matching more memorable than the four failure names themselves.
+## R6 — “The relevance example is a strawman.”
 
-## R7 — “The title overclaims.”
+**Residual risk:** low after v7.
+
+**V7 fix:** Candidate A now has more total world information **and a nonzero noisy target signal (75% correct)**. Candidate B has less total information but exact target resolution. The ranking reversal is between two scientifically useful measurements under different objectives, not nuisance-only information versus a perfect target oracle.
+
+## R7 — “The worked examples are unpublished or speculative.”
 
 **Risk:** medium.
 
-**Current defence:** the manuscript includes an explicit non-harm caveat. It does not claim that extra information necessarily worsens inference; it claims that sample size, precision, total information, replicate count and conditional classifier accuracy are not universal monotone proxies for evidential progress toward a declared responsibility.
+**Current defence:** both remain explicitly worked design illustrations. Box 1 no longer assumes nectar-guide specificity; it asks for decoupled pollinator–climate contrasts or exclusions and measures visitor identity, effective pollen transfer and reproductive consequence. Box 2 is grounded in published metabarcoding/calibration literature.
 
-**Current preferred title:** **When more measurement is not more evidence**.
+**Required label:** use “worked design example/illustration,” never “case study demonstrating.”
 
-**Fallback if the editor requests more qualification:** **When more measurement is not more evidence: diagnosing bottlenecks in ecological inference**.
+## R8 — “The Predictions section is tautological.”
 
-## R8 — “Why TREE rather than MEE or a statistics/methods journal?”
+**Residual risk:** low-medium after v7.
 
-**Risk:** high unless breadth is explicit.
+**V7 fix:** interface-specific consequences are explicitly demoted as near-definitional. The paper now has one core falsifiable prediction:
 
-**TREE answer:** this is not a new estimator or workflow. It is an Opinion about how ecology and evolution should reason about escalating measurement effort across field sampling, monitoring, sensors, eDNA, genomics, experiments and mechanistic inference. Detailed algorithms remain in source methods papers.
+> Given a predeclared claim and equal-cost measurement expansions, diagnosis of the limiting interface before collecting new data should predict which intervention yields the largest gain in claim resolution.
 
-If the editor asks for algorithmic validation or implementation detail as the central contribution, the concept is being read as MEE rather than TREE and the framing has failed.
+Concrete tests are specified: known-truth simulations, monitoring systems with reference channels/audit samples, and randomized equal-effort prospective comparisons. The doctrine is weakened if diagnosis fails to predict intervention ranking.
 
-## R9 — “The four interfaces are not exhaustive.”
+## R9 — “The interface ordering is inconsistent.”
 
-**Risk:** medium if the text implies a complete taxonomy.
+**Residual risk:** closed in v7.
 
-**Current rule:** call them **four recurrent interfaces/bottlenecks** or a practical screen, not a necessary-and-sufficient partition of all evidence problems. Failure diversity is explicitly cross-cutting rather than a fourth sequential pipeline stage.
+Sections, table and Figure logic all use **timely preservation → separation → relevance**, with **failure diversity cross-cutting**. The text explicitly says this is an observation-path ordering, not a mandatory diagnostic sequence.
 
-## R10 — “The authorship looks strategically inflated or under-supported.”
+## R10 — “Operating-semantics drift is not preservation failure.”
+
+**Residual risk:** closed in v7.
+
+V7 labels semantic drift as a **nearby but distinct** calibration/transport problem. Preservation failure means the needed distinction is absent from the retained record; semantic drift means the record survives but its operating meaning changes.
+
+## R11 — “Why TREE rather than MEE or a statistics/methods journal?”
+
+**Risk:** medium-high unless breadth remains visible.
+
+**TREE answer:** this is not a new estimator or workflow. It is an Opinion about how ecology and evolution should choose the next measurement across field sampling, monitoring, sensors, eDNA, genomics, experiments and mechanistic inference. Detailed proofs/algorithms remain in source papers.
+
+## R12 — “The title overclaims.”
+
+**Risk:** medium.
+
+**Current defence:** explicit non-harm caveat. The paper does not claim that extra information worsens optimal inference; it claims that local metrics are not universal proxies for evidential progress toward a declared responsibility.
+
+**Preferred title:** **When more measurement is not more evidence**.
+
+**Fallback:** **When more measurement is not more evidence: diagnosing bottlenecks in ecological inference**.
+
+## R13 — “The four interfaces are not exhaustive.”
+
+**Risk:** low-medium.
+
+**Current rule:** four recurrent interfaces/practical screen, not an exhaustive theorem. Model misspecification, nonstationarity, causal transport, selective reporting, strategic behaviour and ethics remain outside the taxonomy.
+
+## R14 — “C2 steals Boundary's mathematical novelty.”
+
+**Risk:** low if firewall remains intact.
+
+**V7 rule:** C2 may say separation can have formal, testable conditions and may cite external parameter-redundancy literature. It may **not** reproduce `k-rank(M)`, the row-span iff theorem, Γ/κ, breakdown factor or anchor-ladder diagnostics. Those remain C1/Boundary.
+
+## R15 — “The authorship looks strategically inflated or under-supported.”
 
 **Risk:** currently low because only one named author is evidence-backed.
 
-**Rule:** do not add supervisors or senior collaborators automatically. Additional authors require substantive C2-level synthesis, drafting and accountability contributions. Source-result ownership is handled by citation, not automatic authorship.
+**Rule:** source ownership is handled by citation, not automatic coauthorship. Additional authors require substantive C2-level synthesis/drafting/accountability contributions.
 
-# Go / no-go after red-team
+# Go / no-go after v7 red-team
 
-C2 should be sent only if all are true:
+C2 is **GO for outside-reader testing** only if all are true:
 
-- the proposal can state its novelty without claiming any component warning as new;
-- a non-specialist ecologist can explain the measurement-to-evidence logic after one read;
-- at least one worked example changes a plausible ecological measurement decision;
-- the paper is visibly an ecological/evolutionary Opinion, not a bundle of methods results;
-- the four interfaces are presented as a practical screen rather than an exhaustive theorem;
+- an outside reader can state the conditional-locality thesis without seeing repository context;
+- they can explain at least one cross-interface trade-off;
+- Chamberlin/Platt and ecological parameter-redundancy prior art are acknowledged rather than claimed as new;
+- the main prediction is prospective intervention ranking, not a definitional restatement;
+- Box 1 reads as decoupled design logic rather than trait-specific mechanism assertion;
+- v7 interface order matches Figure 1;
+- operating-semantics drift remains distinct from preservation failure;
 - Boundary/C1 theorem ownership remains outside C2;
-- authorship is defensible by C2-level contributions;
 - the live TREE contact route is confirmed immediately before sending.
 
-Current internal assessment: **GO subject to outside-reader check and final authorship/contact confirmation.**
+Current internal assessment: **GO, with R2 (cross-literature synthesis originality) as the remaining substantive editorial risk to test with the outside reader.**
