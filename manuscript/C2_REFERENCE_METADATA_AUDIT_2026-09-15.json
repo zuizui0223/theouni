@@ -1,0 +1,35 @@
+{
+  "schema": "c2-reference-metadata-audit-v1",
+  "date": "2026-09-15",
+  "manuscript": "manuscript/C2_TREE_OPINION_DRAFT_V6.md",
+  "reference_count": 14,
+  "status": "pass",
+  "discrepancies_requiring_manuscript_edit": 0,
+  "fields_checked": [
+    "title",
+    "authors",
+    "journal",
+    "year",
+    "volume_issue_or_article_number",
+    "pages_where_applicable",
+    "doi"
+  ],
+  "records": [
+    {"ref":1,"doi":"10.1371/journal.pcbi.1005153","authoritative_record":"PLOS Computational Biology","status":"match"},
+    {"ref":2,"doi":"10.1093/bioinformatics/bts092","authoritative_record":"Oxford Academic / Bioinformatics","status":"match"},
+    {"ref":3,"doi":"10.1088/1361-6420/aad210","authoritative_record":"Argonne publication record / Inverse Problems DOI metadata","status":"match"},
+    {"ref":4,"doi":"10.1111/2041-210X.12423","authoritative_record":"Wiley / Methods in Ecology and Evolution","status":"match"},
+    {"ref":5,"doi":"10.1016/j.tree.2006.08.007","authoritative_record":"PubMed / USGS / Trends in Ecology & Evolution","status":"match"},
+    {"ref":6,"doi":"10.1016/j.tree.2009.03.005","authoritative_record":"PubMed / ScienceDirect / Trends in Ecology & Evolution","status":"match"},
+    {"ref":7,"doi":"10.2307/1942661","authoritative_record":"Wiley / Ecological Monographs","status":"match"},
+    {"ref":8,"doi":"10.1111/ele.14400","authoritative_record":"Wiley / Ecology Letters","status":"match","note":"published correction DOI 10.1111/ele.70124 retained in manuscript"},
+    {"ref":9,"doi":"10.1890/0012-9658(2002)083[2248:ESORWD]2.0.CO;2","authoritative_record":"USGS / Ecology","status":"match"},
+    {"ref":10,"doi":"10.1111/geb.12138","authoritative_record":"Wiley / Global Ecology and Biogeography","status":"match"},
+    {"ref":11,"doi":"10.1111/geb.13070","authoritative_record":"Wiley / Global Ecology and Biogeography","status":"match"},
+    {"ref":12,"doi":"10.1111/2041-210X.14485","authoritative_record":"Wiley / Methods in Ecology and Evolution","status":"match","note":"2026 volume/issue citation and first-online date 26 December 2024 are both retained"},
+    {"ref":13,"doi":"10.1111/2041-210X.12849","authoritative_record":"Wiley / Methods in Ecology and Evolution","status":"match"},
+    {"ref":14,"doi":"10.1002/lom3.10659","authoritative_record":"Wiley / Limnology and Oceanography: Methods","status":"match"}
+  ],
+  "conclusion": "All 14 v6 references matched authoritative publisher, DOI, PubMed, USGS, or institutional publication records closely enough that no manuscript citation edit is required.",
+  "dispatch_rule": "Repeat only a lightweight live metadata spot-check at invited full-manuscript submission; do not reopen the scientific argument for bibliography-only changes."
+}
