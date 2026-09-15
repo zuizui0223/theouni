@@ -28,7 +28,9 @@ Machine assets complete:
 - machine-readable send gate;
 - validated full Opinion manuscript v6: `manuscript/C2_TREE_OPINION_DRAFT_V6.md`;
 - section-aware citation audit: `scripts/audit_c2_citations.py`;
+- reference metadata audit: `manuscript/C2_REFERENCE_METADATA_AUDIT_2026-09-15.json`;
 - Figure 1 vector: `manuscript/figures/C2_FIGURE1_MEASUREMENT_TO_EVIDENCE.svg`;
+- Figure 1 visual audit: `manuscript/C2_FIGURE1_VISUAL_AUDIT_2026-09-15.json`;
 - manuscript status receipt: `manuscript/C2_MANUSCRIPT_STATUS_2026-09-14.json`;
 - live-route receipt: `proposals/C2_TREE_LIVE_ROUTE_CHECK_20260912.md`.
 
@@ -37,8 +39,10 @@ Full manuscript v6 state:
 - title: **When more measurement is not more evidence**;
 - **3,503 words** before References under the repository validator;
 - **14/14 external references cited**, with section-level and early claim-anchor coverage checked;
+- external reference metadata audit: **PASS**, with **0 discrepancies requiring manuscript edit** across title/authors/journal/year/volume-issue-or-article-number/pages/DOI;
 - cross-domain boxes: prospective island *Campanula* plus metabarcoding;
 - Figure 1 machine-generated and machine-validated against the measurement-to-evidence interface specification;
+- Figure 1 **assistant visual audit PASS** after correcting a left-node overflow and rerouting failure-diversity paths away from central text; **human final visual approval remains open**;
 - manuscript/citation/Figure validation run `34798007047` — success;
 - conceptual spine: timely preservation / separation / relevance / failure diversity;
 - v5→v6 editorial compression removed **1,393 words (28.45%)** without adding science or removing references;
