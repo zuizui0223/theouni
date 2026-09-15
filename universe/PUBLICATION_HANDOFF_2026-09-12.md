@@ -4,12 +4,14 @@ Status: **science and machine production closed for M1–M4; C2 proposal and ful
 
 This is the concise operational handoff for the Observation/Evidence publication track. The full historical execution log remains in `PUBLICATION_EXECUTION_STATUS_2026-09-11.md`; thesis order remains in `thesis/final_chapter_architecture.json`; the track publication architecture remains in `PUBLICATION_PROGRAMME_2026-09-11.json`.
 
+Repository-to-paper and cross-repository ownership are governed by `REPOSITORY_PAPER_INTEGRATION_CONTRACT_2026-09-15.json`. The contract separates repo-owned papers, cross-repo syntheses, module/source-only repositories and future programmes. Exporting a result to a synthesis does **not** transfer theorem or empirical-result ownership from the source repository.
+
 ## Current portfolio
 
 | Unit | Target | Current state | Next true gate |
 |---|---|---|---|
 | C2 | Trends in Ecology & Evolution Opinion | proposal-ready and validated full manuscript v6 available; live proposal route checked 2026-09-12 | final authorship + one broad-interest read + dispatch-time route recheck |
-| C1 / Boundary | Ecology Letters Perspective | machine-ready, strategically parked; independent owner of identification geometry | keep parked until C2 editorial outcome; activate only under the explicit trigger/firewall |
+| C1 / Boundary | Ecology Letters Perspective | machine-ready, strategically parked; focused independent owner of the identification-axis argument | keep parked until C2 editorial outcome; activate only under the explicit trigger/firewall |
 | M1 | TNOA → Methods in Ecology and Evolution | science closed; DOCX/reviewer bundle/figures validated | human metadata + AI disclosure + visual check |
 | M2 | MROD → Methods in Ecology and Evolution | science frozen; anonymous Main/SI PDFs validated | human metadata/title page + AI disclosure + visual check |
 | M3 | CED → Ecological Modelling | science closed; audited package/PDFs validated | human metadata + AI declaration + visual check |
@@ -69,13 +71,22 @@ Canonical Boundary role contract:
 - proposal: `paper/ecology_letters_proposal.md`;
 - proposal email: `paper/ecology_letters_proposal_email.md`.
 
-Boundary owns:
+Boundary's **headline claim** is now deliberately singular:
 
-- `k-rank(M)` structural unidentified dimension for the declared log-linear observation map;
-- the iff condition that a new scalar measurement reduces ambiguity only when its row lies outside the current row span;
-- positive-product unidentified directions and direct-anchor reduction;
-- Γ/κ proxy uncertainty, sharp joint sets and breakdown factor;
-- the identification-axis/anchor-ladder ecological-chain argument.
+> **mechanistic proximity != mechanism identification; mechanistic evidence needs an identification axis.**
+
+Primary publication surface:
+
+1. identification axis;
+2. `k-rank(M)` structural unidentified dimension for the declared log-linear observation map;
+3. the iff condition that a new scalar measurement reduces ambiguity only when its row lies outside the current row span;
+4. ecological-chain direct anchors and anchor-ladder measurement design.
+
+Secondary extension, not the headline:
+
+- Γ/κ proxy uncertainty;
+- sharp joint identified sets;
+- breakdown factor when direct anchors are unavailable.
 
 Interfaces are deliberately narrow:
 
@@ -105,7 +116,7 @@ Therefore C1 has **no current human blocker**. Author list, qualification senten
 
 Ecology Letters live gate checked 2026-09-12: unsolicited Perspective proposals are ≤300 words, must precede any full manuscript, and are sent to both `ecolets@cefe.cnrs.fr` and `ecolets2@cefe.cnrs.fr`. The journal states that Perspective novelty is expected at Letter level and should appeal broadly across ecology.
 
-Current Boundary proposal is **226/300 words** under the canonical `paper/check_submission.py` word-count semantics, leaving **74 words** of headroom. If C1 is activated, keep the factual author-qualification sentence concise (recommended ≤40 words), then rerun the checker before dispatch.
+Current focused Boundary proposal is **210/300 words** under the canonical `paper/check_submission.py` word-count semantics, leaving **90 words** of headroom. If C1 is activated, keep the factual author-qualification sentence concise (recommended ≤40 words), then rerun the checker before dispatch.
 
 C1 editorial red-team decision: **GO if activated**. So Boundary has **machine blocker 0**. Its current unresolved state is only the future strategy trigger after C2, not missing science, production, or metadata needed today.
 
