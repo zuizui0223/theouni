@@ -6,8 +6,8 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-MANUSCRIPT = ROOT / "manuscript" / "C2_TREE_OPINION_DRAFT_V6.md"
-OUT = ROOT / "manuscript" / "C2_CITATION_AUDIT_2026-09-14.json"
+MANUSCRIPT = ROOT / "manuscript" / "C2_TREE_OPINION_DRAFT_V7.md"
+OUT = ROOT / "manuscript" / "C2_CITATION_AUDIT_2026-09-15.json"
 
 CITATION_RE = re.compile(r"\[([0-9,–\- ]+)\]")
 REF_RE = re.compile(r"(?m)^(\d+)\. ")
@@ -47,7 +47,7 @@ def main() -> None:
     refs = {int(x) for x in REF_RE.findall(refs_text)}
     cited = cited_numbers(body)
 
-    expected = set(range(1, 15))
+    expected = set(range(1, 21))
     assert refs == expected, {"references": sorted(refs)}
     assert cited == expected, {"cited": sorted(cited), "missing": sorted(expected - cited), "invalid": sorted(cited - expected)}
 
@@ -57,25 +57,25 @@ def main() -> None:
             "### A necessary non-harm caveat",
             expected,
         ),
+        "timely_preservation": (
+            "## Interface 1 — Timely preservation: is the needed distinction still available downstream?",
+            "## Interface 2 — Separation: does the measurement distinguish a live alternative?",
+            {9, 10, 11, 12, 13, 14},
+        ),
         "separation": (
-            "## Interface 1 — Separation: does the measurement distinguish a live alternative?",
-            "## Interface 2 — Relevance: can the distinction change the declared target?",
-            {1},
+            "## Interface 2 — Separation: does the measurement distinguish a live alternative?",
+            "## Interface 3 — Relevance: can the distinction change the declared target?",
+            {1, 15, 16, 17, 18},
         ),
         "relevance": (
-            "## Interface 2 — Relevance: can the distinction change the declared target?",
-            "## Interface 3 — Failure diversity: is this a genuinely new opportunity for evidence to survive?",
+            "## Interface 3 — Relevance: can the distinction change the declared target?",
+            "## Interface 4 — Failure diversity: is this a genuinely new opportunity for evidence to survive?",
             {2, 3, 4, 5, 6},
         ),
         "failure_diversity": (
-            "## Interface 3 — Failure diversity: is this a genuinely new opportunity for evidence to survive?",
-            "## Interface 4 — Timely preservation: is the needed distinction still available downstream?",
-            {7, 8},
-        ),
-        "timely_preservation": (
-            "## Interface 4 — Timely preservation: is the needed distinction still available downstream?",
+            "## Interface 4 — Failure diversity: is this a genuinely new opportunity for evidence to survive?",
             "## A four-question distinction-flow audit",
-            {9, 10, 11, 12, 13, 14},
+            {7, 8},
         ),
         "metabarcoding_box": (
             "## Box 2. Metabarcoding: improve the interface that lost the taxon",
@@ -89,16 +89,13 @@ def main() -> None:
         actual = cited_numbers(section(text, start, end))
         missing = required - actual
         assert not missing, {name: {"required": sorted(required), "actual": sorted(actual), "missing": sorted(missing)}}
-        coverage[name] = {
-            "required": sorted(required),
-            "actual": sorted(actual),
-        }
+        coverage[name] = {"required": sorted(required), "actual": sorted(actual)}
 
     first_anchor_expectations = {
-        "## Interface 1 — Separation: does the measurement distinguish a live alternative?": {1},
-        "## Interface 2 — Relevance: can the distinction change the declared target?": {2, 3, 4},
-        "## Interface 3 — Failure diversity: is this a genuinely new opportunity for evidence to survive?": {7, 8},
-        "## Interface 4 — Timely preservation: is the needed distinction still available downstream?": {9, 10},
+        "## Interface 1 — Timely preservation: is the needed distinction still available downstream?": {9, 10},
+        "## Interface 2 — Separation: does the measurement distinguish a live alternative?": {1, 15, 16, 17, 18},
+        "## Interface 3 — Relevance: can the distinction change the declared target?": {2, 3, 4},
+        "## Interface 4 — Failure diversity: is this a genuinely new opportunity for evidence to survive?": {7, 8},
     }
     local_anchor = {}
     for heading, required in first_anchor_expectations.items():
@@ -112,7 +109,7 @@ def main() -> None:
         local_anchor[heading] = sorted(actual)
 
     report = {
-        "schema": "c2-citation-audit-v1",
+        "schema": "c2-citation-audit-v2",
         "manuscript": str(MANUSCRIPT.relative_to(ROOT)),
         "reference_count": len(refs),
         "all_references_cited": True,
@@ -122,7 +119,7 @@ def main() -> None:
         "status": "pass",
     }
     OUT.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print("C2_CITATION_AUDIT PASS refs=14 all_cited=true section_coverage=true manuscript=v6")
+    print("C2_CITATION_AUDIT PASS refs=20 all_cited=true section_coverage=true manuscript=v7")
 
 
 if __name__ == "__main__":
