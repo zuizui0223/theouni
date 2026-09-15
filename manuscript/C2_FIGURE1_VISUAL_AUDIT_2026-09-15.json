@@ -1,0 +1,31 @@
+{
+  "schema": "c2-figure1-visual-audit-v1",
+  "date": "2026-09-15",
+  "figure": "manuscript/figures/C2_FIGURE1_MEASUREMENT_TO_EVIDENCE.svg",
+  "status": "assistant-visual-pass-human-final-check-open",
+  "render_checked": true,
+  "render_basis": "PNG render of current SVG inspected after layout correction",
+  "issues_found_before_correction": [
+    "leftmost node title slightly overran its box",
+    "failure-diversity dashed paths crossed the central explanatory text"
+  ],
+  "corrections_applied": [
+    "leftmost node typography/layout adjusted to fit cleanly inside the node",
+    "failure-diversity dashed paths rerouted away from the central explanatory text"
+  ],
+  "post_correction_checks": {
+    "title_legible": true,
+    "four_main_nodes_legible": true,
+    "three_interface_labels_legible": true,
+    "failure_labels_legible": true,
+    "remedy_labels_legible": true,
+    "failure_diversity_band_legible": true,
+    "footer_rule_legible": true,
+    "obvious_text_overlap": false,
+    "obvious_clipping": false,
+    "conceptual_order_matches_v6": true
+  },
+  "human_visual_inspection_complete": false,
+  "reason_human_gate_remains": "Assistant visual inspection can detect obvious rendering/layout defects but does not replace the repository's explicit final human visual approval gate.",
+  "conclusion": "No remaining obvious machine-detectable or assistant-visible layout defect requires another Figure 1 edit before human final visual approval."
+}
