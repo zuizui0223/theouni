@@ -42,13 +42,17 @@ def main() -> None:
     assert handoff["live_rules"] == "universe/LIVE_JOURNAL_RULES_2026-09-12.md"
     assert handoff["human_input_ledger"] == "universe/HUMAN_SUBMISSION_INPUTS_2026-09-12.json"
 
-    assert integration["status"] == "canonical-repository-paper-integration-contract"
-    assert integration["principles"]["source_export_does_not_transfer_ownership"] is True
-    assert integration["principles"]["one_repo_can_own_multiple_papers"] is True
-    assert integration["principles"]["one_paper_can_span_multiple_repos"] is True
-    assert integration["boundary_c1"]["home"] == "zuizui0223/boundary"
-    assert integration["boundary_c1"]["absorbed_into_c2"] is False
-    assert integration["boundary_c1"]["absorbed_into_ced"] is False
+    assert integration["status"] == "canonical-integration-contract"
+    rules = set(integration["ownership_rules"])
+    assert "one repository may own multiple paper units" in rules
+    assert "one paper may span multiple repositories" in rules
+    assert "export to a synthesis does not transfer theorem or empirical-result ownership unless explicitly recorded" in rules
+    boundary_decision = integration["boundary_decision"]
+    assert boundary_decision["repository"] == "zuizui0223/boundary"
+    assert boundary_decision["paper_unit"] == "BOUNDARY_C1"
+    assert boundary_decision["decision"] == "retain as independent conditional C1; do not absorb into C2 or CED"
+    assert boundary_decision["c2_export_ceiling"] == "qualitative same-direction/separation lesson only"
+    assert boundary_decision["ced_export_ceiling"] == "external identification boundary/contrast only"
 
     units = handoff["units"]
     assert set(units) == {"C1", "C2", "M1", "M2", "M3", "M4"}
