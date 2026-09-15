@@ -187,9 +187,6 @@ def main() -> None:
     assert "separates an unresolved explanation" in send_text
     assert "C1/Boundary remains parked" in send_text
 
-    # Figure 1 v5 owns the measurement-to-evidence interface view. Keep the
-    # proposal validator synchronized with that figure rather than with the old
-    # four-box decision-map wording.
     figure_text = C2_FIGURE1.read_text(encoding="utf-8")
     for required in (
         "measurement-to-evidence",
@@ -289,10 +286,15 @@ def main() -> None:
     assert readiness["machine_checks"]["current_live_journal_contact"] == "tree@cell.com"
     assert readiness["machine_checks"]["current_live_editor"] == "Andrea Stephens"
     assert readiness["machine_checks"]["dispatch_time_recheck_still_required"] is True
-    assert readiness["machine_checks"]["full_manuscript_v5_written"] is True
-    assert readiness["machine_checks"]["full_manuscript_v5_validated"] is True
-    assert readiness["machine_checks"]["full_manuscript_word_count_before_references"] == 4896
+    assert readiness["machine_checks"]["full_manuscript_v6_written"] is True
+    assert readiness["machine_checks"]["full_manuscript_v6_validated"] is True
+    assert readiness["machine_checks"]["full_manuscript_word_count_before_references"] == 3503
     assert readiness["machine_checks"]["full_manuscript_external_reference_count"] == 14
+    assert readiness["machine_checks"]["full_manuscript_validation_run"] == 34798007047
+    assert readiness["machine_checks"]["full_manuscript_citation_audit_pass"] is True
+    assert readiness["machine_checks"]["full_manuscript_all_external_references_cited"] is True
+    assert readiness["machine_checks"]["figure1_machine_validated"] is True
+    assert readiness["machine_checks"]["figure1_validation_run"] == 34798007047
     assert readiness["authorship_state"]["working_author_list"] == ["Ruiqi Zhang"]
     assert readiness["authorship_state"]["working_corresponding_author"] == "Ruiqi Zhang"
     expected_assets = {
@@ -302,8 +304,10 @@ def main() -> None:
         "editorial_red_team": "proposals/C2_TREE_RED_TEAM.md",
         "live_route_check": "proposals/C2_TREE_LIVE_ROUTE_CHECK_20260912.md",
         "figure1_decision_map_spec": "proposals/C2_FIGURE1_DECISION_MAP_SPEC.md",
-        "full_manuscript": "manuscript/C2_TREE_OPINION_DRAFT_V5.md",
+        "full_manuscript": "manuscript/C2_TREE_OPINION_DRAFT_V6.md",
         "full_manuscript_status": "manuscript/C2_MANUSCRIPT_STATUS_2026-09-14.json",
+        "figure1_vector": "manuscript/figures/C2_FIGURE1_MEASUREMENT_TO_EVIDENCE.svg",
+        "citation_audit": "manuscript/C2_CITATION_AUDIT_2026-09-14.json",
     }
     for key, value in expected_assets.items():
         assert readiness["proposal_assets"][key] == value
