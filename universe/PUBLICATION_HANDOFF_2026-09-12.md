@@ -1,5 +1,7 @@
 # Publication handoff — 2026-09-12
 
+Last scientific-surface sync: **2026-09-16**.
+
 Status: **science and machine production closed for M1–M4; C2 proposal and full manuscript machine-ready; C1/Boundary machine-ready but strategically parked until the C2 editorial outcome; remaining work is human metadata, visual review and dispatch decisions.**
 
 This is the concise operational handoff for the Observation/Evidence publication track. The full historical execution log remains in `PUBLICATION_EXECUTION_STATUS_2026-09-11.md`; thesis order remains in `thesis/final_chapter_architecture.json`; the track publication architecture remains in `PUBLICATION_PROGRAMME_2026-09-11.json`.
@@ -10,7 +12,7 @@ Repository-to-paper and cross-repository ownership are governed by `REPOSITORY_P
 
 | Unit | Target | Current state | Next true gate |
 |---|---|---|---|
-| C2 | Trends in Ecology & Evolution Opinion | proposal-ready and validated full manuscript v6 available; live proposal route checked 2026-09-12 | final authorship + one broad-interest read + dispatch-time route recheck |
+| C2 | Trends in Ecology & Evolution Opinion | proposal-ready and validated full manuscript v7 available; live proposal route checked 2026-09-12 | final authorship + one broad-interest read + dispatch-time route recheck |
 | C1 / Boundary | Ecology Letters Perspective | machine-ready, strategically parked; focused independent owner of the identification-axis argument | keep parked until C2 editorial outcome; activate only under the explicit trigger/firewall |
 | M1 | TNOA → Methods in Ecology and Evolution | science closed; DOCX/reviewer bundle/figures validated | human metadata + AI disclosure + visual check |
 | M2 | MROD → Methods in Ecology and Evolution | science frozen; anonymous Main/SI PDFs validated | human metadata/title page + AI disclosure + visual check |
@@ -26,27 +28,32 @@ Machine assets complete:
 - authorship ledger and author-metadata template;
 - outside-reader packet and editorial red-team;
 - machine-readable send gate;
-- validated full Opinion manuscript v6: `manuscript/C2_TREE_OPINION_DRAFT_V6.md`;
-- section-aware citation audit: `scripts/audit_c2_citations.py`;
-- reference metadata audit: `manuscript/C2_REFERENCE_METADATA_AUDIT_2026-09-15.json`;
+- validated full Opinion manuscript v7: `manuscript/C2_TREE_OPINION_DRAFT_V7.md`;
+- section-aware citation validator: `scripts/audit_c2_citations.py`;
+- v7 reference metadata audit: `manuscript/C2_REFERENCE_METADATA_AUDIT_2026-09-16.json`;
 - Figure 1 vector: `manuscript/figures/C2_FIGURE1_MEASUREMENT_TO_EVIDENCE.svg`;
 - Figure 1 visual audit: `manuscript/C2_FIGURE1_VISUAL_AUDIT_2026-09-15.json`;
-- manuscript status receipt: `manuscript/C2_MANUSCRIPT_STATUS_2026-09-14.json`;
+- v7 manuscript status receipt: `manuscript/C2_MANUSCRIPT_STATUS_2026-09-16.json`;
 - live-route receipt: `proposals/C2_TREE_LIVE_ROUTE_CHECK_20260912.md`.
 
-Full manuscript v6 state:
+Full manuscript v7 state:
 
 - title: **When more measurement is not more evidence**;
-- **3,503 words** before References under the repository validator;
-- **14/14 external references cited**, with section-level and early claim-anchor coverage checked;
+- **4,096 words** before References under the repository validator;
+- **20/20 external references cited**, with section-level and early claim-anchor coverage checked;
 - external reference metadata audit: **PASS**, with **0 discrepancies requiring manuscript edit** across title/authors/journal/year/volume-issue-or-article-number/pages/DOI;
 - cross-domain boxes: prospective island *Campanula* plus metabarcoding;
 - Figure 1 machine-generated and machine-validated against the measurement-to-evidence interface specification;
-- Figure 1 **assistant visual audit PASS** after correcting a left-node overflow and rerouting failure-diversity paths away from central text; **human final visual approval remains open**;
-- manuscript/citation/Figure validation run `34798007047` — success;
-- conceptual spine: timely preservation / separation / relevance / failure diversity;
-- v5→v6 editorial compression removed **1,393 words (28.45%)** without adding science or removing references;
-- exact Boundary theorem surface, internal repository labels and unpublished-source placeholders are absent from the submission-facing manuscript.
+- Figure 1 **assistant visual audit PASS**; **human final visual approval remains open**;
+- manuscript/citation/Figure validation run `35065006878` at head `06fd746af27a5be3e1134a8c43ae1268ca221bdc` — success;
+- conceptual spine: familiar performance metrics are **local quantities conditioned on earlier measurement choices and losses**; evidential adequacy depends on timely preservation / separation / relevance / failure diversity;
+- the four interfaces are explicitly interacting rather than four independent warnings;
+- core prospective test: for a predeclared claim and equal-cost measurement expansions, diagnosing the limiting interface before collection should predict which intervention yields the largest gain in claim resolution;
+- v5→v6 editorial compression remains historical: 4,896→3,503 words, −1,393 words (28.45%);
+- v6→v7 strengthening produced 4,096 words and 20 references, adding the shared conditional-locality thesis, cross-interface interactions, explicit prior-art concessions and the prospective intervention-ranking test;
+- exact Boundary theorem surface, internal repository labels and unpublished-source placeholders remain absent from the submission-facing manuscript.
+
+The internal v7 red-team is **GO for outside-reader testing**. The main residual editorial risk is no longer missing machinery; it is whether a broad-interest reader experiences the synthesis as a new conditional-locality doctrine rather than “identifiability + VOI + pseudoreplication + detection bias.” The outside-reader gate should test that point directly.
 
 Current route independently checked on 2026-09-12:
 
@@ -54,14 +61,14 @@ Current route independently checked on 2026-09-12:
 - contact: **tree@cell.com**;
 - route: **proposal by email to the editor before full-manuscript dispatch**.
 
-This is a dated receipt, not permission to skip a dispatch-time recheck. The existence of a finished full manuscript does **not** override the proposal-first route: do not attach or dispatch v6 with the presubmission pitch unless TREE requests it or the live instructions change.
+This is a dated receipt, not permission to skip a dispatch-time recheck. The existence of a finished full manuscript does **not** override the proposal-first route: do not attach or dispatch v7 with the presubmission pitch unless TREE requests it or the live instructions change.
 
 Working proposal authorship: **Ruiqi Zhang — provisional first/corresponding author**. Do not add authors based only on supervision, seniority, source ownership or commits.
 
 Human send gates:
 
 1. approve final author list/corresponding author;
-2. obtain one broad-interest ecological read;
+2. obtain one broad-interest ecological read that can independently recover the conditional-locality thesis and the prospective intervention-ranking test;
 3. immediately before sending, recheck the live TREE/Cell Press/Elsevier proposal route against the 2026-09-12 receipt.
 
 ## C1 — Boundary / Ecology Letters Perspective
