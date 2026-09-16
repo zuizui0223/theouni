@@ -157,22 +157,30 @@ def main() -> None:
     assert "C2_FIGURE1_DECISION_MAP_SPEC.md" in proposal_text
 
     pitch_text = C2_EDITOR_PITCH.read_text(encoding="utf-8")
-    _assert_any(pitch_text, "Geometry failure", "Same-dimension failure")
-    _assert_any(pitch_text, "Objective failure", "Wrong-target failure")
-    _assert_any(pitch_text, "Dependence failure", "False-independence failure")
-    _assert_any(pitch_text, "Pipeline failure", "Too-late failure")
     for required in (
-        "Prior-art position",
-        "Selected external anchors",
-        "remedy-matched diagnostic",
-        "separates an unresolved explanation",
+        "local quantities conditioned on earlier choices and losses",
+        "timely preservation",
+        "separation",
+        "relevance",
+        "failure diversity",
+        "## What is new",
+        "measure a new distinction",
         "target-relevant information",
-        "independent opportunity",
-        "capture it earlier",
+        "diversify failure domains",
+        "capture earlier",
+        "shared conditional structure",
+        "prospective diagnostic doctrine",
     ):
-        assert required.lower() in pitch_text.lower()
+        assert required.lower() in pitch_text.lower(), required
+    for external_anchor in (
+        "Chamberlin 1890",
+        "Platt 1964",
+        "Hurlbert 1984",
+        "MacKenzie et al. 2002",
+    ):
+        assert external_anchor.lower() in pitch_text.lower(), external_anchor
     assert "Boundary paper retains the full identification theorem" in pitch_text
-    assert "geometry-failure exemplar" in pitch_text
+    assert "same-dimension/separation lesson" in pitch_text
 
     send_text = C2_SEND_CANDIDATE.read_text(encoding="utf-8")
     for boundary_owned_surface in (
