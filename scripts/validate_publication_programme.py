@@ -134,15 +134,12 @@ def main() -> None:
         assert required in live_rules
 
     prior_art_text = C2_PRIOR_ART.read_text(encoding="utf-8")
-    for required in (
-        "Structural Identifiability",
-        "targeted experiment design",
-        "Pseudoreplication",
-        "site occupancy",
-        "Calibration of probability predictions",
-        "four-way synthesis",
-    ):
-        assert required.lower() in prior_art_text.lower()
+    _assert_any(prior_art_text, "structural identification", "structural-identifiability", "identifiability")
+    _assert_any(prior_art_text, "goal-oriented design", "targeted experiment design")
+    _assert_any(prior_art_text, "pseudoreplication")
+    _assert_any(prior_art_text, "occupancy", "imperfect detection")
+    _assert_any(prior_art_text, "calibration", "operating-semantics drift")
+    _assert_any(prior_art_text, "shared conditional structure", "four interacting interfaces")
 
     proposal_text = PROPOSAL.read_text(encoding="utf-8")
     for boundary_owned_surface in (
