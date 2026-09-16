@@ -21,6 +21,11 @@ C2_OUTSIDE_READER = ROOT / "proposals" / "C2_OUTSIDE_READER_PACKET.md"
 C2_RED_TEAM = ROOT / "proposals" / "C2_TREE_RED_TEAM.md"
 C2_LIVE_ROUTE = ROOT / "proposals" / "C2_TREE_LIVE_ROUTE_CHECK_20260912.md"
 C2_FIGURE1 = ROOT / "proposals" / "C2_FIGURE1_DECISION_MAP_SPEC.md"
+C2_MANUSCRIPT = ROOT / "manuscript" / "C2_TREE_OPINION_DRAFT_V7.md"
+C2_MANUSCRIPT_STATUS = ROOT / "manuscript" / "C2_MANUSCRIPT_STATUS_2026-09-16.json"
+C2_REFERENCE_AUDIT = ROOT / "manuscript" / "C2_REFERENCE_METADATA_AUDIT_2026-09-16.json"
+C2_MANUSCRIPT_VALIDATOR = ROOT / "scripts" / "validate_c2_manuscript.py"
+C2_CITATION_AUDIT_VALIDATOR = ROOT / "scripts" / "audit_c2_citations.py"
 
 
 def load(path: Path):
@@ -45,6 +50,8 @@ def main() -> None:
     ledger = load(C2_LEDGER)
     authorship = load(C2_AUTHORSHIP)
     readiness = load(C2_SEND_READINESS)
+    c2_status = load(C2_MANUSCRIPT_STATUS)
+    reference_audit = load(C2_REFERENCE_AUDIT)
 
     assert portfolio_governance["status"] == "canonical_portfolio_governance"
     assert portfolio_governance["scope"]["repository_count"] == 38
@@ -110,9 +117,14 @@ def main() -> None:
         C2_RED_TEAM,
         C2_LIVE_ROUTE,
         C2_FIGURE1,
+        C2_MANUSCRIPT,
+        C2_MANUSCRIPT_STATUS,
+        C2_REFERENCE_AUDIT,
+        C2_MANUSCRIPT_VALIDATOR,
+        C2_CITATION_AUDIT_VALIDATOR,
         LIVE_RULES,
     ):
-        assert path.exists()
+        assert path.exists(), path
 
     live_rules = LIVE_RULES.read_text(encoding="utf-8")
     for required in (
@@ -272,36 +284,47 @@ def main() -> None:
     _assert_blob_pin(documented[0]["evidence"]["source_blob_sha1"])
     assert "repository commits" in authorship["additional_author_rule"]["insufficient_alone"]
 
+    assert readiness["schema"] == "c2-tree-send-readiness-v2"
     assert readiness["status"] == "machine-ready-human-decisions-open"
-    assert readiness["machine_checks"]["machine_blockers"] == 0
-    assert readiness["machine_checks"]["four_failure_structure_fixed"] is True
-    assert readiness["machine_checks"]["diagnostic_first_opinion_position_fixed"] is True
-    assert readiness["machine_checks"]["remedy_matched_diagnosis_explicit"] is True
-    assert readiness["machine_checks"]["geometry_remedy_new_identification_direction"] is True
-    assert readiness["machine_checks"]["objective_remedy_target_relevant_information"] is True
-    assert readiness["machine_checks"]["dependence_remedy_independent_failure_opportunity"] is True
-    assert readiness["machine_checks"]["pipeline_remedy_earlier_capture_before_irreversible_loss"] is True
-    assert readiness["machine_checks"]["figure1_is_decision_map_not_taxonomy"] is True
-    assert readiness["machine_checks"]["frozen_send_candidate_written"] is True
-    assert readiness["machine_checks"]["outside_reader_packet_written"] is True
-    assert readiness["machine_checks"]["tree_editorial_red_team_completed"] is True
-    assert readiness["machine_checks"]["internal_red_team_decision"].startswith("GO")
-    assert readiness["machine_checks"]["current_live_journal_contact_independently_confirmed"] is True
-    assert readiness["machine_checks"]["current_live_journal_contact_checked_on"] == "2026-09-12"
-    assert readiness["machine_checks"]["current_live_journal_contact"] == "tree@cell.com"
-    assert readiness["machine_checks"]["current_live_editor"] == "Andrea Stephens"
-    assert readiness["machine_checks"]["dispatch_time_recheck_still_required"] is True
-    assert readiness["machine_checks"]["full_manuscript_v6_written"] is True
-    assert readiness["machine_checks"]["full_manuscript_v6_validated"] is True
-    assert readiness["machine_checks"]["full_manuscript_word_count_before_references"] == 3503
-    assert readiness["machine_checks"]["full_manuscript_external_reference_count"] == 14
-    assert readiness["machine_checks"]["full_manuscript_validation_run"] == 34798007047
-    assert readiness["machine_checks"]["full_manuscript_citation_audit_pass"] is True
-    assert readiness["machine_checks"]["full_manuscript_all_external_references_cited"] is True
-    assert readiness["machine_checks"]["figure1_machine_validated"] is True
-    assert readiness["machine_checks"]["figure1_validation_run"] == 34798007047
+    checks = readiness["machine_checks"]
+    assert checks["machine_blockers"] == 0
+    assert checks["four_failure_structure_fixed"] is True
+    assert checks["diagnostic_first_opinion_position_fixed"] is True
+    assert checks["shared_conditional_locality_thesis_explicit"] is True
+    assert checks["cross_interface_interactions_explicit"] is True
+    assert checks["prospective_equal_cost_intervention_ranking_test_explicit"] is True
+    assert checks["remedy_matched_diagnosis_explicit"] is True
+    assert checks["geometry_remedy_new_identification_direction"] is True
+    assert checks["objective_remedy_target_relevant_information"] is True
+    assert checks["dependence_remedy_independent_failure_opportunity"] is True
+    assert checks["pipeline_remedy_earlier_capture_before_irreversible_loss"] is True
+    assert checks["figure1_is_decision_map_not_taxonomy"] is True
+    assert checks["frozen_send_candidate_written"] is True
+    assert checks["outside_reader_packet_written"] is True
+    assert checks["tree_editorial_red_team_completed"] is True
+    assert checks["internal_red_team_decision"].startswith("GO")
+    assert checks["current_live_journal_contact_independently_confirmed"] is True
+    assert checks["current_live_journal_contact_checked_on"] == "2026-09-12"
+    assert checks["current_live_journal_contact"] == "tree@cell.com"
+    assert checks["current_live_editor"] == "Andrea Stephens"
+    assert checks["dispatch_time_recheck_still_required"] is True
+    assert checks["preferred_full_manuscript_version"] == "v7"
+    assert checks["full_manuscript_written"] is True
+    assert checks["full_manuscript_validated"] is True
+    assert checks["full_manuscript_word_count_before_references"] == 4096
+    assert checks["full_manuscript_external_reference_count"] == 20
+    assert checks["full_manuscript_validation_run"] == 35065006878
+    assert checks["full_manuscript_validation_head"] == "06fd746af27a5be3e1134a8c43ae1268ca221bdc"
+    assert checks["full_manuscript_citation_audit_pass"] is True
+    assert checks["full_manuscript_all_external_references_cited"] is True
+    assert checks["full_manuscript_section_citation_coverage_pass"] is True
+    assert checks["reference_metadata_audit_pass"] is True
+    assert checks["reference_metadata_discrepancies_requiring_edit"] == 0
+    assert checks["figure1_machine_validated"] is True
+    assert checks["figure1_validation_run"] == 35065006878
     assert readiness["authorship_state"]["working_author_list"] == ["Ruiqi Zhang"]
     assert readiness["authorship_state"]["working_corresponding_author"] == "Ruiqi Zhang"
+
     expected_assets = {
         "author_metadata_template": "proposals/C2_TREE_AUTHOR_METADATA_TEMPLATE.md",
         "send_candidate": "proposals/C2_TREE_SEND_CANDIDATE.md",
@@ -309,13 +332,35 @@ def main() -> None:
         "editorial_red_team": "proposals/C2_TREE_RED_TEAM.md",
         "live_route_check": "proposals/C2_TREE_LIVE_ROUTE_CHECK_20260912.md",
         "figure1_decision_map_spec": "proposals/C2_FIGURE1_DECISION_MAP_SPEC.md",
-        "full_manuscript": "manuscript/C2_TREE_OPINION_DRAFT_V6.md",
-        "full_manuscript_status": "manuscript/C2_MANUSCRIPT_STATUS_2026-09-14.json",
+        "full_manuscript": "manuscript/C2_TREE_OPINION_DRAFT_V7.md",
+        "full_manuscript_status": "manuscript/C2_MANUSCRIPT_STATUS_2026-09-16.json",
+        "manuscript_validator": "scripts/validate_c2_manuscript.py",
+        "citation_audit_validator": "scripts/audit_c2_citations.py",
+        "reference_metadata_audit": "manuscript/C2_REFERENCE_METADATA_AUDIT_2026-09-16.json",
         "figure1_vector": "manuscript/figures/C2_FIGURE1_MEASUREMENT_TO_EVIDENCE.svg",
-        "citation_audit": "manuscript/C2_CITATION_AUDIT_2026-09-14.json",
     }
     for key, value in expected_assets.items():
         assert readiness["proposal_assets"][key] == value
+
+    # Canonical-pointer consistency guard: future manuscript promotions must move
+    # readiness, status, metadata audit and validators together.
+    manuscript_rel = str(C2_MANUSCRIPT.relative_to(ROOT))
+    status_rel = str(C2_MANUSCRIPT_STATUS.relative_to(ROOT))
+    reference_audit_rel = str(C2_REFERENCE_AUDIT.relative_to(ROOT))
+    assert readiness["proposal_assets"]["full_manuscript"] == manuscript_rel
+    assert readiness["proposal_assets"]["full_manuscript_status"] == status_rel
+    assert readiness["proposal_assets"]["reference_metadata_audit"] == reference_audit_rel
+    assert c2_status["preferred_manuscript"] == manuscript_rel
+    assert reference_audit["manuscript"] == manuscript_rel
+    assert c2_status["word_count_before_references"] == checks["full_manuscript_word_count_before_references"]
+    assert c2_status["external_reference_count"] == checks["full_manuscript_external_reference_count"]
+    assert c2_status["validation"]["run_id"] == checks["full_manuscript_validation_run"]
+    assert c2_status["validation"]["head_sha"] == checks["full_manuscript_validation_head"]
+    assert c2_status["validation"]["reference_metadata_audit"] == reference_audit_rel
+    assert reference_audit["reference_count"] == c2_status["external_reference_count"]
+    assert reference_audit["status"] == "pass"
+    assert reference_audit["discrepancies_requiring_manuscript_edit"] == 0
+
     human_ids = {row["id"] for row in readiness["human_blockers_before_send"] if row["required"]}
     assert human_ids == {"authorship", "broad_interest_read", "dispatch_time_route_recheck"}
 
