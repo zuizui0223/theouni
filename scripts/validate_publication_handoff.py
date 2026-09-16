@@ -12,10 +12,17 @@ LIVE_RULES = ROOT / "universe" / "LIVE_JOURNAL_RULES_2026-09-12.md"
 HUMAN_JSON = ROOT / "universe" / "HUMAN_SUBMISSION_INPUTS_2026-09-12.json"
 HUMAN_MD = ROOT / "universe" / "HUMAN_SUBMISSION_INPUTS_2026-09-12.md"
 PROPAGATION = ROOT / "universe" / "HUMAN_INPUT_PROPAGATION_MAP_2026-09-12.json"
-C2_MANUSCRIPT = ROOT / "manuscript" / "C2_TREE_OPINION_DRAFT_V6.md"
-C2_MANUSCRIPT_STATUS = ROOT / "manuscript" / "C2_MANUSCRIPT_STATUS_2026-09-14.json"
-C2_REFERENCE_AUDIT = ROOT / "manuscript" / "C2_REFERENCE_METADATA_AUDIT_2026-09-15.json"
+C2_READINESS = ROOT / "proposals" / "C2_SEND_READINESS.json"
+C2_MANUSCRIPT = ROOT / "manuscript" / "C2_TREE_OPINION_DRAFT_V7.md"
+C2_MANUSCRIPT_STATUS = ROOT / "manuscript" / "C2_MANUSCRIPT_STATUS_2026-09-16.json"
+C2_REFERENCE_AUDIT = ROOT / "manuscript" / "C2_REFERENCE_METADATA_AUDIT_2026-09-16.json"
 C2_FIGURE_VISUAL_AUDIT = ROOT / "manuscript" / "C2_FIGURE1_VISUAL_AUDIT_2026-09-15.json"
+C2_MANUSCRIPT_VALIDATOR = ROOT / "scripts" / "validate_c2_manuscript.py"
+C2_CITATION_AUDIT_VALIDATOR = ROOT / "scripts" / "audit_c2_citations.py"
+
+
+def load(path: Path):
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
 def main() -> None:
@@ -27,23 +34,29 @@ def main() -> None:
         HUMAN_JSON,
         HUMAN_MD,
         PROPAGATION,
+        C2_READINESS,
         C2_MANUSCRIPT,
         C2_MANUSCRIPT_STATUS,
         C2_REFERENCE_AUDIT,
         C2_FIGURE_VISUAL_AUDIT,
+        C2_MANUSCRIPT_VALIDATOR,
+        C2_CITATION_AUDIT_VALIDATOR,
     ):
         assert path.exists(), path
 
-    handoff = json.loads(HANDOFF_JSON.read_text(encoding="utf-8"))
-    integration = json.loads(INTEGRATION.read_text(encoding="utf-8"))
-    human = json.loads(HUMAN_JSON.read_text(encoding="utf-8"))
-    propagation = json.loads(PROPAGATION.read_text(encoding="utf-8"))
-    c2_status = json.loads(C2_MANUSCRIPT_STATUS.read_text(encoding="utf-8"))
-    reference_audit = json.loads(C2_REFERENCE_AUDIT.read_text(encoding="utf-8"))
-    figure_visual_audit = json.loads(C2_FIGURE_VISUAL_AUDIT.read_text(encoding="utf-8"))
+    handoff = load(HANDOFF_JSON)
+    integration = load(INTEGRATION)
+    human = load(HUMAN_JSON)
+    propagation = load(PROPAGATION)
+    readiness = load(C2_READINESS)
+    c2_status = load(C2_MANUSCRIPT_STATUS)
+    reference_audit = load(C2_REFERENCE_AUDIT)
+    figure_visual_audit = load(C2_FIGURE_VISUAL_AUDIT)
 
+    assert handoff["schema"] == "publication-handoff-v2"
     assert handoff["status"] == "machine-work-closed-human-completion-open"
     assert handoff["scope"] == "observation_evidence_track_only"
+    assert handoff["last_scientific_surface_sync"] == "2026-09-16"
     assert handoff["repository_paper_integration_contract"] == "universe/REPOSITORY_PAPER_INTEGRATION_CONTRACT_2026-09-15.json"
     assert handoff["live_rules"] == "universe/LIVE_JOURNAL_RULES_2026-09-12.md"
     assert handoff["human_input_ledger"] == "universe/HUMAN_SUBMISSION_INPUTS_2026-09-12.json"
@@ -93,15 +106,17 @@ def main() -> None:
     c2 = units["C2"]
     assert c2["machine_state"] == "proposal-and-full-manuscript-ready"
     assert c2["sent"] is False
-    assert c2["preferred_full_manuscript"] == "manuscript/C2_TREE_OPINION_DRAFT_V6.md"
-    assert c2["full_manuscript_status"] == "manuscript/C2_MANUSCRIPT_STATUS_2026-09-14.json"
-    assert c2["full_manuscript_words_before_references"] == 3503
-    assert c2["full_manuscript_external_references"] == 14
-    assert c2["full_manuscript_validation_run"] == 34798007047
-    assert c2["full_manuscript_validation_head"] == "3cbed18df2b088ebfe566c3aa9e6ad49fbe96b49"
+    assert c2["preferred_full_manuscript"] == "manuscript/C2_TREE_OPINION_DRAFT_V7.md"
+    assert c2["full_manuscript_status"] == "manuscript/C2_MANUSCRIPT_STATUS_2026-09-16.json"
+    assert c2["full_manuscript_words_before_references"] == 4096
+    assert c2["full_manuscript_external_references"] == 20
+    assert c2["full_manuscript_validation_run"] == 35065006878
+    assert c2["full_manuscript_validation_head"] == "06fd746af27a5be3e1134a8c43ae1268ca221bdc"
+    assert c2["citation_audit_validator"] == "scripts/audit_c2_citations.py"
     assert c2["citation_audit_pass"] is True
     assert c2["all_external_references_cited"] is True
-    assert c2["reference_metadata_audit"] == "manuscript/C2_REFERENCE_METADATA_AUDIT_2026-09-15.json"
+    assert c2["section_level_citation_coverage_pass"] is True
+    assert c2["reference_metadata_audit"] == "manuscript/C2_REFERENCE_METADATA_AUDIT_2026-09-16.json"
     assert c2["reference_metadata_audit_pass"] is True
     assert c2["reference_metadata_discrepancies_requiring_edit"] == 0
     assert c2["figure1_machine_validated"] is True
@@ -113,53 +128,73 @@ def main() -> None:
     assert c2["current_live_contact"] == "tree@cell.com"
     assert c2["current_live_editor"] == "Andrea Stephens"
     assert "proposal by email" in c2["current_public_route"]
+    assert "conditional-locality" in c2["main_editorial_risk"]
     assert set(c2["human_gates"]) == {
         "authorship approval",
         "broad-interest outside read",
         "dispatch-time route recheck",
     }
 
-    assert c2_status["status"] == "preferred-full-manuscript-v6-machine-validated"
-    assert c2_status["preferred_manuscript"] == "manuscript/C2_TREE_OPINION_DRAFT_V6.md"
-    assert c2_status["word_count_before_references"] == 3503
-    assert c2_status["external_reference_count"] == 14
-    assert c2_status["validation"]["run_id"] == 34798007047
-    assert c2_status["validation"]["head_sha"] == "3cbed18df2b088ebfe566c3aa9e6ad49fbe96b49"
+    assert readiness["schema"] == "c2-tree-send-readiness-v2"
+    assert readiness["machine_checks"]["preferred_full_manuscript_version"] == "v7"
+    assert readiness["machine_checks"]["machine_blockers"] == 0
+
+    assert c2_status["status"] == "preferred-full-manuscript-v7-machine-validated"
+    assert c2_status["preferred_manuscript"] == "manuscript/C2_TREE_OPINION_DRAFT_V7.md"
+    assert c2_status["word_count_before_references"] == 4096
+    assert c2_status["external_reference_count"] == 20
+    assert c2_status["validation"]["run_id"] == 35065006878
+    assert c2_status["validation"]["head_sha"] == "06fd746af27a5be3e1134a8c43ae1268ca221bdc"
     assert c2_status["validation"]["conclusion"] == "success"
     assert c2_status["validation"]["citation_audit_status"] == "pass"
     assert c2_status["validation"]["all_external_references_cited"] is True
     assert c2_status["validation"]["section_level_citation_coverage"] is True
-    assert c2_status["validation"]["reference_metadata_audit"] == "manuscript/C2_REFERENCE_METADATA_AUDIT_2026-09-15.json"
+    assert c2_status["validation"]["reference_metadata_audit"] == "manuscript/C2_REFERENCE_METADATA_AUDIT_2026-09-16.json"
     assert c2_status["validation"]["reference_metadata_audit_status"] == "pass"
     assert c2_status["validation"]["reference_metadata_discrepancies_requiring_edit"] == 0
     assert c2_status["figure1"]["machine_generated"] is True
     assert c2_status["figure1"]["machine_validated"] is True
-    assert c2_status["figure1"]["validation_run"] == 34798007047
+    assert c2_status["figure1"]["validation_run"] == 35065006878
     assert c2_status["figure1"]["assistant_visual_audit"] == "manuscript/C2_FIGURE1_VISUAL_AUDIT_2026-09-15.json"
     assert c2_status["figure1"]["assistant_visual_audit_status"] == "pass"
     assert c2_status["figure1"]["human_visual_inspection_complete"] is False
-    assert c2_status["editorial_compression"]["from_version"] == "v5"
-    assert c2_status["editorial_compression"]["from_words_before_references"] == 4896
-    assert c2_status["editorial_compression"]["to_version"] == "v6"
-    assert c2_status["editorial_compression"]["to_words_before_references"] == 3503
-    assert c2_status["editorial_compression"]["reduction_words"] == 1393
-    assert c2_status["editorial_compression"]["science_added"] is False
-    assert c2_status["editorial_compression"]["references_removed"] == 0
+    assert c2_status["revision_history"]["v5_to_v6"]["reduction_words"] == 1393
+    assert c2_status["revision_history"]["v6_to_v7"]["change_words"] == 593
+    assert c2_status["revision_history"]["v6_to_v7"]["reference_count_to"] == 20
     assert c2_status["journal_route"]["proposal_first"] is True
     assert c2_status["journal_route"]["full_manuscript_should_not_be_dispatched_with_presubmission_pitch_unless_requested"] is True
 
     assert reference_audit["status"] == "pass"
-    assert reference_audit["reference_count"] == 14
+    assert reference_audit["manuscript"] == "manuscript/C2_TREE_OPINION_DRAFT_V7.md"
+    assert reference_audit["reference_count"] == 20
     assert reference_audit["discrepancies_requiring_manuscript_edit"] == 0
-    assert len(reference_audit["records"]) == 14
+    assert len(reference_audit["records"]) == 20
+    assert reference_audit["v7_additions_verified"] == [15, 16, 17, 18, 19, 20]
     assert all(row["status"] == "match" for row in reference_audit["records"])
 
     assert figure_visual_audit["status"] == "assistant-visual-pass-human-final-check-open"
     assert figure_visual_audit["render_checked"] is True
     assert figure_visual_audit["post_correction_checks"]["obvious_text_overlap"] is False
     assert figure_visual_audit["post_correction_checks"]["obvious_clipping"] is False
-    assert figure_visual_audit["post_correction_checks"]["conceptual_order_matches_v6"] is True
     assert figure_visual_audit["human_visual_inspection_complete"] is False
+
+    # Cross-layer canonical-pointer guard. This prevents a future v8-style promotion
+    # from updating the manuscript while leaving readiness/handoff/status stale.
+    manuscript_rel = str(C2_MANUSCRIPT.relative_to(ROOT))
+    status_rel = str(C2_MANUSCRIPT_STATUS.relative_to(ROOT))
+    reference_rel = str(C2_REFERENCE_AUDIT.relative_to(ROOT))
+    assert readiness["proposal_assets"]["full_manuscript"] == manuscript_rel
+    assert handoff["units"]["C2"]["preferred_full_manuscript"] == manuscript_rel
+    assert c2_status["preferred_manuscript"] == manuscript_rel
+    assert reference_audit["manuscript"] == manuscript_rel
+    assert readiness["proposal_assets"]["full_manuscript_status"] == status_rel
+    assert handoff["units"]["C2"]["full_manuscript_status"] == status_rel
+    assert readiness["proposal_assets"]["reference_metadata_audit"] == reference_rel
+    assert handoff["units"]["C2"]["reference_metadata_audit"] == reference_rel
+    assert c2_status["validation"]["reference_metadata_audit"] == reference_rel
+    assert readiness["machine_checks"]["full_manuscript_word_count_before_references"] == c2_status["word_count_before_references"] == c2["full_manuscript_words_before_references"]
+    assert readiness["machine_checks"]["full_manuscript_external_reference_count"] == c2_status["external_reference_count"] == c2["full_manuscript_external_references"] == reference_audit["reference_count"]
+    assert readiness["machine_checks"]["full_manuscript_validation_run"] == c2_status["validation"]["run_id"] == c2["full_manuscript_validation_run"]
 
     for paper in ("M1", "M2", "M3", "M4"):
         assert units[paper]["science_blocker"] is False
@@ -193,11 +228,13 @@ def main() -> None:
     for required in (
         "science and machine production closed for M1–M4",
         "REPOSITORY_PAPER_INTEGRATION_CONTRACT_2026-09-15.json",
-        "validated full Opinion manuscript v6",
-        "3,503 words",
-        "14/14 external references cited",
+        "validated full manuscript v7",
+        "4,096 words",
+        "20/20 external references cited",
         "reference metadata audit",
         "0 discrepancies requiring manuscript edit",
+        "conditional-locality",
+        "equal-cost measurement expansions",
         "Figure 1 machine-generated and machine-validated",
         "assistant visual audit PASS",
         "human final visual approval remains open",
@@ -214,7 +251,7 @@ def main() -> None:
         "Do not reopen frozen science or transfer Boundary theorem ownership",
         "HUMAN_SUBMISSION_INPUTS_2026-09-12",
     ):
-        assert required in text
+        assert required in text, required
 
     print("PUBLICATION_HANDOFF PASS")
 
