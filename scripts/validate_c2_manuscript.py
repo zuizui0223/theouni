@@ -68,6 +68,7 @@ def main() -> None:
         assert phrase in lower, phrase
 
     # Historical and ecological identifiability prior art is explicit.
+    # Use Markdown-normalized text so emphasis does not create false negatives.
     for phrase in (
         "chamberlin's multiple working hypotheses",
         "platt's strong inference",
@@ -79,7 +80,7 @@ def main() -> None:
         "sampling design to statistical inference",
         "prospective intervention screen",
     ):
-        assert phrase in lower, phrase
+        assert phrase in semantic_lower, phrase
 
     # Decision-theoretic non-harm ceiling remains explicit.
     for phrase in (
