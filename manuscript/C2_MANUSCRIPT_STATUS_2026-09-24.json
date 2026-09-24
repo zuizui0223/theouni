@@ -1,0 +1,106 @@
+{
+  "schema": "c2-tree-opinion-manuscript-status-v2",
+  "date": "2026-09-24",
+  "status": "preferred-full-manuscript-v8-machine-validated",
+  "target": "Trends in Ecology & Evolution Opinion",
+  "title": "When more measurement is not more evidence",
+  "preferred_manuscript": "manuscript/C2_TREE_OPINION_DRAFT_V8.md",
+  "word_count_before_references": 4439,
+  "external_reference_count": 22,
+  "validation": {
+    "workflow": "Theory Universe Validation",
+    "run_id": 35971077395,
+    "head_sha": "9f6b8fe1057496068b5d5edbdfbe1bd912cfefcd",
+    "conclusion": "success",
+    "manuscript_validator": "scripts/validate_c2_manuscript.py",
+    "citation_audit": "scripts/audit_c2_citations.py",
+    "citation_audit_status": "pass",
+    "citation_audit_runtime_output": "C2_CITATION_AUDIT PASS refs=22 all_cited=true section_coverage=true manuscript=v8",
+    "all_external_references_cited": true,
+    "section_level_citation_coverage": true,
+    "reference_metadata_audit": "manuscript/C2_REFERENCE_METADATA_AUDIT_2026-09-24.json",
+    "reference_metadata_audit_status": "pass",
+    "reference_metadata_discrepancies_requiring_edit": 0
+  },
+  "figure1": {
+    "spec": "proposals/C2_FIGURE1_DECISION_MAP_SPEC.md",
+    "vector_file": "manuscript/figures/C2_FIGURE1_MEASUREMENT_TO_EVIDENCE.svg",
+    "machine_generated": true,
+    "machine_validated": true,
+    "validation_run": 35971077395,
+    "validation_head_sha": "9f6b8fe1057496068b5d5edbdfbe1bd912cfefcd",
+    "assistant_visual_audit": "manuscript/C2_FIGURE1_VISUAL_AUDIT_2026-09-15.json",
+    "assistant_visual_audit_status": "pass",
+    "human_visual_inspection_complete": false
+  },
+  "conceptual_spine": {
+    "stance": "Familiar performance metrics are conditioned on earlier measurement choices and losses; the v8 contribution is not that conditionality itself is new, but a prospective claim-specific rule for choosing the next measurement intervention class.",
+    "interfaces": [
+      "timely preservation",
+      "separation",
+      "relevance",
+      "failure diversity"
+    ],
+    "failures": [
+      "too late",
+      "same dimension",
+      "wrong target",
+      "false independence"
+    ],
+    "synthesis": "claim-specific distinction-flow diagnosis mapped to intervention class; conditioning-set dependence is the starting structure, not the novelty claim",
+    "core_prediction": "Given a predeclared claim and equal-cost measurement expansions, diagnosis of the limiting interface before collecting new data should predict whether the best intervention class is earlier capture, a new separating axis, target-relevant information or a new failure domain.",
+    "operational_rule": "Before collecting more data, ask what distinction the next measurement must create or preserve for the conclusion to change."
+  },
+  "cross_domain_structure": {
+    "box_1": "prospective island Campanula decoupled pollinator-climate design example",
+    "box_2": "metabarcoding design example for timely preservation and failure diversity",
+    "reason": "show that the prospective claim-specific intervention rule transfers across ecological observation systems without claiming a new observation-process taxonomy or new empirical validation"
+  },
+  "claim_firewalls": {
+    "boundary_exact_theorem_surface_absent": true,
+    "internal_repository_labels_absent": true,
+    "unpublished_source_manuscript_placeholders_absent": true,
+    "extra_information_is_intrinsically_harmful_claim_absent": true,
+    "four_interfaces_claimed_exhaustive": false,
+    "observation_process_typology_novelty_claim_absent": true,
+    "formal_voi_oed_superiority_claim_absent": true
+  },
+  "revision_history": {
+    "v5_to_v6": {
+      "from_words_before_references": 4896,
+      "to_words_before_references": 3503,
+      "reduction_words": 1393,
+      "reduction_fraction": 0.2845,
+      "purpose": "editorial compression"
+    },
+    "v6_to_v7": {
+      "from_words_before_references": 3503,
+      "to_words_before_references": 4096,
+      "change_words": 593,
+      "reference_count_from": 14,
+      "reference_count_to": 20,
+      "purpose": "strengthen the shared conditional-locality thesis, cross-interface interactions, prior-art concession, and prospective intervention-ranking prediction"
+    },
+    "v7_to_v8": {
+      "from_words_before_references": 4096,
+      "to_words_before_references": 4439,
+      "change_words": 343,
+      "reference_count_from": 20,
+      "reference_count_to": 22,
+      "purpose": "integrate direct-neighbour LIES and sampling-design prior art, narrow novelty to prospective claim-specific intervention-class prediction, and state the VoI/OED boundary explicitly"
+    }
+  },
+  "journal_route": {
+    "proposal_first": true,
+    "proposal_contact_receipt": "proposals/C2_TREE_LIVE_ROUTE_CHECK_20260912.md",
+    "full_manuscript_should_not_be_dispatched_with_presubmission_pitch_unless_requested": true,
+    "interpretation": "The full manuscript is a prepared downstream asset, not a reason to bypass the proposal-first TREE route."
+  },
+  "remaining_manuscript_work": [
+    "final human visual approval of Figure 1",
+    "one broad-interest outside read testing whether C2 is distinguishable from LIES and from correctly specified full VoI/OED while retaining a clear prospective intervention-class prediction",
+    "final publisher-style copyedit only after editorial interest or explicit editor request",
+    "dispatch-time live route and lightweight reference metadata recheck"
+  ],
+  "science_reopen_rule": "Do not reopen source-paper science merely to increase C2 length, add another failure class, or transfer Boundary theorem ownership."
+}
