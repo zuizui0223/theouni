@@ -1,6 +1,6 @@
 # C2 Figure 1 specification — measurement-to-evidence interfaces
 
-Status: **canonical Figure 1 specification for the preferred TREE Opinion v7**.
+Status: **canonical Figure 1 specification for the preferred TREE Opinion v8**.
 
 ## Purpose
 
