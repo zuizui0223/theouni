@@ -20,6 +20,7 @@ def main() -> None:
 
     text = MANUSCRIPT.read_text(encoding="utf-8")
     lower = text.lower()
+    semantic_lower = lower.replace("**", "")
 
     required = [
         "# When more measurement is not more evidence",
@@ -92,7 +93,7 @@ def main() -> None:
         lower.index("## interface 4 — failure diversity"),
     ]
     assert order == sorted(order)
-    assert "failure diversity is cross-cutting rather than a fourth downstream stage" in lower
+    assert "failure diversity is cross-cutting rather than a fourth downstream stage" in semantic_lower
 
     # Cross-interface interaction is part of the synthesis, not left only as an outstanding question.
     for phrase in (
