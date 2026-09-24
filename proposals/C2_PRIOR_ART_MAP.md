@@ -1,7 +1,7 @@
 # C2 prior-art map — *When more measurement is not more evidence*
 
 Status: **external-literature novelty firewall aligned with manuscript v7**.  
-Checked: **2026-09-15**.  
+Checked: **2026-09-24**.  
 Purpose: prevent C2 from claiming novelty for component ideas with mature literatures and make the R1/R2 defence explicit.
 
 ## The claim C2 may make
@@ -21,7 +21,7 @@ The strongest empirical claim is prospective, not definitional:
 
 > Given a predeclared claim and equal-cost measurement expansions, diagnosing the limiting interface before collecting new data should predict which intervention yields the largest gain in claim resolution.
 
-C2 should not claim that it invented competing-hypothesis reasoning, identifiability, goal-oriented design, value of information, pseudoreplication, imperfect detection, calibration, dataset-shift analysis, or the value of experiments relative to big observational data.
+C2 should not claim that it invented competing-hypothesis reasoning, identifiability, goal-oriented design, value of information, pseudoreplication, imperfect detection, calibration, dataset-shift analysis, the link between sampling design and inference, cross-field observation-process typologies, or the value of experiments relative to big observational data.
 
 ---
 
@@ -162,9 +162,42 @@ C2 is not an anti-big-data argument and does not claim that experiments are alwa
 
 ---
 
+## Direct-neighbour ecological syntheses that narrow the C2 novelty claim
+
+### Chadwick et al. 2024 — LIES of omission
+
+- **Chadwick FJ, Haydon DT, Husmeier D, Ovaskainen O, Matthiopoulos J. (2024), “LIES of omission: complex observation processes in ecology,” Trends in Ecology & Evolution 39:368–380. DOI: 10.1016/j.tree.2023.10.009.**
+- This is the closest publication-surface neighbour because it is already a TREE synthesis of complex observation processes across ecological applications.
+- Its LIES framework classifies observation-process problems through **Latency, Identifiability, Effort and Scale**, explicitly seeks methodological commonalities across fields, and links problem classes to inferential solutions.
+- The thesis version underlying the published review explicitly lists linking observation-process models to experimental-design techniques and improving data collection as an outstanding question. The published abstract and highlights frame LIES primarily as a typology of observation problems and inferential solutions, not as the prospective claim-specific intervention-ranking doctrine proposed in C2.
+
+**Consequence for C2:** cross-field synthesis, a four-part observation framework, and interaction among observation problems are **not** novelty claims. C2 must cite LIES early and position itself as the prospective measurement-choice step: for a declared claim, locate where the required distinction is blocked and predict the class of measurement change that should remove that bottleneck.
+
+### Williams & Brown 2019 — sampling design and inference
+
+- **Williams BK, Brown ED. (2019), “Sampling and analysis frameworks for inference in ecology,” Methods in Ecology and Evolution 10:1832–1842. DOI: 10.1111/2041-210X.13279.**
+- This review explicitly links sampling design to statistical inference, discusses a statistical conditionality principle for model-based inference, integrates design- and model-based reasoning, and notes that the combined framework can identify effective sampling strategies.
+
+**Consequence for C2:** “inference is conditional on design” is not a novelty claim. C2 uses **conditioning-set dependence** descriptively and must distinguish that phrase from the formal statistical conditionality principle.
+
+### Revised novelty boundary after the direct-neighbour audit
+
+C2 is **not**:
+1. a new taxonomy of observation processes;
+2. the discovery that sampling design conditions inference;
+3. the invention of ranking candidate measurements—goal-oriented design and value-of-information already do that.
+
+The defensible prospective claim is narrower:
+
+> **For a predeclared scientific claim, diagnosing where the required distinction is blocked should predict the class of measurement intervention that improves claim resolution: capture earlier, create a new separating axis, measure target-relevant information, or diversify failure domains.**
+
+This is best treated as a falsifiable cross-system design hypothesis. Where a correctly specified full value-of-information or optimal-design model is available, C2 should not claim superiority. Its empirical value is instead whether interface diagnosis (i) identifies a missing candidate intervention class, (ii) exposes an upstream/shared-failure bottleneck hidden by a downstream metric, or (iii) provides useful intervention-class ranking before a full design model is available.
+
+---
+
 # Why the synthesis is not merely four citations side by side
 
-The v7 synthesis must satisfy three tests.
+The v8 synthesis must satisfy three tests after conceding the direct-neighbour overlap above.
 
 ### 1. A common structure
 
@@ -193,9 +226,9 @@ The framework is not validated because its interface-specific remedies sound sen
 
 The TREE pitch should be weakened or redirected if prior work already provides all three of the following together:
 
-1. the conditional-locality synthesis across preservation, separation, relevance and failure diversity;
-2. explicit interaction/trade-off reasoning among those interfaces;
-3. a prospective doctrine in which pre-data diagnosis predicts which equal-cost measurement intervention should produce the largest gain for a declared claim.
+1. the **claim-specific distinction-flow** formulation across preservation, separation, relevance and failure diversity;
+2. an explicit mapping from the diagnosed bottleneck to a **measurement intervention class**, rather than another problem taxonomy;
+3. a prospective test in which pre-data diagnosis predicts which equal-cost intervention class should produce the largest gain for a declared claim, with formal VoI/OED treated as a stronger baseline where a correctly specified full model is available.
 
 Strong prior art for any one interface is expected and should be cited prominently.
 
