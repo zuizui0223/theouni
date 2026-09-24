@@ -167,6 +167,14 @@ def main() -> None:
     assert "measurement escalation should be diagnostic-first, not quantity-first" in proposal_text.lower()
     assert "remedy-matched decision rule" in proposal_text.lower()
     assert "C2_FIGURE1_DECISION_MAP_SPEC.md" in proposal_text
+    for required in (
+        "Chadwick et al. (2024)",
+        "Williams & Brown (2019)",
+        "does **not** claim novelty for a four-part observation taxonomy",
+        "measurement intervention class",
+        "correctly specified full value-of-information or optimal-design model",
+    ):
+        assert required.lower() in proposal_text.lower(), required
 
     pitch_text = C2_EDITOR_PITCH.read_text(encoding="utf-8")
     for required in (
@@ -199,8 +207,10 @@ def main() -> None:
 
     outside_reader_text = C2_OUTSIDE_READER.read_text(encoding="utf-8")
     for required in (
-        "conditional-locality thesis check",
-        "prospective intervention-ranking prediction",
+        "direct-neighbour differentiation check",
+        "LIES",
+        "VoI/OED",
+        "prospective intervention-class prediction",
         "When more measurement is not more evidence",
     ):
         assert required.lower() in outside_reader_text.lower(), required
@@ -233,7 +243,7 @@ def main() -> None:
         "capture earlier",
         "the four interfaces are exhaustive",
         "diagnostic-first, not quantity-first",
-        "preferred TREE Opinion v7",
+        "preferred TREE Opinion v8",
         "conditioned on earlier measurement choices and losses",
     ):
         assert required.lower() in figure_text.lower(), required
