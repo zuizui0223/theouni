@@ -6,23 +6,23 @@ Historical Cell Press guidance identifies proposal-first consultation as the nor
 
 ## Subject
 
-**Opinion proposal — More measurement is not more evidence: four failures of monotonic reasoning in ecology**
+**Opinion proposal — When more measurement is not more evidence**
 
 ## Body
 
 Dear Editors,
 
-We would like to propose an Opinion for *Trends in Ecology & Evolution* entitled **“More measurement is not more evidence: four failures of monotonic reasoning in ecology.”**
+We would like to propose an Opinion for *Trends in Ecology & Evolution* entitled **“When more measurement is not more evidence.”**
 
-Ecologists can now measure more often, more precisely and with increasingly automated tools, but extra measurements do not always strengthen the evidence for the question at hand. Mature literatures already show several reasons why: greater precision need not resolve structurally indistinguishable mechanisms; information about a system overall need not answer the particular ecological target or decision; many repeated observations can share the same blind spot; and better downstream classification cannot recreate information that never entered the retained record.
+Ecologists and evolutionary biologists can now measure more often, more precisely and with increasingly automated tools. Yet the familiar metrics used to justify more measurement are local quantities conditioned on earlier choices and losses: precision is conditional on the observational axis already chosen, information gain on the objective, replicate count on the inferential unit and failure architecture, and classifier accuracy on records that survived upstream sampling and processing.
 
-Our proposed Opinion does not claim novelty for those component literatures. Its contribution is to bring them together as **four diagnostically different failures — same dimension, wrong target, shared dependence and upstream loss — and to show that each implies a different remedy.** The practical question therefore changes from “how can we measure more?” to “what new distinction would this measurement create, does that distinction matter to the ecological question, is it genuinely independent, and is it retained before it can be lost?”
+Our proposed Opinion argues that this shared conditional structure explains why a local performance gain need not become stronger evidence for a declared ecological or evolutionary claim. The relevant distinction must be **preserved**, the retained measurement must **separate** live alternatives, that separation must be **relevant** to the declared target, and repeated support must contain enough **failure diversity** not to depend on one common point of failure. The practical question therefore changes from “how can we measure more?” to **“what distinction must the next measurement create or preserve for the conclusion to change?”**
 
-We would develop the argument with two worked ecological examples. In an island *Campanula* system, several mechanisms can remain compatible with the same coarse clinal pattern, so a targeted nectar-guide measurement can be more informative than simply increasing observations of the original pattern. In island pollination, questions about pollinator occurrence, effective service and service-to-reproduction links require different observations; more data on one link cannot substitute for measuring another. Both are presented as worked design examples rather than new field-validation claims.
+This is a diagnostic doctrine rather than a universal evidence score. It also makes a prospective prediction: given a predeclared claim and several equal-cost measurement expansions, diagnosing the limiting interface before collecting new data should predict which intervention produces the largest gain in claim resolution.
 
-We think the framework could be useful across field sampling, biodiversity monitoring, sensor networks, experimental ecology, mechanistic inference and adaptive management. The central message is that **additional measurement becomes additional evidence only when it preserves or creates a distinction that can change the ecological question being asked.**
+We would develop the argument with two worked ecological examples. In an island *Campanula* design, climate/elevation and pollinator effects can be separated prospectively using decoupled site contrasts or pollinator exclusions, followed by visitor identity, effective pollen transfer and reproductive consequence. In metabarcoding, deeper sequencing or a better classifier helps only if the focal sequence survived earlier stages such as field sampling, extraction and amplification; when loss occurs upstream, the intervention must also move upstream. Both are design illustrations rather than new empirical-validation claims.
 
-We have prepared a concise proposal, an external prior-art map, and a source/claim firewall that keeps the component methods and results with their original papers. We would be grateful to know whether this concept could be suitable for an Opinion in *TREE* before developing a full manuscript.
+We think the framework could be useful across field sampling, biodiversity monitoring, sensor networks, experimental ecology, evolutionary inference and adaptive management. We have prepared a concise proposal, an external prior-art map, and a validated full Opinion draft as a downstream asset if invited. We would be grateful to know whether this concept could be suitable for an Opinion in *TREE*.
 
 Kind regards,
 
@@ -32,13 +32,13 @@ Kind regards,
 
 - `C2_TREE_EDITOR_PITCH.md` — concise editor-facing pitch;
 - selected reference list from `C2_PRIOR_ART_MAP.md`;
-- optional one-panel concept sketch only if useful; do not build a full manuscript before editorial interest.
+- do **not** attach the full manuscript or Figure 1 unless TREE requests them or the live route changes.
 
 ## Final pre-send checks
 
 - [ ] Verify current TREE editorial contact/submission mechanism from the live journal site.
 - [ ] Fix author list and corresponding author.
-- [ ] Have at least one ecologist outside the immediate theory/methods niche read the pitch for broad-interest clarity.
+- [ ] Have at least one ecologist outside the immediate theory/methods niche read the pitch and independently recover the conditional-locality thesis plus the prospective intervention-ranking prediction.
 - [ ] Confirm that C1 Boundary remains parked or that the C1/C2 firewall is explicitly disclosed.
 - [ ] Do not include acceptance-rate estimates.
-- [ ] Do not claim that C2 invented structural identifiability, targeted design/VoI, pseudoreplication, imperfect detection, calibration, or dataset-shift analysis.
+- [ ] Do not claim that C2 invented structural identifiability, targeted design/VoI, pseudoreplication, imperfect detection, calibration, or observation-pipeline bias.

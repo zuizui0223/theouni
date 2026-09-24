@@ -194,6 +194,15 @@ def main() -> None:
     assert "Boundary paper retains the full identification theorem" in pitch_text
     assert "same-dimension/separation lesson" in pitch_text
 
+    outside_reader_text = C2_OUTSIDE_READER.read_text(encoding="utf-8")
+    for required in (
+        "conditional-locality thesis check",
+        "prospective intervention-ranking prediction",
+        "When more measurement is not more evidence",
+    ):
+        assert required.lower() in outside_reader_text.lower(), required
+    assert "four failures of monotonic reasoning" not in outside_reader_text.lower()
+
     send_text = C2_SEND_CANDIDATE.read_text(encoding="utf-8")
     for boundary_owned_surface in (
         "k-rank(M)",
@@ -221,6 +230,8 @@ def main() -> None:
         "capture earlier",
         "the four interfaces are exhaustive",
         "diagnostic-first, not quantity-first",
+        "preferred TREE Opinion v7",
+        "conditioned on earlier measurement choices and losses",
     ):
         assert required.lower() in figure_text.lower(), required
 
