@@ -180,8 +180,11 @@ def main() -> None:
         "target-relevant information",
         "diversify failure domains",
         "capture earlier",
-        "shared conditional structure",
-        "prospective diagnostic doctrine",
+        "not another observation-process typology",
+        "Chadwick et al. (2024)",
+        "Williams & Brown (2019)",
+        "intervention-class ranking",
+        "correctly specified full VoI/OED",
     ):
         assert required.lower() in pitch_text.lower(), required
     for external_anchor in (
