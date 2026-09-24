@@ -9,7 +9,7 @@ READINESS = ROOT / "proposals" / "C2_SEND_READINESS.json"
 DISPATCH = ROOT / "proposals" / "C2_DISPATCH_GATE_2026-09-13.json"
 REQUEST = ROOT / "proposals" / "C2_OUTSIDE_READER_REQUEST_DRAFT.md"
 PACKET = ROOT / "proposals" / "C2_OUTSIDE_READER_PACKET.md"
-SEND = ROOT / "proposals" / "C2_TREE_SEND_CANDIDATE.md"
+SEND = ROOT / "proposals" / "C2_TREE_SEND_CANDIDATE.md"\nPRESUB = ROOT / "proposals" / "C2_TREE_PRESUBMISSION_EMAIL_DRAFT.md"
 
 
 def load(path: Path) -> dict:
@@ -17,7 +17,7 @@ def load(path: Path) -> dict:
 
 
 def main() -> None:
-    for path in (READINESS, DISPATCH, REQUEST, PACKET, SEND):
+    for path in (READINESS, DISPATCH, REQUEST, PACKET, SEND, PRESUB):
         assert path.exists(), path
 
     readiness = load(READINESS)
@@ -55,7 +55,7 @@ def main() -> None:
     request = REQUEST.read_text(encoding="utf-8")
     for required in (
         "first concrete reason to reject",
-        "extra measurement can fail to become extra evidence for different reasons",
+        "local quantities conditioned on earlier measurement choices and losses",\n        "prospective intervention-ranking prediction",
         "C2_TREE_SEND_CANDIDATE.md",
         "C2_TREE_EDITOR_PITCH.md",
         "C2_OUTSIDE_READER_PACKET.md",
@@ -69,10 +69,10 @@ def main() -> None:
     assert "9–10" in packet
     assert "7–8" in packet
     assert "≤6" in packet
-    assert "Figure-logic check blocks send" in packet
+    assert "Conditional-locality thesis check blocks send" in packet\n    assert "Prospective-prediction check blocks send" in packet\n    assert "Figure-logic check blocks send" in packet\n    assert "When more measurement is not more evidence" in packet\n    assert "four failures of monotonic reasoning" not in packet.lower()
 
-    send = SEND.read_text(encoding="utf-8")
-    assert "content-ready, not authorized to send" in send
+    presub = PRESUB.read_text(encoding="utf-8")\n    assert "Opinion proposal — When more measurement is not more evidence" in presub\n    assert "local quantities conditioned on earlier choices and losses" in presub.lower()\n    assert "equal-cost measurement expansions" in presub.lower()\n    assert "validated full Opinion draft as a downstream asset" in presub\n    assert "four failures of monotonic reasoning" not in presub.lower()\n\n    send = SEND.read_text(encoding="utf-8")
+    assert "content-ready, not authorized to send" in send\n    assert "When more measurement is not more evidence" in send
     assert "Final authorship approved" in send
     assert "One ecologist outside the immediate theory/methods niche has read the pitch" in send
     assert "Live TREE contact route checked immediately before dispatch" in send
