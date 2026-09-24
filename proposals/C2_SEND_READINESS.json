@@ -17,11 +17,11 @@
     "dispatch_gate": "proposals/C2_DISPATCH_GATE_2026-09-13.json",
     "editorial_red_team": "proposals/C2_TREE_RED_TEAM.md",
     "live_route_check": "proposals/C2_TREE_LIVE_ROUTE_CHECK_20260912.md",
-    "full_manuscript": "manuscript/C2_TREE_OPINION_DRAFT_V7.md",
-    "full_manuscript_status": "manuscript/C2_MANUSCRIPT_STATUS_2026-09-16.json",
+    "full_manuscript": "manuscript/C2_TREE_OPINION_DRAFT_V8.md",
+    "full_manuscript_status": "manuscript/C2_MANUSCRIPT_STATUS_2026-09-24.json",
     "manuscript_validator": "scripts/validate_c2_manuscript.py",
     "citation_audit_validator": "scripts/audit_c2_citations.py",
-    "reference_metadata_audit": "manuscript/C2_REFERENCE_METADATA_AUDIT_2026-09-16.json",
+    "reference_metadata_audit": "manuscript/C2_REFERENCE_METADATA_AUDIT_2026-09-24.json",
     "figure1_decision_map_spec": "proposals/C2_FIGURE1_DECISION_MAP_SPEC.md",
     "figure1_vector": "manuscript/figures/C2_FIGURE1_MEASUREMENT_TO_EVIDENCE.svg"
   },
@@ -47,22 +47,22 @@
     "outside_reader_request_written": true,
     "fail_closed_dispatch_gate_written": true,
     "tree_editorial_red_team_completed": true,
-    "internal_red_team_decision": "GO subject to outside-reader check and final authorship/contact confirmation; cross-literature synthesis originality remains the main editorial risk",
+    "internal_red_team_decision": "GO for outside-reader testing, not yet editorially de-risked; differentiation from LIES and correctly specified full VoI/OED is the main remaining editorial test",
     "proposal_first_strategy": true,
-    "preferred_full_manuscript_version": "v7",
+    "preferred_full_manuscript_version": "v8",
     "full_manuscript_written": true,
     "full_manuscript_validated": true,
-    "full_manuscript_word_count_before_references": 4096,
-    "full_manuscript_external_reference_count": 20,
-    "full_manuscript_validation_run": 35065006878,
-    "full_manuscript_validation_head": "06fd746af27a5be3e1134a8c43ae1268ca221bdc",
+    "full_manuscript_word_count_before_references": 4439,
+    "full_manuscript_external_reference_count": 22,
+    "full_manuscript_validation_run": 35971077395,
+    "full_manuscript_validation_head": "9f6b8fe1057496068b5d5edbdfbe1bd912cfefcd",
     "full_manuscript_citation_audit_pass": true,
     "full_manuscript_all_external_references_cited": true,
     "full_manuscript_section_citation_coverage_pass": true,
     "reference_metadata_audit_pass": true,
     "reference_metadata_discrepancies_requiring_edit": 0,
     "figure1_machine_validated": true,
-    "figure1_validation_run": 35065006878,
+    "figure1_validation_run": 35971077395,
     "historical_official_tree_contact_found": true,
     "historical_official_tree_contact": "tree@cell.com",
     "current_live_journal_contact_independently_confirmed": true,
@@ -71,10 +71,17 @@
     "current_live_editor": "Andrea Stephens",
     "current_public_route": "proposal by email to the editor before full-manuscript dispatch",
     "dispatch_time_recheck_still_required": true,
-    "machine_blockers": 0
+    "machine_blockers": 0,
+    "direct_neighbour_lies_acknowledged": true,
+    "sampling_inference_conditionality_acknowledged": true,
+    "formal_voi_oed_ranking_prior_art_acknowledged": true,
+    "novelty_narrowed_to_claim_specific_intervention_class_prediction": true,
+    "outside_reader_direct_neighbour_gate_written": true
   },
   "authorship_state": {
-    "working_author_list": ["Ruiqi Zhang"],
+    "working_author_list": [
+      "Ruiqi Zhang"
+    ],
     "working_corresponding_author": "Ruiqi Zhang",
     "status": "provisional until explicit human approval",
     "additional_authors": "none documented yet"
@@ -88,7 +95,7 @@
     {
       "id": "broad_interest_read",
       "required": true,
-      "question": "Has at least one ecologist outside the immediate theory/methods niche read the pitch for broad-interest clarity and independently recovered the conditional-locality thesis rather than a collage of four familiar warnings?"
+      "question": "Has at least one ecologist outside the immediate theory/methods niche read the pitch and independently distinguished the prospective claim-specific intervention rule from LIES and correctly specified full VoI/OED?"
     },
     {
       "id": "dispatch_time_route_recheck",
