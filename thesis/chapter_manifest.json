@@ -1,0 +1,271 @@
+{
+  "schema_version": "theouni-thesis-workspace.v1",
+  "status": "active_preferred_traversal",
+  "architecture_source": "universe/dissertation_architecture.json",
+  "atlas_source": "universe/worldline_atlas.json",
+  "working_title": "When Ecological Representations Stop Travelling: State, Evidence, Revision, and Warning in a Task-Indexed Theory Universe",
+  "central_question": "When does a scientific representation that is adequate for one ecological task cease to be reusable after capability, future grammar, structural replacement, mechanism responsibility, evidence, target, representation, or domain changes?",
+  "ownership_rule": "Source repositories retain primary theorem, code, data, simulation, evidence, and manuscript ownership; theouni owns only the typed dissertation map, cross-chapter firewalls, and synthesis.",
+  "progress_gates": [
+    "G0_registered",
+    "G1_thesis_fixed",
+    "G2_source_claim_map_fixed",
+    "G3_display_plan_fixed",
+    "G4_complete_first_draft",
+    "G5_handoff_closed",
+    "G6_internal_review_passed",
+    "G7_thesis_ready"
+  ],
+  "hard_dependencies": [
+    {
+      "source": "chapter:7",
+      "target": "chapter:8",
+      "relation": "loss_domain_must_be_fixed_warning_blind_before_warning_evaluation"
+    }
+  ],
+  "embedded_module_allocation": {
+    "TU-1": "chapter:synthesis",
+    "TU-2": "chapter:6",
+    "TU-3": "chapter:7",
+    "TU-4": "chapter:8"
+  },
+  "chapters": [
+    {
+      "id": "chapter:introduction",
+      "order": 0,
+      "kind": "general_introduction",
+      "part": "Front matter",
+      "title": "The Reuse Problem in Ecology",
+      "workspace": "thesis/chapters/00_general_introduction.md",
+      "worldlines": [],
+      "primary_source_owners": ["repo:theouni"],
+      "embedded_modules": [],
+      "chapter_thesis": "Ecology repeatedly reuses states, laws, measurements, causal conclusions, and warnings across changed scientific responsibilities; the dissertation asks when that reuse is licensed.",
+      "forbidden_inference": "adequate for one ecological task => reusable for another task",
+      "source_material": [
+        "theouni:universe/WORLDLINE_ATLAS.md",
+        "theouni:universe/DISSERTATION_ARCHITECTURE.md",
+        "theouni:theory/DRAFT_v0.6_CONTRACT_INDEXED_QUOTIENT_TRANSPORT.md"
+      ],
+      "required_displays": ["one overview DAG separating source-owned chapters from embedded firewalls"],
+      "prohibited_upgrades": ["theouni owns source theorems", "one intrinsic ecological state exists", "all bridges are complete"],
+      "current_gate": "G1_thesis_fixed",
+      "next_action": "Draft the opening ecological reuse examples and define the minimum shared notation in no more than two pages."
+    },
+    {
+      "id": "chapter:1",
+      "order": 1,
+      "kind": "source_owned_research_chapter",
+      "part": "Part I — When Doing More Requires Knowing More",
+      "title": "When Conservation Capacity Outgrows Conservation Knowledge",
+      "workspace": "thesis/chapters/01_crest.md",
+      "worldlines": ["worldline:capability"],
+      "primary_source_owners": ["repo:crest"],
+      "embedded_modules": [],
+      "chapter_thesis": "A fixed small increase in management capability can require an arbitrarily large refinement of present ecological state and monitoring resolution.",
+      "forbidden_inference": "small intervention or capability gain => small required-state or monitoring burden",
+      "source_material": [
+        "crest:manuscript/crest_biology_philosophy_blinded_submission.md",
+        "crest:manuscript/CREST_supplementary_information.md",
+        "crest:tests/test_crest_capability_resolution_divergence.py"
+      ],
+      "headline_result": "For every m>=1, one new controllable action can give Delta|K*|=1 while forcing Delta K_U0=m.",
+      "required_displays": ["conservation-capacity paradox figure", "finite witness diagram", "budgeting-variable versus epistemic-bound table"],
+      "prohibited_upgrades": ["real ecosystems generally have exponential monitoring burden", "project-percentage budgeting is administratively invalid", "the finite witness is an empirical frequency claim"],
+      "current_gate": "G2_source_claim_map_fixed",
+      "next_action": "Rewrite the chapter opening around the forbidden budgeting inference and move generic state philosophy behind the ecological paradox."
+    },
+    {
+      "id": "chapter:2",
+      "order": 2,
+      "kind": "source_owned_research_chapter",
+      "part": "Part I — When Doing More Requires Knowing More",
+      "title": "When Closed Simplicity Fails under Open Futures",
+      "workspace": "thesis/chapters/02_ccoc.md",
+      "worldlines": ["worldline:future"],
+      "primary_source_owners": ["repo:ccoc"],
+      "embedded_modules": [],
+      "chapter_thesis": "Interfaces independently minimized under fixed closed future grammars need not remain small when the admissible future grammar is opened.",
+      "forbidden_inference": "simple exact interfaces under each closed grammar => a simple exact interface under the open grammar",
+      "source_material": [
+        "ccoc:README.md",
+        "ccoc:docs/theorem_spine.md",
+        "ccoc:docs/residual_novelty_decision_2026-08-12.md",
+        "ccoc:manuscript/README.md"
+      ],
+      "headline_result": "The explicit family has |P_C|=2, |P_O|=2^(m+1), and K_O-K_C=m, with constrained-codebook and bounded-local sharpness support.",
+      "required_displays": ["closed-versus-open grammar diagram", "interface-complexity separation plot", "CREST-versus-CCOC quantifier firewall"],
+      "prohibited_upgrades": ["fixed-grammar minimization is novel", "any new action necessarily causes exponential blow-up", "CCOC proves empirical ecosystem closure failure"],
+      "current_gate": "G2_source_claim_map_fixed",
+      "next_action": "Draft the exact distinction between independently optimized closed interfaces and the jointly open interface before presenting the witness."
+    },
+    {
+      "id": "chapter:3",
+      "order": 3,
+      "kind": "source_owned_research_chapter",
+      "part": "Part II — When Scientific Laws Fail to Travel",
+      "title": "When Macro-Laws Do Not Survive Ecological Replacement",
+      "workspace": "thesis/chapters/03_mltr.md",
+      "worldlines": ["worldline:history"],
+      "primary_source_owners": ["repo:mltr"],
+      "embedded_modules": [],
+      "chapter_thesis": "An accepted source macro-law can fail after non-nested ecological replacement, but the failure admits a source-relative exact test and a unique coarsest repair that preserves every surviving inherited merge.",
+      "forbidden_inference": "an exact source macro-law => the same exact macro-law after turnover, recolonization, extinction, or rewiring",
+      "source_material": [
+        "mltr:README.md",
+        "mltr:docs/theorem_program.md",
+        "mltr:docs/paper_results_discussion.md",
+        "mltr:docs/novelty_and_journal_strategy.md"
+      ],
+      "headline_result": "Exact replacement transport, finite fiber-split obstruction, unique coarsest source-relative repair, transport defect, route coherence, and minimal history augmentation.",
+      "required_displays": ["source-target replacement map", "carried partition and minimal repair figure", "CCOC-versus-MLTR quantifier table"],
+      "prohibited_upgrades": ["replacement relation is inferred from data", "coarsest repair is a new generic bisimulation algorithm", "repaired state is automatically future-, mechanism-, or evidence-sufficient"],
+      "current_gate": "G2_source_claim_map_fixed",
+      "next_action": "Build one complete ecological replacement example in which preserving inherited semantics changes the target repair relative to target-only minimization."
+    },
+    {
+      "id": "chapter:4",
+      "order": 4,
+      "kind": "source_owned_research_chapter",
+      "part": "Part II — When Scientific Laws Fail to Travel",
+      "title": "When Visible Equivalence Fails under Mechanism Uncertainty",
+      "workspace": "thesis/chapters/04_mrm.md",
+      "worldlines": ["worldline:mechanism"],
+      "primary_source_owners": ["repo:mrm"],
+      "embedded_modules": [],
+      "chapter_thesis": "A mechanism-independent deterministic law exists exactly when all retained response types agree; otherwise typed or set-valued reporting is the strongest honest law.",
+      "forbidden_inference": "same visible state => same deterministic intervention law",
+      "source_material": [
+        "mrm:README.md",
+        "mrm:docs/mrm_core_proofs.md",
+        "mrm:docs/minimal_quotient_active_discrimination.md",
+        "mrm:docs/mechanism_ambiguity_frontier.md"
+      ],
+      "headline_result": "Candidate-independent law criterion, unique coarsest candidate-safe quotient, ambiguity frontier, and active discrimination under declared grammars and costs.",
+      "required_displays": ["visible-state by response-type matrix", "deterministic/typed/set-valued reporting ladder", "mechanism-versus-evidence boundary"],
+      "prohibited_upgrades": ["MRM identifies the true mechanism", "all mechanism differences belong in ecological state", "MRM inherits CED reliability guarantees"],
+      "current_gate": "G2_source_claim_map_fixed",
+      "next_action": "Draft the chapter around the honest-law hierarchy and use active discrimination only after the response-type obstruction is clear."
+    },
+    {
+      "id": "chapter:5",
+      "order": 5,
+      "kind": "source_owned_research_chapter",
+      "part": "Part III — When More Information Does Not Give the Needed Answer",
+      "title": "When Evidence Does Not License the State We Need",
+      "workspace": "thesis/chapters/05_ced.md",
+      "worldlines": ["worldline:evidence"],
+      "primary_source_owners": ["repo:ced"],
+      "embedded_modules": [],
+      "chapter_thesis": "Evidence supports a deterministic ecological report only when the target is constant on the reliability-qualified compatible class; nominal resolution or greater information alone is insufficient.",
+      "forbidden_inference": "more, finer, or nominally distinguishing information => a licensed ecological target",
+      "source_material": [
+        "ced:README.md",
+        "ced:docs/paper_b_theorem_consolidation.md",
+        "ced:docs/experiment_induced_quotient_theorem.md",
+        "ced:manuscript/paper_b_supplement.tex"
+      ],
+      "headline_result": "Experiment-induced quotient, honest report criterion, target-safe resolution requirement, failure-domain guarantee ceilings, and adaptive false-resolution control.",
+      "required_displays": ["required-state versus evidence-class diagram", "shared-failure versus independent-mode comparison", "information-gain versus target-safe policy reversal"],
+      "prohibited_upgrades": ["required refinement has already been observed", "more repetitions inside one failure domain prove absence", "full latent-world identification is always necessary"],
+      "current_gate": "G2_source_claim_map_fixed",
+      "next_action": "Choose one common finite witness that carries Results 1–4 through record, target, failure, and stopping decisions."
+    },
+    {
+      "id": "chapter:6",
+      "order": 6,
+      "kind": "source_owned_research_chapter",
+      "part": "Part III — When More Information Does Not Give the Needed Answer",
+      "title": "When Learning the Cause and Licensing the Decision Diverge",
+      "workspace": "thesis/chapters/06_rach.md",
+      "worldlines": ["worldline:learning"],
+      "primary_source_owners": ["repo:microdonta"],
+      "embedded_modules": ["TU-2"],
+      "chapter_thesis": "Retaining all admissible causal programmes and selecting the next observation can efficiently reduce causal ambiguity, but causal-learning value and target-licensing value remain different objectives.",
+      "forbidden_inference": "pattern fit or high causal-learning value => identified cause or licensed decision target",
+      "source_material": [
+        "microdonta:paper/mee_manuscript_draft.md",
+        "microdonta:paper/results/g2_frozen_v2_summary.json",
+        "microdonta:docs/channel_identifiability_theorem.md",
+        "theouni:theory/TU2_LEARNING_LICENSING.md"
+      ],
+      "headline_result": "N1-N4 identifiability boundaries, admissible causal sets, validated RACH-SEQ selection, and TU-2 learning/licensing orthogonality.",
+      "required_displays": ["W=F E identifiability diagram", "RACH-SEQ versus random benchmark", "TU-2 equal-score opposite-license witness"],
+      "prohibited_upgrades": ["RACH selects the true mechanism", "high NOV licenses the management target", "the prospective Campanula case is already causal identification"],
+      "current_gate": "G2_source_claim_map_fixed",
+      "next_action": "Integrate the frozen benchmark and TU-2 as one argument about typed information value rather than two adjacent methods."
+    },
+    {
+      "id": "chapter:7",
+      "order": 7,
+      "kind": "source_owned_research_chapter",
+      "part": "Part IV — When an Early Signal Is Not a Warning",
+      "title": "Which State Actually Generates Functional Loss?",
+      "workspace": "thesis/chapters/07_loss.md",
+      "worldlines": ["worldline:loss"],
+      "primary_source_owners": ["repo:eco-genetic-criticality"],
+      "embedded_modules": ["TU-3"],
+      "chapter_thesis": "Complete simulator state may be future-sufficient under a declared closure while familiar eco-genetic marginals remain insufficient for the loss-relevant transition; loss state is a target-qualified quotient, not raw model detail.",
+      "forbidden_inference": "raw simulator detail or matching coarse eco-genetic marginals => the correct loss-generating state",
+      "source_material": [
+        "eco-genetic-criticality:README.md",
+        "eco-genetic-criticality:docs/final_evidence_ledger.md",
+        "eco-genetic-criticality:tests/test_state_sufficiency_regime_audit.py",
+        "theouni:theory/TU3_LOSS_STATE_INVARIANCE.md"
+      ],
+      "headline_result": "Declared complete-state sufficiency plus a constructive aligned/anti-aligned counterexample showing transition-level insufficiency of common coarse marginals.",
+      "required_displays": ["eco-genetic state layers", "aligned versus anti-aligned patch map", "CompleteSimulatorState versus LossGeneratingState firewall"],
+      "prohibited_upgrades": ["alignment has a universal directional loss effect", "the full simulator state is minimal or natural", "common marginal equality guarantees dynamic equivalence"],
+      "current_gate": "G2_source_claim_map_fixed",
+      "next_action": "Write the warning-blind loss-state lock as the explicit handoff contract to Chapter 8."
+    },
+    {
+      "id": "chapter:8",
+      "order": 8,
+      "kind": "source_owned_research_chapter",
+      "part": "Part IV — When an Early Signal Is Not a Warning",
+      "title": "When an Early Signal Is Not a Warning",
+      "workspace": "thesis/chapters/08_warning.md",
+      "worldlines": ["worldline:warning"],
+      "primary_source_owners": ["repo:eco-genetic-warning-extensions"],
+      "embedded_modules": ["TU-4"],
+      "chapter_thesis": "A genetic signal can reproducibly precede loss in every event trajectory yet fail completely as a predictor when it also fires in every non-event; within-state ordering and cross-state warning portability are separate claims.",
+      "forbidden_inference": "signal precedes loss => the signal is a valid or portable warning",
+      "source_material": [
+        "eco-genetic-warning-extensions:README.md",
+        "eco-genetic-warning-extensions:manuscript/main_text.md",
+        "eco-genetic-warning-extensions:manuscript/claim_evidence_map.md",
+        "theouni:theory/TU4_WARNING_STATE_PORTABILITY.md"
+      ],
+      "headline_result": "35/35 and 33/33 event-conditional leads coexist with 48/48 and 49/49 non-event firing, specificity zero, and AUC 0.5; warning portability remains state-conditional.",
+      "required_displays": ["event/non-event full-denominator table", "lead versus discrimination figure", "LossGeneratingState versus WarningEvaluationState refinement"],
+      "prohibited_upgrades": ["relative thresholds are validated predictors", "within-state replication establishes universal warning", "habitat labels define warning regimes"],
+      "current_gate": "G2_source_claim_map_fixed",
+      "next_action": "Make the full-denominator reversal the first result and move threshold trajectories behind the discrimination failure."
+    },
+    {
+      "id": "chapter:synthesis",
+      "order": 9,
+      "kind": "general_synthesis",
+      "part": "Back matter",
+      "title": "The Theory Universe: Adequacy Has No Privileged Direction of Travel",
+      "workspace": "thesis/chapters/09_general_synthesis.md",
+      "worldlines": ["worldline:revision"],
+      "primary_source_owners": ["repo:theouni"],
+      "embedded_modules": ["TU-1"],
+      "chapter_thesis": "The source chapters are not one theorem but a typed universe of transport failures; a representation adequate now is reusable later only when the revised task factors through what was retained.",
+      "forbidden_inference": "a representation adequate for the original task => a representation revisable for a later task",
+      "source_material": [
+        "theouni:theory/TU1_CONTRACT_REVISION.md",
+        "theouni:theory/DRAFT_v0.6_CONTRACT_INDEXED_QUOTIENT_TRANSPORT.md",
+        "theouni:theory/CONSISTENCY_AUDIT.md",
+        "theouni:universe/WORLDLINE_ATLAS.md"
+      ],
+      "headline_result": "State-only revision exists iff the revised quotient factors through the stored quotient; same-carrier revision debt measures the worst locally hidden split.",
+      "required_displays": ["all-chapter transport-failure map", "bridge-type matrix", "termination versus universe-failure table"],
+      "prohibited_upgrades": ["all source results reduce to TU-1", "pairwise non-conflict proves global consistency", "theouni owns source theorems", "same-carrier revision solves MLTR carrier change"],
+      "current_gate": "G1_thesis_fixed",
+      "next_action": "Draft the synthesis around bridge conditions and revision after forgetting, not a chapter-by-chapter summary."
+    }
+  ]
+}
