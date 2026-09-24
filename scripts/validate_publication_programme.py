@@ -192,7 +192,16 @@ def main() -> None:
     ):
         assert external_anchor.lower() in pitch_text.lower(), external_anchor
     assert "Boundary paper retains the full identification theorem" in pitch_text
-    assert "same-dimension/separation lesson" in pitch_text\n\n    outside_reader_text = C2_OUTSIDE_READER.read_text(encoding="utf-8")\n    for required in (\n        "conditional-locality thesis check",\n        "prospective intervention-ranking prediction",\n        "When more measurement is not more evidence",\n    ):\n        assert required.lower() in outside_reader_text.lower(), required\n    assert "four failures of monotonic reasoning" not in outside_reader_text.lower()
+    assert "same-dimension/separation lesson" in pitch_text
+
+    outside_reader_text = C2_OUTSIDE_READER.read_text(encoding="utf-8")
+    for required in (
+        "conditional-locality thesis check",
+        "prospective intervention-ranking prediction",
+        "When more measurement is not more evidence",
+    ):
+        assert required.lower() in outside_reader_text.lower(), required
+    assert "four failures of monotonic reasoning" not in outside_reader_text.lower()
 
     send_text = C2_SEND_CANDIDATE.read_text(encoding="utf-8")
     for boundary_owned_surface in (
@@ -220,7 +229,9 @@ def main() -> None:
         "diversify failure domains",
         "capture earlier",
         "the four interfaces are exhaustive",
-        "diagnostic-first, not quantity-first",\n        "preferred TREE Opinion v7",\n        "conditioned on earlier measurement choices and losses",
+        "diagnostic-first, not quantity-first",
+        "preferred TREE Opinion v7",
+        "conditioned on earlier measurement choices and losses",
     ):
         assert required.lower() in figure_text.lower(), required
 
