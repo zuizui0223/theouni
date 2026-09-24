@@ -1,6 +1,6 @@
 # C2 Figure 1 specification — measurement-to-evidence interfaces
 
-Status: **canonical Figure 1 specification for the preferred TREE Opinion v5**.
+Status: **canonical Figure 1 specification for the preferred TREE Opinion v7**.
 
 ## Purpose
 
@@ -10,7 +10,7 @@ The figure is **not** a four-box catalogue. It shows how a biologically relevant
 
 Central stance:
 
-> **Measurement design should follow the flow of distinctions required by the claim, not data volume alone.**
+> **Local performance metrics are conditioned on earlier measurement choices and losses; measurement design should therefore follow the flow of distinctions required by the claim, not data volume alone.**
 
 ## Central visual grammar
 
