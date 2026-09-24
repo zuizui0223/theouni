@@ -83,7 +83,7 @@ def main() -> None:
     presub = PRESUB.read_text(encoding="utf-8")
     assert "Opinion proposal — When more measurement is not more evidence" in presub
     assert "LIES" in presub
-    assert "not another observation taxonomy" in presub
+    assert "do not propose another observation taxonomy" in presub
     assert "equal-cost measurement expansions" in presub.lower()
     assert "correctly specified full VoI/OED model" in presub
     assert "validated full Opinion draft as a downstream asset" in presub
