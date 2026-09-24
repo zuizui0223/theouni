@@ -138,7 +138,7 @@ def main() -> None:
         "simulations with known truth",
         "higher-quality reference channel or audit sample",
         "randomize equal effort",
-        "it is weakened if the diagnoses do not predict",
+        "the framework is weakened if the diagnoses do not predict",
         "ranking candidate measurements is not itself new",
         "not expected to outperform it",
         "identifies the missing candidate class",
