@@ -21,9 +21,9 @@ C2_OUTSIDE_READER = ROOT / "proposals" / "C2_OUTSIDE_READER_PACKET.md"
 C2_RED_TEAM = ROOT / "proposals" / "C2_TREE_RED_TEAM.md"
 C2_LIVE_ROUTE = ROOT / "proposals" / "C2_TREE_LIVE_ROUTE_CHECK_20260912.md"
 C2_FIGURE1 = ROOT / "proposals" / "C2_FIGURE1_DECISION_MAP_SPEC.md"
-C2_MANUSCRIPT = ROOT / "manuscript" / "C2_TREE_OPINION_DRAFT_V7.md"
-C2_MANUSCRIPT_STATUS = ROOT / "manuscript" / "C2_MANUSCRIPT_STATUS_2026-09-16.json"
-C2_REFERENCE_AUDIT = ROOT / "manuscript" / "C2_REFERENCE_METADATA_AUDIT_2026-09-16.json"
+C2_MANUSCRIPT = ROOT / "manuscript" / "C2_TREE_OPINION_DRAFT_V8.md"
+C2_MANUSCRIPT_STATUS = ROOT / "manuscript" / "C2_MANUSCRIPT_STATUS_2026-09-24.json"
+C2_REFERENCE_AUDIT = ROOT / "manuscript" / "C2_REFERENCE_METADATA_AUDIT_2026-09-24.json"
 C2_MANUSCRIPT_VALIDATOR = ROOT / "scripts" / "validate_c2_manuscript.py"
 C2_CITATION_AUDIT_VALIDATOR = ROOT / "scripts" / "audit_c2_citations.py"
 
@@ -167,6 +167,14 @@ def main() -> None:
     assert "measurement escalation should be diagnostic-first, not quantity-first" in proposal_text.lower()
     assert "remedy-matched decision rule" in proposal_text.lower()
     assert "C2_FIGURE1_DECISION_MAP_SPEC.md" in proposal_text
+    for required in (
+        "Chadwick et al. (2024)",
+        "Williams & Brown (2019)",
+        "does **not** claim novelty for a four-part observation taxonomy",
+        "measurement intervention class",
+        "correctly specified full value-of-information or optimal-design model",
+    ):
+        assert required.lower() in proposal_text.lower(), required
 
     pitch_text = C2_EDITOR_PITCH.read_text(encoding="utf-8")
     for required in (
@@ -180,8 +188,11 @@ def main() -> None:
         "target-relevant information",
         "diversify failure domains",
         "capture earlier",
-        "shared conditional structure",
-        "prospective diagnostic doctrine",
+        "not another observation-process typology",
+        "Chadwick et al. (2024)",
+        "Williams & Brown (2019)",
+        "intervention-class ranking",
+        "correctly specified full VoI/OED",
     ):
         assert required.lower() in pitch_text.lower(), required
     for external_anchor in (
@@ -196,8 +207,10 @@ def main() -> None:
 
     outside_reader_text = C2_OUTSIDE_READER.read_text(encoding="utf-8")
     for required in (
-        "conditional-locality thesis check",
-        "prospective intervention-ranking prediction",
+        "direct-neighbour differentiation check",
+        "LIES",
+        "VoI/OED",
+        "prospective intervention-class prediction",
         "When more measurement is not more evidence",
     ):
         assert required.lower() in outside_reader_text.lower(), required
@@ -230,7 +243,7 @@ def main() -> None:
         "capture earlier",
         "the four interfaces are exhaustive",
         "diagnostic-first, not quantity-first",
-        "preferred TREE Opinion v7",
+        "preferred TREE Opinion v8",
         "conditioned on earlier measurement choices and losses",
     ):
         assert required.lower() in figure_text.lower(), required
@@ -314,25 +327,30 @@ def main() -> None:
     assert checks["outside_reader_packet_written"] is True
     assert checks["tree_editorial_red_team_completed"] is True
     assert checks["internal_red_team_decision"].startswith("GO")
+    assert checks["direct_neighbour_lies_acknowledged"] is True
+    assert checks["sampling_inference_conditionality_acknowledged"] is True
+    assert checks["formal_voi_oed_ranking_prior_art_acknowledged"] is True
+    assert checks["novelty_narrowed_to_claim_specific_intervention_class_prediction"] is True
+    assert checks["outside_reader_direct_neighbour_gate_written"] is True
     assert checks["current_live_journal_contact_independently_confirmed"] is True
     assert checks["current_live_journal_contact_checked_on"] == "2026-09-12"
     assert checks["current_live_journal_contact"] == "tree@cell.com"
     assert checks["current_live_editor"] == "Andrea Stephens"
     assert checks["dispatch_time_recheck_still_required"] is True
-    assert checks["preferred_full_manuscript_version"] == "v7"
+    assert checks["preferred_full_manuscript_version"] == "v8"
     assert checks["full_manuscript_written"] is True
     assert checks["full_manuscript_validated"] is True
-    assert checks["full_manuscript_word_count_before_references"] == 4096
-    assert checks["full_manuscript_external_reference_count"] == 20
-    assert checks["full_manuscript_validation_run"] == 35065006878
-    assert checks["full_manuscript_validation_head"] == "06fd746af27a5be3e1134a8c43ae1268ca221bdc"
+    assert checks["full_manuscript_word_count_before_references"] == 4439
+    assert checks["full_manuscript_external_reference_count"] == 22
+    assert checks["full_manuscript_validation_run"] == 35971077395
+    assert checks["full_manuscript_validation_head"] == "9f6b8fe1057496068b5d5edbdfbe1bd912cfefcd"
     assert checks["full_manuscript_citation_audit_pass"] is True
     assert checks["full_manuscript_all_external_references_cited"] is True
     assert checks["full_manuscript_section_citation_coverage_pass"] is True
     assert checks["reference_metadata_audit_pass"] is True
     assert checks["reference_metadata_discrepancies_requiring_edit"] == 0
     assert checks["figure1_machine_validated"] is True
-    assert checks["figure1_validation_run"] == 35065006878
+    assert checks["figure1_validation_run"] == 35971077395
     assert readiness["authorship_state"]["working_author_list"] == ["Ruiqi Zhang"]
     assert readiness["authorship_state"]["working_corresponding_author"] == "Ruiqi Zhang"
 
@@ -343,11 +361,11 @@ def main() -> None:
         "editorial_red_team": "proposals/C2_TREE_RED_TEAM.md",
         "live_route_check": "proposals/C2_TREE_LIVE_ROUTE_CHECK_20260912.md",
         "figure1_decision_map_spec": "proposals/C2_FIGURE1_DECISION_MAP_SPEC.md",
-        "full_manuscript": "manuscript/C2_TREE_OPINION_DRAFT_V7.md",
-        "full_manuscript_status": "manuscript/C2_MANUSCRIPT_STATUS_2026-09-16.json",
+        "full_manuscript": "manuscript/C2_TREE_OPINION_DRAFT_V8.md",
+        "full_manuscript_status": "manuscript/C2_MANUSCRIPT_STATUS_2026-09-24.json",
         "manuscript_validator": "scripts/validate_c2_manuscript.py",
         "citation_audit_validator": "scripts/audit_c2_citations.py",
-        "reference_metadata_audit": "manuscript/C2_REFERENCE_METADATA_AUDIT_2026-09-16.json",
+        "reference_metadata_audit": "manuscript/C2_REFERENCE_METADATA_AUDIT_2026-09-24.json",
         "figure1_vector": "manuscript/figures/C2_FIGURE1_MEASUREMENT_TO_EVIDENCE.svg",
     }
     for key, value in expected_assets.items():
@@ -371,6 +389,10 @@ def main() -> None:
     assert reference_audit["reference_count"] == c2_status["external_reference_count"]
     assert reference_audit["status"] == "pass"
     assert reference_audit["discrepancies_requiring_manuscript_edit"] == 0
+    assert reference_audit["v8_additions_verified"] == [21, 22]
+    assert reference_audit["direct_neighbour_positioning_verified"] is True
+    assert c2_status["status"] == "preferred-full-manuscript-v8-machine-validated"
+    assert c2_status["revision_history"]["v7_to_v8"]["reference_count_to"] == 22
 
     human_ids = {row["id"] for row in readiness["human_blockers_before_send"] if row["required"]}
     assert human_ids == {"authorship", "broad_interest_read", "dispatch_time_route_recheck"}

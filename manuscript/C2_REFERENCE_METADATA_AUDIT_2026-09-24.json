@@ -1,0 +1,169 @@
+{
+  "schema": "c2-reference-metadata-audit-v2",
+  "date": "2026-09-24",
+  "manuscript": "manuscript/C2_TREE_OPINION_DRAFT_V8.md",
+  "reference_count": 22,
+  "status": "pass",
+  "discrepancies_requiring_manuscript_edit": 0,
+  "fields_checked": [
+    "title",
+    "authors",
+    "journal",
+    "year",
+    "volume_issue_or_article_number",
+    "pages_where_applicable",
+    "doi"
+  ],
+  "records": [
+    {
+      "ref": 1,
+      "doi": "10.1371/journal.pcbi.1005153",
+      "authoritative_record": "PLOS Computational Biology",
+      "status": "match"
+    },
+    {
+      "ref": 2,
+      "doi": "10.1093/bioinformatics/bts092",
+      "authoritative_record": "Oxford Academic / Bioinformatics",
+      "status": "match"
+    },
+    {
+      "ref": 3,
+      "doi": "10.1088/1361-6420/aad210",
+      "authoritative_record": "Argonne publication record / Inverse Problems DOI metadata",
+      "status": "match"
+    },
+    {
+      "ref": 4,
+      "doi": "10.1111/2041-210X.12423",
+      "authoritative_record": "Wiley / Methods in Ecology and Evolution",
+      "status": "match"
+    },
+    {
+      "ref": 5,
+      "doi": "10.1016/j.tree.2006.08.007",
+      "authoritative_record": "PubMed / USGS / Trends in Ecology & Evolution",
+      "status": "match"
+    },
+    {
+      "ref": 6,
+      "doi": "10.1016/j.tree.2009.03.005",
+      "authoritative_record": "PubMed / ScienceDirect / Trends in Ecology & Evolution",
+      "status": "match"
+    },
+    {
+      "ref": 7,
+      "doi": "10.2307/1942661",
+      "authoritative_record": "Wiley / Ecological Monographs",
+      "status": "match"
+    },
+    {
+      "ref": 8,
+      "doi": "10.1111/ele.14400",
+      "authoritative_record": "Wiley / Ecology Letters",
+      "status": "match",
+      "note": "published correction DOI 10.1111/ele.70124 retained in manuscript"
+    },
+    {
+      "ref": 9,
+      "doi": "10.1890/0012-9658(2002)083[2248:ESORWD]2.0.CO;2",
+      "authoritative_record": "USGS / Ecology",
+      "status": "match"
+    },
+    {
+      "ref": 10,
+      "doi": "10.1111/geb.12138",
+      "authoritative_record": "Wiley / Global Ecology and Biogeography",
+      "status": "match"
+    },
+    {
+      "ref": 11,
+      "doi": "10.1111/geb.13070",
+      "authoritative_record": "Wiley / Global Ecology and Biogeography",
+      "status": "match"
+    },
+    {
+      "ref": 12,
+      "doi": "10.1111/2041-210X.14485",
+      "authoritative_record": "Wiley / Methods in Ecology and Evolution",
+      "status": "match",
+      "note": "2026 volume/issue citation and first-online date 26 December 2024 are both retained"
+    },
+    {
+      "ref": 13,
+      "doi": "10.1111/2041-210X.12849",
+      "authoritative_record": "Wiley / Methods in Ecology and Evolution",
+      "status": "match"
+    },
+    {
+      "ref": 14,
+      "doi": "10.1002/lom3.10659",
+      "authoritative_record": "Wiley / Limnology and Oceanography: Methods",
+      "status": "match"
+    },
+    {
+      "ref": 15,
+      "doi": "10.1126/science.ns-15.366.92",
+      "authoritative_record": "PubMed / Science",
+      "status": "match"
+    },
+    {
+      "ref": 16,
+      "doi": "10.1126/science.146.3642.347",
+      "authoritative_record": "PubMed / Science",
+      "status": "match"
+    },
+    {
+      "ref": 17,
+      "doi": "10.1111/j.2517-6161.1996.tb02114.x",
+      "authoritative_record": "Oxford Academic / Journal of the Royal Statistical Society Series B",
+      "status": "match"
+    },
+    {
+      "ref": 18,
+      "doi": "10.1002/bimj.201400239",
+      "authoritative_record": "Wiley / PubMed / Biometrical Journal",
+      "status": "match"
+    },
+    {
+      "ref": 19,
+      "doi": "10.1016/j.tree.2023.05.010",
+      "authoritative_record": "ScienceDirect / PubMed / Trends in Ecology & Evolution",
+      "status": "match"
+    },
+    {
+      "ref": 20,
+      "doi": "10.1016/j.tree.2011.11.016",
+      "authoritative_record": "ScienceDirect / PubMed / Trends in Ecology & Evolution",
+      "status": "match"
+    },
+    {
+      "ref": 21,
+      "doi": "10.1016/j.tree.2023.10.009",
+      "authoritative_record": "Cell Press / Trends in Ecology & Evolution / institutional publication records",
+      "status": "match"
+    },
+    {
+      "ref": 22,
+      "doi": "10.1111/2041-210X.13279",
+      "authoritative_record": "Wiley / Methods in Ecology and Evolution / USGS publication record",
+      "status": "match"
+    }
+  ],
+  "v7_additions_verified": [
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "prior_v6_audit": "manuscript/C2_REFERENCE_METADATA_AUDIT_2026-09-15.json",
+  "conclusion": "All 20 v7 references match authoritative publisher, DOI, PubMed, USGS, or institutional publication records closely enough that no manuscript citation edit is required.",
+  "dispatch_rule": "Repeat only a lightweight live metadata spot-check at invited full-manuscript submission; do not reopen the scientific argument for bibliography-only changes.",
+  "v8_additions_verified": [
+    21,
+    22
+  ],
+  "direct_neighbour_positioning_verified": true
+}

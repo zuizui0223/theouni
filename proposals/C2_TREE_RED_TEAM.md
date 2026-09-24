@@ -1,6 +1,6 @@
 # C2 TREE red-team — likely editorial rejection reasons and pre-emptive fixes
 
-Status: **internal editorial-risk audit aligned with manuscript v7**.
+Status: **internal editorial-risk audit aligned with manuscript v8 direct-neighbour positioning**.
 
 This audit asks how the proposal could be rejected even if every source result is correct.
 
@@ -12,19 +12,15 @@ This audit asks how the proposal could be rejected even if every source result i
 
 **Required wording:** preserve the sentence that a conditional local metric is not automatically a universal proxy for a downstream scientific responsibility.
 
-## R2 — “This is a collage of known ideas from unrelated literatures.”
+## R2 — “TREE already published LIES of omission; this is another observation-process taxonomy.”
 
-**Residual risk:** medium-high; still the main editorial risk, but v7 now has two explicit defences.
+**Residual risk:** high before v8; now the main editorial risk and explicitly confronted.
 
-### Defence A — shared conditional structure
+**V8 concession:** Chadwick et al. (2024) is the closest direct neighbour and must be cited early. LIES already provides a cross-field ecological typology (Latency, Identifiability, Effort, Scale), seeks methodological commonalities, links problem classes to inferential solutions, and treats interactions among observation problems. C2 cannot claim novelty for cross-field synthesis, four-part organization or interaction language.
 
-The paper no longer relies only on a four-item list. It argues that the four literatures share one architecture: a local metric is evaluated after some conditioning set has already been imposed, and evidential adequacy depends on whether that conditioning set preserves/creates the distinction required by the claim.
+**V8 defence:** C2 changes the publication-level question from **“what observation-process problem do we have and how can inference account for it?”** to **“for this declared claim, what class of measurement must change next?”** The four interfaces are an intervention screen, not a replacement taxonomy. The empirical commitment is prospective: claim-specific bottleneck diagnosis should predict whether equal effort is better spent on earlier capture, a new separating axis, target-relevant measurement or a new failure domain.
 
-### Defence B — interface interactions
-
-V7 gives interactions in the main text: a second sensor can increase failure diversity while changing detectability/calibration; primer diversity can reduce amplification blind spots while reducing depth; target-specific measurement can improve relevance while sacrificing broad mechanism information; earlier capture can improve preservation while raising annotation/storage burden.
-
-**Editorial test:** if an outside reader still summarizes the paper as “identifiability + VOI + pseudoreplication + detection bias,” R2 remains unresolved. They should instead be able to state the conditional-locality thesis and the prospective intervention-ranking test.
+**Editorial test:** an outside reader should be able to explain the difference from LIES in one sentence and recover the prospective intervention-class prediction. If they instead describe C2 as a new taxonomy of observation bias, R2 is unresolved.
 
 ## R3 — “Separation is just Chamberlin/Platt strong inference.”
 
@@ -40,11 +36,11 @@ V7 gives interactions in the main text: a second sensor can increase failure div
 
 **Required Figure 1 logic:** biological opportunity → retained record → distinguishable alternatives → declared target; failure diversity is cross-cutting.
 
-## R5 — “The proposal ignores big-data ecology / prior TREE Opinions.”
+## R5 — “The proposal ignores the closest ecology/TREE design literature.”
 
-**Residual risk:** low after v7, but keep explicit.
+**Residual risk:** low only if v8 citations stay explicit.
 
-**V7 fix:** prior-art map and manuscript now acknowledge Michener & Jones (2012) on data-intensive ecology and McCleery et al. (2023) on integrating experiments and big data. C2 is not anti-big-data; its novelty claim is the conditioning-set diagnosis and prospective intervention ranking.
+**V8 fix:** the manuscript now acknowledges not only big-data ecology (Michener & Jones 2012; McCleery et al. 2023) but also Williams & Brown (2019) on sampling-design/inference conditionality and Chadwick et al. (2024) LIES as the direct TREE neighbour. C2 cannot claim either observation-process synthesis or design conditionality as new.
 
 ## R6 — “The relevance example is a strawman.”
 
@@ -64,11 +60,11 @@ V7 gives interactions in the main text: a second sensor can increase failure div
 
 **Residual risk:** low-medium after v7.
 
-**V7 fix:** interface-specific consequences are explicitly demoted as near-definitional. The paper now has one core falsifiable prediction:
+**V8 fix:** interface-specific consequences are explicitly demoted as near-definitional. The paper also concedes that VoI/OED already rank candidate measurements once a target and model are specified. The remaining empirical claim is intervention-class prediction from the C2 diagnosis:
 
 > Given a predeclared claim and equal-cost measurement expansions, diagnosis of the limiting interface before collecting new data should predict which intervention yields the largest gain in claim resolution.
 
-Concrete tests are specified: known-truth simulations, monitoring systems with reference channels/audit samples, and randomized equal-effort prospective comparisons. The doctrine is weakened if diagnosis fails to predict intervention ranking.
+Concrete tests are specified: known-truth simulations, monitoring systems with reference channels/audit samples, and randomized equal-effort prospective comparisons. The doctrine is weakened if diagnosis fails to predict intervention ranking. It is not claimed to outperform a correctly specified full VoI/OED model; the test is whether it identifies missing candidate classes or useful measurement changes before such a full model is available.
 
 ## R9 — “The interface ordering is inconsistent.”
 
@@ -116,18 +112,19 @@ V7 labels semantic drift as a **nearby but distinct** calibration/transport prob
 
 **Rule:** source ownership is handled by citation, not automatic coauthorship. Additional authors require substantive C2-level synthesis/drafting/accountability contributions.
 
-# Go / no-go after v7 red-team
+# Go / no-go after v8 direct-neighbour red-team
 
 C2 is **GO for outside-reader testing** only if all are true:
 
-- an outside reader can state the conditional-locality thesis without seeing repository context;
+- an outside reader can distinguish C2 from LIES as a prospective claim-specific measurement-choice doctrine rather than another observation-process taxonomy;
+- they can state the intervention-class prediction without repository context;
+- they understand that VoI/OED already rank candidate measurements and that C2 does not claim superiority to a correctly specified full design model;
 - they can explain at least one cross-interface trade-off;
-- Chamberlin/Platt and ecological parameter-redundancy prior art are acknowledged rather than claimed as new;
-- the main prediction is prospective intervention ranking, not a definitional restatement;
+- Chamberlin/Platt, parameter-redundancy, sampling-design/inference and LIES prior art are acknowledged rather than claimed as new;
 - Box 1 reads as decoupled design logic rather than trait-specific mechanism assertion;
-- v7 interface order matches Figure 1;
+- v8 interface order matches Figure 1;
 - operating-semantics drift remains distinct from preservation failure;
 - Boundary/C1 theorem ownership remains outside C2;
 - the live TREE contact route is confirmed immediately before sending.
 
-Current internal assessment: **GO, with R2 (cross-literature synthesis originality) as the remaining substantive editorial risk to test with the outside reader.**
+Current internal assessment: **GO for outside-reader testing, but not yet editorially de-risked. R2 is now a concrete direct-neighbour test: can a broad ecologist state what C2 adds after LIES and VoI/OED?**

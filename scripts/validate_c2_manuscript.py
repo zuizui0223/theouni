@@ -7,7 +7,7 @@ from pathlib import Path
 from audit_c2_citations import main as audit_citations
 
 ROOT = Path(__file__).resolve().parents[1]
-MANUSCRIPT = ROOT / "manuscript" / "C2_TREE_OPINION_DRAFT_V7.md"
+MANUSCRIPT = ROOT / "manuscript" / "C2_TREE_OPINION_DRAFT_V8.md"
 FIGURE1 = ROOT / "manuscript" / "figures" / "C2_FIGURE1_MEASUREMENT_TO_EVIDENCE.svg"
 FIGURE1_SPEC = ROOT / "proposals" / "C2_FIGURE1_DECISION_MAP_SPEC.md"
 
@@ -60,13 +60,15 @@ def main() -> None:
         "we use **evidential progress** in this operational sense",
         "increased ability to distinguish among live alternatives",
         "shared conditional structure",
-        "precision is conditional on the observational axis already chosen",
-        "conditional local metric as a universal proxy",
-        "what those metrics are conditional on",
+        "conditioning-set dependence",
+        "not another typology of observation problems",
+        "distinction required by a declared claim",
+        "claim-specific mapping from bottleneck to intervention class",
     ):
         assert phrase in lower, phrase
 
     # Historical and ecological identifiability prior art is explicit.
+    # Use Markdown-normalized text so emphasis does not create false negatives.
     for phrase in (
         "chamberlin's multiple working hypotheses",
         "platt's strong inference",
@@ -74,8 +76,11 @@ def main() -> None:
         "capture–recapture",
         "state-space models",
         "big observational data and experiments",
+        "lies framework",
+        "sampling design to statistical inference",
+        "prospective intervention screen",
     ):
-        assert phrase in lower, phrase
+        assert phrase in semantic_lower, phrase
 
     # Decision-theoretic non-harm ceiling remains explicit.
     for phrase in (
@@ -133,7 +138,10 @@ def main() -> None:
         "simulations with known truth",
         "higher-quality reference channel or audit sample",
         "randomize equal effort",
-        "it is weakened if the diagnoses do not predict",
+        "the framework is weakened if the diagnoses do not predict",
+        "ranking candidate measurements is not itself new",
+        "not expected to outperform it",
+        "identifies the missing candidate class",
     ):
         assert phrase in lower, phrase
 
@@ -172,7 +180,7 @@ def main() -> None:
 
     references = text.split("## References", 1)[1]
     numbered_refs = re.findall(r"(?m)^\d+\. ", references)
-    assert len(numbered_refs) == 20, len(numbered_refs)
+    assert len(numbered_refs) == 22, len(numbered_refs)
     for doi in (
         "10.1371/journal.pcbi.1005153",
         "10.1093/bioinformatics/bts092",
@@ -194,10 +202,12 @@ def main() -> None:
         "10.1002/bimj.201400239",
         "10.1016/j.tree.2023.05.010",
         "10.1016/j.tree.2011.11.016",
+        "10.1016/j.tree.2023.10.009",
+        "10.1111/2041-210X.13279",
     ):
         assert doi in text, doi
 
-    # Figure contract remains compatible with the v7 ordering and cross-cutting diversity layer.
+    # Figure contract remains compatible with the v8 ordering and cross-cutting diversity layer.
     svg = FIGURE1.read_text(encoding="utf-8").lower()
     for label in (
         "biological opportunity",
@@ -226,8 +236,8 @@ def main() -> None:
     audit_citations()
 
     print(
-        f"C2_TREE_MANUSCRIPT_V7 PASS words_before_references={word_count} "
-        f"refs={len(numbered_refs)} synthesis=conditionality interactions=explicit citations=validated"
+        f"C2_TREE_MANUSCRIPT_V8 PASS words_before_references={word_count} "
+        f"refs={len(numbered_refs)} synthesis=prospective_claim_specific_design interactions=explicit citations=validated"
     )
 
 

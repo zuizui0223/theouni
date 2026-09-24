@@ -6,8 +6,8 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-MANUSCRIPT = ROOT / "manuscript" / "C2_TREE_OPINION_DRAFT_V7.md"
-OUT = ROOT / "manuscript" / "C2_CITATION_AUDIT_2026-09-15.json"
+MANUSCRIPT = ROOT / "manuscript" / "C2_TREE_OPINION_DRAFT_V8.md"
+OUT = ROOT / "manuscript" / "C2_CITATION_AUDIT_2026-09-24.json"
 
 CITATION_RE = re.compile(r"\[([0-9,–\- ]+)\]")
 REF_RE = re.compile(r"(?m)^(\d+)\. ")
@@ -47,7 +47,7 @@ def main() -> None:
     refs = {int(x) for x in REF_RE.findall(refs_text)}
     cited = cited_numbers(body)
 
-    expected = set(range(1, 21))
+    expected = set(range(1, 23))
     assert refs == expected, {"references": sorted(refs)}
     assert cited == expected, {"cited": sorted(cited), "missing": sorted(expected - cited), "invalid": sorted(cited - expected)}
 
@@ -119,7 +119,7 @@ def main() -> None:
         "status": "pass",
     }
     OUT.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print("C2_CITATION_AUDIT PASS refs=20 all_cited=true section_coverage=true manuscript=v7")
+    print("C2_CITATION_AUDIT PASS refs=22 all_cited=true section_coverage=true manuscript=v8")
 
 
 if __name__ == "__main__":

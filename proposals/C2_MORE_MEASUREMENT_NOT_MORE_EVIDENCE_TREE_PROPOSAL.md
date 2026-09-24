@@ -93,9 +93,11 @@ Each failure is paired with its question and remedy, and the figure explicitly a
 
 ## What is new in the synthesis
 
-The mathematical and methodological ingredients — structural identification, goal-oriented design, value of information, replication, imperfect detection, calibration and observation-pipeline bias — have substantial literatures. The contribution is therefore not a priority claim over those literatures. The proposed synthesis is a cross-domain ecological framework for **diagnostic distinction design**: it asks which distinction is missing, where it is lost, whether it matters to the target and whether repeated support survives independent failure opportunities.
+The mathematical and methodological ingredients — structural identification, goal-oriented design, value of information, replication, imperfect detection, calibration and observation-pipeline bias — have substantial literatures. Cross-field synthesis of ecological observation processes is also not new: Chadwick et al. (2024) already provide the TREE **LIES** framework, and Williams & Brown (2019) explicitly connect sampling design to statistical inference. C2 therefore does **not** claim novelty for a four-part observation taxonomy, for design conditionality, or for ranking candidate measurements in general.
 
-This reframes monitoring and experiment design away from raw measurement abundance and toward responsibility-specific observation contracts.
+The proposed contribution is narrower and prospective: **claim-specific diagnostic distinction design**. For a predeclared claim, identify where the distinction required by that claim is blocked, map that diagnosis to a measurement intervention class, and test whether that diagnosis predicts the best equal-cost expansion. The four classes are earlier capture, a new separating axis, target-relevant information and a new failure domain.
+
+This reframes monitoring and experiment design away from raw measurement abundance and toward responsibility-specific observation contracts. A correctly specified full value-of-information or optimal-design model remains the stronger benchmark where available; C2 should add value by identifying a missing candidate class or a hidden upstream/common-mode bottleneck before such a full model is available.
 
 ## Why this perspective is timely and appropriately positioned
 

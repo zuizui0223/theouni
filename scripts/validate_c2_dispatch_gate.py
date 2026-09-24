@@ -56,8 +56,10 @@ def main() -> None:
     request = REQUEST.read_text(encoding="utf-8")
     for required in (
         "first concrete reason to reject",
-        "local quantities conditioned on earlier measurement choices and losses",
-        "prospective intervention-ranking prediction",
+        "LIES",
+        "value-of-information/optimal-design",
+        "prospective intervention-class prediction",
+        "correctly specified full VoI/OED model",
         "C2_TREE_SEND_CANDIDATE.md",
         "C2_TREE_EDITOR_PITCH.md",
         "C2_OUTSIDE_READER_PACKET.md",
@@ -71,22 +73,28 @@ def main() -> None:
     assert "9–10" in packet
     assert "7–8" in packet
     assert "≤6" in packet
-    assert "Conditional-locality thesis check blocks send" in packet
-    assert "Prospective-prediction check blocks send" in packet
+    assert "Direct-neighbour differentiation check blocks send" in packet
+    assert "Prospective intervention-class check blocks send" in packet
     assert "Figure-logic check blocks send" in packet
+    assert "increment beyond LIES and VoI/OED" in packet
     assert "When more measurement is not more evidence" in packet
     assert "four failures of monotonic reasoning" not in packet.lower()
 
     presub = PRESUB.read_text(encoding="utf-8")
     assert "Opinion proposal — When more measurement is not more evidence" in presub
-    assert "local quantities conditioned on earlier choices and losses" in presub.lower()
+    assert "LIES" in presub
+    assert "do not propose another observation taxonomy" in presub
     assert "equal-cost measurement expansions" in presub.lower()
+    assert "correctly specified full VoI/OED model" in presub
     assert "validated full Opinion draft as a downstream asset" in presub
     assert "four failures of monotonic reasoning" not in presub.lower()
 
     send = SEND.read_text(encoding="utf-8")
     assert "content-ready, not authorized to send" in send
     assert "When more measurement is not more evidence" in send
+    assert "not another observation-process taxonomy" in send
+    assert "intervention class" in send
+    assert "correctly specified full value-of-information or optimal-design model" in send
     assert "Final authorship approved" in send
     assert "One ecologist outside the immediate theory/methods niche has read the pitch" in send
     assert "Live TREE contact route checked immediately before dispatch" in send

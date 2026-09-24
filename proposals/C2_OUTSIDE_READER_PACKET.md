@@ -1,58 +1,58 @@
 # Outside-reader packet — C2 TREE Opinion pitch
 
-Purpose: obtain the one broad-interest ecological read recommended before sending the presubmission proposal, with special focus on the remaining editorial risk: whether the cross-literature synthesis is recovered as one conditional-locality doctrine rather than a collage of familiar warnings.
+Purpose: obtain one broad-interest ecological read before sending the presubmission proposal. The decisive editorial risk is now concrete: **after acknowledging Chadwick et al.'s LIES observation-process framework and formal value-of-information/optimal-design work, does C2 still add a clear prospective measurement-choice claim?**
 
 Please read only these two files first:
 
 1. `C2_TREE_SEND_CANDIDATE.md`
 2. `C2_TREE_EDITOR_PITCH.md`
 
-Do **not** read the source repositories before answering the questions below; the point is to test whether the argument works for an ecologist who is not already inside the theory/methods programme.
+Do **not** read the source repositories before answering. The point is to test whether the argument works for an ecologist who is not already inside the theory/methods programme.
 
 ## Five questions for the reader
 
 1. **After one paragraph, what do you think the paper is claiming?**
-   - Desired answer: familiar performance metrics are local quantities conditioned on earlier measurement choices and losses, so they become adequate evidence proxies only when those conditions preserve or create the distinction required by the declared claim.
+   - Desired answer: for a predeclared claim, diagnose where the distinction required by that claim is blocked and use that diagnosis to choose the class of measurement change needed next.
 
-2. **Which interface feels least ecological or most abstract?**
-   - timely preservation / separation / relevance / failure diversity
+2. **How is this different from an observation-process framework such as LIES?**
+   - Desired answer: LIES classifies observation-process problems and inferential solutions; C2 uses a claim-specific distinction bottleneck prospectively to choose among measurement intervention classes.
 
-3. **Can you name one ecological study or monitoring problem from your own area where this framework changes what you would measure next?**
+3. **Can you name one ecological study or monitoring problem from your own area where this changes what you would measure next?**
    - If not, the pitch is still too methods-internal.
 
 4. **Does either worked example feel like unsupported empirical evidence rather than a design illustration?**
    - *Campanula* and metabarcoding must remain clearly labelled as worked measurement-design examples.
 
 5. **Would you keep reading if this appeared as a TREE Opinion? Why or why not?**
-   - Ask for the first concrete reason to reject, not general encouragement.
+   - Give the first concrete reason to reject, not general encouragement.
 
 ## Three forced editorial checks
 
-These do not add points; they decide whether local wording or structure must change before send.
+These do not add points; they decide whether wording or structure must change before send.
 
-### Conditional-locality thesis check
+### Direct-neighbour differentiation check
 
-Without using repository terminology, can you explain why a local improvement such as higher precision, more information, more replicates or better classifier accuracy is not automatically a gain in claim resolution?
+Can you explain, without repository terminology, what C2 adds after LIES and after formal VoI/OED methods that already rank candidate observations?
 
-- [ ] yes — I can state the shared conditioning-set logic
-- [ ] no — I mainly recover “more data are not always better”
+- [ ] yes — I recover a prospective, claim-specific bottleneck → intervention-class rule
+- [ ] no — I mainly recover another observation-process taxonomy, “more data are not always better,” or a looser version of VoI/OED
 
-A “no” blocks send. **Conditional-locality thesis check blocks send** until the common structure is visible without insider context.
+A “no” blocks send. **Direct-neighbour differentiation check blocks send** until the added claim is visible without insider context.
 
-### Prospective-prediction check
+### Prospective intervention-class check
 
-Can you recover the paper's prospective intervention-ranking prediction?
+Can you recover the paper's empirical prediction?
 
-> Given a predeclared claim and several equal-cost measurement expansions, diagnosing the limiting interface before collecting new data should predict which intervention produces the largest gain in claim resolution.
+> Given a predeclared claim and several equal-cost measurement expansions, diagnosis of the limiting interface before collection should predict whether the best intervention is earlier capture, a new separating axis, target-relevant information or a new failure domain.
 
-- [ ] yes — this reads as a testable prediction
+- [ ] yes — this reads as a testable intervention-class prediction
 - [ ] no — the paper still reads mainly as a taxonomy or checklist
 
-A “no” blocks send. **Prospective-prediction check blocks send** until the reader can state what would count against the doctrine.
+A “no” blocks send. **Prospective intervention-class check blocks send** until the reader can state what would count against the doctrine.
 
 ### Figure-logic check
 
-Without reading source theory, can you infer the intended Figure 1 logic from the pitch?
+Without reading source theory, can you infer the intended Figure 1 logic?
 
 > biological opportunity → retained record → distinguishable alternatives → declared target, with failure diversity cross-cutting the observation paths
 
@@ -78,24 +78,24 @@ The title check is advisory; it must not reopen the science.
 Score each 0–2:
 
 - broad ecological relevance is visible without source-repository knowledge;
-- novelty beyond “more data are not always better” is visible;
-- the shared conditional-locality structure is intelligible;
-- the interfaces interact yet still imply different remedies;
-- the prospective intervention-ranking test is understandable and ecologically usable.
+- the difference from LIES is intelligible;
+- the boundary with correctly specified full VoI/OED is credible rather than competitive overclaim;
+- the four interfaces imply distinct intervention classes despite interactions/trade-offs;
+- the prospective intervention-class prediction is understandable and ecologically usable.
 
 Maximum = 10.
 
 ### Release threshold
 
 - **9–10:** no structural rewrite if all three forced checks pass; only local edits.
-- **7–8:** revise the weakest interface/example or synthesis transition before sending.
-- **≤6:** do not send; the proposal is still too internal, too generic or too collage-like.
+- **7–8:** revise the weakest distinction from LIES/VoI-OED, interface/example or synthesis transition before sending.
+- **≤6:** do not send; the proposal is still too internal, too generic or too close to existing frameworks.
 
-Independent of the score, a fail on the conditional-locality, prospective-prediction or Figure-logic check blocks send. A title preference alone does not reopen the science.
+Independent of the score, a fail on the direct-neighbour differentiation, prospective intervention-class or Figure-logic check blocks send. A title preference alone does not reopen the science.
 
 ## What not to ask the reader to judge
 
-The outside reader is not being asked to verify theorem proofs, source numerics, repository provenance or code. Those are already controlled by source ledgers and CI. This read is specifically about TREE-level breadth, intelligibility, conceptual novelty and whether the prospective prediction is recoverable.
+The outside reader is not being asked to verify theorem proofs, source numerics, repository provenance or code. Those are controlled by source ledgers and CI. This read is specifically about TREE-level breadth, intelligibility and whether the **increment beyond LIES and VoI/OED** is recoverable.
 
 ## Response record
 
@@ -103,8 +103,8 @@ Reader: [ ]
 Field/subfield: [ ]  
 Date: [ ]  
 Score: [ ] / 10  
-Conditional-locality check: [pass / revise]  
-Prospective-prediction check: [pass / revise]  
+Direct-neighbour differentiation: [pass / revise]  
+Prospective intervention-class prediction: [pass / revise]  
 Figure-logic check: [pass / revise]  
 Title preference: [preferred / fallback subtitle]  
 First rejection reason: [ ]  
