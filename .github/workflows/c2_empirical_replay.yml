@@ -1,0 +1,56 @@
+name: C2 Empirical Intervention Replay
+on:
+  push:
+    branches:
+      - main
+      - 'research/c2-*'
+    paths:
+      - research/run_c2_empirical_intervention_replay.mjs
+      - .github/workflows/c2_empirical_replay.yml
+  pull_request:
+    paths:
+      - research/run_c2_empirical_intervention_replay.mjs
+      - .github/workflows/c2_empirical_replay.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Syntax check
+        run: node --check research/run_c2_empirical_intervention_replay.mjs
+      - name: Recompute pinned real-data replay
+        run: node research/run_c2_empirical_intervention_replay.mjs results/C2_EMPIRICAL_INTERVENTION_REPLAY_2026-10-19.json
+      - name: Check interpretation boundaries and fixed numerical anchors
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from "node:fs";
+          import assert from "node:assert/strict";
+          const x=JSON.parse(fs.readFileSync("results/C2_EMPIRICAL_INTERVENTION_REPLAY_2026-10-19.json","utf8"));
+          assert.equal(x.scientific_status.startsWith("RETROSPECTIVE"), true);
+          assert.equal(x.otter.matching.matched_triplets,220);
+          const check=(got,want,eps=0.00002)=>assert.ok(Math.abs(got-want)<eps,got+" != "+want);
+          check(x.fox.equal_position_mean[0].mae_more_camera,0.1260725463);
+          check(x.fox.equal_position_mean[0].mae_reference,0.0776882119);
+          check(x.fox.equal_position_mean[2].mae_reference,0.1519996711);
+          check(x.otter.equal_camera_pass_cost.equal_position_mean.mae_AB20,0.0869735259);
+          check(x.otter.pilot_diagnosis.equal_position_mean.mae_biasOnly,0.1189365855);
+          check(x.otter.pilot_diagnosis.equal_position_mean.mae_AB10,0.1174178064);
+          assert.ok(x.otter.pilot_diagnosis.equal_position_mean.mae_biasOnly > x.otter.pilot_diagnosis.equal_position_mean.mae_AB10,
+            "Pilot rule must not be misreported as beating best fixed comparator");
+          console.log("C2_ANCHOR_CHECK_PASS");
+          NODE
+      - name: Upload source-verified empirical receipt
+        uses: actions/upload-artifact@v4
+        with:
+          name: c2-empirical-replay-result
+          path: results/C2_EMPIRICAL_INTERVENTION_REPLAY_2026-10-19.json
+          retention-days: 30

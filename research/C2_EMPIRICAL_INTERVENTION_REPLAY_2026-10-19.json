@@ -1,0 +1,75 @@
+{
+  "schema": "c2-empirical-intervention-replay-verified-v1",
+  "date": "2026-10-19",
+  "role": "C2 retrospective exploratory intervention-comparison receipt, not prospective validation",
+  "sources": {
+    "repository": "melaniefindlay/CT-Detection",
+    "commit": "abc72f535bb59ebed202fb7acca852fc1647e97a",
+    "fox_csv_blob": "d2dc9852ca1f2a1380b991acba425d16e12327d5",
+    "otter_csv_blob": "1f2fef008470ad1263d76beeb5be2b7006ff85aa",
+    "fox_passes": 881,
+    "otter_pass_camera_rows": 706,
+    "otter_matched_triplets": 220,
+    "otter_unmatched_rows": 46
+  },
+  "reproducibility": {
+    "script": "research/run_c2_empirical_intervention_replay.mjs",
+    "workflow": ".github/workflows/c2_empirical_replay.yml",
+    "ci_run_id": 39205626121,
+    "ci_url": "https://github.com/zuizui0223/theouni/actions/runs/39205626121",
+    "ci_head_sha": "e52a78962c7ff5f8d9eb5aa9e903979295f5c6c7",
+    "ci_conclusion": "success",
+    "audit_anchor": "C2_ANCHOR_CHECK_PASS",
+    "artifact_id": 12165029886,
+    "artifact_name": "c2-empirical-replay-result"
+  },
+  "fox_badger": {
+    "target": "badger proportion of true animal passes",
+    "design": "4000 half-split deterministic replays per CT position; 20 baseline camera triggers + 20 added triggers vs reference true passes (20/cost scenario)",
+    "costs_assumed_not_observed": [
+      1,
+      2,
+      3
+    ],
+    "mean_absolute_error": {
+      "baseline_20_camera": 0.1397438816495595,
+      "more_camera_40": 0.12607254629229964,
+      "reference_20_if_cost_1": 0.07768821190846015,
+      "reference_10_if_cost_2": 0.11572111291822444,
+      "reference_6_if_cost_3": 0.1519996710726397
+    },
+    "reference_position_wins_by_cost": {
+      "1": 4,
+      "2": 3,
+      "3": 0
+    }
+  },
+  "otter": {
+    "target": "wet fraction of true otter passes",
+    "match_rule": "consecutive A/BS/BV camera triplets with identical event metadata; no externally verified unique pass ID",
+    "equal_camera_pass_40": {
+      "mae_A_40_distinct_passes": 0.13936158862594222,
+      "mae_A_BS_20_distinct_passes": 0.0869735259070104,
+      "mae_A_BV_20_distinct_passes": 0.09413189372262841,
+      "A_BS_position_wins": 3,
+      "A_BV_position_wins": 3
+    },
+    "pilot_half_to_test_half": {
+      "mae_always_A20": 0.14552335946833186,
+      "mae_always_AB10": 0.11741780637254903,
+      "mae_always_AV10": 0.1220575383208837,
+      "mae_bias_only_diagnostic": 0.11893658549282377,
+      "mae_cost_aware_diagnostic": 0.1245522861810246
+    }
+  },
+  "principal_result": "On these externally collected real datasets, measurement-intervention class matters for ecological composition error, with cost- and context-dependent reversals.",
+  "principal_negative_result": "The tested pilot diagnostic rules did not outperform the strongest always-AB10 fixed design; the unique prospective C2 prediction is not empirically confirmed.",
+  "claim_limits": [
+    "Retrospective reuse after data and REC results were inspected, not protected validation",
+    "Source-owner empirical findings remain REC-owned",
+    "No measured money or deployment costs",
+    "Repeated passes and positions not independent biological replicates",
+    "Pilot diagnosis presumes reference truth available",
+    "Only some C2 interfaces examined"
+  ]
+}
