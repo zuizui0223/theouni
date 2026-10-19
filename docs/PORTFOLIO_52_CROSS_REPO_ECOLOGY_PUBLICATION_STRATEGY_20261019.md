@@ -1,5 +1,7 @@
 # 52研究・開発リポジトリ横断監査 — 生態学的主張と統合投稿戦略
 
+> **最新科学状況への更新（2026-10-19）:** [コミットと結果に基づく52リポ横断V2](../research/PORTFOLIO_52_UNIVERSALITY_COMMIT_EVIDENCE_V2_20261019.md) を優先。V1の「FCP 447,500枚未測定」「TURNOVERの全時間軸HOLD」などは古い評価であり、V2のFCP実測447,500枚／TURNOVER時間記憶201系の解析完了で上書きされる。V1は初回監査の履歴として維持。
+
 - 監査日：2026-10-19 JST
 - 対象：GitHub zuizui0223の53リポからホームページzuizui0223.github.ioのみを除く52リポ（全件のmain READMEをGitHub接続で読取）。
 - 追加照合：island H1–H4 evidence map、FCP実測/未実測台帳、MOIS季節写真分解、EGWEE層差分析、izu-core仮説採否、aza3高次LEGO計画、azami v3結果などの一次原稿・証拠境界文書。
