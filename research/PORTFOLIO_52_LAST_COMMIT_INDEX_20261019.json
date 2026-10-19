@@ -1,0 +1,373 @@
+{
+  "as_of": "2026-10-19 JST",
+  "owner": "zuizui0223",
+  "scope": "52 research/dev repositories; excluded zuizui0223.github.io",
+  "method": "GitHub search_commits top three by committer-date, latest commit fetch files; table records 12-character commit SHA prefix, not a full SHA; snapshot before writing this followup",
+  "full_git_sha_unavailable_for_archived_table": true,
+  "repository_commit_snapshots": [
+    {
+      "repo": "hotarubukuro",
+      "sha_prefix": "1f40a9d153a5",
+      "commit_date_utc_approx": "2026-09-06",
+      "latest_change": "Zenodo canonical raw source and reconstruction",
+      "commit_url": "https://github.com/zuizui0223/hotarubukuro/commit/1f40a9d153a5"
+    },
+    {
+      "repo": "azami",
+      "sha_prefix": "b463dbc938e4",
+      "commit_date_utc_approx": "2026-09-28",
+      "latest_change": "Zenodo publish bucket integrity",
+      "commit_url": "https://github.com/zuizui0223/azami/commit/b463dbc938e4"
+    },
+    {
+      "repo": "bita",
+      "sha_prefix": "98c0a41d3334",
+      "commit_date_utc_approx": "2026-10-07",
+      "latest_change": "Frozen route rate test 7 of 33",
+      "commit_url": "https://github.com/zuizui0223/bita/commit/98c0a41d3334"
+    },
+    {
+      "repo": "island",
+      "sha_prefix": "2a1fd0591bf3",
+      "commit_date_utc_approx": "2026-10-14",
+      "latest_change": "H1-H4 corrected submission evidence map",
+      "commit_url": "https://github.com/zuizui0223/island/commit/2a1fd0591bf3"
+    },
+    {
+      "repo": "mrod",
+      "sha_prefix": "09f30d584b8b",
+      "commit_date_utc_approx": "2026-10-19",
+      "latest_change": "Conclusion robustness requires identified-set evidence",
+      "commit_url": "https://github.com/zuizui0223/mrod/commit/09f30d584b8b"
+    },
+    {
+      "repo": "pollipi",
+      "sha_prefix": "d32d96a9aecb",
+      "commit_date_utc_approx": "2026-09-28",
+      "latest_change": "Minimum independent field runs gate",
+      "commit_url": "https://github.com/zuizui0223/pollipi/commit/d32d96a9aecb"
+    },
+    {
+      "repo": "insepi",
+      "sha_prefix": "23ea5727b713",
+      "commit_date_utc_approx": "2026-09-07",
+      "latest_change": "V13 pre-field randomization hash",
+      "commit_url": "https://github.com/zuizui0223/insepi/commit/23ea5727b713"
+    },
+    {
+      "repo": "acsp",
+      "sha_prefix": "9f95fc381415",
+      "commit_date_utc_approx": "2026-09-29",
+      "latest_change": "E8 taxon contrast unidentifiable stop",
+      "commit_url": "https://github.com/zuizui0223/acsp/commit/9f95fc381415"
+    },
+    {
+      "repo": "egc",
+      "sha_prefix": "50717ce24907",
+      "commit_date_utc_approx": "2026-09-11",
+      "latest_change": "Route theory into EGWE flagship",
+      "commit_url": "https://github.com/zuizui0223/egc/commit/50717ce24907"
+    },
+    {
+      "repo": "ccoc",
+      "sha_prefix": "869cf79cbe31",
+      "commit_date_utc_approx": "2026-09-08",
+      "latest_change": "Temporal cut future grammar definition",
+      "commit_url": "https://github.com/zuizui0223/ccoc/commit/869cf79cbe31"
+    },
+    {
+      "repo": "izu-core",
+      "sha_prefix": "e0992141c860",
+      "commit_date_utc_approx": "2026-10-19",
+      "latest_change": "Readaptation draft archive production access",
+      "commit_url": "https://github.com/zuizui0223/izu-core/commit/e0992141c860"
+    },
+    {
+      "repo": "egwe",
+      "sha_prefix": "03bf38d09fc3",
+      "commit_date_utc_approx": "2026-10-19",
+      "latest_change": "Source-pinned allele trait reexpression 4x256",
+      "commit_url": "https://github.com/zuizui0223/egwe/commit/03bf38d09fc3"
+    },
+    {
+      "repo": "mltr",
+      "sha_prefix": "0a4a1962bbc0",
+      "commit_date_utc_approx": "2026-09-08",
+      "latest_change": "Temporal cut inherited history",
+      "commit_url": "https://github.com/zuizui0223/mltr/commit/0a4a1962bbc0"
+    },
+    {
+      "repo": "ced",
+      "sha_prefix": "37cbfb5dd3bd",
+      "commit_date_utc_approx": "2026-09-12",
+      "latest_change": "Guard Boundary separate theorem",
+      "commit_url": "https://github.com/zuizui0223/ced/commit/37cbfb5dd3bd"
+    },
+    {
+      "repo": "mrm",
+      "sha_prefix": "a24eaf4aaf06",
+      "commit_date_utc_approx": "2026-09-08",
+      "latest_change": "Temporal cut mechanism ambiguity",
+      "commit_url": "https://github.com/zuizui0223/mrm/commit/a24eaf4aaf06"
+    },
+    {
+      "repo": "shimahotarubukuro",
+      "sha_prefix": "c2c785098b56",
+      "commit_date_utc_approx": "2026-09-06",
+      "latest_change": "Keep Chapter3 phenotype separate from Ch2 simulation",
+      "commit_url": "https://github.com/zuizui0223/shimahotarubukuro/commit/c2c785098b56"
+    },
+    {
+      "repo": "fcp",
+      "sha_prefix": "c05a4458df79",
+      "commit_date_utc_approx": "2026-10-18",
+      "latest_change": "Real 447500 image local photo pair recurring test",
+      "commit_url": "https://github.com/zuizui0223/fcp/commit/c05a4458df79"
+    },
+    {
+      "repo": "eog",
+      "sha_prefix": "946f6108a72d",
+      "commit_date_utc_approx": "2026-10-19",
+      "latest_change": "Helgeland 11 island direct positive sensitivity",
+      "commit_url": "https://github.com/zuizui0223/eog/commit/946f6108a72d"
+    },
+    {
+      "repo": "odsp",
+      "sha_prefix": "ed1c500f67bc",
+      "commit_date_utc_approx": "2026-10-08",
+      "latest_change": "Managed training source external qualification",
+      "commit_url": "https://github.com/zuizui0223/odsp/commit/ed1c500f67bc"
+    },
+    {
+      "repo": "EAzami",
+      "sha_prefix": "c9870e91604e",
+      "commit_date_utc_approx": "2026-10-05",
+      "latest_change": "Recurrent head components JEB V10 package",
+      "commit_url": "https://github.com/zuizui0223/EAzami/commit/c9870e91604e"
+    },
+    {
+      "repo": "chun",
+      "sha_prefix": "1a98116563ca",
+      "commit_date_utc_approx": "2026-10-08",
+      "latest_change": "Simpson recurrence interpretation guard",
+      "commit_url": "https://github.com/zuizui0223/chun/commit/1a98116563ca"
+    },
+    {
+      "repo": "sdmr",
+      "sha_prefix": "25ae65980681",
+      "commit_date_utc_approx": "2026-10-19",
+      "latest_change": "Nonlinear and effort caveats on known truth M5",
+      "commit_url": "https://github.com/zuizui0223/sdmr/commit/25ae65980681"
+    },
+    {
+      "repo": "crest",
+      "sha_prefix": "89735f543276",
+      "commit_date_utc_approx": "2026-10-19",
+      "latest_change": "SeedClim independent site join feasibility HOLD",
+      "commit_url": "https://github.com/zuizui0223/crest/commit/89735f543276"
+    },
+    {
+      "repo": "theouni",
+      "sha_prefix": "ed3058667842",
+      "commit_date_utc_approx": "2026-10-19",
+      "latest_change": "Previous first pass 52 repo portfolio audit",
+      "commit_url": "https://github.com/zuizui0223/theouni/commit/ed3058667842"
+    },
+    {
+      "repo": "tnoa",
+      "sha_prefix": "8cbf97be6095",
+      "commit_date_utc_approx": "2026-09-12",
+      "latest_change": "MEE compliance / AI statement",
+      "commit_url": "https://github.com/zuizui0223/tnoa/commit/8cbf97be6095"
+    },
+    {
+      "repo": "aza3",
+      "sha_prefix": "ae9fd67306fe",
+      "commit_date_utc_approx": "2026-10-19",
+      "latest_change": "Two reference-stable Cirsium pigment candidate transcripts",
+      "commit_url": "https://github.com/zuizui0223/aza3/commit/ae9fd67306fe"
+    },
+    {
+      "repo": "sch",
+      "sha_prefix": "480804226cbc",
+      "commit_date_utc_approx": "2026-10-19",
+      "latest_change": "Gymnadenia actual factorial selection context contrast",
+      "commit_url": "https://github.com/zuizui0223/sch/commit/480804226cbc"
+    },
+    {
+      "repo": "boundary",
+      "sha_prefix": "276ca71d2297",
+      "commit_date_utc_approx": "2026-10-19",
+      "latest_change": "Identification-status is not conclusion-stability",
+      "commit_url": "https://github.com/zuizui0223/boundary/commit/276ca71d2297"
+    },
+    {
+      "repo": "rec",
+      "sha_prefix": "6e0511c31dd7",
+      "commit_date_utc_approx": "2026-09-11",
+      "latest_change": "Rights gate and REC field data",
+      "commit_url": "https://github.com/zuizui0223/rec/commit/6e0511c31dd7"
+    },
+    {
+      "repo": "284b",
+      "sha_prefix": "6fa79aa89d96",
+      "commit_date_utc_approx": "2026-09-27",
+      "latest_change": "Invited EL M1 and M2 package",
+      "commit_url": "https://github.com/zuizui0223/284b/commit/6fa79aa89d96"
+    },
+    {
+      "repo": "egwee",
+      "sha_prefix": "16308cf6d6e4",
+      "commit_date_utc_approx": "2026-09-15",
+      "latest_change": "Journal of Ecology five cluster submission QA",
+      "commit_url": "https://github.com/zuizui0223/egwee/commit/16308cf6d6e4"
+    },
+    {
+      "repo": "balance",
+      "sha_prefix": "d46d87abc3cf",
+      "commit_date_utc_approx": "2026-10-19",
+      "latest_change": "Two review frames flower function pair contrasts",
+      "commit_url": "https://github.com/zuizui0223/balance/commit/d46d87abc3cf"
+    },
+    {
+      "repo": "v3",
+      "sha_prefix": "64bab348ee12",
+      "commit_date_utc_approx": "2026-09-12",
+      "latest_change": "Ecological Informatics compliance",
+      "commit_url": "https://github.com/zuizui0223/v3/commit/64bab348ee12"
+    },
+    {
+      "repo": "payoff",
+      "sha_prefix": "80054ed841c4",
+      "commit_date_utc_approx": "2026-10-05",
+      "latest_change": "Climate connectivity pair dependence before outcome",
+      "commit_url": "https://github.com/zuizui0223/payoff/commit/80054ed841c4"
+    },
+    {
+      "repo": "adaptive-gain",
+      "sha_prefix": "f9a1494ba4c2",
+      "commit_date_utc_approx": "2026-09-26",
+      "latest_change": "Network rewiring bridge novelty gate",
+      "commit_url": "https://github.com/zuizui0223/adaptive-gain/commit/f9a1494ba4c2"
+    },
+    {
+      "repo": "TTF",
+      "sha_prefix": "a3a70eafaf31",
+      "commit_date_utc_approx": "2026-10-01",
+      "latest_change": "TTF Q source and predictive freeze",
+      "commit_url": "https://github.com/zuizui0223/TTF/commit/a3a70eafaf31"
+    },
+    {
+      "repo": "slk",
+      "sha_prefix": "de3026342085",
+      "commit_date_utc_approx": "2026-09-28",
+      "latest_change": "Am Nat theory submission packet",
+      "commit_url": "https://github.com/zuizui0223/slk/commit/de3026342085"
+    },
+    {
+      "repo": "esdm",
+      "sha_prefix": "8cc2518fc40d",
+      "commit_date_utc_approx": "2026-10-19",
+      "latest_change": "Eight taxon postresult nocturnal rank reversal audit",
+      "commit_url": "https://github.com/zuizui0223/esdm/commit/8cc2518fc40d"
+    },
+    {
+      "repo": "iwe",
+      "sha_prefix": "149976d64165",
+      "commit_date_utc_approx": "2026-10-08",
+      "latest_change": "Source only Dryad fetch dispatcher",
+      "commit_url": "https://github.com/zuizui0223/iwe/commit/149976d64165"
+    },
+    {
+      "repo": "Structural",
+      "sha_prefix": "10020476bfba",
+      "commit_date_utc_approx": "2026-10-08",
+      "latest_change": "Reference conditioned graph gain HOLD",
+      "commit_url": "https://github.com/zuizui0223/Structural/commit/10020476bfba"
+    },
+    {
+      "repo": "frogcs",
+      "sha_prefix": "0871da0c97d9",
+      "commit_date_utc_approx": "2026-10-06",
+      "latest_change": "JAE manuscript abstract calibration",
+      "commit_url": "https://github.com/zuizui0223/frogcs/commit/0871da0c97d9"
+    },
+    {
+      "repo": "neon",
+      "sha_prefix": "393492f20d5a",
+      "commit_date_utc_approx": "2026-09-27",
+      "latest_change": "Scale-invalid mammal result HOLD and redesign",
+      "commit_url": "https://github.com/zuizui0223/neon/commit/393492f20d5a"
+    },
+    {
+      "repo": "batter",
+      "sha_prefix": "776b96eb1711",
+      "commit_date_utc_approx": "2026-09-29",
+      "latest_change": "JAE vertical profile study v0.3.8",
+      "commit_url": "https://github.com/zuizui0223/batter/commit/776b96eb1711"
+    },
+    {
+      "repo": "mina",
+      "sha_prefix": "7764523c5f1e",
+      "commit_date_utc_approx": "2026-10-03",
+      "latest_change": "SMP macro research preoutcome feasibility gate",
+      "commit_url": "https://github.com/zuizui0223/mina/commit/7764523c5f1e"
+    },
+    {
+      "repo": "Tampa",
+      "sha_prefix": "b8d9d60cc304",
+      "commit_date_utc_approx": "2026-10-08",
+      "latest_change": "Seagrass warning saturated by identity",
+      "commit_url": "https://github.com/zuizui0223/Tampa/commit/b8d9d60cc304"
+    },
+    {
+      "repo": "chocho",
+      "sha_prefix": "df6f920a37c7",
+      "commit_date_utc_approx": "2026-10-04",
+      "latest_change": "Butterfly resource redistribution manuscript lock",
+      "commit_url": "https://github.com/zuizui0223/chocho/commit/df6f920a37c7"
+    },
+    {
+      "repo": "turnover",
+      "sha_prefix": "fff9ab9bc547",
+      "commit_date_utc_approx": "2026-10-04",
+      "latest_change": "201 plant family x trait temporal memory empirical close",
+      "commit_url": "https://github.com/zuizui0223/turnover/commit/fff9ab9bc547"
+    },
+    {
+      "repo": "azores",
+      "sha_prefix": "f7d8b432d311",
+      "commit_date_utc_approx": "2026-10-19",
+      "latest_change": "Year-stratified eel phase heterogeneity sensitivity",
+      "commit_url": "https://github.com/zuizui0223/azores/commit/f7d8b432d311"
+    },
+    {
+      "repo": "louis",
+      "sha_prefix": "f35123afc735",
+      "commit_date_utc_approx": "2026-10-19",
+      "latest_change": "California external origin state source HOLD",
+      "commit_url": "https://github.com/zuizui0223/louis/commit/f35123afc735"
+    },
+    {
+      "repo": "keiba",
+      "sha_prefix": "43e0fe30e0a2",
+      "commit_date_utc_approx": "2026-10-18",
+      "latest_change": "Horse individuality vs odds tasks separation",
+      "commit_url": "https://github.com/zuizui0223/keiba/commit/43e0fe30e0a2"
+    },
+    {
+      "repo": "mois",
+      "sha_prefix": "badaa7816d42",
+      "commit_date_utc_approx": "2026-10-19",
+      "latest_change": "350399-photo new decomposition workflow, result needs separate frozen readout",
+      "commit_url": "https://github.com/zuizui0223/mois/commit/badaa7816d42"
+    },
+    {
+      "repo": "anto",
+      "sha_prefix": "8bf4054904a5",
+      "commit_date_utc_approx": "2026-10-19",
+      "latest_change": "Full hidden-resource state mediates history under synthetic Markov model",
+      "commit_url": "https://github.com/zuizui0223/anto/commit/8bf4054904a5"
+    }
+  ]
+}
