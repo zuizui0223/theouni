@@ -2,7 +2,8 @@ name: C2 Empirical Intervention Replay
 on:
   push:
     branches:
-      - research/c2-empirical-measurement-replay-20261019
+      - main
+      - 'research/c2-*'
     paths:
       - research/run_c2_empirical_intervention_replay.mjs
       - .github/workflows/c2_empirical_replay.yml
