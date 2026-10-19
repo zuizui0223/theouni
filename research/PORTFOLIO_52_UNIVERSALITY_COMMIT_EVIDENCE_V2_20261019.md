@@ -1,7 +1,7 @@
 # 52リポ「普遍性」再精査 V2 — 最新コミット・結果台帳・データ共有関係・投稿設計
 
 **監査日:** 2026-10-19 JST  
-**母集団:** \`zuizui0223\` の53リポからWebサイトを除いた52研究/開発リポ。各リポの直近3コミットと最新コミットのchanged filesをGitHub経由で確認。主要結果のsource-locked JSON/原稿/検証スクリプトも個別照合。  
+**母集団:** `zuizui0223` の53リポからWebサイトを除いた52研究/開発リポ。各リポの直近3コミットと最新コミットのchanged filesをGitHub経由で確認。主要結果のsource-locked JSON/原稿/検証スクリプトも個別照合。  
 **全52最新コミット指標:** [PORTFOLIO_52_LAST_COMMIT_INDEX_20261019.json](PORTFOLIO_52_LAST_COMMIT_INDEX_20261019.json)。ここには12桁SHA prefixを保存。最新とは監査時点の観測値であり将来のHEADを約束しない。  
 **限界:** 全52の全コミット・全ブランチを時系列再構成したわけではない。全学術論文のprior art系統的レビュー、全生データの独立再実行、全GitHub Actionsアーカイブ再集計も実施していない。「支持済み」はsource-locked研究台帳の確認であって独立再現試験の新規PASSではない。
 
