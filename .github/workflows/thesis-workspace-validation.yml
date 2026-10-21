@@ -1,0 +1,45 @@
+name: Thesis Workspace Validation
+
+on:
+  push:
+    paths:
+      - 'thesis/**'
+      - 'scripts/validate_thesis_workspace.py'
+      - 'scripts/build_thesis_workspace_report.py'
+      - 'graphify-out/THESIS_WORKSPACE_REPORT.md'
+      - '.github/workflows/thesis-workspace-validation.yml'
+  pull_request:
+    paths:
+      - 'thesis/**'
+      - 'scripts/validate_thesis_workspace.py'
+      - 'scripts/build_thesis_workspace_report.py'
+      - 'graphify-out/THESIS_WORKSPACE_REPORT.md'
+      - '.github/workflows/thesis-workspace-validation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-thesis-workspace:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Compile workspace scripts
+        run: python -m compileall -q scripts
+
+      - name: Rebuild Graphify-compatible thesis workspace overlay
+        run: python scripts/build_thesis_workspace_report.py /tmp/theouni-thesis-workspace.json graphify-out/THESIS_WORKSPACE_REPORT.md
+
+      - name: Validate chapter ownership, claims, dependencies, and gates
+        run: python scripts/validate_thesis_workspace.py
+
+      - name: Check generated thesis workspace report is synchronized
+        run: git diff --exit-code -- graphify-out/THESIS_WORKSPACE_REPORT.md
