@@ -1,5 +1,16 @@
 # Theoretical Universe / 理論宇宙
 
+## Future integration research (isolated from submitted source papers)
+
+The new **frog chorus → hidden aquatic stages → hydroperiod → offspring recruitment** bridge is an explicitly *prospective* programme; the JAE frogcs RC6 scientific manuscript, main/release/submission refs and conclusions remain unchanged. This provides a shared ecological question without physically merging repositories or borrowing their claims.
+
+- [Future frogcs synthesis roadmap](universe/FROGCS_FUTURE_SYNTHESIS_ROADMAP_2026-10-25.md)
+- [Typed cross-repository integration manifest](universe/bridges/frogcs_ontogenetic_legacy_bridge_2026_10_25.json)
+- [Source-owned prospective model and release gates](https://github.com/zuizui0223/frogcs/blob/integration/stage-legacy-unified-2026-10-25/research/ONTOGENETIC_LEGACY_INTEGRATION_MASTER_V1.md)
+
+**Next gate:** audit whether independently measured pond-stage and past-call records join without inventing a pond identity, not reinterpret prior acoustic analyses as measured predation.
+
+
 `theouni` is organized as four deliberately separate layers.
 
 1. **Theory Universe v0.5.1 — current interpretation over frozen v0.5 core**  
