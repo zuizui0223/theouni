@@ -1,0 +1,251 @@
+{
+  "schema_version": "zuizui0223/ecological-programme-bridge/1.0",
+  "date": "2026-10-25",
+  "bridge_id": "frogcs_stage_legacy_acoustics_hydrology_ontology_v1",
+  "kind": "typed_cross_repository_synthesis",
+  "status": "prospective_design_only",
+  "novelty_at_synthesis_level": "Compare an explicitly hidden, inherited aquatic stage state to adult chorus configurations, larval recruitment and subsequent maturation under changing hydroperiod; test whether direct stage information improves held-out biological predictions over weather and site history.",
+  "focal_question": "When does the latent stage history of pond communities change which species call, survive and recruit after rain and drying?",
+  "governance": {
+    "source_owner": "zuizui0223/frogcs",
+    "registry_owner": "zuizui0223/theouni",
+    "programme_branch": "integration/stage-legacy-unified-2026-10-25",
+    "authority_document": "research/ONTOGENETIC_LEGACY_INTEGRATION_MASTER_V1.md",
+    "source_branch_provenance": "research/stage-structured-interactions-2026-10-25",
+    "science_freeze": {
+      "source": "zuizui0223/frogcs",
+      "frozen_release_ref": "release/jae-multisite-rc6",
+      "source_commit": "ea2bea7fd9ac8856f880a7f3302e193fa19705bd",
+      "note": "No edits to locked main JAE endpoints; WFTS not pursued; NPS/GloBI/Carroll not RC6 evidence"
+    },
+    "no_physical_repo_merge": true,
+    "no_cross_paper_evidence_reassignment": true
+  },
+  "time_scales": {
+    "observation": "minutes to nights: recorder or roadside adult chorus",
+    "aquatic_stage": "days to months: eggs and tadpoles, overwinter stages over years",
+    "demographic_recruitment": "maturation delay years after egg/larval survival, species dependent",
+    "ecosystem": "inundation/drying and recolonization across seasons and years"
+  },
+  "endpoints": [
+    {
+      "id": "E_call",
+      "grain": "taxon × roadside stop or verified listening station × run/night",
+      "observable": "ordinal CallingIndex 0–3 (detection effort conditional)",
+      "causal_ceiling": "acoustic pattern, not eggs, larval biomass, recruitment or predation"
+    },
+    {
+      "id": "E_stage",
+      "grain": "taxon × aquatic stage × verified pond × census",
+      "observable": "stage-specific catches/detections with effort",
+      "causal_ceiling": "cohort presence/relative abundance unless capture rate is calibrated"
+    },
+    {
+      "id": "E_survival",
+      "grain": "species cohort × verified pond × season",
+      "observable": "egg hatch, tadpole survival, metamorph output",
+      "causal_ceiling": "requires measured stage survival, hydroperiod and exposure"
+    },
+    {
+      "id": "E_future",
+      "grain": "species cohort × pond × maturity year",
+      "observable": "new calling adult recruitment",
+      "causal_ceiling": "requires marked/genetically trackable cohort or explicit validated lag model"
+    }
+  ],
+  "primary_model_ladder": [
+    {
+      "id": "M0",
+      "covariates": [
+        "own_prior_strong_call",
+        "weather",
+        "verified_local_hydrology_where_available",
+        "phenology",
+        "site",
+        "taxon",
+        "observer_effort"
+      ],
+      "role": "focal reference"
+    },
+    {
+      "id": "M1",
+      "covariates": [
+        "M0",
+        "strictly_prior_other_taxon_calling",
+        "reverse lag",
+        "placebo controls"
+      ],
+      "role": "predictive acoustic-history increment, nonmechanistic"
+    },
+    {
+      "id": "M2",
+      "covariates": [
+        "M1",
+        "actually_measured_predator_larval_stage",
+        "measured_hydroperiod_dry_reset",
+        "egg_or_larval_outcome",
+        "stage_size_overlap",
+        "emergent_and_submerged_vegetation"
+      ],
+      "role": "mechanistic discriminator only when same-pond linkage and design suffice"
+    }
+  ],
+  "empirical_adapters": [
+    {
+      "repository": "frogcs",
+      "source": "NAAMP",
+      "role": "acoustic baseline",
+      "readiness": "observed_rc6_frozen",
+      "coupled_stage_data": false
+    },
+    {
+      "repository": "frogcs",
+      "source": "NPS_GLKN",
+      "role": "independent acoustic history with broad hydroperiod classes",
+      "readiness": "observed_research_branch",
+      "coupled_stage_data": false
+    },
+    {
+      "repository": "frogcs",
+      "source": "Carroll_Saenz_Rudolf_Dryad",
+      "doi": "10.25338/B8G92P",
+      "role": "candidate cross-stage calls-to-trapped-tadpoles calibration",
+      "readiness": "external_public_schema_audit_needed",
+      "coupled_stage_data": "candidate_not_a_verified_predation_link"
+    },
+    {
+      "repository": "frogcs",
+      "source": "GloBI_fixed_snapshot",
+      "role": "candidate predator/prey life-stage edge topology",
+      "readiness": "source_harmonization_and_stage_coverage_recorded",
+      "coupled_stage_data": false
+    },
+    {
+      "repository": "frogcs",
+      "source": "direct_exposure_and_drying_study",
+      "role": "mechanistic survival and dry-reset inference",
+      "readiness": "unavailable_linked_pond_time_series",
+      "coupled_stage_data": false
+    }
+  ],
+  "typed_bridges": [
+    {
+      "repo": "odsp",
+      "relation": "abstract_state_axis",
+      "imports": "time×depth×life_stage represented separately from horizontal locations",
+      "may_not_claim": "a fitted or validated frog life-stage surface"
+    },
+    {
+      "repo": "eog",
+      "relation": "alternative_transition_world",
+      "imports": "candidate weather/hydrology/stage transition operators and predictive comparisons",
+      "may_not_claim": "latent predator population identified by calls"
+    },
+    {
+      "repo": "crest",
+      "relation": "state_sufficiency_theory",
+      "imports": "which hidden history distinctions a future-stage prediction must preserve",
+      "may_not_claim": "frog data or mechanistic causation"
+    },
+    {
+      "repo": "mrm",
+      "relation": "mechanism_ambiguity",
+      "imports": "predation vs shared dynamic habitat remain distinct candidate mechanisms",
+      "may_not_claim": "unique mechanism identification"
+    },
+    {
+      "repo": "boundary",
+      "relation": "identification_boundary",
+      "imports": "limits of acoustic-only observation map",
+      "may_not_claim": "stage effect without new measured dimensions"
+    },
+    {
+      "repo": "ced",
+      "relation": "evidence_licensing",
+      "imports": "result provenance, source unit and claim ceilings",
+      "may_not_claim": "upgrade source association to feeding flux"
+    },
+    {
+      "repo": "rec",
+      "relation": "measurement_selection",
+      "imports": "nonrandom acoustic/detection recording",
+      "may_not_claim": "frog-specific detection bias quantified"
+    },
+    {
+      "repo": "tnoa",
+      "relation": "ambiguity_preservation",
+      "imports": "non-detection versus not-observed distinction",
+      "may_not_claim": "true larval absence from silent stops"
+    },
+    {
+      "repo": "mrod",
+      "relation": "next_observation_design",
+      "imports": "choose whether egg counts, hydroperiod, larval predators reduce causal ambiguity",
+      "may_not_claim": "experimental validation before new sampling"
+    },
+    {
+      "repo": "theouni",
+      "relation": "portfolio_registry",
+      "imports": "typed handoffs and cross-paper claim ownership",
+      "may_not_claim": "ownership of frogcs data/manuscript"
+    }
+  ],
+  "transferable_ecological_examples": [
+    {
+      "repos": [
+        "mina",
+        "Tampa",
+        "batter",
+        "louis",
+        "azores"
+      ],
+      "motif": "observed activity/presence differs from latent demographic or behavioural state",
+      "relation": "conceptual_comparative_cases_only",
+      "pooling_allowed": false
+    },
+    {
+      "repos": [
+        "chun",
+        "anto",
+        "turnover",
+        "egwee",
+        "island"
+      ],
+      "motif": "history and delayed state can affect available futures in phylogenetic, developmental, population or island systems",
+      "relation": "analogy_only_not_same_stage_interaction",
+      "pooling_allowed": false
+    }
+  ],
+  "release_gates": [
+    {
+      "id": "G0",
+      "criterion": "taxon/geography/wetland identity, temporal granularity, observation effort and source identifiers audited without reading exposure effect"
+    },
+    {
+      "id": "G1",
+      "criterion": "strictly held-out pond/year calls-to-larvae calibration beats ecological null; otherwise the prior call remains an acoustic-only covariate"
+    },
+    {
+      "id": "G2",
+      "criterion": "observed stage-specific egg/survival outcome and water exposure, ideally exclusion or other source-independent intervention"
+    },
+    {
+      "id": "G3",
+      "criterion": "only then lag-propagate recruitment and test conditional spatial configuration out of time/site"
+    },
+    {
+      "id": "G4",
+      "criterion": "external taxon/region transferability independently tested and not called causal unless warranted"
+    }
+  ],
+  "non_claims": [
+    "Past caller abundance implies surviving large tadpoles with certainty",
+    "Cross-lag direction identifies competition or cannibalism",
+    "RunNumber equals a universal stage clock",
+    "ERA5 soil moisture or JRC surface-water alone documents a specific pond's larval kill/reset",
+    "A negative contemporaneous call correlation identifies consumption",
+    "NAAMP stop equals an identified breeding pond",
+    "GloBI/GBIF co-presence records quantify local attack rates",
+    "Synthetic model coexistence percentages are empirical prevalence"
+  ]
+}
