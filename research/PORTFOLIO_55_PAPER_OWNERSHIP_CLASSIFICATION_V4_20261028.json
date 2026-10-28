@@ -1,0 +1,354 @@
+{
+  "version": "v4",
+  "date": "2026-10-28",
+  "basis": "Authenticated source GitHub README.md on 55 main branches read in current audit, not a count of active accepted papers",
+  "count": 55,
+  "classification_is_non_promotion_and_not_publication_readiness": true,
+  "repo_snapshot": "research/PORTFOLIO_55_HEADS_AND_ROLE_INDEX_20261028.json",
+  "current_strategy": "research/PORTFOLIO_55_STANDALONE_PAPERS_AND_NEW_META_GATE_V4_20261028.md",
+  "labels": {
+    "independent_ecology_or_empirical_research_subject": "Source question is independently owned; does not imply submitted paper or positive support",
+    "independent_theory_or_explicit_flagship_dependency": "Formal results or explicit same-flagship import; never extra independent natural data",
+    "independent_methods_measurement_or_predictive_system": "Separate methods/sensing/SDM or inference programme; biological claims bounded by validation",
+    "no_substantive_results": "Placeholder, not a study"
+  },
+  "n_per_group": {
+    "independent_ecology_or_empirical_research_subject": 28,
+    "independent_theory_or_explicit_flagship_dependency": 13,
+    "independent_methods_measurement_or_predictive_system": 13,
+    "no_substantive_results": 1
+  },
+  "entries": [
+    {
+      "repo": "frogcs",
+      "class": "independent_ecology_or_empirical_research_subject",
+      "source_url": "https://github.com/zuizui0223/frogcs/blob/main/README.md",
+      "scientific_boundary": "frog chorus ecology; independent 4248-site Odonata/Caudata/vegetation/stage two-part paper"
+    },
+    {
+      "repo": "mina",
+      "class": "independent_ecology_or_empirical_research_subject",
+      "source_url": "https://github.com/zuizui0223/mina/blob/main/README.md",
+      "scientific_boundary": "penguin breeding patch contraction Ecology Report + separately planned Antarctic breeding-island macro"
+    },
+    {
+      "repo": "batter",
+      "class": "independent_ecology_or_empirical_research_subject",
+      "source_url": "https://github.com/zuizui0223/batter/blob/main/README.md",
+      "scientific_boundary": "individual-centered vertical bat space-use shape identity paper"
+    },
+    {
+      "repo": "boids",
+      "class": "independent_ecology_or_empirical_research_subject",
+      "source_url": "https://github.com/zuizui0223/boids/blob/main/README.md",
+      "scientific_boundary": "agent movement and observed social group next-season fidelity independent research"
+    },
+    {
+      "repo": "azores",
+      "class": "independent_ecology_or_empirical_research_subject",
+      "source_url": "https://github.com/zuizui0223/azores/blob/main/README.md",
+      "scientific_boundary": "European eel migration activation versus travel pace"
+    },
+    {
+      "repo": "louis",
+      "class": "independent_ecology_or_empirical_research_subject",
+      "source_url": "https://github.com/zuizui0223/louis/blob/main/README.md",
+      "scientific_boundary": "King Rail within-home-range environmental-state tracking"
+    },
+    {
+      "repo": "Tampa",
+      "class": "independent_ecology_or_empirical_research_subject",
+      "source_url": "https://github.com/zuizui0223/Tampa/blob/main/README.md",
+      "scientific_boundary": "Thalassia occupancy/quantitative-state persistence"
+    },
+    {
+      "repo": "chocho",
+      "class": "independent_ecology_or_empirical_research_subject",
+      "source_url": "https://github.com/zuizui0223/chocho/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "island",
+      "class": "independent_ecology_or_empirical_research_subject",
+      "source_url": "https://github.com/zuizui0223/island/blob/main/README.md",
+      "scientific_boundary": "island Chapter1 empirical traitwise geographic paper"
+    },
+    {
+      "repo": "izu-core",
+      "class": "independent_ecology_or_empirical_research_subject",
+      "source_url": "https://github.com/zuizui0223/izu-core/blob/main/README.md",
+      "scientific_boundary": "island Chapter2 finite model article"
+    },
+    {
+      "repo": "shimahotarubukuro",
+      "class": "independent_ecology_or_empirical_research_subject",
+      "source_url": "https://github.com/zuizui0223/shimahotarubukuro/blob/main/README.md",
+      "scientific_boundary": "Izu Chapter3 direct phenotype Pst data, not empirical validation of Chapter2"
+    },
+    {
+      "repo": "azami",
+      "class": "independent_ecology_or_empirical_research_subject",
+      "source_url": "https://github.com/zuizui0223/azami/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "EAzami",
+      "class": "independent_ecology_or_empirical_research_subject",
+      "source_url": "https://github.com/zuizui0223/EAzami/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "aza3",
+      "class": "independent_ecology_or_empirical_research_subject",
+      "source_url": "https://github.com/zuizui0223/aza3/blob/main/README.md",
+      "scientific_boundary": "sole thistle plant molecular, floral biochemical, seed fitness empirical owner"
+    },
+    {
+      "repo": "fcp",
+      "class": "independent_ecology_or_empirical_research_subject",
+      "source_url": "https://github.com/zuizui0223/fcp/blob/main/README.md",
+      "scientific_boundary": "within-species flower colour photography paper"
+    },
+    {
+      "repo": "mois",
+      "class": "independent_ecology_or_empirical_research_subject",
+      "source_url": "https://github.com/zuizui0223/mois/blob/main/README.md",
+      "scientific_boundary": "between-species moisture-colour, overlapping photo-ID source"
+    },
+    {
+      "repo": "chun",
+      "class": "independent_ecology_or_empirical_research_subject",
+      "source_url": "https://github.com/zuizui0223/chun/blob/main/README.md",
+      "scientific_boundary": "Camellia plus cross-radiation temporal evolution papers"
+    },
+    {
+      "repo": "hotarubukuro",
+      "class": "independent_ecology_or_empirical_research_subject",
+      "source_url": "https://github.com/zuizui0223/hotarubukuro/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "RSDS",
+      "class": "independent_ecology_or_empirical_research_subject",
+      "source_url": "https://github.com/zuizui0223/RSDS/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "neon",
+      "class": "independent_ecology_or_empirical_research_subject",
+      "source_url": "https://github.com/zuizui0223/neon/blob/main/README.md",
+      "scientific_boundary": "independent small-mammal ecology programme, current previous V6 submission HOLD"
+    },
+    {
+      "repo": "keiba",
+      "class": "independent_ecology_or_empirical_research_subject",
+      "source_url": "https://github.com/zuizui0223/keiba/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "turnover",
+      "class": "independent_ecology_or_empirical_research_subject",
+      "source_url": "https://github.com/zuizui0223/turnover/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "anto",
+      "class": "independent_ecology_or_empirical_research_subject",
+      "source_url": "https://github.com/zuizui0223/anto/blob/main/README.md",
+      "scientific_boundary": "floral latent capacity theoretical + 59 Petunieae species chemistry prediction; not real trait regain"
+    },
+    {
+      "repo": "egwee",
+      "class": "independent_ecology_or_empirical_research_subject",
+      "source_url": "https://github.com/zuizui0223/egwee/blob/main/README.md",
+      "scientific_boundary": "independent fragmentation cross-layer 5-programme empirical meta"
+    },
+    {
+      "repo": "iwe",
+      "class": "independent_ecology_or_empirical_research_subject",
+      "source_url": "https://github.com/zuizui0223/iwe/blob/main/README.md",
+      "scientific_boundary": "independent timing×fitness evidence-synthesis meta with current missing classes"
+    },
+    {
+      "repo": "bita",
+      "class": "independent_ecology_or_empirical_research_subject",
+      "source_url": "https://github.com/zuizui0223/bita/blob/main/README.md",
+      "scientific_boundary": "independent nectar robbery access-mismatch ecology letter"
+    },
+    {
+      "repo": "sch",
+      "class": "independent_ecology_or_empirical_research_subject",
+      "source_url": "https://github.com/zuizui0223/sch/blob/main/README.md",
+      "scientific_boundary": "functional floral conflict identification paper; 8-study separate quantitative pilot"
+    },
+    {
+      "repo": "balance",
+      "class": "independent_ecology_or_empirical_research_subject",
+      "source_url": "https://github.com/zuizui0223/balance/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "egc",
+      "class": "independent_theory_or_explicit_flagship_dependency",
+      "source_url": "https://github.com/zuizui0223/egc/blob/main/README.md",
+      "scientific_boundary": "source finite model imported into EGWE single active NEE flagship, not separate parallel submission"
+    },
+    {
+      "repo": "egwe",
+      "class": "independent_theory_or_explicit_flagship_dependency",
+      "source_url": "https://github.com/zuizui0223/egwe/blob/main/README.md",
+      "scientific_boundary": "ONE active NEE eco-genetic flagship, own finite and natural-state programme"
+    },
+    {
+      "repo": "slk",
+      "class": "independent_theory_or_explicit_flagship_dependency",
+      "source_url": "https://github.com/zuizui0223/slk/blob/main/README.md",
+      "scientific_boundary": "independent theoretical flagship importing scoped SCH/BALANCE/PAYOFF results"
+    },
+    {
+      "repo": "payoff",
+      "class": "independent_theory_or_explicit_flagship_dependency",
+      "source_url": "https://github.com/zuizui0223/payoff/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "crest",
+      "class": "independent_theory_or_explicit_flagship_dependency",
+      "source_url": "https://github.com/zuizui0223/crest/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "theouni",
+      "class": "independent_theory_or_explicit_flagship_dependency",
+      "source_url": "https://github.com/zuizui0223/theouni/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "ccoc",
+      "class": "independent_theory_or_explicit_flagship_dependency",
+      "source_url": "https://github.com/zuizui0223/ccoc/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "mltr",
+      "class": "independent_theory_or_explicit_flagship_dependency",
+      "source_url": "https://github.com/zuizui0223/mltr/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "ced",
+      "class": "independent_theory_or_explicit_flagship_dependency",
+      "source_url": "https://github.com/zuizui0223/ced/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "mrm",
+      "class": "independent_theory_or_explicit_flagship_dependency",
+      "source_url": "https://github.com/zuizui0223/mrm/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "boundary",
+      "class": "independent_theory_or_explicit_flagship_dependency",
+      "source_url": "https://github.com/zuizui0223/boundary/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "v3",
+      "class": "independent_theory_or_explicit_flagship_dependency",
+      "source_url": "https://github.com/zuizui0223/v3/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "adaptive-gain",
+      "class": "independent_theory_or_explicit_flagship_dependency",
+      "source_url": "https://github.com/zuizui0223/adaptive-gain/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "eog",
+      "class": "independent_methods_measurement_or_predictive_system",
+      "source_url": "https://github.com/zuizui0223/eog/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "acsp",
+      "class": "independent_methods_measurement_or_predictive_system",
+      "source_url": "https://github.com/zuizui0223/acsp/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "sdmr",
+      "class": "independent_methods_measurement_or_predictive_system",
+      "source_url": "https://github.com/zuizui0223/sdmr/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "esdm",
+      "class": "independent_methods_measurement_or_predictive_system",
+      "source_url": "https://github.com/zuizui0223/esdm/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "odsp",
+      "class": "independent_methods_measurement_or_predictive_system",
+      "source_url": "https://github.com/zuizui0223/odsp/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "rec",
+      "class": "independent_methods_measurement_or_predictive_system",
+      "source_url": "https://github.com/zuizui0223/rec/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "tnoa",
+      "class": "independent_methods_measurement_or_predictive_system",
+      "source_url": "https://github.com/zuizui0223/tnoa/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "mrod",
+      "class": "independent_methods_measurement_or_predictive_system",
+      "source_url": "https://github.com/zuizui0223/mrod/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "TTF",
+      "class": "independent_methods_measurement_or_predictive_system",
+      "source_url": "https://github.com/zuizui0223/TTF/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "284b",
+      "class": "independent_methods_measurement_or_predictive_system",
+      "source_url": "https://github.com/zuizui0223/284b/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "pollipi",
+      "class": "independent_methods_measurement_or_predictive_system",
+      "source_url": "https://github.com/zuizui0223/pollipi/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "insepi",
+      "class": "independent_methods_measurement_or_predictive_system",
+      "source_url": "https://github.com/zuizui0223/insepi/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "Structural",
+      "class": "independent_methods_measurement_or_predictive_system",
+      "source_url": "https://github.com/zuizui0223/Structural/blob/main/README.md",
+      "scientific_boundary": "Retain own stated programme and its source-specific claim ceiling."
+    },
+    {
+      "repo": "SDEA",
+      "class": "no_substantive_results",
+      "source_url": "https://github.com/zuizui0223/SDEA/blob/main/README.md",
+      "scientific_boundary": "README heading only; no viable empirical claim"
+    }
+  ],
+  "explicit_rule": "Do not combine frogcs/mina/batter/boids into new organization meta; compare only if new independent empirical data with same estimand are secured."
+}
