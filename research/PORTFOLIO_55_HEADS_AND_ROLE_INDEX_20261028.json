@@ -1,0 +1,407 @@
+{
+  "schema": "zuizui0223_portfolio_55_nonwebsite_heads_review_to_macro_20261028_v3",
+  "as_of_jst": "2026-10-28",
+  "all_owner_repositories": 56,
+  "excluded_website": "zuizui0223.github.io",
+  "research_dev_repository_count": 55,
+  "source": "Authenticated GitHub owner repository list and each latest commit via search_commits; 52-repository 2026-10-19 V2 audit was used as prior claim/independence ledger",
+  "not_all_repository_histories_replayed": true,
+  "repo_roles_are_nonexclusive_analytical_shortcuts": true,
+  "prefix_is_exact_observed_first12_commit_characters": true,
+  "self_repository_snapshot_predates_creation_of_this_registry": true,
+  "roles": {
+    "floral_trait_and_evolution": 16,
+    "interaction_selection_and_opportunity": 7,
+    "animal_structure_and_time": 9,
+    "observability_and_methods": 11,
+    "formal_theory_and_integrating_infrastructure": 11,
+    "auxiliary_experimental_analogue": 1
+  },
+  "members": [
+    {
+      "name": "284b",
+      "primary_role": "observability_and_methods",
+      "head_sha_prefix12": "6fa79aa89d96",
+      "source_repository": "https://github.com/zuizui0223/284b",
+      "observed_head_link": "https://github.com/zuizui0223/284b/commit/6fa79aa89d96"
+    },
+    {
+      "name": "acsp",
+      "primary_role": "observability_and_methods",
+      "head_sha_prefix12": "305684e46696",
+      "source_repository": "https://github.com/zuizui0223/acsp",
+      "observed_head_link": "https://github.com/zuizui0223/acsp/commit/305684e46696"
+    },
+    {
+      "name": "adaptive-gain",
+      "primary_role": "formal_theory_and_integrating_infrastructure",
+      "head_sha_prefix12": "f9a1494ba4c2",
+      "source_repository": "https://github.com/zuizui0223/adaptive-gain",
+      "observed_head_link": "https://github.com/zuizui0223/adaptive-gain/commit/f9a1494ba4c2"
+    },
+    {
+      "name": "anto",
+      "primary_role": "floral_trait_and_evolution",
+      "head_sha_prefix12": "15c199817dc8",
+      "source_repository": "https://github.com/zuizui0223/anto",
+      "observed_head_link": "https://github.com/zuizui0223/anto/commit/15c199817dc8"
+    },
+    {
+      "name": "aza3",
+      "primary_role": "floral_trait_and_evolution",
+      "head_sha_prefix12": "d54aba2dcac3",
+      "source_repository": "https://github.com/zuizui0223/aza3",
+      "observed_head_link": "https://github.com/zuizui0223/aza3/commit/d54aba2dcac3"
+    },
+    {
+      "name": "azami",
+      "primary_role": "floral_trait_and_evolution",
+      "head_sha_prefix12": "84dc178791f5",
+      "source_repository": "https://github.com/zuizui0223/azami",
+      "observed_head_link": "https://github.com/zuizui0223/azami/commit/84dc178791f5"
+    },
+    {
+      "name": "azores",
+      "primary_role": "animal_structure_and_time",
+      "head_sha_prefix12": "6091749493b1",
+      "source_repository": "https://github.com/zuizui0223/azores",
+      "observed_head_link": "https://github.com/zuizui0223/azores/commit/6091749493b1"
+    },
+    {
+      "name": "balance",
+      "primary_role": "interaction_selection_and_opportunity",
+      "head_sha_prefix12": "7302d5897733",
+      "source_repository": "https://github.com/zuizui0223/balance",
+      "observed_head_link": "https://github.com/zuizui0223/balance/commit/7302d5897733"
+    },
+    {
+      "name": "batter",
+      "primary_role": "animal_structure_and_time",
+      "head_sha_prefix12": "776b96eb1711",
+      "source_repository": "https://github.com/zuizui0223/batter",
+      "observed_head_link": "https://github.com/zuizui0223/batter/commit/776b96eb1711"
+    },
+    {
+      "name": "bita",
+      "primary_role": "interaction_selection_and_opportunity",
+      "head_sha_prefix12": "98c0a41d3334",
+      "source_repository": "https://github.com/zuizui0223/bita",
+      "observed_head_link": "https://github.com/zuizui0223/bita/commit/98c0a41d3334"
+    },
+    {
+      "name": "boids",
+      "primary_role": "animal_structure_and_time",
+      "head_sha_prefix12": "6be0ad7da776",
+      "source_repository": "https://github.com/zuizui0223/boids",
+      "observed_head_link": "https://github.com/zuizui0223/boids/commit/6be0ad7da776"
+    },
+    {
+      "name": "boundary",
+      "primary_role": "formal_theory_and_integrating_infrastructure",
+      "head_sha_prefix12": "276ca71d2297",
+      "source_repository": "https://github.com/zuizui0223/boundary",
+      "observed_head_link": "https://github.com/zuizui0223/boundary/commit/276ca71d2297"
+    },
+    {
+      "name": "ccoc",
+      "primary_role": "formal_theory_and_integrating_infrastructure",
+      "head_sha_prefix12": "869cf79cbe31",
+      "source_repository": "https://github.com/zuizui0223/ccoc",
+      "observed_head_link": "https://github.com/zuizui0223/ccoc/commit/869cf79cbe31"
+    },
+    {
+      "name": "ced",
+      "primary_role": "formal_theory_and_integrating_infrastructure",
+      "head_sha_prefix12": "37cbfb5dd3bd",
+      "source_repository": "https://github.com/zuizui0223/ced",
+      "observed_head_link": "https://github.com/zuizui0223/ced/commit/37cbfb5dd3bd"
+    },
+    {
+      "name": "chocho",
+      "primary_role": "interaction_selection_and_opportunity",
+      "head_sha_prefix12": "df6f920a37c7",
+      "source_repository": "https://github.com/zuizui0223/chocho",
+      "observed_head_link": "https://github.com/zuizui0223/chocho/commit/df6f920a37c7"
+    },
+    {
+      "name": "chun",
+      "primary_role": "floral_trait_and_evolution",
+      "head_sha_prefix12": "1a98116563ca",
+      "source_repository": "https://github.com/zuizui0223/chun",
+      "observed_head_link": "https://github.com/zuizui0223/chun/commit/1a98116563ca"
+    },
+    {
+      "name": "crest",
+      "primary_role": "floral_trait_and_evolution",
+      "head_sha_prefix12": "89735f543276",
+      "source_repository": "https://github.com/zuizui0223/crest",
+      "observed_head_link": "https://github.com/zuizui0223/crest/commit/89735f543276"
+    },
+    {
+      "name": "EAzami",
+      "primary_role": "floral_trait_and_evolution",
+      "head_sha_prefix12": "c9870e91604e",
+      "source_repository": "https://github.com/zuizui0223/EAzami",
+      "observed_head_link": "https://github.com/zuizui0223/EAzami/commit/c9870e91604e"
+    },
+    {
+      "name": "egc",
+      "primary_role": "floral_trait_and_evolution",
+      "head_sha_prefix12": "50717ce24907",
+      "source_repository": "https://github.com/zuizui0223/egc",
+      "observed_head_link": "https://github.com/zuizui0223/egc/commit/50717ce24907"
+    },
+    {
+      "name": "egwe",
+      "primary_role": "floral_trait_and_evolution",
+      "head_sha_prefix12": "3bb5b673def3",
+      "source_repository": "https://github.com/zuizui0223/egwe",
+      "observed_head_link": "https://github.com/zuizui0223/egwe/commit/3bb5b673def3"
+    },
+    {
+      "name": "egwee",
+      "primary_role": "floral_trait_and_evolution",
+      "head_sha_prefix12": "16308cf6d6e4",
+      "source_repository": "https://github.com/zuizui0223/egwee",
+      "observed_head_link": "https://github.com/zuizui0223/egwee/commit/16308cf6d6e4"
+    },
+    {
+      "name": "eog",
+      "primary_role": "observability_and_methods",
+      "head_sha_prefix12": "5fdec62a494b",
+      "source_repository": "https://github.com/zuizui0223/eog",
+      "observed_head_link": "https://github.com/zuizui0223/eog/commit/5fdec62a494b"
+    },
+    {
+      "name": "esdm",
+      "primary_role": "observability_and_methods",
+      "head_sha_prefix12": "a45eaab96d9a",
+      "source_repository": "https://github.com/zuizui0223/esdm",
+      "observed_head_link": "https://github.com/zuizui0223/esdm/commit/a45eaab96d9a"
+    },
+    {
+      "name": "fcp",
+      "primary_role": "floral_trait_and_evolution",
+      "head_sha_prefix12": "c45a95420a96",
+      "source_repository": "https://github.com/zuizui0223/fcp",
+      "observed_head_link": "https://github.com/zuizui0223/fcp/commit/c45a95420a96"
+    },
+    {
+      "name": "frogcs",
+      "primary_role": "animal_structure_and_time",
+      "head_sha_prefix12": "5e2f0a87c639",
+      "source_repository": "https://github.com/zuizui0223/frogcs",
+      "observed_head_link": "https://github.com/zuizui0223/frogcs/commit/5e2f0a87c639"
+    },
+    {
+      "name": "hotarubukuro",
+      "primary_role": "floral_trait_and_evolution",
+      "head_sha_prefix12": "1f40a9d153a5",
+      "source_repository": "https://github.com/zuizui0223/hotarubukuro",
+      "observed_head_link": "https://github.com/zuizui0223/hotarubukuro/commit/1f40a9d153a5"
+    },
+    {
+      "name": "insepi",
+      "primary_role": "observability_and_methods",
+      "head_sha_prefix12": "23ea5727b713",
+      "source_repository": "https://github.com/zuizui0223/insepi",
+      "observed_head_link": "https://github.com/zuizui0223/insepi/commit/23ea5727b713"
+    },
+    {
+      "name": "island",
+      "primary_role": "floral_trait_and_evolution",
+      "head_sha_prefix12": "3bfa818ffbc7",
+      "source_repository": "https://github.com/zuizui0223/island",
+      "observed_head_link": "https://github.com/zuizui0223/island/commit/3bfa818ffbc7"
+    },
+    {
+      "name": "iwe",
+      "primary_role": "interaction_selection_and_opportunity",
+      "head_sha_prefix12": "cfc29ff53b12",
+      "source_repository": "https://github.com/zuizui0223/iwe",
+      "observed_head_link": "https://github.com/zuizui0223/iwe/commit/cfc29ff53b12"
+    },
+    {
+      "name": "izu-core",
+      "primary_role": "floral_trait_and_evolution",
+      "head_sha_prefix12": "6e4483f66fd8",
+      "source_repository": "https://github.com/zuizui0223/izu-core",
+      "observed_head_link": "https://github.com/zuizui0223/izu-core/commit/6e4483f66fd8"
+    },
+    {
+      "name": "keiba",
+      "primary_role": "auxiliary_experimental_analogue",
+      "head_sha_prefix12": "43e0fe30e0a2",
+      "source_repository": "https://github.com/zuizui0223/keiba",
+      "observed_head_link": "https://github.com/zuizui0223/keiba/commit/43e0fe30e0a2"
+    },
+    {
+      "name": "louis",
+      "primary_role": "animal_structure_and_time",
+      "head_sha_prefix12": "f35123afc735",
+      "source_repository": "https://github.com/zuizui0223/louis",
+      "observed_head_link": "https://github.com/zuizui0223/louis/commit/f35123afc735"
+    },
+    {
+      "name": "mina",
+      "primary_role": "animal_structure_and_time",
+      "head_sha_prefix12": "7764523c5f1e",
+      "source_repository": "https://github.com/zuizui0223/mina",
+      "observed_head_link": "https://github.com/zuizui0223/mina/commit/7764523c5f1e"
+    },
+    {
+      "name": "mltr",
+      "primary_role": "formal_theory_and_integrating_infrastructure",
+      "head_sha_prefix12": "0a4a1962bbc0",
+      "source_repository": "https://github.com/zuizui0223/mltr",
+      "observed_head_link": "https://github.com/zuizui0223/mltr/commit/0a4a1962bbc0"
+    },
+    {
+      "name": "mois",
+      "primary_role": "floral_trait_and_evolution",
+      "head_sha_prefix12": "3d53f71bb02a",
+      "source_repository": "https://github.com/zuizui0223/mois",
+      "observed_head_link": "https://github.com/zuizui0223/mois/commit/3d53f71bb02a"
+    },
+    {
+      "name": "mrm",
+      "primary_role": "formal_theory_and_integrating_infrastructure",
+      "head_sha_prefix12": "a24eaf4aaf06",
+      "source_repository": "https://github.com/zuizui0223/mrm",
+      "observed_head_link": "https://github.com/zuizui0223/mrm/commit/a24eaf4aaf06"
+    },
+    {
+      "name": "mrod",
+      "primary_role": "formal_theory_and_integrating_infrastructure",
+      "head_sha_prefix12": "c4ff62c67b25",
+      "source_repository": "https://github.com/zuizui0223/mrod",
+      "observed_head_link": "https://github.com/zuizui0223/mrod/commit/c4ff62c67b25"
+    },
+    {
+      "name": "neon",
+      "primary_role": "observability_and_methods",
+      "head_sha_prefix12": "393492f20d5a",
+      "source_repository": "https://github.com/zuizui0223/neon",
+      "observed_head_link": "https://github.com/zuizui0223/neon/commit/393492f20d5a"
+    },
+    {
+      "name": "odsp",
+      "primary_role": "animal_structure_and_time",
+      "head_sha_prefix12": "bc9234df7dc4",
+      "source_repository": "https://github.com/zuizui0223/odsp",
+      "observed_head_link": "https://github.com/zuizui0223/odsp/commit/bc9234df7dc4"
+    },
+    {
+      "name": "payoff",
+      "primary_role": "interaction_selection_and_opportunity",
+      "head_sha_prefix12": "80054ed841c4",
+      "source_repository": "https://github.com/zuizui0223/payoff",
+      "observed_head_link": "https://github.com/zuizui0223/payoff/commit/80054ed841c4"
+    },
+    {
+      "name": "pollipi",
+      "primary_role": "observability_and_methods",
+      "head_sha_prefix12": "d32d96a9aecb",
+      "source_repository": "https://github.com/zuizui0223/pollipi",
+      "observed_head_link": "https://github.com/zuizui0223/pollipi/commit/d32d96a9aecb"
+    },
+    {
+      "name": "rec",
+      "primary_role": "observability_and_methods",
+      "head_sha_prefix12": "6e0511c31dd7",
+      "source_repository": "https://github.com/zuizui0223/rec",
+      "observed_head_link": "https://github.com/zuizui0223/rec/commit/6e0511c31dd7"
+    },
+    {
+      "name": "RSDS",
+      "primary_role": "animal_structure_and_time",
+      "head_sha_prefix12": "eb8c0aa22762",
+      "source_repository": "https://github.com/zuizui0223/RSDS",
+      "observed_head_link": "https://github.com/zuizui0223/RSDS/commit/eb8c0aa22762"
+    },
+    {
+      "name": "sch",
+      "primary_role": "interaction_selection_and_opportunity",
+      "head_sha_prefix12": "b2978195a96d",
+      "source_repository": "https://github.com/zuizui0223/sch",
+      "observed_head_link": "https://github.com/zuizui0223/sch/commit/b2978195a96d"
+    },
+    {
+      "name": "SDEA",
+      "primary_role": "formal_theory_and_integrating_infrastructure",
+      "head_sha_prefix12": "f177d7ad56d9",
+      "source_repository": "https://github.com/zuizui0223/SDEA",
+      "observed_head_link": "https://github.com/zuizui0223/SDEA/commit/f177d7ad56d9"
+    },
+    {
+      "name": "sdmr",
+      "primary_role": "observability_and_methods",
+      "head_sha_prefix12": "25ae65980681",
+      "source_repository": "https://github.com/zuizui0223/sdmr",
+      "observed_head_link": "https://github.com/zuizui0223/sdmr/commit/25ae65980681"
+    },
+    {
+      "name": "shimahotarubukuro",
+      "primary_role": "floral_trait_and_evolution",
+      "head_sha_prefix12": "c2c785098b56",
+      "source_repository": "https://github.com/zuizui0223/shimahotarubukuro",
+      "observed_head_link": "https://github.com/zuizui0223/shimahotarubukuro/commit/c2c785098b56"
+    },
+    {
+      "name": "slk",
+      "primary_role": "interaction_selection_and_opportunity",
+      "head_sha_prefix12": "de3026342085",
+      "source_repository": "https://github.com/zuizui0223/slk",
+      "observed_head_link": "https://github.com/zuizui0223/slk/commit/de3026342085"
+    },
+    {
+      "name": "Structural",
+      "primary_role": "formal_theory_and_integrating_infrastructure",
+      "head_sha_prefix12": "10020476bfba",
+      "source_repository": "https://github.com/zuizui0223/Structural",
+      "observed_head_link": "https://github.com/zuizui0223/Structural/commit/10020476bfba"
+    },
+    {
+      "name": "Tampa",
+      "primary_role": "animal_structure_and_time",
+      "head_sha_prefix12": "b8d9d60cc304",
+      "source_repository": "https://github.com/zuizui0223/Tampa",
+      "observed_head_link": "https://github.com/zuizui0223/Tampa/commit/b8d9d60cc304"
+    },
+    {
+      "name": "theouni",
+      "primary_role": "formal_theory_and_integrating_infrastructure",
+      "head_sha_prefix12": "e6bba785bbc7",
+      "source_repository": "https://github.com/zuizui0223/theouni",
+      "observed_head_link": "https://github.com/zuizui0223/theouni/commit/e6bba785bbc7"
+    },
+    {
+      "name": "tnoa",
+      "primary_role": "observability_and_methods",
+      "head_sha_prefix12": "cade14331ae1",
+      "source_repository": "https://github.com/zuizui0223/tnoa",
+      "observed_head_link": "https://github.com/zuizui0223/tnoa/commit/cade14331ae1"
+    },
+    {
+      "name": "TTF",
+      "primary_role": "observability_and_methods",
+      "head_sha_prefix12": "a3a70eafaf31",
+      "source_repository": "https://github.com/zuizui0223/TTF",
+      "observed_head_link": "https://github.com/zuizui0223/TTF/commit/a3a70eafaf31"
+    },
+    {
+      "name": "turnover",
+      "primary_role": "floral_trait_and_evolution",
+      "head_sha_prefix12": "fff9ab9bc547",
+      "source_repository": "https://github.com/zuizui0223/turnover",
+      "observed_head_link": "https://github.com/zuizui0223/turnover/commit/fff9ab9bc547"
+    },
+    {
+      "name": "v3",
+      "primary_role": "formal_theory_and_integrating_infrastructure",
+      "head_sha_prefix12": "64bab348ee12",
+      "source_repository": "https://github.com/zuizui0223/v3",
+      "observed_head_link": "https://github.com/zuizui0223/v3/commit/64bab348ee12"
+    }
+  ]
+}
