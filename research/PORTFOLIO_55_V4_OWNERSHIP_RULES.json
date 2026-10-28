@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-28",
+  "audit": "All 55 non-website READMEs inspected; do not treat conceptual overlap as shared estimand.",
+  "protected_independent": [
+    "frogcs",
+    "mina",
+    "batter",
+    "boids",
+    "azores",
+    "louis",
+    "Tampa",
+    "chocho",
+    "island",
+    "izu-core",
+    "shimahotarubukuro",
+    "azami",
+    "EAzami",
+    "aza3",
+    "fcp",
+    "mois",
+    "chun",
+    "hotarubukuro",
+    "RSDS",
+    "sch",
+    "bita",
+    "iwe",
+    "egwee",
+    "neon",
+    "keiba"
+  ],
+  "key_corrections": {
+    "frogcs": "Independent 4248-site frog chorus x Odonata/Caudata/vegetation + stage simulation article; do not combine with mina/batter/boids.",
+    "mina": "Independent penguin Ecology Report and second Antarctic macroecology lane.",
+    "batter": "Independent repeatable bat vertical space-use paper.",
+    "boids": "Independent movement rules and group spatial fidelity research.",
+    "eog": "Methodological owner; azores/louis/Tampa separate ecology owners."
+  },
+  "rules": [
+    "Do not pool distinct targets despite shared words such as organisation.",
+    "Respect active manuscript and repository's declared scientific question.",
+    "Use reviews only as source-screening and design context unless new original numeric data create a compatible estimand.",
+    "Shared photo IDs, study datasets, simulators are not independent empirical replications."
+  ],
+  "V3_superseded": true
+}
